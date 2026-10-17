@@ -22,6 +22,7 @@ from test_script_core import FixtureBackend
 def guided_config():
     cfg = deepcopy(DEFAULTS)
     cfg['query']['reading_policy'] = 'script_guided'
+    cfg['query']['caption_first'] = False  # Exercise the retained read-plan ablation.
     return cfg
 
 

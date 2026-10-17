@@ -112,6 +112,14 @@ def output_schema(operation, inputs):
         return record({'text': short_text(inputs.get('max_chars', 160)),
                        'place': {'anyOf': [short_text(48), {'type': 'null'}]},
                        'event_keywords': array(short_text(32), 4), 'uncertainties': array(short_text(80), 2)})
+    if operation == 'caption_review':
+        caption_ids = [c['id'] for c in inputs.get('caption_timeline', [])]
+        window_ids = [w['id'] for w in inputs.get('candidate_windows', [])]
+        return record({'text': short_text(240), 'selected_option': enum(inputs.get('option_ids', [])),
+                       'caption_ids': array(enum(caption_ids), 6),
+                       'checks': array(record({'window_id': enum(window_ids),
+                           'question': short_text(120), 'caption_ids': array(enum(caption_ids), 4),
+                           'reason': short_text(80)}), min(1, inputs.get('max_reads', 1)) if window_ids else 0)})
     if operation == 'read_plan':
         window_ids = [w['id'] for w in inputs.get('coarse_context', {}).get('windows', [])]
         return record({'reason': short_text(96), 'checks': array(record({

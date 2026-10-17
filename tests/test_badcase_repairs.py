@@ -82,6 +82,7 @@ class BadcaseRepairTests(unittest.TestCase):
         backend = BiasedPlanner(base)
         cfg = deepcopy(DEFAULTS)
         cfg['query']['reading_policy'] = 'script_guided'
+        cfg['query']['caption_first'] = False  # Legacy planner guard remains available.
         with tempfile.TemporaryDirectory() as folder:
             result = answer_query(base, {'question_id': 'q', 'video_id': 'v',
                 'question': 'What is the overall purpose?', 'options': ['Make pizza', 'Bake bread']},
@@ -118,6 +119,7 @@ class BadcaseRepairTests(unittest.TestCase):
         backend = FeedbackPlanner(base)
         cfg = deepcopy(DEFAULTS)
         cfg['query']['reading_policy'] = 'script_guided'
+        cfg['query']['caption_first'] = False
         with tempfile.TemporaryDirectory() as folder:
             result = answer_query(base, {'question_id': 'q', 'video_id': 'v',
                 'question': 'What tools are used throughout the video?', 'options': ['Pliers', 'Wrench']},

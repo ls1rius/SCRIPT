@@ -464,6 +464,8 @@ class Navigator:
             check = next(c for c in self.state['read_plan']['checks'] if c['window_id'] in selected['basis_refs'])
             report = {'goal': check['goal'], 'acceptance_checks': [
                 'Record only visible details that distinguish the candidate actions; do not infer a purpose.']}
+            if check.get('inspection_question'):
+                report['acceptance_checks'].append('Inspect, without assuming an answer: '+check['inspection_question'])
         elif self.cfg['method'] in ('B0', 'B1', 'B1S'):
             # Flat variants share every tool/state field, but choose and execute without goal handoff.
             report, _ = self.meter.json('flat_plan', baseline_input(self.cfg['method'], inputs, frontier,
@@ -634,6 +636,10 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
         if state['script_guided'] and 'read_plan' not in state:
             state['read_plan'] = {'reason': 'Plan one inspection at a time using verified feedback.', 'checks': []}
             state['read_plan_history'] = []
+        if state['script_guided'] and cfg['query']['caption_first'] and 'caption_timeline' not in state:
+            from .caption_first import timeline
+            state['caption_timeline'] = timeline(memory, query)
+            state['caption_reviews'] = []
         navigator = Navigator(memory, query, metadata, cfg, meter, variables, state)
         materializer = Materializer(memory, meter, cfg, query['id'], output)
         materializer.cache.scope = query['scope']
@@ -676,11 +682,24 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
                     state['exploration_limit'] = 'script_read_limit'
                     break
                 if state['global_round'] >= len(state['read_plan']['checks']):
-                    inputs = read_inputs(memory, query, cfg, state['read_plan']['checks'],
-                                         read_limit-state['global_round'])
                     try:
-                        plan, _ = meter.json('read_plan', inputs, ('reason', 'checks'))
-                        plan = normalize_reads(plan, inputs)
+                        if cfg['query']['caption_first']:
+                            from .caption_first import prepare_review, normalize_review
+                            inputs = prepare_review(memory, query, cfg, state['caption_timeline'],
+                                                    state['read_plan']['checks'], read_limit-state['global_round'])
+                            shown, mapping = prepare_answer_inputs(inputs, 'direct', cfg['query']['answer_order'], cfg['seed'])
+                            review, _ = meter.json('caption_review', shown, ('text', 'selected_option', 'caption_ids', 'checks'))
+                            review = restore_answer_order(review, mapping)
+                            review['visual_reads_before_review'] = state['global_round']
+                            state['caption_reviews'].append(review)
+                            if 'caption_initial_answer' not in state:
+                                state['caption_initial_answer'] = review
+                            plan = normalize_review(review, shown)
+                        else:
+                            inputs = read_inputs(memory, query, cfg, state['read_plan']['checks'],
+                                                 read_limit-state['global_round'])
+                            plan, _ = meter.json('read_plan', inputs, ('reason', 'checks'))
+                            plan = normalize_reads(plan, inputs)
                         state.setdefault('read_plan_history', []).append(plan)
                         state['read_plan']['reason'] = plan['reason']
                         state['read_plan']['checks'].extend(plan['checks'])
@@ -979,11 +998,23 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
                                         'script_outline': script_outline(memory, query, cfg) if state.get('script_guided') else None,
                                         'observation_gaps': query_observation_gaps(memory, query['id']),
                                         'stop_decision': decision}
+        if state.get('caption_timeline') is not None:
+            from .caption_first import final_inputs
+            answer_inputs = final_inputs(answer_inputs, state['caption_timeline'])
         presented_inputs, option_map = prepare_answer_inputs(answer_inputs, cfg['query']['answer_strategy'],
                                                              cfg['query']['answer_order'], cfg['seed'])
-        report, _ = meter.json('answer', presented_inputs,
-                              ('text', 'selected_option', 'claim_ids', 'evidence_ids'), final=True)
-        report = restore_answer_order(reconcile_answer(report, presented_inputs), option_map)
+        initial = state.get('caption_initial_answer')
+        if initial and state['global_round'] == 0 and not valid_claims:
+            # No new evidence exists: use the already restored caption answer,
+            # rather than paying for a second guess over identical descriptions.
+            report = {k: initial[k] for k in ('text', 'selected_option', 'choice_presentation')}
+            report.update(claim_ids=[], evidence_ids=[])
+            state['answer_source'] = 'caption_review'
+        else:
+            report, _ = meter.json('answer', presented_inputs,
+                                  ('text', 'selected_option', 'claim_ids', 'evidence_ids'), final=True)
+            report = restore_answer_order(reconcile_answer(report, presented_inputs), option_map)
+            state['answer_source'] = 'answer'
         if (not set(report['claim_ids']) <= {c['id'] for c in valid_claims}
                 or not set(report['evidence_ids']) <= set(evidence_ids)):
             raise ToolFailure('Final answer cites invalid or unseen evidence')
@@ -1006,6 +1037,11 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
             report['text'] = '无法从已核验的视频证据确定答案。'
         answer = obj(memory.new_id(query['id'], 'answer'), query_id=query['id'], **report, stop_decision_id=decision['id'])
         memory.put('answers', answer)
+        if state.get('caption_initial_answer'):
+            state['caption_answer_comparison'] = {
+                'initial_option': state['caption_initial_answer']['selected_option'],
+                'final_option': report['selected_option'],
+                'changed': state['caption_initial_answer']['selected_option'] != report['selected_option']}
         envelope.update(answer=answer, stop_decision=decision)
     except (ToolFailure, ResourceExhausted, ValueError, KeyError, TypeError) as exc:
         envelope['error'] = {'code': 'parse_failed' if not memory.tables['requirements'] else 'tool_failed', 'message': str(exc)}
@@ -1034,6 +1070,12 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
                                    'reading': {'policy': cfg['query']['reading_policy'], 'script_guided_active': state.get('script_guided', False),
                                                'plan': state.get('read_plan'), 'planning_error': state.get('read_plan_error'),
                                                'plan_history': state.get('read_plan_history', []),
+                                               'caption_first': bool(state.get('script_guided') and cfg['query']['caption_first']),
+                                               'caption_initial_answer': state.get('caption_initial_answer'),
+                                               'caption_reviews': state.get('caption_reviews', []),
+                                               'caption_answer_comparison': state.get('caption_answer_comparison'),
+                                               'caption_timeline_records': len(state.get('caption_timeline', [])),
+                                               'answer_source': state.get('answer_source'),
                                                'visual_reads': sum(c['operation'] in ('observe', 'extract') for c in ledger.calls),
                                                'assess_calls': sum(c['operation'] == 'assess' for c in ledger.calls)},
                                    'answer_conflict': state.get('answer_conflict'),

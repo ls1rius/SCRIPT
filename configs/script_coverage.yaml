@@ -1,0 +1,8 @@
+# Repaired coverage-first profile; also the policy used by default script.yaml.
+schema_version: 2
+query:
+  reading_policy: coverage_first
+  caption_first: false
+  answer_strategy: direct
+  answer_order: content_hash
+  caption_policy: full

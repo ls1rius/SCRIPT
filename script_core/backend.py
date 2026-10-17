@@ -281,6 +281,15 @@ class LocalModels:
             contract += '\n原模块输出契约：\n'+CONTRACTS[original]
         def render(model_inputs):
             payload = substitute(model_view(model_inputs), aliases)
+            if 'caption_timeline' in payload:
+                # The full option texts are already beside their IDs. Repeating
+                # their differing clauses can duplicate almost every long option.
+                payload.pop('option_distinctions', None)
+                # Flatten after aliasing so printed caption IDs match the decoder
+                # allowlist. Keep each original second next to its exact text.
+                payload['caption_timeline'] = [
+                    f"[{c['id']} {c['interval'][0]:g}-{c['interval'][1]:g}s] {c['text']}"
+                    for c in payload['caption_timeline']]
             text_part = {'type': 'text', 'text': '<input>\n'+json.dumps(payload, ensure_ascii=False)+
                          '\n</input>\n实体框及ID标在所有对应图像上；存储元数据省略，事实文本完整保留。'
                          '\n仅返回任务要求的JSON字段，不复制输入对象。'}
@@ -288,7 +297,7 @@ class LocalModels:
                         {'role': 'user', 'content': content+[text_part]}]
             return processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         caption_selection = None
-        if operation in ('answer', 'gate') and not images:
+        if operation in ('answer', 'gate') and not images and 'caption_timeline' not in inputs:
             encoded, caption_selection = encode_caption_context(processor, render, inputs, self.cfg['models']['max_input_tokens'])
             frame_views = []
         else:

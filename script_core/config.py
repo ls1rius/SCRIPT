@@ -51,6 +51,7 @@ DEFAULTS = {
     'query': {'global_task_limit': 8, 'new_observations_per_task': 2,
               'reading_policy': 'coverage_first', 'max_script_reads': 3, 'script_context_windows': 12,
               'answer_strategy': 'direct', 'answer_order': 'content_hash', 'caption_policy': 'full',
+              'caption_first': True,
               'no_progress_before_backtrack': 2, 'explore_every_nonexploration_tasks': 3,
               'global_recovery_rounds': 2, 'tool_transient_retries': 1, 'json_repair_retries': 1},
     'observation': {'max_window_seconds': 8., 'base_fps': 2., 'dense_fps': 4.,
@@ -103,6 +104,8 @@ def validate_config(cfg):
         raise ValueError('initialization.caption_source must be vlm or provided')
     if cfg['query']['reading_policy'] not in ('coverage_first', 'script_guided'):
         raise ValueError('Unknown reading policy')
+    if type(cfg['query']['caption_first']) is not bool:
+        raise ValueError('query.caption_first must be boolean')
     for name, allowed in {'answer_strategy': ('direct', 'contrastive'),
                           'answer_order': ('original', 'content_hash'),
                           'caption_policy': ('full', 'ranked')}.items():
