@@ -1,0 +1,32 @@
+{
+  "status": "superseded_by_fixed_300",
+  "created_at": "2026-10-16T11:49:34.543453+00:00",
+  "version": "V8a parse-only repair",
+  "changes": [
+    "Context-aware each handling for overview questions; strict count/last/exhaustive/absence controls retained.",
+    "Distinct unbound symbols for malformed local roles; no inferred bindings or facts.",
+    "Preserve task_type/evidence_gaps across structural and schema JSON repair."
+  ],
+  "cpu_tests_passed": 154,
+  "recorded_parse_replay_passed": "6/6",
+  "live_recheck": "pending",
+  "previous_experiment": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1",
+  "gpu_policy": "One H200 job with two workers, afterany 669596; at most two allocated GPUs concurrently with the ongoing experiment.",
+  "diagnostic_questions": [
+    "b5865ae0-e176-4e82-a651-2507ee2d6930",
+    "358bdb29-d3e8-4af7-99e8-4d81da2d77b1",
+    "2eda56d2-a9ea-4591-a822-552235568446",
+    "5599b364-197b-41eb-8aa7-02a50de5f59e",
+    "48274a18-9691-48e2-8ddd-45018251f81b",
+    "7cccb681-3447-410f-8747-6937d146725c"
+  ],
+  "model_online_cap_seconds": 600,
+  "global_task_limit": 8,
+  "evaluation_scope": "Only the six original parse failures; fresh GPU accuracy not yet measured; original 300/500 results unchanged.",
+  "job_id": "670226.hopper-m-02",
+  "submitted_at": "2026-10-16T11:49:34.660709+00:00",
+  "experiment_directory": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-parse-repair-v8a-20261016",
+  "superseded_by": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1",
+  "current_report": "docs/SCRIPT_300_Repair_Comparison_2026-10-16.md",
+  "updated_at": "2026-10-16T22:40:18.547135+08:00"
+}

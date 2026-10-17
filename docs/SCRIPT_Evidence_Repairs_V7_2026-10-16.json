@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-16",
+  "timezone": "Asia/Singapore",
+  "status": "stopped_before_full_run",
+  "experiment_directory": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v7-20261016",
+  "source_snapshot": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v7-20261016/source",
+  "cpu_tests": {
+    "passed": 138,
+    "log": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v7-20261016/cpu-tests.log"
+  },
+  "syntax_checks": "Python compilation, shell syntax and git diff whitespace checks passed",
+  "repairs": [
+    "Versioned verification history and conflicting judgment invalidation",
+    "Black pixel quality and separate attempted versus usable coverage",
+    "State/action/inference fact types and required visible action process",
+    "Exact option text plus separate model explanation",
+    "Explicit option difference clauses",
+    "Fixed-key per-option gate schema",
+    "Focused remaining-window retrieval and novel-information stop diagnostics"
+  ],
+  "constraints": {
+    "questions": 100,
+    "seed": 0,
+    "model": "Qwen2.5-VL-7B-Instruct",
+    "online_seconds": 600,
+    "max_tasks": 8,
+    "streams_per_gpu": 2,
+    "gpu_jobs": 2,
+    "frozen_baseline_reused": true
+  },
+  "jobs": {
+    "smoke": "669177.hopper-m-02",
+    "full": [
+      "669178.hopper-m-02",
+      "669179.hopper-m-02"
+    ]
+  },
+  "gpu_smoke": {
+    "count": 6,
+    "question_ids": [
+      "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+      "de326bda-444a-4ad4-81d6-5ebb456a3300",
+      "22627b14-0f17-4a45-9661-5ac979e0a4c2",
+      "f9d20acc-8d52-4136-8d4e-48573b184e15",
+      "efcb614d-9825-4039-8f09-9f98d03205fd",
+      "b664157e-612e-477c-8ef7-04c15be9c66c"
+    ],
+    "policy": "All queries valid; zero internal errors, timeouts or budget violations; integrity audit passes. Accuracy is reported independently, not used to select a version."
+  },
+  "prior_full100": {
+    "SCRIPT": {
+      "planned_questions": 100,
+      "completed_questions": 100,
+      "correct": 50,
+      "accuracy_on_completed": 0.5,
+      "final_accuracy": 0.5,
+      "errors": 0,
+      "mean_wall_seconds": 172.70534448503867,
+      "median_wall_seconds": 173.11778896395117,
+      "internal_tool_errors": 6,
+      "hard_timeouts": 0,
+      "soft_deadline_stops": 5,
+      "model_preparations": 4,
+      "budget_violations": 0
+    },
+    "VideoTree": {
+      "planned_questions": 100,
+      "completed_questions": 100,
+      "correct": 59,
+      "accuracy_on_completed": 0.59,
+      "final_accuracy": 0.59,
+      "errors": 0,
+      "mean_wall_seconds": 26.3786,
+      "median_wall_seconds": 25.405
+    }
+  },
+  "results": {
+    "comparison": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v7-20261016/comparison.json",
+    "per_shard_integrity": "shards/*/integrity.json",
+    "smoke_status": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v7-20261016/smoke/status.json"
+  },
+  "limitations": [
+    "Same development cohort, not held-out evaluation",
+    "Multiple fixes change together",
+    "Reused M0 and VideoTree costs retained; QA timings separate"
+  ],
+  "validation_notes": [
+    "Rechecks keep a chronological verification history; contradictory same-source judgments remain unresolved and invalidate dependent proofs.",
+    "Only essentially black inputs are automatically rejected; static visible scenes are retained.",
+    "Unreadable attempts are scheduling history and do not satisfy usable visual checkpoints.",
+    "Missing other-claim fact type is conservatively treated as an action.",
+    "Answer option text is deterministic; free model explanation remains available and does not establish that the selected option is correct.",
+    "Observation limits and strict absence/count/last/all coverage requirements are unchanged."
+  ],
+  "runtime_finding": "Action candidates cited single frames; producer schema strengthened in V7b.",
+  "superseded_by": "script-videotree-repair-v7b-20261016"
+}

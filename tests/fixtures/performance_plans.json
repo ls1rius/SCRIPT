@@ -1,0 +1,1199 @@
+[
+  {
+    "question_id": "855f0685-fc29-463f-a796-8b68a722174f",
+    "question": "Analyze the interactions between c and the woman in the video, focusing on their primary collaborative goal. what can you conclude about the purpose of their actions?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "interaction",
+          "predicate": "interact",
+          "roles": {
+            "actor": "actor",
+            "object": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "collaborative_goal"
+        }
+      ],
+      "variables": [
+        {
+          "name": "actor",
+          "description": "The person involved in the interaction",
+          "constraints": []
+        },
+        {
+          "name": "target_object",
+          "description": "The object or task being interacted with",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The specific tasks mentioned (cleaning, laundry, packing, meal preparation, and設"
+      ]
+    }
+  },
+  {
+    "question_id": "9377c192-d46d-4016-9db4-df8007dbe82b",
+    "question": "Summarize the two primary tasks c completes in the video, and explain how they relate to one another.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "task1",
+          "predicate": "close",
+          "roles": {
+            "actor": "actor",
+            "object": "object"
+          },
+          "scope": [
+            0.0,
+            90.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "task"
+        },
+        {
+          "key": "task2",
+          "predicate": "close",
+          "roles": {
+            "actor": "actor",
+            "object": "object"
+          },
+          "scope": [
+            90.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "task1"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "task"
+        }
+      ],
+      "variables": [
+        {
+          "name": "actor",
+          "description": "The person performing the task",
+          "constraints": []
+        },
+        {
+          "name": "object",
+          "description": "The object being acted upon",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The video does not provide enough information to determine the exact nature of '",
+        "the courgette' or its relationship to the tasks completed by C. The tasks could,"
+      ]
+    }
+  },
+  {
+    "question_id": "38ebfa83-3667-43af-989e-6354440f9265",
+    "question": "In the context of the entire video, what was the main objective of c's interactions with the pen, book, and table?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "main_objective",
+          "predicate": "hold",
+          "roles": {
+            "object": "target_object",
+            "actor": "actor"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "global",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "main_objective"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "The object that actor held during the video",
+          "constraints": []
+        },
+        {
+          "name": "actor",
+          "description": "The person performing the action",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The video may not show all interactions with the pen, book, and table clearly",
+        "The main objective could be inferred from the overall context of the video, not"
+      ]
+    }
+  },
+  {
+    "question_id": "742dd0fc-018f-4e1f-b2fb-e04d38c97894",
+    "question": "Identify and discuss the three most critical turning points or moments within the video that significantly impacted the progression of the events.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "turning_points",
+          "predicate": "at",
+          "roles": {
+            "object": "object",
+            "location": "location"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "turning_points"
+        }
+      ],
+      "variables": [
+        {
+          "name": "object",
+          "description": "The object involved in the critical turning or a",
+          "constraints": []
+        },
+        {
+          "name": "location",
+          "description": "The location where the critical turning occurs",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The question asks for specific critical turning points but does not specify what"
+      ]
+    }
+  },
+  {
+    "question_id": "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+    "question": "What is the primary action performed with the frying pan at the beginning and the main purpose of using a frying pan in the context of this video? please highlight the significance of this action in the overall cooking process.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "primary_action",
+          "predicate": "at",
+          "roles": {
+            "object": "object",
+            "location": "location"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "primary_action"
+        },
+        {
+          "key": "main_purpose",
+          "predicate": "at",
+          "roles": {
+            "object": "object",
+            "location": "location"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "main_purpose"
+        }
+      ],
+      "variables": [
+        {
+          "name": "object",
+          "description": "the object being used in the video",
+          "constraints": []
+        },
+        {
+          "name": "location",
+          "description": "the location where the action takes place",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The question asks for the primary action and main purpose, but the options only",
+        "The question asks for the primary action and main purpose, but the options only"
+      ]
+    }
+  },
+  {
+    "question_id": "a46b0bc8-65d6-4831-91cb-d2495859b8a2",
+    "question": "How did c and the man communicate and interact, and what actions did they perform concurrently during their interactions?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "communication",
+          "predicate": "talk_to",
+          "roles": {
+            "speaker": "actor",
+            "listener": "actor"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "audio"
+          ],
+          "answer_slot": "communication_type"
+        },
+        {
+          "key": "interaction",
+          "predicate": "interact",
+          "roles": {
+            "actor": "actor",
+            "object": "object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "communication"
+          ],
+          "acceptable_modalities": [
+            "visual",
+            "audio"
+          ],
+          "answer_slot": "interaction_type"
+        },
+        {
+          "key": "concurrent_actions",
+          "predicate": "interact",
+          "roles": {
+            "actor": "actor",
+            "object": "object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "interaction"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "concurrent_actions"
+        }
+      ],
+      "variables": [
+        {
+          "name": "actor",
+          "description": "The person involved in the interaction",
+          "constraints": []
+        },
+        {
+          "name": "object",
+          "description": "The object of the interaction",
+          "constraints": []
+        },
+        {
+          "name": "speaker",
+          "description": "The person who is talking",
+          "constraints": []
+        },
+        {
+          "name": "listener",
+          "description": "The person who is listening",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The video may show different types of communication and interaction between C (a",
+        "The video may show different types of concurrent actions performed by C and the"
+      ]
+    }
+  },
+  {
+    "question_id": "a317149f-1286-4160-9070-e575c42b8cc2",
+    "question": "Summarize the most important actions that c performed, including the context, and explain their impact on the progression of the video.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "c",
+          "predicate": "pick_up",
+          "roles": {
+            "object": "giver",
+            "actor": "giver"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "action"
+        },
+        {
+          "key": "c",
+          "predicate": "transfer",
+          "roles": {
+            "object": "giver",
+            "actor": "receiver",
+            "recipient": "giver"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "action"
+        },
+        {
+          "key": "c",
+          "predicate": "interact",
+          "roles": {
+            "object": "giver",
+            "actor": "giver"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "action"
+        }
+      ],
+      "variables": [
+        {
+          "name": "giver",
+          "description": "the person giving the action",
+          "constraints": []
+        },
+        {
+          "name": "receiver",
+          "description": "the person receiving the action",
+          "constraints": []
+        },
+        {
+          "name": "giver",
+          "description": "the action being performed by c",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The given options do not provide enough information to determine the specific 'g"
+      ]
+    }
+  },
+  {
+    "question_id": "c3ef6035-08c6-458e-b2d4-d7dc8f97f658",
+    "question": "How does c effectively use the available kitchen resources and tools to prepare the dish? discuss the role of various tools in the process and how their use has facilitated the preparation.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "c_activity",
+          "predicate": "interact",
+          "roles": {
+            "object": "destination",
+            "actor": "actor"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "activity"
+        }
+      ],
+      "variables": [
+        {
+          "name": "actor",
+          "description": "The person performing the action",
+          "constraints": []
+        },
+        {
+          "name": "destination",
+          "description": "The location or object being interacted with",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The question asks about C's effective use of kitchen resources and tools, but it",
+        "does not specify which tools are being used for which part of the dish's"
+      ]
+    }
+  },
+  {
+    "question_id": "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+    "question": "In the context of the video, discuss the most important sequence of interactions between c and the lady, focusing on the purpose of their conversation.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "interaction_purpose",
+          "predicate": "talk_to",
+          "roles": {
+            "speaker": "location",
+            "listener": "location"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual",
+            "subtitle"
+          ],
+          "answer_slot": "interaction_purpose"
+        }
+      ],
+      "variables": [
+        {
+          "name": "location",
+          "description": "The location where C and the lady interact",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The conversation could be about various topics such as weather, news, meal plans",
+        "The interaction could be casual or focused on specific details like family"
+      ]
+    }
+  },
+  {
+    "question_id": "9557e88b-8880-4f64-88ec-815452f8ee4c",
+    "question": "Summarize the events that occurred within the kitchen setting and explain how they represent c's primary goal in that environment.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "primary_goal",
+          "predicate": "close",
+          "roles": {
+            "actor": "actor",
+            "object": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual",
+            "subtitle"
+          ],
+          "answer_slot": "primary_goal"
+        }
+      ],
+      "variables": [
+        {
+          "name": "actor",
+          "description": "The person performing the action",
+          "constraints": []
+        },
+        {
+          "name": "target_object",
+          "description": "The object or task related to the primary goal",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The primary goal may not be explicitly stated in the options provided, requiring",
+        "the video content to determine the specific actions and their relation to the"
+      ]
+    }
+  },
+  {
+    "question_id": "ee227b56-c12b-4725-89e9-aa29e0b4dbe8",
+    "question": "What were the main steps involved in the process of wrapping the gift box in the video?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "main_steps",
+          "predicate": "pick_up",
+          "roles": {
+            "object": "target_object",
+            "actor": "actor"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "steps"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object being picked up",
+          "constraints": []
+        },
+        {
+          "name": "actor",
+          "description": "the person performing the action",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The question asks for 'main steps', but the options provided are actions that do",
+        "not necessarily follow each other in sequence or represent the main steps of the"
+      ]
+    }
+  },
+  {
+    "question_id": "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+    "question": "In the context of the entire video, which key actions by c and the woman demonstrate the progression of their tasks?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "c",
+          "predicate": "pick_up",
+          "roles": {
+            "object": "speaker",
+            "actor": "speaker"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "action"
+        },
+        {
+          "key": "woman",
+          "predicate": "pick_up",
+          "roles": {
+            "object": "speaker",
+            "actor": "speaker"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "action"
+        }
+      ],
+      "variables": [
+        {
+          "name": "speaker",
+          "description": "the person speaking",
+          "constraints": []
+        },
+        {
+          "name": "object",
+          "description": "the object being picked up",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The options provided contain multiple variations of actions performed by 'c' and",
+        "The options provided contain multiple variations of actions performed by 'woman'"
+      ]
+    }
+  },
+  {
+    "question_id": "b45379aa-d6f3-4033-83df-5577fc49cfc0",
+    "question": "Describe the key steps in the process of preparing the mixture within the bowl and list any tools that were used during the process.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "steps",
+          "predicate": "at",
+          "roles": {
+            "object": "target_bag",
+            "location": "target_bag"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "steps"
+        },
+        {
+          "key": "tools",
+          "predicate": "at",
+          "roles": {
+            "object": "target_bag",
+            "location": "target_bag"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "tools"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_bag",
+          "description": "The bag containing the cereal and milk mixture",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The process described involves mixing cereal and milk, but the final step is not",
+        "The process described involves mixing cereal and milk, but the final step is not"
+      ]
+    }
+  },
+  {
+    "question_id": "b664157e-612e-477c-8ef7-04c15be9c66c",
+    "question": "How would you describe the most significant transformation of the environment depicted in the video due to c's actions, and what might be the overall goal behind these actions?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "most_significant_transformation",
+          "predicate": "transfer",
+          "roles": {
+            "object": "target_object",
+            "actor": "actor",
+            "recipient": "recipient"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "global",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "transformation_description"
+        },
+        {
+          "key": "overall_goal",
+          "predicate": "speech_claim",
+          "roles": {
+            "speaker": "actor",
+            "content": "actor"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "global",
+          "prerequisites": [
+            "most_significant_transformation"
+          ],
+          "acceptable_modalities": [
+            "audio"
+          ],
+          "answer_slot": "goal"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object that undergoes the transformation",
+          "constraints": []
+        },
+        {
+          "name": "actor",
+          "description": "the entity performing the action",
+          "constraints": []
+        },
+        {
+          "name": "recipient",
+          "description": "the entity receiving the transformation",
+          "constraints": []
+        },
+        {
+          "name": "speaker",
+          "description": "the entity speaking about the goal",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The question asks for the 'most significant transformation' but provides five 's",
+        "The answer slot 'transformation_description' and 'goal' are not directly linked"
+      ]
+    }
+  },
+  {
+    "question_id": "0c51c89d-d86b-45de-a1cf-c65153a7fbc1",
+    "question": "What is the overall task being accomplished in the video, and what key repetitive actions did c perform to achieve this goal?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "task",
+          "predicate": "hold",
+          "roles": {
+            "actor": "actor",
+            "object": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "global",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "activity"
+        }
+      ],
+      "variables": [
+        {
+          "name": "actor",
+          "description": "The person performing the action",
+          "constraints": []
+        },
+        {
+          "name": "target_object",
+          "description": "The object being held by the actor",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The specific action of peeling, grating, or dicing ginger is not explicitly seen",
+        "The exact method of cutting (slicing vs. dicing) is not clearly shown"
+      ]
+    }
+  },
+  {
+    "question_id": "8db459bf-bf84-45b2-9fc0-f5c370a6da1a",
+    "question": "Considering the various objects and locations c interacts with in the video, summarize the overarching experimental process taking place, mentioning the primary items and their functions.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "primary_activity",
+          "predicate": "close",
+          "roles": {
+            "object": "target_object",
+            "actor": "actor"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "activity"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object c interacts with",
+          "constraints": []
+        },
+        {
+          "name": "actor",
+          "description": "the person performing the action",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The exact nature of the tubes and the experiment being conducted by C is not unv"
+      ]
+    }
+  },
+  {
+    "question_id": "15bae307-992b-4359-9fe0-3f622f957d42",
+    "question": "In your own words, summarize the key actions c repeatedly performs throughout the video without simply listing them out.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "c",
+          "predicate": "interact",
+          "roles": {
+            "actor": "actor",
+            "object": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "activity"
+        }
+      ],
+      "variables": [
+        {
+          "name": "actor",
+          "description": "The person performing the action",
+          "constraints": []
+        },
+        {
+          "name": "target_object",
+          "description": "The object being interacted with",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The specific actions of 'ceasing walking motion', 'waving right hand', 'taking塑料",
+        "paper' are not clearly defined in the options provided"
+      ]
+    }
+  },
+  {
+    "question_id": "51688142-10e7-48ab-adef-2caa5448b456",
+    "question": "How does the introduction of the palm frond contribute to the development of the final product, and why might c have chosen to include it?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "palm_frn",
+          "predicate": "interact",
+          "roles": {
+            "object": "target_person",
+            "actor": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual",
+            "subtitle"
+          ],
+          "answer_slot": "contribution"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_person",
+          "description": "the person interacting with the palm frond",
+          "constraints": []
+        },
+        {
+          "name": "target_object",
+          "description": "the palm frond being interacted with",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The palm frond's contribution could be interpreted as either structural,装饰性, or",
+        "The question asks for the reason behind C's choice, which is not directly shown"
+      ]
+    }
+  },
+  {
+    "question_id": "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+    "question": "Analyze the character's behavior and actions after finishing the meal. identify the high-level transition in the video, and describe how this transition relates to the main theme.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "character_behavior",
+          "predicate": "transfer",
+          "roles": {
+            "object": "target_object",
+            "actor": "target_person",
+            "recipient": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "behavior"
+        },
+        {
+          "key": "main_theme",
+          "predicate": "hold",
+          "roles": {
+            "object": "target_object",
+            "actor": "target_person"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "theme"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object the character interacts with",
+          "constraints": []
+        },
+        {
+          "name": "target_person",
+          "description": "the person performing the action",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The video may show multiple transitions or activities that are not explicitly in",
+        "The video may not provide enough information to determine the exact nature of"
+      ]
+    }
+  },
+  {
+    "question_id": "3223ece4-dc21-4ca9-8e78-2af8036ec4e8",
+    "question": "Describe how c's actions progress towards the final goal, and what key modification does he make to the vespa scooter?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "goal",
+          "predicate": "talk_to",
+          "roles": {
+            "speaker": "speaker",
+            "listener": "listener"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "final_goal"
+        },
+        {
+          "key": "modification",
+          "predicate": "pick_up",
+          "roles": {
+            "object": "speaker",
+            "actor": "listener"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "goal"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "modification"
+        }
+      ],
+      "variables": [
+        {
+          "name": "speaker",
+          "description": "The person performing the actions",
+          "constraints": []
+        },
+        {
+          "name": "listener",
+          "description": "The person receiving information about the final",
+          "constraints": []
+        },
+        {
+          "name": "speaker",
+          "description": "The person performing the modification",
+          "constraints": []
+        },
+        {
+          "name": "listener",
+          "description": "The person receiving information about the",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The question asks for the final goal and a modification, but only one option is",
+        "The question asks for the final goal and a modification, but only one option is"
+      ]
+    }
+  },
+  {
+    "question_id": "509e6545-5fff-4f73-ae0f-524dfa8b3c2c",
+    "question": "Based on c's actions, what is the significance of the wooden crates and the blocks with respect to the fork lift's involvement in the video?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "requirements": [
+        {
+          "key": "forklift_involvement",
+          "predicate": "interact",
+          "roles": {
+            "object": "target_fabric",
+            "actor": "actor"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "forklift_involvement"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_fabric",
+          "description": "the wooden crates and the blocks",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [
+        "The wooden crates and blocks can be used for various purposes such as moving",
+        "The fork lift's role in the video may vary depending on the context of the scene"
+      ]
+    }
+  }
+]

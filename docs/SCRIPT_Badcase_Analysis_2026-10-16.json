@@ -1,0 +1,716 @@
+{
+  "date": "2026-10-16",
+  "timezone": "Asia/Singapore",
+  "mode": "offline_badcase_analysis_existing_runs",
+  "scope": {
+    "primary_experiment": "workdirs/script-videotree-repair-v5-20261015",
+    "questions": 100,
+    "wrong_questions": 50,
+    "manual_deep_trace_cases": 7,
+    "primary_version": "V5 latest completed full SCRIPT cohort",
+    "comparison_note": "Same fixed development cohort, same Qwen weights and released captions. SCRIPT additionally reads video; no held-out causal/generalization claim."
+  },
+  "comparison": {
+    "groups": {
+      "SCRIPT": {
+        "planned_questions": 100,
+        "completed_questions": 100,
+        "correct": 50,
+        "accuracy_on_completed": 0.5,
+        "final_accuracy": 0.5,
+        "errors": 0,
+        "mean_wall_seconds": 172.70534448503867,
+        "median_wall_seconds": 173.11778896395117,
+        "internal_tool_errors": 6,
+        "hard_timeouts": 0,
+        "soft_deadline_stops": 5,
+        "model_preparations": 4,
+        "budget_violations": 0
+      },
+      "VideoTree": {
+        "planned_questions": 100,
+        "completed_questions": 100,
+        "correct": 59,
+        "accuracy_on_completed": 0.59,
+        "final_accuracy": 0.59,
+        "errors": 0,
+        "mean_wall_seconds": 26.3786,
+        "median_wall_seconds": 25.405
+      }
+    },
+    "paired_outcomes": {
+      "both_correct": 33,
+      "SCRIPT_only_correct": 17,
+      "VideoTree_only_correct": 26,
+      "both_wrong": 24
+    },
+    "difference": -0.09,
+    "ci95": [
+      -0.21,
+      0.04
+    ]
+  },
+  "findings": {
+    "option_numbering": {
+      "conservative_text_option_mismatches": 4,
+      "method": "Normalized text compared with same-length option prefixes using SequenceMatcher; best score >=0.9 and margin >=0.15. Heuristic identifies examples, not an exhaustive semantic classification.",
+      "unambiguous_correct_text_wrong_id_case_ids": [
+        "de326bda-444a-4ad4-81d6-5ebb456a3300",
+        "22627b14-0f17-4a45-9661-5ac979e0a4c2"
+      ],
+      "prediction_distribution": {
+        "0": 38,
+        "3": 13,
+        "4": 19,
+        "2": 10,
+        "1": 20
+      },
+      "truth_distribution": {
+        "1": 16,
+        "3": 14,
+        "2": 22,
+        "4": 26,
+        "0": 22
+      }
+    },
+    "sufficiency": {
+      "questions": 20,
+      "correct": 7,
+      "wrong": 13,
+      "selected_zero": 16,
+      "note": "Answer-choice correctness is not an independently annotated evidence-sufficiency judgment; stop groups were not randomized."
+    },
+    "observation_option_copy": {
+      "candidate_claims": 1959,
+      "option_text_or_long_prefix_copies": 724,
+      "fraction": 0.36957631444614597,
+      "affected_questions": 60,
+      "affected_wrong_questions": 29,
+      "method": "Case/punctuation-normalized equality, or candidate length >80 and equal to option prefix. Copying text does not itself prove a perception error."
+    },
+    "deduplication": {
+      "distinct_description_same_source_groups": 166,
+      "affected_questions": 66,
+      "affected_wrong_questions": 31,
+      "code": "workdirs/script-videotree-repair-v5-20261015/source/script_core/materialize.py",
+      "code_lines": [
+        379,
+        380,
+        381,
+        382,
+        383,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396
+      ],
+      "confirmed_candidate_loss": [
+        {
+          "id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+          "q": "In what ways does c manipulate the steel rods throughout the video and what do these actions indicate about their overall goal?",
+          "truth": 1,
+          "pred": 0,
+          "vt": 0,
+          "lost": [
+            {
+              "proposed": "C manipulates the steel rods by greasing them with a brush and then hitting them with a spanner. this indicates that c is trying to keep the rods in good condit",
+              "retained": "C manipulates the steel rods by picking them up and putting them down. this indicates that c is trying to organize the rods or to move them to a different lo",
+              "retained_status": "supported",
+              "raw": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/8a27666085428d357a8f/raw_calls/defe33c2-7189-4c0e-bb5e-d38027f12a3b-0.json"
+            }
+          ]
+        },
+        {
+          "id": "9377c192-d46d-4016-9db4-df8007dbe82b",
+          "q": "Summarize the two primary tasks c completes in the video, and explain how they relate to one another.",
+          "truth": 3,
+          "pred": 0,
+          "vt": 2,
+          "lost": [
+            {
+              "proposed": "C chops the courgette and mixes it with salt.",
+              "retained": "C chops the courgette and puts it in a jar.",
+              "retained_status": "supported",
+              "raw": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/8f521b9d5624d96e0a68/raw_calls/ed3dea9a-28cf-494f-a61d-39d9a871e318-0.json"
+            }
+          ]
+        }
+      ],
+      "note": "Description omitted from exact and overlap duplicate identity in V5. Correct-label candidate was observed and lost in two wrong questions; only the steel-rod candidate was verified supported. Counts do not quantify causal accuracy loss."
+    },
+    "black_frames": {
+      "unique_observed_frames": 12006,
+      "all_channels_max_le_2_frames": 182,
+      "questions_with_black_frames": 3,
+      "questions_with_black_frames_wrong": 2,
+      "near_black_additional_frames": 1,
+      "near_black_additional_questions": 1,
+      "all_black_observation_windows": 12,
+      "all_black_verifications": 36,
+      "supported_verifications_on_all_black_inputs": 13,
+      "supported_specific_activity_on_black_inputs_manually_identified": 7,
+      "source_video_confirmation": {
+        "question_id": "f9d20acc-8d52-4136-8d4e-48573b184e15",
+        "original_decode_black_at_seconds": [
+          14,
+          16,
+          18,
+          21,
+          35,
+          70
+        ],
+        "visible_dough_at_seconds": 97.5
+      },
+      "details": {
+        "totals": {
+          "black_observations": 12,
+          "black_candidates": 36,
+          "black_verifications": 36,
+          "black_supported": 13,
+          "seconds": 160.42374960379675
+        },
+        "questions": [
+          {
+            "id": "f9d20acc-8d52-4136-8d4e-48573b184e15",
+            "black_observations": 4,
+            "black_candidates": 12,
+            "black_verifications": 12,
+            "black_supported": 6,
+            "seconds": 59.1355146067217,
+            "examples": [
+              {
+                "text": "C is wiping the counter with a cloth.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/808a884b7204fe9b65b9/raw_calls/3f351f27-37b5-43a7-b4d5-9a1fb6a3d7ce-0.json"
+              },
+              {
+                "text": "C is standing still with her hands at her sides.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/808a884b7204fe9b65b9/raw_calls/2fea3b93-3535-4c63-abea-07c774fcbc18-0.json"
+              },
+              {
+                "text": "C is standing still with her hands at her sides.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/808a884b7204fe9b65b9/raw_calls/af3b1244-93cc-450a-ba75-75c29a6b5e61-0.json"
+              },
+              {
+                "text": "C is standing still with her hands at her sides.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/808a884b7204fe9b65b9/raw_calls/2e93d518-0e4c-4f77-b59e-d39142fa53e5-0.json"
+              },
+              {
+                "text": "C is wiping the counter with a cloth.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/808a884b7204fe9b65b9/raw_calls/0dbb2761-2397-4235-827a-6fd0b688883a-0.json"
+              },
+              {
+                "text": "C is wiping the counter with a cloth.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/808a884b7204fe9b65b9/raw_calls/d7fbf5b8-abf4-4620-964c-383e6e2ebcdb-0.json"
+              }
+            ]
+          },
+          {
+            "id": "3af2be23-926f-4b17-9b49-4ad090bc9e31",
+            "black_observations": 3,
+            "black_candidates": 9,
+            "black_verifications": 9,
+            "black_supported": 1,
+            "seconds": 38.92249951604754,
+            "examples": [
+              {
+                "text": "c is folding the turbans.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/bf8a5b8949a515ab34ff/raw_calls/7499f085-51e6-43ff-9866-00629b5160f2-0.json"
+              }
+            ]
+          },
+          {
+            "id": "5d15c716-f179-462c-84a6-fa94e9d14e94",
+            "black_observations": 5,
+            "black_candidates": 15,
+            "black_verifications": 15,
+            "black_supported": 6,
+            "seconds": 62.365735481027514,
+            "examples": [
+              {
+                "text": "The scene is dark with no visible objects or activities.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/3/script_runs/4927fc9d3813144115a4/raw_calls/4db1d763-4192-40d6-a71b-3e11a0294ee1-0.json"
+              },
+              {
+                "text": "The scene remains dark with no visible changes from the previous frame.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/3/script_runs/4927fc9d3813144115a4/raw_calls/fdeb767c-54b9-401d-baca-1a7c015a341b-0.json"
+              },
+              {
+                "text": "The scene continues to be dark without any discernible activity or objects.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/3/script_runs/4927fc9d3813144115a4/raw_calls/6c8843f2-4198-4775-8264-91e4b5159b59-0.json"
+              },
+              {
+                "text": "The scene is dark with no visible objects or activities.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/3/script_runs/4927fc9d3813144115a4/raw_calls/d7901784-4c58-4b28-baee-29491a2e377f-0.json"
+              },
+              {
+                "text": "The scene remains dark with no visible changes.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/3/script_runs/4927fc9d3813144115a4/raw_calls/c85dfcbe-7e3f-4904-8290-66f55eb7ea0f-0.json"
+              },
+              {
+                "text": "The scene continues to be dark without any discernible activity.",
+                "raw_path": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/3/script_runs/4927fc9d3813144115a4/raw_calls/5cb66ca7-70f8-43a9-b84e-ff1584e72325-0.json"
+              }
+            ]
+          }
+        ]
+      },
+      "limitation": "Other supported black-input outputs included correct descriptions that the image is dark. Black-frame presence alone does not establish an erroneous final answer."
+    },
+    "runtime": {
+      "mean_qa_wall_seconds": 172.70534448503867,
+      "mean_ledger_initialization_plus_online_seconds": 209.55807950497822,
+      "mean_visual_language_calls": 37.53,
+      "global_requirements": 100,
+      "task_limit_stops": 80,
+      "processing_budget_stops": 0,
+      "eight_round_queries": 84,
+      "observe_verify_assess_fraction_of_mean_qa_wall": 0.743285152681285,
+      "operations": {
+        "base_restore": {
+          "calls": 100,
+          "seconds": 12.23547766765114,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.12235477667651139
+        },
+        "model_snapshot_validation": {
+          "calls": 4,
+          "seconds": 162.21547710720915,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 1.6221547710720916
+        },
+        "structured_output_validation": {
+          "calls": 7503,
+          "seconds": 1.1862744647078216,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.011862744647078215
+        },
+        "prepare_vlm": {
+          "calls": 4,
+          "seconds": 83.7578459441429,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.8375784594414291
+        },
+        "parse": {
+          "calls": 100,
+          "seconds": 1732.3356738982257,
+          "input_tokens": 80644,
+          "output_tokens": 21065,
+          "mean_seconds_per_question": 17.323356738982255
+        },
+        "object_validation": {
+          "calls": 1830,
+          "seconds": 3.6749256086768582,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.03674925608676858
+        },
+        "query_plan_validation": {
+          "calls": 100,
+          "seconds": 0.04939877928700298,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.0004939877928700298
+        },
+        "retrieval_maintenance": {
+          "calls": 300,
+          "seconds": 0.053247096366249025,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.0005324709636624902
+        },
+        "embed": {
+          "calls": 279,
+          "seconds": 14.738273580442183,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.14738273580442182
+        },
+        "retrieve": {
+          "calls": 279,
+          "seconds": 13.34681309654843,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.1334681309654843
+        },
+        "structural_gate": {
+          "calls": 870,
+          "seconds": 0.049690030282363296,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.0004969003028236329
+        },
+        "candidate_maintenance": {
+          "calls": 1898,
+          "seconds": 1.430658818106167,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.01430658818106167
+        },
+        "navigation_maintenance": {
+          "calls": 770,
+          "seconds": 0.3982610701350495,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.003982610701350495
+        },
+        "observation_maintenance": {
+          "calls": 4263,
+          "seconds": 2.413456791662611,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.02413456791662611
+        },
+        "decode": {
+          "calls": 770,
+          "seconds": 602.7031807339517,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 6.027031807339517
+        },
+        "cache_lookup": {
+          "calls": 770,
+          "seconds": 0.007684246986173093,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 7.684246986173094e-05
+        },
+        "observe": {
+          "calls": 770,
+          "seconds": 4680.508988582413,
+          "input_tokens": 3436522,
+          "output_tokens": 154094,
+          "mean_seconds_per_question": 46.805089885824124
+        },
+        "verify_claim": {
+          "calls": 1953,
+          "seconds": 4791.067165555898,
+          "input_tokens": 8321195,
+          "output_tokens": 113175,
+          "mean_seconds_per_question": 47.91067165555898
+        },
+        "cache_write": {
+          "calls": 1192,
+          "seconds": 0.4864853707840666,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.004864853707840666
+        },
+        "assess": {
+          "calls": 637,
+          "seconds": 3365.355680305278,
+          "input_tokens": 4015922,
+          "output_tokens": 126116,
+          "mean_seconds_per_question": 33.65355680305278
+        },
+        "feedback_maintenance": {
+          "calls": 637,
+          "seconds": 0.07913812075275928,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.0007913812075275927
+        },
+        "checkpoint_write": {
+          "calls": 870,
+          "seconds": 126.43907277926337,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 1.2643907277926336
+        },
+        "gate": {
+          "calls": 190,
+          "seconds": 1296.791252203402,
+          "input_tokens": 1915162,
+          "output_tokens": 41330,
+          "mean_seconds_per_question": 12.967912522034021
+        },
+        "answer": {
+          "calls": 100,
+          "seconds": 230.87473679170944,
+          "input_tokens": 873032,
+          "output_tokens": 6477,
+          "mean_seconds_per_question": 2.3087473679170945
+        },
+        "storage_inventory": {
+          "calls": 100,
+          "seconds": 38.265166970086284,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "mean_seconds_per_question": 0.38265166970086284
+        },
+        "repair": {
+          "calls": 3,
+          "seconds": 16.427729296148755,
+          "input_tokens": 13521,
+          "output_tokens": 149,
+          "mean_seconds_per_question": 0.16427729296148755
+        }
+      }
+    },
+    "checked_alternatives": {
+      "query_errors": 0,
+      "hard_timeouts": 0,
+      "budget_violations": 0,
+      "internal_errors": 6,
+      "internal_error_questions": 5,
+      "wrong_questions_with_internal_errors": 2,
+      "answer_context_omitted_windows_questions": 0,
+      "answer_model_omitted_windows_questions": 0,
+      "all_supported_claims_retained_in_answer": true,
+      "limitations": "Retained records do not imply correct perception or effective attention. V5 full cohort supports a decision/observation diagnosis; independent cause contributions require controlled reruns."
+    }
+  },
+  "cases": [
+    {
+      "id": "de326bda-444a-4ad4-81d6-5ebb456a3300",
+      "q": "Considering c's interactions with various objects throughout the video, what can you infer about the purpose of these interactions and their significance?",
+      "truth": 1,
+      "pred": 0,
+      "vt": 1,
+      "vt_ok": true,
+      "ok": false,
+      "stop": "protocol_sufficient",
+      "sec": 140.55480877310038,
+      "text": "C is using the objects to help her study.",
+      "options": [
+        "C is using the objects to create a work of art.",
+        "C is using the objects to help her study.",
+        "C is using the objects to play a game.",
+        "C is using the objects to solve a puzzle.",
+        "C is using the objects to build something."
+      ],
+      "dir": "workdirs/script-videotree-repair-v5-20261015/shards/0/script_runs/b8e1ae3adcc505ba57e8",
+      "category": "option_id_drift",
+      "finding": "证据与最终文字均为帮助学习，即选项1；gate将该语义归到选项0，最终保留0。",
+      "answer_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/b8e1ae3adcc505ba57e8/raw_calls/671b3903-93b4-431c-b402-e6b8c87d42b6-0.json"
+    },
+    {
+      "id": "22627b14-0f17-4a45-9661-5ac979e0a4c2",
+      "q": "Determine the primary purpose of c's actions in the video, and explain the importance of the repetitive actions involved in this process.",
+      "truth": 2,
+      "pred": 0,
+      "vt": 2,
+      "vt_ok": true,
+      "ok": false,
+      "stop": "protocol_sufficient",
+      "sec": 151.82683738705236,
+      "text": "C is painting a piece of furniture. the repetitive actions are necessary to ensure that the paint is applied evenly.",
+      "options": [
+        "In the kitchen, c is diligently making a cup of coffee. the repetitive actions, or steps, are necessary to ensure that the coffee concoction is mixed evenly throughout.",
+        "C is stirring a pot of soup. the repetitive actions are necessary to ensure that the soup is cooked evenly.",
+        "C is painting a piece of furniture. the repetitive actions are necessary to ensure that the paint is applied evenly.",
+        "C is diligently washing dishes. the repetitive actions performed are extremely necessary to ensure that every single dish is thoroughly clean.",
+        "Currently, c is diligently brushing his teeth. these repetitive actions are crucial and necessary to effectively ensure that his teeth remain ultimately clean and healthy."
+      ],
+      "dir": "workdirs/script-videotree-repair-v5-20261015/shards/1/script_runs/4a9d3e5c00b5ba6f0a9f",
+      "category": "option_id_drift",
+      "finding": "最终文字完整描述选项2的家具涂漆，但gate与最终编号为0，即咖啡。",
+      "answer_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/1/script_runs/4a9d3e5c00b5ba6f0a9f/raw_calls/873ae1eb-76d7-4391-a456-9a81d6abebcb-0.json"
+    },
+    {
+      "id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+      "q": "How would you describe the overall process shown in the video and the main purpose behind the actions performed?",
+      "truth": 2,
+      "pred": 0,
+      "vt": 2,
+      "vt_ok": true,
+      "ok": false,
+      "stop": "resource_stop",
+      "sec": 120.51899876073003,
+      "text": "The overall process shown in the video involves C carefully folding a dress with precision and ironing it. The main purpose behind these actions is to ensure a)",
+      "options": [
+        "C is carefully folding a dress with precision.",
+        "In the room, c is carefully hanging a beautiful dress on the rack.",
+        "C is ironing a dress.",
+        "Currently, c is carefully packing a beautiful dress in her bag.",
+        "C is washing a dress."
+      ],
+      "dir": "workdirs/script-videotree-repair-v5-20261015/shards/0/script_runs/34edb56d3f1735dba584",
+      "category": "decision_conflict",
+      "finding": "10条存储事实中8条为熨衣、2条为叠衣；最终选择叠衣。描述窗口完整，VideoTree选择熨衣。",
+      "answer_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/34edb56d3f1735dba584/raw_calls/05e5b830-edad-42e3-a2b8-c153f4a83839-0.json"
+    },
+    {
+      "id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+      "q": "In what ways does c manipulate the steel rods throughout the video and what do these actions indicate about their overall goal?",
+      "truth": 1,
+      "pred": 0,
+      "vt": 0,
+      "vt_ok": false,
+      "ok": false,
+      "stop": "protocol_sufficient",
+      "sec": 186.47860205732286,
+      "text": "C manipulates the steel rods by picking them up and putting them down. this indicates that c is trying to organize the rods or to move them to a different lo",
+      "options": [
+        "C manipulates the steel rods by picking them up and putting them down. this indicates that c is trying to organize the rods or to move them to a different location.",
+        "C manipulates the steel rods by greasing them with a brush and then hitting them with a spanner. this indicates that c is trying to keep the rods in good condition and to ensure that they are working properly.",
+        "C skillfully manipulates the steel rods by carefully turning them. this action indicates that c is attempting to adjust the rods or to accurately align them with each other.",
+        "C skillfully manipulates the steel rods by carefully bending them with precision. this action indicates that c is attempting to shape the rods or to make them fit into a specific, designated space.",
+        "C skillfully manipulates the steel rods by precisely cutting them. this clearly indicates that c is attempting to shorten the rods or to remove a specific portion of them for a purpose."
+      ],
+      "dir": "workdirs/script-videotree-repair-v5-20261015/shards/0/script_runs/8a27666085428d357a8f",
+      "category": "semantic_deduplication",
+      "finding": "正确选项对应的刷油和扳手候选已被verify_claim判为supported；同源去重返回已有的拿起放下记录，正确命题未存储。",
+      "answer_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/8a27666085428d357a8f/raw_calls/95a78090-bf25-410a-9c5e-680b3fca1603-0.json"
+    },
+    {
+      "id": "f9d20acc-8d52-4136-8d4e-48573b184e15",
+      "q": "What was the primary objective of c's actions throughout the video, and how did her technique evolve over time?",
+      "truth": 4,
+      "pred": 1,
+      "vt": 4,
+      "vt_ok": true,
+      "ok": false,
+      "stop": "resource_stop",
+      "sec": 219.3810871988535,
+      "text": "C's primary objective was to make a cake. she began by mixing flour, sugar, eggs, and butter together in a bowl. she then continued to bake the cake in the oven",
+      "options": [
+        "C's primary objective was to clean the kitchen. she began by sweeping the floor. she then continued to clean the counters and stovetop.",
+        "C's primary objective was to make a cake. she began by mixing flour, sugar, eggs, and butter together in a bowl. she then continued to bake the cake in the oven.",
+        "C's primary objective was to make bread. she began by mixing flour, water, yeast, and salt together in a bowl. she then continued to let the dough rise before baking it in the oven.",
+        "C's primary objective was to make cookies. she began by mixing flour, sugar, eggs, butter, and vanilla extract together in a bowl. she then continued to bake the cookies in the oven.",
+        "C's primary objective was to make dough. she began by mixing flour and water together in a bowl. she then continued to mix the dough by hand until it was smooth and elastic."
+      ],
+      "dir": "workdirs/script-videotree-repair-v5-20261015/shards/0/script_runs/808a884b7204fe9b65b9",
+      "category": "unsupported_inference_and_black_frames",
+      "finding": "和面事实与面粉加水描述均保留，最终却选含糖蛋黄油和烤箱的蛋糕选项。4个全黑观察窗口仍生成具体动作，6次全黑核验支持具体动作；源视频抽样确认黑屏。",
+      "answer_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/0/script_runs/808a884b7204fe9b65b9/raw_calls/c3e46b8c-af41-4dcd-8106-107985810ba0-0.json"
+    },
+    {
+      "id": "efcb614d-9825-4039-8f09-9f98d03205fd",
+      "q": "Explain how c's actions transitioned from working with the wood and wooden shelf to handling his jacket and preparing his next task. what events lead to this switch, and how did c manage his belongings throughout this process?",
+      "truth": 2,
+      "pred": 0,
+      "vt": 2,
+      "vt_ok": true,
+      "ok": false,
+      "stop": "protocol_sufficient",
+      "sec": 161.69223099702504,
+      "text": "C's actions transitioned from working with the wood and wooden shelf to handling his jacket and preparing his next task when he finished fixing the wood to the",
+      "options": [
+        "C's actions transitioned from working with the wood and wooden shelf to handling his jacket and preparing his next task when he finished fixing the wood to the wooden shelf. he then put the tools away and picked up his jacket, and then he went to the bathroom.",
+        "C's actions transitioned from working with the wood and wooden shelf to handling his jacket and preparing his next task when he finished fixing the wood to the wooden shelf. he then put the tools away and picked up his jacket, and then he went to the kitchen to make a sandwich.",
+        "C's actions transitioned from working with the wood and wooden shelf to handling his jacket and preparing his next task when he finished fixing the wood to the wooden shelf. he then put the tools away and picked up his jacket.",
+        "C's actions transitioned from working with the wood and wooden shelf to handling his jacket and preparing his next task when he finished fixing the wood to the wooden shelf. he then put the tools away and picked up his jacket, and then he went to the living room to watch tv.",
+        "C's actions transitioned from working with the wood and wooden shelf to handling his jacket and preparing his next task when he finished fixing the wood to the wooden shelf. he then put the tools away and picked up his jacket, and then he went to the bedroom to take a nap."
+      ],
+      "dir": "workdirs/script-videotree-repair-v5-20261015/shards/3/script_runs/18883de390baaa63ab13",
+      "category": "missing_discriminating_tail",
+      "finding": "选项共享长前缀，仅末尾后续行为不同；多个候选与理由达到字符上限后只留下共同前缀，gate仍支持包含去卫生间的选项0。",
+      "answer_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/3/script_runs/18883de390baaa63ab13/raw_calls/ed5d1771-c482-4f93-bfeb-d0c673ddd136-0.json"
+    },
+    {
+      "id": "d0bbd7fa-2a15-4c25-ab06-adc7d04bce7b",
+      "q": "Considering the variety of activities c performs in the video, can you identify and describe two distinct types of activities and their significance in the overall scenario?",
+      "truth": 4,
+      "pred": 0,
+      "vt": 4,
+      "vt_ok": true,
+      "ok": false,
+      "stop": "protocol_sufficient",
+      "sec": 157.2562125560362,
+      "text": "C's actions can be divided into two types: yoga exercises and dance exercises",
+      "options": [
+        "C's actions can be divided into two types: yoga exercises and dance exercises.",
+        "C's actions can be divided into two types: martial arts exercises and stretching exercises.",
+        "C's actions can be divided into two types: warm-up exercises and cool-down exercises.",
+        "C's actions can be divided into two types: cardio exercises and strength-training exercises.",
+        "C's actions can be divided into two types: warm-up exercises and stretching exercises."
+      ],
+      "dir": "workdirs/script-videotree-repair-v5-20261015/shards/3/script_runs/b9349d2550977a46b266",
+      "category": "gate_semantic_contradiction",
+      "finding": "支持事实中已有热身及拉伸，gate却排除该选项并选择瑜伽与舞蹈。",
+      "answer_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015/shards/3/script_runs/b9349d2550977a46b266/raw_calls/e2008ddc-d40a-4c4f-a7de-a711db67919c-0.json"
+    }
+  ],
+  "v6b": {
+    "existing_answer_only_recheck": {
+      "mode": "fixed_evidence_answer_recheck",
+      "questions": 100,
+      "correct": 51,
+      "errors": 0,
+      "source_correct": 50,
+      "fixed_wrong_answers": 10,
+      "lost_correct_answers": 9,
+      "mean_answer_stage_seconds_including_preparation": 2.142106021689251,
+      "limitations": [
+        "Uses V5 observations and captions, including any V5 fact loss or observation errors.",
+        "Only final decision code/prompt changes; does not measure new observation/verification behavior.",
+        "Answer-stage timing is not end-to-end SCRIPT latency.",
+        "Same 100 development questions; not held-out accuracy."
+      ]
+    },
+    "existing_gpu_smoke": {
+      "job_id": "668509.hopper-m-02",
+      "ended_at": "2026-10-15T16:28:18.637813+00:00",
+      "planned": 4,
+      "results": 4,
+      "query_failures": 0,
+      "result_errors": 0,
+      "context_overflow_calls": 0,
+      "gate_contract_failures": 0,
+      "budget_violations": 0,
+      "internal_tool_errors": 0,
+      "hard_timeouts": 0,
+      "model_preparations": 1,
+      "engineering_smoke_passed": true,
+      "scope": "Selected development diagnostics within the fixed 100 questions; not an accuracy estimate."
+    },
+    "smoke_accuracy": "1/4 selected diagnostics; not a population estimate",
+    "full_live_results_available": false,
+    "implemented_repairs": [
+      "option_id/text pairs",
+      "semantic description included in other-claim deduplication",
+      "option-free concrete observation",
+      "per-window batched verification",
+      "deferred global assessment",
+      "gate chronological caption context",
+      "reject absence-of-evidence refutations",
+      "final answer can override gate candidate",
+      "decision context projection",
+      "source-time observed_at enum"
+    ],
+    "not_yet_established": [
+      "Full-cohort accuracy gain",
+      "Full-cohort latency gain",
+      "Independent perceptual verification reliability",
+      "Image quality-aware observation scheduling"
+    ]
+  },
+  "recommended_next_experiments": [
+    {
+      "priority": 1,
+      "experiment": "Use explicit option IDs plus deterministic answer text from selected option; rerun fixed-evidence decisions with and without forced gate choice.",
+      "purpose": "Separate option mapping/locking failures from upstream evidence quality."
+    },
+    {
+      "priority": 2,
+      "experiment": "Retain atomic concrete actions, semantic claim identities and separate observation from purpose inference; reject unsupported activity claims on unusable frames.",
+      "purpose": "Prevent lost alternatives and hallucinated observations from entering trusted state."
+    },
+    {
+      "priority": 3,
+      "experiment": "For global questions, form full-timeline answer hypotheses first, then inspect only the action/object/temporal distinction that can change the selected option.",
+      "purpose": "Reduce repeated global-question observations and preserve discriminating option tails."
+    },
+    {
+      "priority": 4,
+      "experiment": "Compare caption-only QA, caption plus observations without gate locking, and full SCRIPT on exactly the same frozen cohort/configuration.",
+      "purpose": "Measure incremental value/cost of observation, verification and stopping mechanisms before scaling."
+    }
+  ],
+  "method_limits": [
+    "No new model inference or GPU benchmark was performed in this analysis.",
+    "Saved V6b recheck changes several final-decision details simultaneously and is not a one-variable ablation.",
+    "Cases and mechanism counts overlap and must not be summed into a percentage attribution of 50 wrong answers.",
+    "No exhaustive independent video annotations were created."
+  ]
+}

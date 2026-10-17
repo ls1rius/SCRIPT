@@ -1,0 +1,67 @@
+{
+  "status": "submitted",
+  "created_at": "2026-10-16T06:13:21.956173+00:00",
+  "cohort_sizes": [
+    100,
+    300,
+    500
+  ],
+  "inference_version": "V7c; identical inference code and configuration to completed 100",
+  "engineering_validation": "144 CPU tests passed; 3 scaling tests rerun after provenance hashing optimization",
+  "gpu_allocations_total": 2,
+  "per_question_budget_seconds": 600,
+  "max_rounds": 8,
+  "existing_script_results_reused": 100,
+  "new_script_questions": 400,
+  "baseline": "Frozen existing VideoTree outcomes, including 2 failures counted incorrect",
+  "report_files": [
+    "comparison_300.json",
+    "comparison_500.json",
+    "run_summary.json"
+  ],
+  "submitted_at": "2026-10-16T06:13:22.121196+00:00",
+  "job_ids": [
+    "669596.hopper-m-02",
+    "669597.hopper-m-02"
+  ],
+  "experiment_directory": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1",
+  "submissions": {
+    "submitted_at": "2026-10-16T06:13:21.956151+00:00",
+    "gpu_allocations_total": 2,
+    "gpu_model": "H200",
+    "walltime_per_job": "12:00:00",
+    "streams_per_gpu": 2,
+    "existing_script_results_reused": 100,
+    "new_script_questions": 400,
+    "stages": [
+      300,
+      500
+    ],
+    "jobs": [
+      "669596.hopper-m-02",
+      "669597.hopper-m-02"
+    ],
+    "commands": [
+      [
+        "/cm/shared/apps/pbspro/current/bin/qsub",
+        "-N",
+        "script-v7c-scale0",
+        "-o",
+        "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/jobs/job-0.log",
+        "-v",
+        "SCALING_DIR=/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1,SCALING_JOB=0",
+        "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/source/script/script_scaling.pbs"
+      ],
+      [
+        "/cm/shared/apps/pbspro/current/bin/qsub",
+        "-N",
+        "script-v7c-scale1",
+        "-o",
+        "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/jobs/job-1.log",
+        "-v",
+        "SCALING_DIR=/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1,SCALING_JOB=1",
+        "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/source/script/script_scaling.pbs"
+      ]
+    ]
+  }
+}

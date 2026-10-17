@@ -1,0 +1,16 @@
+schema_version: 2
+seed: 0
+method: B2
+construction:
+  strategy: goal_lazy
+initialization:
+  caption_source: provided
+models:
+  batching:
+    visual_encoder: 64
+    text_embedding: 16
+    text_embedding_max_tokens: 8192
+query:
+  reading_policy: script_guided
+  max_script_reads: 3
+  script_context_windows: 12

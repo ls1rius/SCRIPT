@@ -1,0 +1,85 @@
+{
+  "status": "validation_queued_full_waiting_dependencies",
+  "prior_results": {
+    "SCRIPT_correct": 50,
+    "questions": 100,
+    "mean_seconds": 172.705344485,
+    "VideoTree_correct": 59,
+    "VideoTree_mean_seconds": 26.3786
+  },
+  "diagnosis": {
+    "sufficient_questions": 20,
+    "sufficient_correct": 7,
+    "sufficient_option_zero": 16,
+    "resource_stop_questions": 80,
+    "resource_stop_correct": 43,
+    "full_eight_round_questions": 84,
+    "same_source_distinct_description_groups": 166,
+    "gate_refutations_explicitly_saying_no_evidence": 32,
+    "mean_seconds_per_question": {
+      "verify_claim": 47.91,
+      "observe": 46.81,
+      "assess": 33.65,
+      "parse": 17.32,
+      "gate": 12.97
+    }
+  },
+  "fixes": [
+    "Explicit option_id/text pairs in model inputs.",
+    "Distinct other claims no longer merge solely because frames/roles/time match.",
+    "Observations exclude options and record visible actions rather than option purposes.",
+    "Batch per-window verification with independent per-candidate schema, temporal/source checks and actual prompt provenance.",
+    "Defer overview assessments until temporal checkpoints are observed.",
+    "Gate has chronological caption context for contradiction checks, but captions cannot serve as verified facts.",
+    "Gate distinguishes direct contradiction from non-observation; non-observation cannot pass proof.",
+    "Final full-timeline answer can correct gate candidate; conflicts downgrade sufficient status.",
+    "Decision projection keeps all fact descriptions, roles, intervals, sources and unique verifier findings while omitting repeated proof histories.",
+    "Exact token fitting also applies to the gate, preserving every verified fact.",
+    "Observed_at schema allows only actual source times or null. A real LMFE regression verifies frame indices are rejected before generation."
+  ],
+  "original_videotree_reference": {
+    "files": [
+      "prompts.py",
+      "main_qa.py"
+    ],
+    "lessons": [
+      "Label each answer option adjacent to its text.",
+      "Read retained chronological descriptions for the overall activity.",
+      "Avoid treating isolated actions as the whole-video objective."
+    ]
+  },
+  "validation": {
+    "cpu_tests_passed": 121,
+    "new_regressions": 7,
+    "compile_and_shell_syntax": "passed",
+    "jobs": {
+      "answer_recheck": "668508.hopper-m-02",
+      "smoke": "668509.hopper-m-02",
+      "full": [
+        "668510.hopper-m-02",
+        "668511.hopper-m-02"
+      ]
+    },
+    "historical_gate_context": {
+      "calls": 190,
+      "max_new_unaliased_input_tokens": 13122,
+      "mean_new_unaliased_input_tokens": 10595.88947368421,
+      "note": "Frozen V6 code and actual local Qwen processor, conservative full IDs, complete facts and unique verifier findings, full chronological caption context with whole-window fitting. No weights loaded."
+    }
+  },
+  "experiment_directory": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v6b-20261016",
+  "limitations": [
+    "Accuracy and end-to-end speed improvements require the new live run.",
+    "Same fixed development cohort; no held-out generalization claim.",
+    "Fixed-evidence answer recheck isolates the decision path and does not test new observations."
+  ],
+  "additional_gpu_finding": {
+    "v5_affected_questions": 42,
+    "v5_invalid_point_timestamps": 172,
+    "v5_claims": 1959,
+    "v6_first_query_invalid_point_timestamps": 9,
+    "v6_first_query_claims": 24,
+    "action": "Stopped V6 smoke and dependent jobs before full100; preserve outputs and create V6b with source-time enum constraints."
+  },
+  "supersedes": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v6-20261015"
+}

@@ -1,0 +1,87 @@
+{
+  "updated_at": "2026-10-15T11:37:16.577630+00:00",
+  "status": "live_failed_question_regression_passed",
+  "previous_verification": "workdirs/script-runtime-repair-v3-20261015",
+  "observed_issue": "4 of 11 results failed because cold model preparation was incorrectly capped at the 60-second generation-tool allowance (52 seconds after cancellation reserve). Repeated 2-10 second preparation calls were also observed.",
+  "fixes": [
+    "Model preparation uses the separately measured preparation/build allowance, while retaining the same 600-second online cap and protecting final answer/cleanup reserves.",
+    "Preparation inside a local task remains limited to that task allowance. Cold starts below 30 seconds or the measured startup estimate are rejected before spawning a worker.",
+    "Successful preparation updates the held reload reserve using measured startup cost; model-load and tokenizer-preparation phases are logged separately."
+  ],
+  "cpu_tests_passed": 100,
+  "constraints": {
+    "online_cap": 600,
+    "global_task_limit": 8,
+    "generation_max_new_tokens": 1024,
+    "model": "Qwen2.5-VL-7B-Instruct"
+  },
+  "live_verification": {
+    "directory": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-runtime-repair-v4-20261015",
+    "jobs": [
+      {
+        "index": 0,
+        "job_id": "667835.hopper-m-02"
+      },
+      {
+        "index": 1,
+        "job_id": "667836.hopper-m-02"
+      }
+    ],
+    "planned": 21,
+    "status": "complete: 21/21 valid answers, 0 errors, 0 budget violations",
+    "results": 21,
+    "errors": 0,
+    "budget_violations": 0,
+    "correct": 6,
+    "report": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-runtime-repair-v4-20261015/verification_results.json"
+  },
+  "source_hashes": {
+    "script_qa.py": "5a2152882f43ed970ed35a2594d27ee2f6ce40a097e2af9d3431e6c8ed98d5bf",
+    "demo.py": "76787485d7853ea24fcf8d31b552bacd31d0dad8503cc48142420af767f6a45b",
+    "adaptive_breath_expansion.py": "cd5ae3dff0e5ee6f053095df55b44c9200b41d63b9fcea778dd37df788af2c2a",
+    "depth_expansion.py": "705764a65911f64080284feb3b78e3535efda1ac99fdd78d81ed412a9bfe9bdd",
+    "main_qa.py": "29b93bf9bf425ededec9d1fdb44b9675332ced07cef6fa120c1203f4b6acc188",
+    "dataset.py": "f1d5077eca9af1883a15bcd5de1f75a7cb54921ed9830e8de8b59af81faad750",
+    "model.py": "2e1f0e47efdeed59ba44b85bcb37f6ab2a91a3259b27995e296b38df68b5cbbd",
+    "util.py": "42ef36277ab3a0a3496e5347d971620e1785b8e72a21bc3e0968f9b40ab525bd",
+    "prompts.py": "f3f2ff6564296ed8f15c588b06bdebd701f772d3f988b55091679333698c22f9",
+    "eval.py": "192bdb5cdc637260eb475eecbdd6d50b9f6cc40ea9d6c14d8f1e2f55983366fe",
+    "requirements.txt": "0ed8b181001ef0c1014a8f7518f54f148e9dd40d8dca34777e40c356cc179d71",
+    "script/run_pilot_comparison.py": "c148203e65763bb36e5fe3e86020abd2d9002c9e1770a3e88550b8625da6d34c",
+    "script/pilot_comparison.pbs": "bf66fd790031c9c51de095ae9f411909ef5b339ba7deb42e580f8c46872d5f1d",
+    "script/benchmark_feature_batches.py": "f9ab50cf1b47f1256827b9b9849a70f9153290bd102cabdc20d7b4422bec820c",
+    "script/repair_smoke.pbs": "311c4864cd4cc15f799234e1303e71683773b5f8fbf5a055cd40c116a60cfa4a",
+    "data_extraction/extract_images.py": "737682b0fd4d00ee898dc43313e56f9c15e8fc2d89d11912d2940d98591aab22",
+    "data_extraction/extract_features.py": "f0873801e145b134fbbb5b5913a7e1cb51ad784a7346c774daf4436dc11a237e",
+    "script_core/accounting.py": "b1e715f479ed1c680b869c13ce2e1e2ba578fb43fc89cc6afe48646ad9de0ccc",
+    "script_core/retrieval.py": "ab47501ff894f7d8877ea0ab2e19f514238fe6f3aa198a9d86409405bbdb9475",
+    "script_core/prompts.py": "78cb32cf0ea6ec1d3595e832b0ab2045036d07dd7c15d745669efacec88232db",
+    "script_core/updater.py": "b0b80438c7d5f4d4d596b5ef1c9260783074abdbadda87ebb0341fb7713bb77d",
+    "script_core/patches.py": "d453f91402c509299db2a92be7172c1b135d5dfe742d19a793b9b847533f86ec",
+    "script_core/evaluation.py": "66ff1f38b2b9fb7a658eb1dc57e858fdbabbd5e728deef6ca8114cd42814f158",
+    "script_core/segmentation.py": "0a5a00a89db71fc0cdc35fda272cdb4941eb40fc7c9ac55797608fd789021d76",
+    "script_core/navigation.py": "5377a1d4c318ceb0b04595e2a40393a146d9282d4f39f5572f9f585d00dbd56a",
+    "script_core/config.py": "1cfb1215ab3d059295960b4aa312202166ff0d1544b413d3af3782c9bd14d407",
+    "script_core/video.py": "b032f1026d543850ccd1225fbe8af7f2174901b3f3c4a0f1b8379cc9a737997f",
+    "script_core/sequence.py": "d8966380d8dc7aace12f8c59ed7adc116be56d63e81d751393dbc45081ba080d",
+    "script_core/tracking.py": "914cb0aee3e01c196e104625669c7886360ea92e2ab557ca466a17b6e2dff4c7",
+    "script_core/controller.py": "75cca5c201bf3f304ce0e3ae5593de00bc348925afed89886a6bed4e7dc0570a",
+    "script_core/build.py": "49f83dd2abc73e8c5a058941c3ab526278f6b32b538dd2dfe7df8e8630bcac4d",
+    "script_core/strategies.py": "0793aa6b32914cbc672759e51d0f69b80aadae8a3c9d10f71435d43f3b40bd62",
+    "script_core/budget.py": "74daa4f450cf3796393439f522cea4f53bf6f809437f8a95f56f47851daf5bb2",
+    "script_core/state.py": "0d00a15c5ef26216e592f775e0ab3d468a2f194a0f5219297439d1ac783466a7",
+    "script_core/__init__.py": "18ecc35c567854fa2bc0b934d4bd909e9370880f6f35f55234fb01eaa33bd6b6",
+    "script_core/materialize.py": "dc298ece8c375d1ee7a991302a3a9bea6ff56f33e98ebcac476c5e06f9d6954d",
+    "script_core/query_policy.py": "fa754c5249c5683dd7b6cca14f6d2cb03a6b6d993204879b453502846aa1b806",
+    "script_core/backend.py": "a8b99ef671862ce0247063f1dffdc2d148512f323c5af6ed3a2aeb253efe2d85",
+    "script_core/identity.py": "985766429f7005a2d0814ca28ebbe020fc1598b80aad19f880b85fbcf1d547bd",
+    "script_core/context.py": "c292f5576aa5d9a040f9494a103fee2619d3e8a90d0d92decd210f61af7a8c94",
+    "script_core/cache.py": "6a583f5602547420b06e4607453dcc8d5a1c4a428fae0f13d9d618ac5c743310",
+    "script_core/schemas.py": "870f630d5d28457405e996cebba53f1b0a49e972167fb774f8c6e714b49e12db",
+    "script_core/coverage.py": "e3b8cef232b3c1baf0668b6e7b03e1ed1fa4a1ec996043f873c017f8b72877d4",
+    "script_core/replay.py": "2699961960a0d2e6590221e8ded506c3ca5533d2a5d569a9279c405edbe3359d",
+    "kmeans_pytorch/__init__.py": "2bcd4019b1c7ecee59e64bd355c1932712dc4ec78ff8eafd26a07fd3f187f466",
+    "script/verify_runtime_repairs.py": "1ffb252a18a08822ee91502d6360a9d12b0ffd82fb5f6a8f93274ec742d1ec53",
+    "script/runtime_reliability.pbs": "f1b61d8de0630296c5a102345f5b21ad9e598a420daadf4b67191c22aa521d89"
+  }
+}

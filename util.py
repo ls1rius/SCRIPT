@@ -34,9 +34,10 @@ def parse_args():
     parser.add_argument("--dataset", default='egoschema', type=str)  # 'egoschema', 'nextqa', 'nextgqa', 'intentqa'
 
     # subset
-    parser.add_argument("--data_path", default='path/data/egoschema/lavila_subset.json', type=str) 
-    parser.add_argument("--anno_path", default='path/data/egoschema/subset_anno.json', type=str)
-    parser.add_argument("--duration_path", default='path/data/egoschema/duration.json', type=str) 
+    parser.add_argument("--data_path", default='data/EgoSchema/egoschema/lavila_subset.json', type=str)
+    parser.add_argument("--anno_path", default='data/EgoSchema/egoschema/subset_anno.json', type=str)
+    parser.add_argument("--duration_path", default='data/EgoSchema/egoschema/duration.json', type=str)
+    parser.add_argument("--video_id", default='', type=str)
 
     # # fullset  
     # parser.add_argument("--data_path", default='/data/path/lavila_fullset.json', type=str) 
@@ -59,7 +60,9 @@ def parse_args():
     parser.add_argument("--iter_threshold", default=4, type=int)
 
     #frame feature path
-    parser.add_argument("--frame_feat_path", default="", type=str)  
+    parser.add_argument("--frame_feat_path", default="data/EgoSchema/egoschema_features", type=str)
+    parser.add_argument("--device", default="cuda", choices=['cuda', 'cpu'])
+    parser.add_argument("--seed", default=0, type=int)
 
     # output
     parser.add_argument("--output_base_path", default="", type=str)  
@@ -72,6 +75,7 @@ def parse_args():
     parser.add_argument("--model", default="gpt-4-1106-preview", type=str)
     parser.add_argument("--api_key", default="", type=str)
     parser.add_argument("--temperature", default=0.0, type=float)
+    parser.add_argument("--max_new_tokens", default=768, type=int)
     parser.add_argument("--prompt_type", default="qa_standard", type=str)
     parser.add_argument("--task", default="qa", type=str)  # sum, qa, gqa
     ## sum
@@ -100,6 +104,3 @@ def build_fewshot_examples(qa_path, data_path):
         examplars.append(f"Examplar {i}.\n Descriptions: {description}.\n Question: {examplar['question']}\n A: {examplar['0']}\n B: {examplar['1']}\n C: {examplar['2']}\n D: {examplar['3']}\n E: {examplar['4']}\n Answer: {int_to_letter[examplar['truth']]}.")
     examplars = '\n\n'.join(examplars)
     return examplars
-    
-    
-    

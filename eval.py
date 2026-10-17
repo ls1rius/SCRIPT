@@ -318,7 +318,7 @@ if __name__ == '__main__':
 python eval.py \
 --function eval_egoschema_cats \
 data_path output/egoschema/standard_qa.json \
-cats_path data/egoschema/categories.json
+cats_path data/EgoSchema/egoschema/categories.json
 
 python eval.py \
 --function eval_qa_nextqa_from_file \

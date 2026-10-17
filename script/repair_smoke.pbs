@@ -1,0 +1,72 @@
+#!/bin/bash
+#PBS -N script-repair-smoke
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1
+#PBS -l walltime=01:00:00
+#PBS -j oe
+set -euo pipefail
+cd "$PBS_O_WORKDIR"
+export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONUNBUFFERED=1
+export TMPDIR="$REPAIR_DIR/smoke/.tmp"
+mkdir -p "$TMPDIR"
+REPAIR_PYTHON=/home/svu/e1583416/work/miniconda3/envs/vts/bin/python
+nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
+"$REPAIR_PYTHON" - <<'PY'
+import json, os, sys
+from pathlib import Path
+root = Path(os.environ['REPAIR_DIR'])
+sys.path.insert(0, str(root/'source'/'script'))
+from run_pilot_comparison import verify_snapshot
+verify_snapshot(root)
+spec = json.loads((root/'pilot_spec.json').read_text())
+questions = [json.loads(line) for line in (root/'smoke'/'questions.jsonl').read_text().splitlines()]
+assert {q['question_id'] for q in questions} <= set(spec['video_ids'])
+PY
+REPAIR_STATUS=0
+"$REPAIR_PYTHON" "$REPAIR_DIR/source/script_qa.py" query \
+    --base "$REPAIR_DIR/smoke/base" --questions "$REPAIR_DIR/smoke/questions.jsonl" \
+    --config "$REPAIR_DIR/config.yaml" --out "$REPAIR_DIR/smoke/runs" || REPAIR_STATUS=$?
+"$REPAIR_PYTHON" "$REPAIR_DIR/source/script_qa.py" evaluate \
+    --runs "$REPAIR_DIR/smoke/runs" --annotations "$REPAIR_DIR/evaluation_only.json" \
+    --out "$REPAIR_DIR/smoke/evaluation"
+"$REPAIR_PYTHON" "$REPAIR_DIR/source/script/check_run_integrity.py" \
+    --runs "$REPAIR_DIR/smoke/runs" --out "$REPAIR_DIR/smoke/integrity.json" || REPAIR_STATUS=$?
+"$REPAIR_PYTHON" - <<'PY'
+from datetime import datetime, timezone
+import json, os
+from pathlib import Path
+root = Path(os.environ['REPAIR_DIR'])/'smoke'
+results = [json.loads(p.read_text()) for p in (root/'runs').glob('*/result.json')]
+failures = list((root/'runs'/'query_failures').glob('*.json'))
+planned = len((root/'questions.jsonl').read_text().splitlines())
+overflows = 0
+internal_errors = 0
+hard_timeouts = 0
+model_preparations = 0
+contract_failures = 0
+over_budget = sum(r['cost_summary'].get('budget_violation', False) for r in results)
+integrity = json.loads((root/'integrity.json').read_text())
+for p in (root/'runs').glob('*/calls.jsonl'):
+    for line in p.read_text().splitlines():
+        call = json.loads(line)
+        overflows += 'Context overflow' in (call.get('error') or '')
+        internal_errors += bool(call.get('error'))
+        hard_timeouts += (call.get('error') or '').startswith('TimeoutError:')
+        model_preparations += call['operation'] == 'prepare_vlm'
+for result in results:
+    contract_failures += len(result.get('diagnostics', {}).get('gate_failures', []))
+status = {'job_id': os.environ['PBS_JOBID'], 'ended_at': datetime.now(timezone.utc).isoformat(),
+    'planned': planned, 'results': len(results), 'query_failures': len(failures),
+    'result_errors': sum(bool(r['error']) for r in results), 'context_overflow_calls': overflows,
+    'gate_contract_failures': contract_failures, 'budget_violations': over_budget,
+    'internal_tool_errors': internal_errors, 'hard_timeouts': hard_timeouts, 'model_preparations': model_preparations,
+    'integrity_passed': integrity['passed'],
+    'engineering_smoke_passed': len(results) == planned and not failures and not any(r['error'] for r in results) and not overflows and not contract_failures and not over_budget and not internal_errors and integrity['passed'],
+    'scope': 'Selected development diagnostics within the fixed 100 questions; not an accuracy estimate.'}
+(root/'status.json').write_text(json.dumps(status, indent=2)+'\n')
+print(json.dumps(status), flush=True)
+if not status['engineering_smoke_passed']:
+    raise SystemExit(2)
+PY
+exit "$REPAIR_STATUS"

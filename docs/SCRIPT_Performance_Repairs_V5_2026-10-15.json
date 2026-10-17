@@ -1,0 +1,270 @@
+{
+  "updated_at": "2026-10-15T15:43:55.436849+00:00",
+  "status": "full_100_completed",
+  "original_videotree_review": {
+    "read_git_head": [
+      "main_qa.py",
+      "prompts.py",
+      "adaptive_breath_expansion.py",
+      "depth_expansion.py"
+    ],
+    "read_local_port": [
+      "model.py:Qwen",
+      "demo.py"
+    ],
+    "adopted": [
+      "Preserve time-ordered selected descriptions for final QA.",
+      "Parse only the question; options guide observation and answering without becoming presumed events.",
+      "Load Qwen directly on its device, and retain loaded workers when a call can be stopped cooperatively."
+    ],
+    "difference": "SCRIPT still performs raw-video observation and evidence validation. Caption context is unverified and cannot upgrade proof sufficiency."
+  },
+  "fixes": [
+    "Single question-only semantic parse with grounded text ambiguities separated from evidence gaps.",
+    "Grounded ambiguities can be resolved by the semantic gate with verified citations; missing observations never block that resolving gate.",
+    "Overview intent uses direct visual observation with option contrasts and avoids unnecessary object/identity graphs and repeated goal generation.",
+    "All question types receive time-ordered caption context, labeled unverified, with exact token fitting of whole windows and preserved verified facts.",
+    "Local execution reserves time for assessment and skips calls that cannot complete in remaining allowance.",
+    "Cooperative token/batch deadlines retain loaded workers; hard parent cancellation remains fallback.",
+    "Qwen loads directly on device as in the local VideoTree adapter.",
+    "Bounded extraction/assessment output, explicit crop channel order, incremental checkpoint writes and one checkpoint per completed round.",
+    "Reporting separates final failures, internal failures, soft stops, hard timeouts and model preparation counts."
+  ],
+  "validation": {
+    "cpu_tests_passed": 114,
+    "context_validation": {
+      "scope": "CPU token check of all 21 historical final-answer inputs with the new chronological caption context; full IDs retained, no model weights loaded.",
+      "max_tokens": 12896,
+      "input_token_limit": 16384,
+      "rows": [
+        {
+          "question_id": "51688142-10e7-48ab-adef-2caa5448b456",
+          "tokens_without_short_id_aliases": 9596,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "509e6545-5fff-4f73-ae0f-524dfa8b3c2c",
+          "tokens_without_short_id_aliases": 8836,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+          "tokens_without_short_id_aliases": 6407,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "15bae307-992b-4359-9fe0-3f622f957d42",
+          "tokens_without_short_id_aliases": 6358,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "3223ece4-dc21-4ca9-8e78-2af8036ec4e8",
+          "tokens_without_short_id_aliases": 6950,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "0c51c89d-d86b-45de-a1cf-c65153a7fbc1",
+          "tokens_without_short_id_aliases": 6326,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "8db459bf-bf84-45b2-9fc0-f5c370a6da1a",
+          "tokens_without_short_id_aliases": 7502,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "b45379aa-d6f3-4033-83df-5577fc49cfc0",
+          "tokens_without_short_id_aliases": 9236,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+          "tokens_without_short_id_aliases": 10786,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "b664157e-612e-477c-8ef7-04c15be9c66c",
+          "tokens_without_short_id_aliases": 7176,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "a317149f-1286-4160-9070-e575c42b8cc2",
+          "tokens_without_short_id_aliases": 7785,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "ee227b56-c12b-4725-89e9-aa29e0b4dbe8",
+          "tokens_without_short_id_aliases": 8760,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "9557e88b-8880-4f64-88ec-815452f8ee4c",
+          "tokens_without_short_id_aliases": 6596,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "c3ef6035-08c6-458e-b2d4-d7dc8f97f658",
+          "tokens_without_short_id_aliases": 6965,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+          "tokens_without_short_id_aliases": 7462,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "855f0685-fc29-463f-a796-8b68a722174f",
+          "tokens_without_short_id_aliases": 6850,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "9377c192-d46d-4016-9db4-df8007dbe82b",
+          "tokens_without_short_id_aliases": 6909,
+          "eligible_windows": 27,
+          "selected_windows": 27
+        },
+        {
+          "question_id": "742dd0fc-018f-4e1f-b2fb-e04d38c97894",
+          "tokens_without_short_id_aliases": 8241,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "a46b0bc8-65d6-4831-91cb-d2495859b8a2",
+          "tokens_without_short_id_aliases": 7113,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "38ebfa83-3667-43af-989e-6354440f9265",
+          "tokens_without_short_id_aliases": 8027,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        },
+        {
+          "question_id": "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+          "tokens_without_short_id_aliases": 12896,
+          "eligible_windows": 26,
+          "selected_windows": 26
+        }
+      ]
+    },
+    "syntax_compile_diff_checks": "passed",
+    "live_status": "Completed 100/100 with no top-level failures, no budget violations and no hard timeouts; 6 internal failures including 5 soft deadline stops."
+  },
+  "experiment": {
+    "directory": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v5-20261015",
+    "jobs": {
+      "smoke": "668200.hopper-m-02",
+      "full_0": "668201.hopper-m-02",
+      "full_1": "668202.hopper-m-02"
+    },
+    "smoke_questions": 4,
+    "full_questions": 100,
+    "cohort": "Same fixed 100 development questions; no added examples. Original M0 and completed VideoTree baseline reused unchanged.",
+    "constraints": {
+      "model": "Qwen2.5-VL-7B-Instruct",
+      "max_new_tokens": 1024,
+      "global_task_limit": 8,
+      "online_cap_seconds": 600
+    },
+    "release_gate": "smoke afterok, including zero internal tool errors",
+    "results": {
+      "SCRIPT": {
+        "planned_questions": 100,
+        "completed_questions": 100,
+        "correct": 50,
+        "accuracy_on_completed": 0.5,
+        "final_accuracy": 0.5,
+        "errors": 0,
+        "mean_wall_seconds": 172.70534448503867,
+        "median_wall_seconds": 173.11778896395117,
+        "internal_tool_errors": 6,
+        "hard_timeouts": 0,
+        "soft_deadline_stops": 5,
+        "model_preparations": 4,
+        "budget_violations": 0
+      },
+      "VideoTree": {
+        "planned_questions": 100,
+        "completed_questions": 100,
+        "correct": 59,
+        "accuracy_on_completed": 0.59,
+        "final_accuracy": 0.59,
+        "errors": 0,
+        "mean_wall_seconds": 26.3786,
+        "median_wall_seconds": 25.405
+      }
+    }
+  },
+  "remaining_to_verify": [
+    "Accuracy 50/100 remains below the reused VideoTree baseline 59/100.",
+    "Mean QA wall time approximately 173 seconds remains above VideoTree approximately 26 seconds.",
+    "6 internal errors remain: details saved in internal_tool_errors.json; none caused a final query failure.",
+    "20 queries reached protocol_sufficient; 80 still stopped at a resource/task limit."
+  ],
+  "source_hashes": {
+    "script_qa.py": "5a2152882f43ed970ed35a2594d27ee2f6ce40a097e2af9d3431e6c8ed98d5bf",
+    "demo.py": "76787485d7853ea24fcf8d31b552bacd31d0dad8503cc48142420af767f6a45b",
+    "adaptive_breath_expansion.py": "cd5ae3dff0e5ee6f053095df55b44c9200b41d63b9fcea778dd37df788af2c2a",
+    "depth_expansion.py": "705764a65911f64080284feb3b78e3535efda1ac99fdd78d81ed412a9bfe9bdd",
+    "main_qa.py": "29b93bf9bf425ededec9d1fdb44b9675332ced07cef6fa120c1203f4b6acc188",
+    "dataset.py": "f1d5077eca9af1883a15bcd5de1f75a7cb54921ed9830e8de8b59af81faad750",
+    "model.py": "2e1f0e47efdeed59ba44b85bcb37f6ab2a91a3259b27995e296b38df68b5cbbd",
+    "util.py": "42ef36277ab3a0a3496e5347d971620e1785b8e72a21bc3e0968f9b40ab525bd",
+    "prompts.py": "f3f2ff6564296ed8f15c588b06bdebd701f772d3f988b55091679333698c22f9",
+    "eval.py": "192bdb5cdc637260eb475eecbdd6d50b9f6cc40ea9d6c14d8f1e2f55983366fe",
+    "requirements.txt": "0ed8b181001ef0c1014a8f7518f54f148e9dd40d8dca34777e40c356cc179d71",
+    "script/run_pilot_comparison.py": "c4edc91ba2fff3782d2f0bdd551b26c6941106ed196fa7467d9b9993a166d704",
+    "script/pilot_comparison.pbs": "bf66fd790031c9c51de095ae9f411909ef5b339ba7deb42e580f8c46872d5f1d",
+    "script/benchmark_feature_batches.py": "f9ab50cf1b47f1256827b9b9849a70f9153290bd102cabdc20d7b4422bec820c",
+    "script/repair_smoke.pbs": "d53756019c37b34693b8deee925a2473f36ad507214d952924222b6cc079b76f",
+    "data_extraction/extract_images.py": "737682b0fd4d00ee898dc43313e56f9c15e8fc2d89d11912d2940d98591aab22",
+    "data_extraction/extract_features.py": "f0873801e145b134fbbb5b5913a7e1cb51ad784a7346c774daf4436dc11a237e",
+    "script_core/accounting.py": "b1e715f479ed1c680b869c13ce2e1e2ba578fb43fc89cc6afe48646ad9de0ccc",
+    "script_core/retrieval.py": "ab47501ff894f7d8877ea0ab2e19f514238fe6f3aa198a9d86409405bbdb9475",
+    "script_core/prompts.py": "7287d0e1ee1e7f10f36cbe76267b41695c3a619c8c96a1e285ba57f295100245",
+    "script_core/updater.py": "b0b80438c7d5f4d4d596b5ef1c9260783074abdbadda87ebb0341fb7713bb77d",
+    "script_core/caption_context.py": "75e3b16c51766731d1e25215aac740b4bb4bdbbc8bc35506fbf24bfae6971043",
+    "script_core/patches.py": "d453f91402c509299db2a92be7172c1b135d5dfe742d19a793b9b847533f86ec",
+    "script_core/evaluation.py": "66ff1f38b2b9fb7a658eb1dc57e858fdbabbd5e728deef6ca8114cd42814f158",
+    "script_core/segmentation.py": "0a5a00a89db71fc0cdc35fda272cdb4941eb40fc7c9ac55797608fd789021d76",
+    "script_core/navigation.py": "5377a1d4c318ceb0b04595e2a40393a146d9282d4f39f5572f9f585d00dbd56a",
+    "script_core/config.py": "1cfb1215ab3d059295960b4aa312202166ff0d1544b413d3af3782c9bd14d407",
+    "script_core/video.py": "b032f1026d543850ccd1225fbe8af7f2174901b3f3c4a0f1b8379cc9a737997f",
+    "script_core/sequence.py": "d8966380d8dc7aace12f8c59ed7adc116be56d63e81d751393dbc45081ba080d",
+    "script_core/tracking.py": "914cb0aee3e01c196e104625669c7886360ea92e2ab557ca466a17b6e2dff4c7",
+    "script_core/controller.py": "14c755a9a448888569330aff576c80832569a26b73a9f09a9296649932dd8a32",
+    "script_core/build.py": "49f83dd2abc73e8c5a058941c3ab526278f6b32b538dd2dfe7df8e8630bcac4d",
+    "script_core/strategies.py": "0793aa6b32914cbc672759e51d0f69b80aadae8a3c9d10f71435d43f3b40bd62",
+    "script_core/budget.py": "99594b96d2513ad41e31cbf7027974f2cc94c8d52c5f692500e4c2c78ff2e7e3",
+    "script_core/state.py": "ca563caef18c310dfe57b1465a9dbcb06a01a20f9face8989bd3f19850dbc83e",
+    "script_core/__init__.py": "18ecc35c567854fa2bc0b934d4bd909e9370880f6f35f55234fb01eaa33bd6b6",
+    "script_core/materialize.py": "f187c7a4e300516d63d6f7fdcead7de3a0e4d4e1c414bf7cd3367354e9ae4908",
+    "script_core/query_policy.py": "82ec7246e2e0567f747a63e500a76b0766c98c24c69fec13ef582b57b4ebc2b3",
+    "script_core/backend.py": "372a03096804f80a0b5fffa1e402644399a5f77ef7df30f4dc2b3ec41c491fcd",
+    "script_core/identity.py": "985766429f7005a2d0814ca28ebbe020fc1598b80aad19f880b85fbcf1d547bd",
+    "script_core/context.py": "b8a2f85b7f759e4d6b99c728d27cb5d3612be4c0b96f531f9a0ff65a8eecd6db",
+    "script_core/cache.py": "6a583f5602547420b06e4607453dcc8d5a1c4a428fae0f13d9d618ac5c743310",
+    "script_core/schemas.py": "f6aa7610b77a9463df40bd132251a1105f64cb7c67c1ecc4cbebe7f6443c91b0",
+    "script_core/coverage.py": "e3b8cef232b3c1baf0668b6e7b03e1ed1fa4a1ec996043f873c017f8b72877d4",
+    "script_core/replay.py": "2699961960a0d2e6590221e8ded506c3ca5533d2a5d569a9279c405edbe3359d",
+    "kmeans_pytorch/__init__.py": "2bcd4019b1c7ecee59e64bd355c1932712dc4ec78ff8eafd26a07fd3f187f466"
+  }
+}

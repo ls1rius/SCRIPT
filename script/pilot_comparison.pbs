@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -N script-vt-pilot
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1
+#PBS -l walltime=24:00:00
+#PBS -j oe
+set -euo pipefail
+cd "$PBS_O_WORKDIR"
+export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONUNBUFFERED=1
+export TMPDIR="$PILOT_DIR/.tmp-job-${PILOT_JOB:-0}"
+mkdir -p "$TMPDIR"
+hostname
+nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
+PILOT_PYTHON=/home/svu/e1583416/work/miniconda3/envs/vts/bin/python
+if [[ "${PILOT_JOB:-0}" == 0 && -f "$PILOT_DIR/benchmark_frames.json" ]]; then
+    "$PILOT_PYTHON" "$PILOT_DIR/source/script/benchmark_feature_batches.py" --out "$PILOT_DIR"
+fi
+"$PILOT_PYTHON" "$PILOT_DIR/source/script/run_pilot_comparison.py" run-job --out "$PILOT_DIR" --job-index "${PILOT_JOB:-0}"

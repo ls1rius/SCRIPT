@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Singapore",
+  "status": "paused_at_user_request",
+  "plan": "docs/SCRIPT_Complete_Research_and_Implementation_Plan_2026-10-14.docx",
+  "stage": "Extension interfaces implemented; CPU acceptance checkpoint; real-model extension validation pending",
+  "validation": {
+    "unit_tests_passed": 44,
+    "compileall": "passed",
+    "diff_check": "passed",
+    "new_gpu_validation": "not_run"
+  },
+  "added_this_stage": [
+    "Distinct B0/B1/B1S planner inputs and feedback policy",
+    "B3 verified reassignment/merge/split transactions with rollback",
+    "Missing packet PTS catalog, short-gap segmentation-only imputation, partial builds",
+    "Non-overlapping CPU/cache/checkpoint phases and worker resource fields",
+    "Recorded-return replay backend and CLI switches; fail on missing frozen perception",
+    "Feedback, local goal, routing, candidate retention and observation policy ablation switches"
+  ],
+  "next_steps": [
+    "Audit B3 occurrence/proof revisions and proof reuse after source changes; finish cluster invariants",
+    "Finish exception-path cleanup and structured build_failed envelopes",
+    "Audit complete budget settlement, resumed logs, GPU metric definition and cache statistics",
+    "Separate replay/live evaluation groups and original/replay IO costs",
+    "Run full frozen-return CLI replay and a small real-model extension smoke test",
+    "Complete cross-scene transfer, identity correction, quantifier/terminal coverage and backtrack acceptance",
+    "Reconcile implementation checklist against the original DOCX; formal calibration and experiments remain deferred"
+  ],
+  "notes": [
+    "44 tests include state-machine fixtures; they do not demonstrate perception accuracy.",
+    "The shared user GPU allocation was not cancelled.",
+    "No formal batch experiments were started.",
+    "Existing user changes and code are preserved; no git commit was created."
+  ],
+  "source_hashes": {
+    "script_core/__init__.py": "18ecc35c567854fa2bc0b934d4bd909e9370880f6f35f55234fb01eaa33bd6b6",
+    "script_core/accounting.py": "5d7663ad7dce9e786c40ca1a362f113393594f78ad9695f03436c8b5eb9d43be",
+    "script_core/backend.py": "e2ad8c960469da1aa48ab982274c8f4257198e291d70096b924fb2c7577ca0c4",
+    "script_core/budget.py": "b87b2b19889351ffea3ed930d4883dc1d8501a868d80645b360dfe9fcaa8849f",
+    "script_core/build.py": "4174ecd55badd94187d0985f9495132e3608ea270d2f6cc5468ba94da208f882",
+    "script_core/cache.py": "f2418e773eb66b9f9e7c101d7c606c4115f31a583fb2edefe71bbc5b3048f9d5",
+    "script_core/config.py": "80c7cc11a4acdfeb53ae089f45a96d0ca2f6a7f566590c459b4ca604035662d7",
+    "script_core/controller.py": "307bd037733d3935b1e847ca0fc80053bbc3f03cfa32d8c5f732080e03076b09",
+    "script_core/coverage.py": "806b3239639042358e1e43aaac8da391f86aeec823e4b488a755c56391dbba71",
+    "script_core/evaluation.py": "5ea79a0cc20893bb3b33cf6cf38a585c790d44afac7fda3744d0be5eda684bd1",
+    "script_core/identity.py": "e54d215f04c279415c766e1ddb88b033e13b6499e5f90d671b83a5df42ae7adb",
+    "script_core/materialize.py": "ac9cfdb5227c254c97ba83e5802f9abf3b7d54eac2c0d1d7072240f8b90bf353",
+    "script_core/navigation.py": "5377a1d4c318ceb0b04595e2a40393a146d9282d4f39f5572f9f585d00dbd56a",
+    "script_core/patches.py": "c85bfbd5ea66415b88062ec0cf7349f7a0fcf40c3a099a84b4afa8373612acdd",
+    "script_core/prompts.py": "faef7209ed4d2ccf63f5a1c152024b4b9ea2bd5c99a516e6fff527332b9e1608",
+    "script_core/replay.py": "535f8bfa1db9bef9065249873abfac71e362d040e5c213fcde245ec2019bded3",
+    "script_core/retrieval.py": "29e60378c51427b571fd2656873664bbd3152a60b3d49531f026da380081f2a1",
+    "script_core/schemas.py": "8514d244e51bf3ad472e96a7dcd8097388dc7323f62d97c0237a3b7a0eb67103",
+    "script_core/segmentation.py": "3e29e612b28df0a3781791520e3c1213c29a17189258757df2a59e8d3c2eacfa",
+    "script_core/sequence.py": "9f217836fcf1f17eba19caafd45fc96d1cc7f74943e4a856bcc89e760e478b6e",
+    "script_core/state.py": "9a16355462f89d6c392cf655d0320a8e51afdd2e5cf61e48cf2593ef1293eb26",
+    "script_core/strategies.py": "3d09f059fa7166b6c387668e05dbfef994153ea91a8262795249c57457a1efbb",
+    "script_core/tracking.py": "339f1b4088ce28f0e34b848a2b29631da695f680addb6eb50c3daf46cdae6c2a",
+    "script_core/updater.py": "b0b80438c7d5f4d4d596b5ef1c9260783074abdbadda87ebb0341fb7713bb77d",
+    "script_core/video.py": "3ae854ffbb12b83785d3c25018f39287b5d45f4ca5659e7541b4154d9c346211",
+    "script_qa.py": "70b2c6a4df888b8e71e98566d4b1c2990eca7a0480ea41899396a6593792c630",
+    "tests/test_script_core.py": "ff95fd065c7fec20fc9c3099c1a78c4c67432352226a0fadd2cce94d162a113e",
+    "tests/test_script_extensions.py": "8cc4bc95f1f0e724a105503ff671956259490bcb8e391bc3df52db447fd11824",
+    "configs/script.yaml": "f8562a297634fd2bd01fd45c590cf6f619b1f065c1764685f52f25f0ce2f212c",
+    "README.md": "bf2f5fd4b2d79f5a39f621c1c6554cf97b489e49d4634c8a5254b783f249da58"
+  }
+}

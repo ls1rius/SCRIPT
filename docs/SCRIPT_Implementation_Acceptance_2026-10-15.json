@@ -1,0 +1,288 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Singapore",
+  "status": "P0_P4_core_engineering_validated_P5_research_pending",
+  "plan": "docs/SCRIPT_Complete_Research_and_Implementation_Plan_2026-10-14.docx",
+  "plan_sha256": "f242d338139b796cc31c61086e9befc269729debf2523f4bc4582e66a983e5d4",
+  "historical_pause_checkpoint": "docs/SCRIPT_Implementation_Checkpoint_2026-10-15.json",
+  "implementation": {
+    "entry": "script_qa.py",
+    "config": "configs/script.yaml",
+    "methods": [
+      "B0",
+      "B1",
+      "B1S",
+      "B2",
+      "B3"
+    ],
+    "construction_strategies": [
+      "goal_lazy",
+      "scene_lazy",
+      "eager"
+    ],
+    "cache_protocols": [
+      "query",
+      "sequence_shared"
+    ],
+    "segmentation_solvers": [
+      "exact_dp",
+      "fixed_windows",
+      "kmeans_runs",
+      "shot_histogram"
+    ],
+    "replay_modes": [
+      "fixed_observation_replay",
+      "recorded_calls"
+    ],
+    "extended_checks": [
+      "typed B3 reassign/merge/split and transactional rollback",
+      "identity proof and source revision invalidation",
+      "missing/partial video and segmentation-only short-gap imputation",
+      "strict runtime JSON and frame reference validation",
+      "cached PNG pixel integrity",
+      "all roles supported by one compatible dynamic claim",
+      "complete query resume is read-only",
+      "startup, checkpoint and final-answer cost accounting",
+      "separate live/replay and budget cohorts"
+    ]
+  },
+  "validation": {
+    "cpu_unit_tests": 60,
+    "cpu_tests": "passed",
+    "cpu_test_log": "workdirs/script/validation-20261015/cpu-tests.log",
+    "compileall": "passed",
+    "git_diff_check": "passed",
+    "chapter_14_cases": [
+      {
+        "case": "same_video_different_questions",
+        "regression": "test_two_queries_reuse_m0_and_reset_details",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "A_B_A_temporal_contiguity",
+        "regression": "test_a_b_a_stays_contiguous_and_static_ties_choose_one",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "long_static_scene",
+        "regression": "test_a_b_a_stays_contiguous_and_static_ties_choose_one",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "same_class_separate_instances",
+        "regression": "test_two_same_class_objects_and_overlap_ids",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "summary_time_routes_without_entity_index",
+        "regression": "test_baselines_share_tools_but_differ_in_routing_and_feedback",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "two_states_do_not_prove_dynamic_transfer",
+        "regression": "test_dynamic_endpoints_do_not_prove_transfer",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "wrong_scene_preserves_alternative",
+        "regression": "test_wrong_initial_scene_keeps_another_route_available",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "revocation_preserves_independent_facts",
+        "regression": "test_merge_revokes_dependent_answer_but_preserves_local_fact",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "independent_OR_support_survives",
+        "regression": "test_and_or_revoke_preserves_local_fact",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "bounded_repeated_local_request",
+        "regression": "test_repeated_local_request_reuses_verified_output",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "last_requires_later_coverage",
+        "regression": "test_last_requires_all_later_units_and_unknown_reopens_it",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "budget_exhaustion_keeps_insufficient_and_actual_cost",
+        "regression": "test_resource_stop_preserves_insufficient_and_choice",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "default_M0_has_summaries_and_empty_details",
+        "regression": "test_two_queries_reuse_m0_and_reset_details",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "authorized_short_window_materialization",
+        "regression": "test_repeated_local_request_reuses_verified_output",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "new_target_does_not_use_old_target_result",
+        "regression": "test_color_and_material_have_different_target_signatures",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "empty_identity_is_known_only_and_keeps_routes",
+        "regression": "test_baselines_share_tools_but_differ_in_routing_and_feedback",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "overlap_stable_occurrence_ids",
+        "regression": "test_two_same_class_objects_and_overlap_ids",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "future_cache_sources_rejected",
+        "regression": "test_scope_target_and_future_cache_rejection",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "next_query_resets_detail_layer",
+        "regression": "test_two_queries_reuse_m0_and_reset_details",
+        "status": "controller_or_component_fixture_passed"
+      },
+      {
+        "case": "explicit_sequence_protocol",
+        "regression": "test_sequence_protocol_requires_exact_question_order",
+        "status": "controller_or_component_fixture_passed"
+      }
+    ],
+    "real_video": {
+      "video_id": "0a01d7d0-11d6-4af6-abd9-2025656d3c63",
+      "legal_cutoff_seconds": 36,
+      "base_directory": "workdirs/script/validation-20261015/base-v1/e215555668c6744088e0",
+      "base_hash": "f7878dcaa4c066639bf8955daee067213bd228078a167e3591b91fc8aa093db1",
+      "scene_count": 1,
+      "window_count": 5,
+      "empty_detail_tables": [
+        "entities",
+        "occurrences",
+        "claims",
+        "identity_links"
+      ],
+      "initialization_processing_seconds": 168.84925102628767,
+      "live_queries": [
+        {
+          "question_id": "smoke-fabric",
+          "result": "workdirs/script/validation-20261015/runs-v1/6d15c2ec1b537704729d/result.json",
+          "answer": "无法确定",
+          "selected_option": "0",
+          "reason": "exploration_stop",
+          "evidence_status": "insufficient",
+          "online_processing_seconds": 124.79779627546668,
+          "budget_violation": false,
+          "tool_errors": 0,
+          "resources": {
+            "cpu_seconds": 112.47058309400012,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 124.98268987610936,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 37536291840
+          },
+          "development_only": true
+        },
+        {
+          "question_id": "smoke-activity",
+          "result": "workdirs/script/validation-20261015/runs-v1/f0eea9f6e4a38d34e725/result.json",
+          "answer": "人正在缝制或缝补一块黑色布料",
+          "selected_option": "0",
+          "reason": "protocol_sufficient",
+          "evidence_status": "sufficient",
+          "online_processing_seconds": 118.13070919923484,
+          "budget_violation": false,
+          "tool_errors": 0,
+          "resources": {
+            "cpu_seconds": 109.77279055699998,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 68.60410002060235,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 19088988160
+          },
+          "development_only": true
+        }
+      ]
+    },
+    "real_record_replay": {
+      "result": "workdirs/script/validation-20261015/runs-replay-v1/f0eea9f6e4a38d34e725/result.json",
+      "mode": "recorded_calls",
+      "recorded_call_count": 30,
+      "matched_answer_and_evidence_ids": true,
+      "matched_stop": true,
+      "replay_miss_or_call_error": false,
+      "gpu_resident_seconds": 0,
+      "measured_online_processing_seconds": 46.10083809681237,
+      "original_replayed_call_processing_seconds": 75.04694565199316
+    }
+  },
+  "source_snapshot": "workdirs/script/validation-20261015/source-v1",
+  "runtime_source_matches_snapshot": true,
+  "source_hashes": {
+    "script_core/__init__.py": "18ecc35c567854fa2bc0b934d4bd909e9370880f6f35f55234fb01eaa33bd6b6",
+    "script_core/accounting.py": "02b2ac18c00b53286c7314f658eee8a7a14ddc787e725d43e1c4542818863631",
+    "script_core/backend.py": "387938ef2d81470f5980b5cc0e829d021b84eaecd2b32e5331dcebf97f59bdbe",
+    "script_core/budget.py": "0489343c521ab2e40386a79390d2afcec5828eb7b3ee752f970e3fdd3f2839b8",
+    "script_core/build.py": "f27d7f3f83af2b129d14ece504b19e41e0a53b773b041ab9540eb9710cf5a497",
+    "script_core/cache.py": "6a583f5602547420b06e4607453dcc8d5a1c4a428fae0f13d9d618ac5c743310",
+    "script_core/config.py": "ef412a3b55f3ed59fbee7dde80d417d4ecf0dcf8ea6ddf69913a1e7b5236738b",
+    "script_core/controller.py": "77d7a402dc3970db8df3cad2207fd484c6abc026bc1b36c5b4ee5751e57b36d2",
+    "script_core/coverage.py": "e3b8cef232b3c1baf0668b6e7b03e1ed1fa4a1ec996043f873c017f8b72877d4",
+    "script_core/evaluation.py": "ce647f1d30a2ad2b7e2910f73e9252cfe46391f0d1a4ff0144f98014832bda26",
+    "script_core/identity.py": "985766429f7005a2d0814ca28ebbe020fc1598b80aad19f880b85fbcf1d547bd",
+    "script_core/materialize.py": "05c3b429d5ddf239a5ddd80edc56aae165b1a72fee09b7b733061a66cc0b9e7e",
+    "script_core/navigation.py": "5377a1d4c318ceb0b04595e2a40393a146d9282d4f39f5572f9f585d00dbd56a",
+    "script_core/patches.py": "d453f91402c509299db2a92be7172c1b135d5dfe742d19a793b9b847533f86ec",
+    "script_core/prompts.py": "faef7209ed4d2ccf63f5a1c152024b4b9ea2bd5c99a516e6fff527332b9e1608",
+    "script_core/replay.py": "ed42dc363eb7d48136cf63f9413963eb21b04b20177b5ebb5334cd87e005ee3e",
+    "script_core/retrieval.py": "29e60378c51427b571fd2656873664bbd3152a60b3d49531f026da380081f2a1",
+    "script_core/schemas.py": "09217148da61b074a2549350924fe03519d9b4d138020ae5cc694e65d2d04868",
+    "script_core/segmentation.py": "0a5a00a89db71fc0cdc35fda272cdb4941eb40fc7c9ac55797608fd789021d76",
+    "script_core/sequence.py": "d8966380d8dc7aace12f8c59ed7adc116be56d63e81d751393dbc45081ba080d",
+    "script_core/state.py": "0d00a15c5ef26216e592f775e0ab3d468a2f194a0f5219297439d1ac783466a7",
+    "script_core/strategies.py": "0793aa6b32914cbc672759e51d0f69b80aadae8a3c9d10f71435d43f3b40bd62",
+    "script_core/tracking.py": "914cb0aee3e01c196e104625669c7886360ea92e2ab557ca466a17b6e2dff4c7",
+    "script_core/updater.py": "b0b80438c7d5f4d4d596b5ef1c9260783074abdbadda87ebb0341fb7713bb77d",
+    "script_core/video.py": "27f5293e08a03c3f1295104da86736f5ac0c3462d0f23481fd676d16a2f9bf7a",
+    "script_qa.py": "16e4e725f0c8fb0a3118b60e05361a912916f0cc463ca8303c40a302d908281d",
+    "configs/script.yaml": "f8562a297634fd2bd01fd45c590cf6f619b1f065c1764685f52f25f0ce2f212c"
+  },
+  "test_hashes": {
+    "tests/test_pipeline.py": "429d423b8ad4258a4dc595a5e891401e64d4a311feddf0c26c10e23abdfd4c1f",
+    "tests/test_script_extensions.py": "034e8748655a67184356aca9aea36d69977e9f1812d05d1c5a2d9548d659d2af",
+    "tests/test_script_core.py": "208aa49f8bb5799c55070fe2e80ef4ca95808d7163f7c12ec93f7fb94713ed10"
+  },
+  "gpu": {
+    "job_id": "666445.hopper-m-02",
+    "node": "hopper-28",
+    "request_project": "CFP05-CF-136",
+    "requested_gpus": 1,
+    "gpu_type": "NVIDIA H200",
+    "final_job_state": "F",
+    "exit_status": 271,
+    "termination": "explicit qdel after successful validation; scheduler cancellation status is not a model test failure",
+    "release_confirmed": true,
+    "checked_at": "2026-10-14T17:58:20.045130+00:00"
+  },
+  "remaining_research_work": [
+    "Independent real-video cross-scene, identity and short-action quality audit; synthetic records establish state behavior only",
+    "50–100 question failure audit and approximately 200 question isolated development/annotation cohort",
+    "Independent multi-annotator sufficient evidence, recovery and interpretation judgments and extended diagnostic scoring",
+    "Freeze analysis_plan, budgets, data split, prompts and minimum practical effect before formal P5 evaluation",
+    "Run multiple budget settings, B1S/B2 main comparison, construction and feedback ablations, clustered statistics and repeated runs",
+    "Implement and run research extensions/system-level direct-view and simple retrieval controls, external VideoTapestry/EGAgent adapted comparisons when selected; their published numbers are not reproduced",
+    "Optional diagnostic disabling of dependency revocation and additional representation/human-assisted upper-bound experiments are not part of this validated usable controller"
+  ],
+  "limits": [
+    "No claim of complete research-plan experimental validation or general perception accuracy",
+    "Only B2/goal_lazy/query was exercised in this new real-model smoke run; other methods and strategies have CPU component/controller tests",
+    "The two questions are custom development checks, not official benchmark annotations",
+    "Color answer is insufficient even though the forced-choice field is 0",
+    "No formal batch experiment was started; no git commit was created; existing user changes were preserved"
+  ]
+}

@@ -1,0 +1,31 @@
+#!/bin/bash
+#PBS -N script-repair-full
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1
+#PBS -l walltime=05:00:00
+#PBS -j oe
+set -euo pipefail
+cd "$PBS_O_WORKDIR"
+: "${REPAIR_DIR:?Prepared experiment directory required}"
+: "${REPAIR_FOLLOWUP_JOB:?Held second GPU job required}"
+REPAIR_PBS_BIN="${REPAIR_PBS_BIN:-/cm/shared/apps/pbspro/current/bin}"
+REPAIR_GATE_PASSED=0
+
+repair_cleanup() {
+    REPAIR_EXIT_STATUS=$?
+    if [[ "$REPAIR_GATE_PASSED" == 0 ]]; then
+        # A failed diagnostic must not leave a second allocation waiting forever.
+        "$REPAIR_PBS_BIN/qdel" "$REPAIR_FOLLOWUP_JOB" || true
+    fi
+    exit "$REPAIR_EXIT_STATUS"
+}
+trap repair_cleanup EXIT
+trap 'exit 143' TERM
+
+# Both phases inherit this same PBS allocation and GPU. The diagnostic's model
+# process exits before the ordinary full-evaluation workers start.
+bash "$REPAIR_DIR/source/script/repair_smoke.pbs"
+"$REPAIR_PBS_BIN/qrls" "$REPAIR_FOLLOWUP_JOB"
+REPAIR_GATE_PASSED=1
+export PILOT_DIR="$REPAIR_DIR" PILOT_JOB=0
+bash "$REPAIR_DIR/source/script/pilot_comparison.pbs"

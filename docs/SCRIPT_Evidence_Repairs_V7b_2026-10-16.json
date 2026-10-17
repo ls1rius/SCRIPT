@@ -1,0 +1,59 @@
+{
+  "status": "stopped_before_full_run",
+  "version": "V7b",
+  "primary_comparison": "V5 fixed development 100 questions",
+  "constraints": {
+    "questions": 100,
+    "seed": 0,
+    "model": "Qwen2.5-VL-7B-Instruct",
+    "online_seconds": 600,
+    "max_tasks": 8,
+    "streams_per_gpu": 2,
+    "gpu_jobs": 2,
+    "frozen_baseline_reused": true
+  },
+  "cpu_tests": {
+    "passed": 140,
+    "log": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v7b-20261016/cpu-tests.log"
+  },
+  "smoke": {
+    "count": 6,
+    "question_ids": [
+      "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+      "de326bda-444a-4ad4-81d6-5ebb456a3300",
+      "22627b14-0f17-4a45-9661-5ac979e0a4c2",
+      "f9d20acc-8d52-4136-8d4e-48573b184e15",
+      "efcb614d-9825-4039-8f09-9f98d03205fd",
+      "b664157e-612e-477c-8ef7-04c15be9c66c"
+    ],
+    "policy": "All queries valid; zero internal errors, timeouts or budget violations; integrity audit passes. Accuracy is reported independently, not used to select a version."
+  },
+  "repairs": [
+    "Versioned verification history and conflicting judgment invalidation",
+    "Black pixel quality and separate attempted versus usable coverage",
+    "State/action/inference fact types and required visible action process",
+    "Exact option text plus separate model explanation",
+    "Explicit option difference clauses",
+    "Fixed-key per-option gate schema",
+    "Focused remaining-window retrieval and novel-information stop diagnostics",
+    "Producer decoder selects fact kind first and requires at least 3 source frames for each action"
+  ],
+  "full_after": "Successful smoke; no dependency on previously failed VideoTree500 jobs",
+  "limitations": [
+    "Same development cohort, not held-out evaluation",
+    "Multiple fixes change together",
+    "Reused M0 and VideoTree costs retained; QA timings separate"
+  ],
+  "supersedes": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-v7-20261016",
+  "report_document": "/nfs/home/svu/e1583416/work/projects/VideoAgent/SCRIPT/docs/SCRIPT_Evidence_Repairs_V7b_2026-10-16.json",
+  "runtime_correction": "V7 GPU trace exposed a producer/verifier contract mismatch; corrected before any full100 inference.",
+  "jobs": {
+    "smoke": "669180.hopper-m-02",
+    "full": [
+      "669181.hopper-m-02",
+      "669182.hopper-m-02"
+    ]
+  },
+  "runtime_finding": "First GPU query generated multi-frame actions correctly but assess overflowed at 17037 tokens because verification history was repeated. V7c projects semantic assessment inputs while retaining all facts and current verification findings.",
+  "superseded_by": "script-videotree-repair-v7c-20261016"
+}

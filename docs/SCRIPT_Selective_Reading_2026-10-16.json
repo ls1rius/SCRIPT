@@ -1,0 +1,47 @@
+{
+  "status": "superseded_by_fixed_300",
+  "experiment": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-guided-reading-v11a-20261016",
+  "tests_passed": 189,
+  "model_performance_verified": false,
+  "job": {
+    "job_id": "670370.hopper-m-02",
+    "state": "H",
+    "dependency": "afterany:670344.hopper-m-02@hopper-m-02.cm.cluster",
+    "gpu_jobs": 1,
+    "gpus_per_job": 1,
+    "query_cases": 8,
+    "fresh_build_cases": 2,
+    "max_concurrent_gpus": 2,
+    "checked_at": "2026-10-16T21:46:28.680678+08:00"
+  },
+  "reference_experiment": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-observation-focus-v10a-20261016",
+  "profile": "configs/script_guided.yaml",
+  "report": "docs/SCRIPT_Selective_Reading_2026-10-16.md",
+  "baseline_300": {
+    "mean_online_seconds": 130.5133523641744,
+    "max_eight_rounds_questions": 257,
+    "zero_novel_text_rounds": 1276,
+    "rounds": 2309
+  },
+  "baseline_new200_build": {
+    "mean_seconds": 65.8091057218623,
+    "summary_plus_repair_seconds": 44.18220776600298
+  },
+  "constraints": {
+    "online_cap_seconds": 600,
+    "global_task_limit": 8,
+    "guided_max_reads": 3,
+    "guided_context_windows": 12,
+    "max_new_tokens": 1024,
+    "strict_coverage_unchanged": true
+  },
+  "limitations": [
+    "Selected development cases, not population accuracy or average build time.",
+    "Historical and fresh build GPU sharing/warmup/filesystem cache may differ.",
+    "V11 query runs reuse old M0; fresh M0 probes are kept separate.",
+    "Self-contained paired report uses V7c history; compare V10 for the immediate reading-policy control."
+  ],
+  "superseded_by": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1",
+  "current_report": "docs/SCRIPT_300_Repair_Comparison_2026-10-16.md",
+  "updated_at": "2026-10-16T22:40:18.547135+08:00"
+}

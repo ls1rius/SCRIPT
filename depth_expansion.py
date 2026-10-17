@@ -1,40 +1,11 @@
-from PIL import Image
-import requests
-import torch
-import transformers
-from pathlib import Path
+import argparse
 import json
-import pickle
-from tqdm import tqdm
-import os
-from pprint import pprint
-import pdb
-
+from pathlib import Path
 import numpy as np
-from kmeans_pytorch import kmeans
-from sklearn.cluster import KMeans
-from transformers import AutoModel, AutoConfig
-from transformers import CLIPImageProcessor, pipeline, CLIPTokenizer
-import torchvision.transforms as T
-from torchvision.transforms import InterpolationMode
+import torch
 import torch.nn.functional as F
-
-### VLMs
-
-# blip2
-from transformers import Blip2Processor, Blip2ForConditionalGeneration
-
 from scipy.cluster.hierarchy import linkage, fcluster
-from scipy.spatial.distance import pdist
-
-### LLMs
-
-# llama2
-from transformers import AutoTokenizer
-# flanT5
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-
-from scipy.cluster.hierarchy import linkage, fcluster
+from tqdm import tqdm
 
 def hierarchical_clustering_with_external_primary(video_features, cluster_ids, relevance_scores, num_subclusters=5, num_subsubclusters=5):
     clusters = {i: {} for i in range(0, max(cluster_ids)+1)}
@@ -65,9 +36,10 @@ def hierarchical_clustering_with_external_primary(video_features, cluster_ids, r
             clusters[cluster_id] = {i: [primary_indices[j] for j in np.where(sub_cluster_labels == i)[0]] for i in range(0, num_subclusters)}
             continue
 
-        for subcluster_id in range(0, num_subclusters):
+        for subcluster_id in sorted(set(sub_cluster_labels.tolist())):
             sub_indices = np.where(sub_cluster_labels == subcluster_id)[0]
             if len(sub_indices) < 2:
+                clusters[cluster_id][subcluster_id] = [primary_indices[j] for j in sub_indices]
                 continue
 
             subsub_features = sub_features[sub_indices]
@@ -76,7 +48,7 @@ def hierarchical_clustering_with_external_primary(video_features, cluster_ids, r
             subsub_cluster_labels = subsub_cluster_labels - 1
 
             clusters[cluster_id][subcluster_id] = {}
-            for subsubcluster_id in range(0, num_subsubclusters):
+            for subsubcluster_id in sorted(set(subsub_cluster_labels.tolist())):
                 final_indices = sub_indices[np.where(subsub_cluster_labels == subsubcluster_id)[0]]  # Correctly index into sub_indices
                 original_indices = [primary_indices[i] for i in final_indices]
                 clusters[cluster_id][subcluster_id][subsubcluster_id] = original_indices
@@ -186,8 +158,7 @@ def find_closest_points_in_temporal_order_subsub(x, clusters, relevance_scores):
                             closest_idx = torch.argmin(distances).item()
                             closest_points_indices.append(int(subclusters[closest_idx]))
 
-    closest_points_indices.sort()  # Ensure the points are in temporal order
-    return closest_points_indices
+    return sorted(set(closest_points_indices))
 
 
 
@@ -202,8 +173,8 @@ def load_image_features(name_ids, save_folder):
     - img_feats (torch.Tensor): Loaded image features
     """
     filename = f"{name_ids}.pt"  # Construct filename with name_ids
-    filepath = os.path.join(save_folder, filename)
-    img_feats = torch.load(filepath)
+    filepath = Path(save_folder) / filename
+    img_feats = torch.load(filepath, map_location="cpu", weights_only=True)
     return img_feats
 
 def load_json(fn):
@@ -217,64 +188,37 @@ def save_json(data, fn, indent=4):
 
 
 def depth_expansion():
-    device = "cuda" if torch.cuda.is_available() else "cpu" 
-
-    output_base_path = Path('./clip_es')
-    output_base_path.mkdir(parents=True, exist_ok=True)
-    base_path = Path('path/to/data/egoschema_frames')
-    save_folder = '/path/to/egoschema/frame_features'
-
-    rel_path = '/path/to/output/of/dynamic_width_expansion/relevance_score.json'
-    with open(rel_path, 'r') as file:
-        cap_score_data = json.load(file)
-
-    width_res_path = '/path/to/output/of/dynamic_width_expansion/width_res.json'
-    with open(width_res_path, 'r') as file:
-        width_res_data = json.load(file)
-    width_cluster_id_dict = {item['name']: item['cluster_ids_x'] for item in width_res_data}
-
-
-    all_data = []
-
-    with open('path/data/egoschema/subset_answers.json', 'r') as file:
-        json_data = json.load(file)    
-    subset_names_list = list(json_data.keys())
-    # print("subset_names_list",subset_names_list)
-
-    example_path_list = list(base_path.iterdir())
-
-    pbar = tqdm(total=len(example_path_list))
-
-    i = 0 
-    max = 1
-
-    for example_path in example_path_list:
-
-        # comment out when testing full set
-        if example_path.name not in subset_names_list:
-            continue
-
-        name_ids = example_path.name
-        img_feats = load_image_features(name_ids, save_folder)
-        relevance_scores = cap_score_data['data'][name_ids]['pred']
-        primary_cluster_ids = width_cluster_id_dict.get(name_ids, None)
-
-        img_feats = img_feats.cpu()
-        
-        clusters_info = hierarchical_clustering_with_external_primary(img_feats,primary_cluster_ids, relevance_scores ,num_subclusters=4, num_subsubclusters=4)
-
-        closest_points_temporal_subsub = find_closest_points_in_temporal_order_subsub(img_feats, clusters_info,relevance_scores)
-        # print("closest_points_temporal_subsub",closest_points_temporal_subsub)
-
-        all_data.append({"name": example_path.name, "sorted_values": closest_points_temporal_subsub, "relevance": relevance_scores})
-
-        pbar.update(1)
-
-    save_json(all_data, '/path/to/save/output/depth_expansion_res.json')
-
-    pbar.close()
+    parser = argparse.ArgumentParser(description="Expand the relevant VideoTree clusters.")
+    parser.add_argument("--frame_feat_path", default="data/EgoSchema/egoschema_features")
+    parser.add_argument("--relevance_path", default="workdirs/videotree-smoke/relevance_score.json")
+    parser.add_argument("--width_path", default="workdirs/videotree-smoke/width_res.json")
+    parser.add_argument("--output_path", default="workdirs/videotree-smoke/depth_expansion_res.json")
+    parser.add_argument("--num_subclusters", type=int, default=4)
+    parser.add_argument("--num_subsubclusters", type=int, default=4)
+    args = parser.parse_args()
+    cap_scores = load_json(args.relevance_path)
+    cap_scores = cap_scores.get("data", cap_scores)
+    width = load_json(args.width_path)
+    rows = []
+    for item in tqdm(width):
+        uid = item["name"]
+        features = load_image_features(uid, args.frame_feat_path)
+        result = cap_scores[uid]
+        scores = result.get("cluster_relevance")
+        if scores is None:
+            raise ValueError("Re-run width expansion to obtain scores aligned to cluster IDs.")
+        labels = item["cluster_ids_x"]
+        if len(labels) != len(features) or len(scores) <= max(labels):
+            raise ValueError(f"Invalid cluster assignments or scores for {uid}.")
+        clusters = hierarchical_clustering_with_external_primary(
+            features, labels, scores, args.num_subclusters, args.num_subsubclusters)
+        selected = find_closest_points_in_temporal_order_subsub(features, clusters, scores)
+        if not selected:
+            raise ValueError(f"Depth expansion selected no frames for {uid}.")
+        rows.append({"name": uid, "sorted_values": selected, "relevance": scores})
+    Path(args.output_path).parent.mkdir(parents=True, exist_ok=True)
+    save_json(rows, args.output_path)
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     depth_expansion()

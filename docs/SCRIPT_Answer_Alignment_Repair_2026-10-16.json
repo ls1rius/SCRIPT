@@ -1,0 +1,36 @@
+{
+  "status": "superseded_by_fixed_300",
+  "experiment": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-answer-alignment-v9a-20261016",
+  "tests_passed": 163,
+  "replay_questions": 294,
+  "source_cohort": 300,
+  "model_accuracy_verified": false,
+  "job": {
+    "job_id": "670233.hopper-m-02",
+    "state": "dependency_wait",
+    "dependency": "afterany:670226.hopper-m-02",
+    "gpu_jobs": 1,
+    "gpus_per_job": 1,
+    "resource_chain": [
+      "669596.hopper-m-02",
+      "670226.hopper-m-02",
+      "670233.hopper-m-02"
+    ],
+    "max_concurrent_gpus_with_existing_scaling_jobs": 2,
+    "submitted_at": "2026-10-16T12:00:59.146156+00:00"
+  },
+  "report": "docs/SCRIPT_Answer_Alignment_Repair_2026-10-16.md",
+  "files_changed": [
+    "script_core/answering.py",
+    "script_core/controller.py",
+    "script_core/schemas.py",
+    "script_core/prompts.py",
+    "script/recheck_answers.py",
+    "script/answer_recheck.pbs",
+    "tests/test_answer_alignment.py",
+    "tests/test_script_core.py"
+  ],
+  "superseded_by": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1",
+  "current_report": "docs/SCRIPT_300_Repair_Comparison_2026-10-16.md",
+  "updated_at": "2026-10-16T22:40:18.547135+08:00"
+}

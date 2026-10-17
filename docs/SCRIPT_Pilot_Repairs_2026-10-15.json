@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Singapore",
+  "checked_at": "2026-10-15T11:30:09.845658+08:00",
+  "status": "code_repairs_validated_live_smoke_queued",
+  "old_experiments": "Both previous GPU jobs already finished; no old running or queued experiment remained.",
+  "changes": [
+    "Validate role locality before accepting claims; isolate query failures and always release store/meter resources",
+    "Use budget-aware, temporally spread global checkpoints within the unchanged 8-task cap; reserve remaining tasks for recovery",
+    "Guard global question parsing, require temporal comparison for patterns, and verify option distinctions before sufficient stop",
+    "Retain independently verified local facts in final answers while preserving insufficient status",
+    "Project storage metadata and unreferenced entity history out of model context; preserve fact text and all frames",
+    "Fit image tokens to the exact limit and retain actual processor dimensions through live/replay coverage checks",
+    "Explicitly batch oversized text assessments; count labeled query failures as incorrect in both scorers"
+  ],
+  "validation": {
+    "cpu_tests_passed": 84,
+    "compileall": "passed",
+    "diff_check": "passed",
+    "pbs_syntax": "passed",
+    "worst_historical_context_inputs": {
+      "scope": "Largest historical overflow per operation; actual Qwen processor on CPU, no model inference",
+      "results": [
+        {
+          "operation": "coverage",
+          "historical_input_tokens": 49910,
+          "new_input_tokens": 9314,
+          "limit": 16384,
+          "input_frames": 16,
+          "encoded_frames": 16,
+          "all_frames_retained": true,
+          "source_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-pilot-batch64-20261015/shards/1/script_runs/d5e7ad1cc5c1a0e0838c/raw_calls/8defd750-f049-4d41-a23f-87dbeeac2beb-0.json"
+        },
+        {
+          "operation": "assess",
+          "historical_input_tokens": 57734,
+          "new_input_tokens": 2780,
+          "limit": 16384,
+          "input_frames": 0,
+          "encoded_frames": 0,
+          "all_frames_retained": true,
+          "source_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-pilot-batch64-20261015/shards/1/script_runs/f6468da63c62730defb1/raw_calls/db1a5c4a-0e57-4abd-9b36-df18edcbb5e9-0.json"
+        },
+        {
+          "operation": "extract",
+          "historical_input_tokens": 28880,
+          "new_input_tokens": 5669,
+          "limit": 16384,
+          "input_frames": 16,
+          "encoded_frames": 16,
+          "all_frames_retained": true,
+          "source_call": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-pilot-batch64-20261015/shards/0/script_runs/8f521b9d5624d96e0a68/raw_calls/21a9f1a0-3ade-455c-818a-aef4b62fc42b-0.json"
+        }
+      ]
+    },
+    "runtime_source_matches_frozen_snapshot": true
+  },
+  "constraints": {
+    "global_task_limit": 8,
+    "online_cap": 600,
+    "vlm": "Qwen2.5-VL-7B-Instruct",
+    "dataset_size": 100
+  },
+  "development_cohort": {
+    "questions": 100,
+    "same_as_previous": true,
+    "directory": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-20261015"
+  },
+  "live_smoke": {
+    "job_id": "667223.hopper-m-02",
+    "questions": 4,
+    "state_at_submission": "Q",
+    "queue_reason_at_last_check": "No free GPU allocation",
+    "status_file": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-videotree-repair-20261015/smoke/status.json",
+    "sampling": "Selected historical failure cases; not a cohort accuracy estimate"
+  },
+  "limits": [
+    "No repaired-model accuracy has yet been measured.",
+    "The full 100-question run and subsequent method ablations have not been started."
+  ],
+  "test_hashes": {
+    "tests/test_pilot_comparison.py": "1a50818805bb395558a0982c9991f9be4991d52cb85bc1090956ffedd2cdd4fb",
+    "tests/test_pilot_repairs.py": "7dbccaea1cc18ccdfdd1bdbaee6491aebfdd32503f77383895b4de2c49d595d1",
+    "tests/test_pipeline.py": "429d423b8ad4258a4dc595a5e891401e64d4a311feddf0c26c10e23abdfd4c1f",
+    "tests/test_script_extensions.py": "034e8748655a67184356aca9aea36d69977e9f1812d05d1c5a2d9548d659d2af",
+    "tests/test_script_core.py": "28766e7427159d22ec43a2b4f3f10f6ca2ec088aae8d78de7ce0e9bf203940c7"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "status": "videotree_submitted",
+  "updated_at": "2026-10-15T16:29:54.097038+00:00",
+  "experiment_directory": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/videotree-scaling-100-300-500-20261016",
+  "cohorts": {
+    "100": {
+      "source": "unchanged original cohort",
+      "reused": 100,
+      "correct": 59,
+      "accuracy": 0.59
+    },
+    "300": {
+      "contains": "original100 + first200 new questions",
+      "new_inference": 200
+    },
+    "500": {
+      "contains": "all public500, including300",
+      "total_new_inference": 400
+    }
+  },
+  "model": "Qwen2.5-VL-7B-Instruct",
+  "max_new_tokens": 1024,
+  "baseline_code_matches_previous": true,
+  "models_and_software_match_previous": true,
+  "unit_tests": {
+    "passed": 5,
+    "log": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/videotree-scaling-100-300-500-20261016/cpu-tests.log"
+  },
+  "jobs": {
+    "videotree": [
+      "668547.hopper-m-02",
+      "668548.hopper-m-02"
+    ]
+  },
+  "execution": {
+    "gpu_jobs": 2,
+    "streams_per_gpu": 2,
+    "total_shards": 4,
+    "phase_order": "Additional questions up to300, then remaining questions up to500 per shard.",
+    "script_full100_policy": "Wait for this VideoTree baseline to finish successfully."
+  },
+  "results": [
+    "cohorts.json",
+    "comparison.json",
+    "comparison.csv"
+  ],
+  "notes": [
+    "Cohorts are nested and fixed; old100 are not resampled.",
+    "Truth is only stored in evaluation_only.json and used by offline scoring.",
+    "Full500 includes the2 formerly excluded debug questions, recorded in scaling_spec.json.",
+    "Unfinished groups have final_accuracy=null.",
+    "Historical100 timings are retained; new frame and feature times are separate."
+  ]
+}

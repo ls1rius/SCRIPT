@@ -11,10 +11,10 @@ from pprint import pprint
 
 def launch():
     args = parse_args()
-    pprint(args)
+    pprint({k: v for k, v in vars(args).items() if k != 'api_key'})
 
     # Reading the JSON data from that file
-    if args.tree_node_idx is not None:
+    if args.tree_node_idx:
         with open(args.tree_node_idx, 'r') as file:
             tree_node_idx = json.load(file)
         tree_node_idx_dict = {item['name']: item['sorted_values'] for item in tree_node_idx}
@@ -52,8 +52,10 @@ def launch():
         clip_length = int(1/args.fps) if args.fps < 1 else 1/args.fps
         few_shot_examples = build_fewshot_examples(args.fewshot_example_path, args.data_path)
 
-        if args.tree_node_idx is not None:
+        if args.tree_node_idx:
             loc = tree_node_idx_dict.get(ukey_1, None)
+            if loc is None:
+                raise ValueError(f'No tree nodes found for {ukey_1}.')
 
 
         model.set_post_process_fn(prompter.post_process_fn)
@@ -104,4 +106,3 @@ def launch():
 
 if __name__ == '__main__':
     launch()
-    

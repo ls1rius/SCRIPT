@@ -1,0 +1,22 @@
+#!/bin/bash
+#PBS -N script-validate
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1
+#PBS -l walltime=02:00:00
+#PBS -j oe
+set -euo pipefail
+cd "$PBS_O_WORKDIR"
+export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONUNBUFFERED=1
+SCRIPT_PYTHON=/home/svu/e1583416/work/miniconda3/envs/vts/bin/python
+"$SCRIPT_PYTHON" - <<'PY'
+import json, os, socket
+from pathlib import Path
+p = Path(os.environ['SCRIPT_VALIDATION_DIR'])
+p.mkdir(parents=True, exist_ok=True)
+(p/'gpu_ready.json').write_text(json.dumps({'job_id':os.environ['PBS_JOBID'], 'node':socket.gethostname(), 'pid':os.getpid()}))
+PY
+nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
+while [[ ! -f "$SCRIPT_VALIDATION_DIR/release_gpu" ]]; do
+    sleep 5
+done

@@ -4,7 +4,6 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-from .soft_dtw_cuda import SoftDTW
 
 
 def initialize(X, num_clusters, seed):
@@ -57,6 +56,7 @@ def kmeans(
     elif distance == 'cosine':
         pairwise_distance_function = partial(pairwise_cosine, device=device)
     elif distance == 'soft_dtw':
+        from .soft_dtw_cuda import SoftDTW
         sdtw = SoftDTW(use_cuda=device.type == 'cuda', gamma=gamma_for_soft_dtw)
         pairwise_distance_function = partial(pairwise_soft_dtw, sdtw=sdtw, device=device)
     else:
@@ -93,7 +93,7 @@ def kmeans(
         initial_state_pre = initial_state.clone()
 
         for index in range(num_clusters):
-            selected = torch.nonzero(choice_cluster == index).squeeze().to(device)
+            selected = torch.nonzero(choice_cluster == index).flatten().to(device)
 
             selected = torch.index_select(X, 0, selected)
 
@@ -152,6 +152,7 @@ def kmeans_predict(
     elif distance == 'cosine':
         pairwise_distance_function = partial(pairwise_cosine, device=device)
     elif distance == 'soft_dtw':
+        from .soft_dtw_cuda import SoftDTW
         sdtw = SoftDTW(use_cuda=device.type == 'cuda', gamma=gamma_for_soft_dtw)
         pairwise_distance_function = partial(pairwise_soft_dtw, sdtw=sdtw, device=device)
     else:

@@ -45,8 +45,6 @@ class EgoSchemaDataset(BaseDataset):
         return narrations
 
     def format_narration(self, narr):
-        if isinstance(narr, list):
-            narr = '. '.join(narr)
         return narr
 
     def get_anno(self):
@@ -56,6 +54,8 @@ class EgoSchemaDataset(BaseDataset):
     def build(self):
         data = []
         for uid, item in self.anno.items():
+            if getattr(self.args, 'video_id', '') and uid != self.args.video_id:
+                continue
             if uid not in self.narrations:
                 continue
             narration = self.format_narration(self.narrations[uid])

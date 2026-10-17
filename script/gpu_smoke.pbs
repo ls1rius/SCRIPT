@@ -1,0 +1,33 @@
+#!/bin/bash
+#PBS -N videotree-smoke
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1
+#PBS -l walltime=02:00:00
+#PBS -j oe
+set -euo pipefail
+cd "${VIDEOTREE_ROOT:-$PBS_O_WORKDIR}"
+export OMP_NUM_THREADS=4
+export MKL_NUM_THREADS=4
+export TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export PYTHONUNBUFFERED=1
+export TMPDIR="$PWD/workdirs/.tmp"
+mkdir -p "$TMPDIR"
+CONDA_BASE="$(cd ../../../miniconda3 && pwd)"
+source "$CONDA_BASE/etc/profile.d/conda.sh"
+conda activate vts
+PYTHON="$CONDA_PREFIX/bin/python"
+echo "Conda environment: $CONDA_DEFAULT_ENV; Python: $PYTHON"
+hostname
+nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
+"$PYTHON" -c 'import torch; print("PyTorch:", torch.__version__, "CUDA:", torch.version.cuda, "Visible GPUs:", torch.cuda.device_count()); assert torch.cuda.is_available()'
+if [[ -n "${VIDEOTREE_ARGS_FILE:-}" ]]; then
+    "$PYTHON" script/run_gpu_query.py "$VIDEOTREE_ARGS_FILE"
+else
+    "$PYTHON" demo.py --num-examples 3
+    "$PYTHON" demo.py --video-id 0074f737-11cb-497d-8d07-77c3a8127391 \
+        --question '这个视频里的人主要在做什么？' \
+        --options '清洗碗和锅等厨房用具' '用画笔画画' '和朋友玩桌游' '骑自行车' '修理汽车' \
+        --output workdirs/videotree-smoke/custom-query
+fi

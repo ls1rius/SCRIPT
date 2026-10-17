@@ -1,0 +1,37 @@
+{
+  "status": "superseded_by_fixed_300",
+  "experiment": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-observation-focus-v10a-20261016",
+  "tests_passed": 175,
+  "model_accuracy_verified": false,
+  "job": {
+    "job_id": "670344.hopper-m-02",
+    "state": "H",
+    "dependency": "afterany:670226.hopper-m-02@hopper-m-02.cm.cluster",
+    "gpu_jobs": 1,
+    "gpus_per_job": 1,
+    "shards": 2,
+    "questions": 8,
+    "max_concurrent_gpus": 2,
+    "can_run_alongside": "670233.hopper-m-02",
+    "checked_at": "2026-10-16T21:29:19.360151+08:00"
+  },
+  "report": "docs/SCRIPT_Answer_Alignment_Repair_2026-10-16.md",
+  "constraints": {
+    "online_cap_seconds": 600,
+    "global_task_limit": 8,
+    "max_new_tokens": 1024
+  },
+  "changes": [
+    "All candidate choices and checks reach observation and extraction.",
+    "Time-local observation gaps reach later inspection, gate and answer.",
+    "Output cache distinguishes question/options/checks/goal.",
+    "Independent visual verification and existing answer alignment are retained."
+  ],
+  "limitations": [
+    "Eight selected development cases are diagnostic, not a population accuracy estimate.",
+    "Semantic model judgments can still be wrong; live model outcomes are pending."
+  ],
+  "superseded_by": "/scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1",
+  "current_report": "docs/SCRIPT_300_Repair_Comparison_2026-10-16.md",
+  "updated_at": "2026-10-16T22:40:18.547135+08:00"
+}

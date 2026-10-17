@@ -1,0 +1,52 @@
+#!/bin/bash
+#PBS -N script-parse-six
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1:ncpus=12:mem=225GB:gpu_model=H200
+#PBS -l walltime=01:00:00
+#PBS -j oe
+#PBS -r n
+set -euo pipefail
+cd "$PBS_O_WORKDIR"
+export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONUNBUFFERED=1
+export TMPDIR="$REPAIR_DIR/.tmp"
+mkdir -p "$TMPDIR"
+nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
+RECHECK_PYTHON=/home/svu/e1583416/work/miniconda3/envs/vts/bin/python
+RECHECK_STATUS=0
+"$RECHECK_PYTHON" "$REPAIR_DIR/source/script/verify_runtime_repairs.py" run-job \
+    --out "$REPAIR_DIR" --index 0 || RECHECK_STATUS=$?
+"$RECHECK_PYTHON" - <<'PY'
+from datetime import datetime, timezone
+import json, os, sys
+from pathlib import Path
+root = Path(os.environ['REPAIR_DIR'])
+sys.path.insert(0, str(root/'source'))
+sys.path.insert(0, str(root/'source/script'))
+from verify_runtime_repairs import inspect_results, verify_snapshot
+from check_run_integrity import audit
+from script_core.evaluation import evaluate
+verify_snapshot(root)
+spec = json.loads((root/'verification_spec.json').read_text())
+shards = range(spec['shards'])
+report = inspect_results(root, shards)
+audits = {}
+for i in shards:
+    folder = root/'shards'/str(i)
+    verdict = audit(folder/'runs')
+    expected = len((folder/'questions.jsonl').read_text().splitlines())
+    verdict.update(expected_queries=expected, passed=verdict['passed'] and verdict['queries'] == expected)
+    (folder/'integrity_report.json').write_text(json.dumps(verdict, indent=2)+'\n')
+    audits[str(i)] = verdict
+evaluation = evaluate(root/'shards', root/'evaluation_only.json', root/'evaluation')
+parse_errors = sum(isinstance(r['error'], dict) and r['error'].get('code') == 'parse_failed' for r in report['errors'])
+passed = report['passed'] and all(a['passed'] for a in audits.values())
+report.update(status='complete' if passed else 'complete_with_errors', ended_at=datetime.now(timezone.utc).isoformat(),
+              parse_failures=parse_errors, integrity=audits, evaluation=evaluation['groups'],
+              passed=passed, scope='Six selected development parse failures; diagnostic accuracy only. Original experiment remains unchanged.')
+(root/'run_summary.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
+print(json.dumps(report, ensure_ascii=False), flush=True)
+if not passed:
+    raise SystemExit(2)
+PY
+exit "$RECHECK_STATUS"

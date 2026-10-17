@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+
+# Local editor settings and environment files.
+/.vscode/
+.env
+.env.*
+!.env.example
+
+# Local datasets, model weights, and experiment outputs (including symlinks).
+/data
+/checkpoints
+/workdirs

@@ -1,114 +1,70 @@
-from PIL import Image
-import requests
-import torch
-import transformers
-from pathlib import Path
+"""Extract the original EVA-CLIP-8B visual features with reusable CPU caches."""
+import argparse
 import json
-import pickle
+from pathlib import Path
+import torch
+from PIL import Image
+from transformers import AutoModel, CLIPImageProcessor
 from tqdm import tqdm
-import os
-from pprint import pprint
-import pdb
-
-import numpy as np
-from kmeans_pytorch import kmeans
-from sklearn.cluster import KMeans
-from transformers import AutoModel, AutoConfig
-from transformers import CLIPImageProcessor, pipeline, CLIPTokenizer
-import torchvision.transforms as T
-from torchvision.transforms import InterpolationMode
 
 
-
-def save_image_features(img_feats, name_ids, save_folder):
-    """
-    Save image features to a .pt file in a specified folder.
-
-    Args:
-    - img_feats (torch.Tensor): Tensor containing image features
-    - name_ids (str): Identifier to include in the filename
-    - save_folder (str): Path to the folder where the file should be saved
-
-    Returns:
-    - None
-    """
-    filename = f"{name_ids}.pt"  # Construct filename with name_ids
-    filepath = os.path.join(save_folder, filename)
-    torch.save(img_feats, filepath)
-
-
-def load_json(fn):
-    with open(fn, 'r') as f:
-        data = json.load(f)
-    return data
-
-def save_json(data, fn, indent=4):
-    with open(fn, 'w') as f:
-        json.dump(data, f, indent=indent)
-
-
-
-# image_path = "CLIP.png"
-model_name_or_path = "BAAI/EVA-CLIP-8B" # or /path/to/local/EVA-CLIP-8B
-image_size = 224
-
-processor = CLIPImageProcessor.from_pretrained("openai/clip-vit-large-patch14")
-
-
-def clip_es():
-    device = "cuda" if torch.cuda.is_available() else "cpu" 
-
-    model = AutoModel.from_pretrained(
-    model_name_or_path, 
-    torch_dtype=torch.float16,
-    trust_remote_code=True).to('cuda').eval()
-    resume = True
-
-    base_path = Path('path/to/data/egoschema_frames')
-    save_folder = '/path/to/egoschema/frame_features'
-    all_data = []
-
-    with open('./data/subset_answers.json', 'r') as file:
-        json_data = json.load(file)    
-    subset_names_list = list(json_data.keys())
-
-    example_path_list = list(base_path.iterdir())
-
-    pbar = tqdm(total=len(example_path_list))
-
-    i = 0 
-    max = 50
-
-    for example_path in example_path_list:
-
-        # for subset videos, comment out for fullset
-        if example_path.name not in subset_names_list:
-            continue
-        # else:
-        #     print("example_path in subset")
-
-        image_paths = list(example_path.iterdir())
-        image_paths.sort(key=lambda x: int(x.stem))
-        img_feature_list = []
-        for image_path in image_paths:
-            image = Image.open(str(image_path))
-
-            input_pixels = processor(images=image, return_tensors="pt", padding=True).pixel_values.to('cuda')
-
-            with torch.no_grad(), torch.cuda.amp.autocast():
-                image_features = model.encode_image(input_pixels)
-                img_feature_list.append(image_features)
-        img_feature_tensor = torch.stack(img_feature_list)
-        img_feats = img_feature_tensor.squeeze(1)
-
-        name_ids = example_path.name
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--model", default="checkpoints/BAAI/EVA-CLIP-8B")
+    parser.add_argument("--frames", default="data/EgoSchema/egoschema_frames")
+    parser.add_argument("--output", default="data/EgoSchema/egoschema_features")
+    parser.add_argument("--video-ids", nargs="+")
+    parser.add_argument("--batch-size", type=int, default=4)
+    parser.add_argument("--device", choices=["cuda", "cpu"], default="cuda")
+    args = parser.parse_args()
+    if args.device == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("EVA feature extraction must run inside a PBS GPU allocation.")
+    root, output = Path(args.frames), Path(args.output)
+    output.mkdir(parents=True, exist_ok=True)
+    ids = args.video_ids or sorted(p.name for p in root.iterdir() if p.is_dir())
+    pending = []
+    for uid in ids:
+        paths = sorted((root / uid).glob("*.jpg"), key=lambda p: int(p.stem))
+        if not paths or [int(p.stem) for p in paths] != list(range(len(paths))):
+            raise ValueError(f"Missing or non-contiguous frames for {uid}")
+        target = output / f"{uid}.pt"
+        info_path = output / f"{uid}.json"
+        if target.exists() and info_path.exists():
+            info = json.loads(info_path.read_text())
+            cached = torch.load(target, map_location="cpu", weights_only=True)
+            if info.get("model") == str(Path(args.model).resolve()) and cached.shape[0] == len(paths) and torch.isfinite(cached).all():
+                print(f"FEATURE_CACHE {uid} shape={list(cached.shape)}", flush=True)
+                continue
+        pending.append((uid, paths))
+    if not pending:
+        return
+    dtype = torch.float16 if args.device == "cuda" else torch.float32
+    # These are the same CLIP normalization and resize settings as the original repository.
+    processor = CLIPImageProcessor(size={"shortest_edge": 224}, crop_size={"height": 224, "width": 224})
+    model = AutoModel.from_pretrained(args.model, torch_dtype=dtype, trust_remote_code=True,
+                                      low_cpu_mem_usage=True).to(args.device).eval()
+    for uid, paths in pending:
+        batches = []
+        for start in tqdm(range(0, len(paths), args.batch_size), desc=uid):
+            images = []
+            for path in paths[start:start + args.batch_size]:
+                with Image.open(path) as image:
+                    images.append(image.convert("RGB"))
+            pixels = processor(images=images, return_tensors="pt").pixel_values.to(args.device, dtype=dtype)
+            with torch.inference_mode():
+                batch = model.encode_image(pixels)
+            batches.append(batch.float().cpu())
+        features = torch.cat(batches)
+        if not torch.isfinite(features).all():
+            raise ValueError(f"Non-finite EVA features for {uid}")
+        temporary = output / f"{uid}.pt.tmp"
+        torch.save(features, temporary)
+        temporary.replace(output / f"{uid}.pt")
+        info = {"model": str(Path(args.model).resolve()), "shape": list(features.shape),
+                "fps": 1, "dtype": str(features.dtype), "frame_indices": list(range(len(paths)))}
+        (output / f"{uid}.json").write_text(json.dumps(info, indent=2) + "\n")
+        print(f"FEATURES {uid} shape={list(features.shape)}", flush=True)
 
 
-        save_image_features(img_feats, name_ids, save_folder)
-        pbar.update(1)
-
-
-    pbar.close()
-
-if __name__ == '__main__':
-    clip_es()
+if __name__ == "__main__":
+    main()

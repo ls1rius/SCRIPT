@@ -3,8 +3,9 @@ import re
 
 def first_char_as_answer(res):
     mapping = {'A':0, 'B':1, 'C':2, 'D':3, 'E':4}
-    if res is None:
+    if not res or not res.strip():
         return -1
+    res = res.strip()
     if res[0] in mapping:
         return mapping[res[0]]
     return -1
@@ -54,24 +55,27 @@ def update_pred_response(text):
     response = text
     # print("response",response)
 
-    prediction_match = re.search(r"prediction: ([A-E])", response, re.IGNORECASE)
+    prediction_match = re.search(r"prediction\s*:\s*([A-E])\b", response, re.IGNORECASE)
     confidence_match = re.search(r"confidence: (\d+)", response, re.IGNORECASE)
     if prediction_match:
         # Update 'pred' with the numerical value of the prediction
         pred = prediction_map[prediction_match.group(1).upper()]
     else:
-        pred = 0
+        pred = first_char_as_answer(response) if response.strip() in prediction_map else -1
     return pred
 
 def update_relevance_response(text):
     response = text
     # print("response",response)
 
-    relevance_match = re.search(r"frame relevance: \[([0-9, ]+)\]", response)
+    relevance_match = re.search(r"frame relevance\s*:\s*\[([0-9,\s]+)\]", response, re.IGNORECASE)
     if relevance_match:
         # Convert the matched string to a list of integers
        relevance = list(map(int, relevance_match.group(1).split(',')))
-    return relevance
+       if any(score not in (1, 2, 3) for score in relevance):
+           raise ValueError('Frame relevance scores must be 1, 2, or 3.')
+       return relevance
+    raise ValueError('Model response has no frame relevance list.')
 
 class PromptTemplate(object):
     def __init__(self, head, template, post_process_fn):
@@ -80,7 +84,7 @@ class PromptTemplate(object):
         self.post_process_fn = post_process_fn
 
     def get_num_stages(self):
-        return len(self.template)
+        return len(self.prompt_template)
 
     def get_template_str(self):
         template = []
@@ -93,24 +97,24 @@ class PromptTemplate(object):
         prompt_filled = []
 
 
-        if 'loc_pred' in kwargs and 'narration' in kwargs and kwargs['loc_pred'] is not None and kwargs['narration'] is not None:
+        if kwargs.get('narration') is not None:
             narration = kwargs['narration']
-
-            # Find all occurrences of separators and maintain their positions
-            # Use regex to keep the separators with the split parts
-            parts = re.split(r'(#C|#O)', narration)
-            
-            # Recombine parts with their separators
-            captions = []
-            for i in range(1, len(parts), 2):
-                if i + 1 < len(parts):
-                    captions.append(parts[i] + parts[i + 1])
-
-            # Extract relevant captions based on loc_pred indices
-            loc_caption = [captions[i - 1] for i in kwargs['loc_pred'] if i > 0 and i <= len(captions)]
-
-            # Join the relevant captions with "narration" label
-            kwargs['narration'] = "narration " + "".join(loc_caption)
+            if isinstance(narration, list):
+                captions = narration
+            else:
+                captions = re.findall(r'(?:#C|#O).*?(?=#C|#O|$)', narration, re.DOTALL)
+                if not captions:
+                    captions = [narration]
+            indices = kwargs.get('loc_pred')
+            if indices is None:
+                indices = range(len(captions))
+            indices = list(indices)
+            if any(i < 0 or i >= len(captions) for i in indices):
+                raise ValueError('Tree frame indices exceed available captions.')
+            # All tree/frame indices are zero-based; index 0 is the first caption.
+            kwargs['narration'] = '\n'.join(
+                f'Frame {i} ({i / kwargs.get("fps", 1.0):g}s): {captions[i]}' for i in indices
+            )
 
         for temp in self.prompt_template:
             prompt_filled.append(temp.substitute(kwargs))

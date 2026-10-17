@@ -1,0 +1,605 @@
+[
+  {
+    "id": "b5865ae0-e176-4e82-a651-2507ee2d6930",
+    "question": "What were the primary tools used by c during the entire process of fixing the wheel bearing, and how did the usage of each tool change throughout the video?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "task_type": "temporal_overview",
+      "requirements": [
+        {
+          "key": "tool_usage",
+          "predicate": "at",
+          "roles": {
+            "object": "target_bag",
+            "location": "target_bag"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "tool_usage"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_bag",
+          "description": "the wheel bearing being fixed",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "repaired_plan": {
+      "requirements": [
+        {
+          "key": "tool_usage",
+          "predicate": "at",
+          "roles": {
+            "object": "target_bag",
+            "location": "target_bag"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "tool_usage"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_bag",
+          "description": "the wheel bearing being fixed",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "source_repair_sha256": "f2b5a299c74bbdcc66e793a97d80944a73c24f974d7ade2626cc1acb9f65e6c0"
+  },
+  {
+    "id": "358bdb29-d3e8-4af7-99e8-4d81da2d77b1",
+    "question": "Based on the character's actions, what are two key tools or objects they utilized to accomplish their goal, and why are these tools significant?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "task_type": "local",
+      "requirements": [
+        {
+          "key": "tool_usage",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "tools"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object the character interacted with",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "repaired_plan": {
+      "requirements": [
+        {
+          "key": "tool_usage",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "tools"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object the character interacted with",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "source_repair_sha256": "5a59617a03dc2e372a4ef12b59f03d2b2c12a00d9f04d460e1a1027c90f0877a"
+  },
+  {
+    "id": "2eda56d2-a9ea-4591-a822-552235568446",
+    "question": "Analyze the video and explain why the interactions between the woman and c could be considered essential in this particular task.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "task_type": "local",
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "The object of interaction between the woman andc",
+          "constraints": []
+        }
+      ],
+      "requirements": [
+        {
+          "key": "essential_interactions",
+          "predicate": "interact",
+          "roles": {
+            "actor": "target_object",
+            "object": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "essentiality"
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "repaired_plan": {
+      "requirements": [
+        {
+          "key": "essential_interactions",
+          "predicate": "interact",
+          "roles": {
+            "actor": "target_object",
+            "object": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "essentiality"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "The object of interaction between the woman andc",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "source_repair_sha256": "37c6da5ff9eda966adf4dc4a3cb35fccb37405fe33ac327171510e8132e5881f"
+  },
+  {
+    "id": "5599b364-197b-41eb-8aa7-02a50de5f59e",
+    "question": "Identify two critical sub-steps within the video, highlighting the significance of each in relation to the broader process. explain how these sub-steps contribute to the desired outcome without listing individual actions.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "task_type": "overview",
+      "requirements": [
+        {
+          "key": "critical_sub_steps",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "sub_steps"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object being processed or interacted with in",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "repaired_plan": {
+      "requirements": [
+        {
+          "key": "critical_sub_steps",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "sub_steps"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object being processed or interacted with in",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "source_repair_sha256": "93d878778fec158db485cfad95f0004ba4a5dfaad7f3401a09133e96009eb99d"
+  },
+  {
+    "id": "48274a18-9691-48e2-8ddd-45018251f81b",
+    "question": "Describe the recurring steps c takes in processing each mango slice and explain how she maintains control throughout.",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "task_type": "overview",
+      "requirements": [
+        {
+          "key": "c",
+          "predicate": "close",
+          "roles": {
+            "object": "speaker",
+            "actor": "speaker"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "recurring_steps"
+        },
+        {
+          "key": "control",
+          "predicate": "hold",
+          "roles": {
+            "object": "speaker",
+            "actor": "speaker"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "control_maintained"
+        }
+      ],
+      "variables": [
+        {
+          "name": "speaker",
+          "description": "The person speaking about the process of mango-s",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "repaired_plan": {
+      "requirements": [
+        {
+          "key": "c",
+          "predicate": "close",
+          "roles": {
+            "object": "speaker",
+            "actor": "speaker"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "recurring_steps"
+        },
+        {
+          "key": "control",
+          "predicate": "hold",
+          "roles": {
+            "object": "speaker",
+            "actor": "speaker"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "all",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "control_maintained"
+        }
+      ],
+      "variables": [
+        {
+          "name": "speaker",
+          "description": "The person speaking about the process of mango-s",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "source_repair_sha256": "373ec6457a59e50ea9ddc4b3d85b4ed4bd31a528599f4e99a38df0c14596421c"
+  },
+  {
+    "id": "7cccb681-3447-410f-8747-6937d146725c",
+    "question": "Compare and contrast c's process of dealing with the grain in the tray, the pot, and the aluminum container. what can you infer about the purpose of each of these actions?",
+    "scope": [
+      0.0,
+      180.0
+    ],
+    "plan": {
+      "task_type": "overview",
+      "requirements": [
+        {
+          "key": "c_process",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "process"
+        },
+        {
+          "key": "grain_in_tray",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "c_process"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "grain_in_tray"
+        },
+        {
+          "key": "pot",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "c_process"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "pot"
+        },
+        {
+          "key": "aluminum_container",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "c_process"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "aluminum_container"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object being handled by C",
+          "constraints": []
+        },
+        {
+          "name": "target_object",
+          "description": "the tray containing the grain",
+          "constraints": []
+        },
+        {
+          "name": "target_object",
+          "description": "the pot",
+          "constraints": []
+        },
+        {
+          "name": "target_object",
+          "description": "the aluminum container",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "repaired_plan": {
+      "requirements": [
+        {
+          "key": "c_process",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "process"
+        },
+        {
+          "key": "grain_in_tray",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "c_process"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "grain_in_tray"
+        },
+        {
+          "key": "pot",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "c_process"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "pot"
+        },
+        {
+          "key": "aluminum_container",
+          "predicate": "at",
+          "roles": {
+            "object": "target_object",
+            "location": "target_object"
+          },
+          "scope": [
+            0.0,
+            180.0
+          ],
+          "quantifier": "exists",
+          "prerequisites": [
+            "c_process"
+          ],
+          "acceptable_modalities": [
+            "visual"
+          ],
+          "answer_slot": "aluminum_container"
+        }
+      ],
+      "variables": [
+        {
+          "name": "target_object",
+          "description": "the object being handled by C; the tray, the pot",
+          "constraints": []
+        }
+      ],
+      "ambiguities": [],
+      "evidence_gaps": []
+    },
+    "source_repair_sha256": "daa6dd16ee948c8eb6b0ef35b100ed73985d9c1c3a3a95ba18498174007d722c"
+  }
+]

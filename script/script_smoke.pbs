@@ -1,0 +1,24 @@
+#!/bin/bash
+#PBS -N script-smoke
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1
+#PBS -l walltime=01:00:00
+#PBS -j oe
+set -euo pipefail
+cd "${SCRIPT_ROOT:-$PBS_O_WORKDIR}"
+export OMP_NUM_THREADS=4
+export MKL_NUM_THREADS=4
+export TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export PYTHONUNBUFFERED=1
+export TMPDIR="$PWD/workdirs/.tmp"
+mkdir -p "$TMPDIR"
+SCRIPT_PYTHON="${SCRIPT_PYTHON:-/home/svu/e1583416/work/miniconda3/envs/vts/bin/python}"
+hostname
+nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
+if [[ -n "${SCRIPT_ARGS_FILE:-}" ]]; then
+    "$SCRIPT_PYTHON" script/run_script_args.py "$SCRIPT_ARGS_FILE"
+else
+    "$SCRIPT_PYTHON" script/smoke_script.py --output "${SCRIPT_SMOKE_OUT:-workdirs/script/gpu-smoke-final}"
+fi
