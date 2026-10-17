@@ -23,19 +23,37 @@ def script_outline(memory, query, cfg):
     return {'status': 'unverified_navigation', 'scenes': selected, 'omitted_scenes': len(rows)-len(selected)}
 
 
-def prepare_inputs(memory, query, cfg):
+def prepare_inputs(memory, query, cfg, inspected=(), remaining_reads=None):
     context = caption_context(memory, query, cfg)
-    available = [w for w in context['windows'] if w['interval'][1]-w['interval'][0] <= cfg['observation']['max_window_seconds']]
+    intervals = [memory.get(c['window_id'])['interval'] for c in inspected]
+    bounded = [w for w in context['windows']
+               if w['interval'][1]-w['interval'][0] <= cfg['observation']['max_window_seconds']]
+    available = [w for w in bounded
+                 if not any((overlap := intersect(w['interval'], old)) and
+                             overlap[1]-overlap[0] >= .5*min(w['interval'][1]-w['interval'][0], old[1]-old[0])
+                             for old in intervals)]
     context = dict(context, windows=available, selected_windows=len(available),
                    omitted_windows=context['eligible_windows']-len(available),
-                   oversized_windows_excluded=len(context['windows'])-len(available))
+                   oversized_windows_excluded=len(context['windows'])-len(bounded),
+                   inspected_windows_excluded=len(bounded)-len(available))
+    limit = min(cfg['query']['max_script_reads'], cfg['query']['global_task_limit'])
+    claims = [{'id': c['id'], 'description': c.get('description', ''), 'interval': c['interval']}
+              for c in memory.tables['claims'].values() if memory.is_valid(c['id'])]
+    from .query_policy import query_observation_gaps
     return {'question': query['question'], 'options': query['options'],
             'script_outline': script_outline(memory, query, cfg),
             'coarse_context': context,
-            'max_reads': min(cfg['query']['max_script_reads'], cfg['query']['global_task_limit'])}
+            'verified_claims': claims,
+            'inspected_windows': [{'window_id': c['window_id'], 'interval': memory.get(c['window_id'])['interval']}
+                                  for c in inspected],
+            'observation_gaps': query_observation_gaps(memory, query['id']),
+            'remaining_reads': limit if remaining_reads is None else max(0, remaining_reads),
+            'max_reads': 1}
 
 
 def normalize_plan(report, inputs):
+    if inputs['max_reads'] <= 0 or inputs.get('remaining_reads', 1) <= 0:
+        return dict(report, checks=[])
     windows = {w['id']: w for w in inputs['coarse_context']['windows']}
     checks, intervals = [], []
     for row in report['checks']:
@@ -46,7 +64,11 @@ def normalize_plan(report, inputs):
         if any((overlap := intersect(interval, old)) and
                overlap[1]-overlap[0] >= .5*min(interval[1]-interval[0], old[1]-old[0]) for old in intervals):
             continue
-        checks.append(dict(row))
+        # Model reasoning is retained for diagnostics but is never an asserted
+        # observation goal or acceptance test (e.g. "make a pizza"). Options
+        # still reach the observer as unverified distinctions to inspect.
+        checks.append(dict(row, proposed_goal=row['goal'],
+                           goal='Record visible actions, tools, hands and their order; keep unclear details unknown.'))
         intervals.append(interval)
         if len(checks) == inputs['max_reads']:
             break

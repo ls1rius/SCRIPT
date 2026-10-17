@@ -12,5 +12,8 @@ models:
     text_embedding_max_tokens: 8192
 query:
   reading_policy: script_guided
+  answer_strategy: direct
+  answer_order: content_hash
+  caption_policy: full
   max_script_reads: 3
   script_context_windows: 12

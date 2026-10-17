@@ -18,7 +18,7 @@ def caption_context(memory, query, cfg):
     byte_limit = cfg['models']['max_input_tokens']
     used = 0
     from .selective import eligible as guided_eligible
-    guided = bool(guided_eligible(memory, query, cfg))
+    guided = bool(guided_eligible(memory, query, cfg)) and cfg['query'].get('caption_policy', 'full') == 'ranked'
     maximum = cfg['query']['script_context_windows'] if guided else len(eligible)
     if guided:
         from collections import Counter

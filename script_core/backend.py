@@ -272,8 +272,13 @@ class LocalModels:
         from .schemas import output_schema, decoder_schema
         schema = decoder_schema(substitute(output_schema(operation, inputs), aliases))
         contract = CONTRACTS[operation]
+        if operation == 'answer' and inputs.get('answer_strategy') == 'direct':
+            contract = CONTRACTS['answer_direct']
         if operation == 'repair':
-            contract += '\n原模块输出契约：\n'+CONTRACTS[inputs['original_operation']]
+            original = inputs['original_operation']
+            if original == 'answer' and inputs.get('original_inputs', {}).get('answer_strategy') == 'direct':
+                original = 'answer_direct'
+            contract += '\n原模块输出契约：\n'+CONTRACTS[original]
         def render(model_inputs):
             payload = substitute(model_view(model_inputs), aliases)
             text_part = {'type': 'text', 'text': '<input>\n'+json.dumps(payload, ensure_ascii=False)+

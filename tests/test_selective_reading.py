@@ -36,7 +36,8 @@ class ReadingBackend(FixtureBackend):
         if operation == 'read_plan':
             self.operations.append(operation)
             windows = inputs['coarse_context']['windows']
-            chosen = sorted(windows, key=lambda w: ('distinctive tool' not in w['caption'], w['interval'][0]))[:self.count]
+            count = min(inputs['max_reads'], max(0, self.count-len(inputs.get('inspected_windows', []))))
+            chosen = sorted(windows, key=lambda w: ('distinctive tool' not in w['caption'], w['interval'][0]))[:count]
             return {'data': {'reason': 'Check the specific tool rather than repeating the general action',
                 'checks': [{'window_id': w['id'], 'goal': 'Record the tool actually used',
                             'reason': 'Tool identity distinguishes the choices'} for w in chosen]}}
@@ -59,7 +60,7 @@ class SelectiveReadingTests(unittest.TestCase):
     def test_one_targeted_read_replaces_six_checkpoint_reads(self):
         result, backend, steps = self.run_guided(1)
         self.assertIsNone(result['error'])
-        self.assertEqual(backend.operations.count('read_plan'), 1)
+        self.assertEqual(backend.operations.count('read_plan'), 2)
         self.assertEqual(backend.operations.count('observe'), 1)
         self.assertEqual(backend.operations.count('verify_claims'), 1)
         self.assertEqual(backend.operations.count('assess'), 0)
@@ -125,14 +126,16 @@ class SelectiveReadingTests(unittest.TestCase):
         base.put('requirements', obj('r', predicate='other', roles={}, scope=[0., 180.], quantifier='global',
             prerequisite_ids=[], acceptable_modalities=['visual'], answer_slot='activity', support_sets=[], status='unresolved'))
         query = {'question': 'What is the overall activity?', 'options': ['a', 'b'], 'scope': [0., 180.]}
-        context = caption_context(base, query, guided_config())
+        cfg = guided_config()
+        cfg['query']['caption_policy'] = 'ranked'
+        context = caption_context(base, query, cfg)
         self.assertEqual(context['selected_windows'], 12)
         self.assertGreater(context['omitted_windows'], 0)
         self.assertEqual(len(base.tables['windows']), context['eligible_windows'])
         for w in context['windows']:
             self.assertEqual(w['caption'], base.get(w['id'])['caption'])
         query['question'] = 'Count all actions throughout the video.'
-        self.assertGreater(caption_context(base, query, guided_config())['selected_windows'], 12)
+        self.assertGreater(caption_context(base, query, cfg)['selected_windows'], 12)
 
     def test_duplicate_and_overlapping_read_requests_are_coalesced(self):
         inputs = {'max_reads': 3, 'coarse_context': {'windows': [
@@ -152,6 +155,7 @@ class SelectiveReadingTests(unittest.TestCase):
             w['caption'] = 'Using needle and thread to stitch fabric in a hoop.'
         base.get('w10')['caption'] = 'A pen draws a pattern.'
         cfg = guided_config()
+        cfg['query']['caption_policy'] = 'ranked'
         cfg['query']['script_context_windows'] = 4
         query = {'question': 'What is the overall process using needle and thread?', 'scope': [0., 180.],
             'options': ['She draws a pattern using a pen, then stitches using needle and thread.',

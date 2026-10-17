@@ -94,7 +94,7 @@ def decision_inputs(inputs):
         verification = original.get('verification', {})
         if verification:
             projected['verification'] = {k: list(dict.fromkeys(verification[k])) if isinstance(verification[k], list) else verification[k]
-                for k in ('result', 'distinguishing_facts', 'unresolved_conflicts', 'process_visible') if k in verification}
+                for k in ('result', 'distinguishing_facts', 'unresolved_conflicts', 'process_visible', 'whole_claim_supported') if k in verification}
     return result
 
 

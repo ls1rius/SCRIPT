@@ -18,7 +18,7 @@ from .query_policy import (normalize_plan, global_checkpoints, spread_order, che
                            plan_uncertainties, checked_ambiguities, option_distinctions,
                            option_check_rows, novel_claim_ids, retain_plan_context, query_observation_gaps)
 from .caption_context import caption_context
-from .answering import reconcile_answer
+from .answering import reconcile_answer, prepare_answer_inputs, restore_answer_order
 from .state import DYNAMIC, PREDICATE_ROLES, Memory, Store, obj, valid_interval, write_json, write_jsonl
 
 
@@ -462,7 +462,8 @@ class Navigator:
                   'summary': [self.memory.get(self.memory.get(s)['summary_id']) for s in selected['scene_ids']]}
         if selected['route'] == 'script':
             check = next(c for c in self.state['read_plan']['checks'] if c['window_id'] in selected['basis_refs'])
-            report = {'goal': check['goal'], 'acceptance_checks': [check['reason']]}
+            report = {'goal': check['goal'], 'acceptance_checks': [
+                'Record only visible details that distinguish the candidate actions; do not infer a purpose.']}
         elif self.cfg['method'] in ('B0', 'B1', 'B1S'):
             # Flat variants share every tool/state field, but choose and execute without goal handoff.
             report, _ = self.meter.json('flat_plan', baseline_input(self.cfg['method'], inputs, frontier,
@@ -631,15 +632,8 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
         from .selective import eligible as guided_eligible, prepare_inputs as read_inputs, normalize_plan as normalize_reads, script_outline
         state['script_guided'] = bool(guided_eligible(memory, query, cfg))
         if state['script_guided'] and 'read_plan' not in state:
-            inputs = read_inputs(memory, query, cfg)
-            try:
-                plan, _ = meter.json('read_plan', inputs, ('reason', 'checks'))
-                state['read_plan'] = normalize_reads(plan, inputs)
-            except (ToolFailure, ResourceExhausted, ValueError) as exc:
-                # Keep the bounded policy even if planning fails; preserve the
-                # error and let the final answer use unverified script context.
-                state['read_plan'] = {'reason': 'Read planning failed; no evidence sufficiency claim.', 'checks': []}
-                state['read_plan_error'] = str(exc)
+            state['read_plan'] = {'reason': 'Plan one inspection at a time using verified feedback.', 'checks': []}
+            state['read_plan_history'] = []
         navigator = Navigator(memory, query, metadata, cfg, meter, variables, state)
         materializer = Materializer(memory, meter, cfg, query['id'], output)
         materializer.cache.scope = query['scope']
@@ -675,10 +669,34 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
             steps = [json.loads(line) for line in (output / 'steps.jsonl').read_text().splitlines() if line.strip()]
         reason, semantic_version, gaps = None, None, []
         while True:
-            if state['script_guided'] and state['global_round'] >= len(state['read_plan']['checks']):
-                reason = 'exploration_stop'
-                state['exploration_limit'] = 'script_read_plan_complete'
-                break
+            if state['script_guided']:
+                read_limit = min(cfg['query']['max_script_reads'], cfg['query']['global_task_limit'])
+                if state['global_round'] >= read_limit:
+                    reason = 'exploration_stop'
+                    state['exploration_limit'] = 'script_read_limit'
+                    break
+                if state['global_round'] >= len(state['read_plan']['checks']):
+                    inputs = read_inputs(memory, query, cfg, state['read_plan']['checks'],
+                                         read_limit-state['global_round'])
+                    try:
+                        plan, _ = meter.json('read_plan', inputs, ('reason', 'checks'))
+                        plan = normalize_reads(plan, inputs)
+                        state.setdefault('read_plan_history', []).append(plan)
+                        state['read_plan']['reason'] = plan['reason']
+                        state['read_plan']['checks'].extend(plan['checks'])
+                    except ResourceExhausted:
+                        reason = 'resource_stop'
+                        state['stop_limit'] = 'processing_budget'
+                        break
+                    except (ToolFailure, ValueError) as exc:
+                        state['read_plan_error'] = str(exc)
+                        reason = 'exploration_stop'
+                        state['exploration_limit'] = 'script_planning_failed'
+                        break
+                    if not plan['checks']:
+                        reason = 'exploration_stop'
+                        state['exploration_limit'] = 'script_read_plan_complete'
+                        break
             # Text ambiguities are resolved against evidence by the semantic gate;
             # they must not prevent the resolving gate from ever being invoked.
             structurally_passed, gaps = structural_gate(memory, query, variables, [], cfg)
@@ -961,9 +979,11 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
                                         'script_outline': script_outline(memory, query, cfg) if state.get('script_guided') else None,
                                         'observation_gaps': query_observation_gaps(memory, query['id']),
                                         'stop_decision': decision}
-        report, _ = meter.json('answer', answer_inputs,
+        presented_inputs, option_map = prepare_answer_inputs(answer_inputs, cfg['query']['answer_strategy'],
+                                                             cfg['query']['answer_order'], cfg['seed'])
+        report, _ = meter.json('answer', presented_inputs,
                               ('text', 'selected_option', 'claim_ids', 'evidence_ids'), final=True)
-        report = reconcile_answer(report, answer_inputs)
+        report = restore_answer_order(reconcile_answer(report, presented_inputs), option_map)
         if (not set(report['claim_ids']) <= {c['id'] for c in valid_claims}
                 or not set(report['evidence_ids']) <= set(evidence_ids)):
             raise ToolFailure('Final answer cites invalid or unseen evidence')
@@ -1013,6 +1033,7 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
         envelope['diagnostics'] = {'gate_failures': state.get('gate_failures', []),
                                    'reading': {'policy': cfg['query']['reading_policy'], 'script_guided_active': state.get('script_guided', False),
                                                'plan': state.get('read_plan'), 'planning_error': state.get('read_plan_error'),
+                                               'plan_history': state.get('read_plan_history', []),
                                                'visual_reads': sum(c['operation'] in ('observe', 'extract') for c in ledger.calls),
                                                'assess_calls': sum(c['operation'] == 'assess' for c in ledger.calls)},
                                    'answer_conflict': state.get('answer_conflict'),

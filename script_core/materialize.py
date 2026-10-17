@@ -179,6 +179,7 @@ class Materializer:
                 if proposed_claims:
                     verified, _ = self.meter.json('verify_claims', {
                         'frames': frames, 'subtitles': subtitles,
+                        'require_complete_claim': True,
                         'candidates': {str(i): candidate for i, candidate in enumerate(proposed_claims)}},
                         ('checks',), task['id'])
                     checks = verified['checks']
@@ -409,7 +410,8 @@ class Materializer:
         report = verification_report
         if report is None:
             report, _ = self.meter.json('verify_claim', {'frames': [f for f in evidence['frame_inputs'] if f.get('visual_usable', True)], 'subtitles': evidence['text_spans'],
-                                                   'claim': candidate, 'occurrences': role_occurrences},
+                                                   'claim': candidate, 'occurrences': role_occurrences,
+                                                   'require_complete_claim': True},
                                    ('result', 'distinguishing_facts', 'unresolved_conflicts', 'source_frame_ids', 'process_visible'), task['id'])
         status = report['result']
         if status not in ('supported', 'refuted', 'unresolved'):
@@ -417,7 +419,8 @@ class Materializer:
         report = deepcopy(report)
         fact_type = candidate.get('fact_type', 'action' if predicate == 'other' or predicate in DYNAMIC else 'state')
         requires_process = predicate in DYNAMIC or fact_type == 'action'
-        if (not complete_roles or not localized or not frame_ids or not set(frame_ids) <= interval_frames or not set(report['source_frame_ids']) <= interval_frames
+        if (report.get('whole_claim_supported') is False and status == 'supported'
+                or not complete_roles or not localized or not frame_ids or not set(frame_ids) <= interval_frames or not set(report['source_frame_ids']) <= interval_frames
                 or not report['source_frame_ids'] or report['unresolved_conflicts']
                 or (source_type == 'subtitle' and predicate != 'speech_claim')
                 or (source_type == 'visual' and fact_type == 'inference')

@@ -174,10 +174,15 @@ def output_schema(operation, inputs):
                             'region': {'type': 'array', 'items': N, 'minItems': 4, 'maxItems': 4}, 'reason': short_text(64)}), 2),
                        'uncertainties': array(short_text(80), 2)})
     if operation == 'verify_claims':
-        check = record({'result': enum(['supported', 'refuted', 'unresolved']),
+        fields = {'result': enum(['supported', 'refuted', 'unresolved']),
                         'distinguishing_facts': array(short_text(96), 2),
                         'unresolved_conflicts': array(short_text(96), 2),
-                        'source_frame_ids': array(enum(frame_ids), 4), 'process_visible': B})
+                        'source_frame_ids': array(enum(frame_ids), 4), 'process_visible': B}
+        if inputs.get('require_complete_claim'):
+            fields = {k: fields[k] for k in ('distinguishing_facts', 'unresolved_conflicts',
+                                             'source_frame_ids', 'process_visible')} | {
+                'whole_claim_supported': B, 'result': fields['result']}
+        check = record(fields)
         return record({'checks': record({key: deepcopy(check) for key in inputs['candidates']})})
     if operation in ('verify_claim', 'verify_identity'):
         fields = {'result': enum(['same', 'different', 'unknown'] if operation == 'verify_identity' else ['supported', 'refuted', 'unresolved']),
@@ -186,6 +191,12 @@ def output_schema(operation, inputs):
             fields['basis_types'] = array(enum(['continuous_motion', 'unique_marker', 'multiple_details_with_exclusion']), 3)
         else:
             fields['process_visible'] = B
+            if inputs.get('require_complete_claim'):
+                fields['distinguishing_facts'] = array(short_text(96), 3)
+                fields['unresolved_conflicts'] = array(short_text(96), 2)
+                fields = {k: fields[k] for k in ('distinguishing_facts', 'unresolved_conflicts',
+                                                 'source_frame_ids', 'process_visible')} | {
+                    'whole_claim_supported': B, 'result': fields['result']}
         return record(fields)
     if operation == 'assess':
         return record({'bindings': array(record({'variable': enum(variable_names), 'occurrence_id': enum(occurrences),
@@ -223,6 +234,11 @@ def output_schema(operation, inputs):
         fields.update(passed=B, unresolved=array(short_text(80), 2))
         return record(fields)
     if operation == 'answer':
+        if inputs.get('answer_strategy') == 'direct':
+            return record({'text': short_text(240),
+                           'selected_option': enum(inputs['option_ids']) if inputs.get('answer_mode') == 'choice' else {'type': 'null'},
+                           'claim_ids': array(enum(claims), 4),
+                           'evidence_ids': array(enum([e['id'] for e in inputs.get('evidence', [])]), 4)})
         fields = {}
         if inputs.get('answer_mode') == 'choice' and inputs.get('options'):
             # Generate the comparison before committing to an option ID. This

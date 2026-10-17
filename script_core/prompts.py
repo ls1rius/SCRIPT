@@ -13,7 +13,11 @@ CONTRACTS = {
 合并重复动作，保留主要活动和前后变化，不逐条复述窗口，不重复同一短语。place最多48字符，event_keywords最多4项各32字符，uncertainties最多2项各80字符。
 已有不确定性由程序完整保留，输出只补充新的摘要不确定性；不能把粗描述写为核验事实。输出
 {"text":str,"place":str|null,"event_keywords":[str],"uncertainties":[str]}。''',
-    'read_plan': '''根据已有剧本和带时间的粗描述，决定是否需要细看以及细看哪里；不要解码视频或先选择答案。
+    'read_plan': '''根据已有剧本、完整带时间描述和本轮核验反馈，决定下一次细看哪里；不要解码视频或先选择答案。
+每轮最多一个检查。remaining_reads是总剩余次数；inspected_windows已经查过，不能再选。
+verified_claims才是有效事实；observation_gaps是未知，不是反证。检查未得到有效事实或区分信息仍缺失时，优先换到能解决缺口的时间段。
+准备步骤、工具、左右手、动作顺序的差异需要相应过程；活动转折要比较转折前后的活动，不把任务完成当转折。
+不能把某个候选目的（如制作某种食物）直接写为goal，也不能从领域常识补出未见步骤。
 所有剧本与描述均未核验。先比较选项的关键区别，只有缺少会影响选择的可见细节时才增加检查。
 最多max_reads个窗口，每项必须使用给定window_id；goal只写中性、可观察的问题，不能把某个选项当事实。
 不要为重复确认同一动作而增加窗口；需要区分准备步骤、工具、左右手或前后转折时，定位相应时间段。
@@ -63,6 +67,7 @@ acceptance_checks和prior_observation_gaps也是待查线索；前一窗口看�
 只输出state或action；复合活动拆成独立动作并分别引用各自的源帧，能确认一部分时保留该部分，未知部分写uncertainties。
 不以总体目的代替事实，不复制问题长前缀。
 interval使用原视频秒数。持续动作的observed_at填null；点时刻仅用给定源帧PTS，不能填窗口内帧序号或相对时间。
+每条只写一个可见动作或状态。不得在一条中合并拿起、交接和种植，或滚动、蘸粉和放盘等多个步骤；分别写各自时间和帧。
 最多3条与目标有关的简洁事实，每条description最多160字符；uncertainties最多2项且各80字符。
 输出{"claims":[{"fact_type":"state"|"action","predicate":"other","roles":{},"interval":[start,end],"observed_at":number|null,
 "source_type":"visual","source_frame_ids":[str],"description":str}],"uncertainties":[str]}。
@@ -85,10 +90,14 @@ interval使用原视频秒数；持续动作observed_at填null，点时刻仅用
 "missing_entity":[{"category":str,"frame_id":str,"region":[x1,y1,x2,y2],"reason":str}],
 "uncertainties":[str]}。目标决定检查范围，不代表事件存在。''',
     'verify_claim': '''核验候选命题及角色。说明实际可见的依据；动态动作必须看到过程。
+若require_complete_claim=true，先列可见依据及未确认部分，再输出whole_claim_supported布尔值，最后判断result；只有候选中每个动作、工具、身体左右手、顺序和限定都得到支持才为true。
+只确认一部分必须false及unresolved，不能用拿起和交接证明后续种植用手；把缺失的具体部分写入unresolved_conflicts。
 输出{"result":"supported"|"refuted"|"unresolved","distinguishing_facts":[str],
 "unresolved_conflicts":[str],"source_frame_ids":[str],"process_visible":bool}。
 没有看到不代表没有发生。字幕仅支持speech_claim。''',
     'verify_claims': '''在同一组图像上分别核验candidates中的每条候选事实。
+若require_complete_claim=true，每个编号先列可见依据及缺失限定，再输出whole_claim_supported布尔值，最后判断result；逐一检查候选中的每个动作、对象、工具、身体左右手和先后关系。
+仅有部分相符必须whole_claim_supported=false、result=unresolved，并在unresolved_conflicts指出缺少什么。不得把候选原句重复一遍当作核验理由。
 输出{"checks":{候选编号:{"result":"supported"|"refuted"|"unresolved","distinguishing_facts":[str],
 "unresolved_conflicts":[str],"source_frame_ids":[str],"process_visible":bool}}}。
 每个编号都需独立核验，不把前一条的判断套用到后一条。不改变候选顺序或编号。
@@ -144,6 +153,17 @@ supported只能用direct_support；refuted只能用direct_contradiction；not_ob
 refuted必须有正面的矛盾事实。“没有证据”“本窗口没看到”“no evidence”只能是unresolved，不能当作refuted。
 reason最多64字符，每项引用最多4条关键事实；unresolved最多2项，每项最多80字符。
 只写该选项的具体区分点，不复制选项全文，不重复其他选项的分析，不要求证明视频里从未出现其他活动。''',
+    'answer_direct': '''依据原问题、按时间排列的描述和有效视觉事实，选择整体最符合视频的一个候选。
+先在text中简短概括决定选择的实际动作、工具或顺序，再输出selected_option；不生成五项比较表，不逐项复述选项。
+coarse_context和script_outline是未核验描述，可用于最佳选择；claims用于核对，核验只适用于其时间范围。
+observation_gaps是窗口内未知信息，不能当成事实或事件不存在；没有视觉事实时不要声称已经亲眼确认。
+区分共同动作与候选独有断言：共同后续步骤不能证明独有的前置准备；局部物体移动不能直接推出整体目的；共有加工动作不能独自证明某种成品。
+核对候选的每个额外步骤、工具和先后顺序。不要从常识补出烘焙、目的地、工具或人物意图。
+目的题综合反复活动和工具；转折题比较前一活动、改变和后一活动；左右手按身体参照，不能凭画面左右猜。
+候选编号只是本次输入的标签，没有优先级。使用同一记录中的option_id和text，不能按常见编号作答。
+text最多240字符，说明关键依据与必要不确定性。引用只允许来自输入claims/evidence，不引用描述ID；没有引用时数组为[]。
+输出{"text":str,"selected_option":str|null,"claim_ids":[str],"evidence_ids":[str]}。
+选择题必须选一个合法option_id；证据不足时仍给最佳选择，不能改变StopDecision。开放题selected_option=null。''',
     'answer': '''依据StopDecision和有效支持回答原问题；保持角色和时间条件。
 observation_gaps记录具体窗口内未能确认的细节，不能补成已见动作或当作事件不存在；结合后续有效事实判断是否已消解。
 不足时开放题回答无法确定；强制选择仍输出一个合法选项ID，内部不足状态不改。
@@ -182,4 +202,6 @@ B0自由检索迭代；B1额外显式使用实体与时间路由；B1S使用完�
 
 def prompt_hash(operation):
     from .config import digest
+    if operation == 'answer':
+        return digest([SYSTEM, CONTRACTS['answer'], CONTRACTS['answer_direct']])
     return digest([SYSTEM, CONTRACTS.get(operation, '')])

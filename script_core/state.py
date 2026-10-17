@@ -308,7 +308,7 @@ class Memory:
         if any(role != 'content' and ref not in self.tables['occurrences'] for role, ref in r['roles'].items()):
             raise ValueError('Claim contains an unlocalized entity role')
         v = r['verification']
-        if not v or v['result'] != 'supported' or v['unresolved_conflicts']:
+        if not v or v['result'] != 'supported' or v['unresolved_conflicts'] or v.get('whole_claim_supported') is False:
             raise ValueError('Claim has no successful semantic verification')
         evidence = [self.get(e) for e in r['evidence_ids']]
         actual_ids = {f['frame_id'] for e in evidence for f in e['frame_inputs']}

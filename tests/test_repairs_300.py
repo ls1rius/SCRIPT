@@ -89,6 +89,38 @@ class Repair300Tests(unittest.TestCase):
         self.assertEqual(report['groups']['script_guided']['budget_violations'],1)
         self.assertEqual(report['groups']['script_guided']['mean_visual_reads'],1.)
 
+    def test_complete_matched_m0_is_reused_and_previous_results_are_frozen(self):
+        for i, uid in enumerate(self.ids):
+            directory = self.output/'shards'/str(i%4)/'script_base'
+            base = directory/digest(uid)[:20]
+            write(base/'base_hash.json', {'base_hash': uid})
+            write(base/'build_cost.json', {'total': 20., 'by_operation': {}})
+            (base/'summaries.jsonl').write_text(json.dumps({'status': 'current'})+'\n')
+            index = runner.pilot.read(directory/'videos.json') if (directory/'videos.json').exists() else {}
+            index[uid] = str(base.resolve())
+            write(directory/'videos.json', index)
+            for arm in runner.ARMS:
+                self.result(arm, uid, str(i%2))
+        for arm in runner.ARMS:
+            for i in range(4):
+                write(self.output/'arms'/arm/'shards'/str(i)/'integrity_report.json', {'passed': True})
+        self.assertTrue(runner.score(self.output)['complete'])
+        new = self.output.parent/'reuse'
+        spec = runner.prepare(new, self.output.parent/'previous', 8, reuse_m0_from=self.output)
+        self.assertEqual((spec['fresh_m0_videos'], spec['reused_m0_videos']), (0, 8))
+        self.assertTrue((new/'shards/0/script_base').is_symlink())
+        runner.verify(new)
+        report = runner.score(new)
+        self.assertFalse(report['m0_cost_remeasured'])
+        self.assertEqual(report['fresh_m0']['reused'], 8)
+        self.assertEqual(report['fresh_m0']['newly_built'], 0)
+        self.assertEqual(report['paired_vs_previous_repair']['coverage_first']['previous_correct'], 8)
+        self.assertEqual(report['paired_vs_previous_repair']['coverage_first']['completed_pairs'], 0)
+        base_hash = next((self.output/'shards/0/script_base').glob('*/base_hash.json'))
+        write(base_hash, {'base_hash': 'changed'})
+        with self.assertRaisesRegex(ValueError, 'Reused experiment input changed'):
+            runner.verify(new)
+
     def test_one_build_is_shared_by_both_arms_and_one_build_failure_does_not_skip_other_queries(self):
         seen = []
         def build(output,directory,spec):

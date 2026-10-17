@@ -25,7 +25,7 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def prepare(output, previous, cohort_size=300):
+def prepare(output, previous, cohort_size=300, reuse_m0_from=None):
     import yaml
     output, previous = Path(output).resolve(), Path(previous).resolve()
     if output.exists():
@@ -50,6 +50,29 @@ def prepare(output, previous, cohort_size=300):
         assert base_config(load_config(directory/'config.yaml')) == base_config(load_config(output/'config.yaml'))
     pilot.write(output/'evaluation_reference.json', reference)
     pilot.write(output/'cohort.json', ids)
+    reused_hashes = {}
+    if reuse_m0_from:
+        reused = Path(reuse_m0_from).resolve()
+        if pilot.read(reused/'cohort.json') != ids:
+            raise ValueError('M0 reuse requires the exact same cohort and ordering')
+        if base_config(load_config(reused/'config.yaml')) != base_config(load_config(output/'config.yaml')):
+            raise ValueError('M0 reuse requires identical models and base configuration')
+        for i in range(spec['shards']):
+            old, new = reused/'shards'/str(i), output/'shards'/str(i)
+            if (old/'questions.jsonl').read_bytes() != (new/'questions.jsonl').read_bytes():
+                raise ValueError('M0 reuse requires identical per-shard questions')
+            index = pilot.read(old/'script_base'/'videos.json')
+            expected = {json.loads(line)['video_id'] for line in (new/'questions.jsonl').read_text().splitlines()}
+            if set(index) != expected:
+                raise ValueError('M0 reuse requires a complete base for every planned video')
+            for path in [old/'script_base'/'videos.json', *[Path(p)/'base_hash.json' for p in index.values()]]:
+                reused_hashes[str(path)] = sha(path)
+            (new/'script_base').symlink_to((old/'script_base').resolve(), target_is_directory=True)
+        previous_results = pilot.read(reused/'comparison.json')
+        if not previous_results['complete'] or any(len(previous_results['rows'][a]) != cohort_size for a in ARMS):
+            raise ValueError('Expected complete matched previous results')
+        pilot.write(output/'previous_repair_reference.json', previous_results)
+        pilot.write(output/'reuse_hashes.json', reused_hashes)
     # Extend the standard source snapshot with this orchestration, before submission.
     hashes = pilot.read(output/'source_hashes.json')
     for name in ('script/run_repairs_300.py', 'script/repairs_300.pbs'):
@@ -67,11 +90,20 @@ def prepare(output, previous, cohort_size=300):
                      'Both arms share newly built M0. Historical V7c uses its historical M0.',
                      'Original VideoTree predictions/times are reused; VideoTree is not rerun.',
                      'M0 is built once; do not sum its cost across both arms.'])
+    if reuse_m0_from:
+        spec.update(reuse_m0_from=str(reused), fresh_m0_videos=0, reused_m0_videos=cohort_size,
+                    stage_order=list(ARMS))
+        spec['limitations'][1] = 'Both arms reuse the same M0 as the previous matched run. Historical V7c uses its historical M0.'
+        spec['limitations'].append('Reuse the same complete M0 as the previous matched run; build costs are historical, not remeasured.')
+    spec['query_repairs'] = {name: load_config(output/'arms'/ARMS[0]/'config.yaml')['query'][name]
+                              for name in ('answer_strategy', 'answer_order', 'caption_policy')}
     pilot.write(output/'pilot_spec.json', spec)
     inputs = ['config.yaml', 'pilot_spec.json', 'cohort.json', 'evaluation_only.json', 'evaluation_reference.json']
     inputs += [f'arms/{arm}/config.yaml' for arm in ARMS]
     inputs += [str(p.relative_to(output)) for p in output.glob('captions/*.json')]
     inputs += [f'shards/{i}/{name}' for i in range(4) for name in ('manifest.json', 'questions.jsonl')]
+    if reuse_m0_from:
+        inputs += ['previous_repair_reference.json', 'reuse_hashes.json']
     pilot.write(output/'input_hashes.json', {name:sha(output/name) for name in inputs})
     score(output)
     return spec
@@ -177,6 +209,21 @@ def score(output):
                 'gained':sum(not a['correct'] and b['correct'] for a,b in pairs),
                 'lost':sum(a['correct'] and not b['correct'] for a,b in pairs)},
             'limitations':spec['limitations']}
+        report['m0_cost_remeasured'] = not bool(spec.get('reuse_m0_from'))
+        report['fresh_m0'].update(newly_built=0 if spec.get('reuse_m0_from') else build_summary['built'],
+                                  reused=build_summary['built'] if spec.get('reuse_m0_from') else 0)
+        if (output/'previous_repair_reference.json').exists():
+            prior = pilot.read(output/'previous_repair_reference.json')
+            report['paired_vs_previous_repair'] = {}
+            for arm, values in rows.items():
+                old_arm = {r['question_id']:r for r in prior['rows'][arm]}
+                done = [r for r in values if r['completed']]
+                report['paired_vs_previous_repair'][arm] = {
+                    'completed_pairs':len(done),
+                    'fixed_wrong_answers':sum(not old_arm[r['question_id']]['correct'] and r['correct'] for r in done),
+                    'lost_correct_answers':sum(old_arm[r['question_id']]['correct'] and not r['correct'] for r in done),
+                    'previous_correct':prior['groups'][arm]['correct'],
+                    'previous_errors':prior['groups'][arm]['errors']}
         pilot.write(output/'comparison.json', dict(report, rows=rows))
         pilot.write(output/'run_summary.json', report)
         return report
@@ -201,7 +248,8 @@ def run_shard(output, shard):
     directory = output/'shards'/str(shard)
     with (directory/'pipeline.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        index = pilot.build_script(output, directory, spec)
+        index = (pilot.read(directory/'script_base'/'videos.json') if spec.get('reuse_m0_from')
+                 else pilot.build_script(output, directory, spec))
         questions = [json.loads(line) for line in (directory/'questions.jsonl').read_text().splitlines()]
         accepted = [q for q in questions if q['video_id'] in index]
         path = directory/'built_questions.jsonl'
@@ -254,6 +302,7 @@ if __name__ == '__main__':
     prep = commands.add_parser('prepare')
     prep.add_argument('--out', required=True)
     prep.add_argument('--previous', required=True)
+    prep.add_argument('--reuse-m0-from', help='Reuse the identical complete M0 of a matched repair run')
     run = commands.add_parser('run-shard')
     run.add_argument('--out', required=True)
     run.add_argument('--shard', type=int, required=True)
@@ -264,7 +313,7 @@ if __name__ == '__main__':
     scoring.add_argument('--out', required=True)
     args = parser.parse_args()
     if args.command == 'prepare':
-        result = prepare(args.out, args.previous)
+        result = prepare(args.out, args.previous, reuse_m0_from=args.reuse_m0_from)
         print(json.dumps({'questions_per_arm':result['questions_per_arm'], 'gpu_jobs':result['gpu_jobs']}))
     elif args.command == 'run-shard':
         raise SystemExit(run_shard(args.out,args.shard))

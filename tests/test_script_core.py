@@ -252,6 +252,8 @@ class FixtureBackend:
 
     def call(self, operation, inputs, timeout):
         self.operations.append(operation)
+        if operation not in ('answer', 'repair') and inputs.get('options'):
+            self.original_options = inputs['options']
         frames = inputs.get('frames', [])
         if operation == 'parse':
             return {'data': {'requirements': [{'key': 'r', 'predicate': 'other', 'roles': {},
@@ -286,9 +288,11 @@ class FixtureBackend:
             return {'data': result}
         if operation == 'verify_claim':
             return {'data': {'result': 'supported', 'distinguishing_facts': ['fixture'], 'unresolved_conflicts': [],
+                             **({'whole_claim_supported': True} if inputs.get('require_complete_claim') else {}),
                              'source_frame_ids': [f['frame_id'] for f in frames[:4]], 'process_visible': False}}
         if operation == 'verify_claims':
             return {'data': {'checks': {key: {'result': 'supported', 'distinguishing_facts': ['fixture'],
+                **({'whole_claim_supported': True} if inputs.get('require_complete_claim') else {}),
                 'unresolved_conflicts': [], 'source_frame_ids': candidate['source_frame_ids'], 'process_visible': False}
                 for key, candidate in inputs['candidates'].items()}}}
         if operation == 'assess':
@@ -308,7 +312,9 @@ class FixtureBackend:
         if operation == 'answer':
             answer = {'text': 'Fixture answer', 'selected_option': '0',
                 'claim_ids': [c['id'] for c in inputs['claims'][:4]], 'evidence_ids': [e['id'] for e in inputs['evidence'][:4]]}
-            if inputs.get('answer_mode') == 'choice' and inputs.get('options'):
+            if inputs.get('answer_strategy') == 'direct' and inputs.get('options') and hasattr(self, 'original_options'):
+                answer['selected_option'] = str(inputs['options'].index(self.original_options[0]))
+            if inputs.get('answer_strategy') != 'direct' and inputs.get('answer_mode') == 'choice' and inputs.get('options'):
                 answer.update(evidence_summary='Fixture observation', option_alignment={key: {
                     'reason': 'Fixture does not distinguish options', 'claim_ids': [], 'match': 'unknown'
                 } for key in inputs['option_ids']})

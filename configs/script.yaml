@@ -10,6 +10,10 @@ construction:
   prebuild_identity_links: false
 cache:
   scope: query
+query:
+  answer_strategy: direct
+  answer_order: content_hash
+  caption_policy: full
 models:
   visual_encoder: checkpoints/BAAI/EVA-CLIP-8B
   detector: checkpoints/IDEA-Research/grounding-dino-tiny

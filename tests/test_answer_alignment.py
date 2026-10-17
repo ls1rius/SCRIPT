@@ -103,9 +103,11 @@ class AnswerAlignmentTests(unittest.TestCase):
                     return {'data': comparison(inputs)}
                 return super().call(operation, inputs, timeout)
         backend = CaptionOnlyBackend(base)
+        cfg = deepcopy(DEFAULTS)
+        cfg['query'].update(answer_strategy='contrastive', answer_order='original')
         with tempfile.TemporaryDirectory() as folder:
             result = answer_query(base, {'question_id': 'q', 'video_id': 'v',
-                'question': 'What is the main goal?', 'options': ['a', 'b']}, metadata, deepcopy(DEFAULTS), backend, folder)
+                'question': 'What is the main goal?', 'options': ['a', 'b']}, metadata, cfg, backend, folder)
         self.assertIsNone(result['error'])
         self.assertEqual(result['answer']['selected_option'], '1')
         self.assertEqual(result['answer']['text'], 'b')

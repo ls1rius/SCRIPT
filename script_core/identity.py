@@ -14,7 +14,8 @@ def verification(report, evidence_ids, cfg, operation):
             'replay_origin': origin,
             'input_evidence_ids': evidence_ids, 'distinguishing_facts': report.get('distinguishing_facts', []),
             'unresolved_conflicts': report.get('unresolved_conflicts', []),
-            'process_visible': report.get('process_visible', False), 'basis_types': report.get('basis_types', [])}
+            'process_visible': report.get('process_visible', False), 'basis_types': report.get('basis_types', []),
+            **({'whole_claim_supported': report['whole_claim_supported']} if 'whole_claim_supported' in report else {})}
 
 
 def identity_index(memory, entity_id, scope, requirement_id, relation='within', at=None):
