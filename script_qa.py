@@ -24,6 +24,8 @@ def parser():
     query.add_argument('--base', required=True)
     query.add_argument('--questions', required=True, help='JSONL without answers or evaluation fields')
     query.add_argument('--resume', action='store_true')
+    query.add_argument('--summary-graphs', help='Directory containing <video_id>.json caption assertion graphs')
+    query.add_argument('--graph-routing', action='store_true', help='Use caption graph matches for coverage follow-ups')
     query.add_argument('--replay-source', help='Frozen real query directory or root containing per-question directories')
     query.add_argument('--replay-only', action='store_true', help='Replay planning too; fail if any recorded call is missing')
     query.add_argument('--sequence-manifest', help='Required for sequence_shared: video/prefix/order/cache directory')
@@ -81,6 +83,12 @@ def main(argv=None):
         questions = read_jsonl(args.questions)
         if not questions or len({q.get('question_id', q.get('id')) for q in questions}) != len(questions):
             raise ValueError('Questions must be a nonempty JSONL with unique question IDs')
+        if cfg['query']['pipeline']=='scheme4':
+            if (args.summary_graphs or args.graph_routing or args.replay_source or args.replay_only or
+                    args.sequence_manifest or cfg['cache']['scope']!='query'):
+                raise ValueError('Scheme 4 uses its own summary evidence and query cache; legacy replay/graph/sequence options require query.pipeline=legacy')
+            from script_core.scheme4 import run_queries
+            return run_queries(args,questions,cfg,backend)
         shared = None
         if cfg['cache']['scope'] == 'sequence_shared':
             if not args.sequence_manifest:
@@ -122,7 +130,12 @@ def main(argv=None):
                     if not (replay_source / 'calls.jsonl').exists():
                         replay_source /= safe_directory_id(question_id)
                     query_backend = ReplayBackend(backend, replay_source, args.replay_only)
-                result = answer_query(base, row, metadata, cfg, query_backend, out, details, args.resume)
+                graph = (json.loads((Path(args.summary_graphs) / f'{row["video_id"]}.json').read_text())
+                         if args.summary_graphs else None)
+                if args.graph_routing and graph is None:
+                    raise ValueError('--graph-routing requires --summary-graphs')
+                result = answer_query(base, row, metadata, cfg, query_backend, out, details, args.resume,
+                                      summary_graph=graph, graph_routing=args.graph_routing)
                 if args.replay_source:
                     write_json(out / 'replay_manifest.json', query_backend.manifest())
                     result['experiment_mode'] = query_backend.manifest()['mode']

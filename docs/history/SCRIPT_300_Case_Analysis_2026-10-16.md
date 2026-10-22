@@ -8,10 +8,10 @@
 
 结果和证据入口：
 
-- [本次分析冻结的 300 题结果快照](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/comparison_300_snapshot.json)
-- [完整统计](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/aggregate.json)
-- [9 个 case 的证据与人工分析](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_studies.json)
-- [逐题诊断明细](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/query_diagnostics.json)
+- [本次分析冻结的 300 题结果快照](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/comparison_300_snapshot.json)
+- [完整统计](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/aggregate.json)
+- [9 个 case 的证据与人工分析](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_studies.json)
+- [逐题诊断明细](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/query_diagnostics.json)
 
 **一、先看差距的规模：解析失败只解释其中一小部分。**
 
@@ -58,7 +58,7 @@ SCRIPT 有 6 道解析失败，而且这 6 道 VideoTree 都答对。即使全�
 
 优先改进：检查选项中独有的目的断言，明确区分“正在做的局部动作”和“这些动作服务的总体目标”。
 
-[查看清洁地板 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_45fd8bca.json)
+[查看清洁地板 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_45fd8bca.json)
 
 **Case 2：绣布上画图案，被选成从大块布料剪裁。**
 
@@ -74,7 +74,7 @@ gate 的问题更明显：它多次用同一组“刺绣、调整布料”的事
 
 V7c 已经保留选项文本差异，但文本差异还没有成为必须被证据满足的语义约束。这个 case 需要的是核验“有没有画图 / 剪裁”，继续核验刺绣没有帮助。
 
-[查看绣布 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_8345d177.json)
+[查看绣布 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_8345d177.json)
 
 下图是系统当时实际读入的帧。第一行是清洁地板；第二行是绣布画图案；第三行是后文会讨论的磨姜正例。图片来自已保存的观察输入，没有重新调用模型。
 
@@ -96,7 +96,7 @@ V7c 已经保留选项文本差异，但文本差异还没有成为必须被证�
 
 这是“看了很多帧，但没有取到需要的信息”的典型例子。改进应把中性的区分目标传给观察模块，例如“记录哪只手拿、交给哪只手、哪只手种入土中”，并允许不清楚时保持未知。
 
-[查看种苗 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_e48b8359.json)
+[查看种苗 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_e48b8359.json)
 
 **Case 4：转折点已经进入观察窗口，最终仍选继续写字。**
 
@@ -114,7 +114,7 @@ V7c 已经保留选项文本差异，但文本差异还没有成为必须被证�
 
 改进应同时处理事件拆分、时间定位和转折语义，避免用动作频率替代“活动变化”。
 
-[查看转折点 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_d30c1b6c.json)
+[查看转折点 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_d30c1b6c.json)
 
 下面两行分别是种苗和抽屉窗口的实际输入。它们说明这些画面已经进入系统；问题还包括信息抽取和后续使用方式。
 
@@ -131,7 +131,7 @@ V7c 已经保留选项文本差异，但文本差异还没有成为必须被证�
 
 这个 case 展示了两件事：观察和核验的召回率可能过低；强制选择时，模型又会用常见场景补出具体目的。应主动寻找产品外观、特有配料或工序，避免把泛化的“面团加工”升级为具体食品。
 
-[查看烘焙 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_f1d2978d.json)
+[查看烘焙 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_f1d2978d.json)
 
 **Case 6：轴承维修工具题，在解析时就整题失败。**
 
@@ -155,7 +155,7 @@ V7c 已经保留选项文本差异，但文本差异还没有成为必须被证�
 
 改进需要校验语义任务类型和修复结果。对于结构解析失败但描述问答仍可作答的选择题，可以评估同预算内的有限回退；这不需要虚构实体绑定或把证据不足改成充分。
 
-[查看解析失败 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_b5865ae0.json)
+[查看解析失败 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_b5865ae0.json)
 
 **Case 7：一个次要动作问题，花了 322 秒仍然选错。**
 
@@ -179,7 +179,7 @@ V7c 已经保留选项文本差异，但文本差异还没有成为必须被证�
 
 这个 case 说明，任务路由错误会同时损害准确率与速度。需要核对题面预设是否被视频支持，并区分“概括多个动作”和“真正需要穷尽证明的 all”。
 
-[查看慢题 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_b66bb54a.json)
+[查看慢题 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_b66bb54a.json)
 
 **Case 8：磨姜答对，说明视觉通路值得保留，但重复取证过多。**
 
@@ -194,7 +194,7 @@ LaViLa 描述混入了切土豆、水果、奶酪等噪声。SCRIPT 在 14–22 
 
 重复观察可以帮助证明“贯穿视频”的活动，但需要衡量后续观察是否仍在区分磨、切、削皮等候选。当前停止机制没有有效利用已经稳定的区分信息。
 
-[查看磨姜 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_0c51c89d.json)
+[查看磨姜 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_0c51c89d.json)
 
 **Case 9：有些失分涉及近义选项，需要与明确的系统错误分开审核。**
 
@@ -202,7 +202,7 @@ LaViLa 描述混入了切土豆、水果、奶酪等噪声。SCRIPT 在 14–22 
 
 该题仍按原标注计错，没有调整评测分数。它提示需要单独审核近义、上下位和重叠选项，避免把所有 benchmark 失分都解释成视觉失败。这个单例不足以估计整套数据的标签噪声比例。
 
-[查看近义选项 case 的完整记录](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_811deb7d.json)
+[查看近义选项 case 的完整记录](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/case_811deb7d.json)
 
 **三、全量统计支持哪些机制，也排除了哪些猜测？**
 
@@ -346,4 +346,4 @@ SCRIPT 的在线耗时拆解如下。数字来自 300 题 ledger，包含失败�
 0f073e97ccc42ab30bada8723f644da78712c3b71373eb77866b50b17e4f8df9
 ```
 
-统计脚本和逐题证据保存在同一分析目录：[collect_diagnostics.py](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/collect_diagnostics.py)、[enrich_diagnostics.py](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/enrich_diagnostics.py)、[package_report.py](../workdirs/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/package_report.py)。
+统计脚本和逐题证据保存在同一分析目录：[collect_diagnostics.py](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/collect_diagnostics.py)、[enrich_diagnostics.py](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/enrich_diagnostics.py)、[package_report.py](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-v7c-scaling-100-300-500-20261016-r1/analysis_300/package_report.py)。

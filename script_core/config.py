@@ -53,7 +53,20 @@ DEFAULTS = {
               'answer_strategy': 'direct', 'answer_order': 'content_hash', 'caption_policy': 'full',
               'caption_first': True,
               'no_progress_before_backtrack': 2, 'explore_every_nonexploration_tasks': 3,
-              'global_recovery_rounds': 2, 'tool_transient_retries': 1, 'json_repair_retries': 1},
+              'global_recovery_rounds': 2, 'tool_transient_retries': 1, 'json_repair_retries': 1,
+              'temporal_compact_keys': False, 'temporal_delta_observations': False,
+              'temporal_entity_source': 'summary','temporal_sparse_visual': True,'pipeline':'scheme4'},
+    'compatibility': {'enabled': False, 'feature_directory': 'data/EgoSchema/egoschema_features',
+                      'cache_directory': '', 'graph_retrieval': False, 'retrieval_feedback': False,
+                      'visual_verification': False, 'answer_protection': False,
+                      'final_qa': 'videotree', 'max_added_captions': 12, 'max_visual_reads': 2},
+    'scene_memory': {'enabled': False, 'max_scene_seconds': 60., 'fallback_scene_seconds': 30.,
+                     'max_scene_visits': 4, 'semantic_links_per_scene': 2,
+                     'graph_batch_captions': 30, 'max_events_per_batch': 10,
+                     'key_information': False, 'hierarchical_directory': False,
+                     'directory_block_captions': 120, 'key_batch_captions': 30, 'max_keys_per_batch': 6,
+                     'hierarchy_fanout': 8, 'hierarchy_beam': 2, 'pointer_candidate_limit': 64,
+                     'key_candidate_limit': 64, 'hierarchy_frontier_limit': 16},
     'observation': {'max_window_seconds': 8., 'base_fps': 2., 'dense_fps': 4.,
                     'longest_side': 768, 'min_target_short_side': 24},
     'coverage': {'unit_seconds': 6., 'boundary_context_seconds': 1., 'global_summary_time_bins': 12},
@@ -71,8 +84,12 @@ DEFAULTS = {
 def load_config(path=None):
     cfg = deepcopy(DEFAULTS)
     if path:
-        import yaml
-        overrides = yaml.safe_load(Path(path).read_text()) or {}
+        path = Path(path)
+        if path.suffix.lower() == '.json':
+            overrides = json.loads(path.read_text())
+        else:
+            import yaml
+            overrides = yaml.safe_load(path.read_text()) or {}
         def merge(dst, src):
             for key, val in src.items():
                 if key not in dst:
@@ -93,6 +110,12 @@ def load_config(path=None):
 
 
 def validate_config(cfg):
+    if cfg['query']['pipeline'] not in ('scheme4','legacy'):
+        raise ValueError('query.pipeline must be scheme4 or legacy')
+    if type(cfg['query']['temporal_sparse_visual']) is not bool:
+        raise ValueError('temporal_sparse_visual must be boolean')
+    if cfg['query']['temporal_entity_source'] not in ('summary','images'):
+        raise ValueError('temporal_entity_source must be summary or images (legacy baseline)')
     def finite_values(value):
         if isinstance(value, dict):
             for v in value.values():
@@ -100,6 +123,34 @@ def validate_config(cfg):
         elif isinstance(value, float) and not math.isfinite(value):
             raise ValueError('Configuration numbers must be finite')
     finite_values(cfg)
+    scene = cfg['scene_memory']
+    for name in ('enabled', 'key_information', 'hierarchical_directory'):
+        if type(scene[name]) is not bool:
+            raise ValueError('scene_memory.'+name+' must be boolean')
+    for name in ('max_scene_visits', 'semantic_links_per_scene', 'graph_batch_captions', 'max_events_per_batch',
+                 'directory_block_captions', 'key_batch_captions', 'max_keys_per_batch',
+                 'hierarchy_fanout', 'hierarchy_beam', 'pointer_candidate_limit', 'key_candidate_limit', 'hierarchy_frontier_limit'):
+        if type(scene[name]) is not int or scene[name] < 1:
+            raise ValueError('scene_memory.'+name+' must be a positive integer')
+    if scene['hierarchy_fanout'] < 2:
+        raise ValueError('scene_memory.hierarchy_fanout must be at least two')
+    for name in ('max_scene_seconds', 'fallback_scene_seconds'):
+        if type(scene[name]) not in (int, float) or scene[name] < 1:
+            raise ValueError('scene_memory.'+name+' must be positive')
+    if scene['enabled'] and cfg['compatibility']['enabled']:
+        raise ValueError('Scene memory and VideoTree compatibility are separate query paths')
+    compatibility = cfg['compatibility']
+    for name in ('enabled', 'graph_retrieval', 'retrieval_feedback', 'visual_verification', 'answer_protection'):
+        if type(compatibility[name]) is not bool:
+            raise ValueError('compatibility.'+name+' must be boolean')
+    if compatibility['final_qa'] not in ('videotree', 'script'):
+        raise ValueError('Unknown compatibility QA module')
+    for name in ('feature_directory', 'cache_directory'):
+        if not isinstance(compatibility[name], str):
+            raise ValueError('Compatibility paths must be strings')
+    for name in ('max_added_captions', 'max_visual_reads'):
+        if type(compatibility[name]) is not int or compatibility[name] < 1:
+            raise ValueError('compatibility.'+name+' must be positive integer')
     if cfg['initialization']['caption_source'] not in ('vlm', 'provided'):
         raise ValueError('initialization.caption_source must be vlm or provided')
     if cfg['query']['reading_policy'] not in ('coverage_first', 'script_guided'):

@@ -1,0 +1,608 @@
+{
+  "unknown_identity": {
+    "inputs": {
+      "pairs": [
+        [
+          "E9",
+          "E0"
+        ],
+        [
+          "E9",
+          "E1"
+        ],
+        [
+          "E9",
+          "E2"
+        ],
+        [
+          "E9",
+          "E3"
+        ]
+      ],
+      "compare_state_pairs": [
+        {
+          "left": "E9",
+          "right": "E0",
+          "left_state": "T9",
+          "right_state": "T0"
+        },
+        {
+          "left": "E9",
+          "right": "E1",
+          "left_state": "T9",
+          "right_state": "T1"
+        },
+        {
+          "left": "E9",
+          "right": "E2",
+          "left_state": "T9",
+          "right_state": "T2"
+        },
+        {
+          "left": "E9",
+          "right": "E3",
+          "left_state": "T9",
+          "right_state": "T3"
+        }
+      ],
+      "frames": [
+        {
+          "frame_id": "F10",
+          "pts": 10.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F19",
+          "pts": 19.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F0",
+          "pts": 0.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F9",
+          "pts": 9.0,
+          "width": 480,
+          "height": 360
+        }
+      ],
+      "left_entities": [
+        {
+          "id": "E9",
+          "label": "电视",
+          "scene_ids": [
+            "S1"
+          ],
+          "state_ids": [
+            "T9"
+          ],
+          "attributes": [
+            {
+              "field": "color",
+              "value": "黑色",
+              "source_frame_ids": [
+                "F10",
+                "F11",
+                "F12",
+                "F13",
+                "F17",
+                "F18",
+                "F19"
+              ],
+              "observed_at": [
+                10.0,
+                11.0,
+                12.0,
+                13.0,
+                17.0,
+                18.0,
+                19.0
+              ]
+            }
+          ],
+          "last_state": {
+            "id": "T9",
+            "description": "空闲状态",
+            "first_observed_at": 10.0,
+            "last_observed_at": 19.0,
+            "source_frame_ids": [
+              "F10",
+              "F11",
+              "F12",
+              "F13",
+              "F17",
+              "F18",
+              "F19"
+            ],
+            "logical_state_id": "T9",
+            "fragment_kind": "initial_observation"
+          }
+        }
+      ],
+      "right_entities": [
+        {
+          "id": "E0",
+          "label": "楼梯",
+          "scene_ids": [
+            "S0"
+          ],
+          "state_ids": [
+            "T0"
+          ],
+          "attributes": [],
+          "last_state": {
+            "id": "T0",
+            "description": "初始状态",
+            "first_observed_at": 0.0,
+            "last_observed_at": 9.0,
+            "source_frame_ids": [
+              "F0",
+              "F1",
+              "F2",
+              "F3",
+              "F4",
+              "F5",
+              "F6",
+              "F7",
+              "F8",
+              "F9"
+            ],
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation"
+          }
+        },
+        {
+          "id": "E1",
+          "label": "地板",
+          "scene_ids": [
+            "S0"
+          ],
+          "state_ids": [
+            "T1"
+          ],
+          "attributes": [],
+          "last_state": {
+            "id": "T1",
+            "description": "初始状态",
+            "first_observed_at": 0.0,
+            "last_observed_at": 9.0,
+            "source_frame_ids": [
+              "F0",
+              "F1",
+              "F2",
+              "F3",
+              "F4",
+              "F5",
+              "F6",
+              "F7",
+              "F8",
+              "F9"
+            ],
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation"
+          }
+        },
+        {
+          "id": "E2",
+          "label": "货架",
+          "scene_ids": [
+            "S0"
+          ],
+          "state_ids": [
+            "T2"
+          ],
+          "attributes": [],
+          "last_state": {
+            "id": "T2",
+            "description": "初始状态",
+            "first_observed_at": 0.0,
+            "last_observed_at": 9.0,
+            "source_frame_ids": [
+              "F0",
+              "F1",
+              "F2",
+              "F3",
+              "F4",
+              "F5",
+              "F6",
+              "F7",
+              "F8",
+              "F9"
+            ],
+            "logical_state_id": "T2",
+            "fragment_kind": "initial_observation"
+          }
+        },
+        {
+          "id": "E3",
+          "label": "桌子",
+          "scene_ids": [
+            "S0"
+          ],
+          "state_ids": [
+            "T3"
+          ],
+          "attributes": [],
+          "last_state": {
+            "id": "T3",
+            "description": "初始状态",
+            "first_observed_at": 0.0,
+            "last_observed_at": 9.0,
+            "source_frame_ids": [
+              "F0",
+              "F1",
+              "F2",
+              "F3",
+              "F4",
+              "F5",
+              "F6",
+              "F7",
+              "F8",
+              "F9"
+            ],
+            "logical_state_id": "T3",
+            "fragment_kind": "initial_observation"
+          }
+        }
+      ],
+      "states": [
+        {
+          "id": "T9",
+          "entity_id": "E9",
+          "scene_id": "S1",
+          "description": "空闲状态",
+          "logical_state_id": "T9",
+          "fragment_kind": "initial_observation",
+          "first_observed_at": 10.0,
+          "last_observed_at": 19.0,
+          "valid_from": null,
+          "valid_to": null,
+          "valid_from_bounds": [
+            null,
+            10.0
+          ],
+          "valid_to_bounds": null,
+          "status": "sampled_visual_assertion",
+          "boundary": "initial_observation",
+          "source_frame_ids": [
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F17",
+            "F18",
+            "F19"
+          ],
+          "relation_ids": [],
+          "observed_support_interval": [
+            10.0,
+            19.0
+          ]
+        },
+        {
+          "id": "T0",
+          "entity_id": "E0",
+          "scene_id": "S0",
+          "description": "初始状态",
+          "logical_state_id": "T0",
+          "fragment_kind": "initial_observation",
+          "first_observed_at": 0.0,
+          "last_observed_at": 9.0,
+          "valid_from": null,
+          "valid_to": null,
+          "valid_from_bounds": [
+            null,
+            0.0
+          ],
+          "valid_to_bounds": null,
+          "status": "sampled_visual_assertion",
+          "boundary": "initial_observation",
+          "source_frame_ids": [
+            "F0",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "relation_ids": [],
+          "observed_support_interval": [
+            0.0,
+            9.0
+          ]
+        },
+        {
+          "id": "T1",
+          "entity_id": "E1",
+          "scene_id": "S0",
+          "description": "初始状态",
+          "logical_state_id": "T1",
+          "fragment_kind": "initial_observation",
+          "first_observed_at": 0.0,
+          "last_observed_at": 9.0,
+          "valid_from": null,
+          "valid_to": null,
+          "valid_from_bounds": [
+            null,
+            0.0
+          ],
+          "valid_to_bounds": null,
+          "status": "sampled_visual_assertion",
+          "boundary": "initial_observation",
+          "source_frame_ids": [
+            "F0",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "relation_ids": [],
+          "observed_support_interval": [
+            0.0,
+            9.0
+          ]
+        },
+        {
+          "id": "T2",
+          "entity_id": "E2",
+          "scene_id": "S0",
+          "description": "初始状态",
+          "logical_state_id": "T2",
+          "fragment_kind": "initial_observation",
+          "first_observed_at": 0.0,
+          "last_observed_at": 9.0,
+          "valid_from": null,
+          "valid_to": null,
+          "valid_from_bounds": [
+            null,
+            0.0
+          ],
+          "valid_to_bounds": null,
+          "status": "sampled_visual_assertion",
+          "boundary": "initial_observation",
+          "source_frame_ids": [
+            "F0",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "relation_ids": [],
+          "observed_support_interval": [
+            0.0,
+            9.0
+          ]
+        },
+        {
+          "id": "T3",
+          "entity_id": "E3",
+          "scene_id": "S0",
+          "description": "初始状态",
+          "logical_state_id": "T3",
+          "fragment_kind": "initial_observation",
+          "first_observed_at": 0.0,
+          "last_observed_at": 9.0,
+          "valid_from": null,
+          "valid_to": null,
+          "valid_from_bounds": [
+            null,
+            0.0
+          ],
+          "valid_to_bounds": null,
+          "status": "sampled_visual_assertion",
+          "boundary": "initial_observation",
+          "source_frame_ids": [
+            "F0",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "relation_ids": [],
+          "observed_support_interval": [
+            0.0,
+            9.0
+          ]
+        }
+      ],
+      "relations": []
+    },
+    "output": {
+      "matches": [
+        {
+          "left": "E9",
+          "right": "E0",
+          "left_state": "T9",
+          "right_state": "T0",
+          "decision": "unknown",
+          "reason": "无明确视觉证据表明电视与楼梯之间的关系变化",
+          "source_frame_ids": [
+            "F10",
+            "F19"
+          ],
+          "state_continuity": "unknown"
+        },
+        {
+          "left": "E9",
+          "right": "E1",
+          "left_state": "T9",
+          "right_state": "T1",
+          "decision": "unknown",
+          "reason": "无明确视觉证据表明电视与地板之间的关系变化",
+          "source_frame_ids": [
+            "F10",
+            "F19"
+          ],
+          "state_continuity": "unknown"
+        },
+        {
+          "left": "E9",
+          "right": "E2",
+          "left_state": "T9",
+          "right_state": "T2",
+          "decision": "unknown",
+          "reason": "无明确视觉证据表明电视与货架之间的关系变化",
+          "source_frame_ids": [
+            "F10",
+            "F19"
+          ],
+          "state_continuity": "unknown"
+        },
+        {
+          "left": "E9",
+          "right": "E3",
+          "left_state": "T9",
+          "right_state": "T3",
+          "decision": "unknown",
+          "reason": "无明确视觉证据表明电视与桌子之间的关系变化",
+          "source_frame_ids": [
+            "F10",
+            "F19"
+          ],
+          "state_continuity": "unknown"
+        }
+      ]
+    }
+  },
+  "wrong_entity_label": {
+    "inputs": {
+      "frames": [
+        {
+          "frame_id": "F27",
+          "pts": 27.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F28",
+          "pts": 28.0,
+          "width": 480,
+          "height": 360
+        }
+      ],
+      "entities": [
+        {
+          "id": "E8",
+          "label": "针线",
+          "scene_ids": [
+            "S2"
+          ],
+          "state_ids": [
+            "T8"
+          ],
+          "attributes": [],
+          "last_state": {
+            "id": "T8",
+            "description": "针线在女人的右手拿着。",
+            "first_observed_at": 24.0,
+            "last_observed_at": 24.0,
+            "source_frame_ids": [
+              "F24"
+            ],
+            "logical_state_id": "T8",
+            "fragment_kind": "initial_observation"
+          }
+        }
+      ],
+      "already_reported": [],
+      "page_size": 4,
+      "scene_interval": [
+        24,
+        29
+      ],
+      "new_frame_ids": [
+        "F28"
+      ],
+      "page": 0,
+      "observation_scope": "Only VideoTree-selected representative frames; unseen intervals remain unknown.",
+      "validation_feedback": {
+        "error": "Invalid or duplicate within-scene identity E8 at B1 (布料); distinct instances must use new, not a shared ID",
+        "rejected_entities": [
+          {
+            "entity_ref": "E8",
+            "label": "针线"
+          },
+          {
+            "entity_ref": "E8",
+            "label": "布料"
+          }
+        ],
+        "rejected_relations": [],
+        "instruction": "Regenerate the entire page from the same images. Rejected output was NOT committed. Each known ID occurs at most once; use new for every distinct new instance. Relations must connect distinct valid endpoints. Do not repeat already_reported entities."
+      }
+    },
+    "output": {
+      "entities": [
+        {
+          "label": "针线",
+          "entity_ref": "E8",
+          "attributes": [],
+          "observations": [
+            {
+              "state": "T8",
+              "frame_id": "F28",
+              "continuity": "same",
+              "cause": {
+                "actor": "女人",
+                "tool": "针线",
+                "action": "缝制布料",
+                "source_frame_ids": [
+                  "F28"
+                ],
+                "basis": "inferred_action"
+              }
+            }
+          ]
+        },
+        {
+          "label": "布料",
+          "entity_ref": "E8",
+          "attributes": [],
+          "observations": [
+            {
+              "state": "T8",
+              "frame_id": "F28",
+              "continuity": "same",
+              "cause": {
+                "actor": "女人",
+                "tool": "针线",
+                "action": "缝制布料",
+                "source_frame_ids": [
+                  "F28"
+                ],
+                "basis": "inferred_action"
+              }
+            }
+          ]
+        }
+      ],
+      "more_entities": false,
+      "relations": [],
+      "unresolved": ""
+    }
+  }
+}

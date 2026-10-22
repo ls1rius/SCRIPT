@@ -145,6 +145,10 @@ def encode_caption_context(processor, render, inputs, max_tokens):
             return encoded, {'requested_windows': len(original), 'selected_window_ids': [w['id'] for w in selected],
                              'omitted_window_ids': [w['id'] for w in original if w not in selected]}
         except ValueError as exc:
+            if inputs.get('summary_graph'):
+                # An experimental supplement must not silently displace the
+                # baseline descriptions. Caller records failure/falls back.
+                raise
             if 'Context overflow' not in str(exc) or not selected:
                 raise
             keep = len(selected)//2

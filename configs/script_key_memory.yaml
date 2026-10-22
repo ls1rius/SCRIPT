@@ -1,0 +1,21 @@
+# Sparse key information and block/hierarchical scene navigation, explicit opt-in.
+schema_version: 2
+initialization:
+  caption_source: provided
+query:
+  pipeline: legacy
+  answer_order: original
+compatibility:
+  enabled: false
+scene_memory:
+  enabled: true
+  key_information: true
+  hierarchical_directory: true
+  max_scene_visits: 4
+  directory_block_captions: 120
+  key_batch_captions: 30
+  max_keys_per_batch: 6
+  hierarchy_fanout: 8
+  hierarchy_beam: 2
+  pointer_candidate_limit: 64
+  key_candidate_limit: 64

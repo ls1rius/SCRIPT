@@ -1,0 +1,3338 @@
+{
+  "overflow": {
+    "inputs": {
+      "frames": [
+        {
+          "frame_id": "F171",
+          "pts": 171.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F172",
+          "pts": 172.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F173",
+          "pts": 173.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F174",
+          "pts": 174.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F175",
+          "pts": 175.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F176",
+          "pts": 176.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F177",
+          "pts": 177.0,
+          "width": 480,
+          "height": 360
+        }
+      ],
+      "entities": [
+        {
+          "id": "E0",
+          "label": "embroidery hoop",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "blue fabric with floral pattern",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery hoop",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery thread",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "blue fabric with floral pattern",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery hoop",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery thread",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            }
+          ],
+          "state_ids": [
+            "T0"
+          ],
+          "last_state": {
+            "id": "T0",
+            "entity_id": "E0",
+            "scene_id": "S5",
+            "description": "embroidering",
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F149",
+              "F150",
+              "F151",
+              "F152",
+              "F153",
+              "F159",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 27,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E1",
+          "label": "green plastic container",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            }
+          ],
+          "state_ids": [
+            "T1"
+          ],
+          "last_state": {
+            "id": "T1",
+            "entity_id": "E1",
+            "scene_id": "S5",
+            "description": "on table",
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F149",
+              "F150",
+              "F151",
+              "F152",
+              "F153",
+              "F159",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 30,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E2",
+          "label": "green plastic lid",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            }
+          ],
+          "state_ids": [
+            "T2"
+          ],
+          "last_state": {
+            "id": "T2",
+            "entity_id": "E2",
+            "scene_id": "S5",
+            "description": "on green plastic container",
+            "logical_state_id": "T2",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F149",
+              "F150",
+              "F151",
+              "F152",
+              "F153",
+              "F159",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 30,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E3",
+          "label": "green plastic lid",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            }
+          ],
+          "state_ids": [
+            "T3"
+          ],
+          "last_state": {
+            "id": "T3",
+            "entity_id": "E3",
+            "scene_id": "S5",
+            "description": "on green plastic container",
+            "logical_state_id": "T3",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F149",
+              "F150",
+              "F151",
+              "F152",
+              "F153",
+              "F159",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 30,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E4",
+          "label": "embroidery hoop",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "blue fabric with floral pattern",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery hoop",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery thread",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "blue fabric with floral pattern",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery hoop",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery thread",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            }
+          ],
+          "state_ids": [
+            "T4"
+          ],
+          "last_state": {
+            "id": "T4",
+            "entity_id": "E4",
+            "scene_id": "S5",
+            "description": "embroidering",
+            "logical_state_id": "T4",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 15,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E5",
+          "label": "green plastic container",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            }
+          ],
+          "state_ids": [
+            "T5"
+          ],
+          "last_state": {
+            "id": "T5",
+            "entity_id": "E5",
+            "scene_id": "S5",
+            "description": "on table",
+            "logical_state_id": "T5",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 18,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E6",
+          "label": "green plastic lid",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            }
+          ],
+          "state_ids": [
+            "T6"
+          ],
+          "last_state": {
+            "id": "T6",
+            "entity_id": "E6",
+            "scene_id": "S5",
+            "description": "on green plastic container",
+            "logical_state_id": "T6",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 18,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E7",
+          "label": "green plastic lid",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            }
+          ],
+          "state_ids": [
+            "T7"
+          ],
+          "last_state": {
+            "id": "T7",
+            "entity_id": "E7",
+            "scene_id": "S5",
+            "description": "on green plastic container",
+            "logical_state_id": "T7",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 148.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              148.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 6,
+            "attributes_shown": 6
+          }
+        }
+      ],
+      "already_reported": [
+        {
+          "id": "E0",
+          "label": "embroidery hoop",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "blue fabric with floral pattern",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery hoop",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery thread",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "blue fabric with floral pattern",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery hoop",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery thread",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            }
+          ],
+          "state_ids": [
+            "T0"
+          ],
+          "last_state": {
+            "id": "T0",
+            "entity_id": "E0",
+            "scene_id": "S5",
+            "description": "embroidering",
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F149",
+              "F150",
+              "F151",
+              "F152",
+              "F153",
+              "F159",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 27,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E1",
+          "label": "green plastic container",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            }
+          ],
+          "state_ids": [
+            "T1"
+          ],
+          "last_state": {
+            "id": "T1",
+            "entity_id": "E1",
+            "scene_id": "S5",
+            "description": "on table",
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F149",
+              "F150",
+              "F151",
+              "F152",
+              "F153",
+              "F159",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 30,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E2",
+          "label": "green plastic lid",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            }
+          ],
+          "state_ids": [
+            "T2"
+          ],
+          "last_state": {
+            "id": "T2",
+            "entity_id": "E2",
+            "scene_id": "S5",
+            "description": "on green plastic container",
+            "logical_state_id": "T2",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F149",
+              "F150",
+              "F151",
+              "F152",
+              "F153",
+              "F159",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 30,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E3",
+          "label": "green plastic lid",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:0"
+            }
+          ],
+          "state_ids": [
+            "T3"
+          ],
+          "last_state": {
+            "id": "T3",
+            "entity_id": "E3",
+            "scene_id": "S5",
+            "description": "on green plastic container",
+            "logical_state_id": "T3",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F149",
+              "F150",
+              "F151",
+              "F152",
+              "F153",
+              "F159",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 30,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E4",
+          "label": "embroidery hoop",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F148",
+                "F149",
+                "F150",
+                "F151",
+                "F152",
+                "F153"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                148.0,
+                149.0,
+                150.0,
+                151.0,
+                152.0,
+                153.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:0:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "blue fabric with floral pattern",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery hoop",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery thread",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "blue fabric with floral pattern",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery hoop",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery thread",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery needle",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "embroidery design",
+              "field": "shape",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            }
+          ],
+          "state_ids": [
+            "T4"
+          ],
+          "last_state": {
+            "id": "T4",
+            "entity_id": "E4",
+            "scene_id": "S5",
+            "description": "embroidering",
+            "logical_state_id": "T4",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 15,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E5",
+          "label": "green plastic container",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            }
+          ],
+          "state_ids": [
+            "T5"
+          ],
+          "last_state": {
+            "id": "T5",
+            "entity_id": "E5",
+            "scene_id": "S5",
+            "description": "on table",
+            "logical_state_id": "T5",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 18,
+            "attributes_shown": 12
+          }
+        },
+        {
+          "id": "E6",
+          "label": "green plastic lid",
+          "scene_ids": [
+            "S5"
+          ],
+          "attributes": [
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F165"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                165.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:18:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic lid",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "lid",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "green plastic container",
+              "field": "color",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "plastic",
+              "field": "material",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            },
+            {
+              "source_frame_ids": [
+                "F171"
+              ],
+              "value": "container",
+              "field": "structure",
+              "observed_at": [
+                171.0
+              ],
+              "source_status": "visual_model_assertion",
+              "scene_id": "S5",
+              "batch_id": "S5:24:1"
+            }
+          ],
+          "state_ids": [
+            "T6"
+          ],
+          "last_state": {
+            "id": "T6",
+            "entity_id": "E6",
+            "scene_id": "S5",
+            "description": "on green plastic container",
+            "logical_state_id": "T6",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148.0,
+            "last_observed_at": 171.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              148.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F148",
+              "F165",
+              "F171"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              148.0,
+              171.0
+            ]
+          },
+          "context_selection": {
+            "attributes_total": 18,
+            "attributes_shown": 12
+          }
+        }
+      ],
+      "page_size": 4,
+      "scene_interval": [
+        148,
+        180
+      ],
+      "new_frame_ids": [
+        "F172",
+        "F173",
+        "F174",
+        "F175",
+        "F176",
+        "F177"
+      ],
+      "page": 2,
+      "attribute_policy": "all observable attributes; unknown omitted"
+    },
+    "output": null,
+    "error": "ToolFailure: ValueError: Context overflow (18549); text records require explicit batching"
+  },
+  "identical_known_rows": {
+    "inputs": {
+      "frames": [
+        {
+          "frame_id": "F27",
+          "pts": 27.0,
+          "width": 480,
+          "height": 360
+        },
+        {
+          "frame_id": "F28",
+          "pts": 28.0,
+          "width": 480,
+          "height": 360
+        }
+      ],
+      "entities": [
+        {
+          "id": "E12",
+          "label": "针线",
+          "scene_ids": [
+            "S2"
+          ],
+          "attributes": [],
+          "state_ids": [
+            "T12"
+          ],
+          "last_state": {
+            "id": "T12",
+            "entity_id": "E12",
+            "scene_id": "S2",
+            "description": "针线在女人的右手拿着。",
+            "logical_state_id": "T12",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 24.0,
+            "last_observed_at": 24.0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              24.0
+            ],
+            "valid_to_bounds": null,
+            "status": "sampled_visual_assertion",
+            "boundary": "initial_observation",
+            "source_frame_ids": [
+              "F24"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              24.0,
+              24.0
+            ]
+          }
+        }
+      ],
+      "already_reported": [],
+      "page_size": 4,
+      "scene_interval": [
+        24,
+        29
+      ],
+      "new_frame_ids": [
+        "F28"
+      ],
+      "page": 0,
+      "observation_scope": "Only VideoTree-selected representative frames; unseen intervals remain unknown.",
+      "validation_feedback": {
+        "error": "Invalid or duplicate within-scene identity E12 at B1 (针线); distinct instances must use new, not a shared ID",
+        "rejected_entities": [
+          {
+            "entity_ref": "E12",
+            "label": "针线"
+          },
+          {
+            "entity_ref": "E12",
+            "label": "针线"
+          },
+          {
+            "entity_ref": "E12",
+            "label": "针线"
+          },
+          {
+            "entity_ref": "E12",
+            "label": "针线"
+          }
+        ],
+        "rejected_relations": [],
+        "instruction": "Regenerate the entire page from the same images. Rejected output was NOT committed. Each known ID occurs at most once; use new for every distinct new instance. Relations must connect distinct valid endpoints. Do not repeat already_reported entities."
+      }
+    },
+    "output": {
+      "entities": [
+        {
+          "entity_ref": "E12",
+          "label": "针线",
+          "attributes": [],
+          "observations": [
+            {
+              "state": "T12",
+              "frame_id": "F28",
+              "cause": {
+                "source_frame_ids": [
+                  "F28"
+                ],
+                "actor": "女人",
+                "tool": null,
+                "action": "针线在女人的右手拿着。",
+                "basis": "unknown"
+              },
+              "continuity": "same"
+            }
+          ]
+        },
+        {
+          "entity_ref": "E12",
+          "label": "针线",
+          "attributes": [],
+          "observations": [
+            {
+              "state": "T12",
+              "frame_id": "F28",
+              "cause": {
+                "source_frame_ids": [
+                  "F28"
+                ],
+                "actor": "女人",
+                "tool": null,
+                "action": "针线在女人的右手拿着。",
+                "basis": "unknown"
+              },
+              "continuity": "same"
+            }
+          ]
+        },
+        {
+          "entity_ref": "E12",
+          "label": "针线",
+          "attributes": [],
+          "observations": [
+            {
+              "state": "T12",
+              "frame_id": "F28",
+              "cause": {
+                "source_frame_ids": [
+                  "F28"
+                ],
+                "actor": "女人",
+                "tool": null,
+                "action": "针线在女人的右手拿着。",
+                "basis": "unknown"
+              },
+              "continuity": "same"
+            }
+          ]
+        },
+        {
+          "entity_ref": "E12",
+          "label": "针线",
+          "attributes": [],
+          "observations": [
+            {
+              "state": "T12",
+              "frame_id": "F28",
+              "cause": {
+                "source_frame_ids": [
+                  "F28"
+                ],
+                "actor": "女人",
+                "tool": null,
+                "action": "针线在女人的右手拿着。",
+                "basis": "unknown"
+              },
+              "continuity": "same"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "more_entities": false,
+      "unresolved": "unresolved"
+    },
+    "error": null
+  }
+}

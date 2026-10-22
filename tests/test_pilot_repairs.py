@@ -256,6 +256,7 @@ class StateAndBatchTests(unittest.TestCase):
         base, meta = fixture_base()
         cfg, backend = deepcopy(DEFAULTS), FixtureBackend(base)
         backend.close = Mock()
+        cfg['query']['pipeline']='legacy'
         real_answer = answer_query
         def run(*args, **kwargs):
             if args[1]['question_id'] == 'bad': raise ValueError('Claim role was not localized in its actual inputs')

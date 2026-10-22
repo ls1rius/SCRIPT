@@ -1,0 +1,16 @@
+# Caption-preserving directory, query-lazy local graphs and scene correspondences.
+schema_version: 2
+seed: 0
+initialization:
+  caption_source: provided
+query:
+  pipeline: legacy
+  answer_order: original
+  caption_policy: full
+compatibility:
+  enabled: false
+scene_memory:
+  enabled: true
+  max_scene_seconds: 60
+  max_scene_visits: 4
+  semantic_links_per_scene: 2

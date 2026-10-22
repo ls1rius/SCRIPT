@@ -6,6 +6,124 @@ SYSTEM = '''你是视频证据处理模块。只使用本次输入和允许引�
 SYSTEM += '\n选项输入为{option_id,text}记录。严格按同一记录内的编号和内容作答；编号从0开始，不能按位置重新编号。'
 
 CONTRACTS = {
+    'sparse_visual_plan': '''Decide whether a SMALL visual check is essential after summary navigation has finished.
+Return {"needed":bool,"reason":str,"checks":[{"scene_id":str,"caption_ids":[str],"target":str,"missing_detail":str,"option_ids":[str]}]}.
+Prefer needed=false and checks=[] when the original summaries already resolve the question or a local image check cannot resolve the gap.
+Do not request images simply for low confidence, general curiosity or missing broad temporal coverage.
+Only request a concrete VISIBLE distinction between at least two different options, absent or ambiguous in the provided summary text.
+Localize ONE check with 1-3 original caption_ids belonging to ONE opened scene and a window of at most 8 seconds.
+Name the exact missing visible detail and its option IDs (0-based). A generic request to understand the whole video is invalid.
+Only three cached video frames may be inspected, once. Never claim this can establish total counts, absence, continuous persistence or hidden causes.
+This step is text-only; the check is a request, not evidence.''',
+    'sparse_visual_observe': '''Inspect only the supplied short sample of video frames for the specific target.
+Return {"description":str,"kind":"state"|"action"|"uncertain","source_frame_ids":[str],"unresolved":str}.
+Describe at most ONE concise, directly visible fact and cite actual supplied frame IDs. Do not generate entities or a relation graph.
+The target is a question to investigate, not an observed fact. Never repeat its premise as evidence.
+Use kind=uncertain, description="" and source_frame_ids=[] when the requested detail is not visible.
+Actions require a visible process across at least three sampled times. One pose does not prove the action, its order or its cause.
+Do not infer intent, identities, absence outside the sample, total counts or unseen changes.''',
+    'sparse_visual_verify': '''Independently check the ENTIRE supplied claim against the supplied video frames.
+Return {"result":"supported"|"refuted"|"unresolved","whole_claim_supported":bool,"source_frame_ids":[str],"evidence":str,"unresolved":str}.
+No question, options, summaries or target is provided. The candidate is a hypothesis, not evidence.
+Only choose supported with whole_claim_supported=true if EVERY object, attribute, hand, tool, order and qualifier is visible.
+State the concrete visible evidence, not a repetition of the claim. Cite actual supplied frame IDs.
+Actions require process evidence across at least three distinct sampled times. Partial support remains unresolved.
+Missing/out-of-view/black pixels never prove absence or refute a claim. No conclusion may exceed the shown sample.''',
+    'caption_temporal_observe': '''Extract entities and temporal states directly from the supplied original timestamped summaries/captions.
+Return {"entities":[{"entity_ref":str,"label":str,"attributes":[{"field":str,"value":str,"source_caption_ids":[str]}],"observations":[{"caption_id":str,"state":str,"continuity":str,"cause":{"action":str|null,"actor":str|null,"tool":str|null,"basis":str,"source_caption_ids":[str]}}]}],"relations":[{"subject":str,"object":str,"predicate":str,"caption_id":str,"update":str,"source_caption_ids":[str]}],"more_entities":bool,"unresolved":str}.
+Inputs contain TEXT ONLY. Do not request images or fabricate visual attributes. No question or answer is supplied.
+Copy labels, attribute values, state descriptions and action/actor/tool phrases from their cited source text; do not paraphrase or add unstated facts.
+Use entity_ref=new for new entities; existing IDs retain their canonical labels and denote within-scene reference continuity, not name similarity alone.
+Relations use existing IDs or B0,B1,... for entities in THIS returned page. Distinct objects keep distinct identities.
+Report a compact initial state, explicitly stated changes, and new attributes. Repeated actions or newly mentioned attributes alone are not physical state changes.
+continuity is initial/same/changed/uncertain. For repeated unchanged states, use ONLY {continuity:"same",caption_id:str} when an earlier state for this entity already exists. Do not repeat state/cause for each second.
+An initial, changed or uncertain observation needs the full state/cause. Unknown prior state, change time, actor, tool or cause stays unknown.
+cause.basis is inferred_action only if an action is explicitly stated in cited captions; otherwise unknown with null action/actor/tool and empty source_caption_ids. These are caption assertions, never observed visual facts.
+Relations update=present/end, with literal source-supported predicates and caption references. Absence from a later caption does not end a relation.
+Never reuse an already_reported entity on another inventory page. Return at most page_size entities. Set more_entities=true only when distinct source-supported entities remain.
+Retain ambiguity in unresolved. Do not infer identity from identical labels across separate scenes.''',
+    'scene_key_information': '''Keep sparse question-independent memory anchors from the original caption batch.
+Return {"keys":[{"kind":str,"description":str,"entity_terms":[str],"before_caption_ids":[str],"after_caption_ids":[str]}]}.
+Kinds: state_change, relocation_transfer, phase_change, exception, identity_attribute, goal_decision, split_merge.
+Prefer durable results, preparations enabling later steps, handoffs, interruptions/failures/corrections, distinctive attributes and explicit goals/decisions.
+Ordinary camera motion, repetitive hand motion and unchanged repeated actions alone are not important state changes.
+Keep the changed object AND stated actor/tool when available. Copy short entity_terms literally from cited text.
+Use a compact description; cite before and after captions when both exist. Unknown pre-state uses before_caption_ids=[], never invent a prior opposite state.
+Every key needs at least one after_caption_id. Static distinguishing attributes also use after_caption_ids and empty before_caption_ids.
+Split/merge transformations are useful lineage hints, not a declaration that all components are the same object.
+No question/options are provided. Do not assign entity IDs, build relation graphs, infer unseen purposes or causal links.
+If nothing useful exists return keys=[]. Preserve uncertainty: absence from later captions does not mean disappearance or unchanged state.''',
+    'scene_correspondence_lineage': '''Associate question-relevant entities across the two opened scenes using their cited captions.
+Return {"matches":[{"left":{"entity":str,"caption_ids":[str]},"right":{"entity":str,"caption_ids":[str]},"relation":str,"reason":str}]}.
+relation describes LEFT relative to RIGHT: same_instance, different_instance, derived_from, part_of, assembled_into, unknown.
+Use derived_from if left was produced from right; part_of if left is a component of right; assembled_into if left was incorporated into right.
+For reverse traversal, retain this left-to-right semantic definition, not the chronological direction of the navigation pointer.
+Consider attributes, continuity, reference expressions, competing objects and conflicts. Identical names alone do not prove identity.
+Each side must cite 1-3 captions from THAT entity's own caption_ids in THAT scene. Keep the two citation lists separate.
+A temporal sequence alone does not prove material lineage. Return matches=[] when no useful supported correspondence exists.
+Only connect entities needed for the information gap. All relations remain revisable caption inferences; never globally merge their identities.''',
+    'scene_directory': '''Partition the timestamped captions into consecutive activity phases, without any question.
+Return {"scenes":[{"end_caption_id":str,"description":str,"entity_terms":[str]}],"final_scene":{"end_caption_id":str,"description":str,"entity_terms":[str]}}.
+scenes contains ONLY the earlier phases in chronological order; final_scene is mandatory and ends at terminal_caption_id.
+Every phase starts after the previous end; the first starts at the first caption. Cover the ENTIRE supplied timeline.
+Use at most max_scenes phases INCLUDING final_scene. Plan coarse boundaries over the entire timeline before writing.
+Group repeated hand/camera motion with its activity; never list each caption or small movement as a separate phase.
+Prefer meaningful action/tool/location changes, usually 30-60 seconds. The program splits phases exceeding max_scene_seconds.
+Keep descriptions compact (at most 140 characters), preserving distinctive tools, preparation, products and changes.
+Copy at most four short entity_terms literally from this phase's captions. Do not build relations or assign object identity.
+All original captions are retained separately. Do not infer missing actions, purpose or causal transitions.''',
+    'scene_scope': '''Classify the temporal evidence needed by the question, without answering it or reading video content.
+Return {"scope":"local"|"global"|"multi_scene"|"exhaustive","reason":str}.
+local: a specific visible object, attribute or bounded action can answer the question.
+global: main/overall activity, purpose, consistent behavior, strategy, proficiency, or a pattern throughout the video.
+multi_scene: a change, preparation/result, ordering, comparison or relationship across separate stages.
+exhaustive: exact total/count, every/all occurrence, first/last occurrence, or absence/never over the requested time range.
+An overall question using "all these actions" is global, not an exhaustive count. Do not classify from one option alone.
+When uncertain between a local and a whole-video reading, use global. State only the evidence requirement; do not infer facts.''',
+    'scene_review': '''Answer tentatively from ONLY the opened scenes and decide whether a specific unresolved difference needs another scene.
+Return {"selected_option":str,"reason":str,"caption_ids":[str],"sufficient":bool,"gap":str,"next_pointer":str|null}.
+Read the original captions as well as their caption-derived local relations. Neither is pixel-verified.
+Event caption_ids refer to exact source text in captions; descriptions are not duplicated inside events. Keys use the same source table.
+If graph_batch_status is present, only the optional local graph supplement is batched: all opened captions, keys and cross-scene links remain.
+entity_index supplies text labels for links to other graph batches. Review the complete captions; graph summaries are revisable interpretations.
+Unopened scene directory descriptions and transition pointers are navigation hints, not evidence for an answer.
+Use the original option IDs. Cite opened source captions for the tentative answer. Do not copy a choice as an observed fact.
+If the opened descriptions distinguish the choices and no useful missing information remains, sufficient=true and next_pointer=null.
+For whole-video patterns, changes, counts or comparisons, consider whether other relevant phases are still needed; a single local action may be insufficient.
+scope_requirement and coverage_check are program checks, not observed facts. A missing coverage requirement forbids sufficient=true.
+Choose a useful frontier pointer to inspect missing stages. Meeting temporal coverage is necessary but does not itself prove an answer.
+If insufficient, describe a concrete gap and select one frontier pointer likely to resolve it. Pointers can be traversed backwards to inspect preparation.
+Text identity correspondences are revisable hypotheses; unknown identity and absent mentions do not establish different objects or negative events.
+Do not request another scene solely because captions have not been visually verified. When no supplied pointer is useful, next_pointer=null.''',
+    'scene_correspondence': '''Link question-relevant entity mentions across the two newly connected opened scenes using their original captions.
+Return {"matches":[{"left":{"entity":str,"caption_ids":[str]},"right":{"entity":str,"caption_ids":[str]},"decision":"same"|"different"|"unknown","reason":str}]}.
+Use attributes, reference expressions, temporal/action continuity, competing objects and contradictions.
+Same names alone do not justify same physical object; continuous context with compatible attributes can justify a provisional text inference.
+Each side must cite 1-3 captions from THAT entity's own caption_ids in THAT scene. Keep the two citation lists separate.
+Do not use the question or options as evidence. Return matches=[] when no useful supported correspondence exists.
+Only connect entities relevant to the current information gap; do not match every object or invent a global identity.
+Uncertain cases are unknown. All matches remain caption-based hypotheses, never pixel-confirmed identities.''',
+    'videotree_feedback': '''Check unresolved differences among the answer choices using the timestamped descriptions.
+The current answer is a hypothesis, not ground truth. Do not produce a new answer or repeat the hypothesis as a fact.
+Return {"gap":str,"caption_ids":[str],"visual_checks":[{"caption_id":str,"question":str}]}.
+For caption retrieval, select only unseen captions that add a concrete distinguishing preparation step, tool, product or phase.
+For visual checks, ask a neutral specific observable question at a source caption, without presuming a candidate is correct.
+Do not request the same common action repeatedly. Respect both maxima, which may be zero. Return empty lists if no useful addition exists.
+Captions are unverified assertions; unknown/absence of mention does not establish a negative fact or an inferred purpose.''',
+    'summary_graph': '''Extract a question-independent event index from the provided timestamped captions only.
+Return {"events":[{"caption_ids":[str],"action":str,"actor":str,"object":str,"instrument":str,"location":str,"hand":str}]}.
+Use short English labels copied literally from the cited captions; use "" for an unstated role.
+Keep preparation steps, tool and product names, left/right hands and phase changes, as well as main actions.
+Avoid spending all max_events entries on repetitions. Repeated actions at distant times are separate instances.
+Return at least one source description for a nonempty batch, even when its action/roles are uncertain; uncertain labels use "".
+Each event cites 1 to 4 local caption IDs spanning at most 8 seconds. Never invent a tool, identity, goal or causal relation.
+Captions are unverified descriptions, not pixel evidence. There are no questions or answer choices in this task.''',
+    'summary_graph_guard': '''Audit a proposed change from the baseline option to the candidate option.
+The claims are NEW pixel-verified observations relative to the baseline run, but may still contain semantic errors.
+Accept only if a cited claim directly resolves the actual difference between the two options in favor of the candidate.
+Shared actions, inferred purpose, absence of a mention, or general topic compatibility are insufficient.
+Return {"reason":str,"claim_ids":[str],"resolves_distinction":bool,"accept":bool}.
+When uncertain, reject and preserve the baseline. No correct answer is supplied.''',
     'caption': '''无问题稀疏窗口描述；不分配身份。输出
 {"caption":str,"mentions":[{"label":str,"description":str}],"event_keywords":[str],
 "source_frame_ids":[str],"uncertainties":[str]}。保留疑似、不清楚的动作。''',
@@ -211,9 +329,82 @@ B0自由检索迭代；B1额外显式使用实体与时间路由；B1S使用完�
 根据original_operation的契约与errors返回修正后的原对象。''',
 }
 
+CONTRACTS['scene_review_keyed'] = CONTRACTS['scene_review'] + '''
+key_memory preserves sparse state changes, handoffs, phase changes, exceptions, distinctive attributes and transformation hints.
+Use these anchors to avoid losing preparations and brief changes among repeated actions, and still read the cited original descriptions.
+pre_state_known=false means the prior state is unknown. last_observed_at is not a claim that the state persists; state_valid_until=null remains unknown.
+Material lineage is not physical identity. Unopened pointer key_hints are navigation-only and cannot support the answer.
+Use the existing pointer and visit budget; important-looking anchors do not justify opening every scene.'''
+
 
 def prompt_hash(operation):
     from .config import digest
     if operation == 'answer':
         return digest([SYSTEM, CONTRACTS['answer'], CONTRACTS['answer_direct']])
     return digest([SYSTEM, CONTRACTS.get(operation, '')])
+
+CONTRACTS.update({
+ 'temporal_summary': '''Summarize the WHOLE continuous scene from ALL its timestamped source descriptions.
+Describe setting, participants, objects, main activities and changes across the scene. Do not describe only
+its center frame. Preserve uncertainty. This is a caption-derived directory hint, not pixel verification.
+Return description only; do not extract an entity graph or answer any question.''',
+ 'temporal_observe': '''Build a question-independent temporal entity inventory from ALL provided images in
+chronological order. Images are sampled, so unseen intervals are not proof of persistence. Inventory EVERY
+visible distinguishable entity, including people, tools, components and background objects; use pagination.
+Already_reported identifies entities covered on earlier pages of these same frames; do not repeat them.
+Use existing entity_ref ONLY for a visually supported same physical instance within this scene. Otherwise
+use the literal string new. An existing ID may occur AT MOST ONCE in this output, and an already_reported
+ID cannot occur in entities again on this batch. It may still be a relation endpoint. New visible objects
+must use new even when existing IDs are offered: a person, container, tool and table NEVER share an ID.
+Each entity row represents one physical instance, not an activity, image description or state ID.
+Write entity_ref and a concrete object label before attributes/observations. State must describe the visible
+physical condition in words, not an entity/state ID or the word initial/unchanged alone.
+Distinct similar objects must be separate entities. B0, B1... in relations refer to positions in
+THIS output's entities array. Existing IDs may also be endpoints. Do not invent B indexes outside that array.
+For each entity, extract all OBSERVABLE structure, components, shape, texture, appearance, color, material,
+size, location and pose, with exact source frames. Omit unknown attributes; do not invent material/size.
+Observations give the initial state, EVERY actual state change, and last supported unchanged state. Keep
+chronological order. continuity=same means the last known physical state is unchanged, even if new attributes,
+viewpoint, lighting or wording differ. New facts enrich attributes, never create a state by themselves.
+Use initial only on first sighting of that entity. Use changed only for an actual physical change, and
+uncertain if identity/state cannot be established. State descriptions are whole current state, not actions.
+A changing object split or assembly creates distinct new entities with appropriate derived/part relations.
+Record causing action, actor and tool ONLY when supported; mere succession is not causation. observed_action
+needs >=3 distinct frames showing the process. inferred_action is a hypothesis; unknown uses null fields.
+Relations must have distinct physical subject/object endpoints: never relate an entity to itself, including
+when B0 and an existing ID refer to the same instance. Omit unsupported relations rather than invent objects.
+Relations state what holds between entities, with time and evidence. Explicitly end a relation only when
+its termination is supported; not seeing something is not proof of ending it. Include simultaneous spatial,
+part, possession, contact and operational relations. more_entities=true until all visible entities have been
+covered across pages. Report uncertainty honestly. No question/options are provided or needed.''',
+ 'temporal_align': '''Compare candidate entity pairs across scenes using the supplied source images and
+full attribute/state profiles. Identity must be resolved BEFORE state/relation transfer. Match physical
+instances, not categories; repeated similar tools may be different. Cite images from BOTH entities.
+Use same only with distinguishing appearance/structure/texture/color and temporal compatibility.
+Different parts/products made by splitting/assembly retain separate identities with derived_from, part_of
+or assembled_into. Ambiguity => unknown. state_continuity compares ONLY the specified left_state/right_state;
+it does not imply persistence through unseen gaps. Changed does not establish its action cause.
+Return up to one decision per supplied pair and exact state references from those entities.''',
+ 'temporal_review': '''Query the supplied temporal entity network by attributes, states, change bounds,
+action causes, relationships and time. Evidence is visual-model assertions, not independently verified facts.
+Directory summaries and pointers are navigation hints. Determine if opened scenes provide enough evidence
+for the question and option distinctions. Record relevant entity IDs and the concrete remaining gap.
+If needed choose an allowed next_scene through the supplied bidirectional scene pointers. Prefer unseen
+scenes likely to contain the missing entity/state, including earlier scenes when appropriate. Never infer
+that a state persisted across an unobserved gap. next_scene=stop only when sufficient or no useful route.'''
+})
+CONTRACTS['temporal_align'] += '''\nList ended_relation_ids ONLY when the supplied later source images
+explicitly establish termination of an earlier entity relation. Preserve unknown historical edges; a cut,
+absence or different camera view alone does not end a relation. Cite both entities' sources as before.'''
+CONTRACTS['temporal_align'] += '''\nWhen compare_state_pairs is supplied, compare only those exact
+(left,right,left_state,right_state) tuples. Consider every supplied candidate; do not match one physical
+entity to multiple distinct candidates. If several candidates are indistinguishable, decide unknown.'''
+CONTRACTS['temporal_align'] += '''\nidentity_evidence_pairs supplies exact candidate/state tuples and the source frames for EACH side.
+For any supported decision, left_source_frame_id and right_source_frame_id must each cite the corresponding
+side's allowed source image. Optional source_frame_ids adds other supplied evidence. Unknown means no
+identity claim: use state_continuity=unknown, do not end any relation, and cite only what was actually useful
+(source_frame_ids may be empty). Unknown comparisons never merge entities or transfer state history.'''
+CONTRACTS['temporal_observe'] += '''\nEach known entity_ref has a fixed canonical label shown in entities.
+Copy that label when updating that ID. A different physical object must use new and its own concrete label.
+Do not copy a state ID as a state description. For a recovery page_size=1, output at most one entity;
+the caller will request the remaining inventory on a following page.'''

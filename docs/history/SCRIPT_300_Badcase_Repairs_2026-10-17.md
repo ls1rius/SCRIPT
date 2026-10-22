@@ -40,7 +40,7 @@
 
 ## 固定 300 题复验安排
 
-目录：[script-badcase-repair-300-20261017-r2](../workdirs/script-badcase-repair-300-20261017-r2/)。
+目录：[script-badcase-repair-300-20261017-r2](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-badcase-repair-300-20261017-r2)。
 
 | 项目 | 安排 |
 | --- | --- |
@@ -57,6 +57,6 @@
 
 `run_summary.json` 和 `comparison.json` 新增 `paired_vs_previous_repair`，分别报告相对上一轮常规 157/300、引导 143/300 的修对与改错题数。运行失败保留在 300 题总分母中。`m0_cost_remeasured=false`、`fresh_m0.newly_built=0`、`fresh_m0.reused=300` 表示建库耗时来自历史记录，不是本次重新测量。
 
-进度入口：[experiment_status.json](../workdirs/script-badcase-repair-300-20261017-r2/experiment_status.json)、[run_summary.json](../workdirs/script-badcase-repair-300-20261017-r2/run_summary.json)。作业日志位于 `jobs/job-0.log`、`jobs/job-1.log`，分组日志位于 `shards/0` 至 `shards/3`。
+进度入口：[experiment_status.json](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-badcase-repair-300-20261017-r2/experiment_status.json)、[run_summary.json](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-badcase-repair-300-20261017-r2/run_summary.json)。作业日志位于 `jobs/job-0.log`、`jobs/job-1.log`，分组日志位于 `shards/0` 至 `shards/3`。
 
 本轮同时更改了最终选择和取证反馈，用于检验整体修复是否有效；各环节的独立收益仍需冻结证据回放或单因素实验。固定题组属于开发评测。

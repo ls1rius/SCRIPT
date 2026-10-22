@@ -32,7 +32,7 @@
 
 ## 新的少看策略
 
-配置入口：[script_guided.yaml](../configs/script_guided.yaml)。原覆盖策略继续保留为默认对照，已提交的实验仍运行各自的冻结版本。
+配置入口：[script_guided.yaml](../../configs/script_guided.yaml)。原覆盖策略继续保留为默认对照，已提交的实验仍运行各自的冻结版本。
 
 新策略用于 `goal_lazy` 的 B2/B3 普通概括选择题：
 

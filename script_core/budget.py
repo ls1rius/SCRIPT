@@ -18,6 +18,25 @@ class ToolFailure(RuntimeError):
     pass
 
 
+class ToolDeadlineExceeded(ToolFailure):
+    """A measured deadline, with enough detail to distinguish budget exhaustion.
+
+    A short allowance at the end of exploration can yield a partial graph. A
+    timeout with a full per-call allowance remains an execution failure.
+    """
+    def __init__(self, message, *, operation=None, budget_limited=False,
+                 worker_reusable=False):
+        super().__init__(message)
+        self.operation = operation
+        self.budget_limited = budget_limited
+        self.worker_reusable = worker_reusable
+
+
+def exploration_exhausted(exc):
+    return isinstance(exc, ResourceExhausted) or (
+        isinstance(exc, ToolDeadlineExceeded) and exc.budget_limited and exc.worker_reusable)
+
+
 class BudgetLedger:
     def __init__(self, total_cap, initialization_cost=0., answer_reserve=30., calls_path=None):
         self.total_cap = total_cap
@@ -27,6 +46,8 @@ class BudgetLedger:
         self.calls = []
         self.calls_path = Path(calls_path) if calls_path else None
         self.budget_violation = False
+        self.dependency_cost = 0.
+        self.dependency_keys = set()
         self.task_start = 0.
         self.task_cap = None
         self.warmup_reserve = 0.
@@ -38,7 +59,7 @@ class BudgetLedger:
 
     @property
     def remaining(self):
-        return max(0., self.total_cap - self.initialization_cost - self.actual - self.answer_reserve
+        return max(0., self.total_cap - self.initialization_cost - self.actual - self.dependency_cost - self.answer_reserve
                    - self.warmup_reserve - self.completion_cleanup)
 
     @property
@@ -50,7 +71,7 @@ class BudgetLedger:
         return max(self.cleanup_reserve, 2 * max(checkpoints[-2:], default=0.) + 5.)
 
     def allowance(self, cap, final=False):
-        available = self.total_cap-self.initialization_cost-self.actual
+        available = self.total_cap-self.initialization_cost-self.actual-self.dependency_cost
         if not final:
             available -= self.answer_reserve + self.warmup_reserve + self.completion_cleanup
             if self.task_cap is not None:
@@ -63,7 +84,7 @@ class BudgetLedger:
         if elapsed > reservation + .05:
             self.budget_violation = True
         self.actual += elapsed
-        if self.initialization_cost+self.actual > self.total_cap+.05:
+        if self.initialization_cost+self.actual+self.dependency_cost > self.total_cap+.05:
             self.budget_violation = True
         record = {
             'call_id': call_id or str(uuid.uuid4()), 'parent_task_id': task_id,
@@ -92,6 +113,15 @@ class BudgetLedger:
         }
         if inputs.get('in_process'):
             record['output_ref'] = None
+        if isinstance(output, dict) and output.get('usage', {}).get('tool_cache'):
+            record['tool_cache'] = dict(output['usage']['tool_cache'])
+            cache = record['tool_cache']
+            charged = cache['source_seconds'] if cache['hit'] and cache['key'] not in self.dependency_keys else 0.
+            self.dependency_keys.add(cache['key'])
+            self.dependency_cost += charged
+            cache['budget_dependency_seconds'] = charged
+            if self.initialization_cost+self.actual+self.dependency_cost > self.total_cap+.05:
+                self.budget_violation = True
         self.calls.append(record)
         if self.calls_path:
             self.calls_path.parent.mkdir(parents=True, exist_ok=True)
@@ -105,6 +135,8 @@ class BudgetLedger:
             groups[c['operation']] = groups.get(c['operation'], 0.) + c['actual_cost']
         return {'unit': 'processing_seconds', 'initialization': self.initialization_cost,
                 'online': self.actual, 'total': self.initialization_cost+self.actual,
+                'shared_dependency_seconds': self.dependency_cost,
+                'budgeted_total': self.initialization_cost+self.actual+self.dependency_cost,
                 'total_cap': self.total_cap, 'budget_violation': self.budget_violation,
                 'by_operation': groups, 'call_count': len(self.calls), 'resources': self.resources()}
         # Kept below as a separate public method so resumed historical logs remain readable.
@@ -185,7 +217,11 @@ class ModelWorker:
             raise TimeoutError(f'{operation} exceeded reserved {timeout:.2f}s')
         ok, value = self.connection.recv()
         if not ok:
-            exc = ToolFailure(value['message'])
+            if value.get('soft_timeout'):
+                exc = ToolDeadlineExceeded(value['message'], operation=operation,
+                                           worker_reusable=True)
+            else:
+                exc = ToolFailure(value['message'])
             exc.usage = value['usage']
             raise exc
         if operation == 'prepare_vlm':
@@ -256,13 +292,13 @@ class Meter:
                 # Preparation is a separately paid stage, not a generation call.
                 # It may use its own held reserve while preserving answer/cleanup
                 # time and, inside a task, the original local task cap.
-                available = (self.ledger.total_cap-self.ledger.initialization_cost-self.ledger.actual
+                available = (self.ledger.total_cap-self.ledger.initialization_cost-self.ledger.actual-self.ledger.dependency_cost
                              -self.ledger.answer_reserve-self.ledger.completion_cleanup)
                 if not final and self.ledger.task_cap is not None:
                     available = min(available, self.ledger.task_cap-(self.ledger.actual-self.ledger.task_start))
                 allowance = min(cap, max(0., available))
             if final:
-                available = self.ledger.total_cap-self.ledger.initialization_cost-self.ledger.actual-self.ledger.completion_cleanup
+                available = self.ledger.total_cap-self.ledger.initialization_cost-self.ledger.actual-self.ledger.dependency_cost-self.ledger.completion_cleanup
                 if operation == 'prepare_vlm':
                     available -= self.ledger.answer_reserve
                 else:
@@ -281,7 +317,7 @@ class Meter:
                 raise ResourceExhausted('No processing budget available')
             started = time.monotonic()
             parent_cpu = time.process_time()
-            output, error = None, None
+            output, error, failure = None, None, None
             from .state import write_json
             pending = self.raw_directory / f'{call_id}-{attempt}.pending.json'
             write_json(pending, {'call_id': call_id, 'attempt': attempt, 'reservation': allowance,
@@ -294,6 +330,7 @@ class Meter:
                     raise ResourceExhausted('No tool budget remains after staging and cleanup reserve')
                 output = self.backend.call(operation, inputs, timeout)
             except Exception as exc:
+                failure = exc
                 error = f'{type(exc).__name__}: {exc}'
                 if getattr(exc, 'usage', None):
                     output = {'usage': exc.usage}
@@ -314,6 +351,10 @@ class Meter:
                         self.ledger.warmup_reserve = max(self.ledger.warmup_reserve,
                             min(online_cap/4, self.ledger.warmup_minimum))
                 return output, call
+            if isinstance(failure, ToolDeadlineExceeded):
+                raise ToolDeadlineExceeded(error, operation=operation,
+                    budget_limited=not final and allowance < cap-.05,
+                    worker_reusable=failure.worker_reusable) from failure
             if not error.startswith(('TimeoutError:', 'ConnectionError:', 'EOFError:')) or attempt == retries:
                 raise ToolFailure(error)
         raise ToolFailure('Retry limit exceeded')

@@ -10,6 +10,19 @@ DETECTION_TERMS = ('person bag backpack handbag briefcase envelope folder docume
                    'cabinet shelf drawer door window bed refrigerator sink vehicle bicycle dog cat').split()
 
 
+def constrained_prefix(tokenizer_data, schema, operation):
+    """Configure the live parser AFTER LMFE installs its tokenizer alphabet."""
+    from lmformatenforcer import JsonSchemaParser
+    from lmformatenforcer.integrations.transformers import build_transformers_prefix_allowed_tokens_fn
+    parser = JsonSchemaParser(schema)
+    prefix = build_transformers_prefix_allowed_tokens_fn(tokenizer_data, parser)
+    # TokenEnforcer.__init__ replaces parser.config. Setting this in the
+    # JsonSchemaParser constructor is silently undone by the integration.
+    if operation in ('temporal_observe', 'temporal_align','caption_temporal_observe'):
+        parser.config.force_json_field_order = True
+    return prefix
+
+
 class SoftDeadlineExceeded(TimeoutError):
     """Cooperative cancellation completed; the loaded worker remains usable."""
 
@@ -38,6 +51,39 @@ class LocalModels:
 
     def call(self, operation, inputs):
         self.check_deadline()
+        if operation == 'videotree_contiguous_width':
+            from .videotree_tools import OriginalModel
+            from .videotree_aligned import width
+            if not hasattr(self, '_videotree_model'):
+                self._videotree_model = OriginalModel(self)
+            model = self._videotree_model
+            model.usage = {'input_tokens': 0, 'output_tokens': 0}
+            data = width(inputs, model, self.cfg['models']['device'], self.cfg['seed'])
+            self.model_tokens['vlm'] = model.usage['input_tokens']
+            return {'data': data, 'usage': dict(model.usage)}
+        if operation == 'videotree_qa_size':
+            _, processor = self.load('vlm')
+            if len(inputs['prompts']) != 1:
+                raise ValueError('Expected the original single-turn VideoTree QA')
+            ids = processor.tokenizer.apply_chat_template([
+                {'role': 'system', 'content': inputs['head']},
+                {'role': 'user', 'content': inputs['prompts'][0]}],
+                tokenize=True, add_generation_prompt=True)
+            return {'input_tokens': len(ids)}
+        if operation == 'temporal_qa_check':
+            _, processor = self.load('vlm')
+            if len(inputs['prompts']) != 1:
+                raise ValueError('Temporal runner expects the original single-turn QA template')
+            tokens = processor.tokenizer.apply_chat_template([
+                {'role': 'system', 'content': inputs['head']},
+                {'role': 'user', 'content': inputs['prompts'][0]}],
+                tokenize=True, add_generation_prompt=True)
+            if len(tokens) > self.cfg['models']['max_input_tokens']:
+                raise ValueError('Original QA plus retrieved entity context exceeds input allowance')
+            return {'input_tokens': len(tokens)}
+        if operation in ('videotree_width', 'videotree_depth', 'videotree_qa'):
+            from .videotree_tools import call_original
+            return call_original(self, operation, inputs)
         if operation == 'prepare_vlm':
             phases = self.prepare_vlm()
             return {'ready': True, 'preparation': phases}
@@ -71,6 +117,8 @@ class LocalModels:
             return {'data': read_frames(**inputs)}
         if operation == 'features':
             return {'vectors': self.features(inputs['frames'])}
+        if operation == 'clip_text':
+            return self.clip_text(inputs['texts'])
         if operation == 'embed':
             return {'vectors': self.embed(inputs['texts'])}
         if operation == 'detect':
@@ -137,6 +185,34 @@ class LocalModels:
                 features = torch.nn.functional.normalize(features, dim=-1)
             result.extend(features.cpu().tolist())
         return result
+
+    def clip_text(self, texts):
+        """EVA text and image projections share one space; preserve long text in chunks."""
+        import torch
+        from transformers import AutoTokenizer
+        model, _ = self.load('visual_encoder')
+        if 'clip_tokenizer' not in self.loaded:
+            self.loaded['clip_tokenizer'] = AutoTokenizer.from_pretrained(
+                self.cfg['models']['visual_encoder'], local_files_only=True)
+        tokenizer = self.loaded['clip_tokenizer']
+        maximum = model.config.text_config.max_position_embeddings
+        vectors, counts, lengths = [], [], []
+        for text in texts:
+            ids = tokenizer.encode(text, add_special_tokens=False, truncation=False)
+            chunks = [ids[i:i+maximum-2] for i in range(0, len(ids), maximum-2)] or [[]]
+            rows = [tokenizer.prepare_for_model(chunk, add_special_tokens=True,
+                     return_attention_mask=True, truncation=False) for chunk in chunks]
+            encoded = tokenizer.pad(rows, padding='max_length', max_length=maximum,
+                                    return_tensors='pt').to(model.device)
+            self.check_deadline()
+            with torch.inference_mode():
+                v = model.encode_text(encoded.input_ids, attention_mask=encoded.attention_mask).float()
+                v = torch.nn.functional.normalize(v, dim=-1).mean(dim=0)
+                v = torch.nn.functional.normalize(v, dim=-1)
+            vectors.append(v.cpu().tolist()); counts.append(len(chunks)); lengths.append(len(ids))
+        self.model_tokens['visual_encoder_text'] = sum(lengths)
+        return {'vectors': vectors, 'chunk_counts': counts, 'content_token_counts': lengths,
+                'usage': {'input_tokens': sum(lengths)+2*sum(counts), 'output_tokens': 0}}
 
     def embed(self, texts):
         import torch
@@ -272,8 +348,32 @@ class LocalModels:
         from .schemas import output_schema, decoder_schema
         schema = decoder_schema(substitute(output_schema(operation, inputs), aliases))
         contract = CONTRACTS[operation]
+        if operation=='temporal_review' and inputs.get('source_type')=='caption':
+            contract=contract.replace('Evidence is visual-model assertions, not independently verified facts.',
+                'Evidence consists of original summary/caption assertions. Identity links are text inferences, not pixel verification.')
+        if inputs.get('delta_observations') or (operation=='repair' and inputs.get('original_inputs',{}).get('delta_observations')):
+            contract += ('\nIncremental observation mode: when this entity has an existing state in this scene '
+                         '(in supplied last_state or a preceding full observation in this row), an unchanged '
+                         'observation may contain ONLY continuity=same and frame_id. Do not repeat its state '
+                         'description or cause. First sightings, actual changes and uncertain observations '
+                         'require the FULL state and cause fields. Keep every observed support frame explicit; '
+                         'never label an actual change as same to shorten output.')
+        original_op = inputs.get('original_operation') if operation == 'repair' else operation
+        compact_temporal = original_op == 'temporal_observe' and self.cfg['query'].get('temporal_compact_keys', False)
+        if compact_temporal:
+            from .temporal_codec import KEYS, encode_schema
+            schema = encode_schema(schema)
+            contract += ('\nOutput JSON uses these short keys in place of the canonical contract keys: '
+                         +json.dumps(KEYS,ensure_ascii=False,separators=(',',':'))
+                         +'\nOnly rename OUTPUT object keys. Keep all fact text, values, frame references, '
+                         'observations, attributes, causes and relations. Input keys remain canonical.')
         if operation == 'answer' and inputs.get('answer_strategy') == 'direct':
             contract = CONTRACTS['answer_direct']
+        if operation == 'answer' and inputs.get('summary_graph'):
+            contract += ('\nsummary_graph 是从既有描述抽取的未核验实体事件索引。description 为原文，时间来自原始描述；'
+                         'text_label_only 仅表示名称相同，不能确认物理身份。利用事件及原文比较选项真正不同的步骤、'
+                         '工具、成品和阶段变化；before 只表示时间先后，不证明因果。与视觉核验矛盾时明确保留不确定性。'
+                         '额外输出 caption_event_ids 引用实际使用的事件，不能将事件ID当作claim_ids/evidence_ids。')
         if operation == 'repair':
             original = inputs['original_operation']
             if original == 'answer' and inputs.get('original_inputs', {}).get('answer_strategy') == 'direct':
@@ -290,8 +390,11 @@ class LocalModels:
                 payload['caption_timeline'] = [
                     f"[{c['id']} {c['interval'][0]:g}-{c['interval'][1]:g}s] {c['text']}"
                     for c in payload['caption_timeline']]
+            source_instruction=('输入仅为带来源和时间戳的文本描述，不含图像。不得声称已看图或得到视觉核验。'
+                                if operation in ('caption_temporal_observe','scene_correspondence_lineage','sparse_visual_plan') or inputs.get('source_type')=='caption'
+                                else '实体框及ID标在所有对应图像上；存储元数据省略，事实文本完整保留。')
             text_part = {'type': 'text', 'text': '<input>\n'+json.dumps(payload, ensure_ascii=False)+
-                         '\n</input>\n实体框及ID标在所有对应图像上；存储元数据省略，事实文本完整保留。'
+                         '\n</input>\n'+source_instruction+
                          '\n仅返回任务要求的JSON字段，不复制输入对象。'}
             messages = [{'role': 'system', 'content': SYSTEM+'\n'+contract},
                         {'role': 'user', 'content': content+[text_part]}]
@@ -309,13 +412,21 @@ class LocalModels:
             self.model_pixels['vlm'] = self.model_pixels.get('vlm', 0)+encoded.pixel_values.numel()//3
         if input_tokens > self.cfg['models']['max_input_tokens']:
             raise ValueError(f'Context overflow ({input_tokens}); explicit batching required, no truncation allowed')
-        from lmformatenforcer import JsonSchemaParser
-        from lmformatenforcer.integrations.transformers import build_transformers_prefix_allowed_tokens_fn
         self.prepare_vlm()
-        prefix = build_transformers_prefix_allowed_tokens_fn(self.enforcer_data, JsonSchemaParser(schema))
+        original_op = inputs.get('original_operation') if operation == 'repair' else operation
+        # Entity/reference unions share long nested suffixes. Letting JSON keys
+        # arrive in arbitrary order keeps every union branch alive through those
+        # suffixes, causing exponential parser work even for very short outputs.
+        # Select the ID/decision first; this changes serialization, not evidence.
+        prefix = constrained_prefix(self.enforcer_data, schema, original_op)
         with torch.inference_mode():
             self.check_deadline()
             kwargs = dict(self.cfg['models']['generation'], prefix_allowed_tokens_fn=prefix)
+            if operation == 'summary_graph' or (operation == 'repair' and inputs.get('original_operation') == 'summary_graph'):
+                kwargs['max_new_tokens'] = 2048  # Offline extraction only; QA settings stay unchanged.
+            original_op = inputs.get('original_operation') if operation == 'repair' else operation
+            if original_op in ('temporal_observe', 'temporal_align','caption_temporal_observe'):
+                kwargs['max_new_tokens'] = 4096
             if self.deadline is not None:
                 kwargs['stopping_criteria'] = deadline_stopping_criteria(self.deadline)
             generated = model.generate(**encoded, **kwargs)
@@ -327,7 +438,11 @@ class LocalModels:
             if clean.startswith('```'):
                 clean = clean.split('\n', 1)[1].rsplit('```', 1)[0]
             old_map = inputs.get('original_output', {}).get('id_map', {}) if operation == 'repair' else {}
-            data = substitute(json.loads(clean), old_map | inverse)
+            data = json.loads(clean)
+            if compact_temporal:
+                from .temporal_codec import decode_report
+                data = decode_report(data)
+            data = substitute(data, old_map | inverse)
         except (ValueError, IndexError):
             data = output
         return {'data': data, 'id_map': inverse,

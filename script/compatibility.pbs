@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -N script-compat
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1:ncpus=12:mem=225GB:gpu_model=H200
+#PBS -l walltime=12:00:00
+#PBS -j oe
+#PBS -r n
+set -euo pipefail
+cd "$PBS_O_WORKDIR"
+export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONUNBUFFERED=1
+export TMPDIR="$COMPATIBILITY_DIR/.tmp-$COMPATIBILITY_STAGE"
+mkdir -p "$TMPDIR"
+/home/svu/e1583416/work/miniconda3/envs/vts/bin/python "$COMPATIBILITY_DIR/source/script/run_compatibility.py" \
+    run --out "$COMPATIBILITY_DIR" --stage "$COMPATIBILITY_STAGE"

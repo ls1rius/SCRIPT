@@ -68,6 +68,15 @@ VARIABLES = ['actor', 'recipient', 'object', 'target_object', 'target_fabric', '
 
 
 def output_schema(operation, inputs):
+    if operation.startswith('sparse_visual_'):
+        from .sparse_visual import output_schema as sparse_schema
+        return sparse_schema(operation,inputs)
+    if operation=='caption_temporal_observe':
+        from .caption_temporal import output_schema as caption_schema
+        return caption_schema(inputs)
+    if operation.startswith('temporal_'):
+        from .temporal_entity import output_schema as temporal_schema
+        return temporal_schema(operation, inputs)
     if operation == 'repair':
         return output_schema(inputs['original_operation'], inputs.get('original_inputs', {}))
     frame_ids = [f['frame_id'] for f in inputs.get('frames', [])]
@@ -105,6 +114,48 @@ def output_schema(operation, inputs):
                 fields['source_frame_ids']['minItems'] = 3
             variants.append(record(fields))
         return {'anyOf': variants}
+    if operation == 'scene_key_information':
+        ids = [c['id'] for c in inputs['captions']]
+        after = array(enum(ids), 3)
+        after['minItems'] = 1
+        return record({'keys': array(record({'kind': enum(['state_change', 'relocation_transfer', 'phase_change',
+            'exception', 'identity_attribute', 'goal_decision', 'split_merge']), 'description': short_text(180),
+            'entity_terms': array(short_text(48), 6), 'before_caption_ids': array(enum(ids), 3),
+            'after_caption_ids': after}), inputs['max_keys'])})
+    if operation == 'scene_directory':
+        ids = [c['id'] for c in inputs['captions']]
+        def phase(ends):
+            return record({'end_caption_id': enum(ends), 'description': short_text(140),
+                'entity_terms': array(short_text(32), 4)})
+        # The final boundary is mandatory even when the earlier-phase array fills.
+        # A decoder array limit alone used to close the output before the video ended.
+        return record({'scenes': array(phase(ids[:-1]), inputs.get('max_scenes', 8)-1),
+            'final_scene': phase(ids[-1:])})
+    if operation == 'scene_scope':
+        return record({'scope': enum(['local', 'global', 'multi_scene', 'exhaustive']),
+            'reason': short_text(180)})
+    if operation in ('scene_review', 'scene_review_keyed'):
+        pointers = [p['id'] for p in inputs['frontier']]
+        return record({'selected_option': enum(inputs['option_ids']), 'reason': short_text(240),
+            'caption_ids': array(enum([c['id'] for c in inputs['captions']]), 8), 'sufficient': B,
+            'gap': short_text(180), 'next_pointer': {'anyOf': [{'type': 'null'}]+([enum(pointers)] if pointers else [])}})
+    if operation in ('scene_correspondence', 'scene_correspondence_lineage'):
+        relation = {'decision': enum(['same', 'different', 'unknown'])} if operation == 'scene_correspondence' else {
+            'relation': enum(['same_instance', 'different_instance', 'derived_from', 'part_of', 'assembled_into', 'unknown'])}
+        def cited_entity(side):
+            alternatives = []
+            allowed = {c['id'] for c in inputs[side]['captions']}
+            for entity in inputs[side]['entities']:
+                ids = [c for c in entity['caption_ids'] if c in allowed]
+                if not ids:
+                    continue
+                refs = array(enum(ids), 3)
+                refs['minItems'] = 1
+                alternatives.append(record({'entity': enum([entity['id']]), 'caption_ids': refs}))
+            return {'anyOf': alternatives} if alternatives else record({})
+        return record({'matches': array(record({'left': cited_entity('left'), 'right': cited_entity('right'),
+            **relation, 'reason': short_text(120)}),
+            6 if inputs['left']['entities'] and inputs['right']['entities'] else 0)})
     if operation == 'caption':
         return record({'caption': S, 'mentions': array(record({'label': S, 'description': S}), 16),
                        'event_keywords': array(), 'source_frame_ids': array(enum(frame_ids), 4), 'uncertainties': array()})
@@ -112,6 +163,27 @@ def output_schema(operation, inputs):
         return record({'text': short_text(inputs.get('max_chars', 160)),
                        'place': {'anyOf': [short_text(48), {'type': 'null'}]},
                        'event_keywords': array(short_text(32), 4), 'uncertainties': array(short_text(80), 2)})
+    if operation == 'summary_graph':
+        source_ids = array(enum([c['id'] for c in inputs['captions']]), 4)
+        if inputs['captions']:
+            source_ids['minItems'] = 1
+        events = array(record({
+            'caption_ids': source_ids,
+            'action': short_text(40), 'actor': short_text(40), 'object': short_text(64),
+            'instrument': short_text(64), 'location': short_text(64), 'hand': short_text(32)
+        }), inputs.get('max_events', 10))
+        if inputs['captions']:
+            events['minItems'] = 1
+        return record({'events': events})
+    if operation == 'summary_graph_guard':
+        return record({'reason': short_text(160), 'claim_ids': array(enum(claims), 3),
+                       'resolves_distinction': B, 'accept': B})
+    if operation == 'videotree_feedback':
+        ids = [c['id'] for c in inputs['captions']]
+        unseen = [c for c in ids if c not in inputs['selected_caption_ids']]
+        return record({'gap': short_text(160),
+            'caption_ids': array(enum(unseen), inputs['max_caption_additions']),
+            'visual_checks': array(record({'caption_id': enum(ids), 'question': short_text(120)}), inputs['max_visual_checks'])})
     if operation == 'caption_review':
         caption_ids = [c['id'] for c in inputs.get('caption_timeline', [])]
         window_ids = [w['id'] for w in inputs.get('candidate_windows', [])]
@@ -243,7 +315,10 @@ def output_schema(operation, inputs):
         return record(fields)
     if operation == 'answer':
         if inputs.get('answer_strategy') == 'direct':
-            return record({'text': short_text(240),
+            fields = {'text': short_text(240)}
+            if inputs.get('summary_graph'):
+                fields['caption_event_ids'] = array(enum([e['id'] for e in inputs['summary_graph']['events']]), 4)
+            return record({**fields,
                            'selected_option': enum(inputs['option_ids']) if inputs.get('answer_mode') == 'choice' else {'type': 'null'},
                            'claim_ids': array(enum(claims), 4),
                            'evidence_ids': array(enum([e['id'] for e in inputs.get('evidence', [])]), 4)})

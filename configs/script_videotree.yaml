@@ -1,0 +1,16 @@
+# VideoTree behavior behind SCRIPT's ordinary query entry, store and budget.
+schema_version: 2
+initialization:
+  caption_source: provided
+query:
+  pipeline: legacy
+  reading_policy: coverage_first
+  caption_first: false
+  answer_order: original
+compatibility:
+  enabled: true
+  graph_retrieval: false
+  retrieval_feedback: false
+  visual_verification: false
+  answer_protection: false
+  final_qa: videotree

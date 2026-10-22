@@ -6,7 +6,7 @@
 
 ## 默认入口与实验范围
 
-本报告分析时曾将默认入口设为少看；后续按运行要求已切回修复后常规读取。当前普通 `script_qa.py` CLI 默认加载的 [script.yaml](../configs/script.yaml) 使用 `query.reading_policy: coverage_first`，显式常规配置为 [script_coverage.yaml](../configs/script_coverage.yaml)；`script_guided.yaml` 保留少看策略及已有描述输入和批处理设置。底层无文件的 `load_config()` 同样默认 `coverage_first`。严格计数、否定、最后一次等不适用少看的问题仍走原覆盖流程；本报告分析的已完成实验实际启用少看的是 285/300 题。
+本报告分析时曾将默认入口设为少看；后续按运行要求已切回修复后常规读取。当前普通 `script_qa.py` CLI 默认加载的 [script.yaml](../../configs/script.yaml) 使用 `query.reading_policy: coverage_first`，显式常规配置为 [script_coverage.yaml](../../configs/script_coverage.yaml)；`script_guided.yaml` 保留少看策略及已有描述输入和批处理设置。底层无文件的 `load_config()` 同样默认 `coverage_first`。严格计数、否定、最后一次等不适用少看的问题仍走原覆盖流程；本报告分析的已完成实验实际启用少看的是 285/300 题。
 
 本次只改默认入口并做离线分析，未启动新的 GPU 实验。两个配置的建库参数一致；已有少看及回退的 12 项针对性检查通过。完成实验的配置、源码快照、预测和评分文件均未修改。
 
@@ -132,7 +132,7 @@
 
 ## 证据与复查
 
-原始完整结果：[comparison.json](../workdirs/script-badcase-repair-300-20261017-r2/comparison.json)、[run_summary.json](../workdirs/script-badcase-repair-300-20261017-r2/run_summary.json)。离线诊断目录：[analysis_guided_20261017](../workdirs/script-badcase-repair-300-20261017-r2/analysis_guided_20261017/)。其中：
+原始完整结果：[comparison.json](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-badcase-repair-300-20261017-r2/comparison.json)、[run_summary.json](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-badcase-repair-300-20261017-r2/run_summary.json)。离线诊断目录：[analysis_guided_20261017](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-badcase-repair-300-20261017-r2/analysis_guided_20261017)。其中：
 
 - `query_diagnostics.json`：600 条逐题记录及原始运行路径。
 - `aggregate.json`、`supplemental_stats.json`：分组、配对、位置分布、实际描述省略和成本统计。
@@ -141,4 +141,4 @@
 - `analyze_runs.py`、`inspect_current.py`、`review_frames.py`：可在仓库根目录复跑的 CPU 分析脚本，图像复查使用 vts 环境。
 - `per_second_caption_audit.json`、`audit_per_second_captions.py`：原始每秒描述到最终模型输入的文本与时间覆盖审计。
 
-相关实现：[selective.py](../script_core/selective.py) 的 `normalize_plan` 和窗口排除，[state.py](../script_core/state.py) 的 `_validate_claim` 动作门槛，[caption_context.py](../script_core/caption_context.py) 的描述保留，以及 [prompts.py](../script_core/prompts.py) 的最终回答与视觉核验约定。分析记录保存了原始 `comparison.json` SHA256，便于验证只新增诊断而未改预测。
+相关实现：[selective.py](../../script_core/selective.py) 的 `normalize_plan` 和窗口排除，[state.py](../../script_core/state.py) 的 `_validate_claim` 动作门槛，[caption_context.py](../../script_core/caption_context.py) 的描述保留，以及 [prompts.py](../../script_core/prompts.py) 的最终回答与视觉核验约定。分析记录保存了原始 `comparison.json` SHA256，便于验证只新增诊断而未改预测。

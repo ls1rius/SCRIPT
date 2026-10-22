@@ -11,6 +11,7 @@ models:
     text_embedding: 16
     text_embedding_max_tokens: 8192
 query:
+  pipeline: legacy
   reading_policy: script_guided
   caption_first: true
   answer_strategy: direct

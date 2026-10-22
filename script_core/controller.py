@@ -294,6 +294,9 @@ class Navigator:
                             'query_vector': encoded['vectors'][0], 'scope': scope, 'cfg': cfg['retrieval']})
                         ranked = result['data']
                         self.state['window_rankings'][rank_key] = ranked
+                    if self.state.get('summary_graph_routing'):
+                        from .summary_graph import promote_windows
+                        ranked = promote_windows(ranked, self.state.get('summary_graph_context'), memory)
                     for rank, row in enumerate(ranked):
                         window = memory.get(row['id'])
                         interval = intersect(window['interval'], scope)
@@ -519,10 +522,19 @@ def memory_valid(memory, requirement):
     return memory.is_valid(requirement['id'])
 
 
-def answer_query(base, row, metadata, cfg, backend, output, initial_details=None, resume=False):
+def answer_query(base, row, metadata, cfg, backend, output, initial_details=None, resume=False,
+                 summary_graph=None, graph_routing=False, scene_directory=None):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     query = validate_query(row, base, cfg, metadata)
+    if scene_directory is not None:
+        from .scene_memory import validate_directory
+        validate_directory(scene_directory, base.manifest)
+        query['scene_directory_hash'] = digest(scene_directory)
+    if summary_graph is not None:
+        from .summary_graph import validate_graph
+        validate_graph(summary_graph, base.manifest)
+        query.update(summary_graph_hash=digest(summary_graph), graph_routing=bool(graph_routing))
     if (output / 'query.json').exists():
         existing = json.loads((output / 'query.json').read_text())
         if existing != query or not resume:
@@ -534,7 +546,9 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
     if resume and (output / 'result.json').exists():
         completed = json.loads((output / 'result.json').read_text())
         if (completed['config_hash'] != digest(cfg) or completed['base_hash'] != metadata['base_hash']
-                or completed.get('experiment_mode', 'live') != mode):
+                or completed.get('experiment_mode', 'live') != mode
+                or completed.get('summary_graph_hash') != query.get('summary_graph_hash')
+                or completed.get('scene_directory_hash') != query.get('scene_directory_hash')):
             raise ValueError('Resume configuration, M0 or replay protocol mismatch')
         if completed.get('answer') and completed.get('stop_decision') and not completed.get('error'):
             return completed
@@ -570,6 +584,8 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
             if (output / 'calls.jsonl').exists():
                 calls = [json.loads(line) for line in (output / 'calls.jsonl').read_text().splitlines() if line.strip()]
                 ledger.calls, ledger.actual = calls, sum(c['actual_cost'] for c in calls)
+                ledger.dependency_cost = sum(c.get('tool_cache', {}).get('budget_dependency_seconds', 0.) for c in calls)
+                ledger.dependency_keys = {c['tool_cache']['key'] for c in calls if c.get('tool_cache')}
                 ledger.budget_violation = any(c['actual_cost'] > c['reservation']+.05 for c in calls)
             for pending_path in sorted((output / 'raw_calls').glob('*.pending.json')):
                 pending = json.loads(pending_path.read_text())
@@ -582,6 +598,25 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
                     with (output / 'calls.jsonl').open('a') as f:
                         f.write(json.dumps(pending)+'\n')
                 pending_path.unlink()
+        if cfg['compatibility']['enabled'] or cfg['scene_memory']['enabled']:
+            if resume and store.db.execute('SELECT COUNT(*) FROM objects').fetchone()[0]:
+                restored, saved = store.load()
+                if saved['config_hash'] != digest(cfg) or saved['query_hash'] != digest(query) or saved['base_hash'] != metadata['base_hash']:
+                    raise ValueError('Compatibility resume configuration or input mismatch')
+                memory.tables = restored.tables
+            for name in ('base_restore', 'model_snapshot_validation'):
+                seconds = metadata.get(name+'_seconds', 0.)
+                if seconds:
+                    ledger.record(name, {'in_process': True}, ledger.allowance(cfg['budget']['build_call_cap']),
+                        time.monotonic()-seconds, output={'usage': {'cpu_seconds': metadata.get(name+'_cpu_seconds'), 'gpu_resident_seconds': 0.}})
+            if cfg['scene_memory']['enabled']:
+                from .scene_memory import run_pipeline
+                envelope.update(run_pipeline(memory, query, metadata, cfg, meter, output, state, scene_directory))
+                envelope['scene_directory_hash'] = query.get('scene_directory_hash')
+            else:
+                from .compatibility import run_pipeline
+                envelope.update(run_pipeline(memory, query, metadata, cfg, meter, output, state, summary_graph))
+            return envelope
         if resume and store.db.execute('SELECT COUNT(*) FROM objects').fetchone()[0]:
             memory, saved = store.load()
             if saved['config_hash'] != digest(cfg) or saved['query_hash'] != digest(query) or saved['base_hash'] != metadata['base_hash']:
@@ -632,6 +667,12 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
                                   time.monotonic()-seconds,
                                   output={'usage': {'cpu_seconds': metadata.get(name+'_cpu_seconds'), 'gpu_resident_seconds': 0.}})
         from .selective import eligible as guided_eligible, prepare_inputs as read_inputs, normalize_plan as normalize_reads, script_outline
+        if summary_graph is not None:
+            from .summary_graph import retrieve_graph
+            state['summary_graph_context'] = retrieve_graph(summary_graph, query)
+            state['summary_graph_routing'] = bool(graph_routing)
+            envelope['summary_graph_hash'] = digest(summary_graph)
+            envelope['summary_graph_context'] = state['summary_graph_context']
         state['script_guided'] = bool(guided_eligible(memory, query, cfg))
         if state['script_guided'] and 'read_plan' not in state:
             state['read_plan'] = {'reason': 'Plan one inspection at a time using verified feedback.', 'checks': []}
@@ -998,6 +1039,8 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
                                         'script_outline': script_outline(memory, query, cfg) if state.get('script_guided') else None,
                                         'observation_gaps': query_observation_gaps(memory, query['id']),
                                         'stop_decision': decision}
+        if state.get('summary_graph_context'):
+            answer_inputs['summary_graph'] = state['summary_graph_context']
         if state.get('caption_timeline') is not None:
             from .caption_first import final_inputs
             answer_inputs = final_inputs(answer_inputs, state['caption_timeline'])
@@ -1018,6 +1061,8 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
         if (not set(report['claim_ids']) <= {c['id'] for c in valid_claims}
                 or not set(report['evidence_ids']) <= set(evidence_ids)):
             raise ToolFailure('Final answer cites invalid or unseen evidence')
+        if not set(report.get('caption_event_ids', [])) <= {e['id'] for e in (state.get('summary_graph_context') or {}).get('events', [])}:
+            raise ToolFailure('Final answer cites an unseen caption event')
         if query['answer_mode'] == 'choice' and report['selected_option'] not in [str(i) for i in range(len(query['options']))]:
             raise ToolFailure('Answerer returned an illegal option ID')
         if query['answer_mode'] == 'choice':
@@ -1044,7 +1089,7 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
                 'changed': state['caption_initial_answer']['selected_option'] != report['selected_option']}
         envelope.update(answer=answer, stop_decision=decision)
     except (ToolFailure, ResourceExhausted, ValueError, KeyError, TypeError) as exc:
-        envelope['error'] = {'code': 'parse_failed' if not memory.tables['requirements'] else 'tool_failed', 'message': str(exc)}
+        envelope['error'] = {'code': 'scene_memory_failed' if cfg['scene_memory']['enabled'] else 'compatibility_failed' if cfg['compatibility']['enabled'] else 'parse_failed' if not memory.tables['requirements'] else 'tool_failed', 'message': str(exc)}
     finally:
         try:
             store.checkpoint(memory, {'state': state, 'variables': variables, 'config_hash': digest(cfg),
@@ -1066,6 +1111,8 @@ def answer_query(base, row, metadata, cfg, backend, output, initial_details=None
             finally:
                 meter.close()
         envelope['cost_summary'] = ledger.summary()
+        if state.get('scene_memory'):
+            envelope.setdefault('scene_memory', state['scene_memory'])
         envelope['diagnostics'] = {'gate_failures': state.get('gate_failures', []),
                                    'reading': {'policy': cfg['query']['reading_policy'], 'script_guided_active': state.get('script_guided', False),
                                                'plan': state.get('read_plan'), 'planning_error': state.get('read_plan_error'),

@@ -1,0 +1,20 @@
+#!/bin/bash
+#PBS -N videotree-aligned
+#PBS -P CFP05-CF-136
+#PBS -l select=1:ngpus=1:ncpus=12:mem=225GB:gpu_model=H200
+#PBS -l walltime=24:00:00
+#PBS -j oe
+#PBS -r y
+set -euo pipefail
+cd "$ALIGNED_DIR/source"
+export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONUNBUFFERED=1
+export TMPDIR="$ALIGNED_DIR/.tmp-${PBS_JOBID}"
+mkdir -p "$TMPDIR"
+PYTHON=/home/svu/e1583416/work/miniconda3/envs/vts/bin/python
+case "$ALIGNED_STAGE" in
+  verification) "$PYTHON" script/verify_temporal_repairs.py --suite aligned --out "$ALIGNED_DIR" ;;
+  smoke) "$PYTHON" script/run_videotree_aligned.py run --out "$ALIGNED_DIR" --smoke ;;
+  formal) "$PYTHON" script/run_videotree_aligned.py run --out "$ALIGNED_DIR" --worker "$ALIGNED_WORKER" --group "$ALIGNED_GROUP" ;;
+  report) "$PYTHON" script/run_videotree_aligned.py report --out "$ALIGNED_DIR" ;;
+esac

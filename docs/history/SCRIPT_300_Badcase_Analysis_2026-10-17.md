@@ -4,7 +4,7 @@
 
 **本轮最明确的失败发生在证据到选项的语义转换。新增逐项比较经常同时认可互相冲突的选项；少看策略又会预设结论、选择错误时间段，并在取证没有解决缺口时直接结束。视觉核验本身也会将复合命题的部分支持扩展为整条支持。** 这三处问题会相互放大，继续增加普通观察轮数或只修 JSON 解析都不足以解决。
 
-结果以实际完成的 [run_summary.json](../workdirs/script-repairs-300-20261016-r1/run_summary.json) 为准。旧的 10 月 16 日状态文档仍停留在提交时刻。全部诊断保存于 [analysis_badcases_20261017](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/)。
+结果以实际完成的 [run_summary.json](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/run_summary.json) 为准。旧的 10 月 16 日状态文档仍停留在提交时刻。全部诊断保存于 [analysis_badcases_20261017](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017)。
 
 ## 两组差距及修复收益
 
@@ -44,7 +44,7 @@
 
 标注答案为 0 的只有 65 题；历史 SCRIPT 选 0 为 113 次，VideoTree 为 42 次。本轮常规组选择 0 占全部题目 49.33%。这提示明显的位置偏向，但格式约束、生成顺序、取证内容各有多大作用，须用同一证据输入的选项置换回放区分。
 
-程序 [answering.py](../script_core/answering.py) 只在恰好一项 matches 且最终编号不同的情况下纠正编号。五项全 matches、共同步骤误支持独有前提、错误引用合法事实等情况均不在该保证范围内。因此“先比较再选择”仍可表现为重复理由和自我确认。
+程序 [answering.py](../../script_core/answering.py) 只在恰好一项 matches 且最终编号不同的情况下纠正编号。五项全 matches、共同步骤误支持独有前提、错误引用合法事实等情况均不在该保证范围内。因此“先比较再选择”仍可表现为重复理由和自我确认。
 
 ### 清洁地板仍选重新摆家具
 
@@ -54,7 +54,7 @@
 
 引导组计划的理由直接写成“移动椅子说明重新摆放”“再次移动强化该目标”。它检查了 77–85 与 84–92 秒，观察产出搬动家具的复合描述，核验均未形成有效事实，最后仍选择重新摆放。这里同时存在规划预设和无有效取证后的结论补全。
 
-[完整案例与原始调用](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_45fd8bca.json)。
+[完整案例与原始调用](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_45fd8bca.json)。
 
 ### 绣布画图案被后期刺绣事实覆盖
 
@@ -66,13 +66,13 @@
 
 这个案例直接否定“只要把选项差异送入观察，最终比较自然就会使用它”的假设。关键事实已存在，但共有后续步骤仍在替独有准备步骤背书。
 
-[完整案例与原始调用](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_8345d177.json)。
+[完整案例与原始调用](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_8345d177.json)。
 
 ## 剧本引导规划提前决定答案且没有根据取证结果调整
 
 实际 286 题启用了引导流程，另 14 题未启用。286 题中，计划为 0/1/2/3 个检查的题数分别是 6/98/67/115；其中 184 题的所有实际检查都在前 60 秒内。前期准备题可能适合早期读取，但涉及整体变化、后续结果和跨阶段工具的问题需要不同时间定位。
 
-[controller.py](../script_core/controller.py) 在计划检查执行完后，以 script_read_plan_complete 结束；计划执行过程中不会根据核验失败或剩余选项区别重新生成计划。检查完成并不代表检查目标得到答案。引导组 295 条正常回答中有 112 条最终没有有效视觉事实，其中 106 条实际进行了至少一次视觉读取；常规组相应数字为 19 条。
+[controller.py](../../script_core/controller.py) 在计划检查执行完后，以 script_read_plan_complete 结束；计划执行过程中不会根据核验失败或剩余选项区别重新生成计划。检查完成并不代表检查目标得到答案。引导组 295 条正常回答中有 112 条最终没有有效视觉事实，其中 106 条实际进行了至少一次视觉读取；常规组相应数字为 19 条。
 
 ### 烤面包退步成制作披萨
 
@@ -82,7 +82,7 @@
 
 正确的取证目标应能区分成品与加工过程，例如形状、是否加馅或铺料、面团如何进出烤盘；不能把待判断的烘焙类别当成窗口的既定活动。常规组本例没有有效视觉事实，依据更完整粗描述答对，也说明两组的最终文本输入差异需要单独控制。
 
-[完整案例](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_f1d2978d.json)。
+[完整案例](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_f1d2978d.json)。
 
 ### 轮毂工具从螺丝刀和钳子退步成螺丝刀和扳手
 
@@ -92,7 +92,7 @@
 
 这是核验结果没有约束最终工具断言的直接例子；静态三窗口计划也没有因扳手无法确认而转去核查后面的工具。
 
-[完整案例](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_b5865ae0.json)。
+[完整案例](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_b5865ae0.json)。
 
 ### 陶盆制作凭常识补出窑炉
 
@@ -100,7 +100,7 @@
 
 常规组保留双手抹平、添加泥土、用杯中水保持手湿的事实。引导计划明确说选项 4 的窑炉烘焙与内容不符，最终没有有效事实，却反过来选择“手工塑形后窑炉烘焙”。这属于最后一次选择补出了常见工艺步骤，也暴露了计划和回答的语义不一致。
 
-[完整案例](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_263666b2.json)。
+[完整案例](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_263666b2.json)。
 
 ## 视觉核验会接受部分支持和不可靠复合事实
 
@@ -114,7 +114,7 @@
 
 本例需要逐事件的过程帧和身体参照，不能用“引用了三帧”替代具体动作确实可见，也不能把 verifier 的 supported 当成人工真值。查看的抽样帧不足以独立确认所有交接顺序。
 
-[完整案例](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_e48b8359.json)。
+[完整案例](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_e48b8359.json)。
 
 ### 面团正确复合顺序整条丢失
 
@@ -124,7 +124,7 @@
 
 需要把一个重复加工周期中的独立动作与时间关系保留下来；跨周期混合事实也可能制造顺序。这里不能仅靠最终引用合法性排除错误。
 
-[完整案例](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_0c17076e.json)。
+[完整案例](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/case_0c17076e.json)。
 
 ## 转折语义和标注可辨性需要单独处理
 
@@ -140,9 +140,9 @@
 
 本轮常规组平均 observe 为 48.52 秒、verify_claims 为 32.05 秒、assess 为 13.02 秒、gate 为 18.71 秒、answer 为 11.28 秒。历史 answer 平均仅约 2.18 秒、gate 约 7.49 秒。新增比较增加了文本生成工作，但当前没有看到净准确率收益。两次运行的源码、M0 和共享资源条件同时变化，这些成本差异属于实测描述，不能全部归因于一段提示词。
 
-实际输入帧如下，每行依次为拖地、绣布画图、抽屉操作、种苗、面团加工。图片来自原运行保存帧，完整来源及 PTS 见 [reviewed_frame_sources.json](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/reviewed_frame_sources.json)。
+实际输入帧如下，每行依次为拖地、绣布画图、抽屉操作、种苗、面团加工。图片来自原运行保存帧，完整来源及 PTS 见 [reviewed_frame_sources.json](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/reviewed_frame_sources.json)。
 
-![错误案例的实际输入帧](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/reviewed_frames.jpg)
+![错误案例的实际输入帧](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/reviewed_frames.jpg)
 
 ## 后续验证顺序
 
@@ -156,9 +156,9 @@
 
 ## 证据与统计文件
 
-- [全量分组统计](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/aggregate.json)
-- [600 条逐运行诊断](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/query_diagnostics.json)
-- [14 个案例索引与附加统计](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/findings.json)
-- [离线统计脚本](../workdirs/script-repairs-300-20261016-r1/analysis_badcases_20261017/analyze.py)
+- [全量分组统计](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/aggregate.json)
+- [600 条逐运行诊断](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/query_diagnostics.json)
+- [14 个案例索引与附加统计](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/findings.json)
+- [离线统计脚本](../../../../../../../../../../scratch/Projects/CFP-05/CFP05-CF-136/hli/workdirs/VideoAgent/script-repairs-300-20261016-r1/analysis_badcases_20261017/analyze.py)
 
 案例 JSON 同时保存两组的最终输入摘要、有效事实、选项比较及原始调用引用。分析使用标注定位错误，未修改冻结输入、推理代码或原实验结果，也未提交新的 GPU 作业。

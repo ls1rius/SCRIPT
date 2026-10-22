@@ -1,6 +1,7 @@
-# Repaired coverage-first profile; also the policy used by default script.yaml.
+# Explicit legacy repaired coverage-first profile.
 schema_version: 2
 query:
+  pipeline: legacy
   reading_policy: coverage_first
   caption_first: false
   answer_strategy: direct
