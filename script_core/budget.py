@@ -181,6 +181,7 @@ def _worker(connection, cfg):
             from .backend import SoftDeadlineExceeded
             connection.send((False, {'message': f'{type(exc).__name__}: {exc}',
                                     'soft_timeout': isinstance(exc, SoftDeadlineExceeded),
+                                    'raw_output':getattr(exc,'raw_output',None),
                                     'usage': {'cpu_seconds': time.process_time()-cpu_began}}))
 
 
@@ -223,6 +224,7 @@ class ModelWorker:
             else:
                 exc = ToolFailure(value['message'])
             exc.usage = value['usage']
+            exc.raw_output=value.get('raw_output')
             raise exc
         if operation == 'prepare_vlm':
             self.vlm_ready = True
@@ -333,7 +335,8 @@ class Meter:
                 failure = exc
                 error = f'{type(exc).__name__}: {exc}'
                 if getattr(exc, 'usage', None):
-                    output = {'usage': exc.usage}
+                    output = dict(getattr(exc,'raw_output',None) or {})
+                    output['usage']=dict(output.get('usage',{}),**exc.usage)
             if isinstance(output, dict):
                 usage = output.setdefault('usage', {})
                 usage['cpu_seconds'] = (usage.get('cpu_seconds') or 0.)+time.process_time()-parent_cpu
@@ -398,7 +401,7 @@ class Meter:
                     text = value.strip()
                     if text.startswith('```'):
                         text = text.split('\n', 1)[1].rsplit('```', 1)[0]
-                    value = json.loads(text)
+                    value = json.loads(text,strict=False)
                 if isinstance(value, dict) and set(value) == {'data'} and isinstance(value['data'], dict):
                     value = value['data']
                 if operation == 'parse' and isinstance(value, dict):
@@ -418,6 +421,17 @@ class Meter:
             except (KeyError, TypeError, ValueError) as exc:
                 if attempt == self.cfg['query']['json_repair_retries']:
                     raise ToolFailure(f'Invalid {operation} JSON: {exc}') from exc
+                if operation in ('scene_scope','temporal_review','caption_temporal_observe'):
+                    # Regenerate from canonical input IDs. Copying a malformed
+                    # aliased output into repair can preserve broken references
+                    # and repeats the same overlong free-text continuation.
+                    inputs=dict(inputs,validation_feedback=dict(error=str(exc),
+                        instruction='Regenerate valid complete JSON from the original inputs. '
+                        'Keep explanations under 60 characters. Do not copy the rejected output.'))
+                    if operation=='caption_temporal_observe':
+                        inputs.update(page_size=1,max_observations=3)
+                    output,call=self.call(operation,inputs,task_id,final,build)
+                    continue
                 output, call = self.call('repair', {'original_operation': operation,
                                                    'original_output': output, 'errors': str(exc),
                                                    'original_inputs': inputs,

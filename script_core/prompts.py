@@ -33,6 +33,8 @@ Missing/out-of-view/black pixels never prove absence or refute a claim. No concl
 Return {"entities":[{"entity_ref":str,"label":str,"attributes":[{"field":str,"value":str,"source_caption_ids":[str]}],"observations":[{"caption_id":str,"state":str,"continuity":str,"cause":{"action":str|null,"actor":str|null,"tool":str|null,"basis":str,"source_caption_ids":[str]}}]}],"relations":[{"subject":str,"object":str,"predicate":str,"caption_id":str,"update":str,"source_caption_ids":[str]}],"more_entities":bool,"unresolved":str}.
 Inputs contain TEXT ONLY. Do not request images or fabricate visual attributes. No question or answer is supplied.
 Copy labels, attribute values, state descriptions and action/actor/tool phrases from their cited source text; do not paraphrase or add unstated facts.
+Keep every extractive field in its SOURCE LANGUAGE. English captions require English labels and copied English evidence; never translate them into Chinese.
+For each full observation, copy the COMPLETE original text of its own caption_id into state, including prefixes such as #C. For example, state="#C C picks a metal rod" with label="metal rod"; never label it "金属" or rewrite picks as picking.
 Use entity_ref=new for new entities; existing IDs retain their canonical labels and denote within-scene reference continuity, not name similarity alone.
 Relations use existing IDs or B0,B1,... for entities in THIS returned page. Distinct objects keep distinct identities.
 Report a compact initial state, explicitly stated changes, and new attributes. Repeated actions or newly mentioned attributes alone are not physical state changes.

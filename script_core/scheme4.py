@@ -1,4 +1,4 @@
-"""Ordinary scheme-4 queries: summary search, cross-stage memory, one final QA."""
+"""Ordinary summary queries: scheme 3 by default, optional scheme-4 memory."""
 from copy import deepcopy
 import json
 import math
@@ -24,10 +24,10 @@ def query_fields(row,video_id,duration):
     if row['video_id']!=video_id:raise ValueError('Question video does not match the source')
     options=row.get('options')
     if not isinstance(options,list) or len(options)!=5 or any(not isinstance(x,str) for x in options):
-        raise ValueError('Scheme 4 currently requires five original answer choices')
-    if row.get('answer_mode','choice')!='choice':raise ValueError('Scheme 4 currently supports multiple-choice QA')
+        raise ValueError('Summary queries currently require five original answer choices')
+    if row.get('answer_mode','choice')!='choice':raise ValueError('Summary queries currently support multiple-choice QA')
     if row.get('scope',[0,duration])!=[0,duration]:
-        raise ValueError('Scheme 4 currently requires the complete original one-second summary timeline')
+        raise ValueError('Summary queries currently require the complete original one-second summary timeline')
     return dict(question_id=uid,video_id=video_id,question=row['question'],options=deepcopy(options))
 
 
@@ -71,7 +71,7 @@ def load_source(base_dir,row,cfg):
         spans=load_captions(manifest)['data']
         captions=[dict(id=f'C{i}',interval=[s['start'],s['end']],text=s['text']) for i,s in enumerate(spans)]
         if [c['interval'] for c in captions]!=[[i,i+1] for i in range(len(captions))]:
-            raise ValueError('Scheme 4 needs complete original one-second summaries; overlapping M0 window digests cannot replace them')
+            raise ValueError('Summary queries need complete original one-second summaries; overlapping M0 window digests cannot replace them')
         if len(captions)!=manifest['cutoff']:
             raise ValueError('Original summaries do not cover the complete legal video timeline')
         directory=Path(cfg['compatibility']['feature_directory'])
@@ -100,16 +100,23 @@ def load_source(base_dir,row,cfg):
 
 def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source_access_seconds=0.):
     from .temporal_pipeline import directory,run,run_cross_replay
+    pipeline=cfg['query']['pipeline']
+    if pipeline not in ('scheme3','scheme4'):
+        raise ValueError('Summary query entry requires query.pipeline=scheme3 or scheme4')
+    scheme=4 if pipeline=='scheme4' else 3
     if cfg['query']['temporal_entity_source']!='summary':
-        raise ValueError('Scheme 4 requires summary-derived entities')
+        raise ValueError('Summary queries require summary-derived entities')
     if total_cap is not None and (type(total_cap) not in (int,float) or not math.isfinite(total_cap)
             or total_cap<=cfg['budget']['final_answer_reserve']):
         raise ValueError('Total cap must leave the final-answer reserve available')
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
-    request=dict(scheme=4,packet_hash=digest(packet),config_hash=digest(cfg),total_cap=total_cap)
-    marker=output/'scheme4_request.json'
+    request=dict(scheme=scheme,packet_hash=digest(packet),config_hash=digest(cfg),total_cap=total_cap)
+    marker=output/f'{pipeline}_request.json'
+    other_marker=output/f'scheme{3 if scheme==4 else 4}_request.json'
+    if other_marker.exists():
+        raise ValueError('Existing output belongs to a different pipeline; choose a new output directory')
     if marker.exists():
-        if not resume or read(marker)!=request:raise ValueError('Existing scheme-4 output requires --resume with identical source, question and configuration')
+        if not resume or read(marker)!=request:raise ValueError(f'Existing scheme-{scheme} output requires --resume with identical source, question and configuration')
         if (output/'result.json').exists() and not read(output/'result.json').get('error'):
             completed=read(output/'result.json')
             from .video import file_hash
@@ -142,28 +149,40 @@ def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source
         finally:meter.close()
     if total_cap is not None:settings['online_seconds']=min(settings['online_seconds'],total_cap-d['cost_summary']['total'])
     preparation=output/'summary_search';bundle_path=preparation/'evidence_bundle.json'
-    if not bundle_path.exists():
-        if (preparation/'calls.jsonl').exists():
-            raise ValueError('Interrupted summary search needs a new output directory; its existing budget is retained')
-        prepared=run(packet,d,packet.get('frames',[]),backend,cfg,preparation,'summary_deep',settings,evidence_only=True)
-        if prepared['error']:raise RuntimeError('Scheme-4 summary preparation failed: '+str(prepared['error']))
-    bundle=read(bundle_path)
-    final=output/'cross_stage'
-    if (final/'result.json').exists():result=read(final/'result.json')
+    if scheme==3:
+        if (preparation/'result.json').exists():
+            result=read(preparation/'result.json')
+        else:
+            if (preparation/'calls.jsonl').exists():
+                raise ValueError('Interrupted summary search needs a new output directory; its existing budget is retained')
+            result=run(packet,d,packet.get('frames',[]),backend,cfg,preparation,'summary_deep',settings)
+        if result.get('error'):raise RuntimeError('Scheme-3 summary query failed: '+str(result['error']))
+        if not result.get('answer'):raise ValueError('Scheme-3 summary result lacks its final answer; choose a new output directory')
+        bundle=read(bundle_path)
     else:
-        if (final/'calls.jsonl').exists():raise ValueError('Interrupted cross-stage answering needs a new output directory')
-        result=run_cross_replay(packet,bundle,backend,cfg,final,settings)
+        if not bundle_path.exists():
+            if (preparation/'calls.jsonl').exists():
+                raise ValueError('Interrupted summary search needs a new output directory; its existing budget is retained')
+            prepared=run(packet,d,packet.get('frames',[]),backend,cfg,preparation,'summary_deep',settings,evidence_only=True)
+            if prepared['error']:raise RuntimeError('Scheme-4 summary preparation failed: '+str(prepared['error']))
+        bundle=read(bundle_path)
+        final=output/'cross_stage'
+        if (final/'result.json').exists():result=read(final/'result.json')
+        else:
+            if (final/'calls.jsonl').exists():raise ValueError('Interrupted cross-stage answering needs a new output directory')
+            result=run_cross_replay(packet,bundle,backend,cfg,final,settings)
     result=deepcopy(result)
-    result.update(scheme=4,pipeline='scheme4',config_hash=digest(cfg),base_hash=digest(packet),
+    result.update(scheme=scheme,pipeline=pipeline,config_hash=digest(cfg),base_hash=digest(packet),
         query=read(output/'query.json'),run_config=deepcopy(cfg),directory_cost_summary=d['cost_summary'],
-        source_preprocessing_reused=True,experiment_mode='live',source_evidence_only=True)
-    # Count the summary preparation once, plus cross-stage work and its only QA.
+        source_preprocessing_reused=True,experiment_mode='live',source_evidence_only=scheme==4)
+    # Charge the directory once; each scheme generates exactly one final QA.
     cost=result['cost_summary'];directory_cost=d['cost_summary']['total']
     for key in ('initialization','total','budgeted_total','total_cap'):cost[key]+=directory_cost
     cost['budget_violation']=cost['budget_violation'] or d['cost_summary']['budget_violation']
     enough=bool(bundle['reviews'] and bundle['reviews'][-1]['sufficient'] and
                 bundle['reviews'][-1]['coverage_check']['met'] and not result['incomplete'])
-    result['stop_decision']=dict(reason='scheme4_bounded_summary_search_and_cross_stage_memory',
+    reason='scheme4_bounded_summary_search_and_cross_stage_memory' if scheme==4 else 'scheme3_bounded_summary_search'
+    result['stop_decision']=dict(reason=reason,
         evidence_status='sufficient' if enough else 'insufficient')
     write_json(output/'result.json',result)
     return result
@@ -171,6 +190,7 @@ def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source
 
 def run_queries(args,questions,cfg,backend):
     from script_qa import safe_directory_id
+    pipeline=cfg['query']['pipeline'];scheme=4 if pipeline=='scheme4' else 3
     root=Path(args.base);index=read(root/'videos.json') if (root/'videos.json').exists() else None
     rows=[]
     for row in questions:
@@ -192,8 +212,8 @@ def run_queries(args,questions,cfg,backend):
                 p=output/name/'calls.jsonl'
                 if p.exists():calls.extend(json.loads(line) for line in p.read_text().splitlines() if line.strip())
             consumed=sum(c['actual_cost'] for c in calls)
-            result=dict(scheme=4,pipeline='scheme4',question_id=uid,answer=None,stop_decision=None,
-                error=dict(code='scheme4_query_failed',message=f'{type(exc).__name__}: {exc}'),
+            result=dict(scheme=scheme,pipeline=pipeline,question_id=uid,answer=None,stop_decision=None,
+                error=dict(code=f'{pipeline}_query_failed',message=f'{type(exc).__name__}: {exc}'),
                 cost_summary=dict(initialization=0.,online=consumed,total=consumed),run_config=cfg,
                 query=dict(id=uid,video_id=row.get('video_id'),scope=row.get('scope')))
             # Preserve every partial stage/call log; never overwrite existing results.
@@ -201,6 +221,6 @@ def run_queries(args,questions,cfg,backend):
             write_json(path,result)
         rows.append(dict(question_id=uid,result_path=str(path),error=result['error'],cost=result['cost_summary']))
         print('RESULT',path,flush=True)
-    write_json(Path(args.out)/'sequence_cost.json',dict(protocol='query',pipeline='scheme4',
+    write_json(Path(args.out)/'sequence_cost.json',dict(protocol='query',pipeline=pipeline,
         cumulative_total=sum(r['cost']['total'] for r in rows),questions=rows))
     return int(any(r['error'] for r in rows))

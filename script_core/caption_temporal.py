@@ -6,6 +6,7 @@ assertion status back to caption provenance before committing the network.
 No image path, pixel, question or answer is supplied to the extractor.
 """
 from copy import deepcopy
+import re
 
 from .accounting import metered_cpu
 from .temporal_entity import ingest, canonical, compact_profiles
@@ -38,14 +39,131 @@ def output_schema(inputs):
     adapted['frames']=[dict(frame_id=c['id'],pts=c['interval'][0]) for c in inputs['captions']]
     adapted['delta_observations']=True
     schema=map_evidence(legacy_schema('temporal_observe',adapted))
+    # English captions must not acquire translated labels under the Chinese
+    # system prompt. Constrain new names to literal source phrases before
+    # decoding; the commit still requires support in that row's own citations.
+    labels=set()
+    for caption in inputs['captions']:
+        tokens=list(re.finditer(r'\w+',caption['text']))
+        for start in range(len(tokens)):
+            for end in range(start,min(start+4,len(tokens))):
+                phrase=caption['text'][tokens[start].start():tokens[end].end()]
+                if len(phrase)<=64:labels.add(phrase)
     # A summary batch is a whole scene rather than a six-image batch. Keep
     # sparse state changes, not one repeated full state for each source second.
     for variant in schema['properties']['entities']['items']['anyOf']:
-        variant['properties']['observations']['maxItems']=min(12,len(inputs['captions']))
+        if variant['properties']['entity_ref']['enum'] == ['new']:
+            variant['properties']['label']={'type':'string','enum':sorted(labels)}
+            # A new row has no committed state. The short unchanged variant
+            # cannot initialize it, even though it is legal for known entities.
+            observations = variant['properties']['observations']['items']
+            observations['anyOf'] = [item for item in observations['anyOf']
+                                     if 'state' in item['properties']]
+        variant['properties']['observations']['maxItems']=min(inputs.get('max_observations',6),len(inputs['captions']))
         for obs in variant['properties']['observations']['items']['anyOf']:
             if 'cause' in obs['properties']:
                 obs['properties']['cause']['properties']['basis']['enum']=['inferred_action','unknown']
+        if inputs.get('copy_caption_states'):
+            # Recovery binds the state text to its own timestamp at decoding
+            # time. A generic retry otherwise repeats the same paraphrase or
+            # off-by-one citation under deterministic generation.
+            observations = variant['properties']['observations']['items']
+            bound = []
+            for obs in observations['anyOf']:
+                if 'state' not in obs['properties']:
+                    bound.append(obs)
+                    continue
+                for caption in inputs['captions']:
+                    item = deepcopy(obs)
+                    item['properties']['caption_id'] = {'type':'string','enum':[caption['id']]}
+                    item['properties']['state'] = {'type':'string','enum':[caption['text']]}
+                    bound.append(item)
+            observations['anyOf'] = bound
+    # A failed label/citation pairing needs a different decoding constraint,
+    # rather than the same deterministic prompt again. Bind each proposed name
+    # to the original captions that actually mention it. Never move a citation.
+    if inputs.get('grounded_labels'):
+        variants=[]
+        for variant in schema['properties']['entities']['items']['anyOf']:
+            names=(inputs['grounded_labels'] if variant['properties']['entity_ref']['enum']==['new']
+                   else variant['properties']['label'].get('enum',[]))
+            for label in dict.fromkeys(names):
+                supported=[c for c in inputs['captions'] if grounded_label(label,c['text'])]
+                if not supported:continue
+                item=deepcopy(variant)
+                item['properties']['label']={'type':'string','enum':[label]}
+                choices=[]
+                for ob in item['properties']['observations']['items']['anyOf']:
+                    allowed=set(ob['properties']['caption_id']['enum']) & {c['id'] for c in supported}
+                    if not allowed:continue
+                    ob['properties']['caption_id']['enum']=sorted(allowed)
+                    choices.append(ob)
+                if choices:
+                    item['properties']['observations']['items']['anyOf']=choices
+                    variants.append(item)
+        if variants:schema['properties']['entities']['items']['anyOf']=variants
     return schema
+
+
+def grounded_attributes(report, captions):
+    """Reject unsupported optional attributes without discarding valid states.
+
+    The raw model output remains in the call log; rejected fields are recorded
+    separately and never become entity attributes or QA evidence. Foreign source
+    IDs remain hard failures in commit_page rather than being repaired here.
+    """
+    result = deepcopy(report)
+    sources = {c['id']: c for c in captions}
+    rejected = []
+    for row in result['entities']:
+        kept = []
+        for attr in row['attributes']:
+            refs = attr['source_caption_ids']
+            if refs and set(refs) <= sources.keys() and not grounded_label(
+                    attr['value'], '\n'.join(sources[c]['text'] for c in refs)):
+                rejected.append(dict(entity_ref=row['entity_ref'], label=row['label'],
+                    attribute=deepcopy(attr), reason='Value not stated in the cited original summaries'))
+            else:
+                kept.append(attr)
+        row['attributes'] = kept
+    return result, rejected
+
+
+def grounded_causes(report, captions):
+    """An unsupported optional causal explanation stays explicitly unknown."""
+    result = deepcopy(report)
+    sources = {c['id']: c for c in captions}
+    rejected = []
+    for row in result['entities']:
+        for ob in row['observations']:
+            cause = ob.get('cause', {})
+            refs = cause.get('source_caption_ids', [])
+            # Foreign citations remain hard failures. An empty source list
+            # cannot support an optional cause, so retain an unknown cause.
+            if cause.get('basis', 'unknown') == 'unknown' or not set(refs) <= sources.keys():
+                continue
+            evidence = '\n'.join(sources[c]['text'] for c in refs)
+            if not refs or any(cause.get(key) and not grounded_label(cause[key], evidence)
+                   for key in ('action', 'actor', 'tool')):
+                rejected.append(dict(entity_ref=row['entity_ref'], label=row['label'],
+                    caption_id=ob['caption_id'], cause=deepcopy(cause),
+                    reason='Action/actor/tool not stated in the cited original summaries'))
+                ob['cause'] = dict(action=None, actor=None, tool=None,
+                                   basis='unknown', source_caption_ids=[])
+    return result, rejected
+
+
+def grounded_relations(report,captions):
+    """Keep supported optional edges; log rejected predicates separately."""
+    result=deepcopy(report);sources={c['id']:c for c in captions};rejected=[];kept=[]
+    for relation in result['relations']:
+        refs=relation['source_caption_ids']
+        if refs and set(refs)<=sources.keys() and not grounded_label(
+                relation['predicate'],'\n'.join(sources[c]['text'] for c in refs)):
+            rejected.append(deepcopy(relation))
+        else:kept.append(relation)
+    result['relations']=kept
+    return result,rejected
 
 
 def commit_page(net,report,captions,scene_id,batch_id,known_ids):
@@ -119,25 +237,58 @@ def open_scene(net,scene,captions,meter,target,settings):
     allowed=set(scene['caption_ids'])
     sources=[c for c in captions if c['id'] in allowed]
     known=[];reported=[]
-    for page in range(settings.get('caption_max_pages',4)):
+    # Small pages finish inside the existing 150s leaf-call cap. Preserve the
+    # original maximum inventory (48 entities) through additional pages.
+    for page in range(settings.get('caption_max_pages',16)):
         entities=[dict(net['entities'][eid],last_state=net['states'][net['entities'][eid]['state_ids'][-1]])
                   for eid in known]
         profiles=map_evidence(compact_profiles(map_evidence(entities,False)))
         inputs=dict(captions=deepcopy(sources),entities=profiles,
-                    already_reported=[dict(id=eid) for eid in reported],page_size=12,
+                    already_reported=[dict(id=eid) for eid in reported],page_size=3,
                     scene_interval=scene['interval'],page=page,delta_observations=True)
         for attempt in range(2):
-            report,call=meter.json('caption_temporal_observe',inputs,
-                                  ('entities','relations','more_entities','unresolved'))
+            from .budget import ToolDeadlineExceeded
+            try:
+                report,call=meter.json('caption_temporal_observe',inputs,
+                                      ('entities','relations','more_entities','unresolved'))
+            except ToolDeadlineExceeded as exc:
+                if attempt or exc.budget_limited or not exc.worker_reusable:raise
+                inputs.update(page_size=1,max_observations=3)
+                inputs['validation_feedback']=dict(error=str(exc),instruction=
+                    'Previous page timed out. Return one entity with at most three sparse '
+                    'observations; set more_entities=true if other entities remain.')
+                continue
+            report,rejected=grounded_attributes(report,sources)
+            report,rejected_causes=grounded_causes(report,sources)
+            report,rejected_relations=grounded_relations(report,sources)
             try:
                 # A repeated already-reported entity would hide a failed inventory loop.
                 if any(row['entity_ref'] in reported for row in report['entities']):
                     raise ValueError('Caption inventory repeated an already reported entity')
                 ids=commit_page(net,report,sources,scene['id'],f'{scene["id"]}:captions:{page}',known)
+                if rejected:
+                    net.setdefault('rejected_caption_attributes',[]).extend(
+                        dict(item,scene_id=scene['id'],page=page,call_id=call['call_id']) for item in rejected)
+                if rejected_causes:
+                    net.setdefault('rejected_caption_causes',[]).extend(
+                        dict(item,scene_id=scene['id'],page=page,call_id=call['call_id']) for item in rejected_causes)
+                if rejected_relations:
+                    net.setdefault('rejected_caption_relations',[]).extend(
+                        dict(relation=item,scene_id=scene['id'],page=page,call_id=call['call_id']) for item in rejected_relations)
                 break
             except ValueError as exc:
                 if attempt:raise
-                inputs['validation_feedback']=str(exc)+' Copy only phrases stated in the cited summaries; omit unsupported attributes.'
+                inputs['copy_caption_states']=True
+                inputs['grounded_labels']=list(dict.fromkeys(row['label'] for row in report['entities']))
+                inputs['page_size']=1
+                inputs['validation_feedback']=dict(error=str(exc),
+                    instruction='Regenerate the complete page from the same original summaries. '
+                    'Rejected output was not committed. For each full observation, copy the entire '
+                    'original text of its own caption_id exactly into state, including any prefix. '
+                    'Never shift a description to the next timestamp or change verb forms. '
+                    'Copy only phrases stated in their cited sources; '
+                    'omit unsupported attributes. A new entity needs a full state/cause observation; '
+                    'short unchanged observations require an existing scene state.')
         known=list(dict.fromkeys(known+ids));reported.extend(ids)
         net['coverage'].append(dict(scene_id=scene['id'],page=page,caption_ids=[c['id'] for c in sources],
             more_entities=report['more_entities'],unresolved=report['unresolved'],call_id=call['call_id'],

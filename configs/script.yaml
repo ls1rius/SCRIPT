@@ -1,4 +1,5 @@
-# Default query entry: scheme 4, summary-first cross-stage entity memory.
+# Default query entry: scheme 3, deep summary search with scene-local entities.
+# Enable cross-stage entity memory with query --scheme4 or pipeline: scheme4.
 # All model paths are relative to the project working directory.
 schema_version: 2
 seed: 0
@@ -11,7 +12,7 @@ construction:
 cache:
   scope: query
 query:
-  pipeline: scheme4
+  pipeline: scheme3
   temporal_entity_source: summary
   temporal_sparse_visual: true
   answer_order: original

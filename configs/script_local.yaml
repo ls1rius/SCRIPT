@@ -1,0 +1,17 @@
+# Local alias of the default scheme-3 pipeline and budgets; --scheme4 opts in.
+schema_version: 2
+seed: 0
+method: B2
+query:
+  pipeline: scheme3
+  temporal_entity_source: summary
+  temporal_sparse_visual: true
+  answer_order: original
+  caption_policy: full
+initialization:
+  caption_source: provided
+budget:
+  online_cap: 1500.0
+  final_answer_reserve: 45.0
+  tool_call_cap: 150.0
+  build_call_cap: 600.0

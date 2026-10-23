@@ -3,6 +3,7 @@ from contextlib import redirect_stdout, redirect_stderr
 from copy import deepcopy
 import io
 import json
+import re
 from pathlib import Path
 import sys
 import tempfile
@@ -30,11 +31,23 @@ class OriginalModel:
 
     def forward(self, head, prompts):
         self.backend.check_deadline()
+        from .backend import deadline_stopping_criteria
+        self.qa.stopping_criteria=(deadline_stopping_criteria(self.backend.deadline)
+                                  if self.backend.deadline is not None else None)
         prediction, info = self.qa.forward(head, prompts)
         self.backend.check_deadline()
         self.usage['input_tokens'] += info['prompt_tokens']
         self.usage['output_tokens'] += info['completion_tokens']
         return prediction, info
+
+
+def explicit_qa_answer(response):
+    """Read an explicit answer declaration; never infer it from option text."""
+    clean=response.replace('**','').replace('`','').strip()
+    matches=re.findall(r'(?im)^\s*(?:prediction|(?:the\s+)?(?:correct\s+)?answer)\s*'
+                       r'(?::|=|\bis\b)\s*(?:option\s+)?[\[(]?([A-E])\b',clean)
+    choices=set(c.upper() for c in matches)
+    return ord(next(iter(choices)))-ord('A') if len(choices)==1 else -1
 
 
 def run_width(inputs, model, device='cuda', seed=0):
@@ -131,7 +144,13 @@ def call_original(backend, operation, inputs):
             model.set_post_process_fn(update_pred_response)
             prediction, info = model.forward(inputs['head'], inputs['prompts'])
             if prediction not in range(5):
-                raise ValueError('Original VideoTree QA did not produce a legal answer')
+                prediction=explicit_qa_answer(info['response'])
+                if prediction not in range(5):
+                    from .budget import ToolFailure
+                    exc=ToolFailure('Original VideoTree QA did not produce a legal answer')
+                    exc.raw_output={'data':None,'raw_text':info['response'],'usage':dict(model.usage)}
+                    raise exc
+                info['answer_parse_recovery']='explicit_declaration'
             data = {'selected_option': str(prediction), 'text': info['response'], 'info': info}
         usage = dict(model.usage)
         backend.model_tokens['vlm'] = usage['input_tokens']

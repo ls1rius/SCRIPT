@@ -35,6 +35,14 @@ def deadline_stopping_criteria(deadline):
     return StoppingCriteriaList([Deadline()])
 
 
+def decode_structured_text(text):
+    """Accept literal source newlines, without completing missing JSON fields."""
+    clean=text.strip()
+    if clean.startswith('```'):
+        clean=clean.split('\n',1)[1].rsplit('```',1)[0]
+    return json.loads(clean,strict=False)
+
+
 class LocalModels:
     def __init__(self, cfg):
         self.cfg = cfg
@@ -379,6 +387,13 @@ class LocalModels:
             if original == 'answer' and inputs.get('original_inputs', {}).get('answer_strategy') == 'direct':
                 original = 'answer_direct'
             contract += '\n原模块输出契约：\n'+CONTRACTS[original]
+        if original_op in ('scene_scope','temporal_review','caption_temporal_observe'):
+            contract += ('\nKeep explanations concise: reason, gap and unresolved should each use '
+                         'at most 60 characters. Complete the JSON object. For inventories, '
+                         'report at most page_size entities and max_observations (default 6) '
+                         'observations per entity; set more_entities=true if entities remain. '
+                         'Every entity name must occur in its own cited captions. '
+                         'Unknown or uncited causal actions must use basis=unknown.')
         def render(model_inputs):
             payload = substitute(model_view(model_inputs), aliases)
             if 'caption_timeline' in payload:
@@ -438,14 +453,14 @@ class LocalModels:
             if clean.startswith('```'):
                 clean = clean.split('\n', 1)[1].rsplit('```', 1)[0]
             old_map = inputs.get('original_output', {}).get('id_map', {}) if operation == 'repair' else {}
-            data = json.loads(clean)
+            data = decode_structured_text(clean)
             if compact_temporal:
                 from .temporal_codec import decode_report
                 data = decode_report(data)
             data = substitute(data, old_map | inverse)
         except (ValueError, IndexError):
             data = output
-        return {'data': data, 'id_map': inverse,
+        return {'data': data, 'raw_text': output, 'id_map': inverse,
                 'usage': {'input_tokens': input_tokens, 'output_tokens': len(tokens),
                           'model_caption_context': caption_selection,
                           'model_frame_views': [dict(frame_id=f['frame_id'], **view)

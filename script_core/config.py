@@ -55,7 +55,7 @@ DEFAULTS = {
               'no_progress_before_backtrack': 2, 'explore_every_nonexploration_tasks': 3,
               'global_recovery_rounds': 2, 'tool_transient_retries': 1, 'json_repair_retries': 1,
               'temporal_compact_keys': False, 'temporal_delta_observations': False,
-              'temporal_entity_source': 'summary','temporal_sparse_visual': True,'pipeline':'scheme4'},
+              'temporal_entity_source': 'summary','temporal_sparse_visual': True,'pipeline':'scheme3'},
     'compatibility': {'enabled': False, 'feature_directory': 'data/EgoSchema/egoschema_features',
                       'cache_directory': '', 'graph_retrieval': False, 'retrieval_feedback': False,
                       'visual_verification': False, 'answer_protection': False,
@@ -110,8 +110,8 @@ def load_config(path=None):
 
 
 def validate_config(cfg):
-    if cfg['query']['pipeline'] not in ('scheme4','legacy'):
-        raise ValueError('query.pipeline must be scheme4 or legacy')
+    if cfg['query']['pipeline'] not in ('scheme3','scheme4','legacy'):
+        raise ValueError('query.pipeline must be scheme3, scheme4 or legacy')
     if type(cfg['query']['temporal_sparse_visual']) is not bool:
         raise ValueError('temporal_sparse_visual must be boolean')
     if cfg['query']['temporal_entity_source'] not in ('summary','images'):

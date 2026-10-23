@@ -14,20 +14,52 @@ from script_core.state import write_json
 class Scheme4Tests(unittest.TestCase):
     setUp=matched.MatchedCrossStageTests.setUp
 
-    def test_default_cli_uses_scheme4_with_identical_sources_and_one_answer(self):
+    def test_default_cli_uses_scheme3_without_cross_stage_calls(self):
+        import script_qa
+        self.assertEqual(load_config()['query']['pipeline'],'scheme3')
+        for name in ('script','script_local'):
+            self.assertEqual(load_config(f'configs/{name}.yaml')['query']['pipeline'],'scheme3')
+        self.backend.close=Mock()
+        questions=self.root/'questions.jsonl'
+        questions.write_text(json.dumps(self.packet['question'])+'\n')
+        out=self.root/'default';uid=script_qa.safe_directory_id(self.uid)
+        with patch.object(script_qa,'preflight',side_effect=lambda cfg:(cfg,{})), \
+             patch.object(script_qa,'ModelWorker',return_value=self.backend), \
+             patch('script_core.temporal_pipeline.run_cross_replay',side_effect=AssertionError('scheme 4 was not enabled')):
+            status=script_qa.main(['query','--base',str(self.root),'--questions',str(questions),'--out',str(out)])
+        self.assertEqual(status,0)
+        result=json.loads((out/uid/'result.json').read_text())
+        self.assertIsNone(result['error'])
+        self.assertEqual(result['scheme'],3)
+        self.assertEqual(result['pipeline'],'scheme3')
+        self.assertEqual(result['arm'],'summary_deep')
+        self.assertEqual(self.backend.answers,1)
+        self.assertEqual(result['identity_comparisons'],0)
+        self.assertFalse((out/uid/'cross_stage').exists())
+        self.assertFalse(any(op=='scene_correspondence_lineage' for op,_ in self.backend.calls))
+        prepared=json.loads((out/uid/'summary_search/result.json').read_text())
+        self.assertEqual(result['answer'],prepared['answer'])
+        self.assertEqual(result['pixel_frame_count'],3)
+        self.assertAlmostEqual(result['cost_summary']['total'],
+            prepared['cost_summary']['total']+result['directory_cost_summary']['total'])
+        self.assertAlmostEqual(result['cost_summary']['initialization'],result['directory_cost_summary']['total'])
+        sequence=json.loads((out/'sequence_cost.json').read_text())
+        self.assertEqual(sequence['pipeline'],'scheme3')
+        self.assertAlmostEqual(sequence['cumulative_total'],result['cost_summary']['total'])
+
+    def test_scheme4_flag_uses_identical_sources_and_one_answer(self):
         import script_qa
         cfg=load_config('configs/script.yaml')
-        self.assertEqual(cfg['query']['pipeline'],'scheme4')
-        self.assertEqual(load_config()['query']['pipeline'],'scheme4')
+        self.assertEqual(cfg['query']['pipeline'],'scheme3')
         self.assertEqual(cfg['query']['answer_order'],'original')
         self.backend.close=Mock()
         questions=self.root/'questions.jsonl'
         questions.write_text(json.dumps(self.packet['question'])+'\n')
         out=self.root/'ordinary';uid=script_qa.safe_directory_id(self.uid)
-        with patch.object(script_qa,'preflight',return_value=(cfg,{})), \
+        with patch.object(script_qa,'preflight',side_effect=lambda cfg:(cfg,{})), \
              patch.object(script_qa,'ModelWorker',return_value=self.backend), \
              patch.object(script_qa,'load_base',side_effect=AssertionError('must not reread raw video')):
-            status=script_qa.main(['query','--base',str(self.root),'--questions',str(questions),'--out',str(out)])
+            status=script_qa.main(['query','--base',str(self.root),'--questions',str(questions),'--out',str(out),'--scheme4'])
         self.assertEqual(status,0)
         result=json.loads((out/uid/'result.json').read_text())
         self.assertIsNone(result['error'])
@@ -53,6 +85,39 @@ class Scheme4Tests(unittest.TestCase):
             'temporal_qa_context_selection','temporal_qa_check','videotree_qa','structured_output_validation') for c in calls),
             [c['operation'] for c in calls])
         self.assertTrue(all(c['input_pixels']==0 for c in calls))
+
+    def test_pipeline_switch_cannot_reuse_other_scheme_even_after_interruption(self):
+        features=[[1.,0.]]*4+[[0.,1.]]*4
+        for scheme in (3,4):
+            cfg=deepcopy(self.cfg);cfg['query']['pipeline']=f'scheme{scheme}'
+            target=self.root/f'switch-{scheme}'
+            result=answer(self.packet,features,cfg,self.backend,target)
+            self.assertEqual(result['scheme'],scheme)
+            self.assertEqual(result['run_config']['query']['pipeline'],f'scheme{scheme}')
+            (target/'result.json').unlink()
+            cfg['query']['pipeline']=f'scheme{7-scheme}'
+            before=len(self.backend.calls)
+            with self.assertRaisesRegex(ValueError,'different pipeline'):
+                answer(self.packet,features,cfg,self.backend,target,resume=True)
+            self.assertEqual(len(self.backend.calls),before)
+
+    def test_interrupted_scheme3_search_retains_spent_budget(self):
+        target=self.root/'interrupted';features=[[1.,0.]]*4+[[0.,1.]]*4
+        answer(self.packet,features,self.cfg,self.backend,target)
+        (target/'result.json').unlink()
+        (target/'summary_search/result.json').unlink()
+        before=len(self.backend.calls)
+        with self.assertRaisesRegex(ValueError,'Interrupted summary search'):
+            answer(self.packet,features,self.cfg,self.backend,target,resume=True)
+        self.assertEqual(len(self.backend.calls),before)
+
+    def test_scheme4_flag_rejects_legacy_config_before_preflight(self):
+        import script_qa
+        with patch.object(script_qa,'preflight') as preflight:
+            with self.assertRaisesRegex(ValueError,'requires a scheme3/scheme4'):
+                script_qa.main(['query','--base',str(self.root),'--questions','unused.jsonl',
+                                '--out',str(self.root/'unused'),'--config','configs/script_coverage.yaml','--scheme4'])
+        preflight.assert_not_called()
 
     def test_resume_reuses_completed_answer_and_rejects_changed_source_or_sample(self):
         target=self.root/'run';features=[[1.,0.]]*4+[[0.,1.]]*4
@@ -118,7 +183,21 @@ class Scheme4Tests(unittest.TestCase):
                                     if not line.lstrip().startswith('//')))
         args=launch['configurations'][0]['args']
         self.assertEqual(args[args.index('--config')+1],'${workspaceFolder}/configs/script.yaml')
-        self.assertTrue(args[args.index('--out')+1].endswith('/scheme4'))
+        self.assertTrue(args[args.index('--out')+1].endswith('/scheme3'))
+        self.assertNotIn('--scheme4',args)
+
+    def test_local_smoke_forwards_scheme4_switch_and_uses_separate_outputs(self):
+        from script.run_local_four_arm import ordinary_query,ordinary_scheme4
+        import script_qa
+        with patch.object(script_qa,'main',return_value=0) as query_main:
+            ordinary_query(self.root)
+            args=query_main.call_args.args[0]
+            self.assertNotIn('--scheme4',args)
+            self.assertEqual(args[args.index('--out')+1],str(self.root/'scheme3'))
+            ordinary_scheme4(self.root)
+            args=query_main.call_args.args[0]
+            self.assertIn('--scheme4',args)
+            self.assertEqual(args[args.index('--out')+1],str(self.root/'scheme4'))
 
 
 if __name__=='__main__':unittest.main()

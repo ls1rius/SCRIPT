@@ -20,10 +20,12 @@ def parser():
     commands = p.add_subparsers(dest='command', required=True)
     build = commands.add_parser('build', help='Question-independent M0 and optional M_eager')
     build.add_argument('--manifest', required=True, help='JSON list of video_id, uri, optional cutoff/subtitle_uri')
-    query = commands.add_parser('query', help='Run queries; default empty per-question overlay')
+    query = commands.add_parser('query', help='Run scheme-3 summary search by default')
     query.add_argument('--base', required=True)
     query.add_argument('--questions', required=True, help='JSONL without answers or evaluation fields')
     query.add_argument('--resume', action='store_true')
+    query.add_argument('--scheme4', action='store_true',
+                       help='Enable cross-stage entity memory after summary search (scheme 4)')
     query.add_argument('--summary-graphs', help='Directory containing <video_id>.json caption assertion graphs')
     query.add_argument('--graph-routing', action='store_true', help='Use caption graph matches for coverage follow-ups')
     query.add_argument('--replay-source', help='Frozen real query directory or root containing per-question directories')
@@ -54,6 +56,10 @@ def main(argv=None):
         print(json.dumps(metrics['groups'], ensure_ascii=False, indent=2))
         return 0
     cfg = load_config(args.config)
+    if args.command == 'query' and args.scheme4:
+        if cfg['query']['pipeline'] == 'legacy':
+            raise ValueError('--scheme4 requires a scheme3/scheme4 summary configuration')
+        cfg['query']['pipeline'] = 'scheme4'
     start, setup_cpu = time.monotonic(), time.process_time()
     cfg, artifacts = preflight(cfg)
     artifacts['validation_processing_seconds'] = time.monotonic()-start
@@ -83,10 +89,10 @@ def main(argv=None):
         questions = read_jsonl(args.questions)
         if not questions or len({q.get('question_id', q.get('id')) for q in questions}) != len(questions):
             raise ValueError('Questions must be a nonempty JSONL with unique question IDs')
-        if cfg['query']['pipeline']=='scheme4':
+        if cfg['query']['pipeline'] in ('scheme3','scheme4'):
             if (args.summary_graphs or args.graph_routing or args.replay_source or args.replay_only or
                     args.sequence_manifest or cfg['cache']['scope']!='query'):
-                raise ValueError('Scheme 4 uses its own summary evidence and query cache; legacy replay/graph/sequence options require query.pipeline=legacy')
+                raise ValueError('Summary schemes use their own evidence and query cache; legacy replay/graph/sequence options require query.pipeline=legacy')
             from script_core.scheme4 import run_queries
             return run_queries(args,questions,cfg,backend)
         shared = None

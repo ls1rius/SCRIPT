@@ -74,6 +74,8 @@ class Qwen(Model):
                       "do_sample": self.temperature > 0}
             if self.temperature > 0:
                 kwargs["temperature"] = self.temperature
+            if getattr(self,'stopping_criteria',None) is not None:
+                kwargs['stopping_criteria']=self.stopping_criteria
             with torch.inference_mode():
                 generated = self.model.generate(**inputs, **kwargs)
             tokens = generated[0, inputs.input_ids.shape[1]:]

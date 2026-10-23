@@ -1,8 +1,9 @@
 # SCRIPT
 
-2026-10-22 默认入口已改为方案 4：`script_qa.py query`、`configs/script.yaml` 和 VS Code F5
-先按第 3 组的规则读取 summary、深入导航并按需少量补看，再在完全相同的证据上建立跨阶段实体对应与状态历史。
-日常查询不生成第 3 组的对照答案，只生成方案 4 的一次最终答案；跨阶段处理不另选场景、不额外读取图像。
+2026-10-23 默认入口改为方案 3：`script_qa.py query`、`configs/script.yaml`、`configs/script_local.yaml`
+和 VS Code F5 读取 summary、深入导航并按需少量补看，各场景实体保持独立，直接生成一次最终答案。
+显式添加 `--scheme4`，或配置 `query.pipeline: scheme4`，才开启方案 4：在相同证据上建立跨阶段实体对应与状态历史，
+只生成方案 4 的一次最终答案，不额外生成方案 3 的对照答案；跨阶段处理不另选场景、不额外读取图像。
 实体始终从原始带时间戳 summary 提取，跨阶段对应保留文本推断属性。默认在线预算 1500 秒，最终回答预留 45 秒，
 目录构建另计且最多 600 秒；检索、实体提取和按需补看的共享准备工作只计费一次。
 现有四组实验使用冻结源码，调度和比较方式保持不变。
@@ -13,13 +14,110 @@
 python script_qa.py query \
   --base workdirs/script-summary-temporal-four-arm-300-20261022-r3 \
   --questions workdirs/script-videotree-repair-20261015/smoke/questions.jsonl \
-  --out workdirs/script/scheme4-query --resume
+  --out workdirs/script/scheme3-query --resume
+
+# 开启方案 4；使用独立输出目录，避免混用两种方案的断点记录。
+python script_qa.py query \
+  --base workdirs/script-summary-temporal-four-arm-300-20261022-r3 \
+  --questions workdirs/script-videotree-repair-20261015/smoke/questions.jsonl \
+  --out workdirs/script/scheme4-query --scheme4 --resume
 ```
 
 该路径要求完整的原始逐秒描述及五个原始选项；不会为加载缓存而重读原视频。
-记录分别位于每题目录的 `directory_calls/`、`summary_search/` 和 `cross_stage/`，最终结果为 `result.json`。
+记录位于每题目录的 `directory_calls/`、`summary_search/`；仅方案 4 额外生成 `cross_stage/`，最终结果为 `result.json`。
 完成结果可断点复用，来源、问题和配置必须一致；没有完成证据导出的中断保留已花费预算，需换新输出目录重跑。
 需要旧常规流程时显式传入 `--config configs/script_coverage.yaml`；其他旧配置也明确设置 `query.pipeline: legacy`。
+
+本机运行（Conda `vts` 环境，EgoSchema 和权重已准备）：
+
+```bash
+# 四方案真实模型功能检查：默认 2 个完整视频，方案 3、4 配对使用相同证据。
+# --gpus 填当前空闲的物理卡号；运行器检查占用，并用 UUID 绑定显卡。
+bash script/run_local_smoke.sh all --gpus 2,3,4,5 \
+  --output workdirs/dev-four-arm-smoke-r7
+
+# 普通默认方案 3 查询；已完成且来源一致的结果可 --resume 复用。
+bash script/run_local_smoke.sh script --output workdirs/dev-four-arm-smoke-r7
+
+# 显式开启方案 4，结果分别写入 scheme3/ 和 scheme4/。
+bash script/run_local_smoke.sh script --output workdirs/dev-four-arm-smoke-r7 --scheme4
+```
+
+数据位于 `data/EgoSchema/{egoschema,egoschema_frames,egoschema_features}`，
+四个模型和 Hugging Face 缓存位于 `checkpoints/`。本机脚本设置缓存路径和离线加载，
+自动生成匹配编码器的逐秒帧/特征缓存，保留全部原始描述和选项。未指定显卡时只选择空闲卡。
+检查结果在输出目录的 `smoke/arms/`、`scheme3/`（开启开关时为 `scheme4/`）、`worker_logs/` 及 `smoke/status.json`；
+`evaluation_only.json` 的答案仅供事后评分，不进入推理输入。
+这条命令是小样本功能检查，不会自动启动上文历史的每组 300 题实验。
+修改源码后或推理中断后请换新 `--output`，保留旧日志和已花费预算。
+
+此前方案 4 默认入口的历史验收：423 项测试通过，四方案各 2 个完整视频（共 8 次）均无运行错误，
+普通方案 4 入口另外 2 次通过；断点复用未新增推理调用，预算及③④同证据检查通过。
+详细记录为 `workdirs/dev-four-arm-smoke-r5/verification/final_report.json`。
+这是功能验收；300 题评测尚未运行，普通方案 4 的两例仍如实标记 `evidence_status: insufficient`，
+不能据此声称全数据集效果达标或所有潜在 bug 已排除。
+
+本机四卡 300 题评测可使用独立后台运行器：
+
+```bash
+conda run -n vts python script/run_four_arm_300_local.py launch \
+  --out workdirs/four-arm-300-20261022-r2 --gpus 2,3,4,5 \
+  --asset-gpu 0 --feature-batch-size 16 --frame-workers 4 \
+  --verification workdirs/source-language-verification-20261022
+```
+
+四方案分别固定一张卡，方案 4 在方案 3 导出证据后立即处理，不读取方案 3 的答案。
+额外的空闲卡只准备共享逐秒特征；帧并行预取、特征按批提取，每个视频准备好即发布，
+推理不用等待全部 300 个视频准备结束。各方案模型跨题常驻，结束后自动释放对应显卡。
+运行器先检查卡上无其他任务，以 UUID 绑定设备，冻结源码后通过独立 tmux 会话运行。
+同名输出目录不能重新启动，以免覆盖已花费预算。四组共用一份固定 300 题清单；
+当前本机缺少历史 `cohort.json`，清单按仓库原 100 题加种子 0 扩充 200 题规则重建，
+不声称已与缺失的历史清单逐项核对。
+查看输出目录的 `progress.json`、`workers/*.json` 和 `logs/*.log`；全部结束后生成 `comparison.json`。
+错误保留在每题 `result.json` 中，评分分母固定 300。后台会话名称在 `launch.json`。
+本机当前使用 r2：r1 首道新题发现模型将英文实体名翻译成中文，已停止并保留日志。
+新增原文短语解码约束并明确保持来源语言；432 项测试及失败材料的真实 GPU 复验通过后，
+r2 使用完全相同的 300 题清单重新开始，各组结果不与 r1 混用，共享帧/特征缓存可复用。
+
+2026-10-23 错误修复与补跑位于 `workdirs/four-arm-300-20261023-repair-r3/`。
+旧 r2 推理进程已停止，原始结果、调用记录及中断位置保留在旧目录；
+新目录通过符号链接引用成功结果，失败及未完成题使用修复版冻结源码重新执行。
+实体抽取使用较小分页；语义重试将实体名称绑定到确实提到它的原始字幕，
+无依据的可选关系和原因单独记录，未知来源不会变为有效证据。
+③证据不完整时先重做③，再让④消费同一个完整证据包；不绕过配对检查。
+每次重试保留独立调用预算，旧失败尝试归档到 `attempts/`，并保留旧实验引用；
+原始花费不会被当成免费续跑。该目录是混合源码版本的修复汇总，不应标成原 r2 的冻结实验结果。
+后台用两张已释放的 GPU 执行前两组与③④配对组，最多三轮尝试；
+`progress.json` 区分已完成、成功和失败，`finished.json` 仅在后台任务结束后生成。
+查看当前进度：
+
+```bash
+python script/run_four_arm_repair.py status \
+  --out workdirs/four-arm-300-20261023-repair-r3
+```
+
+2026-10-23 本机新增原仓库 VideoTree 对照，后台目录为
+`workdirs/videotree-original-500-20261023-r1/`，覆盖公开答案子集全部 500 题。
+`cohorts.json` 的前 100 题、300 题严格沿用当前 `four-arm-300-20261022-r2/cohort.json`，
+已逐项核对问题、五个选项、原始描述及顺序；剩余 200 题追加在后。
+入口为 `script/run_original_videotree_local.py`，冻结 `../VideoTree` 源码，
+调用其原始宽度入口、深度函数和 QA 入口。推理使用与当前实验相同的本地 Qwen2.5-VL-7B，
+不声称复现论文 GPT-4 成绩。仅在冻结副本中修正 Kmeans 的可选依赖导入和现代 Torch 的单元素索引形状；
+原版提示、caption 索引偏移、相关性与簇的对应行为及 QA 解析回退均保留，回退单独标记。
+物理 GPU 0、7 分片推理，GPU 1 补齐共享 EVA 特征；已有任务继续运行。
+查看 `progress.json`、`workers/`、`logs/` 和逐题 `runs/<video_id>/result.json`。
+`reports/videotree_100.json`、`videotree_300.json`、`videotree_500.json` 分别汇总；
+未跑完时最终 `accuracy` 保持空值，失败题计错，分母固定。
+`reports/comparison_100.json` 和 `comparison_300.json` 持续汇总双方已完成同题的预测和错题变化；
+推理耗时不含共享离线预处理和模型加载，且显卡不同，不能直接据此归因算法速度差异。
+新实验启动示例（必须使用新输出目录，显卡必须空闲）：
+
+```bash
+conda run -n vts python script/run_original_videotree_local.py launch \
+  --out workdirs/videotree-original-500-NEW \
+  --reference workdirs/four-arm-300-20261022-r2 \
+  --videotree ../VideoTree --gpus 0,7 --asset-gpu 1
+```
 
 2026-10-22 r3：按用户要求增加“深入探究”对照，共四组，每组相同 300 题：
 ① 单场景原始 summary 回答；② 同一场景加局部文本实体网络；③ 按需深入读取更多场景的 summary，
@@ -33,7 +131,7 @@ python script_qa.py query \
 <details>
 <summary>历史方案、修复与运行记录（旧报告已移至 docs/history/）</summary>
 
-以下为历史实现和实验记录；旧命令应使用对应冻结源码与配置。当前默认入口及预算以本文开头的方案 4 为准。
+以下为历史实现和实验记录；旧命令应使用对应冻结源码与配置。当前默认入口及预算以本文开头的方案 3（可显式开启方案 4）为准。
 
 2026-10-22 r2（历史修订）：用户要求给第三组增加尽量少用的按需补看。实体与关系仍直接从原始 summary 提取；
 仅跨场景组在 summary 导航结束、仍有具体且影响选项区分的可见信息缺口时，才允许一次补看。

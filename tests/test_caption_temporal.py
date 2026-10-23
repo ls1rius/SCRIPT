@@ -39,6 +39,22 @@ class CaptionTemporalTests(unittest.TestCase):
         bad=report(row(cid='F0'))
         with self.assertRaises(ValueError):validate_output(bad,schema)
 
+    def test_source_language_decoder_rejects_translated_and_invented_labels(self):
+        schema=output_schema('caption_temporal_observe',dict(captions=captions(),entities=[],
+            already_reported=[],page_size=12))
+        validate_output(report(row()),schema)
+        for label in ('盒子','container','blue box'):
+            invalid=row();invalid['label']=label
+            with self.assertRaises(ValueError):validate_output(report(invalid),schema)
+
+    def test_source_language_allowlist_does_not_repoint_unrelated_citations(self):
+        caps=[dict(id='C0',interval=[0,1],text='C holds a box.'),
+              dict(id='C1',interval=[1,2],text='C holds a cup.')]
+        invalid=row();invalid['label']='cup'
+        # A literal batch label is only a decoding candidate, not evidence.
+        with self.assertRaisesRegex(ValueError,'Entity label is not grounded'):
+            text.commit_page(new_network(),report(invalid),caps,'S0','b0',[])
+
     def test_changed_state_keeps_unknown_cause_and_caption_provenance(self):
         net=new_network()
         text.commit_page(net,report(row()),captions()[:2],'S0','b0',[])
@@ -73,6 +89,87 @@ class CaptionTemporalTests(unittest.TestCase):
     def test_source_text_is_not_rewritten_by_status_translation(self):
         source=dict(id='C0',interval=[0,1],text='visual_model_assertion')
         self.assertEqual(text.map_evidence(source),source)
+
+    def test_new_caption_entity_cannot_decode_without_an_initial_state(self):
+        schema=output_schema('caption_temporal_observe',dict(captions=captions(),entities=[],
+            already_reported=[],page_size=12))
+        invalid=row();invalid['observations']=[dict(caption_id='C0',continuity='same')]
+        with self.assertRaises(ValueError):validate_output(report(invalid),schema)
+        validate_output(report(row()),schema)
+
+    def test_unsupported_optional_attribute_does_not_abort_grounded_entity(self):
+        r=row();r['attributes']=[dict(field='color',value='red',source_caption_ids=['C0']),
+                               dict(field='location',value='kitchen',source_caption_ids=['C0'])]
+        original=deepcopy(report(r));net=new_network()
+        class Meter:
+            def json(self,op,inputs,required):return deepcopy(original),{'call_id':'call-1'}
+        scene=dict(id='S0',caption_ids=['C0','C1'],interval=[0,2])
+        with tempfile.TemporaryDirectory() as tmp:
+            ids=text.open_scene(net,scene,captions(),Meter(),tmp,{})
+        self.assertEqual(len(ids),1)
+        self.assertEqual([a['value'] for a in net['entities'][ids[0]]['attributes']],['red'])
+        self.assertEqual(net['rejected_caption_attributes'][0]['attribute']['value'],'kitchen')
+        self.assertEqual(net['rejected_caption_attributes'][0]['call_id'],'call-1')
+        self.assertEqual(original,report(r))
+        self.assertEqual(net['diagnostics'],[])
+
+    def test_attribute_filter_never_repoints_foreign_citations(self):
+        r=row();r['attributes']=[dict(field='color',value='red',source_caption_ids=['C999'])]
+        filtered,rejected=text.grounded_attributes(report(r),captions())
+        self.assertEqual(rejected,[])
+        with self.assertRaisesRegex(ValueError,'Foreign caption attribute'):
+            text.commit_page(new_network(),filtered,captions(),'S0','b0',[])
+
+    def test_recovery_schema_binds_exact_state_text_to_its_own_caption(self):
+        inp=dict(captions=captions(),entities=[],already_reported=[],page_size=12,
+                 copy_caption_states=True)
+        schema=output_schema('caption_temporal_observe',inp)
+        valid=report(row(state=captions()[0]['text']))
+        validate_output(valid,schema)
+        for invalid in (report(row(state='closing')),report(row(cid='C1',state=captions()[0]['text']))):
+            with self.assertRaises(ValueError):validate_output(invalid,schema)
+
+    def test_recovery_does_not_repeat_rejected_output_and_keeps_exact_sources(self):
+        net=new_network();calls=[]
+        class Meter:
+            def json(self,op,inputs,required):
+                calls.append(deepcopy(inputs))
+                state=captions()[0]['text'] if inputs.get('copy_caption_states') else 'closing'
+                return report(row(state=state)),{'call_id':str(len(calls))}
+        scene=dict(id='S0',caption_ids=['C0','C1'],interval=[0,2])
+        with tempfile.TemporaryDirectory() as tmp:
+            text.open_scene(net,scene,captions(),Meter(),tmp,{})
+        self.assertEqual(len(calls),2)
+        self.assertTrue(calls[1]['copy_caption_states'])
+        self.assertNotIn('rejected_output',calls[1]['validation_feedback'])
+        self.assertEqual(calls[1]['captions'],captions()[:2])
+        self.assertEqual(net['states']['T0']['description'],captions()[0]['text'])
+
+    def test_unsupported_cause_stays_unknown_without_losing_grounded_change(self):
+        net=new_network();text.commit_page(net,report(row()),captions(),'S0','b0',[])
+        changed=row('E0','C2','opens','changed')
+        changed['observations'][0]['cause']=dict(action='opens',actor='C',tool='knife',
+            basis='inferred_action',source_caption_ids=['C2'])
+        original=report(changed)
+        filtered,rejected=text.grounded_causes(original,captions())
+        self.assertEqual(rejected[0]['cause']['tool'],'knife')
+        self.assertEqual(original['entities'][0]['observations'][0]['cause']['tool'],'knife')
+        text.commit_page(net,filtered,captions(),'S0','b1',['E0'])
+        self.assertEqual(len(net['states']),2)
+        self.assertEqual(net['transitions'][0]['cause']['basis'],'unknown')
+        self.assertIsNone(net['transitions'][0]['cause']['tool'])
+
+    def test_grounded_cause_is_retained_and_foreign_cause_is_not_repaired(self):
+        r=row(cid='C2',state='opens')
+        r['observations'][0]['cause']=dict(action='opens',actor='C',tool=None,
+            basis='inferred_action',source_caption_ids=['C2'])
+        filtered,rejected=text.grounded_causes(report(r),captions())
+        self.assertEqual(filtered,report(r));self.assertEqual(rejected,[])
+        r['observations'][0]['cause']['source_caption_ids']=['C99']
+        filtered,rejected=text.grounded_causes(report(r),captions())
+        self.assertEqual(rejected,[])
+        with self.assertRaisesRegex(ValueError,'Foreign caption action'):
+            text.commit_page(new_network(),filtered,captions(),'S0','b0',[])
 
     def test_identity_merge_keeps_separate_state_fragments_and_inferred_status(self):
         net=new_network()
