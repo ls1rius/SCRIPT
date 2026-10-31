@@ -1,11 +1,16 @@
-# Local alias of the default scheme-3 pipeline and budgets; --scheme4 opts in.
+# Local default F; query --memory E selects complete E; --scheme4 selects the original cross-stage control.
 schema_version: 2
 seed: 0
 method: B2
 query:
-  pipeline: scheme3
+  pipeline: adaptive_partial_temporal
   temporal_entity_source: summary
   temporal_sparse_visual: true
+  temporal_qa_evidence: lazy_script
+  state_segment_max_gap_seconds: 2.0
+  entity_max_identity_gap_seconds: 8.0
+  field_extraction_batch_size: 2
+  memory_cache_directory: ""
   answer_order: original
   caption_policy: full
 initialization:

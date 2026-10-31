@@ -1,4 +1,4 @@
-"""Ordinary summary queries: scheme 3 by default, optional scheme-4 memory."""
+"""Ordinary summary queries: partial temporal by default, explicit original controls."""
 from copy import deepcopy
 import json
 import math
@@ -101,9 +101,12 @@ def load_source(base_dir,row,cfg):
 def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source_access_seconds=0.):
     from .temporal_pipeline import directory,run,run_cross_replay
     pipeline=cfg['query']['pipeline']
-    if pipeline not in ('scheme3','scheme4'):
-        raise ValueError('Summary query entry requires query.pipeline=scheme3 or scheme4')
-    scheme=4 if pipeline=='scheme4' else 3
+    if cfg['query'].get('temporal_qa_evidence','full')!='full' and pipeline!='adaptive_partial_temporal':
+        raise ValueError('memory_quotes requires adaptive_partial_temporal')
+    if pipeline not in ('adaptive_partial_temporal','adaptive_partial','scheme3','scheme4'):
+        raise ValueError('Summary query entry requires adaptive_partial_temporal, adaptive_partial, scheme3 or scheme4')
+    partial_pipeline=pipeline in ('adaptive_partial_temporal','adaptive_partial')
+    scheme=pipeline if partial_pipeline else 4 if pipeline=='scheme4' else 3
     if cfg['query']['temporal_entity_source']!='summary':
         raise ValueError('Summary queries require summary-derived entities')
     if total_cap is not None and (type(total_cap) not in (int,float) or not math.isfinite(total_cap)
@@ -112,8 +115,7 @@ def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
     request=dict(scheme=scheme,packet_hash=digest(packet),config_hash=digest(cfg),total_cap=total_cap)
     marker=output/f'{pipeline}_request.json'
-    other_marker=output/f'scheme{3 if scheme==4 else 4}_request.json'
-    if other_marker.exists():
+    if any((output/f'{other}_request.json').exists() for other in ('adaptive_partial_temporal','adaptive_partial','scheme3','scheme4') if other!=pipeline):
         raise ValueError('Existing output belongs to a different pipeline; choose a new output directory')
     if marker.exists():
         if not resume or read(marker)!=request:raise ValueError(f'Existing scheme-{scheme} output requires --resume with identical source, question and configuration')
@@ -132,6 +134,7 @@ def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source
     write_json(output/'query.json',dict(id=packet['question']['question_id'],video_id=packet['question']['video_id'],
         question=packet['question']['question'],options=packet['question']['options'],scope=[0,len(packet['captions'])]))
     settings=dict(SETTINGS,online_seconds=cfg['budget']['online_cap'])
+    settings['memory_cache_directory']=str(output.parent/'memory_cache')
     directory_path=output/'directory.json'
     if directory_path.exists():d=read(directory_path)
     else:
@@ -149,7 +152,38 @@ def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source
         finally:meter.close()
     if total_cap is not None:settings['online_seconds']=min(settings['online_seconds'],total_cap-d['cost_summary']['total'])
     preparation=output/'summary_search';bundle_path=preparation/'evidence_bundle.json'
-    if scheme==3:
+    if partial_pipeline:
+        from .adaptive_transition import run as run_partial
+        preparation=output/'partial_search'
+        temporal_enabled=pipeline=='adaptive_partial_temporal'
+        if (preparation/'result.json').exists():result=read(preparation/'result.json')
+        else:
+            if (preparation/'calls.jsonl').exists():
+                raise ValueError('Interrupted partial search needs a new output directory; its existing budget is retained')
+            result=run_partial(packet,d,packet.get('frames',[]),backend,cfg,preparation,settings,
+                               memory_path=output/'partial_memory.json',evidence_only=temporal_enabled)
+        if result.get('error'):raise RuntimeError('Adaptive partial query failed: '+str(result['error']))
+        if temporal_enabled:
+            from .partial_temporal import run as run_temporal
+            prepared=result
+            if not prepared.get('evidence_only') or prepared.get('answer'):
+                raise ValueError('Temporal preparation must export evidence without an answer')
+            bundle=read(preparation/'evidence_bundle.json')
+            final=output/'partial_temporal'
+            if (final/'result.json').exists():result=read(final/'result.json')
+            else:
+                if (final/'calls.jsonl').exists():
+                    raise ValueError('Interrupted temporal organization needs a new output directory; its existing budget is retained')
+                result=run_temporal(packet,bundle,backend,cfg,final,settings)
+            result=deepcopy(result)
+            result.update(reviews=prepared['reviews'],coverage_check=prepared['coverage_check'],
+                scope_requirement=prepared['scope_requirement'],retrieval=prepared['retrieval'],
+                shared_preparation_cost_summary=prepared['cost_summary'])
+            result['cost_summary']['budget_violation'] |= prepared['cost_summary'].get('budget_violation',False)
+        else:
+            if not result.get('answer'):raise ValueError('Adaptive partial result lacks its final answer')
+            bundle=None
+    elif scheme==3:
         if (preparation/'result.json').exists():
             result=read(preparation/'result.json')
         else:
@@ -172,16 +206,26 @@ def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source
             if (final/'calls.jsonl').exists():raise ValueError('Interrupted cross-stage answering needs a new output directory')
             result=run_cross_replay(packet,bundle,backend,cfg,final,settings)
     result=deepcopy(result)
+    result.setdefault('identity_comparisons',0)
+    result.setdefault('pixel_frame_count',len(result.get('supplemental_visual',{}).get('frame_ids',[])))
     result.update(scheme=scheme,pipeline=pipeline,config_hash=digest(cfg),base_hash=digest(packet),
         query=read(output/'query.json'),run_config=deepcopy(cfg),directory_cost_summary=d['cost_summary'],
-        source_preprocessing_reused=True,experiment_mode='live',source_evidence_only=scheme==4)
+        source_preprocessing_reused=True,experiment_mode='live',
+        source_evidence_only=scheme==4 or pipeline=='adaptive_partial_temporal')
     # Charge the directory once; each scheme generates exactly one final QA.
     cost=result['cost_summary'];directory_cost=d['cost_summary']['total']
     for key in ('initialization','total','budgeted_total','total_cap'):cost[key]+=directory_cost
     cost['budget_violation']=cost['budget_violation'] or d['cost_summary']['budget_violation']
-    enough=bool(bundle['reviews'] and bundle['reviews'][-1]['sufficient'] and
-                bundle['reviews'][-1]['coverage_check']['met'] and not result['incomplete'])
-    reason='scheme4_bounded_summary_search_and_cross_stage_memory' if scheme==4 else 'scheme3_bounded_summary_search'
+    if partial_pipeline:
+        enough=bool(not result.get('error') and result.get('answer') and result['reviews'] and result['reviews'][-1]['sufficient'] and
+                    result['coverage_check']['met'] and not result['incomplete'] and not result.get('source_incomplete'))
+        reason=('adaptive_partial_whole_scene_selective_extraction_and_temporal_organization'
+                if pipeline=='adaptive_partial_temporal' else 'adaptive_partial_whole_scene_selective_extraction')
+    else:
+        enough=bool(bundle['reviews'] and bundle['reviews'][-1]['sufficient'] and
+                    bundle['reviews'][-1]['coverage_check']['met'] and not result['incomplete'])
+        reason='scheme4_bounded_summary_search_and_cross_stage_memory' if scheme==4 else 'scheme3_bounded_summary_search'
+    result['total_measured_seconds']=cost.get('budgeted_total',cost['total'])
     result['stop_decision']=dict(reason=reason,
         evidence_status='sufficient' if enough else 'insufficient')
     write_json(output/'result.json',result)
@@ -190,7 +234,7 @@ def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source
 
 def run_queries(args,questions,cfg,backend):
     from script_qa import safe_directory_id
-    pipeline=cfg['query']['pipeline'];scheme=4 if pipeline=='scheme4' else 3
+    pipeline=cfg['query']['pipeline'];scheme=pipeline if pipeline in ('adaptive_partial_temporal','adaptive_partial') else 4 if pipeline=='scheme4' else 3
     root=Path(args.base);index=read(root/'videos.json') if (root/'videos.json').exists() else None
     rows=[]
     for row in questions:
@@ -208,7 +252,7 @@ def run_queries(args,questions,cfg,backend):
             # All actual leaf calls are retained across the three stages. The
             # shared source preparation appears in these logs only once.
             calls=[]
-            for name in ('directory_calls','summary_search','cross_stage'):
+            for name in ('directory_calls','partial_search','partial_temporal','summary_search','cross_stage'):
                 p=output/name/'calls.jsonl'
                 if p.exists():calls.extend(json.loads(line) for line in p.read_text().splitlines() if line.strip())
             consumed=sum(c['actual_cost'] for c in calls)

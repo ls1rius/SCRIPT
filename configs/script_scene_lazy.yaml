@@ -4,6 +4,7 @@ seed: 0
 initialization:
   caption_source: provided
 query:
+  temporal_qa_evidence: full
   pipeline: legacy
   answer_order: original
   caption_policy: full

@@ -113,23 +113,42 @@ def compact_context(context):
         evidence_policy='Sampled visual-model assertions. Unknown time/causes stay unknown. Unobserved gaps are not continuity.')
 
 
+def qa_context_inputs(query,captions,selected,view,use_memory=True,visual_observations=(),
+                      evidence_mode='full',max_quotes=12,quotes_per_fact=2,information_types=None):
+    """Build either the original template or the explicit memory/quotation input."""
+    if evidence_mode in ('memory_quotes','typed_memory_quotes'):
+        if not use_memory:
+            raise ValueError('memory_quotes requires entity memory')
+        from .memory_evidence import prepare_memory_input, qa_inputs as memory_qa_inputs
+        memory,visual,audit=prepare_memory_input(captions,selected,view,visual_observations,
+            max_quotes,quotes_per_fact,evidence_mode,information_types)
+        return memory_qa_inputs(query,memory,audit,visual)
+    if evidence_mode != 'full':
+        raise ValueError('Unknown temporal QA evidence mode')
+    from .compatibility import qa_inputs
+    inp=qa_inputs(query,captions,selected)
+    if use_memory:
+        provenance=('original summary/caption assertions; identities are text inferences; not pixel verified'
+                    if view.get('source_type')=='caption' else 'sampled visual observations; uncertain bounds/causes explicit')
+        inp['prompts'][-1]+='\n\nTemporal entity memory ('+provenance+'):\n'+json.dumps(view,ensure_ascii=False,separators=(',',':'))
+    if visual_observations:
+        inp['prompts'][-1]+='\n\nSupplemental sampled visual observations (independently checked by the visual model; valid only for the cited sample, not unseen events or whole-video coverage):\n'+json.dumps(visual_observations,ensure_ascii=False,separators=(',',':'))
+    return inp
+
+
 @metered_cpu('temporal_qa_context_selection')
-def fit_qa_context(query,captions,selected,context,meter,use_memory=True,final=False,visual_observations=()):
+def fit_qa_context(query,captions,selected,context,meter,use_memory=True,final=False,visual_observations=(),
+                   evidence_mode='full',max_quotes=12,quotes_per_fact=2,information_types=None):
     """Check the actual QA template; omit lowest-ranked whole entities explicitly.
 
-    Captions, question and option order are never truncated. The complete source
-    network stays on disk; this changes only the bounded final retrieval view.
+    Full mode keeps all selected captions. Memory/quotation mode recomputes its
+    citations after each removal. The question and option order are unchanged;
+    the complete source network stays on disk.
     """
-    from .compatibility import qa_inputs
     view=deepcopy(context);omitted=[]
     while True:
-        inp=qa_inputs(query,captions,selected)
-        if use_memory:
-            provenance=('original summary/caption assertions; identities are text inferences; not pixel verified'
-                        if view.get('source_type')=='caption' else 'sampled visual observations; uncertain bounds/causes explicit')
-            inp['prompts'][-1]+='\n\nTemporal entity memory ('+provenance+'):\n'+json.dumps(view,ensure_ascii=False,separators=(',',':'))
-        if visual_observations:
-            inp['prompts'][-1]+='\n\nSupplemental sampled visual observations (independently checked by the visual model; valid only for the cited sample, not unseen events or whole-video coverage):\n'+json.dumps(visual_observations,ensure_ascii=False,separators=(',',':'))
+        inp=qa_context_inputs(query,captions,selected,view,use_memory,visual_observations,
+            evidence_mode,max_quotes,quotes_per_fact,information_types)
         try:
             # Context checking is part of final preparation. Exploration may
             # already have spent its allowance, while the QA reserve is intact.
@@ -152,6 +171,10 @@ def fit_qa_context(query,captions,selected,context,meter,use_memory=True,final=F
         view['lineage']=[r for r in view['lineage'] if r['child'] in ids and r['parent'] in ids]
         if 'identities' in view:
             view['identities']=[r for r in view['identities'] if r['left_entity'] in ids and r['right_entity'] in ids]
+        if evidence_mode != 'full' and 'unresolved_observations' in view:
+            view['unresolved_observations']=[o for o in view['unresolved_observations'] if o['entity_id'] in ids]
+        if 'source_observations' in view:
+            view['source_observations']=[o for o in view['source_observations'] if o['entity_id'] in ids]
         view['context_selection']=dict(view['context_selection'],selected_entities=len(ids),selected_states=len(sids),
             token_budget_omitted_entity_ids=list(omitted),
             token_budget_policy='Remove lowest-ranked complete entity records and dependent edges; full source network retained.')
@@ -304,7 +327,7 @@ def run_cross_replay(packet,bundle,backend,cfg,target,settings=SETTINGS):
     target=Path(target);target.mkdir(parents=True,exist_ok=True)
     # Reused search/extraction/visual work is still charged at its measured cost
     # inside the same online cap. Cache replay does not grant a free budget.
-    shared=bundle['preparation_cost_summary']['total']
+    shared=bundle['preparation_cost_summary'].get('budgeted_total', bundle['preparation_cost_summary']['total'])
     ledger=BudgetLedger(settings['online_seconds'],initialization_cost=shared,
         answer_reserve=cfg['budget']['final_answer_reserve'],calls_path=target/'calls.jsonl')
     meter=Meter(backend,ledger,cfg,target/'raw_calls')

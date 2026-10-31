@@ -1,0 +1,223 @@
+{
+  "created_at": "2026-10-31T17:37:05.221695+08:00",
+  "workspace": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT",
+  "workdirs_root": "/mnt/ssd2/hli/work/workdirs/VideoAgent",
+  "archived_files": [
+    {
+      "source": "script/continue_with_cache.py",
+      "destination": "script/archive/legacy_20261031/continue_with_cache.py",
+      "sha256_before": "8aa8d9d34fc4e220aaa323d092adf3d8d83ce18eb7e5e4b629320b78625fa52d",
+      "sha256_after": "4f03ddd439b31ab888acf9be523d9ff8f32cd5ff4f2c9be4367bf1949277a80a"
+    },
+    {
+      "source": "script/run_compact_gpu3_shared.py",
+      "destination": "script/archive/legacy_20261031/run_compact_gpu3_shared.py",
+      "sha256_before": "ef00d3fd30ec35814a2decf387c26c822f1426d587c56d31d69cb5ed65c5be8f",
+      "sha256_after": "da1cdc8a5dc6e8706b71cb11fc90f4259c14124f81fb9b681c460e6d42971efd"
+    },
+    {
+      "source": "script/run_normalized_memory_comparison.py",
+      "destination": "script/archive/legacy_20261031/run_normalized_memory_comparison.py",
+      "sha256_before": "f87075fa853be3547bbf265acbbadd21c82c9fecd7a094586e2a27079f4a6e99",
+      "sha256_after": "5bb37ec13713ff4e97e5761e41a9b969e7d1463b285c00ea047ab35e97ef6301"
+    },
+    {
+      "source": "script/run_partial_preflight.py",
+      "destination": "script/archive/legacy_20261031/run_partial_preflight.py",
+      "sha256_before": "5ed0e3596a210d5064778722e08caaf74a0387d0e0941575ade77914a17116f7",
+      "sha256_after": "b32454954716549a3294ffd2d87930e0214f251de969b295d273e99acabb2041"
+    },
+    {
+      "source": "script/run_scheme4_preflight.py",
+      "destination": "script/archive/legacy_20261031/run_scheme4_preflight.py",
+      "sha256_before": "f0606d3a3361b8e21e566ca0fba077d0082905eab3b94515778fd3755538b64f",
+      "sha256_after": "39f5bcdd2dfffdd3fbc94d705fe9b8bada4237f769e260fa5b87ea49c8f2325c"
+    },
+    {
+      "source": "script/preview_memory_quotes.py",
+      "destination": "script/archive/legacy_20261031/preview_memory_quotes.py",
+      "sha256_before": "8cda327d205060079e3563aa3b673cc62a14a1bedc30b875b7599ea5e67082b2",
+      "sha256_after": "599deba5bba0df87c145e38a21ee9520f7ad463b20c75a7e5e3344af996f4b65"
+    },
+    {
+      "source": "script/run_shared_evidence_qa.py",
+      "destination": "script/archive/legacy_20261031/run_shared_evidence_qa.py",
+      "sha256_before": "299f3c173408ca7217ba082dffb7dcf4864b714af8033343e77f74f2b45e42c4",
+      "sha256_after": "855da20d27aeffdae5c8b2e7c150283e42805d4a13476e86bbfb23bba7fc77c0"
+    },
+    {
+      "source": "script/optimize_lazy_script_execution.py",
+      "destination": "script/archive/legacy_20261031/optimize_lazy_script_execution.py",
+      "sha256_before": "ba2c15f446a87f564e80b073bae86fdf63c1161563d2ebe944c28665b49ae469",
+      "sha256_after": "36f25f2c9b595607a77cb1c2464e80416591def6ccf832761f090a4d796c738a"
+    },
+    {
+      "source": "script/run_gpu_query.py",
+      "destination": "script/archive/legacy_20261031/run_gpu_query.py",
+      "sha256_before": "4829e7dc9e896cef639c3be071b508987141851e0ac8b9bb7af5a6b50c61fe48",
+      "sha256_after": "580bad578bd80d6757579334115658c4482254ca04af49b659d3f57d62db60a3"
+    },
+    {
+      "source": "script/run_script_args.py",
+      "destination": "script/archive/legacy_20261031/run_script_args.py",
+      "sha256_before": "41096f74ff7464bbe5ce8db34b5b842c42eb7d7bc98e7e66fa5cad91bc6083d0",
+      "sha256_after": "1cf98cb8af124695c39803d68f6320f2316898aec7337548ea1a67466ea76efd"
+    },
+    {
+      "source": "script/smoke_script.py",
+      "destination": "script/archive/legacy_20261031/smoke_script.py",
+      "sha256_before": "bc44070c49e81b58504b409761cdf193193c9d0e6e5e2b63e2d03e1b3094a894",
+      "sha256_after": "ed2cdff07248f474800a67aa1d5e4b6018ffe7828022487fbe49e46b0727e5d1"
+    },
+    {
+      "source": "script/submit_query.sh",
+      "destination": "script/archive/legacy_20261031/submit_query.sh",
+      "sha256_before": "a0a31ef46048d15d6af2be1f631a7843b6f8224478197506b11fd0075190e3c2",
+      "sha256_after": "7e958e489f20222ad940a495b03e1a6ff21a4d4d4d575e6919a84834fd1f2a5e"
+    },
+    {
+      "source": "script/gpu_smoke.pbs",
+      "destination": "script/archive/legacy_20261031/gpu_smoke.pbs",
+      "sha256_before": "ec54bc7601cbf32f5d5af1ab980c03a2beedb8091e31c6f032ab851042c7350e",
+      "sha256_after": "c57901ccf1ec830b018af7fcfb92ea2a56a338b1dc617034494fb8ccb660ce9d"
+    },
+    {
+      "source": "script/script_smoke.pbs",
+      "destination": "script/archive/legacy_20261031/script_smoke.pbs",
+      "sha256_before": "7284a9d1a94c7420916d83e364bfe018034185a0ea3cdc23dc1a5ee750d508ce",
+      "sha256_after": "d534b6289865edd97fbfa8f9ef472776b9058ce9c4f905d0a05b16222be9faa4"
+    },
+    {
+      "source": "docs/SCRIPT_Complete_Research_and_Implementation_Plan_2026-10-14.docx",
+      "destination": "docs/history/SCRIPT_Complete_Research_and_Implementation_Plan_2026-10-14.docx",
+      "sha256_before": "f242d338139b796cc31c61086e9befc269729debf2523f4bc4582e66a983e5d4",
+      "sha256_after": "f242d338139b796cc31c61086e9befc269729debf2523f4bc4582e66a983e5d4"
+    },
+    {
+      "source": "docs/SCRIPT_Entity_Extraction_Optimization_Plan_2026-10-23.md",
+      "destination": "docs/history/SCRIPT_Entity_Extraction_Optimization_Plan_2026-10-23.md",
+      "sha256_before": "ad04c72d6c733b5b7d4f94738851e13ee6f605545bdad3556aabb4e4de0ae7d7",
+      "sha256_after": "65fe3d25df65ddceaefb05a990ce94340911ea4951de8914540fcfdb68c219a8"
+    },
+    {
+      "source": "docs/SCRIPT_Four_Arm_Experiment_Record_2026-10-23.md",
+      "destination": "docs/history/SCRIPT_Four_Arm_Experiment_Record_2026-10-23.md",
+      "sha256_before": "1c742a292ae699d8acda3ba6a000ac2c141bcbf3da4e6401cb98f83c30f63b1a",
+      "sha256_after": "c8f0a9addb13c9166cebe2e05788730546d9bd61b658a0a962cb44772f2a54cd"
+    },
+    {
+      "source": "docs/SCRIPT_Temporal_Entity_Relation_Plan_2026-10-19.md",
+      "destination": "docs/history/SCRIPT_Temporal_Entity_Relation_Plan_2026-10-19.md",
+      "sha256_before": "c5d406f53473b2136296f1e8ca319c8b284f28c334c6c5814f7d8dcf7db3659b",
+      "sha256_after": "18da3bcca6668b33639374a2eb49fd87e2d38a33a7b54a24e156a214c407649b"
+    }
+  ],
+  "deleted_workdirs": [
+    {
+      "directory": "asset-download-env",
+      "allocated_bytes": 45850624,
+      "file_count": 1912,
+      "reason": "Unused download-only environment"
+    },
+    {
+      "directory": "batch-extraction-speed-20261030-r1",
+      "allocated_bytes": 2871296,
+      "file_count": 184,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "compact-evidence-merged-preview-20261029-r1",
+      "allocated_bytes": 28467200,
+      "file_count": 934,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "compact-evidence-preview-20261029-r1",
+      "allocated_bytes": 13438976,
+      "file_count": 773,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "compact-evidence-preview-20261029-r2",
+      "allocated_bytes": 13455360,
+      "file_count": 774,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "compact-evidence-preview-20261029-r3",
+      "allocated_bytes": 15052800,
+      "file_count": 842,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "memory-quotes-preview-20261027-r1",
+      "allocated_bytes": 3911680,
+      "file_count": 439,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "memory-quotes-preview-20261027-r2",
+      "allocated_bytes": 3940352,
+      "file_count": 440,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "typed-memory-no-action-preview-20261027-r1",
+      "allocated_bytes": 6914048,
+      "file_count": 444,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "typed-memory-no-action-preview-20261027-r2",
+      "allocated_bytes": 6893568,
+      "file_count": 443,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "typed-memory-preview-20261027-r1",
+      "allocated_bytes": 9019392,
+      "file_count": 443,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    },
+    {
+      "directory": "typed-memory-preview-20261027-r2",
+      "allocated_bytes": 9023488,
+      "file_count": 444,
+      "reason": "Reproducible no-model preview or cancelled benchmark"
+    }
+  ],
+  "removed_caches": [
+    "__pycache__",
+    "data_extraction/__pycache__",
+    "kmeans_pytorch/__pycache__",
+    "script/__pycache__",
+    "script_core/__pycache__",
+    "tests/__pycache__"
+  ],
+  "policy": "Archive obsolete source/docs; delete only reproducible previews, cancelled no-call benchmark and unused download env. Keep frozen experiments, failed-call ledgers and live work.",
+  "archived_readme": "docs/history/SCRIPT_Readme_Before_Cleanup_2026-10-31.md",
+  "deleted_file_inventory": "docs/history/Cleanup_2026-10-31_inventory.json",
+  "finished_at": "2026-10-31T17:41:05.583385+08:00",
+  "archived_readme_sha256": "377aa039c51d6e835f8aed8fc854bb06157606963c7e5d84ac9a5378a5f1c618",
+  "validation": {
+    "tests_run": 849,
+    "passed": 848,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "skip_reason": "Optional local .vscode/launch.json absent",
+    "archived_python_syntax": true,
+    "archived_shell_syntax": true,
+    "protected_frozen_runs": [
+      "joint-entities-E-300-20261029-r3",
+      "lazy-script-F-300-20261030-r3",
+      "generalized-entities-G-300-20261030-r3",
+      "generalized-lazy-H-300-20261031-r2"
+    ],
+    "frozen_file_changes": 0,
+    "live_runs_retained": [
+      "generalized-entities-G-300-20261030-r3",
+      "G-RL-train200-eval300-20261031-r3"
+    ]
+  }
+}

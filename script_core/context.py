@@ -66,10 +66,15 @@ def model_view(inputs):
     result = compact(inputs)
     if inputs.get('options'):
         # Keep each ID beside its text; parallel arrays caused observed ID drift.
-        result['options'] = [{'option_id': str(i), 'text': text}
-                             for i, text in enumerate(inputs['options'])]
+        if all(isinstance(o,dict) and isinstance(o.get('option_id'),str) and isinstance(o.get('text'),str)
+                for o in inputs['options']):
+            result['options'] = [dict(option_id=o['option_id'],text=o['text']) for o in inputs['options']]
+        else:
+            result['options'] = [{'option_id': str(i), 'text': text}
+                                 for i, text in enumerate(inputs['options'])]
         from .query_policy import option_distinctions
-        result['option_distinctions'] = option_distinctions(inputs['options'])
+        result['option_distinctions'] = [dict(row,option_id=option['option_id']) for row,option in
+            zip(option_distinctions([o['text'] for o in result['options']]),result['options'])]
     return result
 
 

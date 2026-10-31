@@ -90,13 +90,17 @@ def prepare(output, count):
     print('PREPARED', count, 'real EgoSchema videos', flush=True)
 
 
-def ordinary_query(output, scheme4=False):
+def ordinary_query(output, scheme4=False, pipeline=None):
     from script_qa import main as query_main
-    pipeline='scheme4' if scheme4 else 'scheme3'
+    pipeline='scheme4' if scheme4 else pipeline or 'adaptive_partial_temporal'
     args=['query', '--base', str(output), '--questions', str(output/'questions.jsonl'),
           '--config', str(ROOT/'configs/script.yaml'),
           '--out', str(output/pipeline), '--resume']
     if scheme4:args.append('--scheme4')
+    elif pipeline=='scheme3':
+        args[args.index('--config')+1]=str(ROOT/'configs/script_scheme3.yaml')
+    elif pipeline=='adaptive_partial':
+        args[args.index('--config')+1]=str(ROOT/'configs/script_partial.yaml')
     return query_main(args)
 
 
@@ -144,7 +148,7 @@ def worker(output, arm):
     return int(failed)
 
 
-def parallel(output, count, gpu_ids, ordinary_arm='scheme3'):
+def parallel(output, count, gpu_ids, ordinary_arm='adaptive_partial_temporal'):
     if not gpu_ids or len(set(gpu_ids)) != len(gpu_ids):
         raise ValueError('--gpus requires distinct idle GPU indices')
     def inventory():
@@ -199,26 +203,26 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT/'workdirs/dev-four-arm-smoke-r5')
     parser.add_argument('--num-examples', type=int, default=2)
-    parser.add_argument('--arm', choices=['all', 'scheme3', 'scheme4', 'cluster_qa', 'temporal_local', 'summary_pair'], default='all')
+    parser.add_argument('--arm', choices=['all', 'adaptive_partial_temporal', 'adaptive_partial', 'scheme3', 'scheme4', 'cluster_qa', 'temporal_local', 'summary_pair'], default='all')
     parser.add_argument('--scheme4', action='store_true', help='Enable scheme 4 for the ordinary query')
     parser.add_argument('--gpus', help='Idle GPU indices for parallel validation, e.g. 4,5,7')
     parser.add_argument('--prepare-only', action='store_true')
     args = parser.parse_args()
-    if args.scheme4 and args.arm not in ('all','scheme3','scheme4'):
+    if args.scheme4 and args.arm not in ('all','adaptive_partial_temporal','adaptive_partial','scheme3','scheme4'):
         parser.error('--scheme4 applies only to ordinary queries (--arm all/scheme3/scheme4)')
     cross_stage=args.scheme4 or args.arm=='scheme4'
     output = args.output.resolve()
     prepare(output, args.num_examples)
     if args.prepare_only:
         return 0
-    if args.arm not in ('all', 'scheme3', 'scheme4'):
+    if args.arm not in ('all', 'adaptive_partial_temporal', 'adaptive_partial', 'scheme3', 'scheme4'):
         return worker(output, args.arm)
     if args.arm == 'all' and args.gpus:
         return parallel(output, args.num_examples, args.gpus.split(','),
-                        ordinary_arm='scheme4' if cross_stage else 'scheme3')
+                        ordinary_arm='scheme4' if cross_stage else 'adaptive_partial_temporal')
     if args.arm == 'all':
         work(output, 'summary_pair', 0, smoke=True)
-    status = ordinary_query(output, scheme4=cross_stage)
+    status = ordinary_query(output, scheme4=cross_stage,pipeline=None if args.arm=='all' else args.arm)
     if status:
         return status
     if args.arm == 'all' and not gate(output):

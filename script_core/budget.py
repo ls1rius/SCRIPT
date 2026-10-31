@@ -137,6 +137,7 @@ class BudgetLedger:
                 'online': self.actual, 'total': self.initialization_cost+self.actual,
                 'shared_dependency_seconds': self.dependency_cost,
                 'budgeted_total': self.initialization_cost+self.actual+self.dependency_cost,
+                'text_cache_hits': sum(bool(c.get('tool_cache', {}).get('hit')) for c in self.calls),
                 'total_cap': self.total_cap, 'budget_violation': self.budget_violation,
                 'by_operation': groups, 'call_count': len(self.calls), 'resources': self.resources()}
         # Kept below as a separate public method so resumed historical logs remain readable.
@@ -261,6 +262,8 @@ class Meter:
         self.active_token = ACTIVE.set(self)
         self.active_task_id = None
         self.closed = False
+        from .persistent_cache import TextCache
+        self.text_cache = TextCache(cfg, self.raw_directory)
 
     def close(self):
         from .accounting import ACTIVE
@@ -278,6 +281,30 @@ class Meter:
         if final and operation != 'prepare_vlm':
             cap = self.cfg['budget']['final_answer_reserve']
         call_id = str(uuid.uuid4())
+        lookup_start, lookup_cpu_start = time.monotonic(), time.process_time()
+        entry = self.text_cache.get(operation, inputs)
+        lookup_seconds, lookup_cpu = time.monotonic()-lookup_start, time.process_time()-lookup_cpu_start
+        if entry is not None:
+            from copy import deepcopy
+            charge = 0. if entry['key'] in self.ledger.dependency_keys else entry['source_seconds']
+            allowance = self.ledger.allowance(cap, final=final)
+            if charge + lookup_seconds + .005 > allowance:
+                raise ResourceExhausted(f'Cached {operation} source cost exceeds the remaining processing allowance')
+            output = deepcopy(entry['output'])
+            original_usage = output.get('usage', {})
+            output['usage'] = dict(input_tokens=0, output_tokens=0, cpu_seconds=lookup_cpu,
+                gpu_resident_seconds=0., gpu_peak_allocated_bytes=0,
+                tool_cache=dict(hit=True, key=entry['key'], source_seconds=entry['source_seconds'],
+                    scope=self.text_cache.scope, origin=entry['origin'],
+                    source_input_tokens=original_usage.get('input_tokens', 0),
+                    source_output_tokens=original_usage.get('output_tokens', 0)))
+            from .state import write_json
+            path = self.raw_directory/f'{call_id}-0.json'
+            write_json(path, dict(inputs=inputs, output=output, error=None))
+            call = self.ledger.record(operation, inputs, allowance, lookup_start, output,
+                task_id=task_id, call_id=call_id, model_hash=digest(self.cfg['models']))
+            call['output_ref'] = str(path)
+            return output, call
         retries = self.cfg['query']['tool_transient_retries']
         for attempt in range(retries+1):
             from .prompts import CONTRACTS
@@ -317,8 +344,9 @@ class Meter:
                 raise ResourceExhausted(f'Insufficient allowance to finish {operation}; call skipped')
             if allowance < .001:
                 raise ResourceExhausted('No processing budget available')
-            started = time.monotonic()
-            parent_cpu = time.process_time()
+            started = time.monotonic()-lookup_seconds
+            parent_cpu = time.process_time()-lookup_cpu
+            lookup_seconds = lookup_cpu = 0.
             output, error, failure = None, None, None
             from .state import write_json
             pending = self.raw_directory / f'{call_id}-{attempt}.pending.json'
@@ -347,6 +375,15 @@ class Meter:
             call['output_ref'] = str(path)
             pending.unlink()
             if error is None:
+                cache_key = self.text_cache.key(operation, inputs)
+                if cache_key is not None:
+                    cache_started = time.monotonic()
+                    cache_allowance = self.ledger.allowance(cap, final=final)
+                    self.text_cache.put(operation, inputs, output, call['actual_cost'],
+                        dict(call_id=call_id, output_ref=str(path), model_hash=call['model_hash']))
+                    self.ledger.dependency_keys.add(cache_key)
+                    self.ledger.record('text_cache_write', {'in_process': True}, cache_allowance,
+                        cache_started, output={'usage': {'gpu_resident_seconds': 0.}})
                 if operation == 'prepare_vlm':
                     self.ledger.warmup_minimum = max(30., call['actual_cost']*1.25+8.)
                     if self.ledger.warmup_reserve:
@@ -368,7 +405,8 @@ class Meter:
         defaults = {'observe': 4., 'extract': 12., 'assess': 6., 'detect': 6.,
                     'verify_claim': 3., 'verify_claims': 7., 'verify_identity': 4., 'coverage': 5., 'goal': 4., 'answer': 3.}
         samples = [c['actual_cost'] for c in self.ledger.calls
-                   if c['operation'] == operation and not c.get('error')][-3:]
+                   if c['operation'] == operation and not c.get('error')
+                   and not c.get('tool_cache', {}).get('hit')][-3:]
         processing = statistics.median(samples) if samples else defaults.get(operation, 1.)
         # Include the existing 8s cancellation/log reserve and 2s soft deadline
         # margin, otherwise a "fitting" generation would have too little runtime.
@@ -421,7 +459,9 @@ class Meter:
             except (KeyError, TypeError, ValueError) as exc:
                 if attempt == self.cfg['query']['json_repair_retries']:
                     raise ToolFailure(f'Invalid {operation} JSON: {exc}') from exc
-                if operation in ('scene_scope','temporal_review','caption_temporal_observe'):
+                if operation in ('scene_scope','temporal_review','caption_temporal_observe',
+                                 'transition_next', 'transition_extract', 'optimized_events',
+                                 'optimized_extract', 'optimized_plan', 'adaptive_next', 'adaptive_extract', 'partial_temporal_organize', 'partial_temporal_identity'):
                     # Regenerate from canonical input IDs. Copying a malformed
                     # aliased output into repair can preserve broken references
                     # and repeats the same overlong free-text continuation.
@@ -430,6 +470,11 @@ class Meter:
                         'Keep explanations under 60 characters. Do not copy the rejected output.'))
                     if operation=='caption_temporal_observe':
                         inputs.update(page_size=1,max_observations=3)
+                    if operation in ('optimized_extract', 'optimized_events'):
+                        # A malformed free-text diagnostic must not repeatedly
+                        # truncate a valid fact page. Regenerate all facts with
+                        # an explicitly empty diagnostic, never complete JSON.
+                        inputs['compact_diagnostics'] = True
                     output,call=self.call(operation,inputs,task_id,final,build)
                     continue
                 output, call = self.call('repair', {'original_operation': operation,

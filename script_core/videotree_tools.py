@@ -47,6 +47,11 @@ def explicit_qa_answer(response):
     matches=re.findall(r'(?im)^\s*(?:prediction|(?:the\s+)?(?:correct\s+)?answer)\s*'
                        r'(?::|=|\bis\b)\s*(?:option\s+)?[\[(]?([A-E])\b',clean)
     choices=set(c.upper() for c in matches)
+    # The original instruction explicitly permits a single-letter answer.
+    # Accept it only as a whole first line, not a letter in explanatory prose.
+    first = re.fullmatch(r'[\[(]?([A-E])[\])]?[.]?', clean.split('\n', 1)[0].strip())
+    if first:
+        choices.add(first.group(1))
     return ord(next(iter(choices)))-ord('A') if len(choices)==1 else -1
 
 

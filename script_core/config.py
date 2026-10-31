@@ -4,6 +4,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+from .typed_memory import INFORMATION_TYPES, validate_types
 
 
 def digest(value):
@@ -16,7 +17,8 @@ DEFAULTS = {
     'construction': {'strategy': 'goal_lazy', 'prebuild_entity_candidates': False,
                      'prebuild_relations': False, 'prebuild_identity_links': False},
     'cache': {'scope': 'query', 'strict_input_match': True, 'reuse_overlap_inputs': True,
-              'verify_dependencies_on_read': True, 'share_query_bindings': False},
+              'verify_dependencies_on_read': True, 'share_query_bindings': False,
+              'persistent_directory': '', 'persistent_scope': ''},
     'models': {'visual_encoder': 'checkpoints/BAAI/EVA-CLIP-8B',
                'detector': 'checkpoints/IDEA-Research/grounding-dino-tiny',
                'vlm': 'checkpoints/Qwen/Qwen2.5-VL-7B-Instruct',
@@ -55,7 +57,13 @@ DEFAULTS = {
               'no_progress_before_backtrack': 2, 'explore_every_nonexploration_tasks': 3,
               'global_recovery_rounds': 2, 'tool_transient_retries': 1, 'json_repair_retries': 1,
               'temporal_compact_keys': False, 'temporal_delta_observations': False,
-              'temporal_entity_source': 'summary','temporal_sparse_visual': True,'pipeline':'scheme3'},
+              'temporal_entity_source': 'summary','temporal_sparse_visual': True,'pipeline':'adaptive_partial_temporal',
+              'temporal_qa_evidence': 'lazy_script', 'temporal_qa_max_quotes': 12,
+              'state_segment_max_gap_seconds': 2.,
+              'entity_max_identity_gap_seconds': 8.,
+              'field_extraction_batch_size': 2, 'memory_cache_directory': '',
+              'temporal_qa_quotes_per_fact': 2,
+              'temporal_qa_information_types': list(INFORMATION_TYPES)},
     'compatibility': {'enabled': False, 'feature_directory': 'data/EgoSchema/egoschema_features',
                       'cache_directory': '', 'graph_retrieval': False, 'retrieval_feedback': False,
                       'visual_verification': False, 'answer_protection': False,
@@ -110,12 +118,36 @@ def load_config(path=None):
 
 
 def validate_config(cfg):
-    if cfg['query']['pipeline'] not in ('scheme3','scheme4','legacy'):
-        raise ValueError('query.pipeline must be scheme3, scheme4 or legacy')
+    if cfg['query']['pipeline'] not in ('adaptive_partial_temporal','adaptive_partial','scheme3','scheme4','legacy'):
+        raise ValueError('query.pipeline must be adaptive_partial_temporal, adaptive_partial, scheme3, scheme4 or legacy')
     if type(cfg['query']['temporal_sparse_visual']) is not bool:
         raise ValueError('temporal_sparse_visual must be boolean')
     if cfg['query']['temporal_entity_source'] not in ('summary','images'):
         raise ValueError('temporal_entity_source must be summary or images (legacy baseline)')
+    if cfg['query']['temporal_qa_evidence'] not in ('full', 'memory_quotes', 'typed_memory_quotes',
+            'complete_with_quotes','complete_structured','state_segments','joint_entities','lazy_script'):
+        raise ValueError('Unknown temporal_qa_evidence mode')
+    gap = cfg['query']['state_segment_max_gap_seconds']
+    if type(gap) not in (int, float) or not math.isfinite(gap) or gap < 0:
+        raise ValueError('state_segment_max_gap_seconds must be finite and nonnegative')
+    gap=cfg['query']['entity_max_identity_gap_seconds']
+    if type(gap) not in (int,float) or not math.isfinite(gap) or gap < 0:
+        raise ValueError('entity_max_identity_gap_seconds must be finite and nonnegative')
+    batch=cfg['query']['field_extraction_batch_size']
+    if type(batch) is not int or batch not in (1,2,4):
+        raise ValueError('field_extraction_batch_size must be 1, 2 or 4')
+    if not isinstance(cfg['query']['memory_cache_directory'],str):
+        raise ValueError('memory_cache_directory must be a path string')
+    included=validate_types(cfg['query']['temporal_qa_information_types'])
+    if cfg['query']['temporal_qa_evidence']!='typed_memory_quotes' and set(included)!=set(INFORMATION_TYPES):
+        raise ValueError('Information-type filtering requires typed_memory_quotes')
+    for name in ('temporal_qa_max_quotes', 'temporal_qa_quotes_per_fact'):
+        if type(cfg['query'][name]) is not int or cfg['query'][name] < 1:
+            raise ValueError('query.'+name+' must be a positive integer')
+    if cfg['query']['temporal_qa_evidence'] != 'full' and (
+            cfg['query']['pipeline'] != 'adaptive_partial_temporal'
+            or cfg['query']['temporal_entity_source'] != 'summary'):
+        raise ValueError('Final evidence modes require the caption-derived adaptive_partial_temporal pipeline')
     def finite_values(value):
         if isinstance(value, dict):
             for v in value.values():

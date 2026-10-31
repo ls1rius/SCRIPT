@@ -18,7 +18,7 @@ def constrained_prefix(tokenizer_data, schema, operation):
     prefix = build_transformers_prefix_allowed_tokens_fn(tokenizer_data, parser)
     # TokenEnforcer.__init__ replaces parser.config. Setting this in the
     # JsonSchemaParser constructor is silently undone by the integration.
-    if operation in ('temporal_observe', 'temporal_align','caption_temporal_observe'):
+    if operation in ('e_joint_extract','f_plan_fields','f_extract_fields','semantic_memory_extract','normalize_memory_units','temporal_observe', 'temporal_align','caption_temporal_observe', 'adaptive_extract', 'transition_extract', 'transition_next', 'optimized_plan', 'optimized_extract', 'optimized_events', 'partial_temporal_organize', 'partial_temporal_identity'):
         parser.config.force_json_field_order = True
     return prefix
 
@@ -40,7 +40,11 @@ def decode_structured_text(text):
     clean=text.strip()
     if clean.startswith('```'):
         clean=clean.split('\n',1)[1].rsplit('```',1)[0]
-    return json.loads(clean,strict=False)
+    value = json.loads(clean,strict=False)
+    # JSON permits escaped lone surrogates; our UTF-8 logs and prompts do not.
+    # Reject for regeneration, retaining the original escaped raw response.
+    json.dumps(value, ensure_ascii=False).encode('utf-8')
+    return value
 
 
 class LocalModels:
@@ -59,6 +63,19 @@ class LocalModels:
 
     def call(self, operation, inputs):
         self.check_deadline()
+        if operation == 'f_extract_batch':
+            if set(inputs) != {'requests'}:
+                raise ValueError('F batch accepts independent source requests only')
+            from types import SimpleNamespace
+            from . import backend, context, prompts, schemas, lazy_script_memory
+            from .batch_extraction import BatchExtractor
+            runtime = SimpleNamespace(backend=backend, context=context, prompts=prompts,
+                schemas=schemas, memory=lazy_script_memory)
+            outputs = BatchExtractor(self.cfg, runtime, models=self).generate(inputs['requests'])
+            usage = {key: sum(row['usage'][key] for row in outputs)
+                     for key in ('input_tokens', 'output_tokens')}
+            self.model_tokens['vlm'] = usage['input_tokens']
+            return dict(items=outputs, usage=usage)
         if operation == 'videotree_contiguous_width':
             from .videotree_tools import OriginalModel
             from .videotree_aligned import width
@@ -356,6 +373,10 @@ class LocalModels:
         from .schemas import output_schema, decoder_schema
         schema = decoder_schema(substitute(output_schema(operation, inputs), aliases))
         contract = CONTRACTS[operation]
+        system = SYSTEM
+        if operation == 'semantic_memory_extract':
+            from .prompts import semantic_extraction_prompt
+            system, contract = semantic_extraction_prompt(inputs['category'])
         if operation=='temporal_review' and inputs.get('source_type')=='caption':
             contract=contract.replace('Evidence is visual-model assertions, not independently verified facts.',
                 'Evidence consists of original summary/caption assertions. Identity links are text inferences, not pixel verification.')
@@ -386,7 +407,12 @@ class LocalModels:
             original = inputs['original_operation']
             if original == 'answer' and inputs.get('original_inputs', {}).get('answer_strategy') == 'direct':
                 original = 'answer_direct'
-            contract += '\n原模块输出契约：\n'+CONTRACTS[original]
+            if original == 'semantic_memory_extract':
+                from .prompts import semantic_extraction_prompt
+                system, original_contract = semantic_extraction_prompt(inputs['original_inputs']['category'])
+            else:
+                original_contract = CONTRACTS[original]
+            contract += '\n原模块输出契约：\n'+original_contract
         if original_op in ('scene_scope','temporal_review','caption_temporal_observe'):
             contract += ('\nKeep explanations concise: reason, gap and unresolved should each use '
                          'at most 60 characters. Complete the JSON object. For inventories, '
@@ -411,7 +437,7 @@ class LocalModels:
             text_part = {'type': 'text', 'text': '<input>\n'+json.dumps(payload, ensure_ascii=False)+
                          '\n</input>\n'+source_instruction+
                          '\n仅返回任务要求的JSON字段，不复制输入对象。'}
-            messages = [{'role': 'system', 'content': SYSTEM+'\n'+contract},
+            messages = [{'role': 'system', 'content': system+'\n'+contract},
                         {'role': 'user', 'content': content+[text_part]}]
             return processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         caption_selection = None
@@ -437,11 +463,25 @@ class LocalModels:
         with torch.inference_mode():
             self.check_deadline()
             kwargs = dict(self.cfg['models']['generation'], prefix_allowed_tokens_fn=prefix)
+            if original_op == 'e_joint_extract':
+                kwargs['max_new_tokens'] = 1536
+            if original_op in ('f_plan_fields', 'f_extract_fields'):
+                kwargs['max_new_tokens'] = 1024
             if operation == 'summary_graph' or (operation == 'repair' and inputs.get('original_operation') == 'summary_graph'):
                 kwargs['max_new_tokens'] = 2048  # Offline extraction only; QA settings stay unchanged.
             original_op = inputs.get('original_operation') if operation == 'repair' else operation
             if original_op in ('temporal_observe', 'temporal_align','caption_temporal_observe'):
                 kwargs['max_new_tokens'] = 4096
+            if original_op in ('adaptive_extract', 'transition_extract'):
+                kwargs['max_new_tokens'] = 1536
+            if original_op in ('optimized_extract', 'optimized_events'):
+                kwargs['max_new_tokens'] = 1536
+            if original_op == 'normalize_memory_units':
+                kwargs['max_new_tokens'] = 1536
+            if original_op == 'semantic_memory_extract':
+                kwargs['max_new_tokens'] = 1536
+            if original_op == 'optimized_plan':
+                kwargs['max_new_tokens'] = 512
             if self.deadline is not None:
                 kwargs['stopping_criteria'] = deadline_stopping_criteria(self.deadline)
             generated = model.generate(**encoded, **kwargs)

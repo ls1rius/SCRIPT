@@ -50,6 +50,15 @@ def decoder_schema(schema):
 
 
 def restore_empty_arrays(value, schema):
+    if isinstance(value, dict) and 'anyOf' in schema:
+        # Decoder-only omissions can occur inside an entity-reference union.
+        # Restore only branches compatible with the explicit discriminator(s).
+        for variant in schema['anyOf']:
+            properties = variant.get('properties', {})
+            if any(k in value and 'enum' in field and value[k] not in field['enum']
+                   for k, field in properties.items()):
+                continue
+            restore_empty_arrays(value, variant)
     if isinstance(value, dict) and schema.get('type') == 'object':
         for key, field in schema['properties'].items():
             if field.get('type') == 'array' and field.get('maxItems') == 0:
@@ -68,6 +77,33 @@ VARIABLES = ['actor', 'recipient', 'object', 'target_object', 'target_fabric', '
 
 
 def output_schema(operation, inputs):
+    if operation == 'e_joint_extract':
+        from .joint_entity_memory import output_schema as joint_schema
+        return joint_schema(inputs)
+    if operation in ('f_plan_fields', 'f_extract_fields'):
+        from .lazy_script_memory import output_schema as lazy_schema
+        return lazy_schema(operation, inputs)
+    if operation == 'semantic_memory_extract':
+        from .semantic_memory import output_schema as semantic_schema
+        return semantic_schema(operation, inputs)
+    if operation == 'normalize_memory_units':
+        from .normalized_memory import output_schema as normalized_schema
+        return normalized_schema(inputs)
+    if operation == 'partial_temporal_organize':
+        from .partial_temporal import output_schema as organization_schema
+        return organization_schema(inputs)
+    if operation == 'partial_temporal_identity':
+        from .partial_temporal import identity_schema
+        return identity_schema(inputs)
+    if operation.startswith('optimized_'):
+        from .optimized_memory import output_schema as optimized_schema
+        return optimized_schema(operation, inputs)
+    if operation.startswith('transition_'):
+        from .adaptive_transition import output_schema as transition_schema
+        return transition_schema(operation, inputs)
+    if operation.startswith('adaptive_'):
+        from .adaptive_entity import output_schema as adaptive_schema
+        return adaptive_schema(operation, inputs)
     if operation.startswith('sparse_visual_'):
         from .sparse_visual import output_schema as sparse_schema
         return sparse_schema(operation,inputs)
@@ -341,6 +377,11 @@ def output_schema(operation, inputs):
 def validate_output(value, schema, path='$'):
     """Validate the explicit JSON-Schema subset emitted above, including reference enums."""
     import math
+    if isinstance(value, str):
+        try:
+            value.encode('utf-8')
+        except UnicodeEncodeError as exc:
+            raise ValueError(f'{path}: invalid Unicode scalar value') from exc
     if 'anyOf' in schema:
         errors = []
         for alternative in schema['anyOf']:

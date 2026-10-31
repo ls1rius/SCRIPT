@@ -33,7 +33,7 @@ if [[ $# -gt 0 ]]; then shift; fi
 echo "Running $MODE with CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
 case "$MODE" in
     script)
-        exec "$PYTHON_BIN" -u script/run_local_four_arm.py --arm scheme3 "$@"
+        exec "$PYTHON_BIN" -u script/run_local_four_arm.py --arm adaptive_partial_temporal "$@"
         ;;
     all)
         exec "$PYTHON_BIN" -u script/run_local_four_arm.py --arm all "$@"

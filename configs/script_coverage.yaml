@@ -1,6 +1,7 @@
 # Explicit legacy repaired coverage-first profile.
 schema_version: 2
 query:
+  temporal_qa_evidence: full
   pipeline: legacy
   reading_policy: coverage_first
   caption_first: false

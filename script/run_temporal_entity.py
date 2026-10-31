@@ -86,7 +86,7 @@ def prepare(out,reference,shards=12,reuse_frozen_inputs=False,sparse_visual=Fals
     for name in ('data','checkpoints'):(out/'source'/name).symlink_to((ROOT/name).resolve(),target_is_directory=True)
     for source in (ROOT/'tests/fixtures').glob('*.json'):
         dest=out/'source/tests/fixtures'/source.name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,dest)
-    for name in ('script/temporal_entity.pbs','docs/SCRIPT_Temporal_Entity_Relation_Plan_2026-10-19.md'):
+    for name in ('script/temporal_entity.pbs','docs/history/SCRIPT_Temporal_Entity_Relation_Plan_2026-10-19.md'):
         dest=out/'source'/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/name,dest)
     source_hashes={str(p.relative_to(out/'source')):sha(p) for p in (out/'source').rglob('*') if p.is_file() and
                    not any(t in ('data','checkpoints','__pycache__') for t in p.relative_to(out/'source').parts)}

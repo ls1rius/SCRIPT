@@ -1,0 +1,30 @@
+# Typed final evidence: semantic categories remain separate from provenance.
+schema_version: 2
+seed: 0
+method: B2
+query:
+  pipeline: adaptive_partial_temporal
+  temporal_entity_source: summary
+  temporal_sparse_visual: true
+  temporal_qa_evidence: typed_memory_quotes
+  temporal_qa_max_quotes: 12
+  temporal_qa_quotes_per_fact: 2
+  temporal_qa_information_types:
+    - action
+    - attribute
+    - state
+    - relation
+    - transition
+    - cause
+    - identity
+    - lineage
+    - unclassified
+  answer_order: original
+  caption_policy: full
+initialization:
+  caption_source: provided
+budget:
+  online_cap: 1500.0
+  final_answer_reserve: 45.0
+  tool_call_cap: 150.0
+  build_call_cap: 600.0

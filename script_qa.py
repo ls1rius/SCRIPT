@@ -8,7 +8,7 @@ import time
 from script_core.backend import preflight
 from script_core.budget import ModelWorker
 from script_core.build import build_video, load_base
-from script_core.config import load_config, digest
+from script_core.config import load_config, digest, validate_config
 from script_core.controller import answer_query
 from script_core.evaluation import evaluate, read_jsonl
 from script_core.state import write_json
@@ -20,10 +20,12 @@ def parser():
     commands = p.add_subparsers(dest='command', required=True)
     build = commands.add_parser('build', help='Question-independent M0 and optional M_eager')
     build.add_argument('--manifest', required=True, help='JSON list of video_id, uri, optional cutoff/subtitle_uri')
-    query = commands.add_parser('query', help='Run scheme-3 summary search by default')
+    query = commands.add_parser('query', help='Run F on-demand memory by default; --memory E selects complete memory')
     query.add_argument('--base', required=True)
     query.add_argument('--questions', required=True, help='JSONL without answers or evaluation fields')
     query.add_argument('--resume', action='store_true')
+    query.add_argument('--memory', type=str.upper, choices=('E','F'),
+                       help='Final evidence: E complete entity memory, F on-demand memory (default profile: F)')
     query.add_argument('--scheme4', action='store_true',
                        help='Enable cross-stage entity memory after summary search (scheme 4)')
     query.add_argument('--summary-graphs', help='Directory containing <video_id>.json caption assertion graphs')
@@ -56,10 +58,20 @@ def main(argv=None):
         print(json.dumps(metrics['groups'], ensure_ascii=False, indent=2))
         return 0
     cfg = load_config(args.config)
+    if args.command == 'query' and args.memory:
+        if args.scheme4:
+            raise ValueError('--memory cannot be combined with --scheme4')
+        if cfg['query']['pipeline']!='adaptive_partial_temporal' or cfg['query']['temporal_entity_source']!='summary':
+            raise ValueError('--memory E/F requires the caption-derived adaptive_partial_temporal pipeline')
+        cfg['query']['temporal_qa_evidence']={'E':'joint_entities','F':'lazy_script'}[args.memory]
     if args.command == 'query' and args.scheme4:
+        if cfg['query']['temporal_qa_evidence'] not in ('full','state_segments','joint_entities','lazy_script'):
+            raise ValueError('--scheme4 cannot be combined with this final-input mode')
         if cfg['query']['pipeline'] == 'legacy':
             raise ValueError('--scheme4 requires a scheme3/scheme4 summary configuration')
         cfg['query']['pipeline'] = 'scheme4'
+        cfg['query']['temporal_qa_evidence'] = 'full'
+    validate_config(cfg)
     start, setup_cpu = time.monotonic(), time.process_time()
     cfg, artifacts = preflight(cfg)
     artifacts['validation_processing_seconds'] = time.monotonic()-start
@@ -89,7 +101,7 @@ def main(argv=None):
         questions = read_jsonl(args.questions)
         if not questions or len({q.get('question_id', q.get('id')) for q in questions}) != len(questions):
             raise ValueError('Questions must be a nonempty JSONL with unique question IDs')
-        if cfg['query']['pipeline'] in ('scheme3','scheme4'):
+        if cfg['query']['pipeline'] in ('adaptive_partial_temporal','adaptive_partial','scheme3','scheme4'):
             if (args.summary_graphs or args.graph_routing or args.replay_source or args.replay_only or
                     args.sequence_manifest or cfg['cache']['scope']!='query'):
                 raise ValueError('Summary schemes use their own evidence and query cache; legacy replay/graph/sequence options require query.pipeline=legacy')
