@@ -1,0 +1,192 @@
+{
+  "created_at": "2026-11-01T22:44:41.301452+08:00",
+  "authorization": "User requested removal of early scheme files, keeping experiment documentation records only.",
+  "state": "deleted_and_documentation_retained",
+  "deleted_directories": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/adaptive-comparison-30-20261023-r1",
+      "entries": 172,
+      "allocated_bytes": 3010560
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/adaptive-comparison-30-20261023-r2",
+      "entries": 169,
+      "allocated_bytes": 3031040
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/adaptive-comparison-30-20261023-r3",
+      "entries": 173,
+      "allocated_bytes": 3059712
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/adaptive-comparison-30-20261023-r4",
+      "entries": 470,
+      "allocated_bytes": 14028800
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/adaptive-preflight-20261023",
+      "entries": 3,
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/adaptive-preflight-20261023-r2",
+      "entries": 2,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/adaptive-preflight-20261023-r3",
+      "entries": 2,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/adaptive-preflight-20261023-r4",
+      "entries": 2,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/asset-download-20261023",
+      "entries": 11,
+      "allocated_bytes": 98304
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/five-comparison-300-20261024-r1",
+      "entries": 5499,
+      "allocated_bytes": 237322240
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/five-comparison-300-20261024-r2-partial-v2",
+      "entries": 5186,
+      "allocated_bytes": 221368320
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/five-comparison-300-20261024-r3-scheme4-v4",
+      "entries": 1010,
+      "allocated_bytes": 43384832
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/five-comparison-300-20261024-r4-cache",
+      "entries": 88089,
+      "allocated_bytes": 2162782208
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/full-temporal-videotree-500-20261027-r1",
+      "entries": 21176,
+      "allocated_bytes": 418037760
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/gpu3-start-20261023",
+      "entries": 2,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/memory-evidence-two-schemes-20261027",
+      "entries": 1,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/memory-fidelity-audit-20261027",
+      "entries": 3,
+      "allocated_bytes": 81920
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/optimized-preflight-20261023-r1",
+      "entries": 4,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/optimized-scheme4-30-20261023-r1",
+      "entries": 264,
+      "allocated_bytes": 6123520
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/optimized-scheme4-30-20261023-r2",
+      "entries": 400,
+      "allocated_bytes": 10670080
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/optimized-scheme4-30-20261023-r3",
+      "entries": 1599,
+      "allocated_bytes": 53493760
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/optimized-scheme4-30-20261024-r3-gpu123",
+      "entries": 2787,
+      "allocated_bytes": 96665600
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/partial-temporal-300-20261027-r1",
+      "entries": 1202,
+      "allocated_bytes": 54841344
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/partial-temporal-300-20261027-r2",
+      "entries": 3463,
+      "allocated_bytes": 97566720
+    }
+  ],
+  "removed_comparison_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/comparisons/partial-temporal-vs-five-20261027",
+  "removed_source_files": {
+    "script/run_five_comparison.py": "6ae5e7981f1b54b7126072891b88eb4df4a958593354f38ab463c02e493c7b2f",
+    "script/run_full_temporal_videotree.py": "74d2b644088fd0ba5aa5fdd9eedf0324f3335f1b8dfe1266f50fc586116840df",
+    "script/run_partial_temporal_comparison.py": "5aba7f1fa4b1b8d93cd715914d49c99690d086be2805f031fee4e13350d584c1",
+    "script/run_four_arm_repair.py": "7739f31d30e8c80d0e9f857ce51f98ccf6675cbf62eba42ee20075684b71227f",
+    "script/run_original_videotree_local.py": "729159b101b745ac7716e871cb3fe72a14bb40ce65e9f865e7f541a01f89c56f",
+    "tests/test_five_comparison.py": "0cf3172b9345b23d3c6f2612e1d5b44295b90a025f44fbe0bb1f2c84ab4190b2",
+    "tests/test_full_temporal_videotree.py": "c75e0670cea4174ca9484591809d38d15b6b523a94194a113a7c37f4cbc4c5d1",
+    "tests/test_four_arm_error_repairs.py": "1f6df18f2ae457b841a0aa539ea97256a8bf9db43ff574269dcc0bb4ea966a17",
+    "tests/test_original_videotree_local.py": "a706eaf8fc8659c171cc7f6cce8fd53dc1592ff443571d2baab6fe0cac581d5f",
+    "script/archive/legacy_20261031/continue_with_cache.py": "4f03ddd439b31ab888acf9be523d9ff8f32cd5ff4f2c9be4367bf1949277a80a"
+  },
+  "archive": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/docs/experiments/Early_Schemes_Records_2026-11-01.json",
+  "archive_sha256": "caf1300990171c78af2230dc20c3a29f88292beab705c4ff96258fe2400d47b4",
+  "protected_manifest_sha256": {
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/controlled-memory-300-20261028-r1/frozen_hashes.json": "f3b2ef443909c0a8994b3e4cf3b84912a5369d6003daeb6f5a46b2682f0b964f",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/controlled-memory-design-300-20261028-r1/frozen_hashes.json": "7ea3bd770ae5da9962068100a268d953cdcb7af32371d086a8410365378b655c",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/compact-evidence-300-20261029-r2/frozen_hashes.json": "efb6ac0610810d211d957fe3acb87613fec856bba2b481778f043d3033cf9757",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/state-segments-D-300-20261029-r1/frozen_hashes.json": "0123cfab1cb49a3ea29e1a2aa42bebf3ed2be84f2488cf86bc1db4f4f9b41615",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/joint-entities-E-300-20261029-r3/frozen_hashes.json": "83b20f928cea8baf875b7af14c8a1532f3216c884214f91296a983c6e22e9eea",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261030-r3/frozen_hashes.json": "923a448a662ec558df9990ebfce4bf125a9d6e1718e0d66b9110c6b05ec83fc4",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-entities-G-300-20261030-r3/frozen_hashes.json": "39874c16d5230ffa5e35abb7a9ce9e814014dd6d4ec30e4cb8dbea44c369354a",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/frozen_hashes.json": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue/frozen_hashes.json": "af70fc38f80ed2de0ec840971dab92648cb9e0da00bd85fb601da876668249fb",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r7-queue/frozen_hashes.json": "f1b48ee4918eb843dcb6133a65e9c7260eeb3015e68beb13d0058892fd9b2289"
+  },
+  "shared_dependencies_retained": [
+    "script/run_adaptive_comparison.py",
+    "script/run_optimized_comparison.py",
+    "script/run_followup_validation.py",
+    "script/run_four_arm_300_local.py",
+    "script_core/partial_temporal.py"
+  ],
+  "live_controllers_unchanged": [
+    "H-r5",
+    "I-r4-queue",
+    "J-r7-queue"
+  ],
+  "completed_at": "2026-11-01T22:46:56.693803+08:00",
+  "freed_allocated_bytes": 3425787904,
+  "preserved_record_bytes": 1126446,
+  "validation": {
+    "cpu_tests_passed": 76,
+    "protected_frozen_files_verified": 11848,
+    "retired_directories_absent": 24,
+    "dedicated_source_test_files_absent": 10,
+    "archive_metadata_verified": true,
+    "comparison_summary_links_updated": true,
+    "remaining_python_imports_checked": true,
+    "live_controllers": {
+      "generalized-lazy-H-300-20261101-r5": {
+        "pid": 2109681,
+        "state": "waiting_for_gpu"
+      },
+      "merged-lazy-I-H-adjacent-300-20261101-r4-queue": {
+        "pid": 2109675,
+        "state": "running"
+      },
+      "grounded-reader-J-300-20261101-r7-queue": {
+        "pid": 2218109,
+        "state": "waiting_for_I"
+      }
+    }
+  }
+}

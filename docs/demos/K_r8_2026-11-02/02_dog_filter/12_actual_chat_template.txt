@@ -1,0 +1,33 @@
+<|im_start|>system
+You are presented with a textual description of a video clip, it consists of frame captions sparsely sampled from the video. Your task is to answer a question related to this video, choosing the correct option out of five possible answers. Please provide the answer with a single-letter (A, B, C, D, E)It is crucial that you imagine the visual scene as vividly as possible to enhance the accuracy of your response. After selecting your answer, rate your confidence level in this choice on a scale from 1 to 100, where 1 indicates low confidence and 100 signifies high confidence. Please provide a concise one-sentence explanation for your chosen answer. If you are uncertain about the correct option, select the one that seems closest to being correct. <|im_end|>
+<|im_start|>user
+Here are a few examples. 
+None 
+
+###
+
+  Description: These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence.
+At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog.
+At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog.
+At sampled intervals [4,5), [5,6), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with C (text reference E0).
+At sampled intervals [4,5), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with dog (text reference E1).
+At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash.
+At sampled intervals [12,13), [39,40), [42,43), [136,137), [169,170), [177,178) (source assertion), C holds dog leash.
+
+###
+
+ Questions: In your own words, summarize the key actions c repeatedly performs throughout the video without simply listing them out. 
+ Options: 
+ A: The individual, c, continuously and repeatedly ceases their walking motion. 
+ B: Continuously, c repeatedly waves her right hand multiple times. 
+ C: Continuously, c takes plastic paper using her right hand, performing the action repeatedly. 
+ D: C repeatedly takes plastic paper with her left hand. 
+ E: C repeatedly touches her hair and walks her dog. 
+
+###
+
+ The prediction, explanation, confidence is (please response in the format of 'prediction: 
+ explanation: 
+ confidence: 
+ '):<|im_end|>
+<|im_start|>assistant

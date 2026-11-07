@@ -1,0 +1,1714 @@
+[
+  {
+    "caption_id": "C17",
+    "interval": [
+      17,
+      18
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/17.jpg",
+    "original": "#C C holds a kitchen towel",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "kitchen towel"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R0",
+      "R1"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [17,18) (source assertion), C holds a kitchen towel.",
+      "At sampled intervals [17,18) (source assertion), C holds kitchen towel."
+    ]
+  },
+  {
+    "caption_id": "C18",
+    "interval": [
+      18,
+      19
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/18.jpg",
+    "original": "#O The woman X pushes a chair aside with her left hand.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "pushes",
+          "patient": "chair"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R2",
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C19",
+    "interval": [
+      19,
+      20
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/19.jpg",
+    "original": "#O The dog X holds a white wooden plaque with his right hand.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "holds",
+          "patient": "white wooden plaque"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R4",
+      "R5"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C20",
+    "interval": [
+      20,
+      21
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/20.jpg",
+    "original": "#O The woman Y adjusts the chair.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "Y",
+          "verb": "adjusts",
+          "patient": "chair"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R6",
+      "R7"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C21",
+    "interval": [
+      21,
+      22
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/21.jpg",
+    "original": "#O The woman X walks to the dining area.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R8"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C22",
+    "interval": [
+      22,
+      23
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/22.jpg",
+    "original": "#O The man X lifts a chair",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "lifts",
+          "patient": "chair"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R9",
+      "R10"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C23",
+    "interval": [
+      23,
+      24
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/23.jpg",
+    "original": "#C C walks away from the table",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R11"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C24",
+    "interval": [
+      24,
+      25
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/24.jpg",
+    "original": "#C C moves a flashlight in the container",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "flashlight"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R12",
+      "R13"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C25",
+    "interval": [
+      25,
+      26
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/25.jpg",
+    "original": "#O person X opens the closet door",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "person X",
+          "verb": "opens",
+          "patient": "closet door"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R14",
+      "R15"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C26",
+    "interval": [
+      26,
+      27
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/26.jpg",
+    "original": "#O person X opens a drawer",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "person X",
+          "verb": "opens",
+          "patient": "drawer"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16",
+      "R17"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C27",
+    "interval": [
+      27,
+      28
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/27.jpg",
+    "original": "#O A man X walks into a bedroom.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R18"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C28",
+    "interval": [
+      28,
+      29
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/28.jpg",
+    "original": "#O The woman X moves the black wooden spoon on the dining table with her right hand.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "moves",
+          "patient": "black wooden spoon"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R19",
+      "R20"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C29",
+    "interval": [
+      29,
+      30
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/29.jpg",
+    "original": "#O The dog X drops a white bag on the table.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "drops",
+          "patient": "white bag"
+        }
+      ],
+      "attributes": [
+        {
+          "entity": "bag",
+          "property": "color",
+          "value": "white"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R21",
+      "R22",
+      "R23"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C30",
+    "interval": [
+      30,
+      31
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/30.jpg",
+    "original": "#O The dog Y picks a leash with his right hand.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "Y",
+          "verb": "picks",
+          "patient": "leash"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R24",
+      "R25"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C31",
+    "interval": [
+      31,
+      32
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/31.jpg",
+    "original": "#O woman X picks the cloth",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "woman X",
+          "verb": "picks",
+          "patient": "cloth"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R26",
+      "R27"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C32",
+    "interval": [
+      32,
+      33
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/32.jpg",
+    "original": "#O man X carries a chair",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "man X",
+          "verb": "carries",
+          "patient": "chair"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R28",
+      "R29",
+      "R120"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [32,33) (source assertion), man X carries a chair. The text memory associates this observation with carries a chair (text reference E0)."
+    ]
+  },
+  {
+    "caption_id": "C33",
+    "interval": [
+      33,
+      34
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/33.jpg",
+    "original": "#O the dog Y walks into the kitchen.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R30",
+      "R121"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [33,34) (source assertion), the dog Y walks into the kitchen. The text memory associates this observation with walks into the kitchen (text reference E1)."
+    ]
+  },
+  {
+    "caption_id": "C79",
+    "interval": [
+      79,
+      80
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/79.jpg",
+    "original": "#C C carries the baby sitting on the chair.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "carries",
+          "patient": "baby"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R31",
+      "R32"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [79,80) (source assertion), C carries the baby sitting on the chair.",
+      "At sampled intervals [79,80) (source assertion), C carries baby."
+    ]
+  },
+  {
+    "caption_id": "C80",
+    "interval": [
+      80,
+      81
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/80.jpg",
+    "original": "#O man Y pulls the chair",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "man Y",
+          "verb": "pulls",
+          "patient": "chair"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R33",
+      "R34"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [80,81) (source assertion), man Y pulls the chair.",
+      "At sampled intervals [80,81) (source assertion), man Y pulls chair."
+    ]
+  },
+  {
+    "caption_id": "C81",
+    "interval": [
+      81,
+      82
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/81.jpg",
+    "original": "#C C pulls the hand towel",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "pulls",
+          "patient": "hand towel"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R35",
+      "R36"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [81,82) (source assertion), C pulls the hand towel.",
+      "At sampled intervals [81,82) (source assertion), C pulls hand towel."
+    ]
+  },
+  {
+    "caption_id": "C82",
+    "interval": [
+      82,
+      83
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/82.jpg",
+    "original": "#O man Y picks the bottle from the table ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "man Y",
+          "verb": "picks",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R37",
+      "R38"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [82,83) (source assertion), man Y picks the bottle from the table.",
+      "At sampled intervals [82,83) (source assertion), man Y picks bottle."
+    ]
+  },
+  {
+    "caption_id": "C83",
+    "interval": [
+      83,
+      84
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/83.jpg",
+    "original": "#C C places the pillow on a chair",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R39"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [83,84) (source assertion), C places the pillow on a chair."
+    ]
+  },
+  {
+    "caption_id": "C84",
+    "interval": [
+      84,
+      85
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/84.jpg",
+    "original": "#C C looks around the house",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R40"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [84,85) (source assertion), C looks around the house."
+    ]
+  },
+  {
+    "caption_id": "C85",
+    "interval": [
+      85,
+      86
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/85.jpg",
+    "original": "#O The baby X touches the baby",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "touches",
+          "patient": "baby"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R41",
+      "R42"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [85,86) (source assertion), The baby X touches the baby.",
+      "At sampled intervals [85,86) (source assertion), X touches baby."
+    ]
+  },
+  {
+    "caption_id": "C86",
+    "interval": [
+      86,
+      87
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/86.jpg",
+    "original": "#O Woman Y moves the hand from the table",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R43"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [86,87) (source assertion), Woman Y moves the hand from the table."
+    ]
+  },
+  {
+    "caption_id": "C87",
+    "interval": [
+      87,
+      88
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/87.jpg",
+    "original": "#C C holds a book",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "book"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R44",
+      "R45"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [87,88) (source assertion), C holds a book.",
+      "At sampled intervals [87,88) (source assertion), C holds book."
+    ]
+  },
+  {
+    "caption_id": "C88",
+    "interval": [
+      88,
+      89
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/88.jpg",
+    "original": "#C C holds the chair",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "chair"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R46",
+      "R47"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [88,89) (source assertion), C holds the chair.",
+      "At sampled intervals [88,89) (source assertion), C holds chair."
+    ]
+  },
+  {
+    "caption_id": "C89",
+    "interval": [
+      89,
+      90
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/89.jpg",
+    "original": "#C C looks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R48"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [89,90) (source assertion), C looks around."
+    ]
+  },
+  {
+    "caption_id": "C90",
+    "interval": [
+      90,
+      91
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/90.jpg",
+    "original": "#C C walks to a chair.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R49"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [90,91) (source assertion), C walks to a chair."
+    ]
+  },
+  {
+    "caption_id": "C91",
+    "interval": [
+      91,
+      92
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/91.jpg",
+    "original": "#C C Looks at the chairs ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R50"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [91,92) (source assertion), C Looks at the chairs."
+    ]
+  },
+  {
+    "caption_id": "C92",
+    "interval": [
+      92,
+      93
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/92.jpg",
+    "original": "#C C looks around the room",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R51"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [92,93), [94,95) (source assertion), C looks around the room."
+    ]
+  },
+  {
+    "caption_id": "C93",
+    "interval": [
+      93,
+      94
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/93.jpg",
+    "original": "#C C looks at the chair",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R52"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [93,94), [95,96) (source assertion), C looks at the chair."
+    ]
+  },
+  {
+    "caption_id": "C94",
+    "interval": [
+      94,
+      95
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/94.jpg",
+    "original": "#C C looks around the room",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R51"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [92,93), [94,95) (source assertion), C looks around the room."
+    ]
+  },
+  {
+    "caption_id": "C95",
+    "interval": [
+      95,
+      96
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/95.jpg",
+    "original": "#C C looks at the chair",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R52"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [93,94), [95,96) (source assertion), C looks at the chair."
+    ]
+  },
+  {
+    "caption_id": "C96",
+    "interval": [
+      96,
+      97
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/96.jpg",
+    "original": "#C C walks towards the kitchen.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R53"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [96,97) (source assertion), C walks towards the kitchen."
+    ]
+  },
+  {
+    "caption_id": "C97",
+    "interval": [
+      97,
+      98
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/97.jpg",
+    "original": "#O woman Y touches her phone ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "woman Y",
+          "verb": "touches",
+          "patient": "phone"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R54",
+      "R55"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [97,98) (source assertion), woman Y touches her phone.",
+      "At sampled intervals [97,98) (source assertion), woman Y touches phone."
+    ]
+  },
+  {
+    "caption_id": "C98",
+    "interval": [
+      98,
+      99
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/98.jpg",
+    "original": "#O Woman X Picks a piece of cloth",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "Woman X",
+          "verb": "Picks",
+          "patient": "piece of cloth"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R56",
+      "R57"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [98,99) (source assertion), Woman X Picks a piece of cloth.",
+      "At sampled intervals [98,99) (source assertion), Woman X Picks piece of cloth."
+    ]
+  },
+  {
+    "caption_id": "C99",
+    "interval": [
+      99,
+      100
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/99.jpg",
+    "original": "#O The woman X drops the red toy on the table with her left hand.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "drops",
+          "patient": "red toy"
+        }
+      ],
+      "attributes": [
+        {
+          "entity": "toy",
+          "property": "color",
+          "value": "red"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R58",
+      "R59",
+      "R60"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [99,100) (source assertion), The woman X drops the red toy on the table with her left hand.",
+      "At sampled intervals [99,100) (source assertion), X drops red toy.",
+      "At sampled intervals [99,100) (source assertion), The color of toy is red."
+    ]
+  },
+  {
+    "caption_id": "C100",
+    "interval": [
+      100,
+      101
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/100.jpg",
+    "original": "#C C moves around the room",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "around the room"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R61"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [100,101) (source assertion), C moves around the room."
+    ]
+  },
+  {
+    "caption_id": "C101",
+    "interval": [
+      101,
+      102
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/101.jpg",
+    "original": "#C C picks the cloth",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "cloth"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R62",
+      "R63"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [101,102) (source assertion), C picks the cloth.",
+      "At sampled intervals [101,102) (source assertion), C picks cloth."
+    ]
+  },
+  {
+    "caption_id": "C102",
+    "interval": [
+      102,
+      103
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/102.jpg",
+    "original": "#C C puts the paper in the bucket",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R64",
+      "R65"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [102,103) (source assertion), C puts the paper in the bucket.",
+      "At sampled intervals [102,103) (source assertion), C puts paper."
+    ]
+  },
+  {
+    "caption_id": "C103",
+    "interval": [
+      103,
+      104
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/103.jpg",
+    "original": "#C C puts the handbag down",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "handbag"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R66",
+      "R67"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [103,104) (source assertion), C puts the handbag down.",
+      "At sampled intervals [103,104) (source assertion), C puts handbag."
+    ]
+  },
+  {
+    "caption_id": "C104",
+    "interval": [
+      104,
+      105
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/104.jpg",
+    "original": "#C C moves the chair ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "chair"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R68",
+      "R69"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [104,105) (source assertion), C moves the chair.",
+      "At sampled intervals [104,105) (source assertion), C moves chair."
+    ]
+  },
+  {
+    "caption_id": "C150",
+    "interval": [
+      150,
+      151
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/150.jpg",
+    "original": "#C C holds the book in her hands.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "book",
+          "body_part": "hands"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R70",
+      "R71"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [150,151) (source assertion), C holds the book in her hands.",
+      "At sampled intervals [150,151) (source assertion), C holds book with hands."
+    ]
+  },
+  {
+    "caption_id": "C151",
+    "interval": [
+      151,
+      152
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/151.jpg",
+    "original": "#C C talks to a man X ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R72"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [151,152) (source assertion), C talks to a man X."
+    ]
+  },
+  {
+    "caption_id": "C152",
+    "interval": [
+      152,
+      153
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/152.jpg",
+    "original": "#C C looks at the window",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R73"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [152,153) (source assertion), C looks at the window."
+    ]
+  },
+  {
+    "caption_id": "C153",
+    "interval": [
+      153,
+      154
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/153.jpg",
+    "original": "#C C looks at the dog",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R74"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [153,154) (source assertion), C looks at the dog."
+    ]
+  },
+  {
+    "caption_id": "C154",
+    "interval": [
+      154,
+      155
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/154.jpg",
+    "original": "#C C looks at the room",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R75"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [154,155) (source assertion), C looks at the room."
+    ]
+  },
+  {
+    "caption_id": "C155",
+    "interval": [
+      155,
+      156
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/155.jpg",
+    "original": "#C C touches a chair",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "touches",
+          "patient": "chair"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R76",
+      "R77"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [155,156) (source assertion), C touches a chair.",
+      "At sampled intervals [155,156) (source assertion), C touches chair."
+    ]
+  },
+  {
+    "caption_id": "C156",
+    "interval": [
+      156,
+      157
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/156.jpg",
+    "original": "#C C moves the hand",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "hand"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R78",
+      "R79"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [156,157) (source assertion), C moves the hand.",
+      "At sampled intervals [156,157) (source assertion), C moves hand."
+    ]
+  },
+  {
+    "caption_id": "C157",
+    "interval": [
+      157,
+      158
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/157.jpg",
+    "original": "#C C looks at the baby",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R80"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [157,158) (source assertion), C looks at the baby."
+    ]
+  },
+  {
+    "caption_id": "C158",
+    "interval": [
+      158,
+      159
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/158.jpg",
+    "original": "#C C folds the top of the blanket on her laps with both hands.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "folds",
+          "patient": "top of the blanket",
+          "body_part": "both hands"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R81",
+      "R82"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [158,159) (source assertion), C folds the top of the blanket on her laps with both hands.",
+      "At sampled intervals [158,159) (source assertion), C folds top of the blanket with both hands."
+    ]
+  },
+  {
+    "caption_id": "C159",
+    "interval": [
+      159,
+      160
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/159.jpg",
+    "original": "#C C pulls the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "pulls",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R83",
+      "R84"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [159,160) (source assertion), C pulls the paper.",
+      "At sampled intervals [159,160) (source assertion), C pulls paper."
+    ]
+  },
+  {
+    "caption_id": "C160",
+    "interval": [
+      160,
+      161
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/160.jpg",
+    "original": "#C C unfolds the cloth",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "unfolds",
+          "patient": "cloth"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R85",
+      "R86"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [160,161) (source assertion), C unfolds the cloth.",
+      "At sampled intervals [160,161) (source assertion), C unfolds cloth."
+    ]
+  },
+  {
+    "caption_id": "C161",
+    "interval": [
+      161,
+      162
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/161.jpg",
+    "original": "#C C holds the white wooden spoon with both hands.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "white wooden spoon",
+          "body_part": "both hands"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R87",
+      "R88"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [161,162) (source assertion), C holds the white wooden spoon with both hands.",
+      "At sampled intervals [161,162) (source assertion), C holds white wooden spoon with both hands."
+    ]
+  },
+  {
+    "caption_id": "C162",
+    "interval": [
+      162,
+      163
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/162.jpg",
+    "original": "#C C folds the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "folds",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R89",
+      "R90"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [162,163) (source assertion), C folds the paper.",
+      "At sampled intervals [162,163) (source assertion), C folds paper."
+    ]
+  },
+  {
+    "caption_id": "C163",
+    "interval": [
+      163,
+      164
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/163.jpg",
+    "original": "#C C lifts a bowl on the dining table.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "lifts",
+          "patient": "bowl"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R91",
+      "R92"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [163,164) (source assertion), C lifts a bowl on the dining table.",
+      "At sampled intervals [163,164) (source assertion), C lifts bowl."
+    ]
+  },
+  {
+    "caption_id": "C164",
+    "interval": [
+      164,
+      165
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/164.jpg",
+    "original": "#C C lifts the baby ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "lifts",
+          "patient": "baby"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R93",
+      "R94"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [164,165) (source assertion), C lifts the baby.",
+      "At sampled intervals [164,165) (source assertion), C lifts baby."
+    ]
+  },
+  {
+    "caption_id": "C165",
+    "interval": [
+      165,
+      166
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/165.jpg",
+    "original": "#C C removes the biscuit from the pack with both hands.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "removes",
+          "patient": "biscuit",
+          "body_part": "both hands"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R95",
+      "R96"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [165,166) (source assertion), C removes the biscuit from the pack with both hands.",
+      "At sampled intervals [165,166) (source assertion), C removes biscuit with both hands."
+    ]
+  },
+  {
+    "caption_id": "C166",
+    "interval": [
+      166,
+      167
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/166.jpg",
+    "original": "#C C takes food",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "takes",
+          "patient": "food"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R97"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [166,167) (source assertion), C takes food."
+    ]
+  },
+  {
+    "caption_id": "C167",
+    "interval": [
+      167,
+      168
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/167.jpg",
+    "original": "#C C reads the instructions ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "reads",
+          "patient": "instructions"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R98",
+      "R99"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [167,168) (source assertion), C reads the instructions.",
+      "At sampled intervals [167,168) (source assertion), C reads instructions."
+    ]
+  },
+  {
+    "caption_id": "C168",
+    "interval": [
+      168,
+      169
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/168.jpg",
+    "original": "#O A woman X talks to C",
+    "accepted_fields": {
+      "attributes": [
+        {
+          "entity": "X",
+          "property": "color",
+          "value": "woman"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R100",
+      "R101"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [168,169) (source assertion), A woman X talks to C.",
+      "At sampled intervals [168,169) (source assertion), The color of X is woman."
+    ]
+  },
+  {
+    "caption_id": "C169",
+    "interval": [
+      169,
+      170
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/169.jpg",
+    "original": "#C C puts the bottle in the bag",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R102"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [169,170) (source assertion), C puts the bottle in the bag."
+    ]
+  },
+  {
+    "caption_id": "C170",
+    "interval": [
+      170,
+      171
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/170.jpg",
+    "original": "#O The woman X adjusts her left hand on her right leg.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R103"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [170,171) (source assertion), The woman X adjusts her left hand on her right leg."
+    ]
+  },
+  {
+    "caption_id": "C171",
+    "interval": [
+      171,
+      172
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/171.jpg",
+    "original": "#O A woman X touches the book",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "touches",
+          "patient": "book"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R104",
+      "R105"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [171,172) (source assertion), A woman X touches the book.",
+      "At sampled intervals [171,172) (source assertion), X touches book."
+    ]
+  },
+  {
+    "caption_id": "C172",
+    "interval": [
+      172,
+      173
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/172.jpg",
+    "original": "#O Man X holds a spoon with his right hand.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "Man X",
+          "verb": "holds",
+          "patient": "spoon",
+          "body_part": "right hand"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R106",
+      "R107"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [172,173) (source assertion), Man X holds a spoon with his right hand.",
+      "At sampled intervals [172,173) (source assertion), Man X holds spoon with right hand."
+    ]
+  },
+  {
+    "caption_id": "C173",
+    "interval": [
+      173,
+      174
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/173.jpg",
+    "original": "#O The baby Y holds the toy with his left hand.",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "baby Y",
+          "verb": "holds",
+          "patient": "toy",
+          "body_part": "left hand"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R108",
+      "R109"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [173,174) (source assertion), The baby Y holds the toy with his left hand.",
+      "At sampled intervals [173,174) (source assertion), baby Y holds toy with left hand."
+    ]
+  },
+  {
+    "caption_id": "C174",
+    "interval": [
+      174,
+      175
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/174.jpg",
+    "original": "#O A woman X reads a paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "reads",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R110",
+      "R111"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [174,175) (source assertion), A woman X reads a paper.",
+      "At sampled intervals [174,175) (source assertion), X reads paper."
+    ]
+  },
+  {
+    "caption_id": "C175",
+    "interval": [
+      175,
+      176
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/175.jpg",
+    "original": "#C C touches the book",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "touches",
+          "patient": "book"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R112",
+      "R113"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [175,176) (source assertion), C touches the book.",
+      "At sampled intervals [175,176) (source assertion), C touches book."
+    ]
+  },
+  {
+    "caption_id": "C176",
+    "interval": [
+      176,
+      177
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/176.jpg",
+    "original": "#C C stretches the cloth",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stretches",
+          "patient": "cloth"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R114",
+      "R115"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [176,177) (source assertion), C stretches the cloth.",
+      "At sampled intervals [176,177) (source assertion), C stretches cloth."
+    ]
+  },
+  {
+    "caption_id": "C177",
+    "interval": [
+      177,
+      178
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/177.jpg",
+    "original": "#C C puts the baby in the basket ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R116"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [177,178) (source assertion), C puts the baby in the basket."
+    ]
+  },
+  {
+    "caption_id": "C178",
+    "interval": [
+      178,
+      179
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/178.jpg",
+    "original": "#C C adjusts the a plastic with her left hand.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R117"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [178,179) (source assertion), C adjusts the a plastic with her left hand."
+    ]
+  },
+  {
+    "caption_id": "C179",
+    "interval": [
+      179,
+      180
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/179.jpg",
+    "original": "#C C moves the leg",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "leg"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R118",
+      "R119"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [179,180) (source assertion), C moves the leg.",
+      "At sampled intervals [179,180) (source assertion), C moves leg."
+    ]
+  }
+]

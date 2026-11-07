@@ -1,0 +1,948 @@
+{
+  "created_at": "2026-11-03T00:04:42.623109+08:00",
+  "scope": "Read-only audit of 52 empty-candidate cases in the archived first-63 comparison",
+  "summary": {
+    "n": 52,
+    "all_excluded_model_outputs": 52,
+    "all_options_present": 52,
+    "program_matches_model": 52,
+    "opened_zero": 52
+  },
+  "checks": [
+    {
+      "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/6472e377-b65c-461a-a750-9b28a673dc86/partial_search/raw_calls/9c97506c-5562-4806-a56e-5725f4da935e-0.json",
+      "raw_sha256": "15c9c0c3eadbc301143fb83e9a4b05588dd94caee0ada8bf1d55fea07744d1de",
+      "reason": "所有场景中的主要活动均与问题无关"
+    },
+    {
+      "question_id": "c5004075-e154-4bb8-baea-e41915190319",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/c5004075-e154-4bb8-baea-e41915190319/partial_search/raw_calls/c1521991-d301-4813-bfdf-33fb1713848c-0.json",
+      "raw_sha256": "4b9a9fd6dda9baadcfe2bcbfda80e4adbf8c1acefb65462d7d1e6ba2723eee5b",
+      "reason": "所有场景描述的活动均与制作食物相关，但未明确指出是制作馅饼。因此，无法确定中心主题。"
+    },
+    {
+      "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/6dd07731-937c-4b63-b296-0a947ffe6996/partial_search/raw_calls/743e8fe2-76a8-4ee7-8fd4-325295fc2f74-0.json",
+      "raw_sha256": "191ebaf47b8f57ebcb2f9c20f77a5d28d4b9b19603bc23e270bc9bb4f5207073",
+      "reason": "所有场景均未明确描述C反复看或四处寻找某物的行为。"
+    },
+    {
+      "question_id": "429e2791-b050-4184-9837-de7c201f94c8",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/429e2791-b050-4184-9837-de7c201f94c8/partial_search/raw_calls/07a78fd6-287f-4ee7-9332-9c19a11364d2-0.json",
+      "raw_sha256": "3d6c11554ca6158ce03c1060df7d7f57672c0765de4ea85bcfe2c9152d716919",
+      "reason": "所有场景均与顾客与特定服务提供者（如餐厅服务员、医疗专业人员、警察、收银员）互动的情景无关。"
+    },
+    {
+      "question_id": "86d91c31-1bfe-4f99-a803-7466c8d801d1",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/86d91c31-1bfe-4f99-a803-7466c8d801d1/partial_search/raw_calls/b5ae7020-3f38-442e-a5f7-8c1223a98e7a-0.json",
+      "raw_sha256": "140c66e16d2f100ab2d8f3ae7ce97fbecbc835dadffa250b9dadd83417760b4c",
+      "reason": "所有场景均与停车楼无关，因此无法提供相关信息。"
+    },
+    {
+      "question_id": "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/68f6ddfd-bf42-4bee-b1c9-a48db428e586/partial_search/raw_calls/f2e94236-962a-48ba-b1b7-58d31533cfa3-0.json",
+      "raw_sha256": "26e8b316622ef769dbf6887d48d913095c03c5d5c418fa71031ab4a2ff823939",
+      "reason": "None of the provided scenes directly address the primary goal of the video based on the steps undertaken by C. The scenes collectively show various stages of a)"
+    },
+    {
+      "question_id": "f0025a32-112a-4c06-a265-18e1dd3cdb1b",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/f0025a32-112a-4c06-a265-18e1dd3cdb1b/partial_search/raw_calls/8198050b-506c-4203-8373-6d732108c113-0.json",
+      "raw_sha256": "4a7a115d3984411df2022a171194ebace00a3d34287c26507cbfeab65a37fa18",
+      "reason": "All provided scenes describe C using brushes instead of a roller brush, which is generally considered more efficient for painting walls. Therefore, none of the "
+    },
+    {
+      "question_id": "d85518f1-eee2-4d34-b955-6052f3d7dd2d",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/d85518f1-eee2-4d34-b955-6052f3d7dd2d/partial_search/raw_calls/e58b38aa-2051-4b33-a901-2df1c886d360-0.json",
+      "raw_sha256": "028d55d0168a177c5e8932b7bc2024a74fd03cd7905af968ca656c60567028ac",
+      "reason": "所有场景描述的活动均与书籍和纸张相关，与选项中的目标无关。"
+    },
+    {
+      "question_id": "4e0b4961-1c21-4025-9ba6-0b526e3aaf3c",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/4e0b4961-1c21-4025-9ba6-0b526e3aaf3c/partial_search/raw_calls/3b418a05-7efc-49f4-bb53-5c4aeb4ad843-0.json",
+      "raw_sha256": "09d6b4e1fa00aebae906251ba2439842a685dd8c900dcc91f4e29e5b97c3a0af",
+      "reason": "所有场景均未明确提及C使用完所有的肥皂或水。"
+    },
+    {
+      "question_id": "5d15c716-f179-462c-84a6-fa94e9d14e94",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/5d15c716-f179-462c-84a6-fa94e9d14e94/partial_search/raw_calls/dcb65e12-c7e0-47d9-a638-3176107714b9-0.json",
+      "raw_sha256": "ce97b664c0cff83c2e6b7f4d5b448adf74eea4a214fb043df7b0be935cb7c18d",
+      "reason": "所有场景描述均未提及C在车库中的活动，因此无法确定C在车库中的主要活动及其执行方式。"
+    },
+    {
+      "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/98427b0b-20ed-45bb-b772-91573ce90b5a/partial_search/raw_calls/0854a151-a594-4ef5-8d59-28374aa45d7a-0.json",
+      "raw_sha256": "379386db080e3a769342b8a0e516b94bd34b970cea7e5e0fe57271c90b4db491",
+      "reason": "所有场景描述的都是熨烫衣物的过程，没有涉及折衣服的动作。"
+    },
+    {
+      "question_id": "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/e97c3e1c-27ee-4b3d-8783-2e325b0eada8/partial_search/raw_calls/551ea0c3-e559-4e9b-9e42-727f7df8f8d2-0.json",
+      "raw_sha256": "cb48b0b6f11588812bd5435b36147b0a10976299b93813976b8b63f4d3bb87c2",
+      "reason": "所有场景均未直接描述c的总体过程，因此无法提供关于c的总体过程的总结。"
+    },
+    {
+      "question_id": "edd710a7-0f50-45dc-8619-de4bcaedee9b",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/edd710a7-0f50-45dc-8619-de4bcaedee9b/partial_search/raw_calls/012c7b1b-99cb-487f-9a1b-a3cd4734f5ce-0.json",
+      "raw_sha256": "7cd0f8a12b4582f3fd400688fac3eb782b8345a2b4b85f2cc424fc74ff7d92b4",
+      "reason": "所有场景描述均未涉及C通过手机进行除持有、操作和掉落之外的其他任务。"
+    },
+    {
+      "question_id": "35ba0822-a2fd-46e5-890a-2aab45f3ce6a",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/35ba0822-a2fd-46e5-890a-2aab45f3ce6a/partial_search/raw_calls/d0b9ef8e-3f66-4c2e-a428-8695e4d282e5-0.json",
+      "raw_sha256": "b3fcfaeb7ebd87f9bf60000082a7efc8301fc52964f293714be0c0e00b04f21d",
+      "reason": "All provided scenes show a pattern of behavior that is methodical and organized, which does not align with any of the given options for character C's behavior. "
+    },
+    {
+      "question_id": "855f0685-fc29-463f-a796-8b68a722174f",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/855f0685-fc29-463f-a796-8b68a722174f/partial_search/raw_calls/dc1738d7-055e-457d-9ebe-681a4a076f20-0.json",
+      "raw_sha256": "75ccd019a23be69b30a5d706f89ec1002560a1a361a42a4fd7668f6c40464f7f",
+      "reason": "所有场景描述均未明确提到C和女人一起清洁厨房。"
+    },
+    {
+      "question_id": "22627b14-0f17-4a45-9661-5ac979e0a4c2",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/22627b14-0f17-4a45-9661-5ac979e0a4c2/partial_search/raw_calls/58e31a5a-385e-4a39-bd7c-15b403185e45-0.json",
+      "raw_sha256": "cb4fae403c7e1cf51aea2c981f28c3d97807badf27c3763e395ef58830f083c2",
+      "reason": "所有场景均与油漆工作相关，而问题询问的是咖啡制作过程，因此所有场景均不相关。"
+    },
+    {
+      "question_id": "47b87299-5e31-4299-8bbc-51fe567ebd40",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/47b87299-5e31-4299-8bbc-51fe567ebd40/partial_search/raw_calls/e11a732d-cdd8-4e2f-996c-32f3e0041b1e-0.json",
+      "raw_sha256": "c460dbcd80c0ac957a33f3209394f94c6a97ee4bd14be644effd3ba1bc361829",
+      "reason": "所有场景描述的都不是卡牌游戏，因此无法确定C的主要目的。"
+    },
+    {
+      "question_id": "f60b20bb-ba25-4eea-a09f-01bbe8bbda88",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/f60b20bb-ba25-4eea-a09f-01bbe8bbda88/partial_search/raw_calls/8c0292d0-6494-42f8-a544-e9c62ba64489-0.json",
+      "raw_sha256": "413e507fc4a29c57773b24a622d1bef252a1c06f576a303e77f91961764b531a",
+      "reason": "所有场景均未直接提及C的目标，因此无法确定C的总体目标及其如何通过使用各种工具和技术来实现这一目标。"
+    },
+    {
+      "question_id": "c3ef6035-08c6-458e-b2d4-d7dc8f97f658",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/c3ef6035-08c6-458e-b2d4-d7dc8f97f658/partial_search/raw_calls/081e9ba9-d0cc-4986-b18b-0a22587cdef3-0.json",
+      "raw_sha256": "493da4ea94712ba186171d5cfcb4cf9daeb031624de7039acc246a984640c608",
+      "reason": "所有场景均未详细描述C如何使用厨房资源和工具来准备菜肴，因此无法确定C有效使用了哪些工具。"
+    },
+    {
+      "question_id": "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/16eb6914-00e7-4692-a7d7-d6ba36f61a5d/partial_search/raw_calls/41a4168d-eb1a-4c05-89d3-1dc693971c83-0.json",
+      "raw_sha256": "f356f51c76bf03a1390a6cd48f38ec71a0771deea6b0a59a968c9b47f09f1e1a",
+      "reason": "None of the provided scenes directly describe the primary action performed with the frying pan at the beginning or its main purpose in the context of the video."
+    },
+    {
+      "question_id": "a317149f-1286-4160-9070-e575c42b8cc2",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/a317149f-1286-4160-9070-e575c42b8cc2/partial_search/raw_calls/a9bb8258-47c9-4266-8db6-0be64c06f81c-0.json",
+      "raw_sha256": "b487833a9cbbb7114e68279b10bc1a6193b95f018efee549a9f865d6f09c99d4",
+      "reason": "所有场景均未明确提到c的具体行为，因此无法根据这些场景确定c的重要行动及其对视频进展的影响。"
+    },
+    {
+      "question_id": "d0bbd7fa-2a15-4c25-ab06-adc7d04bce7b",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/d0bbd7fa-2a15-4c25-ab06-adc7d04bce7b/partial_search/raw_calls/b3c178f4-c8d6-489c-b36f-91f9a62d7c77-0.json",
+      "raw_sha256": "ddf2d54c88d8369a9aad0af79d8c35cee4d2f05c14ee19b97450d29187a86cdd",
+      "reason": "所有场景描述的活动类型均未明确提到瑜伽或舞蹈练习，因此无法确定两个具体的活动类型及其在整体场景中的重要性。"
+    },
+    {
+      "question_id": "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/40c8c634-c4a1-4a00-a480-0aa652e7246e/partial_search/raw_calls/c11023f0-1fc4-4e0a-8f44-9c1c7b26f706-0.json",
+      "raw_sha256": "6b41ced60cc9273958e5d70c1ad32ed757fca41c22943a5a7bfa594da1081883",
+      "reason": "所有场景描述均未提及玉米片或汤罐头，因此无法确定C和女人的具体任务进展。"
+    },
+    {
+      "question_id": "ee227b56-c12b-4725-89e9-aa29e0b4dbe8",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/ee227b56-c12b-4725-89e9-aa29e0b4dbe8/partial_search/raw_calls/02096a53-7af4-41b3-bc5c-aa9dcf60fd7c-0.json",
+      "raw_sha256": "8b86094c4fd41bf9635d88d46d80b01bce43ae34c1732f6fbd4b5f1bfb848ed5",
+      "reason": "所有场景均未提及礼物包装的具体步骤。"
+    },
+    {
+      "question_id": "8db459bf-bf84-45b2-9fc0-f5c370a6da1a",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/8db459bf-bf84-45b2-9fc0-f5c370a6da1a/partial_search/raw_calls/64a42c81-c4a9-4a25-a259-ef6792c0e71e-0.json",
+      "raw_sha256": "8d416ec19659a3b0f4dafeb0689ef92d41fbe6b5e3d17f033141df5bad229a01",
+      "reason": "所有场景均未明确提及C正在进行的实验过程，因此无法确定实验的具体内容和目的。"
+    },
+    {
+      "question_id": "b664157e-612e-477c-8ef7-04c15be9c66c",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/b664157e-612e-477c-8ef7-04c15be9c66c/partial_search/raw_calls/9986acc4-d829-4a24-a09f-13ffaf09ed82-0.json",
+      "raw_sha256": "bf70da465d2fe54ff41e47f629904d031a52063f64bd06f6d6e1a949b6bde621",
+      "reason": "所有场景描述的都是C在户外或花园中进行园艺活动，但没有提到环境的显著变化。"
+    },
+    {
+      "question_id": "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/d30c1b6c-bbcb-490b-b104-c30b8cb985d3/partial_search/raw_calls/d329bd99-7f88-4d98-8711-8a398327447a-0.json",
+      "raw_sha256": "21d8db2a0df932c89e217c03e555ff1e2fe3706faf9a63634add2538f1b36f72",
+      "reason": "所有场景均未提及C拿起小白橡皮擦的行为。"
+    },
+    {
+      "question_id": "9e50476f-2e77-46f3-8b06-f1005ee55974",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/9e50476f-2e77-46f3-8b06-f1005ee55974/partial_search/raw_calls/893c0a0d-f386-48e8-b6c1-953c697b2743-0.json",
+      "raw_sha256": "e8aa033320e2b9cde8bfdb3ab5d0ecf92d7316131442c4cf6514863aed37e455",
+      "reason": "所有场景描述中均未明确提到C将箱子放在地上。"
+    },
+    {
+      "question_id": "22d22f02-bc87-4f8a-9596-5b77146d4e41",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/22d22f02-bc87-4f8a-9596-5b77146d4e41/partial_search/raw_calls/3ba50d9d-bb05-45ef-80a2-e4c2dd1c1a9a-0.json",
+      "raw_sha256": "7cbd43984b12cecdb4da3a65695d79a79b910be38d1cb1c13f71684ccbff3b9d",
+      "reason": "所有场景均未涉及显著的变化，因此无法确定显著变化及其对C行动的影响。"
+    },
+    {
+      "question_id": "bbf66dab-376a-4c11-8528-22ca0c5b01c8",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/bbf66dab-376a-4c11-8528-22ca0c5b01c8/partial_search/raw_calls/2f974fa8-c2ae-4517-bcfd-62a5b8f5dda5-0.json",
+      "raw_sha256": "1f78d2ef0e7a1420b0b85745b0ef0f36c6e1be4fcca9c46d235367cda3d5660b",
+      "reason": "所有场景描述均未明确指出C正在制作桌子或围栏，因此这些场景与问题无关。"
+    },
+    {
+      "question_id": "0f181d98-5036-4990-b397-62e934e168ef",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/0f181d98-5036-4990-b397-62e934e168ef/partial_search/raw_calls/f3bc46f3-beb6-422a-9fc7-4cd390f8e5fb-0.json",
+      "raw_sha256": "21bbc1d4d2db0af982602773ef373889ab8ffeebb9f3d4b88de5b526f2f9fcd6",
+      "reason": "所有场景均未明确指出C的主要目标是修复或重建木制结构。"
+    },
+    {
+      "question_id": "e04cd624-17e1-4986-b344-55aa92d7c0c3",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/e04cd624-17e1-4986-b344-55aa92d7c0c3/partial_search/raw_calls/5463881f-d401-45c5-9e09-a4aeed5120fd-0.json",
+      "raw_sha256": "675b9955678c62cad998a3b8c31ab953d56ca24c853d4ab41ef769ecfae4fbf6",
+      "reason": "所有场景均未明确提及C的主要目的是持有植物。"
+    },
+    {
+      "question_id": "b45379aa-d6f3-4033-83df-5577fc49cfc0",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/b45379aa-d6f3-4033-83df-5577fc49cfc0/partial_search/raw_calls/18055e81-2fe7-4cbb-b0f6-20f24a2f6c4d-0.json",
+      "raw_sha256": "cef977f7cabb3de3cfe4d8c059cd4c71dc9cb514f3825b2a3a6fc5f5ccf39e77",
+      "reason": "所有场景均与准备混合物的过程无关。"
+    },
+    {
+      "question_id": "545b2fb0-402b-4400-9ad3-cb017a47ad48",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/545b2fb0-402b-4400-9ad3-cb017a47ad48/partial_search/raw_calls/e6c2a341-3824-459a-8d9e-38cf08fc59a1-0.json",
+      "raw_sha256": "e0a711538e469f46262f80d1d80e5c93240295bd84cf43e732ce0e142a41d878",
+      "reason": "所有场景均未直接描述C试图从零开始建造割草机，因此无法确定C是否已经达到了目标。"
+    },
+    {
+      "question_id": "7ba34dd0-aa19-49ae-9bb9-81247f21e39e",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/7ba34dd0-aa19-49ae-9bb9-81247f21e39e/partial_search/raw_calls/97c298c1-76a4-47bc-ab7d-98cb8e373405-0.json",
+      "raw_sha256": "6dfa057e25177c353d5f1c36a6ff1e8f0c287a33d985ae66cf982279d2cc5128",
+      "reason": "所有场景均未明确描述X对C的帮助，因此无法确定X的具体角色及其对C工作的辅助方式。"
+    },
+    {
+      "question_id": "943374f4-4514-4e22-827b-7452b91e5559",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/943374f4-4514-4e22-827b-7452b91e5559/partial_search/raw_calls/26a95e93-fd97-40c9-979f-d2a1f82a4ad9-0.json",
+      "raw_sha256": "57f242db84245e0aa80907d1e35591077acc83ff81770ee86fa32bbf900b1423",
+      "reason": "所有场景描述的都是C在编织过程中调整纱线和织物的位置，确保编织的精确性，这与选项0中提到的复杂图案无关。"
+    },
+    {
+      "question_id": "1a22bcef-adcd-4bf7-ab3a-5a1a0a8b1edf",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/1a22bcef-adcd-4bf7-ab3a-5a1a0a8b1edf/partial_search/raw_calls/c7cd4789-ee96-4b5a-95f2-bc78a3104c22-0.json",
+      "raw_sha256": "0c7e90d471dba7f7873d7e685c9395ebdd27ab31d38fcf6363e1f937143dfd2d",
+      "reason": "所有场景描述均未明确指出单一的烹饪技术，因此无法确定最终答案。"
+    },
+    {
+      "question_id": "5a992458-f01e-49db-bb84-502c3ccedc7c",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/5a992458-f01e-49db-bb84-502c3ccedc7c/partial_search/raw_calls/5379afbc-c463-429b-a0f3-08f40cb32aee-0.json",
+      "raw_sha256": "e673a3defacb0e7b16cf633f190240b3d3128fae4ff911849eb1e13f01a96d16",
+      "reason": "所有场景均未明确提及C的主要目标或其与人的互动如何达成这一目标。"
+    },
+    {
+      "question_id": "71d00225-7ea5-46a0-8015-9b5a667f619a",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/71d00225-7ea5-46a0-8015-9b5a667f619a/partial_search/raw_calls/3d3d4e82-faab-4ac9-8b65-fa003e7aaa93-0.json",
+      "raw_sha256": "2d821dc6b712b38bba53b2aa067b78396b04f05fd841e2538617370e7f80fdf5",
+      "reason": "所有场景均未提供足够的信息来确定与问题相关的具体成分和烹饪技术。"
+    },
+    {
+      "question_id": "509e6545-5fff-4f73-ae0f-524dfa8b3c2c",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/509e6545-5fff-4f73-ae0f-524dfa8b3c2c/partial_search/raw_calls/811d37c6-75c3-45f5-aa50-954546b41aa9-0.json",
+      "raw_sha256": "5d21d044916d3b6cfc3e136dd62649bfdcbc283b6c2eeba8a6779f81265b6a79",
+      "reason": "所有场景描述均未提及叉车、木质箱子或砖块的具体用途，因此无法确定其与问题相关性。"
+    },
+    {
+      "question_id": "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6/partial_search/raw_calls/99b8ef25-f4bf-41c4-828f-32f8b64663d3-0.json",
+      "raw_sha256": "309a2a0fccd27a7dd00c5d038924f285185ca58897a51f5a1d60712dd82eab54",
+      "reason": "所有场景描述均未提及吃完饭后的行为转换，因此无法确定高阶过渡及其与主题的关系。"
+    },
+    {
+      "question_id": "a7b381f3-7f73-46fa-a99c-80a717a34556",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/a7b381f3-7f73-46fa-a99c-80a717a34556/partial_search/raw_calls/488ca4db-05f2-4af1-ad01-6c153d268cb1-0.json",
+      "raw_sha256": "a06827b6ae99cf48f654b1f3d883a539637960d559a3fc630c9c9461700a1251",
+      "reason": "所有场景描述中均未提及C在视频的不同时间段专注于不同的身体部位或锻炼类型。"
+    },
+    {
+      "question_id": "3223ece4-dc21-4ca9-8e78-2af8036ec4e8",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/3223ece4-dc21-4ca9-8e78-2af8036ec4e8/partial_search/raw_calls/88fd1b00-0b6a-494b-8fe2-d15d95374091-0.json",
+      "raw_sha256": "5ce204b9c5933c51b56334c582e76e9ba4d47721256ce8980f1ec6a304b519a7",
+      "reason": "所有场景均未明确描述更换Vespa踏板车的发动机轴承。"
+    },
+    {
+      "question_id": "9377c192-d46d-4016-9db4-df8007dbe82b",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/9377c192-d46d-4016-9db4-df8007dbe82b/partial_search/raw_calls/585cfe08-9542-4170-bc6b-7035f215f027-0.json",
+      "raw_sha256": "5518e30c41324f469f5bf5ccd7929f728743489097adbf916f906ba44d88ea57",
+      "reason": "所有场景均未包含切菜后的主要任务，因此无法确定C完成的两个主要任务及其关系。"
+    },
+    {
+      "question_id": "f98ccd46-72ac-4ead-96a2-9fa07e826cf3",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/f98ccd46-72ac-4ead-96a2-9fa07e826cf3/partial_search/raw_calls/a47f6da8-a799-4963-82ec-dc50e94155d2-0.json",
+      "raw_sha256": "bc7de7b616cef7d445dcc9f8f17947360972eaca6ca849f57291f6701a0c7f88",
+      "reason": "所有场景均未包含C阅读书籍并拍照或仔细书写的行为。"
+    },
+    {
+      "question_id": "73ecc613-5e39-4348-94ba-ee6cb197367a",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/73ecc613-5e39-4348-94ba-ee6cb197367a/partial_search/raw_calls/fd20eb63-265d-4fce-a59e-d0e803d18d87-0.json",
+      "raw_sha256": "888999401b72c0195013239412e8148c3d6cdbaac877f6fd92371b949d16401f",
+      "reason": "所有场景均未涉及C女士在组装婴儿摇椅时进行的额外活动。"
+    },
+    {
+      "question_id": "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/e45f14cd-a567-4c56-89f7-fbd5dba80986/partial_search/raw_calls/8c762213-3252-4bd1-ade0-268bf7c587f6-0.json",
+      "raw_sha256": "4238d5bd17156e7907559e1b786a94972580ae990b4cff2ca03b4f394cfaa4da",
+      "reason": "所有场景均未直接涉及书本作为娱乐、安慰、信息来源或危险源的作用。"
+    },
+    {
+      "question_id": "8955952a-946c-4841-895f-1fe0e2f000fb",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/8955952a-946c-4841-895f-1fe0e2f000fb/partial_search/raw_calls/ef81d5d3-5f0c-4c47-984d-6b000acedc59-0.json",
+      "raw_sha256": "a858fb25ea5749da50da60757970e44c90a1619d9c8b887752d38a3293f187b0",
+      "reason": "None of the provided scenes directly show C washing, chopping, and putting meat in plastic bags in the fridge, which are the key steps mentioned in the options."
+    },
+    {
+      "question_id": "444d82d2-987c-4a6a-8f81-5f1edd9447f7",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/444d82d2-987c-4a6a-8f81-5f1edd9447f7/partial_search/raw_calls/aa6e1779-0af7-4e0a-a1fb-b5118b76e324-0.json",
+      "raw_sha256": "ebcf5b9b0f14a74e88fea070e587fd4d27ebd981522434f417ad62bc48caa19a",
+      "reason": "None of the provided scenes directly indicate that C is repairing a table. The scenes describe different woodworking activities, but none match the specific act"
+    },
+    {
+      "question_id": "0c481667-9303-4f4a-b331-0b412aaafa2d",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/0c481667-9303-4f4a-b331-0b412aaafa2d/partial_search/raw_calls/676105bb-44c5-432c-b2a3-c40bdf022f55-0.json",
+      "raw_sha256": "4cebd1b64c38b0fd55ba8b56ae6cceea38c2946d368924331a75873b7a56d986",
+      "reason": "None of the provided scenes contain detailed information about specific critical moments or turning points that demonstrate the artist's proficiency and thought"
+    },
+    {
+      "question_id": "03657401-d4a4-40d0-9b03-d7e093ef93d1",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/03657401-d4a4-40d0-9b03-d7e093ef93d1/partial_search/raw_calls/063e196d-8f7b-4d0b-84ce-8b63194024fe-0.json",
+      "raw_sha256": "6f88fdc0c87587a8f6787e5828675fdd4ff10cd9fa7a3219ff6e7296bc904aa1",
+      "reason": "None of the provided scenes directly address the specific actions related to knife sharpening and handling as described in the question. Therefore, none of the "
+    },
+    {
+      "question_id": "15bae307-992b-4359-9fe0-3f622f957d42",
+      "all_model_decisions_excluded": true,
+      "all_options_in_raw_input": true,
+      "all_options_in_model_view": true,
+      "all_summaries_in_input": true,
+      "program_decisions_equal_model": true,
+      "opened_scenes": [],
+      "candidate_order": [],
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/15bae307-992b-4359-9fe0-3f622f957d42/partial_search/raw_calls/199f64de-6f84-405b-b4ab-21eb1faaa0a9-0.json",
+      "raw_sha256": "f284e0c2936e28896cba67b12e575035e93c7ff251785ce01fa40ce33274a1a6",
+      "reason": "所有场景均未明确展示C重复进行特定动作。"
+    }
+  ],
+  "confirmed_examples": [
+    {
+      "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+      "question": {
+        "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "video_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "question": "Can you identify a recurring pattern in c's actions and explain its significance in the context of the video?",
+        "options": [
+          "Casually, c repeatedly glances and looks around the room, which strongly suggests that c is attempting to locate or find something.",
+          "C repeatedly moves around the room, which suggests that c is trying to get comfortable.",
+          "Frequently, c repeatedly utilizes the laptop, clearly indicating that c is diligently attempting to complete and finish work.",
+          "C repeatedly picks up and puts down objects, such as the laptop, cables, and charger. this suggests that c is trying to decide what to pack and how to pack it.",
+          "C persistently and repeatedly covers the pen, which strongly suggests that c is apparently attempting to hide something."
+        ],
+        "id": "6dd07731-937c-4b63-b296-0a947ffe6996"
+      },
+      "scene_summaries": [
+        {
+          "id": "S0",
+          "interval": [
+            0,
+            9
+          ],
+          "description": "场景描述了一个名为C的人物在房屋内外的移动过程。C先走出房子，然后在房子周围走动，接着又走向房子内部。C随后在走廊上行走，再绕着房子走了一圈，最后回到房间并再次在房子周围走动。最终，C从一个房间进入厨房。"
+        },
+        {
+          "id": "S1",
+          "interval": [
+            9,
+            47
+          ],
+          "description": "场景描述了一个名为C的人物在家中进行一系列活动。C首先在屋内走动，然后走到桌子旁，将托盘放在一边，拿起手机并将其放置在桌子上。接着，C拿起笔记本电脑并走向厨房，在那里捡起一袋水和一箱水，并将它们放在椅子上。C继续在屋内走动，到达餐桌旁，使用笔记本电脑并打开它。C在键盘上操作，移动笔记本电脑并将其放在桌子上。随后，C吃东西并在房间内走动，拿起智能手机、充电器和另一部手机。C移动鼠标，走向桌子，移动椅子并拿起文件和电缆。最后，C移除电线并再次在房间内走动。"
+        },
+        {
+          "id": "S2",
+          "interval": [
+            47,
+            65
+          ],
+          "description": "场景描述了一个室内环境，参与者C在进行一系列活动。C首先走进房间，然后将土壤放入袋子中。接着，C拿起一个罐子并四处走动。C继续在房间里移动，随后拿起手机和遥控器，并移动无线电缆。C再次拿起遥控器，从椅子上拿起一块布料，走向带有白色电缆的烤架。C从电缆支架上取下电线，放下电源盒，然后拿起一根电缆和一根电线。最后，C移动充电器并拿起一瓶饮料。"
+        },
+        {
+          "id": "S3",
+          "interval": [
+            65,
+            110
+          ],
+          "description": "场景描述了一个人物C在房间内进行一系列物品整理和打包的动作。C首先拿起手机，接着拿起一个尼龙袋，并放下一张纸，移动并打开这张纸，然后将笔放入袋中并打开笔。C继续拿起一根白色的绳子和一条电缆，四处走动并拿起一套工具。C走向一把椅子，拿起一台笔记本电脑，并将其放入包中。C从桌子上取下夹克，再次拿起笔记本电脑，移动一个白色电脑机箱，再拿起另一台笔记本电脑。C继续拿起平板电脑、另一台笔记本电脑以及一把椅子和折叠椅，最后拿起桌子上的塑料物品。C走到桌子旁，拿起一个包和一瓶水，四处走动并将纸张放入包中。C移动灯座，将电缆放在地上，按下开关，拿起一个白色袋子，将纸张放在桌子上，用双手握住水壶，拿起电缆、充电器和笔记本电脑。C坐下，拿起桌上的白色袋子，拿着并提起这个袋子。"
+        },
+        {
+          "id": "S4",
+          "interval": [
+            110,
+            155
+          ],
+          "description": "场景描述了一个名为C的人物在家中进行一系列物品整理活动。C首先将一个袋子放在一边，然后走到厨房，再绕着房子走动。接着，C将一个托盘和一个盒子拿起来，并移动了一把椅子。C随后拿起一个袋子，将一台笔记本电脑放在桌子上，将平板电脑放入袋中，调整了椅子的位置，并将塑料袋放入袋中。C继续移动桌上的袋子，将一个袋子放在沙发上，将一块布料放在桌子上，拿起一个盘子并拉出键盘，拿起键盘和碗，放下键盘，拿起一根电缆，又拿起另一根电缆，移除真空吸尘器上的电缆，再次拿起电缆。C继续四处走动，拿起一根网线，拿起砂光机，绕着房间走动，将充电器放入袋中，拿起桌上的紧凑电池，拿起笔记本电脑充电器，继续四处走动，移动电视，抬起机器，移动盒子，绕着房子走动，移动手机，绕着房间走动，走向凳子，继续四处走动，最后走到厨房。"
+        },
+        {
+          "id": "S5",
+          "interval": [
+            155,
+            164
+          ],
+          "description": "场景描述了一个室内环境，参与者是C。C在屋内移动，期间捡起一部手机并取下相机。C随后再次拿起手机，并继续在屋内移动。"
+        },
+        {
+          "id": "S6",
+          "interval": [
+            164,
+            180
+          ],
+          "description": "场景描述了一个人物C在进行一系列物品整理活动。C首先移动了篮子，然后触碰了耳机，接着搬动了椅子，并从沙发上拿起盖子。C随后拿起一个平板电脑的袋子并将其放在椅子上，调整了三脚架，移动了笔记本电脑，并从平板电脑中取出充电器。C拿着笔记本电脑，移除了充电器的电缆，并将电源线放入袋子里。最后，C拿起两个袋子，并将笔记本电脑从桌子上移到座位上，同时拿起了笔记本电脑的充电器。"
+        }
+      ],
+      "model_output": {
+        "scene_decisions": {
+          "S0": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是C在房屋内外的移动过程，没有明确提到C反复看或四处寻找某物。"
+          },
+          "S1": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是C在屋内走动并使用笔记本电脑，但没有提到反复看或四处寻找某物。"
+          },
+          "S2": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是C在室内进行一系列活动，但没有提到反复看或四处寻找某物。"
+          },
+          "S3": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是C在房间内进行物品整理和打包的动作，但没有提到反复看或四处寻找某物。"
+          },
+          "S4": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是C在家中进行一系列物品整理活动，但没有提到反复看或四处寻找某物。"
+          },
+          "S5": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是C在屋内移动并捡起手机，但没有提到反复看或四处寻找某物。"
+          },
+          "S6": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是C在进行一系列物品整理活动，但没有提到反复看或四处寻找某物。"
+          }
+        },
+        "reason": "所有场景均未明确描述C反复看或四处寻找某物的行为。"
+      },
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/6dd07731-937c-4b63-b296-0a947ffe6996/partial_search/raw_calls/743e8fe2-76a8-4ee7-8fd4-325295fc2f74-0.json",
+      "interpretation": "Exclusion reasons treat the first option as the question premise despite summaries relevant to other options. Confirmed by inspection of this example, not automatically assigned to every empty-candidate case."
+    },
+    {
+      "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+      "question": {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "video_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "question": "How would you describe the overall process shown in the video and the main purpose behind the actions performed?",
+        "options": [
+          "C is carefully folding a dress with precision.",
+          "In the room, c is carefully hanging a beautiful dress on the rack.",
+          "C is ironing a dress.",
+          "Currently, c is carefully packing a beautiful dress in her bag.",
+          "C is washing a dress."
+        ],
+        "id": "98427b0b-20ed-45bb-b772-91573ce90b5a"
+      },
+      "scene_summaries": [
+        {
+          "id": "S0",
+          "interval": [
+            0,
+            18
+          ],
+          "description": "场景描述了一个穿着白色衬衫的人（C）在熨烫一件衬衫的过程。初始阶段，C正在折叠衬衫，随后调整了衬衫的位置。接着，C将熨斗放在熨衣板上，并拿起灯泡。之后，C用右手拿着熨斗熨烫衬衫，然后用熨斗盒继续熨烫。过程中，C多次调整衬衫的位置并握住衬衫，最后移动了熨斗盒。"
+        },
+        {
+          "id": "S1",
+          "interval": [
+            18,
+            22
+          ],
+          "description": "场景描述：人物C在进行一系列动作，包括拉伸电缆（ID0），移动衬衫（ID1），再次拿起电缆（ID2），以及四处走动（ID3）。"
+        },
+        {
+          "id": "S2",
+          "interval": [
+            22,
+            54
+          ],
+          "description": "场景描述了一个穿着衬衫的人（C）正在熨烫一件衬衫的过程。首先，C 使用熨斗在铁板上熨烫衬衫，重复了几次。接着，C 将熨斗放在铁板上，然后拉起衬衫并移动它。C 调整了衬衫的位置，并将其折叠。之后，C 拉伸衬衫并用双手将其拉直。C 再次使用熨斗在铁板上熨烫衬衫，重复了几次。最后，C 折叠衬衫并调整其位置，然后翻转衬衫。"
+        },
+        {
+          "id": "S3",
+          "interval": [
+            54,
+            79
+          ],
+          "description": "场景描述了一个穿着者C在整理衣物的过程。C首先调整了衣物，并将手放在桌子上，随后查看了胶水枪。接着，C从桌子上拿起了线性方块器，并放置了橡皮筋。C调整了盒子里的彩色笔，然后拿起卷尺。接下来，C用熨斗熨烫了衬衫和衣物，最后将熨斗放回桌上。C又拿起了一件衣物并调整了裙子，将其折叠并拉伸，继续调整裙子。C再次拿起衣物并熨烫了裙子和衣物，最后用熨斗熨烫了衬衫。C将熨斗放下后，在房间内走动。"
+        },
+        {
+          "id": "S4",
+          "interval": [
+            79,
+            93
+          ],
+          "description": "场景描述了一个室内环境，其中人物C在进行衣物整理活动。C在房间内四处走动，挑选并处理了几件衣物。具体活动包括：挑选连衣裙、移动衣物、挑选夹克、挑选布料、在屋内四处走动、在房间内四处走动、翻转衬衫、折叠衬衫、翻转布料、从桌子上拿起布料，并再次四处走动以及举起布料。"
+        },
+        {
+          "id": "S5",
+          "interval": [
+            93,
+            138
+          ],
+          "description": "场景描述了一个穿着者C在整理衣物的过程。C首先拿起一个铁盒，接着拿起一块布料并调整衬衫。C继续拿起衬衫，用布料覆盖在衬衫上，然后用铁盒熨烫衬衫。C多次移动铁盒，调整布料和衬衫的位置，并继续熨烫。过程中，C还熨烫了另一件布料和一件衬衫。最后，C放下铁盒，调整布料并翻转衣服，继续熨烫。"
+        },
+        {
+          "id": "S6",
+          "interval": [
+            138,
+            155
+          ],
+          "description": "场景描述了一个穿着衬衫的人（C）正在熨烫一件衣服的过程。首先，C用双手拿着衬衫，然后调整了衣服的位置。接着，C用双手抬起衣服，并拿起熨斗箱开始熨烫。C在桌子上用熨斗箱熨烫衣服，随后继续在衬衫上熨烫。C在不同的部位重复熨烫动作，确保衣物平整。最后，C将熨斗箱移开，再次拿起熨斗箱并抬起衬衫，准备进行下一步操作。"
+        },
+        {
+          "id": "S7",
+          "interval": [
+            155,
+            180
+          ],
+          "description": "场景描述了一个穿着者C在熨烫衣物的过程。C首先展开一块布料并将其放在桌子上，然后用熨斗进行熨烫。C在不同的时间点使用了不同的布料（包括衬衫和裙子），并且在每次熨烫后都会检查布料是否平整，并根据需要再次熨烫。最后，C将熨好的布料折叠起来，准备收纳。"
+        }
+      ],
+      "model_output": {
+        "scene_decisions": {
+          "S0": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是熨烫衬衫的过程，与问题中提到的折衣服无关"
+          },
+          "S1": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是拉伸电缆和移动衬衫的动作，与问题中提到的折衣服无关"
+          },
+          "S2": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是熨烫衬衫的过程，与问题中提到的折衣服无关"
+          },
+          "S3": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是整理衣物的过程，但没有明确提到折衣服"
+          },
+          "S4": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是整理衣物的过程，但没有明确提到折衣服"
+          },
+          "S5": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是熨烫衣物的过程，与问题中提到的折衣服无关"
+          },
+          "S6": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是熨烫衣服的过程，与问题中提到的折衣服无关"
+          },
+          "S7": {
+            "relevance": "excluded",
+            "priority": 0,
+            "reason": "场景描述的是熨烫衣物的过程，与问题中提到的折衣服无关"
+          }
+        },
+        "reason": "所有场景描述的都是熨烫衣物的过程，没有涉及折衣服的动作。"
+      },
+      "raw_call": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/98427b0b-20ed-45bb-b772-91573ce90b5a/partial_search/raw_calls/0854a151-a594-4ef5-8d59-28374aa45d7a-0.json",
+      "interpretation": "Exclusion reasons treat the first option as the question premise despite summaries relevant to other options. Confirmed by inspection of this example, not automatically assigned to every empty-candidate case."
+    }
+  ],
+  "findings": [
+    "All 52 empty sets originate in all-excluded model outputs; no candidate list lost by sorting.",
+    "All options and all scene IDs were supplied. model_view preserves all option texts.",
+    "Two inspected regression cases show first-option anchoring: folding vs ironing, searching vs packing.",
+    "The exclusion schema checks IDs/priorities/reasons, not semantic coverage of all options. A valid empty set immediately ends source reading.",
+    "Do not claim all 52 share an identical semantic cause; no inference rerun or option-permutation probe performed."
+  ],
+  "preservation": "M original run remains untouched; no stop, restart, source edits, or fresh inference in this audit.",
+  "model_view_code_matches_frozen": {
+    "context.py": true,
+    "query_policy.py": true
+  }
+}

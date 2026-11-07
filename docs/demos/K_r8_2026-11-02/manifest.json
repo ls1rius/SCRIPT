@@ -1,0 +1,344 @@
+{
+  "created_at": "2026-11-02T16:33:29.107103+08:00",
+  "source_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8",
+  "source_manifest_sha256": "3c7431686ec11e2fd97b1768c71885fea7e86e524d23cefe0b78ab25183b9381",
+  "reader_protocol": "K-constrained-prediction-letter-v1",
+  "models_called": 0,
+  "selection_policy": "One actual merge case, one selective case, and one over-filtering counterexample; selected for mechanism visibility, not accuracy.",
+  "cases": [
+    {
+      "name": "01_book_merge",
+      "title": "书作为绘画表面：有真实分组",
+      "question_id": "916476da-a699-4132-b5cb-ae992e647b1b",
+      "total": 97,
+      "retained": 19,
+      "skipped": 78,
+      "merge_groups": 1,
+      "final_input_tokens": 1534,
+      "source_files": {
+        "01_question_options.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/question/916476da-a699-4132-b5cb-ae992e647b1b.json",
+          "sha256": "82dd63935e66288b7187bf0182a39c45db27a03a6f88eb6d506b9e66373bbf16"
+        },
+        "03_candidate_pool.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/pool/916476da-a699-4132-b5cb-ae992e647b1b.json",
+          "sha256": "011c0c9c51d469ddc2afcec42851352bb986f0eeb395fae6d8f3cc6200a0176c"
+        },
+        "04_actual_planner_input.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/916476da-a699-4132-b5cb-ae992e647b1b/planner_output_input.json",
+          "sha256": "1e946629e95209497e05fec39509880f9125fac08cd5dd7d99f86b9d09089a26"
+        },
+        "05_raw_planner_output.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/916476da-a699-4132-b5cb-ae992e647b1b/planner_output.json",
+          "sha256": "3cbd2dfd5ef15b62fa731c7a750187ee339c10c2d7f0f1da732bec5f2a9d2738"
+        },
+        "06_plan.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/916476da-a699-4132-b5cb-ae992e647b1b/plan.json",
+          "sha256": "7abc4d964e4c4e33e72a9c2fc56b7bd3d4e3933cdba694ec5c7cecc5b8fea7b8"
+        },
+        "08_plan_audit.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/916476da-a699-4132-b5cb-ae992e647b1b/plan_audit.json",
+          "sha256": "b66b5828f9ee01c402f847ba02b88b9cc1abad4b2320709843c3d5435d215605"
+        },
+        "10_actual_final_model_input.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/916476da-a699-4132-b5cb-ae992e647b1b/K_evidence_planner/answer_output_input.json",
+          "sha256": "ef7e266049d6cef5650c962dbb8f63909d394ac11def596ccf914b7f6b3a967b"
+        }
+      },
+      "exported_files": {
+        "13_actual_token_ids.json": "65c9ca9fb1fe23b16f6620a6867e2a39c80953b2f5c74c501d0d3d08b593e66e",
+        "14_observed_answer.json": "d78778bb1468d12b5e1adc891eb14d55b6624ac525735640a9828c9f4e0c145f",
+        "02_entities_and_facts.json": "9f9cf1a435aa06c64050ea4c92b3657d033d8619ec5500ec3248ecf9340883ee",
+        "03_candidate_pool.json": "011c0c9c51d469ddc2afcec42851352bb986f0eeb395fae6d8f3cc6200a0176c",
+        "07_retained_evidence.json": "cf04bf632ed86e9efc22109229e2cebdbc3ddbbd6b944f36fe491b4bd7fddd8f",
+        "09_selected_description.txt": "9836c9a77c021c1de7c6a22bfb5da3159c8632d7eaa34acf051640990a2bcaf5",
+        "08_plan_audit.json": "b66b5828f9ee01c402f847ba02b88b9cc1abad4b2320709843c3d5435d215605",
+        "11_final_messages.json": "2b7be3920b7f5acd710e98c6afcd5d787337a4894b6108c8e12714d661d15a43",
+        "06_plan.json": "7abc4d964e4c4e33e72a9c2fc56b7bd3d4e3933cdba694ec5c7cecc5b8fea7b8",
+        "01_question_options.json": "82dd63935e66288b7187bf0182a39c45db27a03a6f88eb6d506b9e66373bbf16",
+        "10_actual_final_model_input.json": "ef7e266049d6cef5650c962dbb8f63909d394ac11def596ccf914b7f6b3a967b",
+        "04_actual_planner_input.json": "1e946629e95209497e05fec39509880f9125fac08cd5dd7d99f86b9d09089a26",
+        "05_raw_planner_output.json": "3cbd2dfd5ef15b62fa731c7a750187ee339c10c2d7f0f1da732bec5f2a9d2738",
+        "12_actual_chat_template.txt": "6b8d95bc6dbf721ac13e89352e9e27fef14ce7e0ef16c444be9b8dcfe5f5f690",
+        "demo.md": "12d6ba9504dff73376e9299095acb6c94744687d061a45130c000a31dde08c15",
+        "17_original_frame_files.json": "95d7d51e5105e4c00a0fc6ebf08a9e8dad1ccfb1b6c83dd8473ed3fd3e68ccad",
+        "16_sampling_trace.json": "126d46dd5d8483387411650236cd2ea0bf7fe14f0dfe39fc1616a5df905f8b97",
+        "15_sampling_trace.md": "e7118f9a4003e78b70740982b307ef4a07772b35cf75a31f3598d75320de8665",
+        "sampled_frames/42.jpg": "ac3b6b126e90a49683c2bbbe88bdd7acdb0d1fedd3fa19830c094916dd4bf007",
+        "sampled_frames/150.jpg": "06933069ecc73b56e49a96ec174c07c8d30950c4a2ec16608684b4e8357335a6",
+        "sampled_frames/140.jpg": "b7012fce3ce11efae64fb03695d790a82a0f44e87406fc247f96de814f2b6883",
+        "sampled_frames/6.jpg": "79975adc2d2c9f533ad5c5815737138929dc941c29e76f158b18230a81593883",
+        "sampled_frames/90.jpg": "8e09dd5d913d9aacc56d59c6407f18bffdf134eaab984fa14e3fea0f9d2c78d5",
+        "sampled_frames/132.jpg": "7b4477631c943455fa2eef22bc34b74f256ff247b25676d8315657ad3685d41b",
+        "sampled_frames/145.jpg": "27e230007689c4b184e3599b35376d62a6119c0089b489393250540a27264b4f",
+        "sampled_frames/121.jpg": "b29848f88c1f67112c50aac1189eac9e8f94727e62abc0ac59fb541071de7567",
+        "sampled_frames/114.jpg": "089234979e2fca4f0bfe0dd6024ea34a9e9cc62b2ba8caf0e0fc0024682f534c",
+        "sampled_frames/28.jpg": "8c4d98f0620a2a567e506a2c8a62593f6be23a2c9e786dac45e7522d02ba7621",
+        "sampled_frames/0.jpg": "5831ce01cd287e8600404438b3705f75186e16755924ad1281ca59a2c44b5ec8",
+        "sampled_frames/11.jpg": "08a4329ea3088f7b2952ec5228c7d6515ce134a4c097a9d7d0bd1d9228eec26a",
+        "sampled_frames/135.jpg": "6c89214a547d87f8745d93e392abe5d0d30f6fa22b3dcaef6cf7d7bab04e7fe5",
+        "sampled_frames/27.jpg": "62d0651a68d6b7fb1b4d8f60f9ba440df87fafd0bfb7acb51161749249199f78",
+        "sampled_frames/37.jpg": "0b83dbc8abb24049f895c2972e64ab855f9dbe235da9f0c5eb4bf4f2f7e4936d",
+        "sampled_frames/31.jpg": "e5521c64ac592c64dcfb3d17e05d68e4d1b2a8a27937f85775bda273bae427d6",
+        "sampled_frames/39.jpg": "801188ac7a744244133d66cb9137970cdc9701d399c0f5c5e1196bb68518a9d0",
+        "sampled_frames/133.jpg": "9eca4a6685c12980a77cb201797246b11e2bdc12631c49628f5ad1998e9dcfa5",
+        "sampled_frames/38.jpg": "980015c73dcf966ab9bacf4783726fc09c4c30defe05aae8e9ce7cb62622faad",
+        "sampled_frames/149.jpg": "7ff82a4c501f59fc28d29276521bc5f66b127fdf4dc3334b24cf31b852af1f31",
+        "sampled_frames/9.jpg": "856fc30e22b094ebd03785c20a5b7545eb639f8a97d0e28d487fb2b71b29b7b1",
+        "sampled_frames/12.jpg": "7e56daaacb45cb6174324aa637edabb8f0f57d424a756365900071062b8e126f",
+        "sampled_frames/21.jpg": "8b29a4208c4c8b17176f535cc3f0f55f122fe00075f888aee5a497222a95cc63",
+        "sampled_frames/88.jpg": "2cdc8a2f6025dd0eb646b9995f8efc9ec0c0022379f9cbcf7fe7f8907527a678",
+        "sampled_frames/147.jpg": "6647b585d1d729c33da502516cebad8103c1cd046d32e13bc0ab8cb0b8458aed",
+        "sampled_frames/138.jpg": "894c0e146c597f255877bb06120ca6620c036ff06333329b84e4ffee8cdf450d",
+        "sampled_frames/107.jpg": "8b515a0631d9f6b0f3c22b365496c0fd3472523891d6667529dbf48dcda6d054",
+        "sampled_frames/2.jpg": "37307a0e5715454885df20c78d683272890cd0542f520ca978821a6a62dd0765",
+        "sampled_frames/109.jpg": "221bce604ede090e799885be925ae7f52ed52105e8f8931646b121a3a2183a4e",
+        "sampled_frames/23.jpg": "ac4ad6d82c5271b82226812e3923a222a6ba22211dac4b0bb0f9d1e27dd506ba",
+        "sampled_frames/7.jpg": "1e92ecbf54959dee977fbe2adfe937b040561a113a371e1e4e92df4dfc80ab3a",
+        "sampled_frames/41.jpg": "6e7947097fa1c3e045757d8ac5e6c655404c43229b34ca687dc9a2c0372ba0f8",
+        "sampled_frames/123.jpg": "fa4e332a866d369a62088cf05c24c0fdc7929152ce00cb383560c1741b508400",
+        "sampled_frames/15.jpg": "645a5fe241ec3d58e422f742099852459b29f8b1f0b306071e6a862cf9405525",
+        "sampled_frames/137.jpg": "864807dd0a02614de86680c728708af2fc053a9dc25f3cec744bad31d268f761",
+        "sampled_frames/120.jpg": "ce11e50ff5a2dcc8b39a8217e30c7ace5990eb29875753d61150930000adbb02",
+        "sampled_frames/1.jpg": "a0ba6fe6880206f844cd16baaed39b875336963ad890194efde47ebde1a52c5b",
+        "sampled_frames/30.jpg": "13a0a1e0914004ba1d73f40375fc73b9e24819c77fbb29237e50ef16a4dbd38f",
+        "sampled_frames/26.jpg": "5527d034bc7bcbbda5ef593b3ced10a540a2ef3d8003c42da0ff6c1457a0768a",
+        "sampled_frames/13.jpg": "3ea79ac2d94dca9c895e9df85df71c7637e2557c0b049305e4722117c274f9b3",
+        "sampled_frames/32.jpg": "02ee9def9a1f6f1ee9696d545fac4cfbf6ea2fcaa7312881276607d89ab3cdac",
+        "sampled_frames/5.jpg": "b34df40de91c3692a01c1d48f9acea08ad58788f2e6c318df8ae9f4ecc11b40b",
+        "sampled_frames/116.jpg": "7a964d06e0abbc226a0390009457de0af30f8f1da147097d09542cb7cdced7b8",
+        "sampled_frames/17.jpg": "4ce35aac5095b4bfe8c69e5856586c672273c95b58e182002100d6c65101291f",
+        "sampled_frames/130.jpg": "0c6dc1b976e63a9d0ed39bd740359311b72a1e6c2a810353261dbeb99506b0a3",
+        "sampled_frames/119.jpg": "10d87f34711cf8aa6c9eb9c8b88ee00ffe91d195da424de532836bd22e9695dc",
+        "sampled_frames/22.jpg": "cb52a716a0dbd7f68247ca1876dd029fb96f6ffae200b4222874152e237dee9a",
+        "sampled_frames/24.jpg": "0337bee572af9d7ac1fa6aeb944e3d10fde2b3f081a99e8c8eec8c85986a8535",
+        "sampled_frames/131.jpg": "ecee9993390a6cffc3f4755ed94bef9ee9050e5153a3c548ec6e5c71acc6bdea",
+        "sampled_frames/128.jpg": "cef08a0dfacfd3335aa0216b8179a25842370719b90540668d2db279eef8ae4e",
+        "sampled_frames/34.jpg": "fef9fa01c644175f0dfa8ae62601c4ca56f88e2699539b6416518becacea202e",
+        "sampled_frames/36.jpg": "f408b449898635e4736f542452a8f65f5b2c7aba42f7bd4b10b6891f6e1530a4",
+        "sampled_frames/20.jpg": "cd6a26c55b10642ef4f27aedbeecba142ecd1bc68f01259da0a02e360f33bfa3",
+        "sampled_frames/124.jpg": "9ba989017ef05f5f18d0f81d422d2086465687eccbbbcb41c550b90e58cf5149",
+        "sampled_frames/142.jpg": "5d37c299da693491ece5a4c87394b9b9fddb9e1715d3f8c39a8b793893b12ea5",
+        "sampled_frames/146.jpg": "30b294f9a10cab44bac0704702adea41a133841acafc8aedf1fbf62c14f47bb0",
+        "sampled_frames/122.jpg": "78fc0d4a1cfb1d73b7d2b71a7492c0d55491f2e939aea21933f3afc64efcfe7e",
+        "sampled_frames/115.jpg": "e2e8565dfcd1c5f598c02e715e979c8c03e301431e1535a3d86486f5fe20bcca",
+        "sampled_frames/89.jpg": "4208768587affa86afbfbc798a4f82587cce09e638d83d28a5ae4e9e80e23310",
+        "sampled_frames/125.jpg": "9dff6a073cbbc82c372f6da1d0c43f3b7916be0ee922d2327d360c0b9625e3b4",
+        "sampled_frames/136.jpg": "bca659cab39845728e9655ba42e9e8b6be96f4af2bea25cb17d9a197bca9d9da",
+        "sampled_frames/3.jpg": "a35aa5a108aeafa76068cccdcb31fad35f2f56410930b427840f713b6c8c53d6",
+        "sampled_frames/139.jpg": "dfdc3cccc0b5b14340624a091a7df473c3c43f97e9fbafac812d5e71c5d64191",
+        "sampled_frames/118.jpg": "b67a32201d72790ff264671ec070cf8f788cd74627f942f4c90b760e579550eb",
+        "sampled_frames/4.jpg": "ea7830d51921a9ffe8fa8025d67e63d13ea0f4f85c7b66f44277d9b06385139a",
+        "sampled_frames/25.jpg": "79dcc43b9096317657e306f8f1f979a5e219f094fef1e31e33f70ac8ea9c1cf8",
+        "sampled_frames/8.jpg": "371bb10c79c2820b2731e110a25029e5a593a2dae7d0ef5d4dbbf7253fccd73b",
+        "sampled_frames/29.jpg": "dccb4d322ae55a6887da24b8fe9d60c741963c1083258a4873fe58651db22904",
+        "sampled_frames/129.jpg": "2e176357dff88181a3bd222ecd9480df276a38a889fbc1deac802a01ede8ed6d",
+        "sampled_frames/127.jpg": "1cc31379e6372ca915c12be765f1b0d9f16d2c0fea8269f028af085a200035a1",
+        "sampled_frames/18.jpg": "0b377af1079caf84a39db89d2e41d597f97e88ee05a1a94e1fb96c9aa32159fc",
+        "sampled_frames/143.jpg": "af80db1001b9127af9c4bfa85cc495fa51d1f8a4e5f6f779f58875271ca6c447",
+        "sampled_frames/110.jpg": "12231c215fb3b0877b69aa7b88f5cfbe2720f808c7bed60679b6e732580891f9",
+        "sampled_frames/10.jpg": "ddff09f8f030888bf541c8d071de66f4e1e1df0599ea42eebaabb02bb1a3691a",
+        "sampled_frames/35.jpg": "9d30d00ea852b109323e8236cf35e5a1c065a6a19e306829952e4565cae53519",
+        "sampled_frames/117.jpg": "3f65fef9d8c1bb46e6b5b71aed334cd661d766c3a840c96feb3fdf82860d9e2a",
+        "sampled_frames/19.jpg": "1002cdb06392cfbe683dd68c3073acd8efdaedeb0453a2d1127062df656f5f8a",
+        "sampled_frames/113.jpg": "f196764e441ba76aa016f7db82abc76237dff03bc03fc4cbf72d06e839bc023e",
+        "sampled_frames/126.jpg": "13e6a017114d97cbb5ec8c9ff1532e4f8e36fb6454d8a228b709cf5f599c9a51",
+        "sampled_frames/148.jpg": "40a500f64b99ee1e63a91a08fb8e03307bedd9786c4aa06fb1dbfffd0fd381be",
+        "sampled_frames/14.jpg": "4a6aad21861fe04437463377c330851ea119033b36791cc292706b25ff69819f",
+        "sampled_frames/108.jpg": "0cf1f6474a332b0ed8e088ba9da256bba64036a8cefd312f773a0e7d3569de7e",
+        "sampled_frames/112.jpg": "efbef04bb58d582ac68a247b472cd423cff894fb20d6a49e1f0e7d71c910c6ee",
+        "sampled_frames/134.jpg": "c64ba28bd7cf690dc397824a0193deb8af361ec47c2db563341120e3a5e594f0",
+        "sampled_frames/141.jpg": "a7a0b2034f64d40ea8ce307a973f9398f713e03bda98d380e8641ac67e5ca531",
+        "sampled_frames/16.jpg": "9b2ebee41a0ca88b0738f62a34e60f0daee80e44b7fcb043b226d36a93d9d4d3",
+        "sampled_frames/151.jpg": "6b09d5db84e81ad9228bf579771ff28a2dd06b176a9c667011c9877fc48a61e7",
+        "sampled_frames/144.jpg": "944de016c9ac42d1abc64d9625e19b77b2144aec235633012c9e1b090bdcd0df",
+        "sampled_frames/40.jpg": "c4098f08f3943fef08b0cb552b1ce8105ef8d6b4da91a0e9192d45f756bdca89",
+        "sampled_frames/33.jpg": "3a912eeff34cd33ba74cedec97d5b2ef9966504f3dab47a0433b06556acce878",
+        "sampled_frames/111.jpg": "a3f461e216768bfe56718892e3bac6ba21398c020508afb176bd529c9c74fadd",
+        "18_scene_partition.json": "b7f3e6b26b5bc0e103453583ecfb39c3f47be14ec77cd835ab15475c0a6a78b6",
+        "19_per_frame_before_after.md": "f4f80372e6d8bf8d64c40c2fd3111d2cb3dd1e7074d98f80c7144a3d8b0fc59c",
+        "20_per_frame_before_after.json": "c516ba5926afb2a251489304187d3cee97c98515341f3263655fe7f13ca1fc2a",
+        "21_per_frame_before_after.csv": "71dabce6d26ad2377785c916af2bbd731b99ab7c868200222576267a2a1df35e"
+      },
+      "checks": {
+        "plan_redecoded": true,
+        "source_audit_matches": true,
+        "selected_description_matches": true,
+        "actual_final_input_matches": true,
+        "token_ids_reconstructed": true
+      },
+      "sampling_trace": {
+        "selected_samples": 91,
+        "retained_reference_samples": 36,
+        "all_raw_captions_mapped": true
+      },
+      "scene_partition_verified": true,
+      "per_frame_before_after": {
+        "rows": 91,
+        "with_final_paragraphs": 36,
+        "all_final_text_verified": true
+      }
+    },
+    {
+      "name": "02_dog_filter",
+      "title": "遛狗：筛选后保留6条",
+      "question_id": "15bae307-992b-4359-9fe0-3f622f957d42",
+      "total": 56,
+      "retained": 6,
+      "skipped": 50,
+      "merge_groups": 0,
+      "final_input_tokens": 792,
+      "source_files": {
+        "01_question_options.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/question/15bae307-992b-4359-9fe0-3f622f957d42.json",
+          "sha256": "5b9b1e0ad1104f043430b28d3487295b391fcf0f00f17fa0c4d51df032ee0ba8"
+        },
+        "03_candidate_pool.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/pool/15bae307-992b-4359-9fe0-3f622f957d42.json",
+          "sha256": "64e17a000fba9462f8e8e1a811d974d765158eafa907484d171be02bdfe4c22c"
+        },
+        "04_actual_planner_input.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/15bae307-992b-4359-9fe0-3f622f957d42/planner_output_input.json",
+          "sha256": "6a23edbb36c534ca07da9f0e005bb8a549379ceb450e216266a083cb0357f518"
+        },
+        "05_raw_planner_output.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/15bae307-992b-4359-9fe0-3f622f957d42/planner_output.json",
+          "sha256": "681943203bc6ff1ea56306a598d925c61b5ddc1fdada6bd13e730b674882f79f"
+        },
+        "06_plan.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/15bae307-992b-4359-9fe0-3f622f957d42/plan.json",
+          "sha256": "19fbd17b4708d9d09fae355f074bc1e8061a10b448af9a9fe9c914a47587bd0f"
+        },
+        "08_plan_audit.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/15bae307-992b-4359-9fe0-3f622f957d42/plan_audit.json",
+          "sha256": "366721d5d8af8f7c6e9715430768c1cb34536600aea05eb1dcbe37de63043e91"
+        },
+        "10_actual_final_model_input.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/15bae307-992b-4359-9fe0-3f622f957d42/K_evidence_planner/answer_output_input.json",
+          "sha256": "838270ba936aa92ac99ea090f498e553077d30fd8fa42b66ed890f6496624c17"
+        }
+      },
+      "exported_files": {
+        "13_actual_token_ids.json": "1d01cab76599f3bf4394fab69af6b241de116d612a3ec16f802bfbd47ffa71e6",
+        "14_observed_answer.json": "6bdd348e731b6bd197bc5add0590945a76f18b763afc074540f124fc0936af1b",
+        "02_entities_and_facts.json": "265d2b52ddee32af045036588dc9b76f19b5610a64a6a5f9d198af9da81294e5",
+        "03_candidate_pool.json": "64e17a000fba9462f8e8e1a811d974d765158eafa907484d171be02bdfe4c22c",
+        "07_retained_evidence.json": "57aaeadc543efa68c1ec9aba1ee3e4bcade55fb728ce884551c4114ac0a6906f",
+        "09_selected_description.txt": "b4d535e5ef478cb208bc2f2c789a9e2edd8ec1aaeed292fe1eecd53e61cf5126",
+        "08_plan_audit.json": "366721d5d8af8f7c6e9715430768c1cb34536600aea05eb1dcbe37de63043e91",
+        "11_final_messages.json": "0086f173fb046372e84390ed1b5ab7c8017282dd523cf5d04854f6f650c8ac74",
+        "06_plan.json": "19fbd17b4708d9d09fae355f074bc1e8061a10b448af9a9fe9c914a47587bd0f",
+        "01_question_options.json": "5b9b1e0ad1104f043430b28d3487295b391fcf0f00f17fa0c4d51df032ee0ba8",
+        "10_actual_final_model_input.json": "838270ba936aa92ac99ea090f498e553077d30fd8fa42b66ed890f6496624c17",
+        "04_actual_planner_input.json": "6a23edbb36c534ca07da9f0e005bb8a549379ceb450e216266a083cb0357f518",
+        "05_raw_planner_output.json": "681943203bc6ff1ea56306a598d925c61b5ddc1fdada6bd13e730b674882f79f",
+        "12_actual_chat_template.txt": "91ada0721885817b953ceae81fd6e3d653c8228d1bdea244b798df68ba24f88f",
+        "demo.md": "caec2a4e12611872d8deee7bad9c40ca26c7f9ab9c8256f8a7abad6595a50810",
+        "16_sampling_trace.json": "03b63f726cdc5a77345233e8146b85b88e67d9d4bd41e43d280382f3194ca85b",
+        "15_sampling_trace.md": "1e043b27a12563c6c10ce0ede86b071ef7858c5768dcf35a7afd1b6efc69ced4",
+        "19_per_frame_before_after.md": "9998dce6e7a7f71b289c12b7f775826f8dd982b4821c6669b4c6b78e0020a147",
+        "20_per_frame_before_after.json": "04dbdc44e2d133777ac525a06a5ed7fbd70ec8c25983bfa5e9e19191135afe47",
+        "21_per_frame_before_after.csv": "1018129b209046d53ac43a3892a87b532cda25060a2abce645ec35fae4b1ce33"
+      },
+      "checks": {
+        "plan_redecoded": true,
+        "source_audit_matches": true,
+        "selected_description_matches": true,
+        "actual_final_input_matches": true,
+        "token_ids_reconstructed": true
+      },
+      "sampling_trace": {
+        "selected_samples": 90,
+        "retained_reference_samples": 37,
+        "all_raw_captions_mapped": true
+      },
+      "per_frame_before_after": {
+        "rows": 90,
+        "with_final_paragraphs": 37,
+        "all_final_text_verified": true
+      }
+    },
+    {
+      "name": "03_over_filter",
+      "title": "交谈目的：只剩最后一条的反例",
+      "question_id": "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+      "total": 31,
+      "retained": 1,
+      "skipped": 30,
+      "merge_groups": 0,
+      "final_input_tokens": 425,
+      "source_files": {
+        "01_question_options.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/question/3e700f0b-b4a9-4000-92b7-f0fa3be55161.json",
+          "sha256": "a87fa465bee619ae3d3b8aab5f538456b1d32f3dcf7188232a28b8aa4a84cdb6"
+        },
+        "03_candidate_pool.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/pool/3e700f0b-b4a9-4000-92b7-f0fa3be55161.json",
+          "sha256": "a1c334801fde1f68228520fd149d5be6c0569e8709c4a17418af2f50891369c3"
+        },
+        "04_actual_planner_input.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/3e700f0b-b4a9-4000-92b7-f0fa3be55161/planner_output_input.json",
+          "sha256": "0e721eaee4a8f65e63496d2f1949f460424e4338b36e4474465f0df62f1bd7c9"
+        },
+        "05_raw_planner_output.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/3e700f0b-b4a9-4000-92b7-f0fa3be55161/planner_output.json",
+          "sha256": "921b2437c92e48edd62a94b9cee00dc764ccab0d8ad646f6886a2a936030756a"
+        },
+        "06_plan.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/3e700f0b-b4a9-4000-92b7-f0fa3be55161/plan.json",
+          "sha256": "1bf3e98edcc3a4282d55f0c2936911c8cf753cceec9c8404b3d364b3d6725781"
+        },
+        "08_plan_audit.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/3e700f0b-b4a9-4000-92b7-f0fa3be55161/plan_audit.json",
+          "sha256": "4350e04e235f4e878f356f60e666634bf4157c372597ea400ec5b0e5640a0885"
+        },
+        "10_actual_final_model_input.json": {
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/runs/3e700f0b-b4a9-4000-92b7-f0fa3be55161/K_evidence_planner/answer_output_input.json",
+          "sha256": "04b18ae3d789ccc5834f4b7fcaed49fca995ed21ce60adb4e3d3f21056444cc8"
+        }
+      },
+      "exported_files": {
+        "13_actual_token_ids.json": "61e45c993529d8f4802e233dd7b36a5dd57e13937defbdef35d1eddc23ab7143",
+        "14_observed_answer.json": "587583aa58e2394ca7e106b3811f379b93245a2f0091d94a380d85411965a867",
+        "02_entities_and_facts.json": "52747803d930f084c4d959ff94af39dda594bad66af730e830f2ec2635bb6f0a",
+        "03_candidate_pool.json": "a1c334801fde1f68228520fd149d5be6c0569e8709c4a17418af2f50891369c3",
+        "07_retained_evidence.json": "e190d53ac5dc23b1abf60f4cf405a37be095b76243d684063dfa2944dee9f6a3",
+        "09_selected_description.txt": "f270cfb8ccf8824721f7ef0921a58b6b6e6e0ea4f622229b2119a7b4d0481e3e",
+        "08_plan_audit.json": "4350e04e235f4e878f356f60e666634bf4157c372597ea400ec5b0e5640a0885",
+        "11_final_messages.json": "7473d17d3b7ab59efaf94ae8cab0bb21e67b0a0628c288f3d7d2e49c5b89fd7a",
+        "06_plan.json": "1bf3e98edcc3a4282d55f0c2936911c8cf753cceec9c8404b3d364b3d6725781",
+        "01_question_options.json": "a87fa465bee619ae3d3b8aab5f538456b1d32f3dcf7188232a28b8aa4a84cdb6",
+        "10_actual_final_model_input.json": "04b18ae3d789ccc5834f4b7fcaed49fca995ed21ce60adb4e3d3f21056444cc8",
+        "04_actual_planner_input.json": "0e721eaee4a8f65e63496d2f1949f460424e4338b36e4474465f0df62f1bd7c9",
+        "05_raw_planner_output.json": "921b2437c92e48edd62a94b9cee00dc764ccab0d8ad646f6886a2a936030756a",
+        "12_actual_chat_template.txt": "f340466ca94b755f55ef3b164a5a7fdb42b07329c426eda408020b34930d528c",
+        "demo.md": "b3c286895b1ece9dcf4ff496bd8f211aa8f24a5a2b4231f255c052549f2b12ba",
+        "16_sampling_trace.json": "8981af479b4edf2d81aa6eeeae1fbdb8f32fca6d2364637b96788b5fd8a72d26",
+        "15_sampling_trace.md": "318886a7da9d810e811c450916ae6c4caaf009e8e9d41ade7dc67285276518d8",
+        "19_per_frame_before_after.md": "d1c2455ba76056100feeb435174d1356b2197c0b4fcb6f5680d0b207b3a98642",
+        "20_per_frame_before_after.json": "0fd056cf928c5869abaa8cb4677c6b20fd8b7ca100838c833d539efd353916b6",
+        "21_per_frame_before_after.csv": "61b2187d7c8de09bc6fbc0eb7c43eaa482b636e8ff866889e7aa6a42f0e53384"
+      },
+      "checks": {
+        "plan_redecoded": true,
+        "source_audit_matches": true,
+        "selected_description_matches": true,
+        "actual_final_input_matches": true,
+        "token_ids_reconstructed": true
+      },
+      "sampling_trace": {
+        "selected_samples": 25,
+        "retained_reference_samples": 1,
+        "all_raw_captions_mapped": true
+      },
+      "per_frame_before_after": {
+        "rows": 25,
+        "with_final_paragraphs": 1,
+        "all_final_text_verified": true
+      }
+    }
+  ],
+  "sampling_trace_updated_at": "2026-11-02T16:53:03.900580+08:00",
+  "experiments_rerun": false,
+  "per_frame_before_after_updated_at": "2026-11-02T17:07:34.337834+08:00"
+}

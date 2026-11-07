@@ -1,0 +1,185 @@
+{
+  "updated_at": "2026-11-03T13:20:44.215167+08:00",
+  "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1",
+  "controller": {
+    "pid": 3146715,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1/runtime/script/run_o_sentence_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1"
+    ],
+    "started_at": "2026-11-03T13:19:30.517081+08:00"
+  },
+  "queue_status": {
+    "state": "waiting_for_gpu",
+    "controller_pid": 3146715,
+    "updated_at": "2026-11-03T13:20:41.354210+08:00",
+    "watched_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "gpu_observations": {
+      "0": {
+        "index": "0",
+        "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "free_mib": 21630,
+        "utilization": 99
+      },
+      "1": {
+        "index": "1",
+        "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+        "free_mib": 13361,
+        "utilization": 100
+      },
+      "2": {
+        "index": "2",
+        "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+        "free_mib": 65619,
+        "utilization": 100
+      },
+      "3": {
+        "index": "3",
+        "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+        "free_mib": 12651,
+        "utilization": 97
+      }
+    },
+    "stable_observations": {
+      "0": 0,
+      "1": 0,
+      "2": 8,
+      "3": 0
+    },
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100
+  },
+  "planned": 10,
+  "new_answers_planned": 40,
+  "case_ids": [
+    "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+    "6472e377-b65c-461a-a750-9b28a673dc86",
+    "c5004075-e154-4bb8-baea-e41915190319",
+    "e9322513-15b2-4b89-8ddb-7d1432beb8a1",
+    "07d7128e-0684-4c6b-81cb-3ecb76c2e6ec",
+    "429e2791-b050-4184-9837-de7c201f94c8",
+    "86d91c31-1bfe-4f99-a803-7466c8d801d1",
+    "811f0bb6-5bde-4e87-a182-bcf09def0c06",
+    "98427b0b-20ed-45bb-b772-91573ce90b5a",
+    "6dd07731-937c-4b63-b296-0a947ffe6996"
+  ],
+  "additional_case_ids": [
+    "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+    "6472e377-b65c-461a-a750-9b28a673dc86",
+    "c5004075-e154-4bb8-baea-e41915190319",
+    "e9322513-15b2-4b89-8ddb-7d1432beb8a1",
+    "07d7128e-0684-4c6b-81cb-3ecb76c2e6ec",
+    "429e2791-b050-4184-9837-de7c201f94c8",
+    "86d91c31-1bfe-4f99-a803-7466c8d801d1",
+    "811f0bb6-5bde-4e87-a182-bcf09def0c06"
+  ],
+  "known_case_ids": [
+    "98427b0b-20ed-45bb-b772-91573ce90b5a",
+    "6dd07731-937c-4b63-b296-0a947ffe6996"
+  ],
+  "selection_policy": "Eight additional cases in original N cohort order, excluding the two known cases; then the two known controls. Selection does not inspect outcomes.",
+  "design": {
+    "question": "required",
+    "options": [
+      "absent",
+      "all"
+    ],
+    "representation": [
+      "O_structured",
+      "Oplus_model_composition"
+    ],
+    "final_reader": "question and all options in every arm"
+  },
+  "source_policy": "Completed frozen N-r2 navigation and scenes; not a new full-navigation benchmark.",
+  "extraction": {
+    "additional_cases": "442 source sentences, extract once then share across four arms",
+    "known_controls": "107 frozen r9 extractions archived by r10; regenerate filtering, composition, and all answers"
+  },
+  "preparation": {
+    "passed": true,
+    "source_cases": [
+      {
+        "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+        "sentences": 115,
+        "replayed_extraction": false
+      },
+      {
+        "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+        "sentences": 16,
+        "replayed_extraction": false
+      },
+      {
+        "question_id": "c5004075-e154-4bb8-baea-e41915190319",
+        "sentences": 100,
+        "replayed_extraction": false
+      },
+      {
+        "question_id": "e9322513-15b2-4b89-8ddb-7d1432beb8a1",
+        "sentences": 125,
+        "replayed_extraction": false
+      },
+      {
+        "question_id": "07d7128e-0684-4c6b-81cb-3ecb76c2e6ec",
+        "sentences": 37,
+        "replayed_extraction": false
+      },
+      {
+        "question_id": "429e2791-b050-4184-9837-de7c201f94c8",
+        "sentences": 9,
+        "replayed_extraction": false
+      },
+      {
+        "question_id": "86d91c31-1bfe-4f99-a803-7466c8d801d1",
+        "sentences": 11,
+        "replayed_extraction": false
+      },
+      {
+        "question_id": "811f0bb6-5bde-4e87-a182-bcf09def0c06",
+        "sentences": 29,
+        "replayed_extraction": false
+      },
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "sentences": 11,
+        "replayed_extraction": true
+      },
+      {
+        "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "sentences": 96,
+        "replayed_extraction": true
+      }
+    ],
+    "source_files_verified": 1390,
+    "case_choice": "Eight additional cases in original N cohort order, excluding the two known cases; then the two known controls. Selection does not inspect outcomes.",
+    "cpu_tests": 18,
+    "new_model_validation_pending": true,
+    "canonical_core_hash": "9a73b23bee72b0bc249d3921df84c487de3186d52d48fe555c5b8dd3a03a2aec"
+  },
+  "canonical_semantic_core_unchanged_from_r14": true,
+  "previous_r14_frozen_hashes_passed": true,
+  "expected_outputs": [
+    "report.json: all arms and additional/known subgroups",
+    "runs/*/shared_extraction: fresh candidates and costs",
+    "runs/*/question_only and question_options: per-sentence labels and compositions",
+    "cases/*/parent_N: full original navigation and source records"
+  ],
+  "limitations": [
+    "Small fixed-source diagnostic, not a random generalization estimate.",
+    "Known semantic probe failures remain recorded; runtime/parse/budget failures stop.",
+    "Semantic overfiltering and hallucinations were not fixed or tuned for these eight additional cases.",
+    "Current state is a launch snapshot; consult live queue/report for progress."
+  ],
+  "training": false,
+  "adapter": null,
+  "default_modes_unchanged": true,
+  "MN_not_restarted_or_modified": true
+}

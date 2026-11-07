@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "question_id": "d299858f-cde8-49a9-a713-fb546db0a268",
+  "old_raw_path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3/parallel-20261104-r1/attempts/d299858f-cde8-49a9-a713-fb546db0a268/run/raw_calls/f4d90e7d-aab0-4dcc-8133-7ad9fadefddc-0.json",
+  "blocked": {
+    "token_index": 287,
+    "token_text": "8",
+    "prefix_tail": "4\", \"S45\", \"S46\", \"S47\", \"S4"
+  },
+  "scope": "CPU real-tokenizer replay, not new model inference; old failed output is not repaired or accepted"
+}

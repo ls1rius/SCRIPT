@@ -1,0 +1,1327 @@
+{
+  "version": "F-evidence-planner-K-v2-per-record-decisions",
+  "records": [
+    {
+      "id": "R0",
+      "text": "C looks at man P.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C45",
+          "original_text": "#C C looks at man P"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C45",
+          "interval": [
+            45,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R1",
+      "text": "a woman X walks towards the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C46",
+          "original_text": "#O a woman X walks towards the table"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C46",
+          "interval": [
+            46,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "text": "X walks towards the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C46",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "walks",
+            "patient": "towards the table"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C46",
+          "interval": [
+            46,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "text": "C walks towards the bedroom.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C47",
+          "original_text": "#C C walks towards the bedroom"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C47",
+          "interval": [
+            47,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "text": "A lady Y holds a phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C48",
+          "original_text": "#O A lady Y holds a phone"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C48",
+          "interval": [
+            48,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "text": "Y holds phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C48",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Y",
+            "verb": "holds",
+            "patient": "phone"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C48",
+          "interval": [
+            48,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "text": "C looks at the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C49",
+          "original_text": "#C C looks at the table"
+        },
+        {
+          "region": "description",
+          "caption_id": "C51",
+          "original_text": "#C C looks at the table"
+        },
+        {
+          "region": "description",
+          "caption_id": "C57",
+          "original_text": "#C C looks at the table"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C49",
+          "interval": [
+            49,
+            50
+          ]
+        },
+        {
+          "caption_id": "C51",
+          "interval": [
+            51,
+            52
+          ]
+        },
+        {
+          "caption_id": "C57",
+          "interval": [
+            57,
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "text": "A woman X sits on the chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C50",
+          "original_text": "#O A woman X sits on the chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C50",
+          "interval": [
+            50,
+            51
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "text": "lady X walks around.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C52",
+          "original_text": "#O lady X walks around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C52",
+          "interval": [
+            52,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R9",
+      "text": "a woman Y walks around the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C53",
+          "original_text": "#O a woman Y walks around the room "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C53",
+          "interval": [
+            53,
+            54
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "text": "person D walks around.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C54",
+          "original_text": "#O person D walks around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C54",
+          "interval": [
+            54,
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "text": "A woman X holds a phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C55",
+          "original_text": "#O A woman X holds a phone"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C55",
+          "interval": [
+            55,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "text": "X holds phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C55",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "holds",
+            "patient": "phone"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C55",
+          "interval": [
+            55,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "text": "woman K walks in the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C56",
+          "original_text": "#O woman K walks in the room "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C56",
+          "interval": [
+            56,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R14",
+      "text": "C walks in the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C58",
+          "original_text": "#C C walks in the room"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C58",
+          "interval": [
+            58,
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "text": "C walks around the house.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C59",
+          "original_text": "#C C walks around the house"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C59",
+          "interval": [
+            59,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "text": "woman X walks back to the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C60",
+          "original_text": "#O woman X walks back to the room"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C60",
+          "interval": [
+            60,
+            61
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "text": "a woman X walks towards C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C61",
+          "original_text": "#O a woman X walks towards C"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C61",
+          "interval": [
+            61,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "text": "X walks towards C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C61",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "walks",
+            "patient": "towards C"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C61",
+          "interval": [
+            61,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "text": "woman Y stands at the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C62",
+          "original_text": "#O woman Y stands at the table "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C62",
+          "interval": [
+            62,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "text": "C looks at the coffee maker.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C63",
+          "original_text": "#C C looks at the coffee maker"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C63",
+          "interval": [
+            63,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "text": "A woman Y walks towards C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C64",
+          "original_text": "#O A woman Y walks towards C"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C64",
+          "interval": [
+            64,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R22",
+      "text": "Y walks towards C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C64",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Y",
+            "verb": "walks",
+            "patient": "towards C"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C64",
+          "interval": [
+            64,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R23",
+      "text": "A woman K walks in the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C65",
+          "original_text": "#O A woman K walks in the room"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C65",
+          "interval": [
+            65,
+            66
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R24",
+      "text": "A woman Z walks towards the woman X.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C66",
+          "original_text": "#O A woman Z walks towards the woman X."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C66",
+          "interval": [
+            66,
+            67
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R25",
+      "text": "C looks at the phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C67",
+          "original_text": "#C C looks at the phone "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C67",
+          "interval": [
+            67,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R26",
+      "text": "C looks at woman X.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C68",
+          "original_text": "#C C looks at woman X"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C68",
+          "interval": [
+            68,
+            69
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R27",
+      "text": "woman P walks away from the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C69",
+          "original_text": "#O woman P walks away from the table"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C69",
+          "interval": [
+            69,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R28",
+      "text": "a woman X walks towards C. The text memory associates this observation with C (text reference E0).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T0",
+            "entity_id": "E0",
+            "scene_id": "S1",
+            "description": "#O a woman X walks towards C",
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 61,
+            "last_observed_at": 61,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              62
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C61"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              61,
+              61
+            ],
+            "source_support_interval": [
+              61,
+              62
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C61",
+          "interval": [
+            61,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R29",
+      "text": "woman Y stands at the table. The text memory associates this observation with the table (text reference E1).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T1",
+            "entity_id": "E1",
+            "scene_id": "S1",
+            "description": "#O woman Y stands at the table ",
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 62,
+            "last_observed_at": 62,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              63
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C62"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              62,
+              62
+            ],
+            "source_support_interval": [
+              62,
+              63
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C62",
+          "interval": [
+            62,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R30",
+      "text": "An unresolved source observation states: \"A woman Y walks towards C\".",
+      "qualification": "unresolved hypothesis",
+      "kinds": [
+        "temporal unresolved observation"
+      ],
+      "sources": [
+        {
+          "region": "temporal unresolved observation",
+          "record": {
+            "entity_id": "E0",
+            "scene_id": "S1",
+            "observation": {
+              "caption_id": "C64",
+              "continuity": "uncertain",
+              "state": "#O A woman Y walks towards C",
+              "cause": {
+                "action": null,
+                "actor": null,
+                "tool": null,
+                "basis": "unknown",
+                "source_caption_ids": []
+              }
+            },
+            "pts": 64,
+            "status": "unresolved_state_observation"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C64",
+          "interval": [
+            64,
+            65
+          ]
+        }
+      ]
+    }
+  ],
+  "source_memory": {
+    "observations": [
+      {
+        "caption_id": "C45",
+        "frame_index": 45,
+        "sample_interval": [
+          45,
+          46
+        ],
+        "evidence": {
+          "original_text": "#C C looks at man P"
+        }
+      },
+      {
+        "caption_id": "C46",
+        "frame_index": 46,
+        "sample_interval": [
+          46,
+          47
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "walks",
+              "patient": "towards the table"
+            }
+          ],
+          "original_text": "#O a woman X walks towards the table"
+        }
+      },
+      {
+        "caption_id": "C47",
+        "frame_index": 47,
+        "sample_interval": [
+          47,
+          48
+        ],
+        "evidence": {
+          "original_text": "#C C walks towards the bedroom"
+        }
+      },
+      {
+        "caption_id": "C48",
+        "frame_index": 48,
+        "sample_interval": [
+          48,
+          49
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "holds",
+              "patient": "phone"
+            }
+          ],
+          "original_text": "#O A lady Y holds a phone"
+        }
+      },
+      {
+        "caption_id": "C49",
+        "frame_index": 49,
+        "sample_interval": [
+          49,
+          50
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the table"
+        }
+      },
+      {
+        "caption_id": "C50",
+        "frame_index": 50,
+        "sample_interval": [
+          50,
+          51
+        ],
+        "evidence": {
+          "original_text": "#O A woman X sits on the chair"
+        }
+      },
+      {
+        "caption_id": "C51",
+        "frame_index": 51,
+        "sample_interval": [
+          51,
+          52
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the table"
+        }
+      },
+      {
+        "caption_id": "C52",
+        "frame_index": 52,
+        "sample_interval": [
+          52,
+          53
+        ],
+        "evidence": {
+          "original_text": "#O lady X walks around"
+        }
+      },
+      {
+        "caption_id": "C53",
+        "frame_index": 53,
+        "sample_interval": [
+          53,
+          54
+        ],
+        "evidence": {
+          "original_text": "#O a woman Y walks around the room "
+        }
+      },
+      {
+        "caption_id": "C54",
+        "frame_index": 54,
+        "sample_interval": [
+          54,
+          55
+        ],
+        "evidence": {
+          "original_text": "#O person D walks around"
+        }
+      },
+      {
+        "caption_id": "C55",
+        "frame_index": 55,
+        "sample_interval": [
+          55,
+          56
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "holds",
+              "patient": "phone"
+            }
+          ],
+          "original_text": "#O A woman X holds a phone"
+        }
+      },
+      {
+        "caption_id": "C56",
+        "frame_index": 56,
+        "sample_interval": [
+          56,
+          57
+        ],
+        "evidence": {
+          "original_text": "#O woman K walks in the room "
+        }
+      },
+      {
+        "caption_id": "C57",
+        "frame_index": 57,
+        "sample_interval": [
+          57,
+          58
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the table"
+        }
+      },
+      {
+        "caption_id": "C58",
+        "frame_index": 58,
+        "sample_interval": [
+          58,
+          59
+        ],
+        "evidence": {
+          "original_text": "#C C walks in the room"
+        }
+      },
+      {
+        "caption_id": "C59",
+        "frame_index": 59,
+        "sample_interval": [
+          59,
+          60
+        ],
+        "evidence": {
+          "original_text": "#C C walks around the house"
+        }
+      },
+      {
+        "caption_id": "C60",
+        "frame_index": 60,
+        "sample_interval": [
+          60,
+          61
+        ],
+        "evidence": {
+          "original_text": "#O woman X walks back to the room"
+        }
+      },
+      {
+        "caption_id": "C61",
+        "frame_index": 61,
+        "sample_interval": [
+          61,
+          62
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "walks",
+              "patient": "towards C"
+            }
+          ],
+          "original_text": "#O a woman X walks towards C"
+        }
+      },
+      {
+        "caption_id": "C62",
+        "frame_index": 62,
+        "sample_interval": [
+          62,
+          63
+        ],
+        "evidence": {
+          "original_text": "#O woman Y stands at the table "
+        }
+      },
+      {
+        "caption_id": "C63",
+        "frame_index": 63,
+        "sample_interval": [
+          63,
+          64
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the coffee maker"
+        }
+      },
+      {
+        "caption_id": "C64",
+        "frame_index": 64,
+        "sample_interval": [
+          64,
+          65
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "walks",
+              "patient": "towards C"
+            }
+          ],
+          "original_text": "#O A woman Y walks towards C"
+        }
+      },
+      {
+        "caption_id": "C65",
+        "frame_index": 65,
+        "sample_interval": [
+          65,
+          66
+        ],
+        "evidence": {
+          "original_text": "#O A woman K walks in the room"
+        }
+      },
+      {
+        "caption_id": "C66",
+        "frame_index": 66,
+        "sample_interval": [
+          66,
+          67
+        ],
+        "evidence": {
+          "original_text": "#O A woman Z walks towards the woman X."
+        }
+      },
+      {
+        "caption_id": "C67",
+        "frame_index": 67,
+        "sample_interval": [
+          67,
+          68
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the phone "
+        }
+      },
+      {
+        "caption_id": "C68",
+        "frame_index": 68,
+        "sample_interval": [
+          68,
+          69
+        ],
+        "evidence": {
+          "original_text": "#C C looks at woman X"
+        }
+      },
+      {
+        "caption_id": "C69",
+        "frame_index": 69,
+        "sample_interval": [
+          69,
+          70
+        ],
+        "evidence": {
+          "original_text": "#O woman P walks away from the table"
+        }
+      }
+    ]
+  },
+  "temporal_archive": {
+    "entities": [
+      {
+        "id": "E0",
+        "label": "C",
+        "attributes": [],
+        "scene_ids": [
+          "S1"
+        ],
+        "state_ids": [
+          "T0"
+        ]
+      },
+      {
+        "id": "E1",
+        "label": "the table",
+        "attributes": [],
+        "scene_ids": [
+          "S1"
+        ],
+        "state_ids": [
+          "T1"
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "T0",
+        "entity_id": "E0",
+        "scene_id": "S1",
+        "description": "#O a woman X walks towards C",
+        "logical_state_id": "T0",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 61,
+        "last_observed_at": 61,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          62
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C61"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          61,
+          61
+        ],
+        "source_support_interval": [
+          61,
+          62
+        ]
+      },
+      {
+        "id": "T1",
+        "entity_id": "E1",
+        "scene_id": "S1",
+        "description": "#O woman Y stands at the table ",
+        "logical_state_id": "T1",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 62,
+        "last_observed_at": 62,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          63
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C62"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          62,
+          62
+        ],
+        "source_support_interval": [
+          62,
+          63
+        ]
+      }
+    ],
+    "transitions": [],
+    "relations": [],
+    "lineage": [],
+    "context_selection": {
+      "total_entities": 2,
+      "selected_entities": 2,
+      "total_states": 2,
+      "selected_states": 2,
+      "attributes_per_entity": 16,
+      "note": "Full source graph is retained separately; this is a bounded retrieval view.",
+      "partial_memory": true
+    },
+    "source_type": "caption",
+    "evidence_policy": "Assertions extracted from original timestamped summaries; identities are text inferences, not pixel-verified facts. Unreported changes and persistence remain unknown.",
+    "identities": [],
+    "partial": true,
+    "unresolved_observations": [
+      {
+        "entity_id": "E0",
+        "scene_id": "S1",
+        "observation": {
+          "caption_id": "C64",
+          "continuity": "uncertain",
+          "state": "#O A woman Y walks towards C",
+          "cause": {
+            "action": null,
+            "actor": null,
+            "tool": null,
+            "basis": "unknown",
+            "source_caption_ids": []
+          }
+        },
+        "pts": 64,
+        "status": "unresolved_state_observation"
+      }
+    ],
+    "temporal_organization_policy": "Original caption assertions and existing local entities only. Continuity and cross-scene identity are text inferences. Unknown gaps, causes and physical identities remain unknown. Repeated actions are not automatically a single continuous state."
+  },
+  "visual_archive": [],
+  "pool_sha256": "ee1961bae53b657c1154cbeb4ad6812f4ffeb4f4c57c9c922e857edbbf712360",
+  "policy": "These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence.",
+  "source_counts": {
+    "description": 25,
+    "F fact": 5,
+    "temporal state": 2,
+    "temporal unresolved observation": 1
+  }
+}

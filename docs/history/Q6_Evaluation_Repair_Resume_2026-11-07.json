@@ -1,0 +1,444 @@
+{
+  "at": "2026-11-07T14:39:50.439185+08:00",
+  "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-fixed3-200train-300val-20261107-r1",
+  "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-fixed3-200train-300val-20261107-r1/evaluation-recovery-20261107-r2",
+  "reason": "Original validation publisher renamed complete attempts into an uninitialized runs parent",
+  "training": {
+    "complete": true,
+    "epochs": 3,
+    "groups": 600,
+    "rollouts": 1200,
+    "optimizer_steps": 368,
+    "policy_gradient_updates": 17,
+    "weights_sha256": "5252ac554f7883e8c9e3347449584a14a450724d09f37f85961717fdffe2e0f8",
+    "restarted": false
+  },
+  "recovered": {
+    "republished": [
+      "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+      "6472e377-b65c-461a-a750-9b28a673dc86",
+      "c5004075-e154-4bb8-baea-e41915190319",
+      "e9322513-15b2-4b89-8ddb-7d1432beb8a1",
+      "6dd07731-937c-4b63-b296-0a947ffe6996",
+      "07d7128e-0684-4c6b-81cb-3ecb76c2e6ec"
+    ],
+    "model_calls_repeated": 0,
+    "training_restarted": false,
+    "at": "2026-11-07T14:35:14.935830+08:00"
+  },
+  "recovery_startup_failure": {
+    "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-fixed3-200train-300val-20261107-r1/evaluation-recovery-20261107-r1",
+    "reason": "Attempted to read lazy ModelWorker.process.pid before prepare_vlm",
+    "model_loaded": false,
+    "formal_calls": 0,
+    "history_retained": true
+  },
+  "current_controller": {
+    "pid": 2133329,
+    "identity": "1788204597",
+    "at": "2026-11-07T14:36:49.152551+08:00"
+  },
+  "worker_launch": [
+    {
+      "id": 0,
+      "pid": 2133359,
+      "identity": "1788204636"
+    },
+    {
+      "id": 1,
+      "pid": 2133360,
+      "identity": "1788204637"
+    },
+    {
+      "id": 2,
+      "pid": 2133361,
+      "identity": "1788204637"
+    },
+    {
+      "id": 3,
+      "pid": 2133362,
+      "identity": "1788204637"
+    },
+    {
+      "id": 4,
+      "pid": 2133363,
+      "identity": "1788204637"
+    },
+    {
+      "id": 5,
+      "pid": 2133364,
+      "identity": "1788204637"
+    }
+  ],
+  "allowed_gpu_indices": [
+    "0",
+    "2"
+  ],
+  "excluded_gpu_indices": [
+    "1",
+    "3"
+  ],
+  "admission_mib": 24576,
+  "physical_pool_mib": 22528,
+  "stable_observations": 3,
+  "maximum_workers": 6,
+  "checks": {
+    "cpu_tests": 25,
+    "cpu_passed": 25,
+    "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -m unittest tests.test_q6_evaluation_recovery tests.test_q6_parallel_rl tests.test_gpu_shared_queue tests.test_gpu_queue -q",
+    "isolated_frozen_import": "/tmp passed",
+    "original_frozen_entries": 2778,
+    "protected_artifacts": 1096,
+    "original_manifest_and_protected_reverified": true,
+    "all_published_results_audited": 8
+  },
+  "evaluation": {
+    "completed": 8,
+    "planned": 300,
+    "complete": false,
+    "errors": 0,
+    "primary_arm": "Qplus",
+    "arms": {
+      "Qplus": {
+        "completed": 8,
+        "correct": 6,
+        "mean_input_tokens": 3247.75
+      },
+      "Q": {
+        "completed": 8,
+        "correct": 6,
+        "mean_input_tokens": 4449.5
+      }
+    },
+    "processing_seconds": 369.2376252487302
+  },
+  "queue_state": "running",
+  "source_changes": [
+    "script/run_q_experiment.py: initialize runs parent under publication lock",
+    "script/q6_parallel_rl.py: initialize evaluation/runs during preparation",
+    "script/resume_q6_evaluation.py: immutable evaluation-only continuation",
+    "tests/test_q6_evaluation_recovery.py: publication, preservation, GPU scope and lazy process checks"
+  ],
+  "untouched": [
+    "frozen runtime/config manifest",
+    "600 committed training groups",
+    "completed fixed3 training and final adapter",
+    "original six result/raw/cost bytes",
+    "other projects GPU processes"
+  ],
+  "monitor": "No new monitor started",
+  "limitations": "Validation300 incomplete; only GPU0 has a resident model; five candidates waiting on allowed GPU0/2; GPU1/3 excluded",
+  "new_model": {
+    "pid": 2133954,
+    "gpu": "0",
+    "physical_pool_mib": 22528,
+    "functional_checks": 17,
+    "functional_passed": true,
+    "reader_gate_passed": true
+  },
+  "first_new_result": {
+    "question_id": "429e2791-b050-4184-9837-de7c201f94c8",
+    "result_sha256": "52c79cd0049d22005be0b544fdaf81bef87b94f88e1f854c37571e51878a9453",
+    "audit_passed": true,
+    "raw_policy_checks": {
+      "selective_policy_checks": 30,
+      "policy_active": 9,
+      "adapter_hash_checks": 21,
+      "policy_inactive": 21
+    },
+    "policy_version_note": "Fresh inference worker reports local version0; loaded adapter hash is fixed final training version368, verified by setup/config/immutable weights"
+  },
+  "current_workers": {
+    "0": {
+      "stage": "query",
+      "pid": 2133359,
+      "at": "2026-11-07T14:39:42.539237+08:00",
+      "gpu": "0",
+      "model_pid": 2133954,
+      "index": 9,
+      "question_id": "811f0bb6-5bde-4e87-a182-bcf09def0c06",
+      "phase": "audit",
+      "iteration": 4
+    },
+    "1": {
+      "stage": "waiting_for_gpu",
+      "pid": 2133360,
+      "at": "2026-11-07T14:39:47.232250+08:00",
+      "watched_gpu_indices": [
+        "0",
+        "2"
+      ],
+      "gpu_observations": {
+        "0": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 11026,
+          "utilization": 85,
+          "total_mib": 97887,
+          "used_mib": 86227
+        },
+        "1": {
+          "index": "1",
+          "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+          "free_mib": 65737,
+          "utilization": 96,
+          "total_mib": 97887,
+          "used_mib": 31517
+        },
+        "2": {
+          "index": "2",
+          "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+          "free_mib": 24931,
+          "utilization": 99,
+          "total_mib": 97887,
+          "used_mib": 72323
+        },
+        "3": {
+          "index": "3",
+          "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+          "free_mib": 25087,
+          "utilization": 0,
+          "total_mib": 97887,
+          "used_mib": 72167
+        }
+      },
+      "effective_free_mib": {
+        "0": 9279,
+        "1": 65355,
+        "2": 24549,
+        "3": 24705
+      },
+      "stable_observations": {
+        "0": 0,
+        "2": 0
+      },
+      "minimum_free_mib": 24576,
+      "maximum_utilization": 100,
+      "scheduling": "shared_memory_reservations"
+    },
+    "2": {
+      "stage": "waiting_for_gpu",
+      "pid": 2133361,
+      "at": "2026-11-07T14:39:46.632201+08:00",
+      "watched_gpu_indices": [
+        "0",
+        "2"
+      ],
+      "gpu_observations": {
+        "0": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 11026,
+          "utilization": 56,
+          "total_mib": 97887,
+          "used_mib": 86227
+        },
+        "1": {
+          "index": "1",
+          "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+          "free_mib": 65737,
+          "utilization": 98,
+          "total_mib": 97887,
+          "used_mib": 31517
+        },
+        "2": {
+          "index": "2",
+          "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+          "free_mib": 24931,
+          "utilization": 99,
+          "total_mib": 97887,
+          "used_mib": 72323
+        },
+        "3": {
+          "index": "3",
+          "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+          "free_mib": 25087,
+          "utilization": 0,
+          "total_mib": 97887,
+          "used_mib": 72167
+        }
+      },
+      "effective_free_mib": {
+        "0": 9279,
+        "1": 65355,
+        "2": 24549,
+        "3": 24705
+      },
+      "stable_observations": {
+        "0": 0,
+        "2": 0
+      },
+      "minimum_free_mib": 24576,
+      "maximum_utilization": 100,
+      "scheduling": "shared_memory_reservations"
+    },
+    "3": {
+      "stage": "waiting_for_gpu",
+      "pid": 2133362,
+      "at": "2026-11-07T14:39:47.857243+08:00",
+      "watched_gpu_indices": [
+        "0",
+        "2"
+      ],
+      "gpu_observations": {
+        "0": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 11026,
+          "utilization": 100,
+          "total_mib": 97887,
+          "used_mib": 86227
+        },
+        "1": {
+          "index": "1",
+          "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+          "free_mib": 65737,
+          "utilization": 98,
+          "total_mib": 97887,
+          "used_mib": 31517
+        },
+        "2": {
+          "index": "2",
+          "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+          "free_mib": 24931,
+          "utilization": 99,
+          "total_mib": 97887,
+          "used_mib": 72323
+        },
+        "3": {
+          "index": "3",
+          "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+          "free_mib": 25087,
+          "utilization": 0,
+          "total_mib": 97887,
+          "used_mib": 72167
+        }
+      },
+      "effective_free_mib": {
+        "0": 9279,
+        "1": 65355,
+        "2": 24549,
+        "3": 24705
+      },
+      "stable_observations": {
+        "0": 0,
+        "2": 0
+      },
+      "minimum_free_mib": 24576,
+      "maximum_utilization": 100,
+      "scheduling": "shared_memory_reservations"
+    },
+    "4": {
+      "stage": "waiting_for_gpu",
+      "pid": 2133363,
+      "at": "2026-11-07T14:39:47.546352+08:00",
+      "watched_gpu_indices": [
+        "0",
+        "2"
+      ],
+      "gpu_observations": {
+        "0": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 11026,
+          "utilization": 73,
+          "total_mib": 97887,
+          "used_mib": 86227
+        },
+        "1": {
+          "index": "1",
+          "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+          "free_mib": 65737,
+          "utilization": 97,
+          "total_mib": 97887,
+          "used_mib": 31517
+        },
+        "2": {
+          "index": "2",
+          "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+          "free_mib": 24931,
+          "utilization": 99,
+          "total_mib": 97887,
+          "used_mib": 72323
+        },
+        "3": {
+          "index": "3",
+          "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+          "free_mib": 25087,
+          "utilization": 0,
+          "total_mib": 97887,
+          "used_mib": 72167
+        }
+      },
+      "effective_free_mib": {
+        "0": 9279,
+        "1": 65355,
+        "2": 24549,
+        "3": 24705
+      },
+      "stable_observations": {
+        "0": 0,
+        "2": 0
+      },
+      "minimum_free_mib": 24576,
+      "maximum_utilization": 100,
+      "scheduling": "shared_memory_reservations"
+    },
+    "5": {
+      "stage": "waiting_for_gpu",
+      "pid": 2133364,
+      "at": "2026-11-07T14:39:46.944299+08:00",
+      "watched_gpu_indices": [
+        "0",
+        "2"
+      ],
+      "gpu_observations": {
+        "0": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 11026,
+          "utilization": 64,
+          "total_mib": 97887,
+          "used_mib": 86227
+        },
+        "1": {
+          "index": "1",
+          "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+          "free_mib": 65737,
+          "utilization": 97,
+          "total_mib": 97887,
+          "used_mib": 31517
+        },
+        "2": {
+          "index": "2",
+          "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+          "free_mib": 24931,
+          "utilization": 97,
+          "total_mib": 97887,
+          "used_mib": 72323
+        },
+        "3": {
+          "index": "3",
+          "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+          "free_mib": 25087,
+          "utilization": 0,
+          "total_mib": 97887,
+          "used_mib": 72167
+        }
+      },
+      "effective_free_mib": {
+        "0": 9279,
+        "1": 65355,
+        "2": 24549,
+        "3": 24705
+      },
+      "stable_observations": {
+        "0": 0,
+        "2": 0
+      },
+      "minimum_free_mib": 24576,
+      "maximum_utilization": 100,
+      "scheduling": "shared_memory_reservations"
+    }
+  }
+}

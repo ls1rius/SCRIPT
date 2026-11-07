@@ -1,4 +1,4 @@
-# Default F: on-demand fields and persistent per-source cache; query --memory E selects complete E.
+# Default L: I memory plus independent evidence selection; --memory E/F/I selects controls.
 # Original cross-stage control remains available via query --scheme4.
 # All model paths are relative to the project working directory.
 schema_version: 2
@@ -15,13 +15,15 @@ query:
   pipeline: adaptive_partial_temporal
   temporal_entity_source: summary
   temporal_sparse_visual: true
-  temporal_qa_evidence: lazy_script
+  temporal_qa_evidence: planned_lazy_script
   state_segment_max_gap_seconds: 2.0
   entity_max_identity_gap_seconds: 8.0
   field_extraction_batch_size: 2
   memory_cache_directory: ""
   answer_order: original
   caption_policy: full
+  tool_transient_retries: 0
+  json_repair_retries: 0
 initialization:
   caption_source: provided
 budget:

@@ -187,6 +187,11 @@ def run(packet, bundle, backend, cfg, target, settings):
     available = {packet['captions'][i]['id'] for i in selected}
     if any(ref not in available for refs in original['indexes']['entity_to_captions'].values() for ref in refs):
         raise ValueError('Partial facts cite unread evidence')
+    if cfg['query'].get('temporal_qa_evidence') in ('scene_planned_script','role_bound_scene_script') and not selected:
+        from .m_scene_memory import answer_without_candidates
+        if cfg['query']['temporal_qa_evidence'] == 'role_bound_scene_script':
+            from .n_scene_memory import answer_without_candidates
+        return answer_without_candidates(packet,bundle,backend,cfg,Path(target),settings)
     target = Path(target);target.mkdir(parents=True,exist_ok=True)
     ledger = BudgetLedger(settings['online_seconds'], initialization_cost=bundle['preparation_seconds'],
         answer_reserve=cfg['budget']['final_answer_reserve'], calls_path=target/'calls.jsonl')
@@ -199,6 +204,13 @@ def run(packet, bundle, backend, cfg, target, settings):
     if evidence_mode=='state_segments':method='compact-semantic-state-segments-D-v1'
     if evidence_mode=='joint_entities':method='joint-entity-evidence-E-v1'
     if evidence_mode=='lazy_script':method='lazy-script-evidence-F-v1'
+    if evidence_mode=='merged_lazy_script':method='merged-lazy-script-evidence-I-v2-H'
+    if evidence_mode=='planned_lazy_script':
+        from .l_evidence_qa import VERSION as method
+    if evidence_mode=='scene_planned_script':
+        from .m_scene_memory import VERSION as method
+    if evidence_mode=='role_bound_scene_script':
+        from .n_scene_memory import VERSION as method
     result = dict(arm='adaptive_partial_temporal',method=method,question_id=query['id'],answer=None,error=None,
         paired_evidence_hash=digest(bundle),source_arm='adaptive_partial',
         opened_scenes=bundle['opened_scenes'],selected_seconds=selected,
@@ -211,12 +223,12 @@ def run(packet, bundle, backend, cfg, target, settings):
         for start in range(0,len(pairs),6):
             inp = dict(pairs=pairs[start:start+6],source_type='caption')
             try:
-                for attempt in range(2):
+                for attempt in range(1 if evidence_mode in ('scene_planned_script','role_bound_scene_script') else 2):
                     report,call = meter.json('partial_temporal_organize',inp,('decisions',))
                     try:
                         commit_decisions(memory,inp,report,call['call_id']);break
                     except ValueError as exc:
-                        if attempt:raise
+                        if attempt or evidence_mode in ('scene_planned_script','role_bound_scene_script'):raise
                         inp['validation_feedback'] = str(exc)
             except (ResourceExhausted,ToolFailure) as exc:
                 if not exploration_exhausted(exc):raise
@@ -226,12 +238,12 @@ def run(packet, bundle, backend, cfg, target, settings):
         for start in range(0,len(candidates),3):
             inp=dict(pairs=candidates[start:start+3],source_type='caption')
             try:
-                for attempt in range(2):
+                for attempt in range(1 if evidence_mode in ('scene_planned_script','role_bound_scene_script') else 2):
                     report,call=meter.json('partial_temporal_identity',inp,('decisions',))
                     try:
                         commit_identities(memory,inp,report,call['call_id']);break
                     except ValueError as exc:
-                        if attempt:raise
+                        if attempt or evidence_mode in ('scene_planned_script','role_bound_scene_script'):raise
                         inp['validation_feedback']=str(exc)
             except (ResourceExhausted,ToolFailure) as exc:
                 if not exploration_exhausted(exc):raise
@@ -253,15 +265,40 @@ def run(packet, bundle, backend, cfg, target, settings):
         complete_payload=None
         segment_mode=evidence_mode=='state_segments'
         segment_memory=None
-        entity_mode=evidence_mode in ('joint_entities','lazy_script')
+        entity_mode=evidence_mode in ('joint_entities','lazy_script','merged_lazy_script','planned_lazy_script','scene_planned_script','role_bound_scene_script')
         entity_memory=None
         if entity_mode:
             from .entity_evidence_qa import project as project_entities
             # Match E/F's explicit source-failure handling and single final QA.
             meter.cfg=deepcopy(cfg)
             meter.cfg['query'].update(tool_transient_retries=0,json_repair_retries=0)
+            projection_cfg = cfg
+            if evidence_mode in ('planned_lazy_script', 'scene_planned_script', 'role_bound_scene_script'):
+                projection_cfg = deepcopy(cfg)
+                projection_cfg['query']['temporal_qa_evidence'] = 'merged_lazy_script'
+                if evidence_mode == 'role_bound_scene_script':
+                    projection_cfg['query']['n_source_role_binding'] = True
+                cache_root = cfg['query'].get('memory_cache_directory') or settings.get('memory_cache_directory') or target/'memory_cache'
+                projection_cfg['query']['memory_cache_directory'] = str(Path(cache_root)/
+                    dict(planned_lazy_script='L',scene_planned_script='M',role_bound_scene_script='N')[evidence_mode])
             qa,entity_memory,entity_audit=project_entities(baseline_qa,packet,selected,view,
-                meter,target,cfg,settings.get('memory_cache_directory'))
+                meter,target,projection_cfg,settings.get('memory_cache_directory'))
+            if evidence_mode == 'planned_lazy_script':
+                from .l_evidence_qa import project_evidence
+                qa, planning_audit = project_evidence(qa, entity_memory, query, meter, target/'L')
+                entity_audit.update(mode=evidence_mode, variant='L', parent_memory_variant='I',
+                                    evidence_planner=planning_audit)
+                write_json(target/'entity_evidence_audit.json', entity_audit)
+            if evidence_mode == 'scene_planned_script':
+                from .m_scene_memory import project_evidence
+                qa, planning_audit = project_evidence(qa, entity_memory, query, meter, target/'M')
+                entity_audit.update(variant='M', parent_memory_variant='I', evidence_planner=planning_audit)
+                write_json(target/'entity_evidence_audit.json', entity_audit)
+            if evidence_mode == 'role_bound_scene_script':
+                from .n_scene_memory import project_evidence
+                qa, planning_audit = project_evidence(qa, entity_memory, query, meter, target/'N')
+                entity_audit.update(variant='N', parent_memory_variant='I', evidence_planner=planning_audit)
+                write_json(target/'entity_evidence_audit.json', entity_audit)
             checked,_=meter.call('temporal_qa_check',qa,final=True)
             tokens=checked['input_tokens']
             result['memory_variant']=entity_audit['variant']
@@ -342,7 +379,11 @@ def run(packet, bundle, backend, cfg, target, settings):
         result['qa_evidence']={k:v for k,v in evidence_audit.items() if k!='quotes'}
         write_json(target/'qa_context.json',dict(context=view,input_tokens=tokens,selected_seconds=selected,
             evidence_selection=evidence_audit,final_memory=final_memory))
-        answer,_ = meter.call('videotree_qa',qa,final=True)
+        if evidence_mode in ('planned_lazy_script', 'scene_planned_script', 'role_bound_scene_script'):
+            operation = dict(planned_lazy_script='l_answer',scene_planned_script='m_answer',role_bound_scene_script='n_answer')[evidence_mode]
+            answer,_ = meter.call(operation,dict(inputs=qa,options=query['options']),final=True)
+        else:
+            answer,_ = meter.call('videotree_qa',qa,final=True)
         result.update(answer=answer['data'],qa_input_tokens=tokens)
     except Exception as exc:
         result['error'] = dict(type=type(exc).__name__,message=str(exc))

@@ -1,0 +1,152 @@
+{
+  "source": "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/materialized/951ccf40-1a99-4138-a441-4edf16af5446/raw_calls/0f54e6a6-8964-45f2-befb-eeaf8e102de2-0.json",
+  "source_sha256": "fd4d34e8e131e9bd05dee084f98e21c2adb7ed2edede7e8fe66ee25f9e916b4d",
+  "inputs": {
+    "unit": {
+      "id": "U35",
+      "text": "C moves a brick on the brick wall with his left hand."
+    },
+    "requested_fields": [
+      "actions.base",
+      "actions.body_part",
+      "actions.destination",
+      "actions.instrument",
+      "actions.location",
+      "actions.manner",
+      "actions.material",
+      "actions.recipient",
+      "actions.source_location",
+      "actions.surface"
+    ],
+    "source_type": "caption"
+  },
+  "output": {
+    "data": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "roles": [
+            {
+              "role": "patient",
+              "value": "brick"
+            }
+          ]
+        },
+        {
+          "actor": "C",
+          "verb": "moves",
+          "roles": [
+            {
+              "role": "body_part",
+              "value": "left hand"
+            }
+          ]
+        },
+        {
+          "actor": "C",
+          "verb": "moves",
+          "roles": [
+            {
+              "role": "patient",
+              "value": "brick"
+            },
+            {
+              "role": "destination",
+              "value": "brick wall"
+            }
+          ]
+        },
+        {
+          "actor": "C",
+          "verb": "moves",
+          "roles": [
+            {
+              "role": "patient",
+              "value": "brick"
+            },
+            {
+              "role": "instrument",
+              "value": "left hand"
+            }
+          ]
+        }
+      ],
+      "uncertain": true,
+      "attributes": [],
+      "states": [],
+      "relations": [],
+      "changes": [],
+      "results": [],
+      "event_links": []
+    },
+    "raw_text": "{\n  \"actions\": [\n    {\n      \"actor\": \"C\",\n      \"verb\": \"moves\",\n      \"roles\": [\n        {\n          \"role\": \"patient\",\n          \"value\": \"brick\"\n        }\n      ]\n    },\n    {\n      \"actor\": \"C\",\n      \"verb\": \"moves\",\n      \"roles\": [\n        {\n          \"role\": \"body_part\",\n          \"value\": \"left hand\"\n        }\n      ]\n    },\n    {\n      \"actor\": \"C\",\n      \"verb\": \"moves\",\n      \"roles\": [\n        {\n          \"role\": \"patient\",\n          \"value\": \"brick\"\n        },\n        {\n          \"role\": \"destination\",\n          \"value\": \"brick wall\"\n        }\n      ]\n    },\n    {\n      \"actor\": \"C\",\n      \"verb\": \"moves\",\n      \"roles\": [\n        {\n          \"role\": \"patient\",\n          \"value\": \"brick\"\n        },\n        {\n          \"role\": \"instrument\",\n          \"value\": \"left hand\"\n        }\n      ]\n    }\n  ],\n  \"uncertain\": true\n}",
+    "id_map": {
+      "ID0": "U35"
+    },
+    "usage": {
+      "input_tokens": 1000,
+      "output_tokens": 229
+    }
+  },
+  "frozen_accepted": {
+    "facts": [
+      {
+        "kind": "action",
+        "source_id": "U35",
+        "actor": "C",
+        "verb": "moves",
+        "patient": "brick"
+      },
+      {
+        "kind": "action",
+        "source_id": "U35",
+        "actor": "C",
+        "verb": "moves",
+        "body_part": "left hand"
+      }
+    ],
+    "mentions": [
+      {
+        "label": "C",
+        "head": "C",
+        "entity_type": "person"
+      },
+      {
+        "label": "brick",
+        "head": "brick",
+        "entity_type": "object"
+      },
+      {
+        "label": "left hand",
+        "head": "hand",
+        "entity_type": "body_part"
+      }
+    ],
+    "rejected": [
+      {
+        "record": {
+          "kind": "action",
+          "source_id": "U35",
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick",
+          "destination": "brick wall"
+        },
+        "reason": "unsupported_destination_binding"
+      },
+      {
+        "record": {
+          "kind": "action",
+          "source_id": "U35",
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick",
+          "instrument": "left hand"
+        },
+        "reason": "body_part_is_not_instrument"
+      }
+    ],
+    "uncertain": true
+  }
+}

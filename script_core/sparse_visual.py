@@ -138,6 +138,12 @@ def supplement(query,d,frames,opened,reviews,scope,meter,target):
         diagnostic['rounds'].append(dict(check=check,**record))
         if fact:diagnostic['observations'].append(fact)
     except (ResourceExhausted,ToolFailure) as exc:
+        if isinstance(exc,ToolFailure) and str(exc).startswith('Invalid sparse_visual_plan JSON:'):
+            # An unusable optional plan authorizes no image access. Preserve its
+            # measured call and continue with the existing summary evidence.
+            diagnostic['errors'].append(str(exc))
+            diagnostic['skip_reason']='Rejected malformed optional visual plan; retained summary evidence'
+            return diagnostic
         if not exploration_exhausted(exc):raise
         diagnostic['errors'].append(str(exc));diagnostic['skip_reason']='Visual allowance exhausted; retained summary evidence'
     except ValueError as exc:

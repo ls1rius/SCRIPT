@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-11-02T20:31:45.550936+08:00",
+  "presentation": "M-frames-adjacent-v1",
+  "navigation_version": "M-L-gap-driven-scenes-v2-option-audit",
+  "changes": [
+    "Use Frames as the evidence interval prefix",
+    "Retain inherited same-statement adjacent-only interval coalescing and original intervals",
+    "Explain source assertion as a source statement, not additional visual verification"
+  ],
+  "scope": "Future workspace M runs only; frozen K/L and running M-r5 unchanged",
+  "running_m_runtime_sha256": "67672c228288e6a6884f91dcf186ccd110c27884556b4cdf2ee83dca28047148",
+  "source_sha256": "e48df6fdaf330fddef02c0a530a57478997066e213e3dce90080174bba2271ff",
+  "validation": "tests.test_m_presentation, tests.test_m_scene_memory, tests.test_i_evidence_planner; git diff --check"
+}

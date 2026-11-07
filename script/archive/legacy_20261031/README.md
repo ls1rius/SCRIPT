@@ -5,7 +5,6 @@
 
 | 工具 | 归档原因 |
 | --- | --- |
-| `continue_with_cache.py` | 旧五方案缓存接续工具 |
 | `run_compact_gpu3_shared.py`、`run_shared_evidence_qa.py` | 已完成 A/B/C/D 的一次性共享调度 |
 | `optimize_lazy_script_execution.py` | F 首次接入 batch 的一次性迁移；当前 F 已直接支持 batch |
 | `run_normalized_memory_comparison.py` | 已退出有效主对照的旧规范化实验入口 |
@@ -15,3 +14,5 @@
 | `script_smoke.pbs`、`run_script_args.py`、`smoke_script.py` | 早期 SCRIPT smoke 工具 |
 
 文件移动清单和校验值见 `docs/history/Cleanup_2026-10-31.json`。
+
+2026-11-01：旧五方案缓存接续入口 `continue_with_cache.py` 随早期实验清理删除；结果、协议与成本摘要见 [早期方案实验记录](../../../docs/history/Early_Schemes_Experiment_Record_2026-11-01.md)。

@@ -4,7 +4,7 @@ import unittest
 
 from script import controlled_memory_io as io
 from script.preview_compact_evidence import project
-from script_core.qa_evidence_view import compact_description
+from script_core.qa_evidence_view import compact_description, narrative_description
 
 
 class EvidenceViewTests(unittest.TestCase):
@@ -104,6 +104,63 @@ class EvidenceViewTests(unittest.TestCase):
         self.assertEqual(io.fixed(original),io.fixed(output))
         self.assertEqual(audit['source_rows'],2)
         self.assertEqual(audit['rendered_rows'],1)
+
+    def test_narrative_keeps_every_action_role_without_raw_field_labels(self):
+        action = dict(actor='C', verb='moves', patient='red book', instrument='tongs',
+            material='glue', body_part='left hand', surface='table',
+            source_location='shelf', destination='bag', location='room',
+            manner='carefully', recipient='woman')
+        payload = dict(observations=[self.row(dict(actions=[action]))])
+        before = deepcopy(payload)
+        text, audit = narrative_description(payload)
+        self.assertIn('C carefully moves red book using tongs with left hand from shelf to bag to woman.', text)
+        for value in action.values():
+            self.assertIn(value, text)
+        self.assertIn('The material used in this action is glue.', text)
+        self.assertIn('The working surface for this action is table.', text)
+        self.assertIn('The location of this action is room.', text)
+        self.assertNotIn('actor=', text)
+        self.assertNotIn('Action:', text)
+        self.assertEqual(payload, before)
+        self.assertEqual(audit['rows'][0]['archived_fact_count'], 1)
+        self.assertEqual(audit['rows'][0]['representation'], 'facts')
+
+    def test_narrative_preserves_all_categories_and_source_connectors(self):
+        evidence = dict(attributes=[dict(entity='book', property='color', value='red')],
+            states=[dict(entity='book', dimension='wetness', value='wet')],
+            relations=[dict(left='book', predicate='on', right='table', relation_type='spatial'),
+                dict(left='C', predicate='holds', right='book', relation_type='possession')],
+            changes=[dict(entity='book', before='wet', after='dry')],
+            results=[dict(entity='machine', predicate='produces', value='basket')],
+            event_links=[dict(left_event='C folds paper', connector='then',
+                right_event='C moves paper', link_type='before')])
+        text, audit = narrative_description(dict(observations=[self.row(evidence)]))
+        for sentence in ['The color of book is red.', 'The observed state of book is wet.',
+                'book is on table.', 'C holds book.', 'book changes from wet to dry.',
+                'machine produces basket.', 'C folds paper then C moves paper.']:
+            self.assertIn(sentence, text)
+        self.assertEqual(audit['rows'][0]['archived_fact_count'], 7)
+        self.assertNotIn('because', text)
+
+    def test_narrative_keeps_negation_whitespace_and_multiline_source_map(self):
+        original = '#C C never picks the paper.\n '
+        rows = [self.row(dict(original_text=original,
+                    actions=[dict(actor='C', verb='picks', patient='paper')]), 'C0', 0),
+                self.row(dict(actions=[dict(actor='C', verb='picks', patient='carton paper')]), 'C1', 1)]
+        text, audit = narrative_description(dict(observations=rows))
+        self.assertEqual(text, 'Frame [0,1): ' + original + '\nFrame [1,2): C picks carton paper.')
+        self.assertEqual([r['prompt_line'] for r in audit['rows']], [1, 3])
+        self.assertEqual([r['caption_id'] for r in audit['rows']], ['C0', 'C1'])
+
+    def test_narrative_does_not_merge_repeated_samples_or_drop_unknown_fields(self):
+        evidence = dict(actions=[dict(actor='C', verb='picks', patient='carton paper')])
+        rows = [self.row(deepcopy(evidence), f'C{i}', i) for i in (1, 9)]
+        text, audit = narrative_description(dict(observations=rows))
+        self.assertEqual(text, 'Frame [1,2): C picks carton paper.\nFrame [9,10): C picks carton paper.')
+        self.assertFalse(audit['source_rows_merged'])
+        rows[0]['evidence']['actions'][0]['unexpected_role'] = 'important'
+        with self.assertRaisesRegex(ValueError, 'Unsupported narrative fact fields'):
+            narrative_description(dict(observations=rows))
 
 
 if __name__ == '__main__':

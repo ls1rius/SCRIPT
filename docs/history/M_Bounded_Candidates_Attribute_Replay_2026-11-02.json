@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-11-02T21:36:30.360299+08:00",
+  "case": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r10/runs/c5004075-e154-4bb8-baea-e41915190319",
+  "source_qa_sha256": "bdcb0a49cc51343a21fc5944bd432212562f7139dcc69cfc4ba7f03521621cbb",
+  "memory_sha256": "a177ed4809f8678efe23b3568bd33698de14227264bd53c7403a11eb9234ebd3",
+  "prior_error_reproduced": true,
+  "repaired": true,
+  "pool_records": 136,
+  "attribute_records": [
+    {
+      "id": "R132",
+      "text": "The text memory records attribute \"material\" with value \"dough\" for C (text reference E0).",
+      "qualification": "text-inferred hypothesis",
+      "kinds": [
+        "temporal attribute"
+      ],
+      "sources": [
+        {
+          "region": "temporal attribute",
+          "record": {
+            "entity_id": "E0",
+            "field": "material",
+            "value": "dough",
+            "source_caption_ids": [
+              "C72",
+              "C73",
+              "C74"
+            ],
+            "observed_at": [
+              72,
+              73,
+              74
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C72",
+          "interval": [
+            72,
+            73
+          ]
+        },
+        {
+          "caption_id": "C73",
+          "interval": [
+            73,
+            74
+          ]
+        },
+        {
+          "caption_id": "C74",
+          "interval": [
+            74,
+            75
+          ]
+        }
+      ]
+    }
+  ],
+  "model_calls": 0,
+  "labels_used": false
+}

@@ -16,7 +16,7 @@ from . import generalized_entity_memory as joint
 from . import lazy_script_memory as parent
 from .schemas import array, enum, record, validate_output
 
-VERSION='generalized-lazy-memory-H-v1'
+VERSION='generalized-lazy-memory-H-v3-predicate-binding'
 PLAN='h_plan_fields'
 EXTRACT='h_extract_fields'
 RELATIONS=('spatial','possession','part_whole','attachment','other')
@@ -42,6 +42,10 @@ EXTRACT_PROMPT = parent.EXTRACT_PROMPT.replace(
     'The book is wet, requested states.wetness -> states=[{"entity":"book","dimension":"wetness","value":"wet"}].',
     'The server is unreachable, requested states -> states=[{"entity":"server","description":"unreachable"}].')
 EXTRACT_PROMPT += '''
+Every requested action role belongs to a complete action record: repeat its explicit actor, verb and patient even for an incremental role request.
+An omitted actions.base request never means the actor is unknown. null means the SOURCE omits the executing actor.
+Put all requested roles of the SAME action in ONE roles array. A preposition such as with is not an action verb and must not start another action.
+C lifts a cup with her right arm, requested actions.base and actions.body_part -> actions=[{"actor":"C","verb":"lifts","roles":[{"role":"patient","value":"cup"},{"role":"body_part","value":"right arm"}]}].
 When states is requested, do not restrict conditions to ones relevant to an imagined question.
 Explicit relations must be represented when their relation field is requested; a state description does not replace a relation.
 The box was moved with a crane, requested actions.instrument -> actions=[{"actor":null,"verb":"moved","roles":[{"role":"patient","value":"box"},{"role":"instrument","value":"crane"}]}].
@@ -50,6 +54,44 @@ The box was moved with a crane, requested actions.instrument -> actions=[{"actor
 
 
 def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+
+
+def extraction_inputs(unit, fields):
+    """Role increments re-request their alignment core, using only this source."""
+    requested = sorted(set(fields) | ({'actions.base'} if any(
+        field.startswith('actions.') for field in fields) else set()))
+    return dict(unit=dict(id=unit['id'], text=joint.clean_unit(unit)['text']),
+                requested_fields=requested, source_type='caption')
+
+
+def predicate_span(value):
+    """Match the predicate syntax already accepted for explicit-actor actions.
+
+    Literal spans alone also include objects and whole prepositional phrases.
+    This is a syntax constraint, not a general English verb classifier.
+    """
+    words=value.casefold().split()
+    return bool(words and words[0] not in joint.base.FUNCTION_WORDS | {
+        'c','he','she','it','they','we','i','you','his','her','their','its','my','your',
+        'been','does','do','did'} and re.fullmatch(
+            r'[A-Za-z]+(?:\s+(?:up|down|out|off|away|back|around|at|to))?', value))
+
+
+def action_schema(properties, text):
+    """Bind nullable actors to predicates with source-supported actorless syntax."""
+    props=deepcopy(properties)
+    verbs=[v for v in props['verb']['enum'] if predicate_span(v)]
+    props['verb']=enum(verbs)
+    # The inherited actor schema is string-or-null. Separate those alternatives
+    # at the record level so null cannot be paired with an explicit active subject.
+    actor_text=props['actor']['anyOf'][0]
+    active=dict(props,actor=actor_text)
+    branches=[record(active)] if verbs else []
+    actorless=[v for v in verbs if joint.actorless_supported(
+        dict(kind='action',source_id='schema',verb=v),text)[0]]
+    if actorless:
+        branches.append(record(dict(props,actor={'type':'null'},verb=enum(actorless))))
+    return ({'anyOf':branches} if len(branches)>1 else branches[0] if branches else record(active)), bool(verbs)
 
 
 def output_schema(operation,inputs):
@@ -74,6 +116,8 @@ def output_schema(operation,inputs):
             allowed=['patient']+[f.split('.',1)[1] for f in fields if f!='actions.base']
             props['roles']['items']['properties']['role']=enum(allowed)
             props['roles']['maxItems']=len(allowed)
+            spec['items'],has_predicate=action_schema(props,joint.clean_unit(inputs['unit'])['text'])
+            if not has_predicate:spec['maxItems']=0
         elif category in ['attributes','relations','event_links']:
             key=dict(attributes='property',relations='relation_type',event_links='link_type')[category]
             # Intersect source-supported links with the request.
@@ -81,6 +125,12 @@ def output_schema(operation,inputs):
             props[key]=enum(sorted(allowed))
             if not allowed:spec['maxItems']=0
     return schema
+
+
+def accept(unit, report):
+    # Apply H's predicate/actor contract even to direct or recovered outputs.
+    validate_output(report,output_schema(EXTRACT,extraction_inputs(unit,FIELDS)))
+    return joint.accept(unit,report)
 
 
 def project_fact(fact,field):

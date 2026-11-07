@@ -1,0 +1,766 @@
+{
+  "updated_at": "2026-11-02T16:24:25.668970+08:00",
+  "authorization": "User: 当前默认I，把K思路迁移上去，跑一版本L",
+  "parent_I": "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r3",
+  "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-L-I-300-20261102-r1",
+  "source_I_unchanged_files": 4118,
+  "source_I_manifest_sha256": "8c6284b7954a2fee0d20f83293a58d81323124b20eb5f241db7d26e0bbebbcc8",
+  "L_manifest_sha256": "8e8a0ffa789c8cd19344b849cdc3fa573e970f59072c5c594680ff6eab0fdc85",
+  "checks_passed": 92,
+  "questions": 300,
+  "candidates": 37885,
+  "max_input_tokens": 14849,
+  "max_tokens_by_region": {
+    "I_control": 6123,
+    "L_all_evidence": 7539,
+    "planner_input": 14849
+  },
+  "unchanged_I_controls": 300,
+  "retained_parent_answer_errors": 1,
+  "K_core_hash_unchanged": true,
+  "K_reader_and_decoder_AST_unchanged": {
+    "strict_answer_parser": true,
+    "parse_strict_answer": true,
+    "nonempty_plan_parser": true
+  },
+  "K_manifest_sha256": "3c7431686ec11e2fd97b1768c71885fea7e86e524d23cefe0b78ab25183b9381",
+  "new_extraction_calls": 0,
+  "new_training": false,
+  "default_on_demand": "I",
+  "default_complete": "E",
+  "arms": [
+    "I_control",
+    "L_all_evidence",
+    "L_evidence_planner"
+  ],
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory"
+  },
+  "preserved_HIJ_manifests": {
+    "generalized-lazy-H-300-20261101-r5": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+    "merged-lazy-I-H-adjacent-300-20261101-r3": "8c6284b7954a2fee0d20f83293a58d81323124b20eb5f241db7d26e0bbebbcc8",
+    "grounded-reader-J-300-20261101-r5": "ac574fb073c412549693e555e94e73fcb13a359e3ba136809dab949f4b71b72d"
+  },
+  "controller": {
+    "pid": 2600363,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-L-I-300-20261102-r1/control/run_i_evidence_planner_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-L-I-300-20261102-r1"
+    ],
+    "started_at": "2026-11-02T16:25:22.745248+08:00",
+    "interpreter": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+  },
+  "confirmed_launch": {
+    "worker_pid": 2600515,
+    "gpu": "3",
+    "gpu_uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-L-I-300-20261102-r1/control/run_evidence_planner_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-L-I-300-20261102-r1"
+    ],
+    "started_at": "2026-11-02T16:25:43.349053+08:00"
+  },
+  "real_model_functional_gates": {
+    "functional_small.json": {
+      "passed": true,
+      "benchmark_labels_used": false,
+      "plan": {
+        "keep": [
+          "R0",
+          "R2"
+        ],
+        "skip": [
+          "R1"
+        ],
+        "uncertain": [],
+        "merge_groups": []
+      },
+      "audit": {
+        "pool_sha256": "aad9978673eeebc4fb4f1df7701e199ab7e69905ebe4d6cb8f9185999d041ad9",
+        "total_records": 3,
+        "retained_records": 2,
+        "skipped_records": 1,
+        "uncertain_records": 0,
+        "merge_groups": 0,
+        "retained_caption_ids": [],
+        "groups": [
+          {
+            "record_ids": [
+              "R0"
+            ],
+            "sources": [
+              {
+                "region": "probe"
+              }
+            ],
+            "occurrences": [
+              {
+                "interval": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "interval_display": [
+              {
+                "record_id": "R0",
+                "original_sample_intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "display_intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "record_ids": [
+              "R2"
+            ],
+            "sources": [
+              {
+                "region": "probe"
+              }
+            ],
+            "occurrences": [
+              {
+                "interval": [
+                  2,
+                  3
+                ]
+              }
+            ],
+            "interval_display": [
+              {
+                "record_id": "R2",
+                "original_sample_intervals": [
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "display_intervals": [
+                  [
+                    2,
+                    3
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "skipped_ids": [
+          "R1"
+        ],
+        "original_sources_retained": true,
+        "inferred_continuity": false,
+        "inferred_event_counts": false,
+        "semantic_paraphrasing": false,
+        "version": "I-evidence-planner-L-v1-open-state-adjacent",
+        "parent_memory_variant": "I",
+        "underlying_memory_variant": "H",
+        "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement"
+      },
+      "input_tokens": 585,
+      "output_tokens": 17,
+      "seconds": 2.081132188439369,
+      "updated_at": "2026-11-02T16:26:08.497021+08:00"
+    },
+    "functional.json": {
+      "passed": true,
+      "benchmark_labels_used": false,
+      "small_gate": "validation/functional_small.json",
+      "candidate_records": 130,
+      "plan": {
+        "keep": [
+          "R0",
+          "R129"
+        ],
+        "skip": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "R7",
+          "R8",
+          "R9",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32",
+          "R33",
+          "R34",
+          "R35",
+          "R36",
+          "R37",
+          "R38",
+          "R39",
+          "R40",
+          "R41",
+          "R42",
+          "R43",
+          "R44",
+          "R45",
+          "R46",
+          "R47",
+          "R48",
+          "R49",
+          "R50",
+          "R51",
+          "R52",
+          "R53",
+          "R54",
+          "R55",
+          "R56",
+          "R57",
+          "R58",
+          "R59",
+          "R60",
+          "R61",
+          "R62",
+          "R63",
+          "R64",
+          "R65",
+          "R66",
+          "R67",
+          "R68",
+          "R69",
+          "R70",
+          "R71",
+          "R72",
+          "R73",
+          "R74",
+          "R75",
+          "R76",
+          "R77",
+          "R78",
+          "R79",
+          "R80",
+          "R81",
+          "R82",
+          "R83",
+          "R84",
+          "R85",
+          "R86",
+          "R87",
+          "R88",
+          "R89",
+          "R90",
+          "R91",
+          "R92",
+          "R93",
+          "R94",
+          "R95",
+          "R96",
+          "R97",
+          "R98",
+          "R99",
+          "R100",
+          "R101",
+          "R102",
+          "R103",
+          "R104",
+          "R105",
+          "R106",
+          "R107",
+          "R108",
+          "R109",
+          "R110",
+          "R111",
+          "R112",
+          "R113",
+          "R114",
+          "R115",
+          "R116",
+          "R117",
+          "R118",
+          "R119",
+          "R120",
+          "R121",
+          "R122",
+          "R123",
+          "R124",
+          "R125",
+          "R126",
+          "R127",
+          "R128"
+        ],
+        "uncertain": [],
+        "merge_groups": []
+      },
+      "audit": {
+        "pool_sha256": "bc1fc4da3580e394a76bbeae03e75c47e9f78f72267b86e367ecc95d5e0283cf",
+        "total_records": 130,
+        "retained_records": 2,
+        "skipped_records": 128,
+        "uncertain_records": 0,
+        "merge_groups": 0,
+        "retained_caption_ids": [],
+        "groups": [
+          {
+            "record_ids": [
+              "R0"
+            ],
+            "sources": [
+              {
+                "region": "probe"
+              }
+            ],
+            "occurrences": [
+              {
+                "interval": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "interval_display": [
+              {
+                "record_id": "R0",
+                "original_sample_intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "display_intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "record_ids": [
+              "R129"
+            ],
+            "sources": [
+              {
+                "region": "probe"
+              }
+            ],
+            "occurrences": [
+              {
+                "interval": [
+                  129,
+                  130
+                ]
+              }
+            ],
+            "interval_display": [
+              {
+                "record_id": "R129",
+                "original_sample_intervals": [
+                  [
+                    129,
+                    130
+                  ]
+                ],
+                "display_intervals": [
+                  [
+                    129,
+                    130
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "skipped_ids": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "R7",
+          "R8",
+          "R9",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32",
+          "R33",
+          "R34",
+          "R35",
+          "R36",
+          "R37",
+          "R38",
+          "R39",
+          "R40",
+          "R41",
+          "R42",
+          "R43",
+          "R44",
+          "R45",
+          "R46",
+          "R47",
+          "R48",
+          "R49",
+          "R50",
+          "R51",
+          "R52",
+          "R53",
+          "R54",
+          "R55",
+          "R56",
+          "R57",
+          "R58",
+          "R59",
+          "R60",
+          "R61",
+          "R62",
+          "R63",
+          "R64",
+          "R65",
+          "R66",
+          "R67",
+          "R68",
+          "R69",
+          "R70",
+          "R71",
+          "R72",
+          "R73",
+          "R74",
+          "R75",
+          "R76",
+          "R77",
+          "R78",
+          "R79",
+          "R80",
+          "R81",
+          "R82",
+          "R83",
+          "R84",
+          "R85",
+          "R86",
+          "R87",
+          "R88",
+          "R89",
+          "R90",
+          "R91",
+          "R92",
+          "R93",
+          "R94",
+          "R95",
+          "R96",
+          "R97",
+          "R98",
+          "R99",
+          "R100",
+          "R101",
+          "R102",
+          "R103",
+          "R104",
+          "R105",
+          "R106",
+          "R107",
+          "R108",
+          "R109",
+          "R110",
+          "R111",
+          "R112",
+          "R113",
+          "R114",
+          "R115",
+          "R116",
+          "R117",
+          "R118",
+          "R119",
+          "R120",
+          "R121",
+          "R122",
+          "R123",
+          "R124",
+          "R125",
+          "R126",
+          "R127",
+          "R128"
+        ],
+        "original_sources_retained": true,
+        "inferred_continuity": false,
+        "inferred_event_counts": false,
+        "semantic_paraphrasing": false,
+        "version": "I-evidence-planner-L-v1-open-state-adjacent",
+        "parent_memory_variant": "I",
+        "underlying_memory_variant": "H",
+        "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement"
+      },
+      "input_tokens": 6402,
+      "output_tokens": 802,
+      "seconds": 63.13839294016361,
+      "updated_at": "2026-11-02T16:27:11.697459+08:00"
+    },
+    "parent_memory_functional.json": {
+      "passed": true,
+      "benchmark_labels_used": false,
+      "plan": {
+        "keep": [
+          "R0",
+          "R1"
+        ],
+        "skip": [
+          "R2"
+        ],
+        "uncertain": [],
+        "merge_groups": []
+      },
+      "audit": {
+        "pool_sha256": "b103ea7c8a0f724319a6b1d19a59697576c367912633218ecb276ceb999407c4",
+        "total_records": 3,
+        "retained_records": 2,
+        "skipped_records": 1,
+        "uncertain_records": 0,
+        "merge_groups": 0,
+        "retained_caption_ids": [
+          "C0",
+          "C1",
+          "C2"
+        ],
+        "groups": [
+          {
+            "record_ids": [
+              "R0"
+            ],
+            "sources": [
+              {
+                "region": "H fact",
+                "caption_id": "C0",
+                "category": "actions",
+                "fact_index": 0,
+                "record": {
+                  "verb": "moved",
+                  "patient": "box",
+                  "instrument": "crane"
+                }
+              },
+              {
+                "region": "H fact",
+                "caption_id": "C1",
+                "category": "actions",
+                "fact_index": 0,
+                "record": {
+                  "verb": "moved",
+                  "patient": "box",
+                  "instrument": "crane"
+                }
+              }
+            ],
+            "occurrences": [
+              {
+                "caption_id": "C0",
+                "interval": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "caption_id": "C1",
+                "interval": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "interval_display": [
+              {
+                "record_id": "R0",
+                "original_sample_intervals": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "display_intervals": [
+                  [
+                    0,
+                    2
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "record_ids": [
+              "R1"
+            ],
+            "sources": [
+              {
+                "region": "H fact",
+                "caption_id": "C2",
+                "category": "states",
+                "fact_index": 0,
+                "record": {
+                  "entity": "server",
+                  "description": "unreachable"
+                }
+              }
+            ],
+            "occurrences": [
+              {
+                "caption_id": "C2",
+                "interval": [
+                  2,
+                  3
+                ]
+              }
+            ],
+            "interval_display": [
+              {
+                "record_id": "R1",
+                "original_sample_intervals": [
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "display_intervals": [
+                  [
+                    2,
+                    3
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "skipped_ids": [
+          "R2"
+        ],
+        "original_sources_retained": true,
+        "inferred_continuity": false,
+        "inferred_event_counts": false,
+        "semantic_paraphrasing": false,
+        "version": "I-evidence-planner-L-v1-open-state-adjacent",
+        "parent_memory_variant": "I",
+        "underlying_memory_variant": "H",
+        "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement"
+      },
+      "rendered": "These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence. Compact ranges combine exactly adjacent samples of the same statement; all original sample intervals remain archived and do not prove continuous activity.\nAt sampled intervals [0,2) (source assertion), An action with an unspecified actor is recorded: \"moved\". The affected object is box. The instrument used is crane.\nAt sampled intervals [2,3) (source assertion), A state observation for server says: \"unreachable\".",
+      "seconds": 1.3433019071817398,
+      "updated_at": "2026-11-02T16:27:13.051537+08:00"
+    },
+    "reader_functional.json": {
+      "passed": true,
+      "checks": [
+        {
+          "arm": "I_control",
+          "passed": true,
+          "selected": 0,
+          "expected_synthetic_option": 0,
+          "seconds": 0.33997194468975067
+        },
+        {
+          "arm": "L_all_evidence",
+          "passed": true,
+          "selected": 0,
+          "expected_synthetic_option": 0,
+          "seconds": 0.26608729735016823
+        },
+        {
+          "arm": "L_evidence_planner",
+          "passed": true,
+          "selected": 0,
+          "expected_synthetic_option": 0,
+          "seconds": 0.3291258029639721
+        },
+        {
+          "arm": "permuted_options",
+          "passed": true,
+          "selected": 3,
+          "expected_synthetic_option": 3,
+          "seconds": 0.2341880425810814
+        }
+      ],
+      "reader_protocol": "K-constrained-prediction-letter-v1",
+      "benchmark_labels_used": false,
+      "updated_at": "2026-11-02T16:27:14.259942+08:00"
+    }
+  },
+  "HIJK_manifests_verified_unchanged": true,
+  "verified_first_formal_cases": {
+    "updated_at": "2026-11-02T16:29:04.623187+08:00",
+    "completed": 2,
+    "progress": {
+      "stage": "planning",
+      "index": 3,
+      "question_id": "c5004075-e154-4bb8-baea-e41915190319",
+      "updated_at": "2026-11-02T16:28:38.915571+08:00"
+    },
+    "errors": {
+      "I_control": 0,
+      "L_all_evidence": 0,
+      "L_evidence_planner": 0
+    },
+    "default_remains_I": true
+  }
+}

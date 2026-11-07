@@ -129,7 +129,7 @@ def functional(out,backend,cfg,Ledger,Meter,core,protocol,renderer):
             if len(extra['U0']['accepted']['facts'])!=1 or extra['U0']['accepted']['facts'][0].get('patient')!='red book':failures.append('Incremental role did not join its unique existing action core')
             if any('body_part' in f for f in first['U0']['accepted']['facts']):failures.append('Unrequested role extracted on first task')
             body,view,audit=store.view('functional',dict(question='Which hand?'),[row],extra,renderer)
-            if not body.startswith('Frame [9,10): Action:') or 'body_part="left hand"' not in body:failures.append('C-style renderer did not preserve requested fields')
+            if not body.startswith('Frame [9,10): C moves red book with left hand.'):failures.append('Sentence renderer did not preserve requested fields')
             checks.append(dict(case='base_then_new_task_then_repeat',first=base,incremental=added,repeated=warm,description=body))
             examples=[('#C The book is wet.',['states.wetness'],'state',dict(value='wet')),
                 ('#C The book is on the table.',['relations.spatial'],'relation',dict(predicate='on',right='table')),
@@ -177,7 +177,7 @@ def work(out):
     import compact_protocol as protocol
     from run_compact_resident import ResidentBackend
     from run_joint_entity_experiment import source_observations
-    from qa_evidence_view import compact_description
+    from qa_evidence_view import narrative_description as compact_description
     from lazy_script_execution import (install_worker, restore_ledger, SourceExtractor,
         ensure_batched, extraction_counts, EXECUTION_VERSION)
     sys.path.insert(0,str(out/'runtime/qa'))

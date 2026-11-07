@@ -1,0 +1,172 @@
+EXTRACTION SYSTEM PROMPT (inherited O calls)
+Extract the information actually stated in this ONE sentence BEFORE
+any relevance filtering. No question, answer options, or question-planned field subset
+are supplied. Extract the stated entities in their action/attribute/state/relation
+records, including explicit spatial details. Do not decide what a future question needs.
+Return structured records, not a summary. Only a leading hash tag such as #C is metadata;
+the following subject C is NOT metadata and MUST be extracted as actor="C".
+For "#A A opens a drawer", the explicit actor is "A", verb "opens", patient "a drawer".
+Never discard the explicit actor just because the caption's tag repeats its name.
+Keep different actions/events separate. Actions use actor, verb, and a roles OBJECT;
+patient is the affected object, instrument the tool, body_part the body part, location
+where, destination where to, source_location where from, surface the working surface,
+material the consumed material, manner how, recipient the receiver. Include only roles
+actually stated; omit absent role keys. ALWAYS preserve an explicit executing subject,
+including names and pronouns. actor=null only for a genuinely unstated executing actor,
+such as an agentless passive. In multi-person actions, keep actor and recipient distinct.
+A preposition or noun is not an action: keep into/with/on details in the SAME action's
+roles rather than creating extra actions. Preserve negation and modality in descriptions;
+do not turn a negated
+or uncertain statement into a positive fact. States use entity/description.
+Use these record formats:
+actions=[{"actor":"a person","verb":"places","roles":{"patient":"a spoon","destination":"a drawer"}}]
+for "A person places a spoon into a drawer." No other categories are present there.
+attributes=[{"entity":"cup","property":"color","value":"red"}] for an explicit red cup.
+states=[{"entity":"door","description":"open"}].
+relations=[{"left":"cup","predicate":"on","right":"desk","relation_type":"spatial"}].
+changes=[{"entity":"door","before":"closed","after":"open"}].
+results=[{"entity":"cup","predicate":"becomes","value":"empty"}].
+event_links=[{"left_event":"opens the box","connector":"before","right_event":"takes the book","link_type":"before"}].
+These are FORMAT examples, not facts about the input. Extract only what it actually says.
+Set extraction_status="extracted" when any information is extracted.
+Return empty arrays for absent categories. Do not emit guessed attributes or the string
+"null" as an unknown color/property. Only if unable to extract ANY information,
+set extraction_status=unavailable and all arrays empty. Do not infer unstated details.
+This is extraction only, not relevance filtering. Output the required JSON only.
+
+P FILTER SYSTEM PROMPT
+你负责逐句收集证据，不负责回答整道题。
+输入仅有原始问题question、当前原句sentence及其全部抽取候选candidates。
+直接依据原始问题判断候选是否提供局部相关证据或反证，不改写、缩窄问题，
+不生成任务说明、子问题或额外的动作要求，不猜测答案选项。
+问题不是事实，不能用问题的预设补充原句没有的信息。
+只判断当前原句和候选，不借用其他句子、其他问题或其他人物的事实。
+一次观察不能单独证明反复、协调、整体过程或目的，不构成删除相关局部证据的理由。
+这些结论由最终汇总判断；逐句阶段只收集其中已经观察到的动作、对象、状态及关系。
+例如问“反复做什么”，原句“M wipes a table”要保留M/wipes/table，
+即使这一句没有次数或频率。拿起、放下、装入等具体操作不必单独证明活动目的。
+
+先输出observation：简述原句明确发生的事实，保留谁做什么。
+再输出relevance：说明与原始问题哪部分相关；确实无关才说明无关。
+最后输出labels，覆盖全部候选ID，整数1保留、0省略；不新增或改写候选值。
+同一group的动作字段联合理解：保留动作时保留其明确主语、对象和必要角色，
+包括改变动作含义的目标地点、接收者；保持不同主体及事件的绑定。
+无关颜色、身体部位等细节可以省略；一个错误字段不能使同组有效信息全部作废。
+真正无关时允许全0，不设保留数量，不强制某条事实入选。
+raw_sentence按同样的局部证据标准整体判断。
+问题：Which action keeps recurring while cleaning?
+原句：M wipes a table. 候选U0 actor=M，U1 verb=wipes，U2 patient=a table。
+正确输出：{"observation":"M wipes a table","relevance":"One observed wiping event is evidence to collect when comparing recurring cleaning actions.","labels":{"U0":1,"U1":1,"U2":1}}
+问题同上，原句：The unused clock is purple. 候选U0为clock/color/purple。
+正确输出：{"observation":"An unused clock is purple","relevance":"Clock color does not inform the cleaning actions.","labels":{"U0":0}}
+示例不是当前事实。只输出JSON：observation、relevance、labels。
+
+FINAL READER SYSTEM PROMPT
+You are presented with a textual description of a video clip, it consists of frame captions sparsely sampled from the video. Your task is to answer a question related to this video, choosing the correct option out of five possible answers. Please provide the answer with a single-letter (A, B, C, D, E)It is crucial that you imagine the visual scene as vividly as possible to enhance the accuracy of your response. After selecting your answer, rate your confidence level in this choice on a scale from 1 to 100, where 1 indicates low confidence and 100 signifies high confidence. Please provide a concise one-sentence explanation for your chosen answer. If you are uncertain about the correct option, select the one that seems closest to being correct. 
+
+FINAL READER USER PROMPT (complete, actual)
+Here are a few examples. 
+None 
+
+###
+
+  Description: Selected observations; missing fields are unknown. Independent sample intervals do not establish continuity or event counts. Options are not evidence.
+{"source_id":"S0","intervals":[[0,1],[3,4],[7,8],[37,38],[177,178]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"raises","patient":"her hands"}]}
+{"source_id":"S1","intervals":[[1,2],[16,17],[57,58],[68,69]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"dances"}]}
+{"source_id":"S2","intervals":[[2,3],[24,25]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stretches","body_part":"her right leg"}]}
+{"source_id":"S3","intervals":[[4,5]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"does","patient":"press ups"}]}
+{"source_id":"S6","intervals":[[8,9],[133,134],[157,158]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"lifts","patient":"her hands"}]}
+{"source_id":"S7","intervals":[[9,10],[26,27],[46,47],[51,52],[84,85],[109,110],[115,116],[124,125],[127,128],[164,165],[166,167]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"her hands"}]}
+{"source_id":"S8","intervals":[[10,11]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"adjusts","patient":"the cloth"}]}
+{"source_id":"S12","intervals":[[14,15]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stretches","body_part":"right leg"}]}
+{"source_id":"S13","intervals":[[15,16]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"holds","patient":"the waist"}]}
+{"source_id":"S15","intervals":[[18,19],[141,142]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stretches","body_part":"her right leg"}]}
+{"source_id":"S16","intervals":[[19,20],[52,53]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"around"}]}
+{"source_id":"S19","intervals":[[22,23],[58,59]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"walks","destination":"the woman B"}]}
+{"source_id":"S20","intervals":[[23,24]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"both hands"}]}
+{"source_id":"S21","intervals":[[25,26],[35,36]],"information":[{"kind":"action","event_id":"actions_0","actor":"A woman X","verb":"dances"}]}
+{"source_id":"S24","intervals":[[29,30]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"looks","patient":"the floor"}]}
+{"source_id":"S25","intervals":[[31,32],[97,98]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","body_part":"her right leg"}]}
+{"source_id":"S27","intervals":[[33,34]],"information":[{"kind":"action","event_id":"actions_0","actor":"The woman E","verb":"dances"}]}
+{"source_id":"S28","intervals":[[34,35]],"information":[{"kind":"action","event_id":"actions_0","actor":"A woman D","verb":"dances"}]}
+{"source_id":"S29","intervals":[[36,37]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"lowers","patient":"her hands"}]}
+{"source_id":"S30","intervals":[[38,39]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"puts","patient":"hands","manner":"together"}]}
+{"source_id":"S32","intervals":[[40,41]],"information":[{"kind":"action","event_id":"actions_0","actor":"The woman B","verb":"puts","patient":"both hands"}]}
+{"source_id":"S34","intervals":[[42,43]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","body_part":"right hand"}]}
+{"source_id":"S35","intervals":[[43,44]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"lowers","patient":"hands"}]}
+{"source_id":"S36","intervals":[[44,45]],"information":[{"kind":"action","event_id":"actions_0","actor":"A woman","verb":"dances"}]}
+{"source_id":"S37","intervals":[[45,46],[86,87]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stands","location":"the floor"}]}
+{"source_id":"S38","intervals":[[47,48],[49,50],[60,61],[62,63],[79,80],[112,113],[135,136],[136,137]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"the hands"}]}
+{"source_id":"S40","intervals":[[53,54]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stares","location":"the street"}]}
+{"source_id":"S43","intervals":[[56,57]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"exercises","body_part":"hands","location":"on her knees"}]}
+{"source_id":"S44","intervals":[[59,60],[77,78]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"her hands"}]}
+{"source_id":"S47","intervals":[[66,67]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"dances","patient":"the group of people"}]}
+{"source_id":"S48","intervals":[[67,68]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stretches","body_part":"right hand"}]}
+{"source_id":"S49","intervals":[[69,70]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"dances","location":"the floor"}]}
+{"source_id":"S50","intervals":[[70,71]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"puts","patient":"her hands","destination":"the knee"}]}
+{"source_id":"S52","intervals":[[72,73],[146,147]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"hands"}]}
+{"source_id":"S54","intervals":[[74,75]],"information":[{"kind":"action","event_id":"actions_0","actor":"person Y","verb":"dances"}]}
+{"source_id":"S55","intervals":[[75,76]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stretches","body_part":"hands"}]}
+{"source_id":"S56","intervals":[[76,77]],"information":[{"kind":"action","event_id":"actions_0","actor":"A","verb":"dances","patient":"The woman"}]}
+{"source_id":"S57","intervals":[[78,79]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"her right hand","destination":"her chest"}]}
+{"source_id":"S58","intervals":[[80,81]],"information":[{"kind":"action","event_id":"actions_0","actor":"A","verb":"adjusts","patient":"the shirt","body_part":"her chest"}]}
+{"source_id":"S62","intervals":[[85,86]],"information":[{"kind":"action","event_id":"actions_0","actor":"The woman B","verb":"walks","patient":"towards the woman E"}]}
+{"source_id":"S63","intervals":[[87,88]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"dances","patient":"the group of people"},{"kind":"action","event_id":"actions_1","actor":"C","verb":"in","location":"the circle"}]}
+{"source_id":"S65","intervals":[[89,90]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"lifts","patient":"her jacket","instrument":"her hands"}]}
+{"source_id":"S67","intervals":[[91,92],[160,161],[162,163]],"information":[{"kind":"action","event_id":"actions_0","actor":"The woman B","verb":"dances"}]}
+{"source_id":"S68","intervals":[[92,93]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stares","patient":"the wall"}]}
+{"source_id":"S69","intervals":[[93,94]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"adjusts","patient":"the sweater"}]}
+{"source_id":"S73","intervals":[[98,99]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"adjusts","patient":"her jacket","instrument":"her hands"}]}
+{"source_id":"S74","intervals":[[99,100]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stretches","body_part":"legs"}]}
+{"source_id":"S77","intervals":[[102,103]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"adjusts","patient":"the sweater sleeve","body_part":"her hands"}]}
+{"source_id":"S78","intervals":[[103,104]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"adjusts","patient":"the cloth","body_part":"her thigh"}]}
+{"source_id":"S79","intervals":[[104,105],[134,135]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"raises","patient":"her right hand"}]}
+{"source_id":"S84","intervals":[[111,112]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"dances","recipient":"the woman X"}]}
+{"source_id":"S85","intervals":[[113,114]],"information":[{"kind":"action","event_id":"actions_0","actor":"The woman X","verb":"adjusts","patient":"her hair","instrument":"her hands"}]}
+{"source_id":"S86","intervals":[[117,118]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"lifts","body_part":"hands"}]}
+{"source_id":"S87","intervals":[[118,119]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"hands","destination":"head"}]}
+{"source_id":"S88","intervals":[[119,120]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"dances"}]}
+{"source_id":"S89","intervals":[[120,121]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"dances","recipient":"the friends"}]}
+{"source_id":"S90","intervals":[[121,122]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"raises","patient":"her left hand","manner":"up"}]}
+{"source_id":"S91","intervals":[[122,123]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"holds","patient":"her waist","instrument":"her hands"}]}
+{"source_id":"S96","intervals":[[129,130]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"dances","location":"the compound"}]}
+{"source_id":"S97","intervals":[[131,132]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"touches","patient":"the waist"}]}
+{"source_id":"S98","intervals":[[132,133]],"information":[{"kind":"action","event_id":"actions_0","actor":"The man B","verb":"raises","patient":"both hands"}]}
+{"source_id":"S99","intervals":[[138,139]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"lifts","body_part":"her right hand"}]}
+{"source_id":"S100","intervals":[[139,140]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"bends"}]}
+{"source_id":"S101","intervals":[[140,141]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"legs"}]}
+{"source_id":"S102","intervals":[[142,143]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"removes","patient":"her hands","location":"the waist"}]}
+{"source_id":"S104","intervals":[[145,146]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"puts","patient":"the hands","manner":"together"}]}
+{"source_id":"S105","intervals":[[147,148]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"turns"}]}
+{"source_id":"S108","intervals":[[150,151]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"towards the woman X"}]}
+{"source_id":"S109","intervals":[[151,152]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"the hand"}]}
+{"source_id":"S110","intervals":[[152,153]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"does","patient":"dance moves"}]}
+{"source_id":"S111","intervals":[[153,154]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"hands","manner":"down"}]}
+{"source_id":"S113","intervals":[[155,156],[165,166]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"stretches","body_part":"hands"}]}
+{"source_id":"S114","intervals":[[156,157]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"lifts","patient":"her hands","manner":"up"}]}
+{"source_id":"S118","intervals":[[163,164]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"lifts","patient":"her hands"}]}
+{"source_id":"S119","intervals":[[168,169]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"walks","destination":"the man B"}]}
+{"source_id":"S120","intervals":[[169,170]],"information":[{"kind":"action","event_id":"actions_0","actor":"The woman D","verb":"stretches","body_part":"her right hand"}]}
+{"source_id":"S121","intervals":[[171,172]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"moves","patient":"the hand","manner":"up"}]}
+{"source_id":"S123","intervals":[[174,175]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"holds","patient":"camera"}]}
+{"source_id":"S125","intervals":[[178,179]],"information":[{"kind":"action","event_id":"actions_0","actor":"C","verb":"puts","patient":"her hands","location":"her chest"}]}
+
+###
+
+ Questions: How does c use her right leg and her right hand in a coordinated manner, and what conclusions can you draw about the purpose of these movements? 
+ Options: 
+ A: Creatively, c uses her right leg and right hand prominently to express herself. she frequently waves her right hand energetically or kicks her right leg high in the air. 
+ B: C uses her right leg and right hand to help her balance as she moves. she often places her right hand on her chest or abdomen to help her maintain her balance. she also uses her right hand to push off the ground as she moves. 
+ C: C consistently uses her dominant right leg and right hand to effectively communicate with others. she frequently points using her right hand and skillfully makes gestures with her right leg. 
+ D: C uses her right leg and right hand to manipulate objects. she often picks up objects with her right hand or kicks objects with her right leg. 
+ E: C predominantly utilizes her right leg and right hand to perform various tasks. she frequently uses her right hand to open doors or turn on light switches. additionally, she employs her right leg to walk or run comfortably. 
+
+###
+
+ The prediction, explanation, confidence is (please response in the format of 'prediction: 
+ explanation: 
+ confidence: 
+ '):
+
+RAW ANSWER
+prediction: A

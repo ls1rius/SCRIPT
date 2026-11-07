@@ -1,0 +1,625 @@
+{
+  "request": "给O+上限制，不能够补充额外的信息",
+  "version": "Oplus-N-source-bound-renderings-v15",
+  "updated_at": "2026-11-03T20:51:44.976803+08:00",
+  "run": "workdirs/O-Oplus-N-question-only-300-source-bound-20261103-r2",
+  "previous_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-20261103-r1",
+  "controller_pid": 3397897,
+  "worker_pid": 3398095,
+  "interruption": {
+    "reason": "User requested O+ no added information; controlled version upgrade",
+    "worker_pid": 3268061,
+    "controller_pid": 3267898,
+    "pending_calls": 0,
+    "time": "2026-11-03 20:46:12",
+    "progress": {
+      "stage": "matrix_filter",
+      "case": 27,
+      "question_id": "a317149f-1286-4160-9070-e575c42b8cc2",
+      "condition": "question_only",
+      "sentence": 21,
+      "total_sentences": 30,
+      "batch_size": 4,
+      "updated_at": "2026-11-03T20:45:56.787461+08:00"
+    }
+  },
+  "cpu_checks": 60,
+  "cpu_passed": true,
+  "cpu_log": "workdirs/Oplus-source-bound-upgrade-20261103-r1/cpu_verified.log",
+  "old_files_verified": 17441,
+  "inherited_O_answers": 26,
+  "legacy_Oplus_seconds": 2916.2264868989587,
+  "recovered_rows": {
+    "a317149f-1286-4160-9070-e575c42b8cc2": [
+      {
+        "area": "question_only",
+        "source_id": "S20",
+        "call_id": "6454df8b-5487-491b-b19a-efedba42e5a6"
+      },
+      {
+        "area": "question_only",
+        "source_id": "S21",
+        "call_id": "6454df8b-5487-491b-b19a-efedba42e5a6"
+      },
+      {
+        "area": "question_only",
+        "source_id": "S22",
+        "call_id": "6454df8b-5487-491b-b19a-efedba42e5a6"
+      },
+      {
+        "area": "question_only",
+        "source_id": "S23",
+        "call_id": "6454df8b-5487-491b-b19a-efedba42e5a6"
+      }
+    ]
+  },
+  "source_contract_audit": {
+    "passed": true,
+    "nonempty_saved_selections": 1069,
+    "unchanged_code": [
+      "VERSION",
+      "EXTRACT_PROMPT",
+      "FILTER_PROMPT",
+      "FILTER_PLAN_PROMPT",
+      "extraction_schema",
+      "candidates",
+      "filter_input",
+      "filter_schema",
+      "select",
+      "preserve_action_core",
+      "compose_input",
+      "final_input"
+    ],
+    "new_plus_version": "Oplus-N-source-bound-renderings-v15"
+  },
+  "source_bound_gate": {
+    "passed": true,
+    "checks": [
+      {
+        "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+        "source_id": "S18",
+        "passed": true,
+        "request": {
+          "question": "How does c use her right leg and her right hand in a coordinated manner, and what conclusions can you draw about the purpose of these movements?",
+          "groups": {
+            "actions_0": [
+              {
+                "id": "U0",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "actor",
+                "value": "C"
+              },
+              {
+                "id": "U1",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "verb",
+                "value": "walks"
+              },
+              {
+                "id": "U2",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "location",
+                "value": "around"
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "actions_0": {
+              "text": "C walks [location: around]"
+            }
+          },
+          "text": "C walks [location: around]"
+        }
+      },
+      {
+        "question_id": "5d15c716-f179-462c-84a6-fa94e9d14e94",
+        "source_id": "S80",
+        "passed": true,
+        "request": {
+          "question": "In the video, what was the main focus of c's activity, and how was it being executed in different ways in the garage?",
+          "groups": {
+            "actions_0": [
+              {
+                "id": "U0",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "actor",
+                "value": "C"
+              },
+              {
+                "id": "U1",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "verb",
+                "value": "puts"
+              },
+              {
+                "id": "U2",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "patient",
+                "value": "the wood plank"
+              },
+              {
+                "id": "U3",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "destination",
+                "value": "the wood plank machine"
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "actions_0": {
+              "text": "C puts the wood plank [destination: the wood plank machine]"
+            }
+          },
+          "text": "C puts the wood plank [destination: the wood plank machine]"
+        }
+      },
+      {
+        "question_id": "5d15c716-f179-462c-84a6-fa94e9d14e94",
+        "source_id": "S111",
+        "passed": true,
+        "request": {
+          "question": "In the video, what was the main focus of c's activity, and how was it being executed in different ways in the garage?",
+          "groups": {
+            "actions_0": [
+              {
+                "id": "U0",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "actor",
+                "value": "C"
+              },
+              {
+                "id": "U1",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "verb",
+                "value": "turns"
+              },
+              {
+                "id": "U2",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "patient",
+                "value": "the plank"
+              },
+              {
+                "id": "U3",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "location",
+                "value": "on the table saw machine"
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "actions_0": {
+              "text": "actor: C; verb: turns; patient: the plank; location: on the table saw machine"
+            }
+          },
+          "text": "actor: C; verb: turns; patient: the plank; location: on the table saw machine"
+        }
+      },
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "source_id": "S7",
+        "passed": true,
+        "request": {
+          "question": "How would you describe the overall process shown in the video and the main purpose behind the actions performed?",
+          "groups": {
+            "actions_0": [
+              {
+                "id": "U0",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "actor",
+                "value": "C"
+              },
+              {
+                "id": "U1",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "verb",
+                "value": "irons"
+              },
+              {
+                "id": "U2",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "patient",
+                "value": "the shirt"
+              },
+              {
+                "id": "U3",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "instrument",
+                "value": "the iron"
+              },
+              {
+                "id": "U4",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "body_part",
+                "value": "his right hand"
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "actions_0": {
+              "text": "C irons the shirt [instrument: the iron; body_part: his right hand]"
+            }
+          },
+          "text": "C irons the shirt [instrument: the iron; body_part: his right hand]"
+        }
+      },
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "source_id": "S8",
+        "passed": true,
+        "request": {
+          "question": "How would you describe the overall process shown in the video and the main purpose behind the actions performed?",
+          "groups": {
+            "actions_0": [
+              {
+                "id": "U0",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "actor",
+                "value": "C"
+              },
+              {
+                "id": "U1",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "verb",
+                "value": "irons"
+              },
+              {
+                "id": "U2",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "patient",
+                "value": "the shirt"
+              },
+              {
+                "id": "U3",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "instrument",
+                "value": "iron box"
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "actions_0": {
+              "text": "C irons the shirt [instrument: iron box]"
+            }
+          },
+          "text": "C irons the shirt [instrument: iron box]"
+        }
+      },
+      {
+        "question_id": "source_bound_probe",
+        "source_id": "S0",
+        "passed": true,
+        "request": {
+          "question": "What is explicitly observed?",
+          "groups": {
+            "a": [
+              {
+                "id": "U0",
+                "kind": "action_field",
+                "group": "a",
+                "field": "actor",
+                "value": "D"
+              },
+              {
+                "id": "U1",
+                "kind": "action_field",
+                "group": "a",
+                "field": "verb",
+                "value": "may not give"
+              },
+              {
+                "id": "U2",
+                "kind": "action_field",
+                "group": "a",
+                "field": "patient",
+                "value": "cup"
+              },
+              {
+                "id": "U3",
+                "kind": "action_field",
+                "group": "a",
+                "field": "recipient",
+                "value": "E"
+              },
+              {
+                "id": "U4",
+                "kind": "action_field",
+                "group": "a",
+                "field": "location",
+                "value": "room"
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "a": {
+              "text": "D may not give cup [recipient: E; location: room]"
+            }
+          },
+          "text": "D may not give cup [recipient: E; location: room]"
+        }
+      },
+      {
+        "question_id": "source_bound_probe",
+        "source_id": "S1",
+        "passed": true,
+        "request": {
+          "question": "What is explicitly observed?",
+          "groups": {
+            "a": [
+              {
+                "id": "U0",
+                "kind": "action_field",
+                "group": "a",
+                "field": "actor",
+                "value": "繫\"甲"
+              },
+              {
+                "id": "U1",
+                "kind": "action_field",
+                "group": "a",
+                "field": "verb",
+                "value": "does not put"
+              },
+              {
+                "id": "U2",
+                "kind": "action_field",
+                "group": "a",
+                "field": "patient",
+                "value": "木板"
+              },
+              {
+                "id": "U3",
+                "kind": "action_field",
+                "group": "a",
+                "field": "destination",
+                "value": "箱子"
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "a": {
+              "text": "繫\"甲 does not put 木板 [destination: 箱子]"
+            }
+          },
+          "text": "繫\"甲 does not put 木板 [destination: 箱子]"
+        }
+      },
+      {
+        "question_id": "source_bound_probe",
+        "source_id": "S2",
+        "passed": true,
+        "request": {
+          "question": "What is explicitly observed?",
+          "groups": {
+            "a": [
+              {
+                "id": "U0",
+                "kind": "raw_sentence",
+                "group": "a",
+                "text": "D did not enter the garage."
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "a": {
+              "text": "D did not enter the garage."
+            }
+          },
+          "text": "D did not enter the garage."
+        }
+      },
+      {
+        "question_id": "source_bound_probe",
+        "source_id": "S3",
+        "passed": true,
+        "request": {
+          "question": "What is explicitly observed?",
+          "groups": {
+            "a": [
+              {
+                "id": "U0",
+                "kind": "changes",
+                "group": "a",
+                "record": {
+                  "entity": "door",
+                  "before": "closed",
+                  "after": "possibly open"
+                }
+              }
+            ]
+          }
+        },
+        "output": {
+          "groups": {
+            "a": {
+              "text": "{\"entity\":\"door\",\"before\":\"closed\",\"after\":\"possibly open\"}"
+            }
+          },
+          "text": "{\"entity\":\"door\",\"before\":\"closed\",\"after\":\"possibly open\"}"
+        }
+      }
+    ],
+    "error": null,
+    "version": "Oplus-N-source-bound-renderings-v15",
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 7.365508392453194,
+      "total": 7.365508392453194,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 7.365508392453194,
+      "text_cache_hits": 0,
+      "total_cap": 600,
+      "budget_violation": false,
+      "by_operation": {
+        "o_independent_batch": 7.365508392453194
+      },
+      "call_count": 4,
+      "resources": {
+        "cpu_seconds": 7.330756508,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 8.08217591792345,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 16986272768
+      }
+    },
+    "updated_at": "2026-11-03T20:49:56.555919+08:00"
+  },
+  "batch_gate": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "four_independent_source_prompts",
+        "passed": true
+      },
+      {
+        "name": "independent_filter_schemas_and_prompts",
+        "passed": true,
+        "serial_labels": [
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          }
+        ],
+        "batch_labels": [
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          }
+        ],
+        "labels_equal": true
+      },
+      {
+        "name": "identity_aliases_and_eos_padding",
+        "passed": true
+      }
+    ],
+    "error": null,
+    "speed": {
+      "serial_seconds": 19.9343934468925,
+      "batch_seconds": 11.455779619514942,
+      "ratio": 1.740116701698261,
+      "rows": 4,
+      "scope": "Same four requests on the shared GPU, serial then batched; changing contention is not controlled."
+    },
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 42.17436261475086,
+      "total": 42.17436261475086,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 42.17436261475086,
+      "text_cache_hits": 0,
+      "total_cap": 900,
+      "budget_violation": false,
+      "by_operation": {
+        "o_independent_batch": 22.239969167858362,
+        "o_filter": 19.9343934468925
+      },
+      "call_count": 7,
+      "resources": {
+        "cpu_seconds": 42.18218763500001,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 42.18354035913944,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17329303040
+      }
+    },
+    "updated_at": "2026-11-03T20:50:38.737553+08:00"
+  },
+  "upstream_N": {
+    "successful_cases": 91,
+    "failed_case": 92,
+    "reason": "N input overflow; no truncation",
+    "failed_at": "2026-11-03T20:43:28+08:00"
+  },
+  "guarantees": "Only exact group-local selected-field renderings accepted; no free-form factual additions in O+ composition.",
+  "limitations": "Selected fields may already be incorrect; filtering may remove useful evidence; no QA improvement claim.",
+  "method_change": "Model chooses finite source-bound renderings or empty; original free text composition retained as historical method.",
+  "formal_audit": {
+    "passed": true,
+    "at": "2026-11-03T20:51:44.971374+08:00",
+    "formal_compose_rows": 136,
+    "final_boundary_checked_sentences": 136,
+    "new_frozen_files": 14171,
+    "old_files_unchanged": 17441
+  },
+  "latest_progress": {
+    "stage": "matrix_compose",
+    "case": 3,
+    "question_id": "c5004075-e154-4bb8-baea-e41915190319",
+    "condition": "question_only",
+    "sentence": 57,
+    "total_sentences": 100,
+    "batch_size": 4,
+    "updated_at": "2026-11-03T20:51:44.605132+08:00"
+  }
+}

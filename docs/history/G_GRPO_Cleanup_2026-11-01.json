@@ -1,0 +1,252 @@
+{
+  "created_at": "2026-11-01T22:32:38.144766+08:00",
+  "authorization": "User requested deletion of G+GRPO files and weights; keep experiment records and documentation only.",
+  "state": "deleted_and_records_retained",
+  "protected_manifest_sha256": {
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-entities-G-300-20261030-r3/frozen_hashes.json": "39874c16d5230ffa5e35abb7a9ce9e814014dd6d4ec30e4cb8dbea44c369354a",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/frozen_hashes.json": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue/frozen_hashes.json": "af70fc38f80ed2de0ec840971dab92648cb9e0da00bd85fb601da876668249fb",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r6-queue/frozen_hashes.json": "83610ae27ca94540e751719ede1ea1d32e79f8d93a52d5da37b1e60e8295d356",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-demo7-20261101-r3/frozen_hashes.json": "e3b3283e3f5626572abbb7dafe64f3fef36cd5c2441491f05abc2b9a0126673d"
+  },
+  "removed_source_files": {
+    "script/build_g_rl_memories.py": "a59ff4687ffa97ad5dd82174eaef232b48a175f5ac1e98ca45809be22ad328fd",
+    "script/parallel_g_rl_memories.py": "1a00ef8266aef878b13de82e3270f3f8806e707ad110d7b85d343f224a3587cf",
+    "script/run_g_rl_experiment.py": "4862b3a042b2b4f05ca7851b470f70aaa7c37fa98d23d281d5f38e92f616c188",
+    "script/run_g_rl_ready_evaluation.py": "7b5fd8eaea8598d3d802bf4d84438ed3123c325ed88069798f2ce47dedeaf3a6",
+    "tests/test_g_rl.py": "4a92478d5e00d5f5a5cd4faf8d908c7ee034327dce211cd2956c9d7f760b7483",
+    "tests/test_parallel_g_rl_memories.py": "936b1392055e94dabbe11940b981010c343754dd1828e1735f541d29bdb80efb",
+    "tests/test_g_rl_ready_evaluation.py": "e5db1005656201883848c5e4e95ea849f387bf27a85c1fa1c871c7f5c49b7578"
+  },
+  "experiments": {
+    "G-RL-ready-eval-20261031-r1": {
+      "before": {
+        "entries": 27,
+        "logical_bytes": 13617115,
+        "allocated_bytes": 13676544
+      },
+      "weight_files": [
+        {
+          "path": "adapter/adapter_model.safetensors",
+          "bytes": 10108960,
+          "sha256": "492bf218a2208aa3256abe35ce082f88159e496eef10430c6149b638038e54ae"
+        }
+      ],
+      "evaluation_records": 0,
+      "retained_entries": [
+        "cohort.json",
+        "experiment.json",
+        "experiment_record.json",
+        "frozen_hashes.json",
+        "full_cohort.json",
+        "labels_report_only.json",
+        "queue_status.json",
+        "report.json",
+        "retirement.json",
+        "training_summary.json"
+      ],
+      "retained_sha256": {
+        "labels_report_only.json": "8c71ed0adc8227074b54f0271db9634e2ff6a2b9edb551ce44bf82017ac4f8c8",
+        "report.json": "3dc973fd498beb5b6363398629b0af434290937a3f2c5ef4a3a8785e2eff98c6",
+        "experiment.json": "9b0fa6256751402e389fba17391f26ab2042877b28d238c91ca5f843e39a9f2e",
+        "frozen_hashes.json": "fa118791ebe49c5e872e5559aad252ce475ceaed04d19324848c7fb371e38cde",
+        "training_summary.json": "e7e893901557ea1a48c08f3ca4b844c916c1fcecd187197be92c33d9fcc5ecc9",
+        "queue_status.json": "dd878eeaba4f974cd9922da8af7a7953539be3818e8138dc16d13eb50016b8a9",
+        "experiment_record.json": "d44214e218bd86ae847d62c1111a96d1e8e3c8ff3a5daf1950b537a1ebf3f926",
+        "cohort.json": "914fea79f7abf91ab91485c86e0b7b3aeee16c870ed81d519767913717317fce",
+        "full_cohort.json": "60930da58c0e51b783ce3bb393c48680d1de8e0881bb0e4436f7a2d2960ffaa3",
+        "retirement.json": "dd878eeaba4f974cd9922da8af7a7953539be3818e8138dc16d13eb50016b8a9"
+      },
+      "after_allocated_bytes": 94208
+    },
+    "G-RL-ready-eval-20261031-r2": {
+      "before": {
+        "entries": 599,
+        "logical_bytes": 14135139,
+        "allocated_bytes": 16105472
+      },
+      "weight_files": [
+        {
+          "path": "adapter/adapter_model.safetensors",
+          "bytes": 10108960,
+          "sha256": "492bf218a2208aa3256abe35ce082f88159e496eef10430c6149b638038e54ae"
+        }
+      ],
+      "evaluation_records": 566,
+      "retained_entries": [
+        "cohort.json",
+        "evaluation_records.jsonl",
+        "evaluation_setup.json",
+        "experiment.json",
+        "experiment_record.json",
+        "frozen_hashes.json",
+        "full_cohort.json",
+        "labels_report_only.json",
+        "progress.json",
+        "queue_status.json",
+        "report.json",
+        "training_summary.json"
+      ],
+      "retained_sha256": {
+        "labels_report_only.json": "3f1858d351122f7ce6756b8f04c98989b400a0179b8afb0e4c0a03803adf0abb",
+        "report.json": "8e15debecab0232dd7f5dfbe69e3e0b08836843c4e4e73c7385fedf666e94d19",
+        "progress.json": "c64881b80d274272f4292a1dd57fdc7dfeb2ae23f727551544f1c813a0c2cfb6",
+        "experiment.json": "67e7d7b4666201229d185a59983b39f5a601eeaa93828d9c257866e8700bad80",
+        "evaluation_records.jsonl": "dfe60e9729a0cfc568a6dd72e0dd3e054e9f01982bf2481114f3cf1699a5d951",
+        "frozen_hashes.json": "d4bce1e0b1f9148eca99a08a1a2a4ee441bd56c0804fdd1ac0365f653028f970",
+        "training_summary.json": "e7e893901557ea1a48c08f3ca4b844c916c1fcecd187197be92c33d9fcc5ecc9",
+        "evaluation_setup.json": "0b216233e0083d77c147031ef4dbd5b7c08846eeed53ea0239cba25c4ad91a2a",
+        "queue_status.json": "b27c083e23d45934a3f1c6262d3ad874d5426588fe8cb53eeaa66745beeec26b",
+        "experiment_record.json": "d44214e218bd86ae847d62c1111a96d1e8e3c8ff3a5daf1950b537a1ebf3f926",
+        "cohort.json": "4725ff8882dfdbc83d54e70e484b2e8c01ae5be2aa2da350f010c8f117386b65",
+        "full_cohort.json": "60930da58c0e51b783ce3bb393c48680d1de8e0881bb0e4436f7a2d2960ffaa3"
+      },
+      "after_allocated_bytes": 512000
+    },
+    "G-RL-train200-eval300-20261031-r1": {
+      "before": {
+        "entries": 1036,
+        "logical_bytes": 22923351,
+        "allocated_bytes": 24866816
+      },
+      "weight_files": [],
+      "evaluation_records": 0,
+      "retained_entries": [
+        "experiment.json",
+        "experiment_record.json",
+        "frozen_hashes.json",
+        "queue_status.json",
+        "splits_500.json",
+        "train_labels.json",
+        "validation_labels.json"
+      ],
+      "retained_sha256": {
+        "experiment.json": "9458d7ac24e6dae4d3287abf9721ea3683983573b717e32ac8e2a85d6798a17a",
+        "train_labels.json": "da985100ac4110dbfc4d7636b8f20b4f587a35e647b34dd52e00fc7e7c96c69b",
+        "frozen_hashes.json": "3116e1efa495e777b4286d61271cfc87f9497a95b689824777c211d3071f4834",
+        "splits_500.json": "26323fddea7629638dc183cb134bf6cb6f5ab6f3adaf911c10a15c507b216968",
+        "queue_status.json": "a70ec385e17eb00a5e3e3c5637ed74dbf8eac4b7904720cd38eeabdb693541cb",
+        "validation_labels.json": "a4b8f3b47196a1232a8d258bb16bd0bdb8b4031bb910920405b8291b3ad60615",
+        "experiment_record.json": "1204b80bdc8b9257ee03b9e24f3675aeea1b9b42ff412a1cccb62cee14ce827d"
+      },
+      "after_allocated_bytes": 81920
+    },
+    "G-RL-train200-eval300-20261031-r2": {
+      "before": {
+        "entries": 1409,
+        "logical_bytes": 24256508,
+        "allocated_bytes": 27246592
+      },
+      "weight_files": [],
+      "evaluation_records": 0,
+      "retained_entries": [
+        "experiment.json",
+        "experiment_record.json",
+        "frozen_hashes.json",
+        "queue_status.json",
+        "recovery.json",
+        "splits_500.json",
+        "train_labels.json",
+        "validation_labels.json"
+      ],
+      "retained_sha256": {
+        "experiment.json": "9458d7ac24e6dae4d3287abf9721ea3683983573b717e32ac8e2a85d6798a17a",
+        "train_labels.json": "da985100ac4110dbfc4d7636b8f20b4f587a35e647b34dd52e00fc7e7c96c69b",
+        "frozen_hashes.json": "3116e1efa495e777b4286d61271cfc87f9497a95b689824777c211d3071f4834",
+        "splits_500.json": "26323fddea7629638dc183cb134bf6cb6f5ab6f3adaf911c10a15c507b216968",
+        "queue_status.json": "cc1ffca0515bb3295295736ab1d859270936d54bebc76596701f3a839ac7a962",
+        "recovery.json": "69a54bbed1d51ccc78f41e2d328ebdd3aa0e0bca305c0b5f59fafb7cf4c322c8",
+        "experiment_record.json": "f710bbb964888a515f145e19816ce755335834c47687953844559277716f66b4",
+        "validation_labels.json": "a4b8f3b47196a1232a8d258bb16bd0bdb8b4031bb910920405b8291b3ad60615"
+      },
+      "after_allocated_bytes": 86016
+    },
+    "G-RL-train200-eval300-20261031-r3": {
+      "before": {
+        "entries": 44973,
+        "logical_bytes": 185741362,
+        "allocated_bytes": 316325888
+      },
+      "weight_files": [
+        {
+          "path": "adapter/adapter_model.safetensors",
+          "bytes": 10108960,
+          "sha256": "492bf218a2208aa3256abe35ce082f88159e496eef10430c6149b638038e54ae"
+        }
+      ],
+      "evaluation_records": 600,
+      "retained_entries": [
+        "adapter_seal.json",
+        "environment.json",
+        "evaluation_records.jsonl",
+        "evaluation_setup.json",
+        "execution_revision.json",
+        "experiment.json",
+        "experiment_record.json",
+        "frozen_hashes.json",
+        "progress.json",
+        "queue_status.json",
+        "report.json",
+        "setup.json",
+        "splits_500.json",
+        "train_dataset_seal.json",
+        "train_labels.json",
+        "training_summary.json",
+        "validation_dataset_seal.json",
+        "validation_labels.json"
+      ],
+      "retained_sha256": {
+        "report.json": "6901214996eb48c9d4ff1de4375d4e441e71c5f63fb0bea1e6158a79713f7e81",
+        "adapter_seal.json": "a2fc3a9fde2313dc1eb18917fb3cda2d4e19542f9f69644cbea27d5b837c3a8c",
+        "progress.json": "ef5aeec8b7bd2bcc42bb3a305045249a8c325012bda6d50d973ebc04258a82bf",
+        "validation_dataset_seal.json": "516338b2193457fa4e425bd33ac14d958c96f5cae7e77a72ec647a94b5fe90f4",
+        "environment.json": "a8005e2a501b7f8533726fc011795be77cf7052c2318d24a11976a2ae09ec99c",
+        "experiment.json": "9458d7ac24e6dae4d3287abf9721ea3683983573b717e32ac8e2a85d6798a17a",
+        "train_labels.json": "da985100ac4110dbfc4d7636b8f20b4f587a35e647b34dd52e00fc7e7c96c69b",
+        "evaluation_records.jsonl": "66e7b45be52742069d60a64387764effb665d2a0dac10a5b279e707bd461506d",
+        "frozen_hashes.json": "0ee2850e8bd2f703bf172566aafbd34c97361093d099da000b98a5d6a3369d6b",
+        "splits_500.json": "26323fddea7629638dc183cb134bf6cb6f5ab6f3adaf911c10a15c507b216968",
+        "training_summary.json": "e7e893901557ea1a48c08f3ca4b844c916c1fcecd187197be92c33d9fcc5ecc9",
+        "evaluation_setup.json": "9c8537e794561b5496a3e74fc5648e3766ccdac6c79a669db4ed394ac2186494",
+        "queue_status.json": "dc820b64973a47f9ce9222d9b7fc9e69b70a3d5bf34b4c0b3d223661a71fdb78",
+        "setup.json": "0532acdb361a5e3744ed55537bfd76fc78ae6d7e8e9c1942573579253348cec2",
+        "train_dataset_seal.json": "311dd1fd7d30198c38868d0bc8c9e34189291a449d4961ea07fbf66b90a2efe5",
+        "validation_labels.json": "a4b8f3b47196a1232a8d258bb16bd0bdb8b4031bb910920405b8291b3ad60615",
+        "experiment_record.json": "bd471a238156f83c9a3f04021ba7336421ba2e45d2995bd06731ef4308991d53",
+        "execution_revision.json": "9d2395585f44ce04ac8ae37047d5e6a85606dfaf9caffa7065e43341fadb752b"
+      },
+      "after_allocated_bytes": 548864
+    },
+    "g-rl-env": {
+      "before": {
+        "entries": 713,
+        "logical_bytes": 8019781,
+        "allocated_bytes": 9383936
+      },
+      "weight_files": [
+        {
+          "path": "lib/python3.12/site-packages/00-query-runtime.pth",
+          "bytes": 86,
+          "sha256": "3d4e937b3274587771394cde8f6b7e1227c0e2e2920d5e09fd22c4f3bde3c42b"
+        }
+      ],
+      "after_allocated_bytes": 0
+    }
+  },
+  "shared_parser_policy": "Retain only canonical/parse_answer under historical g_rl.py name for J/demo compatibility; no training functions. Frozen G/H/I/J snapshots are unchanged.",
+  "completed_at": "2026-11-01T22:33:46.955526+08:00",
+  "freed_allocated_bytes": 406282240,
+  "validation": {
+    "cpu_tests_passed": 22,
+    "protected_frozen_files_verified": 2837,
+    "retained_evaluation_records": 1166,
+    "dedicated_weight_files_remaining": 0,
+    "dedicated_training_environment_exists": false,
+    "shared_parser_functions": [
+      "canonical",
+      "parse_answer"
+    ],
+    "git_diff_check": "passed",
+    "G_H_I_J_controllers_and_frozen_artifacts": "unchanged"
+  }
+}

@@ -41,6 +41,11 @@ def decoder_schema(schema):
     if not isinstance(schema, dict):
         return schema
     result = {k: decoder_schema(v) for k, v in schema.items()}
+    if schema.get('type') == 'string' and schema.get('maxLength') == 0:
+        # LMFE's free-text shortcut treats max_length=0 as infinity. An exact
+        # empty-string enum has the same legal value and avoids that shortcut.
+        # Keep all other constraints so contradictory schemas remain invalid.
+        result['enum'] = [value for value in schema.get('enum', ['']) if value == '']
     if schema.get('type') == 'object':
         empty = {k for k, v in schema['properties'].items()
                  if v.get('type') == 'array' and v.get('maxItems') == 0}
@@ -77,6 +82,21 @@ VARIABLES = ['actor', 'recipient', 'object', 'target_object', 'target_fabric', '
 
 
 def output_schema(operation, inputs):
+    if operation in ('m_candidate_query', 'm_candidate_rank'):
+        from .m_candidate_selection import output_schema as candidate_schema
+        return candidate_schema(operation, inputs)
+    if operation == 'n_select_scene':
+        from .n_scene_selection import output_schema as n_selection_schema
+        return n_selection_schema(operation, inputs)
+    if operation == 'n_extract_fields':
+        from .n_source_extraction import output_schema as n_source_schema
+        return n_source_schema(operation, inputs)
+    if operation in ('m_select_scene', 'm_transition_next', 'm_sufficiency_check', 'm_resolve_gap'):
+        from .m_scene_memory import output_schema as m_schema
+        return m_schema(operation, inputs)
+    if operation in ('h_plan_fields', 'h_extract_fields'):
+        from .generalized_lazy_memory import output_schema as h_schema
+        return h_schema(operation, inputs)
     if operation == 'e_joint_extract':
         from .joint_entity_memory import output_schema as joint_schema
         return joint_schema(inputs)
@@ -400,6 +420,8 @@ def validate_output(value, schema, path='$'):
         raise ValueError(f'{path}: expected {kinds}')
     if 'enum' in schema and value not in schema['enum']:
         raise ValueError(f'{path}: reference/value is outside the allowlist')
+    if isinstance(value, str) and len(value) < schema.get('minLength', 0):
+        raise ValueError(f'{path}: string length is below the schema minimum')
     if isinstance(value, str) and len(value) > schema.get('maxLength', float('inf')):
         raise ValueError(f'{path}: string length exceeds the schema')
     if isinstance(value, dict):

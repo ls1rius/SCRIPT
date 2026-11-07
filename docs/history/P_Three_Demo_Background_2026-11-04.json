@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-04T00:05:03.748203+08:00",
+  "user_scope": "User confirmed previous three demos, then requested background P run",
+  "run": "workdirs/P-three-demo-validation-20261104-r1",
+  "version": "P-source-schema-first-single-decision-neutral-reader-v3",
+  "case_ids": [
+    "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+    "5d15c716-f179-462c-84a6-fa94e9d14e94",
+    "98427b0b-20ed-45bb-b772-91573ce90b5a"
+  ],
+  "case_titles": [
+    "动作协调",
+    "熨衣",
+    "车库木工"
+  ],
+  "method_unchanged_from": "workdirs/P-repaired-coordination-20261103-r3/runtime",
+  "generic_gate_count": 12,
+  "case_source_counts": {
+    "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe": 126,
+    "5d15c716-f179-462c-84a6-fa94e9d14e94": 120,
+    "98427b0b-20ed-45bb-b772-91573ce90b5a": 11
+  },
+  "queue": {
+    "state": "running",
+    "controller_pid": 3537111,
+    "updated_at": "2026-11-04T00:05:01.087398+08:00",
+    "worker_pid": 3537295,
+    "gpu": "0",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r1/runtime/script/run_p_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r1"
+    ],
+    "at": "2026-11-04T00:04:41.082569+08:00"
+  },
+  "resource_audit": {
+    "at": "2026-11-04T00:04:19.711371+08:00",
+    "reason": "Prior P measured allocated peak 17546756608 bytes; available GPU0 about 27GiB; 24GiB admission plus 22GiB allocator limit",
+    "old_minimum_free_mib": 32768,
+    "new_minimum_free_mib": 24576,
+    "allocator_limit_mib": 22528,
+    "limitation": "PyTorch allocator cap; CUDA context and non-allocator allocations excluded; admission margin retained",
+    "stability_checks": 3,
+    "stability_interval_seconds": 10,
+    "shared_locks_unchanged": true,
+    "prior_queue_stopped_before_worker": true,
+    "method_identical_to_r3": [
+      "script_core/p_sentence_filter.py",
+      "script_core/o_batch_generation.py",
+      "script/p_repair_validation.py",
+      "script/run_p_sentence_experiment.py"
+    ],
+    "runtime_budget_before": "9e5ddaec03ecfcd665060ebc94f9126e25b4b8bf2f2e376a789f66a2fe87f6e1",
+    "runtime_budget_after": "e05620ded1c55acbc6f53134e5cb965a6a175324539809dfb8cab99b52d9f88c",
+    "runtime_patch_only": true
+  },
+  "policy": "No case-specific method changes; gate must pass before cases; fresh extraction/filter/answer; no navigation or automatic retries; failures retained",
+  "results_pending": true
+}

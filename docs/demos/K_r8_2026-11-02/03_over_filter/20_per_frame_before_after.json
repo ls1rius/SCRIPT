@@ -1,0 +1,723 @@
+{
+  "question_id": "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+  "rows": [
+    {
+      "sampled_frame_index": 45,
+      "sample_interval": [
+        45,
+        46
+      ],
+      "original_caption": "#C C looks at man P",
+      "F_archived_evidence": {
+        "original_text": "#C C looks at man P"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C looks at man P.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 46,
+      "sample_interval": [
+        46,
+        47
+      ],
+      "original_caption": "#O a woman X walks towards the table",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "walks",
+            "patient": "towards the table"
+          }
+        ],
+        "original_text": "#O a woman X walks towards the table"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "walks",
+            "patient": "towards the table"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R1",
+          "text": "a woman X walks towards the table.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R2",
+          "text": "X walks towards the table.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 47,
+      "sample_interval": [
+        47,
+        48
+      ],
+      "original_caption": "#C C walks towards the bedroom",
+      "F_archived_evidence": {
+        "original_text": "#C C walks towards the bedroom"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks towards the bedroom.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 48,
+      "sample_interval": [
+        48,
+        49
+      ],
+      "original_caption": "#O A lady Y holds a phone",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "Y",
+            "verb": "holds",
+            "patient": "phone"
+          }
+        ],
+        "original_text": "#O A lady Y holds a phone"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "Y",
+            "verb": "holds",
+            "patient": "phone"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R4",
+          "text": "A lady Y holds a phone.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R5",
+          "text": "Y holds phone.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 49,
+      "sample_interval": [
+        49,
+        50
+      ],
+      "original_caption": "#C C looks at the table",
+      "F_archived_evidence": {
+        "original_text": "#C C looks at the table"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C looks at the table.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 50,
+      "sample_interval": [
+        50,
+        51
+      ],
+      "original_caption": "#O A woman X sits on the chair",
+      "F_archived_evidence": {
+        "original_text": "#O A woman X sits on the chair"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "A woman X sits on the chair.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 51,
+      "sample_interval": [
+        51,
+        52
+      ],
+      "original_caption": "#C C looks at the table",
+      "F_archived_evidence": {
+        "original_text": "#C C looks at the table"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C looks at the table.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 52,
+      "sample_interval": [
+        52,
+        53
+      ],
+      "original_caption": "#O lady X walks around",
+      "F_archived_evidence": {
+        "original_text": "#O lady X walks around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R8",
+          "text": "lady X walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 53,
+      "sample_interval": [
+        53,
+        54
+      ],
+      "original_caption": "#O a woman Y walks around the room ",
+      "F_archived_evidence": {
+        "original_text": "#O a woman Y walks around the room "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R9",
+          "text": "a woman Y walks around the room.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 54,
+      "sample_interval": [
+        54,
+        55
+      ],
+      "original_caption": "#O person D walks around",
+      "F_archived_evidence": {
+        "original_text": "#O person D walks around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R10",
+          "text": "person D walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 55,
+      "sample_interval": [
+        55,
+        56
+      ],
+      "original_caption": "#O A woman X holds a phone",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "holds",
+            "patient": "phone"
+          }
+        ],
+        "original_text": "#O A woman X holds a phone"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "holds",
+            "patient": "phone"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R11",
+          "text": "A woman X holds a phone.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R12",
+          "text": "X holds phone.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 56,
+      "sample_interval": [
+        56,
+        57
+      ],
+      "original_caption": "#O woman K walks in the room ",
+      "F_archived_evidence": {
+        "original_text": "#O woman K walks in the room "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R13",
+          "text": "woman K walks in the room.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 57,
+      "sample_interval": [
+        57,
+        58
+      ],
+      "original_caption": "#C C looks at the table",
+      "F_archived_evidence": {
+        "original_text": "#C C looks at the table"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C looks at the table.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 58,
+      "sample_interval": [
+        58,
+        59
+      ],
+      "original_caption": "#C C walks in the room",
+      "F_archived_evidence": {
+        "original_text": "#C C walks in the room"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R14",
+          "text": "C walks in the room.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 59,
+      "sample_interval": [
+        59,
+        60
+      ],
+      "original_caption": "#C C walks around the house",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around the house"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C walks around the house.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 60,
+      "sample_interval": [
+        60,
+        61
+      ],
+      "original_caption": "#O woman X walks back to the room",
+      "F_archived_evidence": {
+        "original_text": "#O woman X walks back to the room"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R16",
+          "text": "woman X walks back to the room.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 61,
+      "sample_interval": [
+        61,
+        62
+      ],
+      "original_caption": "#O a woman X walks towards C",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "walks",
+            "patient": "towards C"
+          }
+        ],
+        "original_text": "#O a woman X walks towards C"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "walks",
+            "patient": "towards C"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "a woman X walks towards C.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R18",
+          "text": "X walks towards C.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R28",
+          "text": "a woman X walks towards C. The text memory associates this observation with C (text reference E0).",
+          "decision": "skip",
+          "retained": false,
+          "qualification": "source assertion"
+        }
+      ],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 62,
+      "sample_interval": [
+        62,
+        63
+      ],
+      "original_caption": "#O woman Y stands at the table ",
+      "F_archived_evidence": {
+        "original_text": "#O woman Y stands at the table "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "woman Y stands at the table.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R29",
+          "text": "woman Y stands at the table. The text memory associates this observation with the table (text reference E1).",
+          "decision": "skip",
+          "retained": false,
+          "qualification": "source assertion"
+        }
+      ],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 63,
+      "sample_interval": [
+        63,
+        64
+      ],
+      "original_caption": "#C C looks at the coffee maker",
+      "F_archived_evidence": {
+        "original_text": "#C C looks at the coffee maker"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R20",
+          "text": "C looks at the coffee maker.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 64,
+      "sample_interval": [
+        64,
+        65
+      ],
+      "original_caption": "#O A woman Y walks towards C",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "Y",
+            "verb": "walks",
+            "patient": "towards C"
+          }
+        ],
+        "original_text": "#O A woman Y walks towards C"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "Y",
+            "verb": "walks",
+            "patient": "towards C"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R21",
+          "text": "A woman Y walks towards C.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R22",
+          "text": "Y walks towards C.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R30",
+          "text": "An unresolved source observation states: \"A woman Y walks towards C\".",
+          "decision": "group:R30",
+          "retained": true,
+          "qualification": "unresolved hypothesis"
+        }
+      ],
+      "processing_status": "直接候选跳过，仅保留上游时序关联",
+      "final_input_paragraphs": [
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R30",
+          "grouped_record_ids": [
+            "R30"
+          ],
+          "exact_final_paragraph": "At sampled intervals [64,65) (unresolved hypothesis), An unresolved source observation states: \"A woman Y walks towards C\"."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 65,
+      "sample_interval": [
+        65,
+        66
+      ],
+      "original_caption": "#O A woman K walks in the room",
+      "F_archived_evidence": {
+        "original_text": "#O A woman K walks in the room"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R23",
+          "text": "A woman K walks in the room.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 66,
+      "sample_interval": [
+        66,
+        67
+      ],
+      "original_caption": "#O A woman Z walks towards the woman X.",
+      "F_archived_evidence": {
+        "original_text": "#O A woman Z walks towards the woman X."
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "A woman Z walks towards the woman X.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 67,
+      "sample_interval": [
+        67,
+        68
+      ],
+      "original_caption": "#C C looks at the phone ",
+      "F_archived_evidence": {
+        "original_text": "#C C looks at the phone "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R25",
+          "text": "C looks at the phone.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 68,
+      "sample_interval": [
+        68,
+        69
+      ],
+      "original_caption": "#C C looks at woman X",
+      "F_archived_evidence": {
+        "original_text": "#C C looks at woman X"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R26",
+          "text": "C looks at woman X.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 69,
+      "sample_interval": [
+        69,
+        70
+      ],
+      "original_caption": "#O woman P walks away from the table",
+      "F_archived_evidence": {
+        "original_text": "#O woman P walks away from the table"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R27",
+          "text": "woman P walks away from the table.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    }
+  ],
+  "note": "Final paragraphs are copied literally. Multiple frames can map to the same shared paragraph; repeated display in this trace does not mean repeated sending to the model.",
+  "system_and_question_options_remain_in_original_final_input": true,
+  "full_final_input_file": "12_actual_chat_template.txt",
+  "final_description_policy_prefix": "These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence.",
+  "unique_final_paragraphs": 1
+}

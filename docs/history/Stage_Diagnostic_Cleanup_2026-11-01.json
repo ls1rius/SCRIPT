@@ -1,0 +1,124 @@
+{
+  "created_at": "2026-11-01T22:38:14.856271+08:00",
+  "authorization": "User requested deletion of stopped stage experiments and seven-case diagnostic records.",
+  "state": "deleted",
+  "deleted_directories": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/followup-300-20261026-r1",
+      "entries": 1558,
+      "allocated_bytes": 130064384
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/followup-300-20261026-r2",
+      "entries": 3134,
+      "allocated_bytes": 147582976
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/repair-performance-300-20261026-r1",
+      "entries": 6639,
+      "allocated_bytes": 204939264
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/complete-memory-repair-300-20261027-r1",
+      "entries": 5132,
+      "allocated_bytes": 64909312
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-demo7-20261031-r1",
+      "entries": 339,
+      "allocated_bytes": 4538368
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-revision-demo7-20261101-r1",
+      "entries": 91,
+      "allocated_bytes": 860160
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-revision-demo7-20261101-r2",
+      "entries": 92,
+      "allocated_bytes": 860160
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-demo7-20261101-r1",
+      "entries": 127,
+      "allocated_bytes": 1052672
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-demo7-20261101-r2",
+      "entries": 134,
+      "allocated_bytes": 1159168
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-demo7-20261101-r3",
+      "entries": 141,
+      "allocated_bytes": 1323008
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/structured-memory-diagnosis-20261027-r1",
+      "entries": 7,
+      "allocated_bytes": 151552
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-300-20261031-r1",
+      "entries": 3211,
+      "allocated_bytes": 60096512
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/partial-repair-preflight-20261024-r1",
+      "entries": 151,
+      "allocated_bytes": 4317184
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scheme4-repair-preflight-20261024-r1",
+      "entries": 117,
+      "allocated_bytes": 2871296
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scheme4-repair-preflight-20261024-r2",
+      "entries": 240,
+      "allocated_bytes": 6455296
+    }
+  ],
+  "protected_manifest_sha256": {
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/controlled-memory-300-20261028-r1/frozen_hashes.json": "f3b2ef443909c0a8994b3e4cf3b84912a5369d6003daeb6f5a46b2682f0b964f",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/compact-evidence-300-20261029-r2/frozen_hashes.json": "efb6ac0610810d211d957fe3acb87613fec856bba2b481778f043d3033cf9757",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/state-segments-D-300-20261029-r1/frozen_hashes.json": "0123cfab1cb49a3ea29e1a2aa42bebf3ed2be84f2488cf86bc1db4f4f9b41615",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/joint-entities-E-300-20261029-r3/frozen_hashes.json": "83b20f928cea8baf875b7af14c8a1532f3216c884214f91296a983c6e22e9eea",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261030-r3/frozen_hashes.json": "923a448a662ec558df9990ebfce4bf125a9d6e1718e0d66b9110c6b05ec83fc4",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-entities-G-300-20261030-r3/frozen_hashes.json": "39874c16d5230ffa5e35abb7a9ce9e814014dd6d4ec30e4cb8dbea44c369354a",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/frozen_hashes.json": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue/frozen_hashes.json": "af70fc38f80ed2de0ec840971dab92648cb9e0da00bd85fb601da876668249fb",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r7-queue/frozen_hashes.json": "f1b48ee4918eb843dcb6133a65e9c7260eeb3015e68beb13d0058892fd9b2289"
+  },
+  "J_queue_migration": {
+    "old": "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r6-queue",
+    "new": "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r7-queue",
+    "reason": "Remove dependency on diagnostic records; retain only sealed synthetic/structural prerequisite, method unchanged."
+  },
+  "retained_external_symlink_dependencies": [],
+  "completed_at": "2026-11-01T22:38:49.677074+08:00",
+  "freed_allocated_bytes": 631181312,
+  "J_queue_controller_pid": 2218109,
+  "old_J_queue_controller_stopped": 2109676,
+  "validation": {
+    "deleted_directories_absent": 15,
+    "protected_frozen_files_verified": 10938,
+    "J_method_execution_files_unchanged": 7,
+    "cpu_tests_passed": 24,
+    "active_queue_states": {
+      "generalized-lazy-H-300-20261101-r5": {
+        "state": "waiting_for_gpu",
+        "pid": 2109681
+      },
+      "merged-lazy-I-H-adjacent-300-20261101-r4-queue": {
+        "state": "running",
+        "pid": 2109675
+      },
+      "grounded-reader-J-300-20261101-r7-queue": {
+        "state": "waiting_for_I",
+        "pid": 2218109
+      }
+    },
+    "no_benchmark_diagnostic_records_in_retained_gate": true
+  }
+}

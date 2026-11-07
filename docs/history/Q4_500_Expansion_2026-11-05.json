@@ -1,0 +1,416 @@
+{
+  "initial": {
+    "at": "2026-11-05T15:49:40.510181+08:00",
+    "passed": true,
+    "scope": "Prelaunch and initial running audit; formal new source/QA outcomes pending",
+    "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1",
+    "inherited_results_preserved": 300,
+    "parent_runtime_files_identical": 245,
+    "Q4_config_identical": true,
+    "cohort_size": 500,
+    "new_cases": 200,
+    "videotree": {
+      "original300": 189,
+      "additional200": 115,
+      "all500": 304
+    },
+    "cpu_checks": 9,
+    "capacity": {
+      "passed": true,
+      "new_cases": 200,
+      "maxima": {
+        "filter": {
+          "tokens": 1127,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "proposal": {
+          "tokens": 7338,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "pair": {
+          "tokens": 7511,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "reconsider": {
+          "tokens": 8676,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "reader": {
+          "tokens": 6528,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "reader_compact": {
+          "tokens": 4811,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        }
+      },
+      "configured": 32768,
+      "native": 128000,
+      "scope": "Full original caption closure and all ordered option pairs; no truncation or model generation. Actual derived N sources checked again at runtime."
+    },
+    "runtime_state": {
+      "state": "running",
+      "controller_pid": 649986,
+      "workers": {
+        "0": {
+          "stage": "waiting_for_gpu",
+          "pid": 650043,
+          "at": "2026-11-05T15:49:30.874351+08:00",
+          "kind": "source",
+          "watched_gpu_indices": [
+            "0",
+            "1"
+          ],
+          "gpu_observations": {
+            "0": {
+              "index": "0",
+              "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+              "free_mib": 83099,
+              "utilization": 94
+            },
+            "1": {
+              "index": "1",
+              "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+              "free_mib": 97250,
+              "utilization": 0
+            },
+            "2": {
+              "index": "2",
+              "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+              "free_mib": 12201,
+              "utilization": 100
+            },
+            "3": {
+              "index": "3",
+              "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+              "free_mib": 12867,
+              "utilization": 100
+            }
+          },
+          "effective_free_mib": {
+            "0": 83099,
+            "1": 97250,
+            "2": 12201,
+            "3": 12867
+          },
+          "stable_observations": {
+            "0": 2,
+            "1": 2
+          },
+          "minimum_free_mib": 32768,
+          "maximum_utilization": 100,
+          "scheduling": "shared_memory_reservations"
+        },
+        "1": {
+          "stage": "waiting_for_gpu",
+          "pid": 650044,
+          "at": "2026-11-05T15:49:30.277201+08:00",
+          "kind": "source",
+          "watched_gpu_indices": [
+            "0",
+            "1"
+          ],
+          "gpu_observations": {
+            "0": {
+              "index": "0",
+              "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+              "free_mib": 83099,
+              "utilization": 94
+            },
+            "1": {
+              "index": "1",
+              "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+              "free_mib": 97250,
+              "utilization": 0
+            },
+            "2": {
+              "index": "2",
+              "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+              "free_mib": 12201,
+              "utilization": 100
+            },
+            "3": {
+              "index": "3",
+              "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+              "free_mib": 12867,
+              "utilization": 52
+            }
+          },
+          "effective_free_mib": {
+            "0": 83099,
+            "1": 97250,
+            "2": 12201,
+            "3": 12867
+          },
+          "stable_observations": {
+            "0": 2,
+            "1": 1
+          },
+          "minimum_free_mib": 32768,
+          "maximum_utilization": 100,
+          "scheduling": "shared_memory_reservations"
+        },
+        "2": {
+          "stage": "waiting_for_gpu",
+          "pid": 650045,
+          "at": "2026-11-05T15:49:31.332828+08:00",
+          "kind": "source",
+          "watched_gpu_indices": [
+            "0",
+            "1"
+          ],
+          "gpu_observations": {
+            "0": {
+              "index": "0",
+              "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+              "free_mib": 83099,
+              "utilization": 94
+            },
+            "1": {
+              "index": "1",
+              "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+              "free_mib": 97250,
+              "utilization": 0
+            },
+            "2": {
+              "index": "2",
+              "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+              "free_mib": 12201,
+              "utilization": 100
+            },
+            "3": {
+              "index": "3",
+              "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+              "free_mib": 12867,
+              "utilization": 69
+            }
+          },
+          "effective_free_mib": {
+            "0": 83099,
+            "1": 97250,
+            "2": 12201,
+            "3": 12867
+          },
+          "stable_observations": {
+            "0": 2,
+            "1": 2
+          },
+          "minimum_free_mib": 32768,
+          "maximum_utilization": 100,
+          "scheduling": "shared_memory_reservations"
+        },
+        "3": {
+          "stage": "waiting_for_gpu",
+          "pid": 650046,
+          "at": "2026-11-05T15:49:30.618017+08:00",
+          "kind": "source",
+          "watched_gpu_indices": [
+            "0",
+            "1"
+          ],
+          "gpu_observations": {
+            "0": {
+              "index": "0",
+              "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+              "free_mib": 83099,
+              "utilization": 97
+            },
+            "1": {
+              "index": "1",
+              "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+              "free_mib": 97250,
+              "utilization": 0
+            },
+            "2": {
+              "index": "2",
+              "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+              "free_mib": 12201,
+              "utilization": 100
+            },
+            "3": {
+              "index": "3",
+              "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+              "free_mib": 12867,
+              "utilization": 100
+            }
+          },
+          "effective_free_mib": {
+            "0": 83099,
+            "1": 97250,
+            "2": 12201,
+            "3": 12867
+          },
+          "stable_observations": {
+            "0": 2,
+            "1": 2
+          },
+          "minimum_free_mib": 32768,
+          "maximum_utilization": 100,
+          "scheduling": "shared_memory_reservations"
+        }
+      },
+      "effective_worker_count": 4,
+      "allowed_gpu_indices": [
+        "0",
+        "1"
+      ],
+      "updated_at": "2026-11-05T15:49:35.204027+08:00",
+      "error": null
+    },
+    "source_configuration": "Latest saved N batch4/max-input32768 configuration; explicit 30GiB source allocator, original Q4 22GiB allocator. Source model is released before Q4 model acquisition.",
+    "cost_policy": "Inherited old300 Q4 and N costs retained. New source preparation, Q4 processing, load/gates, failures and shared offline assets separately reported. New200 not marked wrong while pending. Historical VideoTree per-question predictions/tokens unavailable.",
+    "no_new_fixed_depth_control": true
+  },
+  "postlaunch": {
+    "at": "2026-11-05T15:55:11.344810+08:00",
+    "passed": true,
+    "scope": "All 4 workers passed fresh Q4 gates/flow and full N+batch gates, and started independent new-question source calls.",
+    "current_completed": 300,
+    "new_Q4_completed": 0,
+    "old_results_preserved": 300,
+    "rows": [
+      {
+        "worker_id": "0",
+        "pid": 650043,
+        "gpu": "1",
+        "question_id": "0074f737-11cb-497d-8d07-77c3a8127391",
+        "index": 301,
+        "Q4_checks": 17,
+        "Q4_synthetic_retrieval_early_stop_readers_passed": true,
+        "N_full_contract_gate_passed": true,
+        "N_batch_and_empty_string_checks": 4,
+        "formal_source_committed_calls": 108,
+        "formal_source_model_calls": 24,
+        "passed": true
+      },
+      {
+        "worker_id": "1",
+        "pid": 650044,
+        "gpu": "0",
+        "question_id": "0437cf5f-5014-47d6-b4b3-f299380aa688",
+        "index": 303,
+        "Q4_checks": 17,
+        "Q4_synthetic_retrieval_early_stop_readers_passed": true,
+        "N_full_contract_gate_passed": true,
+        "N_batch_and_empty_string_checks": 4,
+        "formal_source_committed_calls": 96,
+        "formal_source_model_calls": 21,
+        "passed": true
+      },
+      {
+        "worker_id": "2",
+        "pid": 650045,
+        "gpu": "0",
+        "question_id": "049249dc-bdad-48c4-bdc0-511814c5781c",
+        "index": 304,
+        "Q4_checks": 17,
+        "Q4_synthetic_retrieval_early_stop_readers_passed": true,
+        "N_full_contract_gate_passed": true,
+        "N_batch_and_empty_string_checks": 4,
+        "formal_source_committed_calls": 84,
+        "formal_source_model_calls": 18,
+        "passed": true
+      },
+      {
+        "worker_id": "3",
+        "pid": 650046,
+        "gpu": "1",
+        "question_id": "026a2f15-c454-4c28-80e0-24c85d7f4ecf",
+        "index": 302,
+        "Q4_checks": 17,
+        "Q4_synthetic_retrieval_early_stop_readers_passed": true,
+        "N_full_contract_gate_passed": true,
+        "N_batch_and_empty_string_checks": 4,
+        "formal_source_committed_calls": 78,
+        "formal_source_model_calls": 16,
+        "passed": true
+      }
+    ],
+    "queue": {
+      "state": "running",
+      "controller_pid": 649986,
+      "workers": {
+        "0": {
+          "stage": "query",
+          "pid": 650043,
+          "at": "2026-11-05T15:52:42.273862+08:00",
+          "index": 301,
+          "question_id": "0074f737-11cb-497d-8d07-77c3a8127391",
+          "kind": "source",
+          "gpu": "1"
+        },
+        "1": {
+          "stage": "query",
+          "pid": 650044,
+          "at": "2026-11-05T15:53:22.888705+08:00",
+          "index": 303,
+          "question_id": "0437cf5f-5014-47d6-b4b3-f299380aa688",
+          "kind": "source",
+          "gpu": "0"
+        },
+        "2": {
+          "stage": "query",
+          "pid": 650045,
+          "at": "2026-11-05T15:53:22.916718+08:00",
+          "index": 304,
+          "question_id": "049249dc-bdad-48c4-bdc0-511814c5781c",
+          "kind": "source",
+          "gpu": "0"
+        },
+        "3": {
+          "stage": "query",
+          "pid": 650046,
+          "at": "2026-11-05T15:52:42.307194+08:00",
+          "index": 302,
+          "question_id": "026a2f15-c454-4c28-80e0-24c85d7f4ecf",
+          "kind": "source",
+          "gpu": "1"
+        }
+      },
+      "effective_worker_count": 4,
+      "allowed_gpu_indices": [
+        "0",
+        "1"
+      ],
+      "updated_at": "2026-11-05T15:55:06.750373+08:00",
+      "error": null
+    },
+    "capacity": {
+      "passed": true,
+      "new_cases": 200,
+      "maxima": {
+        "filter": {
+          "tokens": 1127,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "proposal": {
+          "tokens": 7338,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "pair": {
+          "tokens": 7511,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "reconsider": {
+          "tokens": 8676,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "reader": {
+          "tokens": 6528,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        },
+        "reader_compact": {
+          "tokens": 4811,
+          "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93"
+        }
+      },
+      "configured": 32768,
+      "native": 128000,
+      "scope": "Full original caption closure and all ordered option pairs; no truncation or model generation. Actual derived N sources checked again at runtime."
+    },
+    "cpu_checks": 9,
+    "semantic_limitations": "Gates do not prove new200 accuracy; all500 is previously exposed labeled development data, not untouched holdout.",
+    "audit_correction": "Initial read-only audit treated CPU in-process calls as raw model calls; corrected to inspect non-null output_ref. No runtime/result/model-call change.",
+    "source_planner_budget": "Inherited N evidence planner may use remaining original online budget with all reserves; regular N tool cap150, directory cap600. Q4 remains150/call and3600/case with90 dual-reader reserve."
+  }
+}

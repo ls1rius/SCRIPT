@@ -1,0 +1,1275 @@
+{
+  "at": "2026-11-05T16:17:39.796096+08:00",
+  "user_request": "训练Q4/Q4+保留模块：新增200训练、原300测试；自行规划epochs/参数",
+  "root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1",
+  "launch": {
+    "controller_pid": 664560,
+    "identity": "1771514695",
+    "at": "2026-11-05T16:15:09.816284+08:00"
+  },
+  "queue": {
+    "state": "running",
+    "stage": "preflight",
+    "controller_pid": 664560,
+    "started_at": "2026-11-05T16:15:09.817541+08:00",
+    "allowed_gpu_indices": [
+      "0",
+      "1"
+    ],
+    "updated_at": "2026-11-05T16:17:29.837933+08:00",
+    "children": [
+      {
+        "pid": 664572,
+        "identity": "1771514703",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/runtime/script/train_q4_retention.py",
+          "preflight",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1",
+          "--worker-id",
+          "0"
+        ],
+        "log": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/preflight-0.log",
+        "exit_code": null
+      }
+    ]
+  },
+  "experiment": {
+    "version": "Q4-adaptive-trained-retention-v1",
+    "plus_version": "Q4plus-adaptive-trained-retention-v1",
+    "parent": "/var/tmp/videoagent-q4-disk-recovery-20261105-r1/Q4-adaptive-300-20261105-r1",
+    "untrained500": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1",
+    "train_questions": 200,
+    "evaluation_questions": 300,
+    "internal_training": 180,
+    "internal_validation": 20,
+    "teacher_workers": 2,
+    "evaluation_workers": 4,
+    "allowed_gpu_indices": [
+      "0",
+      "1"
+    ],
+    "mode": "adaptive",
+    "training": true,
+    "label_scope": "Only additional200 answers are used for supervision; no original300 answers or old Q4 predictions enter teacher/train/checkpoint selection",
+    "unit": "complete immutable source observation, not generated entity-role fields",
+    "sources": "All original captions of training200, exact Q4 bounded windows; testing starts from original frozen N initial observations and archive, independently navigates, filters, and answers",
+    "evaluation_scope": "Original300 previously analyzed and evaluated repeatedly: fixed development test, not unseen holdout. Additional200 also have historical benchmark evaluation.",
+    "limitation": "Teacher supervision can be biased or wrong; validation NLL measures agreement with that teacher, not QA accuracy. No QA improvement claim before paired300 results.",
+    "resource_policy": "Preflight shares only spare GPU01 memory; full teacher/training/evaluation queued until untrained500 releases workers; no interruptions or runtime hot edits",
+    "at": "2026-11-05T16:14:16.500185+08:00"
+  },
+  "training_config": {
+    "seed": 20261105,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "language_model.layers.*.self_attn.q_proj",
+      "language_model.layers.*.self_attn.v_proj"
+    ],
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "gradient_clip": 1.0,
+    "microbatch": 1,
+    "accumulation": 16,
+    "effective_batch": 16,
+    "max_epochs": 3,
+    "warmup_fraction": 0.05,
+    "scheduler": "cosine",
+    "precision": "bf16 frozen base; fp32 adapters/optimizer",
+    "gradient_checkpointing": true,
+    "max_sequence_length": 2048,
+    "truncation": false,
+    "loss": "class-value tokens only, per-class total token weight normalized",
+    "class_balance": "inverse square-root class frequency on training partition only, clipped [0.5,3]",
+    "select": "minimum mean validation class-token NLL across epochs1..3; ties choose earliest",
+    "refit": "fresh adapter initialization on all200 for selected epoch count; same fixed hyperparameters",
+    "teacher": "same frozen Qwen, training-only full options/correct option; not human labels, not policy gradient",
+    "inference": "adapter enabled for q4_independent_batch/q3_filter only; all other operations frozen base"
+  },
+  "data_preflight": {
+    "passed": true,
+    "train_questions": 200,
+    "test_questions": 300,
+    "overlap": [],
+    "train_internal": 180,
+    "validation_internal": 20,
+    "windows": 4600,
+    "observations": 36000,
+    "maximum_prompt_tokens": {
+      "student": 1127,
+      "teacher": 1844
+    },
+    "rows": [
+      {
+        "question_id": "0074f737-11cb-497d-8d07-77c3a8127391",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "026a2f15-c454-4c28-80e0-24c85d7f4ecf",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "0437cf5f-5014-47d6-b4b3-f299380aa688",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "049249dc-bdad-48c4-bdc0-511814c5781c",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "057f8774-15c2-4e2e-b9fd-75f26d4b3b83",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "05f1fc03-0c9e-4fd4-9d85-bb7be4e69234",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "0688f66e-f115-49c6-85ff-712bf4f4a758",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "06899b20-702f-450f-8422-2ae6dc9a6da8",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "0725f410-3cf9-4f24-98ac-6610d1038ab1",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "0750fa27-b049-4ded-9dd1-d495ffe23e75",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "07a9d3ee-6d81-4bb4-ba24-f8555f8b1929",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "07fefc78-cfd2-4e04-8489-8ce4287158dd",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "080eb552-9103-4f3e-a7e9-3417c1c0bcec",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "096734f9-4368-4470-8a7e-3b166b5ac753",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "0a8b2c9d-b54c-4811-acf3-5977895d2445",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "0db8a74b-042d-401c-9f0f-ea404514c769",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "0e4804e0-85fa-48bc-ada3-a94167b06e53",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "10054e44-9575-408c-941c-a3b96789dc96",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "13b86f2e-c0a4-44f3-a871-2138576aa127",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1794015e-26c9-47ae-b147-b7ff04998cf5",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1a463736-fb76-45e4-862f-5bd77f5ee60e",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1a48816e-0a15-4f4b-a181-df70568bb6ad",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1b332cec-98c0-4428-bf7b-d6477235f025",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1c1c9e3b-2392-4de9-a0cf-3d53ef302353",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1dace116-5838-4b5b-9876-54bbfb6b1e06",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1e4ce899-0b37-44f2-9c89-dcd06c61a94f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1e99206e-c4f1-4d0e-8caf-d8795acdbda9",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1eb2f153-055f-4004-ad55-154359af8025",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1efd3bbf-4096-4317-913c-7d89778badf1",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1f0bdc87-aa40-4fb3-934e-10e9bc19ec4c",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1f0ebef9-1ad7-41f1-951c-5309b1e55341",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "1fa3efdb-e85d-4d47-82ab-b216d9020388",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "20e97dbe-dfd5-489c-9244-bad5064ccbb1",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "21195533-2e83-48ce-ab48-a754c4fd61fc",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "22a479e6-4054-4520-89a7-c7d068eadbe3",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "22e620ee-82bc-44d5-adde-f555710585e2",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "2487a677-28a5-4767-a03b-f34e3f7ba151",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "2622c5be-1147-4a6a-bd4a-cca88b4aa4f7",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "2a9d3ac9-ee8e-4bbf-aaad-19c8c54c8794",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "2b627c1c-73ea-4096-aa3b-9894291dffdb",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "2c3c743d-96fd-4772-ba8c-e28f5a6ea741",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "2d0cbcf9-3ae9-4149-8d45-8b31dfc0631c",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "2d954171-9ee2-4538-b1fd-80f4f77e6a06",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "2e22aafd-1fbb-4e73-ab6f-d8f628b66ba1",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "31c47e50-5044-4eae-8314-ebc4b1d0c1fe",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "330a2524-55c2-4c1e-bc01-8d5eef614978",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "340a76ff-7144-4b31-906f-8a43ed866bc0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "36424b90-8a32-44b3-8db1-ad8bc3b222d0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "39423dd1-6c62-4927-b9f9-8252352847eb",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "39860abe-ce5a-4e57-a234-b25b0e81beec",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "3993ba01-6a9f-49ad-b9f8-2e4083509c6e",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "3a4f4d5c-c8fa-4bb1-8e80-7c22cab54116",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "3f61b913-9920-4fbd-ba0f-93f41c255279",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "41e8027c-6c31-4e95-86b1-109eb4b9a470",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "455ec904-69ad-4f53-829b-c1eb2ffab59a",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "4561a47c-7756-4e36-ab43-80d11230b2ae",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "456447c2-98ca-4285-94dc-d2f0d1b398f6",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "45e313dd-9b30-444e-9577-b15a21cb59b4",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "47a2b871-0153-461f-b1a4-806f76e67313",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "47f4c828-f238-459f-91c3-6b221db54c5b",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "48820caf-070d-4977-b36b-df37b45b4137",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "4b0acb04-e6c9-4eb3-809f-4fe8eb5c41d0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "4bd1cbed-07c1-444b-9a3f-783a159e4367",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "4e0e4bbb-a86c-4c8d-bd05-87a52f037561",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "5107687e-257e-4ea0-b63c-38431c2940f9",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "5194fe97-3fbc-4e3a-860b-4eb7fac7482b",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "55ea09ed-4590-4e59-8753-40a64d67abd9",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "57055009-9f69-4f1c-b4cf-7ac0a079e4ca",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "57420efd-6d84-462f-b03d-f45133760d79",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "5748bb14-fa12-4c6e-b0cd-e2cdadb75889",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "594255d7-0253-467d-abf6-c1b83ed0ff62",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "59c88bb6-c714-402b-a504-796b671ef785",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "5b6b26d5-a6dd-459d-829c-98a3034f3741",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "5d744ae9-c7f7-43b0-b284-54de70ca1340",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "5e43992d-adb3-4bf0-8d8e-221b895b7c9a",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "5fa41401-fc83-40d7-bbed-ff04dc83704e",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "5ff686f3-b211-4fad-97a0-70e134e09bd5",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "619fdd7a-03df-49b6-995e-2bba10a3d7f5",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "631682a5-5574-41a8-904f-7ee96fc93683",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "65a204f7-b699-4b08-b3de-b5004433a004",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "65b96025-dc4e-44d9-a75d-a995f11e19d0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "66032b30-cf5a-4c41-bc2d-b4ca772f0488",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "66ae46ba-63c5-41b1-ab18-33a5561660f9",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "685d5e48-5e07-4522-88aa-4307207d15c9",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "69786e7e-9a77-4192-a8b7-01c56de1fa82",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "6a0b0189-25fd-46f8-9d1a-99912de3d5f5",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "6b8b47be-786f-4436-b70b-796c1b70f975",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "6c2c9e3b-935d-4dbf-8f1d-7876a5210518",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "6c8fe7a9-3917-4397-b73b-90d93371b008",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "6f42ba6a-cb2a-428f-bffb-7a15abd94727",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "70532caf-5e89-46da-9d1d-b77af403dce6",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "719432f6-c6eb-44f1-a005-b22e0c4312e6",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "726b34e3-7d63-4ae8-b850-ddc581494dfe",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "72d99202-1167-4dba-a5bc-07c16b5cb849",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "740db272-61ce-43c8-88a9-46d669d93bfb",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "7431615c-e482-4669-8d5e-1d916af17d4d",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "752578b3-efa3-4312-96d7-0bed2ea7576a",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "76dc3143-7f05-47de-85d4-619de9a3882b",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "7a8cd905-114c-430d-b058-0a0b8a4d0111",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "7ad240de-34ab-4694-a6be-05a47e14793f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "803c8ecf-9448-48b6-8bf2-debd052dbe43",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "80e5c962-37d4-4394-825c-e4c81b539e78",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "824c2b85-b40b-4bbd-82bf-70468f9c042b",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "84389a11-7dc2-4e1d-80b1-e44d8787424a",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "876d37d8-07f5-4508-b458-631b3e2c6fab",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "88254e8e-6d05-4d2d-98b4-cd76f6412ac3",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "8b462af5-dd9e-49a8-ab0a-92e28b7d7dd4",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "8d8954ef-5b61-46f6-9829-67bb3994501c",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "8e7a90b7-4fe4-4693-b732-501b42dc07ee",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "91c07a84-f635-45c7-94d0-c82149d48476",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "93a92b6f-5ed2-4b2c-9f9c-a6307e1fb256",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "941978b4-19f2-4ca8-8dce-0b8777022c3f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "9442baab-3daf-4b8d-9ad5-f8c5269ad78f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "95688752-a39c-4863-b6f6-58847cc04640",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "9748f410-2316-4a2f-9893-56f8f240dc67",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "98031100-bf7c-418b-a985-c1c1123bf72a",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "98989bb7-999a-4f03-bc4b-84ff7addb090",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "994aecb6-ded3-4d5f-8f52-f0038a6dc057",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "9a267805-2e0d-45a9-b3a4-bfdc9ee48363",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "9a6f0324-9516-461a-a9c7-e08b639e48ea",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "9af82064-62c5-4373-a94a-6815c0b6b53a",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "9d578253-ae7e-4445-bbfc-974a5e540857",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "9de66400-05ec-4173-93c9-16c2cc9d881d",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "9f440443-9672-47a0-89ee-8a9b22e0431a",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a004e80f-f4cd-4e62-9848-dd825cc6a398",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a203b4a9-0639-43c8-b05d-cbcbacb77f48",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a2142f6c-561c-4b6f-bac8-35e8a1022e93",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a3982726-af49-4b8e-8f45-6f803952ba68",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a4aec5e6-f1a4-43c4-b631-61a4afdcdc32",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a56b297f-35c0-471a-b346-a53c291e0dae",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a5dd1b46-d83e-4c50-818d-7c9ef882ff3f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a9287000-7f70-4cce-89e0-66cc197c079e",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a92f9b78-f316-409b-9302-71d626f96813",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a9c320f4-3a37-4ba2-b4dd-8bf3c0dadf6f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "a9e5f4f6-ebe9-461c-b1d0-0732d0ac4865",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "abc71897-eb92-4236-a92b-ca2d0573aa45",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "aca2666b-0245-4ecd-9b11-8f6e15c4653b",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "adfb2285-406f-4cbf-8a6c-52e7b222215d",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "aebf3455-59b7-4071-a7d2-18d053c38f8f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b1a1280a-1f7f-4796-bca2-ba03f3fb9345",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b2705bbb-089d-4940-8b05-801faed112ae",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b3c34e88-65fb-442f-ad6c-57b3c31f7a98",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b53ce673-003f-415f-a6f7-9057dc6a5b2c",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b58ab03f-3520-4916-81b8-2c42e3d0d31d",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b5b05854-df14-43bd-ac45-4301c6d734ec",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b6c66baa-f923-42e1-846f-e5fb2c6466bf",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b70e3446-2c06-49fd-8d15-dfafd1b8eb09",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b81bb7b2-a16d-4cdc-8326-f4019f3be544",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "b92dec6a-00ce-4767-a899-3d0aebcf2141",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "badca629-9d3a-4e30-903a-dbc6ea65a7e8",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "bd389c94-28a0-4ef4-a8ee-9759291beb72",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "bd5c107d-3d17-418c-a315-9d6b85072aef",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "bdd542a6-41c1-4119-b89d-101405d581df",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "c04da37a-b98f-4796-afe2-1b7d3af20911",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "c2707418-5b63-40a7-810f-a0ff59e13f47",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "c30ad099-06ec-4945-ad82-a08276750f2b",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "c50c237d-28b2-4907-8730-31060589eb68",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "c5b9ddd5-2ebb-41a5-a66e-45e9f7739a71",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "c6bf44c3-2163-4fbc-8ff7-c07a6e3e533b",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "c7985015-ea2e-4554-b7fe-3d91ab64f216",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "c93f3f21-63f5-48a3-b627-0aea50d26824",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "cb029e59-85d7-48df-924c-a2f1cb33194d",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "cc3abb84-1317-4718-b414-75f899c20ee3",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "cca8ab2f-4e4b-40ef-80e7-d04c404895c1",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "cd569206-229f-44ac-aa8f-be52f68b0fd6",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "d0b39eec-b72f-4b65-a94a-0f2c18296e71",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "d0cc3ba5-14cc-4d4d-82db-fec29ad01e3e",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "d4de7210-0818-4ebc-ba65-21d3b784638a",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "d608c89b-370c-4d16-98cf-41ab94c6b6fc",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "d9808f8d-d318-4c66-bdf2-50b9dacfbee4",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "d9d530c0-39ec-4f71-a01f-3c6d05b533a0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "da76805c-891c-449d-8e52-dcf01b79f773",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "dbb357c2-18b4-4ab9-a6f9-5f1512153f70",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "ddaa8277-d940-4722-addf-da2af5c30206",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e06849ca-1988-434e-ad69-757f60086ef8",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e0c9d250-fce2-49b5-8559-60d3925329be",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e0d0c4f6-7290-42f7-980d-b5590db33051",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e1f6335e-323e-4c7b-864a-568b9f2581cf",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e27e9ec7-aaf3-4e5c-a387-1699fe66ea4f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e30da404-5497-4aaf-bd12-abe2088ccc0c",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e60b3cbc-bb05-4afe-8ff1-3294411705a9",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e614f1a5-7c7b-468f-9840-d7373f740255",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "e67de76c-1058-49a7-a47e-12736da4ffc0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "eb9074ae-88c5-4bab-b0da-7e02b9acfbc0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "ef658737-30f1-4de5-9ea6-3139a0eb9872",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "efd8a043-d6b3-4934-9854-47fdf4d4cd85",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f10119f9-631e-47d0-8921-9ce6859a3708",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f1d9d07c-fd79-44c3-9cd7-a4dc792b9828",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f31b7ff7-85f0-4efd-8a81-acb367704a4c",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f388ca32-c003-4812-817e-e145a4ac764f",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f55b9e19-8dbf-49d1-aa0c-499adf0fa9d0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f81b2bd4-0e81-491a-861e-987ec0ad8649",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f95e7f60-0f9a-40e7-bb60-55ecb287b2dc",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f9a68735-7030-4fb5-95fd-cef0529611bf",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "f9c82335-f724-483f-b7b2-8747243e8dee",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "faa2a5e7-3ea7-4a85-8d03-6cb1929df968",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "fab4561a-c738-458c-93ca-6ec084204bc8",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "fcf8719c-b32d-463f-aa4c-6ac4149bb1c0",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "fdd956f1-b988-4623-b54d-097f8a03fd11",
+        "windows": 23,
+        "observations": 180
+      },
+      {
+        "question_id": "ffa16aee-8fa8-4f15-9880-6b16ac9f29c3",
+        "windows": 23,
+        "observations": 180
+      }
+    ],
+    "student_options_or_answers": false,
+    "source_runtime": "/var/tmp/videoagent-q4-disk-recovery-20261105-r1/Q4-adaptive-300-20261105-r1/runtime"
+  },
+  "frozen_manifest_sha256": "81c948bd891a6e9d160bd2da0004fd0195cb38937731f4ee3dc073ba39436b81",
+  "model_module_validation": {
+    "language_q_v_projections": 56,
+    "rank8_trainable_parameters": 2523136,
+    "visual_modules_excluded": true
+  },
+  "status_note": "后台监督已启动。真实反向传播门按43,008MiB有效余量/40GiB allocator排队，未称已训练成功；正式标注、训练和300评测待未训练500题释放worker后自动接续。",
+  "monitor": {
+    "pid": 650741,
+    "root": "/var/tmp/videoagent-q4-disk-recovery-20261105-r1/MNOP-alert-monitor-20261104-r1",
+    "reuse_existing": true
+  },
+  "validation_note": "首次联合回归有1个旧500题测试因硬编码completed=300而失败，实际已311；仅修正工作区测试读取动态快照，不改500冻结运行。新训练专项首次6项通过，完整训练生命周期CPU集成回归另记录。",
+  "runtime_changes": [
+    "new training runtime/backend.py appended isolated retention hook",
+    "new runtime/q_v4.py trained experiment version names",
+    "new q4_retention_training module and train_q4_retention runner"
+  ],
+  "unchanged": [
+    "live untrained500 runtime and configurations",
+    "all original300 successful answers",
+    "GPU2/3 processes"
+  ],
+  "cost_scope": "Teacher labels/raw calls and failures, model setup, real gradient gate, selection180/20 forward/backward and validation tokens, all200 refit, evaluation processing, and inherited N source budgets separately recorded.",
+  "limitations": [
+    "Teacher labels are model-generated privileged supervision, not human evidence annotations or end-to-end QA reward",
+    "Class-value token NLL selects epochs; no guarantee of improved QA",
+    "Original300 repeatedly analyzed; evaluation is a fixed development test, not unseen holdout",
+    "Train200 full captions vs evaluation selected N sources differ in distribution",
+    "Adapter only initial q3_filter; review/navigation/pair audits/final readers remain frozen",
+    "No score improvement or completed training claimed at queued launch"
+  ],
+  "postlaunch_audit": {
+    "at": "2026-11-05T16:18:26.881954+08:00",
+    "passed": true,
+    "tests": 16,
+    "training_specific_tests": 7,
+    "existing_500_boundary_tests": 9,
+    "train_questions": 200,
+    "test_questions": 300,
+    "internal_train": 180,
+    "internal_validation": 20,
+    "frozen_files_verified": 457,
+    "no_question_overlap": true,
+    "student_requests_exclude_options_and_gold": true,
+    "real_gradient_gate_passed": false,
+    "queue": {
+      "state": "running",
+      "stage": "preflight",
+      "controller_pid": 664560,
+      "started_at": "2026-11-05T16:15:09.817541+08:00",
+      "allowed_gpu_indices": [
+        "0",
+        "1"
+      ],
+      "updated_at": "2026-11-05T16:18:19.845413+08:00",
+      "children": [
+        {
+          "pid": 664572,
+          "identity": "1771514703",
+          "command": [
+            "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+            "-u",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/runtime/script/train_q4_retention.py",
+            "preflight",
+            "--out",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1",
+            "--worker-id",
+            "0"
+          ],
+          "log": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/preflight-0.log",
+          "exit_code": null
+        }
+      ]
+    }
+  },
+  "tests": {
+    "passed": 16,
+    "training_specific": 7,
+    "existing_500_boundaries": 9,
+    "includes": "CPU complete epoch selection/optimizer/checkpoint/all-data refit integration; no original300 rows consumed"
+  },
+  "finalizer": {
+    "pid": 668398,
+    "identity": "1771553135",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/analysis/analyze_q4_training.py",
+      "wait",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1"
+    ],
+    "at": "2026-11-05T16:21:34.141324+08:00",
+    "purpose": "CPU-only final comparisons after trained evaluation completes; no alerts, no model calls, no changes to frozen running runtime"
+  },
+  "finalizer_replay": {
+    "passed": true,
+    "scope": "Replay complete original Q4 results into temporary finalizer only; no training answers or outputs reused",
+    "paired_Q4_net": [
+      0,
+      0
+    ],
+    "paired_v3_net": [
+      5,
+      1
+    ],
+    "paired_L_net": [
+      4,
+      4
+    ],
+    "calls": {
+      "calls": 7136,
+      "input_tokens": 32764044,
+      "output_tokens": 776170,
+      "seconds": 31513.137013040483
+    },
+    "at": "2026-11-05T16:21:18.283580+08:00"
+  },
+  "finalizer_replay_note": "First ad-hoc check used a mistyped hardcoded token total32763844 vs actual32764044; corrected the check to compare archived audited totals, no runtime/data change.",
+  "real_gradient_gate": {
+    "passed": true,
+    "losses": [
+      0.024076739326119423,
+      0.027014650404453278
+    ],
+    "finite_nonzero_gradients": true,
+    "base_gradients_absent": true,
+    "base_logits_bitwise_equal_when_disabled": true,
+    "adapter_round_trip_equal": true,
+    "modules": 56,
+    "trainable_parameters": 2523136,
+    "setup_seconds": 5.01309210807085,
+    "wall_seconds": 6.418593879789114,
+    "input_tokens": 920,
+    "supervised_tokens": 6,
+    "peak_allocated_mib": 16138.26904296875,
+    "gpu": {
+      "index": "1",
+      "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+      "free_mib": 80379,
+      "utilization": 38,
+      "effective_free_mib": 64477,
+      "reservation_id": "664572-b9d1036ed9a046658391951b65071d84"
+    },
+    "at": "2026-11-05T16:23:46.551222+08:00"
+  },
+  "latest_queue": {
+    "state": "running",
+    "stage": "waiting_for_untrained500",
+    "controller_pid": 664560,
+    "started_at": "2026-11-05T16:15:09.817541+08:00",
+    "allowed_gpu_indices": [
+      "0",
+      "1"
+    ],
+    "updated_at": "2026-11-05T16:29:50.054454+08:00",
+    "untrained500_completed": 320
+  },
+  "latest_status_note": "真实GPU1梯度门已于16:23:46通过，2,523,136适配器参数有有限非零梯度、底座无梯度/关闭适配器logits逐位相同、保存回读一致；模型已释放。正式标注/训练仍等待未训练500结束，未开始200题正式训练。"
+}

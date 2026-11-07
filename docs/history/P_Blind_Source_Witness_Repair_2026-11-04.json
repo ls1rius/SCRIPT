@@ -1,0 +1,896 @@
+{
+  "at": "2026-11-04T10:45:58.462505+08:00",
+  "version": "P-blind-source-role-witness-v12",
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r10",
+  "previous_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r9",
+  "previous_failed_checks": [
+    {
+      "name": "filter_decision_0",
+      "passed": false,
+      "input": {
+        "question": "Which actions does Technician Q7 perform while moving a tray?",
+        "sentence": "Technician Q7 slides a tray toward a cabinet.",
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "Technician Q7"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "slides"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "a tray"
+          },
+          {
+            "id": "U3",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "destination",
+            "value": "a cabinet"
+          }
+        ]
+      },
+      "output": {
+        "decisions": {
+          "U0": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          },
+          "U1": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          },
+          "U2": {
+            "fidelity": "unfaithful",
+            "decision": "drop_unfaithful"
+          },
+          "U3": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          }
+        }
+      },
+      "labels": {
+        "U0": 1,
+        "U1": 1,
+        "U2": 0,
+        "U3": 1
+      }
+    },
+    {
+      "name": "filter_decision_2",
+      "passed": false,
+      "input": {
+        "question": "Which actions does Technician Q7 perform while moving a tray?",
+        "sentence": "Technician Q7 slides a tray backward.",
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "Technician Q7"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "slides"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "a tray"
+          },
+          {
+            "id": "U3",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "body_part",
+            "value": "backward"
+          }
+        ]
+      },
+      "output": {
+        "decisions": {
+          "U0": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          },
+          "U1": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          },
+          "U2": {
+            "fidelity": "unfaithful",
+            "decision": "drop_unfaithful"
+          },
+          "U3": {
+            "fidelity": "unfaithful",
+            "decision": "drop_unfaithful"
+          }
+        }
+      },
+      "labels": {
+        "U0": 1,
+        "U1": 1,
+        "U2": 0,
+        "U3": 0
+      }
+    },
+    {
+      "name": "identity_filter_0",
+      "held_out_new": true,
+      "passed": false,
+      "input": {
+        "question": "What actions and spatial details are observed?",
+        "sentence": "The scientist R21 measures a crystal.",
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "The scientist"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "measures"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "a crystal"
+          }
+        ]
+      },
+      "output": {
+        "decisions": {
+          "U0": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          },
+          "U1": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          },
+          "U2": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          }
+        }
+      }
+    },
+    {
+      "name": "identity_filter_2",
+      "held_out_new": true,
+      "passed": false,
+      "input": {
+        "question": "What actions and spatial details are observed?",
+        "sentence": "A surveyor M34 maps the valley.",
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "M34 M34"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "maps"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "the valley"
+          }
+        ]
+      },
+      "output": {
+        "decisions": {
+          "U0": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          },
+          "U1": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          },
+          "U2": {
+            "fidelity": "faithful",
+            "decision": "keep_local"
+          }
+        }
+      }
+    }
+  ],
+  "previous_checks": 50,
+  "previous_passed": 46,
+  "previous_failure_seconds": 124.3310320340097,
+  "previous_files": 283,
+  "cpu_tests": {
+    "passed": true,
+    "count": 65
+  },
+  "protected_frozen_checks": [
+    {
+      "run": "scene-planned-M-L-300-20261104-r17",
+      "files": 12446,
+      "mismatches": []
+    },
+    {
+      "run": "scene-planned-N-L-300-20261104-r4",
+      "files": 8910,
+      "mismatches": []
+    },
+    {
+      "run": "O-Oplus-N-question-only-300-source-bound-20261104-r3",
+      "files": 49467,
+      "mismatches": []
+    }
+  ],
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 23552,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory",
+    "admission_mode": "memory_shared",
+    "allocator_limit_mib": 21504
+  },
+  "generic_checks": 54,
+  "new_extraction_checks": 36,
+  "new_filter_checks": 16,
+  "new_synthetic_reader_checks": 2,
+  "formal_cases": 3,
+  "fresh_all_calls": true,
+  "task_specific_rules": false,
+  "changes": [
+    "Action fidelity locates source-role witness without candidate value or question.",
+    "Literal source anchoring with whitespace-only tolerance; full actor/verb/patient equality; modifier permits trailing participant phrase.",
+    "Canonical candidate values unchanged; failed comparisons are dropped, never restored or replaced. Non-action fidelity and reader unchanged."
+  ],
+  "limitations": [
+    "Witness role assignment still depends on model; exact anchoring is not semantic proof.",
+    "Synthetic regressions and three known demos do not establish broad generalization."
+  ],
+  "background_launch": {
+    "pid": 3771906,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r10/runtime/script/run_p_sentence_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r10"
+    ],
+    "at": "2026-11-04T10:45:58.464136+08:00"
+  },
+  "latest_queue_status": {
+    "state": "running",
+    "controller_pid": 3771906,
+    "updated_at": "2026-11-04T10:46:59.985378+08:00",
+    "worker_pid": 3772105,
+    "gpu": "0",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r10/runtime/script/run_p_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r10"
+    ],
+    "at": "2026-11-04T10:46:19.978490+08:00"
+  },
+  "prior_files_unchanged": true,
+  "latest_at": "2026-11-04T10:47:01.392129+08:00",
+  "v12_outcome": {
+    "failure": {
+      "type": "ValueError",
+      "message": "P filter decode failed",
+      "at": "2026-11-04T10:47:32.589714+08:00"
+    },
+    "passed_completed_checks": 40,
+    "completed_checks": 40,
+    "formal_cases": 0
+  },
+  "current_v13": {
+    "at": "2026-11-04T10:51:14.194217+08:00",
+    "version": "P-blind-witness-original-source-comparison-v13",
+    "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r11",
+    "previous_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r10",
+    "previous_failure": {
+      "type": "ValueError",
+      "message": "P filter decode failed",
+      "at": "2026-11-04T10:47:32.589714+08:00"
+    },
+    "previous_completed_checks": 40,
+    "previous_completed_checks_passed": 40,
+    "previous_failure_seconds": 49.56214298307896,
+    "reused_source_probe_count": 36,
+    "new_filter_probe_count": 16,
+    "new_reader_probe_count": 2,
+    "all_formal_cases_fresh": true,
+    "extraction_dependency_seconds": 45.62310605496168,
+    "dependency_note": "This cost is already contained in prior r10 failure cost; dependency is a link, not additional generation. Do not sum twice.",
+    "original_questions_and_sources_same": true,
+    "scope": [
+      "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+      "5d15c716-f179-462c-84a6-fa94e9d14e94",
+      "98427b0b-20ed-45bb-b772-91573ce90b5a"
+    ],
+    "resource_policy": {
+      "preference": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "minimum_free_mib": 23552,
+      "maximum_utilization": 100,
+      "stable_observations": 3,
+      "selection": "most_free_memory",
+      "admission_mode": "memory_shared",
+      "allocator_limit_mib": 21504
+    },
+    "cpu_unique_tests": 66,
+    "repair": "Locate model witness with case-insensitive matching; recover unique original-case source phrase; compare original candidate case-sensitively. Ambiguous original spellings fail. No candidate rewriting.",
+    "background_launch": {
+      "pid": 3774996,
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r11/runtime/script/run_p_sentence_experiment.py",
+        "queue",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r11"
+      ],
+      "at": "2026-11-04T10:51:14.195618+08:00"
+    }
+  },
+  "v13_outcome": {
+    "failure": {
+      "type": "ValueError",
+      "message": "Generic P semantic probes failed; records retained, no automatic retry",
+      "at": "2026-11-04T10:52:21.810869+08:00"
+    },
+    "checks": 54,
+    "passed": 52,
+    "formal_cases": 0,
+    "new_processing_seconds": 23.273176062852144
+  },
+  "current_v14": {
+    "at": "2026-11-04T10:55:49.588290+08:00",
+    "version": "P-blind-witness-source-anchored-nominal-comparison-v14",
+    "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r12",
+    "previous_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r11",
+    "previous_passed": 52,
+    "previous_checks": 54,
+    "previous_failures": [
+      {
+        "name": "identity_filter_1",
+        "held_out_new": true,
+        "passed": false,
+        "input": {
+          "question": "What actions and spatial details are observed?",
+          "sentence": "The scientist R21 measures a crystal.",
+          "candidates": [
+            {
+              "id": "U0",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "actor",
+              "value": "The scientist R21"
+            },
+            {
+              "id": "U1",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "verb",
+              "value": "measures"
+            },
+            {
+              "id": "U2",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "patient",
+              "value": "a crystal"
+            }
+          ]
+        },
+        "output": {
+          "decisions": {
+            "U0": {
+              "fidelity": "unfaithful",
+              "decision": "drop_unfaithful"
+            },
+            "U1": {
+              "fidelity": "faithful",
+              "decision": "keep_local"
+            },
+            "U2": {
+              "fidelity": "faithful",
+              "decision": "keep_local"
+            }
+          }
+        }
+      },
+      {
+        "name": "identity_filter_3",
+        "held_out_new": true,
+        "passed": false,
+        "input": {
+          "question": "What actions and spatial details are observed?",
+          "sentence": "A surveyor M34 maps the valley.",
+          "candidates": [
+            {
+              "id": "U0",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "actor",
+              "value": "A surveyor M34"
+            },
+            {
+              "id": "U1",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "verb",
+              "value": "maps"
+            },
+            {
+              "id": "U2",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "patient",
+              "value": "the valley"
+            }
+          ]
+        },
+        "output": {
+          "decisions": {
+            "U0": {
+              "fidelity": "unfaithful",
+              "decision": "drop_unfaithful"
+            },
+            "U1": {
+              "fidelity": "faithful",
+              "decision": "keep_local"
+            },
+            "U2": {
+              "fidelity": "faithful",
+              "decision": "keep_local"
+            }
+          }
+        }
+      }
+    ],
+    "previous_new_processing_seconds": 23.273176062852144,
+    "inherited_extraction_seconds": 45.62310605496168,
+    "inherited_parent": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r10",
+    "dependency_note": "Same r10 extraction dependency, do not count again as new generation or add to r10 historical failure cost twice.",
+    "functional_checks": 58,
+    "replayed_extraction_checks": 36,
+    "new_filter_checks": 20,
+    "new_synthetic_reader_checks": 2,
+    "all_formal_cases_fresh": true,
+    "cpu_unique_tests": 67,
+    "resource_policy": {
+      "preference": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "minimum_free_mib": 23552,
+      "maximum_utilization": 100,
+      "stable_observations": 3,
+      "selection": "most_free_memory",
+      "admission_mode": "memory_shared",
+      "allocator_limit_mib": 21504
+    },
+    "saved_witness_replay": {
+      "rows": 51,
+      "changed": 2
+    },
+    "repair": "Nominal candidate must itself be a case-sensitive original source span; it may include leading source qualifiers around the witness at the same source end. No candidate replacement or automatic restoration; predicates stay exact.",
+    "source_specific_rules": false,
+    "background_launch": {
+      "pid": 3778083,
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r12/runtime/script/run_p_sentence_experiment.py",
+        "queue",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r12"
+      ],
+      "at": "2026-11-04T10:55:49.589726+08:00"
+    },
+    "real_gate": {
+      "passed": true,
+      "checks": 58,
+      "at": "2026-11-04T10:57:01.109932+08:00",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 27.11983323842287,
+        "total": 27.11983323842287,
+        "shared_dependency_seconds": 45.62310605496168,
+        "budgeted_total": 72.74293929338455,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "p_independent_batch": 26.55313167348504,
+          "p_answer": 0.56670156493783
+        },
+        "call_count": 26,
+        "resources": {
+          "cpu_seconds": 27.065340323000008,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 27.20810878276825,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16964913152
+        }
+      }
+    },
+    "latest_queue_status": {
+      "state": "failed",
+      "controller_pid": 3778083,
+      "updated_at": "2026-11-04T10:58:31.179406+08:00",
+      "error": "P failed; records retained"
+    },
+    "latest_progress": {
+      "stage": "P",
+      "case": 1,
+      "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+      "updated_at": "2026-11-04T10:57:01.114753+08:00"
+    },
+    "input_audit": {
+      "at": "2026-11-04T10:57:29.231124+08:00",
+      "counts": {
+        "action_witness": 62,
+        "non_action_fidelity": 1,
+        "relevance": 20,
+        "reader_review": 2,
+        "formal_extraction": 36
+      },
+      "errors": [],
+      "prior_files_unchanged": true
+    },
+    "protected_frozen_checks": [
+      {
+        "run": "scene-planned-M-L-300-20261104-r17",
+        "files": 12446,
+        "mismatches": []
+      },
+      {
+        "run": "scene-planned-N-L-300-20261104-r4",
+        "files": 8910,
+        "mismatches": []
+      },
+      {
+        "run": "O-Oplus-N-question-only-300-source-bound-20261104-r3",
+        "files": 49467,
+        "mismatches": []
+      }
+    ],
+    "latest_at": "2026-11-04T10:58:32.709618+08:00"
+  },
+  "v14_outcome": {
+    "gate_passed": 58,
+    "failure": {
+      "type": "ValueError",
+      "message": "P filter decode failed",
+      "at": "2026-11-04T10:58:26.299225+08:00"
+    },
+    "report": {
+      "version": "P-blind-witness-source-anchored-nominal-comparison-v14",
+      "planned": 3,
+      "completed": 0,
+      "errors": 1,
+      "correct": 0,
+      "complete": false,
+      "cases": [
+        {
+          "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+          "version": "P-blind-witness-source-anchored-nominal-comparison-v14",
+          "complete": false,
+          "error": {
+            "type": "ValueError",
+            "message": "P filter decode failed"
+          },
+          "extraction_reused": false,
+          "inherited_extraction_seconds": 0.0,
+          "task_brief_generated": false,
+          "composition_called": false,
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 84.86804787069559,
+            "total": 84.86804787069559,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 84.86804787069559,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "p_independent_batch": 84.86804787069559
+            },
+            "call_count": 35,
+            "resources": {
+              "cpu_seconds": 84.68436871600008,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 85.18896648660302,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 18216427008
+            }
+          },
+          "updated_at": "2026-11-04T10:58:26.299104+08:00"
+        }
+      ],
+      "task_brief_generated": false,
+      "composition_called": false,
+      "new_processing_seconds": 84.86804787069559,
+      "inherited_extraction_seconds": 0.0,
+      "reader_review_seconds": 0.0,
+      "reader_total_seconds": 0.0,
+      "updated_at": "2026-11-04T10:58:28.363982+08:00",
+      "matched_O": {
+        "completed": 0,
+        "correct": 0
+      }
+    }
+  },
+  "current_v15": {
+    "at": "2026-11-04T11:01:46.487792+08:00",
+    "version": "P-blind-witness-explicit-semantic-rejection-v15",
+    "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r13",
+    "previous_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r12",
+    "previous_failure": {
+      "type": "ValueError",
+      "message": "P filter decode failed",
+      "at": "2026-11-04T10:58:26.299225+08:00"
+    },
+    "previous_gate_passed": 58,
+    "previous_formal_report": {
+      "version": "P-blind-witness-source-anchored-nominal-comparison-v14",
+      "planned": 3,
+      "completed": 0,
+      "errors": 1,
+      "correct": 0,
+      "complete": false,
+      "cases": [
+        {
+          "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+          "version": "P-blind-witness-source-anchored-nominal-comparison-v14",
+          "complete": false,
+          "error": {
+            "type": "ValueError",
+            "message": "P filter decode failed"
+          },
+          "extraction_reused": false,
+          "inherited_extraction_seconds": 0.0,
+          "task_brief_generated": false,
+          "composition_called": false,
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 84.86804787069559,
+            "total": 84.86804787069559,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 84.86804787069559,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "p_independent_batch": 84.86804787069559
+            },
+            "call_count": 35,
+            "resources": {
+              "cpu_seconds": 84.68436871600008,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 85.18896648660302,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 18216427008
+            }
+          },
+          "updated_at": "2026-11-04T10:58:26.299104+08:00"
+        }
+      ],
+      "task_brief_generated": false,
+      "composition_called": false,
+      "new_processing_seconds": 84.86804787069559,
+      "inherited_extraction_seconds": 0.0,
+      "reader_review_seconds": 0.0,
+      "reader_total_seconds": 0.0,
+      "updated_at": "2026-11-04T10:58:28.363982+08:00",
+      "matched_O": {
+        "completed": 0,
+        "correct": 0
+      }
+    },
+    "functional_checks": 58,
+    "replayed_extraction_checks": 36,
+    "new_filter_checks": 20,
+    "new_reader_checks": 2,
+    "all_formal_cases_fresh": true,
+    "resource_policy": {
+      "preference": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "minimum_free_mib": 23552,
+      "maximum_utilization": 100,
+      "stable_observations": 3,
+      "selection": "most_free_memory",
+      "admission_mode": "memory_shared",
+      "allocator_limit_mib": 21504
+    },
+    "repair": "Schema-valid source witness without source support, or with ambiguous source spelling, produces faithful=false and an explicit grounding_audit outcome. JSON/schema/runtime failures still stop. No raw-source fallback, no candidate correction, no retry.",
+    "source_specific_rules": false,
+    "saved_failure_replay": [
+      {
+        "file": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r12/runs/7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe/raw_calls/99dd7581-eb62-4456-9419-d73d4910206b-0.json",
+        "request": {
+          "sentence": "C does press ups",
+          "candidate": {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "presses"
+          },
+          "event_predicate": "presses",
+          "role_definition": "Expressed verbal predicate including any negation or modality."
+        },
+        "old_error": "P source witness is not a literal source span",
+        "wire": {
+          "source_span": "presses"
+        },
+        "new_assessment": {
+          "faithful": false,
+          "outcome": "unsupported_witness"
+        }
+      }
+    ],
+    "background_launch": {
+      "pid": 3782177,
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r13/runtime/script/run_p_sentence_experiment.py",
+        "queue",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r13"
+      ],
+      "at": "2026-11-04T11:01:46.488973+08:00"
+    },
+    "real_gate": {
+      "passed": true,
+      "checks": 58,
+      "at": "2026-11-04T11:02:51.154945+08:00",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 20.176700238138437,
+        "total": 20.176700238138437,
+        "shared_dependency_seconds": 45.62310605496168,
+        "budgeted_total": 65.79980629310012,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "p_independent_batch": 19.76658459380269,
+          "p_answer": 0.41011564433574677
+        },
+        "call_count": 26,
+        "resources": {
+          "cpu_seconds": 20.11053079300001,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 20.26293469592929,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16964913152
+        }
+      }
+    },
+    "latest_queue_status": {
+      "state": "running",
+      "controller_pid": 3782177,
+      "updated_at": "2026-11-04T11:06:18.117086+08:00",
+      "worker_pid": 3782505,
+      "gpu": "1",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r13/runtime/script/run_p_sentence_experiment.py",
+        "worker",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r13"
+      ],
+      "at": "2026-11-04T11:02:08.073290+08:00"
+    },
+    "latest_progress": {
+      "stage": "P",
+      "case": 1,
+      "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+      "updated_at": "2026-11-04T11:02:51.159855+08:00"
+    },
+    "prior_P_files_unchanged": true,
+    "latest_at": "2026-11-04T11:06:18.324051+08:00",
+    "formal_repair_audit": {
+      "at": "2026-11-04T11:06:18.322009+08:00",
+      "previous_failure_point_crossed": true,
+      "original_bad_candidate": {
+        "id": "U1",
+        "kind": "action_field",
+        "group": "actions_0",
+        "field": "verb",
+        "value": "presses"
+      },
+      "kept": 0,
+      "assessment": {
+        "faithful": false,
+        "outcome": "unsupported_witness"
+      },
+      "raw_calls_validated": {
+        "p_fidelity": 189,
+        "p_relevance": 63,
+        "p_reader_review": 2,
+        "p_extract": 126
+      },
+      "errors": [],
+      "extracted": 126,
+      "filtered": 44,
+      "old_files_unchanged": true,
+      "queue_status": {
+        "state": "running",
+        "controller_pid": 3782177,
+        "updated_at": "2026-11-04T11:06:18.117086+08:00",
+        "worker_pid": 3782505,
+        "gpu": "1",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r13/runtime/script/run_p_sentence_experiment.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r13"
+        ],
+        "at": "2026-11-04T11:02:08.073290+08:00"
+      }
+    }
+  }
+}

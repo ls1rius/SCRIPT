@@ -1,0 +1,193 @@
+{
+  "at": "2026-11-04T12:59:32.782069+08:00",
+  "current": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3",
+  "parent": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r2",
+  "request": "Fix exceptions and continue; consider same-class risks comprehensively; minimize serial preprocessing",
+  "failure": {
+    "case_ordinal": 18,
+    "question_id": "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+    "source_id": "S15",
+    "cause": "Array wire format permits repeated semantic roles, canonical role mapping cannot represent duplicates without overwrite",
+    "processing_seconds": 40.01026665791869
+  },
+  "repair": {
+    "version": "P-complete-unique-role-slots-v16",
+    "previous_version": "P-blind-witness-explicit-semantic-rejection-v15",
+    "role_contract": "All ten role keys exactly once, source phrase or explicit null; no inferred values, list merging or output rewriting",
+    "strict_duplicate_json_keys": true,
+    "extraction_status_consistency": true,
+    "shared_validator_minLength_fix": true,
+    "extraction_output_limit": 8192,
+    "previous_output_limit": 2048,
+    "per_call_seconds": 150,
+    "total_case_seconds": 3600,
+    "unchanged": [
+      "Canonical evidence schema",
+      "Blind source-role witness filtering",
+      "Original-question relevance",
+      "Option review",
+      "Final reader",
+      "Independent tensor batch4",
+      "No hidden retries"
+    ]
+  },
+  "resume": {
+    "inherited_successful_cases": 17,
+    "inherited_version": "P-blind-witness-explicit-semantic-rejection-v15",
+    "version_subgroups": true,
+    "failed_case_extraction": "All fresh: changed extraction prompt/schema prevents exact old-output reuse",
+    "historical_failed_processing_seconds": 40.01026665791869,
+    "earlier_failed_call_seconds": 0.02489268034696579,
+    "prior_selection_dependency_seconds": 478.65369825437665
+  },
+  "cpu_validation": {
+    "passed": true,
+    "unique_checks": 75,
+    "modules": [
+      "test_p_sentence_filter",
+      "test_p_full_experiment",
+      "test_p_context_resume",
+      "test_o_batch",
+      "test_p_role_contract",
+      "test_unicode_scalar_guard",
+      "test_parallel_artifacts"
+    ],
+    "four_event_all_null_tokens": 333,
+    "four_event_40_long_value_tokens": 3493,
+    "p_extract_output_limit": 8192,
+    "old_output_limit": 2048,
+    "shared_min_length_gap_detected_and_repaired": true,
+    "at": "2026-11-04T12:59:02.911455+08:00"
+  },
+  "real_validation": {
+    "required": [
+      "Nine new format/boundary probes including exact failed sentence and four events",
+      "All 58 previous generic checks as fresh calls"
+    ],
+    "status": "all_passed_then_formal_case_started",
+    "no_QA_improvement_claim": true,
+    "role_contract_passed": true,
+    "role_contract_checks": 9,
+    "role_contract_seconds": 132.37505389377475,
+    "generic_status": "passed",
+    "generic_passed": true,
+    "generic_checks": 58,
+    "generic_seconds": 417.57237646356225,
+    "total_checks": 67,
+    "total_new_calls": 39,
+    "total_validation_seconds": 549.947430357337,
+    "all_model_calls_fresh": true,
+    "not_all_unseen_probes": true
+  },
+  "freeze": {
+    "old_files": 22895,
+    "new_files": 21949,
+    "old_hashes_preserved": true,
+    "postlaunch_audit": {
+      "passed": true,
+      "old_files": 22895,
+      "new_frozen_files": 21949,
+      "changed": [],
+      "at": "2026-11-04T13:05:15.827741+08:00"
+    }
+  },
+  "parallel_preprocessing": {
+    "hash_threads": 4,
+    "copy_total_threads": 4,
+    "model_row_isolation": true
+  },
+  "launch": {
+    "controller_pid": 3902143,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3/runtime/script/run_p_full_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3"
+    ],
+    "at": "2026-11-04T12:59:02.912291+08:00"
+  },
+  "limitations": [
+    "Unique slots prevent duplicate-role format errors, not semantic misclassification or missing observations",
+    "Long multilingual output and all categories at their schema maxima may still exceed generation/time/memory bounds; fail and preserve rather than truncate or retry",
+    "Inherited v15 results and fresh v16 results are not homogeneous configuration results"
+  ],
+  "status": {
+    "state": "running",
+    "controller_pid": 3902143,
+    "updated_at": "2026-11-04T13:09:54.347203+08:00",
+    "worker_pid": 3902209
+  },
+  "progress": {
+    "stage": "P",
+    "case": 18,
+    "question_id": "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+    "updated_at": "2026-11-04T13:09:06.894538+08:00"
+  },
+  "gpu": {
+    "index": "1",
+    "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+    "free_mib": 37445,
+    "utilization": 98,
+    "effective_free_mib": 29947,
+    "reservation_id": "3902209-5a190562a69442de8f17bb0687139c62"
+  },
+  "formal_input_audit": {
+    "file": "workdirs/P-N-source-300-20261104-r3/runs/e97c3e1c-27ee-4b3d-8783-2e325b0eada8/raw_calls/58ac357e-b940-4dd8-afdc-77d7b9b85129-0.json",
+    "operation": "p_extract",
+    "scope": {
+      "question_id": "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+      "condition": "source_only"
+    },
+    "source_ids": [
+      "S0",
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "source_only_isolation_passed": true
+  },
+  "semantic_boundary_observed": {
+    "original_failed_sentence": {
+      "extraction_status": "extracted",
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "cuts",
+          "roles": {
+            "patient": "the back of the lawn mower",
+            "instrument": "the blade of the mower",
+            "body_part": "his right hand"
+          }
+        }
+      ],
+      "attributes": [],
+      "states": [],
+      "relations": [],
+      "changes": [],
+      "results": [],
+      "event_links": []
+    },
+    "new_tool_body_probe": {
+      "extraction_status": "extracted",
+      "actions": [
+        {
+          "actor": "Technician R8",
+          "verb": "turns",
+          "roles": {
+            "patient": "a bolt",
+            "instrument": "using a wrench with the left hand"
+          }
+        }
+      ],
+      "attributes": [],
+      "states": [],
+      "relations": [],
+      "changes": [],
+      "results": [],
+      "event_links": []
+    },
+    "note": "Original failure now has separate instrument/body_part, but generic tool/body source merged a body phrase into instrument; structural acceptance is not proof of semantic correctness. Blind fidelity remains required."
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "created_at": "2026-11-03T08:53:49.374030+08:00",
+  "repair": "MN-navigation-complete-unicode-v1",
+  "cause": {
+    "operation": "m_transition_next",
+    "question_id": "d85518f1-eee2-4d34-b955-6052f3d7dd2d",
+    "output_tokens": 399,
+    "configured_max_new_tokens": 1024,
+    "not_token_limit": true,
+    "detail": "LMFE admits incomplete UTF-8 byte tokens as replacement characters. Their assembled character can be outside the parser alphabet; JsonSchemaParser drops its stack and falsely accepts EOS.",
+    "reproduced_by": "tests.test_mn_decoder_resume.NavigationUnicodeTests",
+    "fixture": "tests/fixtures/mn_navigation_unclosed_call.json",
+    "caveat": "Old logs contain raw text but no token IDs; CPU reproduction uses a compatible character-token segmentation, not a recovered exact original token sequence."
+  },
+  "scope": {
+    "operations": [
+      "m_transition_next",
+      "m_sufficiency_check",
+      "m_resolve_gap"
+    ],
+    "safe_complete_unicode_tokens": true,
+    "full_token_character_alphabet": true,
+    "normal_chinese_and_json_unicode_escapes": true,
+    "generated_token_ids_now_archived": true,
+    "prompts_schemas_selection_extraction_planning_answers_unchanged": true,
+    "no_posthoc_json_completion": true,
+    "no_hidden_retry": true,
+    "no_option_permutation": true,
+    "default_on_demand": "L",
+    "default_full": "E",
+    "environment": "vts",
+    "training": false
+  },
+  "tests": {
+    "passed": true,
+    "unique_tests": 48,
+    "seconds": 26.843,
+    "command": "python -m unittest tests.test_mn_decoder_resume tests.test_m_generation tests.test_m_scene_experiment tests.test_n_scene_experiment tests.test_m_scene_memory tests.test_n_scene_memory tests.test_m_candidate_selection tests.test_gpu_queue",
+    "final_resume_integrity_check_passed": true,
+    "real_model_gate_passed": null
+  },
+  "runs": [
+    {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15",
+      "prior": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14",
+      "prior_unchanged": true,
+      "prior_file_count": 1574,
+      "prior_frozen_count": 507,
+      "status": {
+        "state": "running",
+        "controller_pid": 3010373,
+        "updated_at": "2026-11-03T09:09:09.021987+08:00",
+        "worker_pid": 3015984,
+        "gpu": "2",
+        "gpu_uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15/runtime/script/run_mn_decoder_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15"
+        ],
+        "started_at": "2026-11-03T09:07:54.008757+08:00"
+      },
+      "controller": {
+        "pid": 3010373,
+        "created_at": "2026-11-03T08:53:27.819323+08:00",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15/runtime/script/run_mn_decoder_resume.py",
+          "queue",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15"
+        ]
+      },
+      "inherited_successful": 12,
+      "correct": 9,
+      "resume_index": 13,
+      "runtime_changes": [
+        "script/run_m_scene_experiment.py",
+        "script/run_mn_decoder_resume.py",
+        "script_core/backend.py"
+      ],
+      "old_overhead_and_failure_seconds": 272.7911958992481,
+      "old_failed_query_seconds": 90.50557954609394,
+      "inherited_successful_query_seconds": 4536.108529280871,
+      "resource_policy": {
+        "preference": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "stable_observations": 3,
+        "selection": "most_free_memory"
+      },
+      "real_model_gate_passed": null,
+      "launch": {
+        "worker_pid": 3015984,
+        "gpu": "2",
+        "gpu_uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15/runtime/script/run_mn_decoder_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15"
+        ],
+        "started_at": "2026-11-03T09:07:54.008757+08:00"
+      },
+      "saved_navigation_decoder_passed": true
+    },
+    {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2",
+      "prior": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r1",
+      "prior_unchanged": true,
+      "prior_file_count": 1603,
+      "prior_frozen_count": 508,
+      "status": {
+        "state": "running",
+        "controller_pid": 3010375,
+        "updated_at": "2026-11-03T09:09:09.159441+08:00",
+        "worker_pid": 3015989,
+        "gpu": "0",
+        "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2/runtime/script/run_mn_decoder_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2"
+        ],
+        "started_at": "2026-11-03T09:07:54.147211+08:00"
+      },
+      "controller": {
+        "pid": 3010375,
+        "created_at": "2026-11-03T08:53:27.870386+08:00",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2/runtime/script/run_mn_decoder_resume.py",
+          "queue",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2"
+        ]
+      },
+      "inherited_successful": 12,
+      "correct": 9,
+      "resume_index": 13,
+      "runtime_changes": [
+        "script/run_m_scene_experiment.py",
+        "script/run_mn_decoder_resume.py",
+        "script_core/backend.py"
+      ],
+      "old_overhead_and_failure_seconds": 316.2923386208713,
+      "old_failed_query_seconds": 88.35878572240472,
+      "inherited_successful_query_seconds": 4660.250338662416,
+      "resource_policy": {
+        "preference": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "stable_observations": 3,
+        "selection": "most_free_memory"
+      },
+      "real_model_gate_passed": null,
+      "launch": {
+        "worker_pid": 3015989,
+        "gpu": "0",
+        "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2/runtime/script/run_mn_decoder_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2"
+        ],
+        "started_at": "2026-11-03T09:07:54.147211+08:00"
+      },
+      "saved_navigation_decoder_passed": true
+    }
+  ],
+  "runtime_checked_at": "2026-11-03T09:09:10.079844+08:00"
+}

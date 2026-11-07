@@ -1,0 +1,311 @@
+{
+  "updated_at": "2026-11-03T01:15:08.097521+08:00",
+  "authorization": "Apply shared M candidate fixes to N; rerun optimized M in a new directory.",
+  "M_version": "M-L-neutral-query-joint-candidates-v8",
+  "N_version": "N-M-neutral-query-joint-candidates-v8",
+  "selection_version": "MN-neutral-query-grounded-levels-v6",
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14",
+  "controller": {
+    "pid": 2851299,
+    "created_at": "2026-11-03T01:10:32.489804+08:00"
+  },
+  "state": {
+    "state": "running",
+    "controller_pid": 2851299,
+    "updated_at": "2026-11-03T01:15:07.918386+08:00",
+    "worker_pid": 2851580,
+    "gpu": "2",
+    "gpu_uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14/runtime/script/run_m_scene_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14"
+    ],
+    "started_at": "2026-11-03T01:10:52.871930+08:00"
+  },
+  "diagnostic": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MN-joint-selection-20261103-r6",
+  "diagnostic_report_sha256": "3c2d9d93093c8cc0aba309ebefb7f519c943eda876422a7f16287354e8ecbe60",
+  "cpu_regression_tests": 124,
+  "cpu_passed": true,
+  "source_metadata_replay": "M95_Metadata_Presentation_Replay_2026-11-03.json",
+  "prior_M_state": {
+    "state": "failed",
+    "controller_pid": 2749971,
+    "updated_at": "2026-11-03T00:55:24.124884+08:00",
+    "error_type": "RuntimeError",
+    "error": "M worker failed or incomplete; exit=1"
+  },
+  "prior_M_frozen_hashes_verified": true,
+  "all_selection_attempts": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r1",
+      "report_sha256": "07f4b83a4061a72abdaa0962624ce621bc7ad4218661466af7922430626a7031",
+      "automatic_passed": true,
+      "semantic_review": {
+        "reviewed_at": "2026-11-03T00:21:04.820743+08:00",
+        "passed": false,
+        "automated_report_scope": "Required candidate inclusion and empty negative only; these checks did not validate reasoning or ranking quality.",
+        "findings": [
+          {
+            "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+            "evidence": "All 35 option-scene priorities are 50. O2/S0 claims laptop use; O3/S0 claims handling laptop/cables/charger; O4/S0 claims covering a pen. Original S0 describes only walking through/around the house.",
+            "failure": "Options copied as observations across scenes; no meaningful ranking."
+          }
+        ],
+        "disposition": "Failed design attempt preserved; new grounded scene-first revision is tested in a new directory. No old outputs changed."
+      },
+      "seconds": 278.64696725830436
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r2",
+      "report_sha256": "69b6be4b288fc3329015177e50ca8b90bc7fdf3e26dd0d876f32581cd6c7b9ff",
+      "automatic_passed": false,
+      "semantic_review": {
+        "reviewed_at": "2026-11-03T00:27:38.787409+08:00",
+        "passed": false,
+        "findings": [
+          "Unrelated sky/road retained; choosing an anchor incorrectly forced positive priority.",
+          "Packing case priorities remain tied; local E-keys are paired with explanations describing a different clause or scene.",
+          "Ironing selection exceeded its processing deadline; original failure and raw call preserved."
+        ],
+        "disposition": "Next revision allows quoted-but-unrelated zero, copies literal source text rather than keys, and reviews scenes in isolated calls."
+      },
+      "seconds": 254.0761279501021
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r3",
+      "report_sha256": "19a7cc8068f62f0a0fc91d1277907eaa312dc095430661991cb96e5ab75d16aa",
+      "automatic_passed": false,
+      "semantic_review": {
+        "reviewed_at": "2026-11-03T00:33:05.240850+08:00",
+        "passed": false,
+        "findings": [
+          "Packing S0 uses walking to claim support for every option, including laptop work and packing.",
+          "Packing S3 prioritizes taking a jacket at 60; walking-only S0 receives 80. Ranking diagnostic fails.",
+          "Option-specific explanations still drift to other options within the same multi-option output."
+        ],
+        "disposition": "Use independent scene/option pair calls with explicit focus text; all alternatives still provided."
+      },
+      "seconds": 235.01447119563818
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r4",
+      "report_sha256": "75509eaac41b17368c2642f6f2a982b0aae2eac5142c0b5c0b5c803bc602187d",
+      "automatic_passed": false,
+      "semantic_review": {
+        "reviewed_at": "2026-11-03T00:38:33.775678+08:00",
+        "passed": false,
+        "findings": [
+          "Negative and ironing checks pass, but packing scenes all score 80.",
+          "S0/O3 cites entering the kitchen, then speculates this supports repeated object handling and packing; observable action is missing.",
+          "Citation-first constrained decoding can pick a literal fragment before evaluating relevance, then rationalize it."
+        ],
+        "disposition": "Next revision writes a source-grounded relevance explanation and score before choosing a citation; explicit action vs inferred purpose is separated."
+      },
+      "seconds": 140.9822947792709
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r5",
+      "report_sha256": "a327c20210578576525f0edfeac85d89d99008cf963eb4aff009ab9c01c5e089",
+      "automatic_passed": false,
+      "semantic_review": {
+        "reviewed_at": "2026-11-03T00:45:10.465654+08:00",
+        "passed": false,
+        "conclusion": "Empty-candidate failure is removed in the two cases, but packing relevance explanations and ranking remain incorrect. Do not claim the semantic selector is repaired.",
+        "confirmed_failure": {
+          "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+          "scene_id": "S0",
+          "option_id": "O3",
+          "actual": {
+            "scene_reviews": {
+              "S0": {
+                "option_reviews": {
+                  "O3": {
+                    "reason": "场景中C在不同房间内反复移动，这与选项O3中提到的反复拿起放下物体的行为一致，表明C可能在整理物品，决定打包什么以及如何打包。",
+                    "priority": 80,
+                    "anchor": "C随后在走廊上行走，"
+                  }
+                }
+              }
+            }
+          },
+          "issue": "Walking between rooms is falsely equated with picking up/putting down objects. All scene aggregate priorities are 80."
+        },
+        "improvements": [
+          "Irrelevant sky/road negative returns an empty set.",
+          "Ironing scene summaries are no longer excluded merely for differing from folding; S1 cable scene excluded.",
+          "Every option is explicitly reviewed with its exact original text; source citations and all raw calls preserved."
+        ],
+        "limitations": [
+          "Only two historical cases plus one negative; no option reordering, full QA or 300-question evaluation.",
+          "A local literal citation constrains provenance, not semantic validity of an inference.",
+          "Each scene/option pair is a separate call: 35 for packing, 40 for ironing, 10 for negative."
+        ],
+        "next_direction": "Do not keep expanding schemas as proof of semantic correctness. Need a separately validated method for grounding observable action matches and assessing candidate relevance before any full run."
+      },
+      "seconds": 244.23169293627143
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MN-joint-selection-20261103-r1",
+      "report_sha256": "d57202bbd7a55a80544128f9b9204068f1c8a26e15ee0d9247d45957cd678ed6",
+      "automatic_passed": false,
+      "semantic_review": {
+        "passed": false,
+        "reviewed_at": "2026-11-03T01:08:15.693104+08:00",
+        "reason": "Rank reason exceeded M interface; negative source was also incorrectly linked to all options.",
+        "automatic_report_sha256": "d57202bbd7a55a80544128f9b9204068f1c8a26e15ee0d9247d45957cd678ed6",
+        "no_benchmark_qa": true
+      },
+      "seconds": 14.116197846829891
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MN-joint-selection-20261103-r2",
+      "report_sha256": "dd5740d8bbf2b7308ae1ad52c603768f54ce6a39c706f218a85eea489a1ee6b7",
+      "automatic_passed": false,
+      "semantic_review": {
+        "passed": false,
+        "reviewed_at": "2026-11-03T01:08:15.693285+08:00",
+        "reason": "Positive priority without option link; activity and purpose copied from options.",
+        "automatic_report_sha256": "dd5740d8bbf2b7308ae1ad52c603768f54ce6a39c706f218a85eea489a1ee6b7",
+        "no_benchmark_qa": true
+      },
+      "seconds": 28.690666057169437
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MN-joint-selection-20261103-r3",
+      "report_sha256": "13e754b3137d066fde1355c5878186af22a91ed91791fc73bb16f22c419ead9c",
+      "automatic_passed": false,
+      "semantic_review": {
+        "passed": false,
+        "reviewed_at": "2026-11-03T01:08:15.693389+08:00",
+        "reason": "All packing scenes excluded; source paraphrase added/repeated unsupported objects.",
+        "automatic_report_sha256": "13e754b3137d066fde1355c5878186af22a91ed91791fc73bb16f22c419ead9c",
+        "no_benchmark_qa": true
+      },
+      "seconds": 71.46806581690907
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MN-joint-selection-20261103-r4",
+      "report_sha256": "b4381709f3acbef8335a737c673217179dfe789a19078f94409e00eadf6fa632",
+      "automatic_passed": false,
+      "semantic_review": {
+        "passed": false,
+        "reviewed_at": "2026-11-03T01:08:15.693475+08:00",
+        "reason": "Automatic inclusion/ranking checks passed, but S5 phone-only summary was described as laptop/cables/charger packing.",
+        "automatic_report_sha256": "b4381709f3acbef8335a737c673217179dfe789a19078f94409e00eadf6fa632",
+        "no_benchmark_qa": true
+      },
+      "seconds": 43.99921941384673
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MN-joint-selection-20261103-r5",
+      "report_sha256": "18247e7a6e7480c7a957d9981841da689843c717534f76d90f8dd3f51bc89bf4",
+      "automatic_passed": false,
+      "semantic_review": {
+        "passed": false,
+        "reviewed_at": "2026-11-03T01:08:15.693554+08:00",
+        "reason": "Walking-only S0 classified as task evidence for imagined packing; equal grade failed the priority check.",
+        "automatic_report_sha256": "18247e7a6e7480c7a957d9981841da689843c717534f76d90f8dd3f51bc89bf4",
+        "no_benchmark_qa": true
+      },
+      "seconds": 90.03337632119656
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MN-joint-selection-20261103-r6",
+      "report_sha256": "3c2d9d93093c8cc0aba309ebefb7f519c943eda876422a7f16287354e8ecbe60",
+      "automatic_passed": true,
+      "semantic_review": {
+        "passed": true,
+        "reviewed_at": "2026-11-03T01:10:21.376064+08:00",
+        "checks": [
+          {
+            "id": "unrelated",
+            "literal_source_quotes": true,
+            "regression_passed": true,
+            "candidate_order": []
+          },
+          {
+            "id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+            "literal_source_quotes": true,
+            "regression_passed": true,
+            "candidate_order": [
+              "S1",
+              "S2",
+              "S3",
+              "S6",
+              "S0",
+              "S4",
+              "S5"
+            ]
+          },
+          {
+            "id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+            "literal_source_quotes": true,
+            "regression_passed": true,
+            "candidate_order": [
+              "S0",
+              "S2",
+              "S5",
+              "S6",
+              "S7",
+              "S1",
+              "S3",
+              "S4"
+            ]
+          }
+        ],
+        "scope": "Two archived empty-candidate regressions, literal source grounding, and unrelated negative control; not a full semantic or QA guarantee.",
+        "limitations": [
+          "Grades are coarse and ties use directory order.",
+          "Weak context remains: packing S4 is under-ranked; ironing S1 clothing movement is retained as context.",
+          "Anchors may be generic even when full summary contains useful details.",
+          "No QA accuracy claim; all 52 empty cases not attributed to one cause."
+        ],
+        "automatic_report_sha256": "3c2d9d93093c8cc0aba309ebefb7f519c943eda876422a7f16287354e8ecbe60"
+      },
+      "seconds": 67.61368269473314
+    }
+  ],
+  "selection_development_processing_seconds": 1468.8727622702718,
+  "no_option_permutation": true,
+  "defaults_unchanged": [
+    "L",
+    "E"
+  ],
+  "N_source_extraction_unchanged": true,
+  "training": false,
+  "full_M_answers_reused": 0,
+  "progress": {
+    "stage": "query",
+    "index": 1,
+    "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+    "updated_at": "2026-11-03T01:14:10.791811+08:00"
+  },
+  "functional_gate": {
+    "passed": true,
+    "semantic_navigation_probe_passed": true,
+    "updated_at": "2026-11-03T01:14:10.781924+08:00",
+    "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14/validation/functional.json",
+    "sha256": "eae5389a7f74a05a0f7ed07ed8861cc89bd0beaa01c2b18a00f0fdcf269d9e5a"
+  },
+  "M_launch": {
+    "worker_pid": 2851580,
+    "gpu": "2",
+    "gpu_uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14/runtime/script/run_m_scene_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14"
+    ],
+    "started_at": "2026-11-03T01:10:52.871930+08:00"
+  },
+  "immutable_source_packets_equal": 300,
+  "old_frozen_files_verified": 493,
+  "new_frozen_files_verified": 507
+}

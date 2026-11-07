@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-11-02T01:12:39.515081+08:00",
+  "reason": "User clarified: no pure serialization; each data-ready experiment should acquire any eligible idle GPU.",
+  "old_K": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r2",
+  "new_K": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r3",
+  "old_controller_pid": 2275333,
+  "new_controller_pid": 2278635,
+  "after_queue": null,
+  "method_sha256": "e2aefd063628540dff3dae7eec80d2eab32c6e065fd8b9c4ad3a9670722c1ea2",
+  "unchanged_frozen_input_files": 1802,
+  "cpu_checks": 92,
+  "old_model_stage_launched": false,
+  "prior_preparation_seconds": 20.554976668208838,
+  "data_dependencies": {
+    "H": [],
+    "I": [
+      "H"
+    ],
+    "J": [
+      "I"
+    ],
+    "K": [
+      "completed F"
+    ]
+  },
+  "GPU_rule": "Per-card memory/utilization gate and cooperative lease unchanged."
+}

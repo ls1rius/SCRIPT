@@ -1,0 +1,126 @@
+{
+  "updated_at": "2026-11-02T14:38:46.740111+08:00",
+  "authorization": "User: 修复bug继续运行啊",
+  "prior": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r6",
+  "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r7",
+  "source_manifest_sha256": "bd4ad795de653f57ff3ca94f0f5eff630611268fdab5a71834612dd63a55f9b0",
+  "manifest_sha256": "a21bec399ea462726dafa3bdda4423cae38c627b5704a2ca8472bea56afa2ee1",
+  "old_snapshot_unchanged": true,
+  "old_snapshot_files": 2764,
+  "identical_frozen_files": 2444,
+  "completed_cases_preserved": 41,
+  "replanned_cases": [
+    {
+      "question_id": "b45379aa-d6f3-4033-83df-5577fc49cfc0",
+      "seconds": 41.69226859509945,
+      "input_tokens": 6043,
+      "output_tokens": 697,
+      "output_sha256": "5de789cf446799e78edba4228be6cf76bcd885c9a46ee10512b9d481ca93e5b4",
+      "reason": "K cannot discard every evidence record"
+    }
+  ],
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3
+  },
+  "prior_runtime_seconds": 120.70524289086461,
+  "prior_failed_planner_calls": 1,
+  "prior_failed_planner_seconds": 41.69226859509945,
+  "prior_failed_planner_input_tokens": 6043,
+  "prior_failed_planner_output_tokens": 697,
+  "prior_resume_preparation_seconds": 0.2012682668864727,
+  "resume_preparation_seconds": 0.3035438396036625,
+  "tests_passed": 50,
+  "repair": "LMFE character/token constraint excludes skip on the final value if every previous value is skip; keep/uncertain/group remain model choices. Existing nonempty audit unchanged.",
+  "parser_and_planner_core_unchanged": true,
+  "rerun_real_functional_gates": true,
+  "HIJ_manifest_sha256": {
+    "generalized-lazy-H-300-20261101-r5": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+    "merged-lazy-I-H-adjacent-300-20261101-r4-queue": "af70fc38f80ed2de0ec840971dab92648cb9e0da00bd85fb601da876668249fb",
+    "grounded-reader-J-300-20261101-r7-queue": "f1b48ee4918eb843dcb6133a65e9c7260eeb3015e68beb13d0058892fd9b2289"
+  },
+  "controller": {
+    "pid": 2550169,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r7/control/run_evidence_planner_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r7"
+    ],
+    "started_at": "2026-11-02T14:38:46.741660+08:00",
+    "interpreter": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+  },
+  "confirmed_launch": {
+    "worker_pid": 2550260,
+    "gpu": "0",
+    "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r7/control/run_evidence_planner_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r7"
+    ],
+    "started_at": "2026-11-02T14:39:07.105104+08:00"
+  },
+  "preserved_answers_verified": 123,
+  "preserved_planner_calls_verified": 41,
+  "HIJ_manifests_unchanged": true,
+  "real_functional_gates": {
+    "functional_small.json": {
+      "passed": true,
+      "seconds": 1.4957403652369976,
+      "updated_at": "2026-11-02T14:39:30.073491+08:00"
+    },
+    "functional.json": {
+      "passed": true,
+      "seconds": 35.869234047830105,
+      "updated_at": "2026-11-02T14:40:06.003154+08:00"
+    }
+  },
+  "observed_status": {
+    "state": "running",
+    "controller_pid": 2550169,
+    "updated_at": "2026-11-02T14:41:22.125340+08:00",
+    "worker_pid": 2550260,
+    "gpu": "0",
+    "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r7/control/run_evidence_planner_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r7"
+    ],
+    "started_at": "2026-11-02T14:39:07.105104+08:00"
+  },
+  "observed_progress": {
+    "stage": "planning",
+    "index": 43,
+    "question_id": "545b2fb0-402b-4400-9ad3-cb017a47ad48",
+    "updated_at": "2026-11-02T14:40:56.129820+08:00"
+  },
+  "verified_recovery": {
+    "updated_at": "2026-11-02T14:41:39.703130+08:00",
+    "completed": 42,
+    "progress": {
+      "stage": "planning",
+      "index": 43,
+      "question_id": "545b2fb0-402b-4400-9ad3-cb017a47ad48",
+      "updated_at": "2026-11-02T14:40:56.129820+08:00"
+    },
+    "original_failure_case_complete": true,
+    "saved_calls_verified": true
+  }
+}

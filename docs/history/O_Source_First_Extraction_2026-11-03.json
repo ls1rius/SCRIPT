@@ -1,0 +1,424 @@
+{
+  "recorded_at": "2026-11-03T12:07:56.214898+08:00",
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r4",
+  "versions": [
+    "O-N-source-first-binary-structured-v4",
+    "Oplus-N-source-first-selected-only-composition-v4"
+  ],
+  "request": "先抽取实体、动作等信息，再对抽取单元筛选；取消N问题字段预限制。",
+  "scope": "Only functional gate and three saved-source extraction/filter probes, no new case QA or navigation.",
+  "cpu": {
+    "passed": true,
+    "count": 11,
+    "scope": "O source-only extraction, all-field schema, optional roles, extract-before-filter order, real tokenizer constrained output and existing O behavior"
+  },
+  "report": {
+    "updated_at": "2026-11-03T12:07:17.835011+08:00",
+    "scope": "Source-first extraction/filter probes only; no case QA evaluation.",
+    "planned": 0,
+    "completed": 0,
+    "complete": true,
+    "errors": 0,
+    "functional": {
+      "passed": true,
+      "checks": [
+        {
+          "case": "fresh_extraction_and_binary_filter",
+          "passed": true
+        },
+        {
+          "case": "all_zero_sentence",
+          "passed": true,
+          "labels": {
+            "U0": 0
+          }
+        },
+        {
+          "case": "subject_only_can_return_empty",
+          "passed": true,
+          "output": {
+            "text": ""
+          }
+        },
+        {
+          "case": "multiple_subjects_without_actions_return_empty",
+          "passed": true,
+          "output": {
+            "text": ""
+          }
+        },
+        {
+          "case": "raw_fallback_can_be_kept",
+          "passed": true,
+          "labels": {
+            "U0": 1
+          }
+        },
+        {
+          "case": "O_strict_answer",
+          "passed": true
+        },
+        {
+          "case": "O+_strict_answer",
+          "passed": true
+        }
+      ],
+      "semantic_diagnostics": [
+        {
+          "case": "location_vs_hand",
+          "location_kept": false,
+          "body_part_dropped": true,
+          "text": "C places a brick on the brick wall."
+        },
+        {
+          "case": "source_first_S5",
+          "source": "#C C picks up the laptop",
+          "candidates": [
+            {
+              "id": "U0",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "verb",
+              "value": "picks up"
+            },
+            {
+              "id": "U1",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "patient",
+              "value": "the laptop"
+            }
+          ],
+          "labels": {
+            "U0": 0,
+            "U1": 0
+          },
+          "fallback": null
+        },
+        {
+          "case": "source_first_S59",
+          "source": "#C C puts the water bottle in the bag",
+          "candidates": [
+            {
+              "id": "U0",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "actor",
+              "value": "C"
+            },
+            {
+              "id": "U1",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "verb",
+              "value": "puts"
+            },
+            {
+              "id": "U2",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "patient",
+              "value": "the water bottle"
+            },
+            {
+              "id": "U3",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "destination",
+              "value": "the bag"
+            }
+          ],
+          "labels": {
+            "U0": 0,
+            "U1": 0,
+            "U2": 0,
+            "U3": 0
+          },
+          "fallback": null
+        },
+        {
+          "case": "source_first_S93",
+          "source": "#C C puts the power cable into the bag",
+          "candidates": [
+            {
+              "id": "U0",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "verb",
+              "value": "puts"
+            },
+            {
+              "id": "U1",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "patient",
+              "value": "the power cable"
+            },
+            {
+              "id": "U2",
+              "kind": "action_field",
+              "group": "actions_0",
+              "field": "destination",
+              "value": "the bag"
+            }
+          ],
+          "labels": {
+            "U0": 0,
+            "U1": 0,
+            "U2": 0
+          },
+          "fallback": null
+        },
+        {
+          "case": "O_answer",
+          "correct": true,
+          "answer": {
+            "selected_option": "0",
+            "raw": "prediction: A"
+          }
+        },
+        {
+          "case": "O+_answer",
+          "correct": true,
+          "answer": {
+            "selected_option": "0",
+            "raw": "prediction: A"
+          }
+        }
+      ],
+      "error": null,
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 13.532917350530624,
+        "total": 13.532917350530624,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 13.532917350530624,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 10.186731144785881,
+          "o_filter": 2.2009161561727524,
+          "oplus_compose": 0.6970809288322926,
+          "o_answer": 0.3486188165843487,
+          "oplus_answer": 0.09957030415534973
+        },
+        "call_count": 15,
+        "resources": {
+          "cpu_seconds": 13.506931729000005,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 13.56045674905181,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16727414784
+        }
+      },
+      "updated_at": "2026-11-03T12:07:13.159669+08:00"
+    }
+  },
+  "setup": {
+    "state": "ready",
+    "seconds": 7.697762202471495,
+    "details": {
+      "ready": true,
+      "preparation": {
+        "model_load_seconds": 5.538926564157009,
+        "tokenizer_constraint_seconds": 2.100805625319481
+      },
+      "usage": {
+        "model_tensor_pixels": {},
+        "input_tokens_by_model": {},
+        "cpu_seconds": 8.077872081,
+        "gpu_resident_seconds": 5.039571430534124,
+        "gpu_peak_allocated_bytes": 16584893952
+      }
+    }
+  },
+  "semantic_review": {
+    "status": "pipeline_verified_filter_semantics_failed",
+    "source_only_extraction": true,
+    "all_extracted_candidates_sent_to_filter": true,
+    "no_field_plan_before_extraction": true,
+    "all_three_real_probes_wrongly_all_zero": true,
+    "recovered_destination_sources": [
+      "S59",
+      "S93"
+    ],
+    "actor_missing_sources": [
+      "S5",
+      "S93"
+    ],
+    "limitations": "主语仍有遗漏；三条相关事实继续被0/1筛选全删。不能声称抽取完整或筛选修复，不产生新的两例QA成绩。",
+    "probes": [
+      {
+        "source": {
+          "id": "S5",
+          "text": "#C C picks up the laptop",
+          "original_source_id": "S4abb494b6cb3a75ee8afadc404918c9076ed541d93f9075c5eb7a7c11a14dde9",
+          "part": 0,
+          "source_caption_ids": [
+            "C14"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              14,
+              15
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "picks up"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "the laptop"
+          }
+        ],
+        "labels": {
+          "U0": 0,
+          "U1": 0
+        },
+        "selected": [],
+        "fallback": null,
+        "source_validation_performed": false,
+        "program_overrides": []
+      },
+      {
+        "source": {
+          "id": "S59",
+          "text": "#C C puts the water bottle in the bag",
+          "original_source_id": "Sac30ce157775f23ae80a64d4a00a6f12a54508fefa12f6e45e986b9d7b892dc0",
+          "part": 0,
+          "source_caption_ids": [
+            "C79"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              79,
+              80
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "puts"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "the water bottle"
+          },
+          {
+            "id": "U3",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "destination",
+            "value": "the bag"
+          }
+        ],
+        "labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0,
+          "U3": 0
+        },
+        "selected": [],
+        "fallback": null,
+        "source_validation_performed": false,
+        "program_overrides": []
+      },
+      {
+        "source": {
+          "id": "S93",
+          "text": "#C C puts the power cable into the bag",
+          "original_source_id": "S10a04d183ddea47f5dfd5975e79f063b3bff944f166ab7f06dfed11eec930f72",
+          "part": 0,
+          "source_caption_ids": [
+            "C175"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              175,
+              176
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "puts"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "the power cable"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "destination",
+            "value": "the bag"
+          }
+        ],
+        "labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "selected": [],
+        "fallback": null,
+        "source_validation_performed": false,
+        "program_overrides": []
+      }
+    ]
+  },
+  "integrity": {
+    "passed": true,
+    "checked_at": "2026-11-03T12:07:56.214816+08:00",
+    "parent_files": 140,
+    "N_frozen_unchanged": true,
+    "O_r3_frozen_unchanged": true,
+    "O_r4_frozen_unchanged": true
+  },
+  "previous_results": "docs/history/O_Oplus_Sentence_Filter_2026-11-03.json",
+  "filter_prompt_unchanged": true,
+  "composition_prompt_unchanged": true,
+  "training": false,
+  "default_modes_unchanged": true
+}

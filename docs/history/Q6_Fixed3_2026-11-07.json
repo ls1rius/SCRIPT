@@ -1,0 +1,76 @@
+{
+  "at": "2026-11-07T01:05:06.691943+08:00",
+  "request": "Change currentRL from6 to fixed3 epochs; continue GPU0 only",
+  "active_root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-fixed3-200train-300val-20261107-r1",
+  "launch": {
+    "pid": 1682950,
+    "identity": "1783322847",
+    "at": "2026-11-07T01:03:12.545223+08:00"
+  },
+  "training_target_epochs": 3,
+  "validation_after": "Use epoch3 adapter on original300 once; no epoch selection",
+  "optimizer_restore": {
+    "passed": true,
+    "optimizer_steps": 75,
+    "optimizer_state_entries": 112,
+    "completed_groups": 131,
+    "policy_sha256": "d92fe0ae15851e0fb0bf0660e86316ef4d80f7b02a75b2f75af2e505ef939ec6",
+    "model_identity": 125300976482928,
+    "at": "2026-11-07T01:03:41.796949+08:00"
+  },
+  "resume_checkpoint": {
+    "checkpoint": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r6/training/policies/v000075",
+    "optimizer_steps": 75,
+    "completed_groups": 131,
+    "epoch": 1,
+    "next_offset": 131,
+    "policy_gradient_updates": 3,
+    "adapter_sha256": "d92fe0ae15851e0fb0bf0660e86316ef4d80f7b02a75b2f75af2e505ef939ec6",
+    "optimizer_sha256": "0c3a4215ee03354c41aa63195e88a439f9b87004017004874646e8003b9fad78",
+    "no_inflight_jobs": true,
+    "status": {
+      "stage": "group_complete",
+      "pid": 1592028,
+      "gpu": "0",
+      "at": "2026-11-07T00:58:22.835066+08:00",
+      "epoch": 1,
+      "epochs": 6,
+      "question": 131,
+      "questions": 200,
+      "completed_groups": 131,
+      "optimizer_steps": 75,
+      "policy_gradient_updates": 3,
+      "mean_reward": 0.6068702290076335
+    },
+    "captured_unix": 1793984304.6395428
+  },
+  "inherited_trajectory_count": 262,
+  "inherited_raw_files_verified": 25838,
+  "training_snapshot": {
+    "stage": "parallel_rollouts",
+    "pid": 1683147,
+    "gpu": "0",
+    "at": "2026-11-07T01:04:04.782564+08:00",
+    "epoch": 1,
+    "epochs": 3,
+    "question": 132,
+    "questions": 200,
+    "batch_questions": 1,
+    "completed_groups": 131,
+    "optimizer_steps": 75,
+    "policy_gradient_updates": 3
+  },
+  "model_runtime_hash": "78d1aa2e87ae107cbac9d29545e215b874167394778aace6bce1894efdeeccd3",
+  "config_hashes": {
+    "training_config.json": "ac0e032639c4dd48718fad845fbb6a7783cb10f258b55441ffb7d294e5572a51",
+    "experiment.json": "4bba0a3c14fe5f33da834c983f0f4037557df77f745c95bfdf2a65638842f66e",
+    "training_model_config.json": "768287955a8d2b5160fc0a26e34bde167d9a074043c979a14bc1f2e649d75bce",
+    "evaluation/qa_config.json": "74bc18d8367259fe1603094d86931c93ebc9bb151d336c0538d820b25c6936bf"
+  },
+  "cpu_checks": "57 tests,56 passed,1 opt-in GPU case skipped; existing lifecycle/resource/policy checks",
+  "gpu_policy": "GPU0 only, maximum3 resident models; GPU1/2/3 remain unavailable to this experiment",
+  "previous_root_superseded": true,
+  "completed_samples_replayed": false,
+  "optimizer_state_reset": false,
+  "note": "Model processes were replaced only at a committed checkpoint because the frozen old loop fixed6; complete LoRA/AdamW state and data prefix retained"
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "{\n\"R0\": \"keep\",\n\"R1\": \"skip\",\n\"R2\": \"skip\",\n\"R3\": \"skip\",\n\"R4\": \"skip\",\n\"R5\": \"skip\",\n\"R6\": \"skip\",\n\"R7\": \"keep\",\n\"R8\": \"skip\",\n\"R9\": \"skip\",\n\"R10\": \"skip\",\n\"R11\": \"skip\",\n\"R12\": \"keep\",\n\"R13\": \"skip\",\n\"R14\": \"skip\",\n\"R15\": \"keep\",\n\"R16\": \"keep\",\n\"R17\": \"keep\",\n\"R18\": \"skip\",\n\"R19\": \"skip\",\n\"R20\": \"keep\",\n\"R21\": \"keep\",\n\"R22\": \"keep\",\n\"R23\": \"keep\",\n\"R24\": \"keep\",\n\"R25\": \"keep\",\n\"R26\": \"skip\",\n\"R27\": \"keep\",\n\"R28\": \"skip\",\n\"R29\": \"keep\",\n\"R30\": \"skip\",\n\"R31\": \"skip\",\n\"R32\": \"skip\",\n\"R33\": \"skip\",\n\"R34\": \"skip\",\n\"R35\": \"skip\",\n\"R36\": \"keep\",\n\"R37\": \"skip\",\n\"R38\": \"keep\",\n\"R39\": \"keep\",\n\"R40\": \"keep\",\n\"R41\": \"keep\",\n\"R42\": \"skip\",\n\"R43\": \"skip\",\n\"R44\": \"keep\",\n\"R45\": \"keep\",\n\"R46\": \"skip\",\n\"R47\": \"skip\",\n\"R48\": \"keep\",\n\"R49\": \"skip\",\n\"R50\": \"skip\",\n\"R51\": \"keep\",\n\"R52\": \"skip\",\n\"R53\": \"skip\",\n\"R54\": \"skip\",\n\"R55\": \"skip\",\n\"R56\": \"keep\",\n\"R57\": \"keep\",\n\"R58\": \"keep\",\n\"R59\": \"skip\",\n\"R60\": \"skip\",\n\"R61\": \"skip\",\n\"R62\": \"keep\",\n\"R63\": \"keep\",\n\"R64\": \"skip\",\n\"R65\": \"skip\",\n\"R66\": \"skip\",\n\"R67\": \"skip\",\n\"R68\": \"skip\",\n\"R69\": \"skip\",\n\"R70\": \"keep\",\n\"R71\": \"skip\",\n\"R72\": \"keep\",\n\"R73\": \"keep\",\n\"R74\": \"keep\"\n,\"R75\": \"keep\"\n}",
+  "input_tokens": 4870,
+  "output_tokens": 601,
+  "seconds": 9.63101026788354,
+  "decoder": "K-nonempty-decisions-v2-compact",
+  "ended_normally": true
+}

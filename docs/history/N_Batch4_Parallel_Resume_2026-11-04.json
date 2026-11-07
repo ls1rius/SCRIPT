@@ -1,0 +1,140 @@
+{
+  "at": "2026-11-04T12:11:23.940880+08:00",
+  "source_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+  "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r2",
+  "previous_control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r1",
+  "user_request": "后台MNOP报错修复继续跑；尽量减少串行预处理",
+  "reason": "N case 142 exhausted remaining processing time after source extraction; explicit execution acceleration, no budget increase",
+  "failed_case": "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+  "historical_failed_processing_seconds": 1502.9507797285914,
+  "prior_scheduling_interruption_seconds": 423.63394916057587,
+  "prior_interruption_pending_calls": 1,
+  "success_preserved": 143,
+  "configuration_change": {
+    "query.field_extraction_batch_size": [
+      2,
+      4
+    ]
+  },
+  "parallel_question_workers": 2,
+  "source_entry_unchanged": true,
+  "canonical_prompts_unchanged": true,
+  "no_automatic_retries": true,
+  "source_only_rows": true,
+  "separate_tensor_attention_and_decoder": true,
+  "shared_decoder_fix": "maxLength=0 string normalized to equivalent empty-string enum; canonical schema unchanged",
+  "budget_unchanged": true,
+  "cpu_checks": {
+    "passed": true,
+    "count": 22,
+    "command": "python -m unittest tests.test_parallel_artifacts tests.test_parallel_scene_scheduler tests.test_batch_extraction -v"
+  },
+  "new_real_gates": "Each worker: same four source requests as batch2 twice and batch4 once, identity/schema/binding/input token checks and original saved empty-gap m_transition_next call. Passed outputs and costs recorded separately per worker.",
+  "historical_full_gate": "Inherited original N complete gate; not a newly rerun full gate",
+  "launch": {
+    "controller_pid": 3824411,
+    "worker_pids": [
+      3824413,
+      3824414
+    ],
+    "at": "2026-11-04T12:10:38.733865+08:00"
+  },
+  "origin_aliases": {
+    "pid": 3824412,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r2/runtime/script/preserve_parallel_call_paths.py",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+      "--control",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r2",
+      "--supervisor",
+      "3824411"
+    ]
+  },
+  "artifact_preprocessing": "4-thread file hashing and streaming copy+hash; staged atomic publication; source/copy hash equality and retained failures",
+  "current_stage": "worker0 running case142; worker1 waiting for sufficient shared capacity",
+  "limitation": "Timing comparison on shared GPUs is uncontrolled. Different batching may change floating-point model decisions; exact output matches reported, no QA improvement claim.",
+  "new_real_gate_worker0": {
+    "passed": true,
+    "seconds": {
+      "2": 13.38182370737195,
+      "4": 11.135555684566498
+    },
+    "exact_output_matches": 4,
+    "compared_sources": 4,
+    "speed_ratio_batch2_over_batch4": 1.2017203349733776,
+    "performance_scope": "Co-resident, uncontrolled timing; batch arithmetic may change model outputs; no QA improvement claim",
+    "inherited_gate_scope": "Original full N gate retained as historical; only these execution gates are new",
+    "checks": [
+      {
+        "case": "batch2_four_sources_schema_identity",
+        "passed": true
+      },
+      {
+        "case": "batch4_four_sources_schema_identity",
+        "passed": true
+      },
+      {
+        "case": "same_inputs_and_input_tokens",
+        "passed": true
+      },
+      {
+        "case": "saved_empty_string_navigation",
+        "passed": true
+      }
+    ],
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 55.482654727995396,
+      "total": 55.482654727995396,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 55.482654727995396,
+      "text_cache_hits": 0,
+      "total_cap": 600,
+      "budget_violation": false,
+      "by_operation": {
+        "n_extract_batch": 24.517379391938448,
+        "structured_output_validation": 0.012408193200826645,
+        "m_transition_next": 30.95286714285612
+      },
+      "call_count": 6,
+      "resources": {
+        "cpu_seconds": 55.465968518000004,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 55.596396043896675,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17837526016
+      }
+    }
+  },
+  "worker_status": {
+    "0": {
+      "stage": "query",
+      "pid": 3824413,
+      "at": "2026-11-04T12:12:18.209304+08:00",
+      "index": 142,
+      "question_id": "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+      "gpu": "0"
+    },
+    "1": {
+      "stage": "batch_validation",
+      "pid": 3824414,
+      "at": "2026-11-04T12:13:05.848095+08:00",
+      "gpu": "1"
+    }
+  },
+  "formal_batch4_observation": {
+    "observed": false,
+    "reason": "Case142 is still in directory/navigation; new real validation already exercised four independent rows. Do not claim formal-case batch4 seen before an actual extraction call."
+  },
+  "postlaunch_preservation_check": {
+    "passed": true,
+    "published_successes": 143,
+    "old_failed_attempt_unchanged": true,
+    "new_frozen_manifest_unchanged": true
+  },
+  "budget_risk": "The previously timed-out question has not completed yet. Batching reduces independent extraction calls but does not guarantee every question fits the unchanged budget."
+}

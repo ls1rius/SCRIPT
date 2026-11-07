@@ -1,0 +1,104 @@
+{
+  "at": "2026-11-04T12:59:39.191424+08:00",
+  "scope": "Independent shared capacity/deadline audit and preventive preflight; no new GPU model calls in this audit, no edits to live M/O/P frozen runtimes.",
+  "source_changes": {
+    "script_core/generation_capacity.py": "098032c594c082b131e406529207d2778f8c2a8c43de767579a44873176727cc",
+    "script_core/m_generation.py": "5eb715d1220615690583baf2442876a6b433bf75fbd1d5bd776c20bfb5fbd711",
+    "script_core/batch_extraction.py": "f9ad53e0f88bb40bce742f9c38dae7c1b5bc8ff1d834064ed3ee7189922c0958",
+    "tests/test_generation_capacity.py": "b6732c8ca75ced0c8d8dc048c5dd81b811f57199b239ce710ec592d5dba5f4b3",
+    "tests/test_m_generation.py": "00c6ba558c6d1c7f66b8c1085c14d52379ea117d407f4c203289ca2cdc8ef2f1"
+  },
+  "implementation": {
+    "native_context": "Resolve model max_position_embeddings or nested text_config; reject missing/invalid capacity, configured input overflow, or native input+unchanged output reserve overflow before generation. Exact fit remains legal.",
+    "planner_output": "Flat finite ASCII map only: mandatory JSON-character lower bound divided by maximum tokenizer piece span plus EOS; separately report independently tokenized worst-case estimate. Reject only a proved necessary-lower-bound overflow. The estimate is not a feasibility proof and never alone rejects a shorter legal plan.",
+    "planner_token_limit": 8192,
+    "batch_extraction_token_limit": 1024,
+    "behavior_unchanged": [
+      "Model",
+      "Prompt",
+      "Canonical schema",
+      "Accepted decisions",
+      "Configured output-token limits",
+      "Query total budgets",
+      "Final-answer reserves",
+      "No truncation",
+      "No automatic retry"
+    ],
+    "deadline_diagnostics": "After generation extract raw/token IDs/input and output counts/capacity, then enforce cooperative deadline. Attach raw_output to SoftDeadlineExceeded and non-EOS failure; existing worker/Meter chain preserves it. Incomplete plans remain failures."
+  },
+  "tests": {
+    "passed": true,
+    "count": 23,
+    "modules": [
+      "tests.test_generation_capacity",
+      "tests.test_m_generation",
+      "tests.test_batch_extraction"
+    ],
+    "command": "python -m unittest tests.test_generation_capacity tests.test_m_generation tests.test_batch_extraction -q",
+    "coverage": [
+      "Native exact fit and one-token overflow",
+      "Nested config and configured-input cap",
+      "Unknown/invalid native capacity",
+      "Necessary planner lower-bound rejection",
+      "Worst-case estimate overflow does not reject feasible shorter output",
+      "Unknown tokenizer pieces do not invent a lower bound",
+      "Existing real-tokenizer planner/reader constraints",
+      "EOS and soft-deadline raw-prefix retention",
+      "Existing batch source/isolation/accounting tests"
+    ]
+  },
+  "observed_failure": {
+    "question_index": 146,
+    "question_id": "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+    "operation": "n_evidence_plan",
+    "records": 236,
+    "reservation_seconds": 150.0,
+    "actual_seconds": 140.03438103571534,
+    "temporal_total_after_failure": 1236.7193643711507,
+    "temporal_cap": 1500.0,
+    "answer_reserve": 45.0,
+    "remaining_nonanswer_seconds": 218.28063562884927,
+    "failure": "Single-call timeout with total budget remaining, unlike previous N142 total-budget exhaustion"
+  },
+  "performance_probe": {
+    "source_question": "101628a9-37be-4555-99c0-589ced677ee6",
+    "records": 322,
+    "output_tokens": 2791,
+    "all_tokens_allowed": true,
+    "cpu_only_prefix_replay_seconds": 3.1695425286889076,
+    "original_model_call_seconds": 137.58121838793159,
+    "comparison": "CPU token-prefix replay is not a controlled GPU runtime comparison; indicates parser CPU is a small portion of this observed call.",
+    "original_json_characters": 5044,
+    "compact_json_characters": 4399,
+    "compact_token_count": 2145,
+    "compact_wire_applied": false,
+    "compact_wire_reason": "Restricting serialization changes generation trajectories and requires separate validation; not silently adopted."
+  },
+  "shared_risk": {
+    "M": "Same full-pool planner path; observed successful maximum 127.350115s, close to original ~140s soft stop. Live M not patched.",
+    "N": "Whole-pool planner remains serial generation to preserve joint selection; dedicated remaining-budget reservation implemented separately by N continuation owner.",
+    "O_P": "No full-pool evidence_plan operation. Per-sentence extraction/filter/composition and bounded final review have separate paths, already native context+output checks. No evidence here of the same large-plan timeout.",
+    "backend_vlm": "Generic LocalModels.vlm still checks configured input cap, rather than native input+output. Current real Qwen native128000 versus cfg32768 leaves headroom; future common guard integration is separate."
+  },
+  "continuation_review": {
+    "files": [
+      "script/n_planner_continuation.py",
+      "script/run_n_planner_resume.py",
+      "script/run_parallel_scene_scheduler.py"
+    ],
+    "blocking_findings": [],
+    "budget": "Original successful temporal total minus failed planner cost is initialization; old failed planner is dependency; both consume original1500, final45 held. No total increase.",
+    "cost_separation": "Successful historical calls copied once; failed planner removed only from new successful log, retained in original source+continuation metadata and cumulative failure history. Normal scheme4 wrapper adds directory once. New planner/reader calls are measured separately.",
+    "provenance": "Source tree hash, packet digest, exact planner input/request hash, single failed final planner and no later model call, no pending work; publish only successful complete result.",
+    "notes": [
+      "Frozen CPU check count is scope-specific, not the later aggregate test count.",
+      "Historical setup/gate/interruption accounting is spread across handoff snapshots; final reports must retain prior overhead separately."
+    ]
+  },
+  "limits": [
+    "No guarantee every feasible schema fits8192; a weak necessary lower bound detects only provably impossible capacity, while estimate is diagnostic.",
+    "No guaranteed completion within218.28 remaining planner seconds; actual continued model result is required.",
+    "No live M/O runtime patch or hot reload was done.",
+    "No claim of QA accuracy improvement from capacity checks."
+  ]
+}

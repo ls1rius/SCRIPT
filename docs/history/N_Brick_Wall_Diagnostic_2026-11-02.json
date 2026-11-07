@@ -1,0 +1,270 @@
+{
+  "report": {
+    "case_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+    "complete": true,
+    "error": null,
+    "new_navigation": false,
+    "answer": {
+      "selected_option": "3",
+      "raw": "prediction: D"
+    },
+    "gold": "1",
+    "correct": false,
+    "frame107": {
+      "caption_id": "C107",
+      "frame_index": 107,
+      "sample_interval": [
+        107,
+        108
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick"
+          }
+        ],
+        "original_text": "#C C moves a brick on the brick wall with his left hand. "
+      }
+    },
+    "frame107_candidates": [
+      {
+        "record": {
+          "id": "R27",
+          "text": "C moves brick.",
+          "qualification": "source assertion",
+          "kinds": [
+            "H actions",
+            "caption original"
+          ],
+          "sources": [
+            {
+              "region": "H fact",
+              "caption_id": "C29",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick"
+              }
+            },
+            {
+              "region": "description",
+              "caption_id": "C41",
+              "original_text": "#C C moves brick"
+            },
+            {
+              "region": "H fact",
+              "caption_id": "C41",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick"
+              }
+            },
+            {
+              "region": "H fact",
+              "caption_id": "C107",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick"
+              }
+            },
+            {
+              "region": "H fact",
+              "caption_id": "C123",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick"
+              }
+            },
+            {
+              "region": "H fact",
+              "caption_id": "C132",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick"
+              }
+            },
+            {
+              "region": "H fact",
+              "caption_id": "C163",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick"
+              }
+            },
+            {
+              "region": "H fact",
+              "caption_id": "C164",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick"
+              }
+            }
+          ],
+          "occurrences": [
+            {
+              "caption_id": "C29",
+              "interval": [
+                29,
+                30
+              ]
+            },
+            {
+              "caption_id": "C41",
+              "interval": [
+                41,
+                42
+              ]
+            },
+            {
+              "caption_id": "C107",
+              "interval": [
+                107,
+                108
+              ]
+            },
+            {
+              "caption_id": "C123",
+              "interval": [
+                123,
+                124
+              ]
+            },
+            {
+              "caption_id": "C132",
+              "interval": [
+                132,
+                133
+              ]
+            },
+            {
+              "caption_id": "C163",
+              "interval": [
+                163,
+                164
+              ]
+            },
+            {
+              "caption_id": "C164",
+              "interval": [
+                164,
+                165
+              ]
+            }
+          ]
+        },
+        "decision": "keep"
+      },
+      {
+        "record": {
+          "id": "R43",
+          "text": "C moves a brick on the brick wall with his left hand.",
+          "qualification": "source assertion",
+          "kinds": [
+            "caption original"
+          ],
+          "sources": [
+            {
+              "region": "description",
+              "caption_id": "C107",
+              "original_text": "#C C moves a brick on the brick wall with his left hand. "
+            }
+          ],
+          "occurrences": [
+            {
+              "caption_id": "C107",
+              "interval": [
+                107,
+                108
+              ]
+            }
+          ]
+        },
+        "decision": "skip"
+      }
+    ],
+    "wall_in_accepted_fields": false,
+    "wall_in_final_description": false,
+    "final_wall_lines": [],
+    "pool_records": 77,
+    "retained_records": 31,
+    "old_L": {
+      "question_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+      "selected_option": "1",
+      "error": null,
+      "raw_response": "prediction: B",
+      "input_tokens": 1880,
+      "output_tokens": 4,
+      "seconds": 0.12913770601153374,
+      "input_sha256": "682a342b2844f09321e5930c33c404d57b5e55e93ab2e53d285bea1cd5ee0281",
+      "parser": "constrained_prediction_letter",
+      "reader_protocol": "K-constrained-prediction-letter-v1"
+    },
+    "old_all": {
+      "question_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+      "selected_option": "3",
+      "error": null,
+      "raw_response": "prediction: D",
+      "input_tokens": 3025,
+      "output_tokens": 4,
+      "seconds": 0.17984090745449066,
+      "input_sha256": "786638a60ef6a04cee49840cad1e5a806afb53fb2411c87dd2c47771c0f79f74",
+      "parser": "constrained_prediction_letter",
+      "reader_protocol": "K-constrained-prediction-letter-v1"
+    },
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 205.29436986893415,
+      "total": 205.29436986893415,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 205.29436986893415,
+      "text_cache_hits": 0,
+      "total_cap": 1500,
+      "budget_violation": false,
+      "by_operation": {
+        "f_batch_preparation": 0.542841587215662,
+        "n_extract_batch": 166.21215711534023,
+        "n_evidence_materialization": 0.026837758719921112,
+        "n_evidence_plan": 38.056636832654476,
+        "n_answer": 0.4558965750038624
+      },
+      "call_count": 100,
+      "resources": {
+        "cpu_seconds": 205.260831206,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 205.4767768867314,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17611624448
+      }
+    },
+    "updated_at": "2026-11-02T23:23:52.170119+08:00"
+  },
+  "run_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-brick-wall-diagnostic-20261102-r1",
+  "review": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-brick-wall-diagnostic-20261102-r1/case_review.md",
+  "scope": "Fixed original source captions and requested fields; no new navigation; not a single-variable accuracy ablation.",
+  "semantic_fix_passed": false,
+  "runtime_passed": true,
+  "attempts": 1
+}

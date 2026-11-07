@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-06T17:32:35.107216+08:00",
+  "request": "Prepare physical peak-memory occupancy for future experiments; preserve current frozen experiments",
+  "implementation": "process-wide fixed cudaMalloc arena with event-protected suballocation, held until process exit",
+  "activation": "new experiment launcher VIDEOAGENT_PHYSICAL_CUDA_POOL=1",
+  "profiles_mib": [
+    {
+      "role": "source",
+      "lease": 32768,
+      "pool": 30720
+    },
+    {
+      "role": "training_primary",
+      "lease": 43008,
+      "pool": 40960
+    },
+    {
+      "role": "evaluation_helper",
+      "lease": 24576,
+      "pool": 22528
+    }
+  ],
+  "torch_version": "2.13.0+cu130",
+  "cuda_version": "13.0",
+  "cpu_test_summary": "----------------------------------------------------------------------\nRan 38 tests in 3.262s\n\nOK (skipped=1)",
+  "gpu_test_summary": "test_real_capacity_streams_threads_training_limits_and_exit (tests.test_physical_cuda_pool.GPUIntegrationTests.test_real_capacity_streams_threads_training_limits_and_exit) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 3.290s\n\nOK",
+  "gpu_details": {
+    "passed": true,
+    "model_pid": 1441543,
+    "physical_driver_drop_bytes": 268435456,
+    "initial": {
+      "capacity_mib": 256,
+      "reserved_bytes": 268435456,
+      "live_bytes": 0,
+      "peak_live_bytes": 0,
+      "release_policy": "worker_process_exit"
+    },
+    "held": {
+      "capacity_mib": 256,
+      "reserved_bytes": 268435456,
+      "live_bytes": 67108864,
+      "peak_live_bytes": 82345984,
+      "release_policy": "worker_process_exit"
+    },
+    "final": {
+      "capacity_mib": 256,
+      "reserved_bytes": 268435456,
+      "live_bytes": 67108864,
+      "peak_live_bytes": 67108864,
+      "release_policy": "worker_process_exit"
+    }
+  },
+  "frozen_live_files_verified": 520,
+  "current_experiment_mutations": false,
+  "full_model_or_full_capacity_validation": false,
+  "limitations": [
+    "CUDA context/non-PyTorch library allocations require pool-external headroom; 2048MiB margin is logical, not physically reserved",
+    "Configured pool capacities must still be validated on future full-model runs",
+    "Single-device eager/checkpointed execution; CUDA graphs and CUDA tensor IPC unsupported"
+  ],
+  "evidence": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-physical-pool-preparation-20261106-r1",
+  "files_sha256": {
+    "script_core/physical_cuda_pool.py": "0a63df4e9ea671bbecc776e57902089a3772596db9182045338cdd42b95e6ddc",
+    "script_core/csrc/physical_cuda_pool.cpp": "e7ba4817abe47ffda5d147593c30c753861c94117a8cce1b120eb68ff975cd3a",
+    "script/physical_pool_preparation.py": "6cb73253a124c036e25cdc8cff6c5c3e292e6c3df666bdb23ef587f7df050cc7",
+    "script/run_with_physical_cuda_pool.py": "3b024333ab01fcbb8f60db2ef029d83bdf5feb4b01a94e304c393287f96622af",
+    "script_core/budget.py": "e3ffeb09ccde47d668cbd8cb409e9a84c0cfcdfe98d2ad24c2939e8d648668fd",
+    "script_core/backend.py": "001e997c70292b78aad11678fb271fa11ba36b19e575f8920f81a7789dcde098",
+    "script_core/config.py": "393802664a7d010040ab270d4ed3e84deb464d3567ee7e1098b76e911fce205e",
+    "script/train_q4_fixed_epochs.py": "be9a085e1f5d2c8ef493aa3f87950e1acec9448de017a8447c4e142d54fd6a24",
+    "script/train_q4_retention.py": "2a661e9406a0de6af1513c9ad8d761113af8ac9bc0b35aedad72c88eec5f0578",
+    "tests/test_physical_cuda_pool.py": "0fc5f71da54a82d497c3b773bd990a933828229ec59d4045f413afdf19c70cf2",
+    "docs/Physical_GPU_Pool_2026-11-06.md": "a31b6a91aff278ecdb4f03b13b74bd9f06317beef1cf73b1075e809806acfdcc"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-11-02T20:18:37.957266+08:00",
+  "user_authorization": "为什么不跑M，跑起来M",
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r1",
+  "controller": {
+    "pid": 2693631,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r1/runtime/script/run_m_scene_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r1"
+    ],
+    "started_at": "2026-11-02T20:17:30.181085+08:00"
+  },
+  "launch": {
+    "worker_pid": 2693725,
+    "gpu": "3",
+    "gpu_uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r1/runtime/script/run_m_scene_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r1"
+    ],
+    "started_at": "2026-11-02T20:17:50.536352+08:00"
+  },
+  "runtime_frozen": true,
+  "cpu_regressions_passed": 24,
+  "full_source_preflight": {
+    "passed": true,
+    "questions": 300,
+    "model_loaded": false,
+    "labels_used": false,
+    "all_frames_hashed": true,
+    "full_timeline_partition_checked": true,
+    "cpu_regressions_passed": 24,
+    "no_M_validation_retry": true,
+    "real_gates": [
+      "I_H_features",
+      "130_records",
+      "single_scene_stop",
+      "explicit_gap_expansion"
+    ]
+  },
+  "frozen_prior_runs": [
+    {
+      "run": "evidence-planner-K-F-300-20261102-r8",
+      "files_checked": 3258,
+      "state": "complete",
+      "completed": 300
+    },
+    {
+      "run": "evidence-planner-L-I-300-20261102-r1",
+      "files_checked": 2117,
+      "state": "complete",
+      "completed": 300
+    }
+  ],
+  "defaults": {
+    "on_demand": "I",
+    "complete": "E"
+  },
+  "model": "Original Qwen2.5-VL-7B-Instruct; no training or adapter",
+  "coverage_enforced": false,
+  "real_functional_gate": "running",
+  "formal_evaluation": "awaiting gate",
+  "source_scope": "Full original per-second captions and cached EVA features/frames; parent selected evidence and predictions not reused",
+  "explicit_validation_retries_for_M": 0
+}

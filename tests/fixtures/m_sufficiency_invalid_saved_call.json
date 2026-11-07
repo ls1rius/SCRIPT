@@ -1,0 +1,1357 @@
+{
+  "inputs": {
+    "question": "What is the overall purpose of the actions performed by c and the man throughout the video?",
+    "candidate_option": "To skillfully create delicious pastries for enjoyment.",
+    "alternative_option": "To make cakes.",
+    "captions": [
+      {
+        "id": "C151",
+        "interval": [
+          151,
+          152
+        ],
+        "text": "#C C walks to the blender."
+      },
+      {
+        "id": "C152",
+        "interval": [
+          152,
+          153
+        ],
+        "text": "#C C looks at the baking tray "
+      },
+      {
+        "id": "C153",
+        "interval": [
+          153,
+          154
+        ],
+        "text": "#C C moves towards the sink"
+      },
+      {
+        "id": "C154",
+        "interval": [
+          154,
+          155
+        ],
+        "text": "#C C looks around"
+      },
+      {
+        "id": "C155",
+        "interval": [
+          155,
+          156
+        ],
+        "text": "#C C touches a camera"
+      },
+      {
+        "id": "C156",
+        "interval": [
+          156,
+          157
+        ],
+        "text": "#C C touches the camera"
+      },
+      {
+        "id": "C157",
+        "interval": [
+          157,
+          158
+        ],
+        "text": "#C C walks towards the fridge. "
+      },
+      {
+        "id": "C158",
+        "interval": [
+          158,
+          159
+        ],
+        "text": "#C C moves towards the dough mixer"
+      },
+      {
+        "id": "C159",
+        "interval": [
+          159,
+          160
+        ],
+        "text": "#C C walks towards the mixer"
+      },
+      {
+        "id": "C160",
+        "interval": [
+          160,
+          161
+        ],
+        "text": "#C C turns around"
+      },
+      {
+        "id": "C161",
+        "interval": [
+          161,
+          162
+        ],
+        "text": "#C C walks towards the baking table"
+      },
+      {
+        "id": "C162",
+        "interval": [
+          162,
+          163
+        ],
+        "text": "#C C hits the mixer"
+      },
+      {
+        "id": "C163",
+        "interval": [
+          163,
+          164
+        ],
+        "text": "#C C picks the dough mixer "
+      },
+      {
+        "id": "C164",
+        "interval": [
+          164,
+          165
+        ],
+        "text": "#C C holds the dough"
+      },
+      {
+        "id": "C165",
+        "interval": [
+          165,
+          166
+        ],
+        "text": "#C C turns on the dough mixer"
+      },
+      {
+        "id": "C166",
+        "interval": [
+          166,
+          167
+        ],
+        "text": "#C C picks up a jug from the mixer"
+      },
+      {
+        "id": "C167",
+        "interval": [
+          167,
+          168
+        ],
+        "text": "#C C turns the tap on"
+      },
+      {
+        "id": "C168",
+        "interval": [
+          168,
+          169
+        ],
+        "text": "#C C touches the dough mixer"
+      },
+      {
+        "id": "C169",
+        "interval": [
+          169,
+          170
+        ],
+        "text": "#C C pushes a dough mixer"
+      },
+      {
+        "id": "C170",
+        "interval": [
+          170,
+          171
+        ],
+        "text": "#C C holds the dough mixer"
+      },
+      {
+        "id": "C171",
+        "interval": [
+          171,
+          172
+        ],
+        "text": "#C C holds the dough mixer with his right hand"
+      },
+      {
+        "id": "C172",
+        "interval": [
+          172,
+          173
+        ],
+        "text": "#C C puts the tray of dough in the dough sheeter"
+      },
+      {
+        "id": "C173",
+        "interval": [
+          173,
+          174
+        ],
+        "text": "#C C puts the dough mixer on the dough mixer machine"
+      },
+      {
+        "id": "C174",
+        "interval": [
+          174,
+          175
+        ],
+        "text": "#C C pulls the dough"
+      },
+      {
+        "id": "C175",
+        "interval": [
+          175,
+          176
+        ],
+        "text": "#C C puts the jug of water in the pressure cooker"
+      },
+      {
+        "id": "C176",
+        "interval": [
+          176,
+          177
+        ],
+        "text": "#C C pushes the mixer on the table"
+      },
+      {
+        "id": "C177",
+        "interval": [
+          177,
+          178
+        ],
+        "text": "#C C touches the mixer mixer"
+      },
+      {
+        "id": "C178",
+        "interval": [
+          178,
+          179
+        ],
+        "text": "#C C holds the dough press machine"
+      },
+      {
+        "id": "C179",
+        "interval": [
+          179,
+          180
+        ],
+        "text": "#C C puts the dough in the dough mixer"
+      },
+      {
+        "id": "C0",
+        "interval": [
+          0,
+          1
+        ],
+        "text": "#O man A walks"
+      },
+      {
+        "id": "C1",
+        "interval": [
+          1,
+          2
+        ],
+        "text": "#C C walks around"
+      },
+      {
+        "id": "C2",
+        "interval": [
+          2,
+          3
+        ],
+        "text": "#C C shakes dough in hand"
+      },
+      {
+        "id": "C3",
+        "interval": [
+          3,
+          4
+        ],
+        "text": "#C C picks dough from the baking tray"
+      },
+      {
+        "id": "C4",
+        "interval": [
+          4,
+          5
+        ],
+        "text": "#C C holds dough on the tray"
+      },
+      {
+        "id": "C5",
+        "interval": [
+          5,
+          6
+        ],
+        "text": "#C C removes the plastic board from the tray"
+      },
+      {
+        "id": "C6",
+        "interval": [
+          6,
+          7
+        ],
+        "text": "#C C Picks a tray from a oven"
+      },
+      {
+        "id": "C7",
+        "interval": [
+          7,
+          8
+        ],
+        "text": "#C C drops the doughs on the tray with his hands."
+      },
+      {
+        "id": "C8",
+        "interval": [
+          8,
+          9
+        ],
+        "text": "#C C picks up the dough"
+      },
+      {
+        "id": "C9",
+        "interval": [
+          9,
+          10
+        ],
+        "text": "#C C picks the oven from the oven with his left hand."
+      },
+      {
+        "id": "C10",
+        "interval": [
+          10,
+          11
+        ],
+        "text": "#C C walks to the bakery"
+      },
+      {
+        "id": "C11",
+        "interval": [
+          11,
+          12
+        ],
+        "text": "#C C walks to the countertop"
+      },
+      {
+        "id": "C12",
+        "interval": [
+          12,
+          13
+        ],
+        "text": "#C C wipes the tray"
+      },
+      {
+        "id": "C13",
+        "interval": [
+          13,
+          14
+        ],
+        "text": "#C C moves the cooking grate"
+      },
+      {
+        "id": "C14",
+        "interval": [
+          14,
+          15
+        ],
+        "text": "#C C pulls the tray of trays from the wall with his right hand. "
+      },
+      {
+        "id": "C15",
+        "interval": [
+          15,
+          16
+        ],
+        "text": "#O man B moves around"
+      },
+      {
+        "id": "C16",
+        "interval": [
+          16,
+          17
+        ],
+        "text": "#O a man X moves the camera "
+      },
+      {
+        "id": "C17",
+        "interval": [
+          17,
+          18
+        ],
+        "text": "#C C walks towards the television stand"
+      },
+      {
+        "id": "C18",
+        "interval": [
+          18,
+          19
+        ],
+        "text": "#O man X holds a refrigerator"
+      },
+      {
+        "id": "C19",
+        "interval": [
+          19,
+          20
+        ],
+        "text": "#C C gives man X a board"
+      },
+      {
+        "id": "C20",
+        "interval": [
+          20,
+          21
+        ],
+        "text": "#C C lifts the tray"
+      },
+      {
+        "id": "C21",
+        "interval": [
+          21,
+          22
+        ],
+        "text": "#C C drops dough in the tray"
+      },
+      {
+        "id": "C22",
+        "interval": [
+          22,
+          23
+        ],
+        "text": "#C C gives dough to man X"
+      },
+      {
+        "id": "C23",
+        "interval": [
+          23,
+          24
+        ],
+        "text": "#C C moves the tray"
+      },
+      {
+        "id": "C24",
+        "interval": [
+          24,
+          25
+        ],
+        "text": "#C C picks doughs from the tray"
+      },
+      {
+        "id": "C25",
+        "interval": [
+          25,
+          26
+        ],
+        "text": "#C C lifts the tray with his hands"
+      },
+      {
+        "id": "C26",
+        "interval": [
+          26,
+          27
+        ],
+        "text": "#C C takes the tray "
+      },
+      {
+        "id": "C27",
+        "interval": [
+          27,
+          28
+        ],
+        "text": "#C C places the dough on the tray"
+      },
+      {
+        "id": "C28",
+        "interval": [
+          28,
+          29
+        ],
+        "text": "#C C walks towards the tray"
+      },
+      {
+        "id": "C29",
+        "interval": [
+          29,
+          30
+        ],
+        "text": "#C C pushes the shelf with his hands"
+      },
+      {
+        "id": "C30",
+        "interval": [
+          30,
+          31
+        ],
+        "text": "#C C picks the metal flat bread "
+      },
+      {
+        "id": "C31",
+        "interval": [
+          31,
+          32
+        ],
+        "text": "#C C takes the dough from the oven with his right hand."
+      },
+      {
+        "id": "C32",
+        "interval": [
+          32,
+          33
+        ],
+        "text": "#C C moves the table with his hands. "
+      },
+      {
+        "id": "C33",
+        "interval": [
+          33,
+          34
+        ],
+        "text": "#C C opens a tray"
+      },
+      {
+        "id": "C34",
+        "interval": [
+          34,
+          35
+        ],
+        "text": "#C C places the dough on the dough roller."
+      },
+      {
+        "id": "C35",
+        "interval": [
+          35,
+          36
+        ],
+        "text": "#C C walks to the baking table."
+      },
+      {
+        "id": "C36",
+        "interval": [
+          36,
+          37
+        ],
+        "text": "#C C moves towards a dough divider."
+      },
+      {
+        "id": "C37",
+        "interval": [
+          37,
+          38
+        ],
+        "text": "#C C moves the tray in his hands."
+      },
+      {
+        "id": "C38",
+        "interval": [
+          38,
+          39
+        ],
+        "text": "#C C pulls a tray"
+      },
+      {
+        "id": "C39",
+        "interval": [
+          39,
+          40
+        ],
+        "text": "#C C walks towards a shelf."
+      },
+      {
+        "id": "C85",
+        "interval": [
+          85,
+          86
+        ],
+        "text": "#C C moves the knife"
+      },
+      {
+        "id": "C86",
+        "interval": [
+          86,
+          87
+        ],
+        "text": "#C C points at the dough"
+      },
+      {
+        "id": "C87",
+        "interval": [
+          87,
+          88
+        ],
+        "text": "#C C moves the hand"
+      },
+      {
+        "id": "C88",
+        "interval": [
+          88,
+          89
+        ],
+        "text": "#C C touches the baking baking tray"
+      },
+      {
+        "id": "C89",
+        "interval": [
+          89,
+          90
+        ],
+        "text": "#C C moves his hand"
+      },
+      {
+        "id": "C90",
+        "interval": [
+          90,
+          91
+        ],
+        "text": "#C C moves the tray towards a table with his hands."
+      },
+      {
+        "id": "C91",
+        "interval": [
+          91,
+          92
+        ],
+        "text": "#C C holds the dough"
+      },
+      {
+        "id": "C92",
+        "interval": [
+          92,
+          93
+        ],
+        "text": "#C C Puts down a dough pan on a table"
+      },
+      {
+        "id": "C93",
+        "interval": [
+          93,
+          94
+        ],
+        "text": "#O The man A stands."
+      },
+      {
+        "id": "C94",
+        "interval": [
+          94,
+          95
+        ],
+        "text": "#C C wipes his hands on the table."
+      },
+      {
+        "id": "C95",
+        "interval": [
+          95,
+          96
+        ],
+        "text": "#C C walks towards the rack"
+      },
+      {
+        "id": "C96",
+        "interval": [
+          96,
+          97
+        ],
+        "text": "#C C moves the tray of cakes with his right hand."
+      },
+      {
+        "id": "C97",
+        "interval": [
+          97,
+          98
+        ],
+        "text": "#C C picks a tray of bread from the shelf with his right hand."
+      },
+      {
+        "id": "C98",
+        "interval": [
+          98,
+          99
+        ],
+        "text": "#C C moves towards the rack"
+      },
+      {
+        "id": "C99",
+        "interval": [
+          99,
+          100
+        ],
+        "text": "#C C walks towards the dough kneader."
+      },
+      {
+        "id": "C100",
+        "interval": [
+          100,
+          101
+        ],
+        "text": "#C C moves toward the machine"
+      },
+      {
+        "id": "C101",
+        "interval": [
+          101,
+          102
+        ],
+        "text": "#C C moves the dough roller in the container"
+      },
+      {
+        "id": "C102",
+        "interval": [
+          102,
+          103
+        ],
+        "text": "#C C stares at the dough"
+      },
+      {
+        "id": "C103",
+        "interval": [
+          103,
+          104
+        ],
+        "text": "#C C walks around the room"
+      },
+      {
+        "id": "C104",
+        "interval": [
+          104,
+          105
+        ],
+        "text": "#C C turns to the side"
+      },
+      {
+        "id": "C105",
+        "interval": [
+          105,
+          106
+        ],
+        "text": "#C C holds the dough"
+      },
+      {
+        "id": "C106",
+        "interval": [
+          106,
+          107
+        ],
+        "text": "#C C walks towards a dough mixer"
+      },
+      {
+        "id": "C107",
+        "interval": [
+          107,
+          108
+        ],
+        "text": "#C C picks the doughs from the table with his hands."
+      },
+      {
+        "id": "C108",
+        "interval": [
+          108,
+          109
+        ],
+        "text": "#C C drops the dough on the table with his hands."
+      },
+      {
+        "id": "C109",
+        "interval": [
+          109,
+          110
+        ],
+        "text": "#C C moves the doughs on the doughs with both hands."
+      },
+      {
+        "id": "C110",
+        "interval": [
+          110,
+          111
+        ],
+        "text": "#C C picks the baking flour from the tray with his right hand."
+      },
+      {
+        "id": "C111",
+        "interval": [
+          111,
+          112
+        ],
+        "text": "#C C moves towards the dough mixer"
+      },
+      {
+        "id": "C112",
+        "interval": [
+          112,
+          113
+        ],
+        "text": "#C C walks towards the mixer"
+      },
+      {
+        "id": "C113",
+        "interval": [
+          113,
+          114
+        ],
+        "text": "#C C puts the tray on the shelf"
+      },
+      {
+        "id": "C114",
+        "interval": [
+          114,
+          115
+        ],
+        "text": "#C C puts down the container"
+      },
+      {
+        "id": "C115",
+        "interval": [
+          115,
+          116
+        ],
+        "text": "#C C places the jug on the table"
+      },
+      {
+        "id": "C116",
+        "interval": [
+          116,
+          117
+        ],
+        "text": "#C C puts the jug of water on the table"
+      },
+      {
+        "id": "C117",
+        "interval": [
+          117,
+          118
+        ],
+        "text": "#C C takes the knife on the table with his right hand."
+      },
+      {
+        "id": "C118",
+        "interval": [
+          118,
+          119
+        ],
+        "text": "#C C picks the dough scraper on the table with his right hand."
+      },
+      {
+        "id": "C119",
+        "interval": [
+          119,
+          120
+        ],
+        "text": "#C C picks a rolling scrapper from the table with his right hand."
+      },
+      {
+        "id": "C120",
+        "interval": [
+          120,
+          121
+        ],
+        "text": "#C C picks the scraper from the table with his right hand"
+      },
+      {
+        "id": "C121",
+        "interval": [
+          121,
+          122
+        ],
+        "text": "#C C puts the wooden wedge in his right hand on the table."
+      },
+      {
+        "id": "C122",
+        "interval": [
+          122,
+          123
+        ],
+        "text": "#C C moves the dough scraper on the table with his right hand."
+      },
+      {
+        "id": "C123",
+        "interval": [
+          123,
+          124
+        ],
+        "text": "#C C picks a scraper"
+      },
+      {
+        "id": "C124",
+        "interval": [
+          124,
+          125
+        ],
+        "text": "#C C picks up the scraper from the table with his right hand."
+      },
+      {
+        "id": "C125",
+        "interval": [
+          125,
+          126
+        ],
+        "text": "#C C collects the flour on the table with the dough scraper."
+      },
+      {
+        "id": "C126",
+        "interval": [
+          126,
+          127
+        ],
+        "text": "#C C picks the dough scraper"
+      },
+      {
+        "id": "C127",
+        "interval": [
+          127,
+          128
+        ],
+        "text": "#C C Places dough scrapper on the table"
+      },
+      {
+        "id": "C128",
+        "interval": [
+          128,
+          129
+        ],
+        "text": "#C C places the dough roller on the table"
+      },
+      {
+        "id": "C129",
+        "interval": [
+          129,
+          130
+        ],
+        "text": "#C C picks a baking flour from a weighing scale with his right hand."
+      },
+      {
+        "id": "C130",
+        "interval": [
+          130,
+          131
+        ],
+        "text": "#C C picks the dough sheeter"
+      },
+      {
+        "id": "C131",
+        "interval": [
+          131,
+          132
+        ],
+        "text": "#C C picks a blender from the countertop with his right hand."
+      },
+      {
+        "id": "C132",
+        "interval": [
+          132,
+          133
+        ],
+        "text": "#C C wipes the dough mixer with the sponge in his right hand."
+      },
+      {
+        "id": "C133",
+        "interval": [
+          133,
+          134
+        ],
+        "text": "#C C walks around the bakery."
+      },
+      {
+        "id": "C134",
+        "interval": [
+          134,
+          135
+        ],
+        "text": "#C C puts the dough mixer into the mixer bowl with his right hand."
+      },
+      {
+        "id": "C135",
+        "interval": [
+          135,
+          136
+        ],
+        "text": "#C C lifts the jug with his left hand"
+      },
+      {
+        "id": "C136",
+        "interval": [
+          136,
+          137
+        ],
+        "text": "#C C puts the dough mixer in the bucket"
+      },
+      {
+        "id": "C137",
+        "interval": [
+          137,
+          138
+        ],
+        "text": "#C C drops the mop stick in the plastic bucket with his right hand"
+      },
+      {
+        "id": "C138",
+        "interval": [
+          138,
+          139
+        ],
+        "text": "#C C places the scoop in his right hand on the work table."
+      },
+      {
+        "id": "C139",
+        "interval": [
+          139,
+          140
+        ],
+        "text": "#C C holds the paper on the table"
+      },
+      {
+        "id": "C140",
+        "interval": [
+          140,
+          141
+        ],
+        "text": "#C C puts the bag of flour on the table "
+      },
+      {
+        "id": "C141",
+        "interval": [
+          141,
+          142
+        ],
+        "text": "#C C Picks the dough sieve"
+      },
+      {
+        "id": "C142",
+        "interval": [
+          142,
+          143
+        ],
+        "text": "#C C throws the doughs in a basket with his right hand."
+      },
+      {
+        "id": "C143",
+        "interval": [
+          143,
+          144
+        ],
+        "text": "#C C moves towards the mixing bowl"
+      },
+      {
+        "id": "C144",
+        "interval": [
+          144,
+          145
+        ],
+        "text": "#C C moves towards the table"
+      },
+      {
+        "id": "C145",
+        "interval": [
+          145,
+          146
+        ],
+        "text": "#C C picks a dough scraper from the flour mixer with his right hand."
+      },
+      {
+        "id": "C146",
+        "interval": [
+          146,
+          147
+        ],
+        "text": "#C C touches the flour mix in the container with his right hand."
+      },
+      {
+        "id": "C147",
+        "interval": [
+          147,
+          148
+        ],
+        "text": "#C C Picks a scraper"
+      },
+      {
+        "id": "C148",
+        "interval": [
+          148,
+          149
+        ],
+        "text": "#C C picks up the knife "
+      },
+      {
+        "id": "C149",
+        "interval": [
+          149,
+          150
+        ],
+        "text": "#C C puts the dough in the flour"
+      },
+      {
+        "id": "C150",
+        "interval": [
+          150,
+          151
+        ],
+        "text": "#C C moves hand along dough"
+      }
+    ],
+    "source_type": "caption"
+  },
+  "output": {
+    "data": "{\n  \"reason\": \"The captions do not provide specific information about the purpose of creating delicious pastries. The actions described involve various kitchen activities such\"\n  , \"verdict\": \"unresolved\"\n  , \"source_caption_ids\": [\"ID0\", \"ID1\", \"ID2\"]\n  , \"missing_detail\": \"the exact nature of the pastries being made or the specific goal of the actions beyond making cakes. The captions suggest a general baking process but do not\\n\\n\\ud83c\"\n}",
+    "raw_text": "{\n  \"reason\": \"The captions do not provide specific information about the purpose of creating delicious pastries. The actions described involve various kitchen activities such\"\n  , \"verdict\": \"unresolved\"\n  , \"source_caption_ids\": [\"ID0\", \"ID1\", \"ID2\"]\n  , \"missing_detail\": \"the exact nature of the pastries being made or the specific goal of the actions beyond making cakes. The captions suggest a general baking process but do not\\n\\n\\ud83c\"\n}",
+    "id_map": {
+      "ID0": "C151",
+      "ID1": "C152",
+      "ID2": "C153",
+      "ID3": "C154",
+      "ID4": "C155",
+      "ID5": "C156",
+      "ID6": "C157",
+      "ID7": "C158",
+      "ID8": "C159",
+      "ID9": "C160",
+      "ID10": "C161",
+      "ID11": "C162",
+      "ID12": "C163",
+      "ID13": "C164",
+      "ID14": "C165",
+      "ID15": "C166",
+      "ID16": "C167",
+      "ID17": "C168",
+      "ID18": "C169",
+      "ID19": "C170",
+      "ID20": "C171",
+      "ID21": "C172",
+      "ID22": "C173",
+      "ID23": "C174",
+      "ID24": "C175",
+      "ID25": "C176",
+      "ID26": "C177",
+      "ID27": "C178",
+      "ID28": "C179",
+      "ID29": "C0",
+      "ID30": "C1",
+      "ID31": "C2",
+      "ID32": "C3",
+      "ID33": "C4",
+      "ID34": "C5",
+      "ID35": "C6",
+      "ID36": "C7",
+      "ID37": "C8",
+      "ID38": "C9",
+      "ID39": "C10",
+      "ID40": "C11",
+      "ID41": "C12",
+      "ID42": "C13",
+      "ID43": "C14",
+      "ID44": "C15",
+      "ID45": "C16",
+      "ID46": "C17",
+      "ID47": "C18",
+      "ID48": "C19",
+      "ID49": "C20",
+      "ID50": "C21",
+      "ID51": "C22",
+      "ID52": "C23",
+      "ID53": "C24",
+      "ID54": "C25",
+      "ID55": "C26",
+      "ID56": "C27",
+      "ID57": "C28",
+      "ID58": "C29",
+      "ID59": "C30",
+      "ID60": "C31",
+      "ID61": "C32",
+      "ID62": "C33",
+      "ID63": "C34",
+      "ID64": "C35",
+      "ID65": "C36",
+      "ID66": "C37",
+      "ID67": "C38",
+      "ID68": "C39",
+      "ID69": "C85",
+      "ID70": "C86",
+      "ID71": "C87",
+      "ID72": "C88",
+      "ID73": "C89",
+      "ID74": "C90",
+      "ID75": "C91",
+      "ID76": "C92",
+      "ID77": "C93",
+      "ID78": "C94",
+      "ID79": "C95",
+      "ID80": "C96",
+      "ID81": "C97",
+      "ID82": "C98",
+      "ID83": "C99",
+      "ID84": "C100",
+      "ID85": "C101",
+      "ID86": "C102",
+      "ID87": "C103",
+      "ID88": "C104",
+      "ID89": "C105",
+      "ID90": "C106",
+      "ID91": "C107",
+      "ID92": "C108",
+      "ID93": "C109",
+      "ID94": "C110",
+      "ID95": "C111",
+      "ID96": "C112",
+      "ID97": "C113",
+      "ID98": "C114",
+      "ID99": "C115",
+      "ID100": "C116",
+      "ID101": "C117",
+      "ID102": "C118",
+      "ID103": "C119",
+      "ID104": "C120",
+      "ID105": "C121",
+      "ID106": "C122",
+      "ID107": "C123",
+      "ID108": "C124",
+      "ID109": "C125",
+      "ID110": "C126",
+      "ID111": "C127",
+      "ID112": "C128",
+      "ID113": "C129",
+      "ID114": "C130",
+      "ID115": "C131",
+      "ID116": "C132",
+      "ID117": "C133",
+      "ID118": "C134",
+      "ID119": "C135",
+      "ID120": "C136",
+      "ID121": "C137",
+      "ID122": "C138",
+      "ID123": "C139",
+      "ID124": "C140",
+      "ID125": "C141",
+      "ID126": "C142",
+      "ID127": "C143",
+      "ID128": "C144",
+      "ID129": "C145",
+      "ID130": "C146",
+      "ID131": "C147",
+      "ID132": "C148",
+      "ID133": "C149",
+      "ID134": "C150"
+    },
+    "decoder": "MN-navigation-candidate-complete-unicode-v2",
+    "generated_token_ids": [
+      515,
+      220,
+      330,
+      19895,
+      788,
+      330,
+      785,
+      77788,
+      653,
+      537,
+      3410,
+      3151,
+      1995,
+      911,
+      279,
+      7428,
+      315,
+      6825,
+      17923,
+      3267,
+      4019,
+      13,
+      576,
+      6168,
+      7481,
+      21058,
+      5257,
+      9780,
+      7488,
+      1741,
+      698,
+      220,
+      1154,
+      330,
+      423,
+      8477,
+      788,
+      330,
+      359,
+      39747,
+      698,
+      220,
+      1154,
+      330,
+      2427,
+      61705,
+      8077,
+      788,
+      4383,
+      915,
+      15,
+      497,
+      330,
+      915,
+      16,
+      497,
+      330,
+      915,
+      17,
+      7026,
+      220,
+      1154,
+      330,
+      30616,
+      14480,
+      788,
+      330,
+      1782,
+      4734,
+      6993,
+      315,
+      279,
+      3267,
+      4019,
+      1660,
+      1865,
+      476,
+      279,
+      3151,
+      5795,
+      315,
+      279,
+      6168,
+      7797,
+      3259,
+      47569,
+      13,
+      576,
+      77788,
+      4190,
+      264,
+      4586,
+      27815,
+      1882,
+      714,
+      653,
+      537,
+      1699,
+      1699,
+      59,
+      661,
+      23,
+      18,
+      66,
+      698,
+      92,
+      151645
+    ],
+    "max_new_tokens": 1024,
+    "usage": {
+      "input_tokens": 4957,
+      "output_tokens": 107,
+      "model_caption_context": null,
+      "model_frame_views": [],
+      "context_projection": "facts_and_all_frames_v1",
+      "model_tensor_pixels": {},
+      "input_tokens_by_model": {
+        "vlm": 4957
+      },
+      "cpu_seconds": 4.541318183000669,
+      "gpu_resident_seconds": 4.5418496914207935,
+      "gpu_peak_allocated_bytes": 19587422208
+    }
+  },
+  "error": null
+}

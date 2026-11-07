@@ -87,6 +87,7 @@ def prepare(reference,out,G=None,prior=None,gpu_index='3',batch_size=2):
             (reference/'control/run_joint_entity_experiment.py','run_joint_entity_experiment.py'),
             (reference/'control/run_compact_resident.py','run_compact_resident.py'),
             (root/'script/generalized_lazy_execution.py','generalized_lazy_execution.py'),
+            (root/'script/gpu_queue.py','gpu_queue.py'),
             (root/'script_core/batch_extraction.py','batch_extraction.py')]:shutil.copy2(source,control/name)
     ids=io.read(out/'cohort.json')
     videos=[io.read(out/'packets'/f'{uid}.json')['packet']['question']['video_id'] for uid in ids]
@@ -98,7 +99,7 @@ def prepare(reference,out,G=None,prior=None,gpu_index='3',batch_size=2):
         normalization_parent=parent_policy['normalization_parent'],
         prior_development_attempts=priors,
         database='database/h_script.sqlite3',extraction_cap=1500,answer_reserve=45,extraction_batch_size=batch_size,
-        resource_policy=dict(gpu_index=str(gpu_index),minimum_free_mib=32768,stable_observations=3,resident_until_complete=True),
+        resource_policy=dict(gpu_index=str(gpu_index),minimum_free_mib=32768,maximum_utilization=10,stable_observations=3,resident_until_complete=True),
         changes=['F-style task planning, incremental fields, source-preserving projection and persistent SQLite storage.',
             'One states category replaces all fixed states.dimension fields; cache all explicit source conditions as entity/description.',
             'G source-bound state and optional unknown-actor validation; keep eight property categories and existing role/link categories.',
@@ -119,7 +120,7 @@ def prepare(reference,out,G=None,prior=None,gpu_index='3',batch_size=2):
 
 
 def extract_source(unit,fields,meter,core,protocol):
-    text=core.joint.clean_unit(unit)['text'];inputs=dict(unit=dict(id=unit['id'],text=text),requested_fields=fields,source_type='caption')
+    inputs=core.extraction_inputs(unit,fields);text=inputs['unit']['text']
     empty=dict(facts=[],mentions=[],rejected=[],uncertain=False)
     if core.joint.NEGATION.search(text) or core.joint.UNCERTAINTY.search(text):
         return dict(accepted=dict(empty,uncertain=True),error=None,model_called=False,guarded_original=True)
@@ -129,7 +130,7 @@ def extract_source(unit,fields,meter,core,protocol):
     try:
         data,_=meter.json(core.EXTRACT,inputs,tuple(core.joint.COLLECTIONS.values())+('uncertain',))
         core.validate_output(data,schema)
-        accepted=core.joint.accept(unit,data)
+        accepted=core.accept(unit,data)
         return dict(accepted=accepted,error=None,model_called=True)
     except Exception as exc:
         budget_limited=type(exc).__name__=='ResourceExhausted' or getattr(exc,'budget_limited',False)
@@ -338,23 +339,19 @@ def queue(out):
     with (out/'controller.lock').open('a') as controller:
         fcntl.flock(controller,fcntl.LOCK_EX|fcntl.LOCK_NB)
         if (out/'launch.json').exists():raise ValueError('H worker already attempted; inspect retained state')
-        stable=0
-        while True:
-            text=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.free','--format=csv,noheader,nounits'],text=True)
-            rows={parts[0]:(parts[1],int(parts[2])) for line in text.splitlines() if (parts:=[s.strip() for s in line.split(',')])}
-            uuid,free=rows[policy['gpu_index']]
-            stable=stable+1 if free>=policy['minimum_free_mib'] else 0
-            if stable>=policy.get('stable_observations',3):break
-            io.write(out/'queue_status.json',dict(state='waiting_for_initial_gpu_memory',free_mib=free,updated_at=io.now()));time.sleep(10)
-        with (Path('/tmp')/f'videoagent-H-{os.getuid()}-{uuid}.lock').open('a') as lease:
-            fcntl.flock(lease,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        from gpu_queue import acquire
+        def waiting(details):
+            io.write(out/'queue_status.json',dict(state='waiting_for_gpu',
+                controller_pid=os.getpid(),updated_at=io.now(),**details))
+        with acquire(policy, waiting) as (device, lease_fds):
+            gpu=device['index'];uuid=device['uuid']
             env=dict(os.environ,CUDA_VISIBLE_DEVICES=uuid,CUDA_DEVICE_ORDER='PCI_BUS_ID',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',
                 TOKENIZERS_PARALLELISM='false',OMP_NUM_THREADS='4',MKL_NUM_THREADS='4',PYTHONUNBUFFERED='1')
             command=[sys.executable,'-u',str(Path(__file__).resolve()),'worker','--out',str(out)]
             (out/'logs').mkdir(exist_ok=True)
             with (out/'logs/worker.log').open('a') as log:
-                proc=subprocess.Popen(command,cwd=out,env=env,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,pass_fds=(lease.fileno(),))
-            launch=dict(controller_pid=os.getpid(),worker_pid=proc.pid,gpu_index=policy['gpu_index'],gpu_uuid=uuid,command=command,started_at=io.now())
+                proc=subprocess.Popen(command,cwd=out,env=env,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,pass_fds=lease_fds)
+            launch=dict(controller_pid=os.getpid(),worker_pid=proc.pid,gpu_index=gpu,gpu_uuid=uuid,command=command,started_at=io.now())
             io.write(out/'launch.json',launch)
             while proc.poll() is None:
                 report(out);io.write(out/'queue_status.json',dict(launch,state='running',updated_at=io.now()));time.sleep(5)

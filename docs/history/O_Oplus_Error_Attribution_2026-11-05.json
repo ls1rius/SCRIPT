@@ -1,0 +1,85 @@
+{
+  "at": "2026-11-05T00:01:52.839293+08:00",
+  "cohort": 300,
+  "aggregate_audit": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/docs/history/O_Oplus_Completed_Analysis_2026-11-04.json",
+  "no_new_model_calls": true,
+  "frozen_Oplus_rendering_membership": {
+    "groups_checked": 14043,
+    "violations": 0,
+    "empty_groups": 43,
+    "policy": "Checked each final composition group against its own frozen rendering choices and exact joined text."
+  },
+  "Oplus_vs_O_exact_paired_test": {
+    "discordant": 17,
+    "improved": 10,
+    "regressed": 7,
+    "two_sided_exact_binomial_p": 0.629058837890625
+  },
+  "manual_observations": [
+    {
+      "issue": "Question-only filter plan invents a specific target; filtering follows the invented target",
+      "case": "97dc6bb7-7eed-45f7-bdb0-269ab8c2f639",
+      "question": "What key adjustments did c make to the lawn mower, and how can those adjustments be concisely described as a whole?",
+      "invented_plan": "C adjusts the height of the lawn mower's deck",
+      "source": "#C C fixes the engine with the machine",
+      "source_id": "S13",
+      "filter_outcome": "all_zero",
+      "filter_explanation": "Does not directly relate to adjusting the lawn mower deck height",
+      "score": "N and L correct; O and O+ wrong",
+      "evidence": [
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/runs/97dc6bb7-7eed-45f7-bdb0-269ab8c2f639/question_only/filter_question.json",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/runs/97dc6bb7-7eed-45f7-bdb0-269ab8c2f639/question_only/sentences/S13/filter_decision.json"
+      ],
+      "attribution_limit": "Directly confirms plan drift and loss of engine evidence. No counterfactual rerun proves this change alone would fix QA."
+    },
+    {
+      "issue": "Required source absent before O extraction/filtering",
+      "case": "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+      "observation": "L answer evidence includes washing frying pan with sponge at intervals [5,6),[7,9),[11,12),[14,15). All 23 frozen O sources omit washing/rinsing the pan.",
+      "evidence": [
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/cases/16eb6914-00e7-4692-a7d7-d6ba36f61a5d/sentences.json",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-L-I-300-20261102-r1/runs/16eb6914-00e7-4692-a7d7-d6ba36f61a5d/L_evidence_planner/answer_output_input.json"
+      ],
+      "attribution_limit": "Establishes missing source evidence for this case, not the fraction of full-cohort losses caused by navigation."
+    },
+    {
+      "issue": "Sentence-local filter asks each partial observation to establish a global answer",
+      "case": "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+      "observation": "The two-phase question repeatedly rejects individual observations because a single sentence cannot identify both phases. Sources themselves also omit the bedroom/kitchen distinction required by the correct option.",
+      "evidence": [
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/runs/b5da8ac2-01ae-4390-8e0b-ce777bb0c86b/question_only/sentences/S0/filter_decision.json"
+      ],
+      "attribution_limit": "Confirms reasoning pattern; cannot attribute this case solely to filtering because source coverage also fails."
+    },
+    {
+      "issue": "Role errors survive extraction, selection and bound rendering",
+      "case": "00b9a0de-c59e-49cb-a127-6081e2fb8c8e",
+      "source_id": "S36",
+      "source": "#C C dips the brush in a cup of water",
+      "retained_role": "source_location: a cup of water",
+      "additional_examples": [
+        "S26 dips brush in water retains instrument=water",
+        "Broccoli case a4663dd4 S39 extracts extra verb=in; O+ drops this malformed group"
+      ],
+      "attribution_limit": "Bound rendering prevents new field strings but does not certify the extracted roles. QA error has no isolated causal attribution."
+    },
+    {
+      "issue": "O+ answer can regress while all selected groups survive",
+      "case": "a7b381f3-7f73-46fa-a99c-80a717a34556",
+      "observation": "O correctly selects setup-then-resistance-band exercises; O+ selects upper-body-then-lower-body. Zero empty composition groups.",
+      "attribution_limit": "Difference is downstream of shared selection: presentation and reader response, not O+ group deletion. Exact semantic trigger requires a controlled ablation."
+    }
+  ],
+  "interpretation": [
+    "O+ net +3 is small; no robust accuracy benefit demonstrated by this paired cohort.",
+    "All +3 net gain occurs in the 15 cases with group deletion; 285 cases without deletion have 7 gains and 7 regressions. This observational partition does not establish deletion causality.",
+    "O/O+ versus L confounds source coverage, extraction, relevance filtering, and presentation. N comparison partly controls source selection but not the remainder of the pipeline.",
+    "O+ model rendering cost mean 15.9838 seconds/question; final-reader time savings versus O mean 0.1323 seconds/question. Source retrieval cost excluded; shared GPU observations, not controlled speed ratios."
+  ],
+  "prioritized_next_ablations": [
+    "Freeze sources and extraction, compare current filter plan versus no generated filter plan; no question/options-specific rules.",
+    "Same frozen source: original-text reader versus all-extracted-units reader versus filtered reader; separates extraction and relevance loss.",
+    "Compare fixed compact rendering without group deletion versus current O+; separate presentation from further group filtering, avoid unnecessary compose calls if equal.",
+    "Audit missing-source cases separately; O+ cannot reconstruct unobserved evidence without inventing facts."
+  ]
+}

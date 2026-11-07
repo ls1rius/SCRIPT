@@ -1,0 +1,22 @@
+# Explicit I-v2 control: H open-state extraction/cache semantics, merged final assertions.
+schema_version: 2
+seed: 0
+method: B2
+query:
+  pipeline: adaptive_partial_temporal
+  temporal_entity_source: summary
+  temporal_sparse_visual: true
+  temporal_qa_evidence: merged_lazy_script
+  state_segment_max_gap_seconds: 2.0
+  entity_max_identity_gap_seconds: 8.0
+  field_extraction_batch_size: 2
+  memory_cache_directory: ""
+  answer_order: original
+  caption_policy: full
+initialization:
+  caption_source: provided
+budget:
+  online_cap: 1500.0
+  final_answer_reserve: 45.0
+  tool_call_cap: 150.0
+  build_call_cap: 600.0

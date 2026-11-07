@@ -1,0 +1,8 @@
+{
+  "raw": "{\n\"R0\": \"keep\",\n\"R1\": \"skip\",\n\"R2\": \"skip\",\n\"R3\": \"keep\",\n\"R4\": \"skip\",\n\"R5\": \"skip\",\n\"R6\": \"skip\",\n\"R7\": \"keep\",\n\"R8\": \"skip\",\n\"R9\": \"skip\",\n\"R10\": \"skip\",\n\"R11\": \"skip\",\n\"R12\": \"skip\",\n\"R13\": \"skip\",\n\"R14\": \"skip\",\n\"R15\": \"keep\",\n\"R16\": \"skip\",\n\"R17\": \"skip\",\n\"R18\": \"skip\",\n\"R19\": \"skip\",\n\"R20\": \"skip\",\n\"R21\": \"skip\",\n\"R22\": \"skip\",\n\"R23\": \"skip\",\n\"R24\": \"skip\",\n\"R25\": \"skip\",\n\"R26\": \"skip\",\n\"R27\": \"skip\",\n\"R28\": \"skip\",\n\"R29\": \"skip\",\n\"R30\": \"skip\",\n\"R31\": \"skip\",\n\"R32\": \"skip\",\n\"R33\": \"skip\",\n\"R34\": \"skip\",\n\"R35\": \"skip\",\n\"R36\": \"skip\",\n\"R37\": \"skip\",\n\"R38\": \"skip\",\n\"R39\": \"skip\",\n\"R40\": \"skip\",\n\"R41\": \"skip\",\n\"R42\": \"skip\",\n\"R43\": \"skip\",\n\"R44\": \"skip\",\n\"R45\": \"skip\",\n\"R46\": \"skip\",\n\"R47\": \"skip\",\n\"R48\": \"skip\",\n\"R49\": \"skip\",\n\"R50\": \"skip\",\n\"R51\": \"skip\",\n\"R52\": \"skip\",\n\"R53\": \"keep\",\n\"R54\": \"keep\",\n\"R55\": \"skip\"\n}",
+  "input_tokens": 3404,
+  "output_tokens": 441,
+  "seconds": 7.0910715982317924,
+  "decoder": "K-nonempty-decisions-v2-compact",
+  "ended_normally": true
+}

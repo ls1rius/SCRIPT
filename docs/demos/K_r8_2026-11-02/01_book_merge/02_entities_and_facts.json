@@ -1,0 +1,1724 @@
+{
+  "observations": [
+    {
+      "caption_id": "C0",
+      "frame_index": 0,
+      "sample_interval": [
+        0,
+        1
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ],
+        "original_text": "#C C moves book"
+      }
+    },
+    {
+      "caption_id": "C1",
+      "frame_index": 1,
+      "sample_interval": [
+        1,
+        2
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "paint"
+          }
+        ],
+        "original_text": "#C C rubs the paint"
+      }
+    },
+    {
+      "caption_id": "C2",
+      "frame_index": 2,
+      "sample_interval": [
+        2,
+        3
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the paper"
+      }
+    },
+    {
+      "caption_id": "C3",
+      "frame_index": 3,
+      "sample_interval": [
+        3,
+        4
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the painting paper"
+      }
+    },
+    {
+      "caption_id": "C4",
+      "frame_index": 4,
+      "sample_interval": [
+        4,
+        5
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      }
+    },
+    {
+      "caption_id": "C5",
+      "frame_index": 5,
+      "sample_interval": [
+        5,
+        6
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "adjusts",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C adjusts the drawing"
+      }
+    },
+    {
+      "caption_id": "C6",
+      "frame_index": 6,
+      "sample_interval": [
+        6,
+        7
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ],
+        "original_text": "#C C moves the book"
+      }
+    },
+    {
+      "caption_id": "C7",
+      "frame_index": 7,
+      "sample_interval": [
+        7,
+        8
+      ],
+      "evidence": {
+        "original_text": "#C C moves hand on the table"
+      }
+    },
+    {
+      "caption_id": "C8",
+      "frame_index": 8,
+      "sample_interval": [
+        8,
+        9
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "rubber"
+          }
+        ],
+        "original_text": "#C C moves a rubber on the table"
+      }
+    },
+    {
+      "caption_id": "C9",
+      "frame_index": 9,
+      "sample_interval": [
+        9,
+        10
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the drawing book with a pencil"
+      }
+    },
+    {
+      "caption_id": "C10",
+      "frame_index": 10,
+      "sample_interval": [
+        10,
+        11
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C moves pen"
+      }
+    },
+    {
+      "caption_id": "C11",
+      "frame_index": 11,
+      "sample_interval": [
+        11,
+        12
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "pencil"
+          }
+        ],
+        "original_text": "#C C moves the pencil to the right"
+      }
+    },
+    {
+      "caption_id": "C12",
+      "frame_index": 12,
+      "sample_interval": [
+        12,
+        13
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "drawing book"
+          }
+        ],
+        "original_text": "#C C moves the drawing book "
+      }
+    },
+    {
+      "caption_id": "C13",
+      "frame_index": 13,
+      "sample_interval": [
+        13,
+        14
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C rubs a drawing"
+      }
+    },
+    {
+      "caption_id": "C14",
+      "frame_index": 14,
+      "sample_interval": [
+        14,
+        15
+      ],
+      "evidence": {
+        "original_text": "#C C rubs a drawing with a rubber"
+      }
+    },
+    {
+      "caption_id": "C15",
+      "frame_index": 15,
+      "sample_interval": [
+        15,
+        16
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C rubs a drawing"
+      }
+    },
+    {
+      "caption_id": "C16",
+      "frame_index": 16,
+      "sample_interval": [
+        16,
+        17
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C rubs drawing"
+      }
+    },
+    {
+      "caption_id": "C17",
+      "frame_index": 17,
+      "sample_interval": [
+        17,
+        18
+      ],
+      "evidence": {
+        "original_text": "#C C  moves hands "
+      }
+    },
+    {
+      "caption_id": "C18",
+      "frame_index": 18,
+      "sample_interval": [
+        18,
+        19
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "scratches",
+            "patient": "book"
+          }
+        ],
+        "original_text": "#C C scratches the book"
+      }
+    },
+    {
+      "caption_id": "C19",
+      "frame_index": 19,
+      "sample_interval": [
+        19,
+        20
+      ],
+      "evidence": {
+        "original_text": "#C C wipes the face"
+      }
+    },
+    {
+      "caption_id": "C20",
+      "frame_index": 20,
+      "sample_interval": [
+        20,
+        21
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "scratches",
+            "patient": "face"
+          }
+        ],
+        "original_text": "#C C scratches her face"
+      }
+    },
+    {
+      "caption_id": "C21",
+      "frame_index": 21,
+      "sample_interval": [
+        21,
+        22
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "drops",
+            "patient": "pencil"
+          }
+        ],
+        "original_text": "#C C drops pencil"
+      }
+    },
+    {
+      "caption_id": "C22",
+      "frame_index": 22,
+      "sample_interval": [
+        22,
+        23
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book with a pen "
+      }
+    },
+    {
+      "caption_id": "C23",
+      "frame_index": 23,
+      "sample_interval": [
+        23,
+        24
+      ],
+      "evidence": {
+        "original_text": "#C C draws on a paper"
+      }
+    },
+    {
+      "caption_id": "C24",
+      "frame_index": 24,
+      "sample_interval": [
+        24,
+        25
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book"
+      }
+    },
+    {
+      "caption_id": "C25",
+      "frame_index": 25,
+      "sample_interval": [
+        25,
+        26
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book"
+      }
+    },
+    {
+      "caption_id": "C26",
+      "frame_index": 26,
+      "sample_interval": [
+        26,
+        27
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the paper"
+      }
+    },
+    {
+      "caption_id": "C27",
+      "frame_index": 27,
+      "sample_interval": [
+        27,
+        28
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book"
+      }
+    },
+    {
+      "caption_id": "C28",
+      "frame_index": 28,
+      "sample_interval": [
+        28,
+        29
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the drawing book"
+      }
+    },
+    {
+      "caption_id": "C29",
+      "frame_index": 29,
+      "sample_interval": [
+        29,
+        30
+      ],
+      "evidence": {
+        "original_text": "#C C draws on a paper"
+      }
+    },
+    {
+      "caption_id": "C30",
+      "frame_index": 30,
+      "sample_interval": [
+        30,
+        31
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      }
+    },
+    {
+      "caption_id": "C31",
+      "frame_index": 31,
+      "sample_interval": [
+        31,
+        32
+      ],
+      "evidence": {
+        "original_text": "#C C lifts the hand"
+      }
+    },
+    {
+      "caption_id": "C32",
+      "frame_index": 32,
+      "sample_interval": [
+        32,
+        33
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pencil"
+          }
+        ],
+        "original_text": "#C C holds the pencil"
+      }
+    },
+    {
+      "caption_id": "C33",
+      "frame_index": 33,
+      "sample_interval": [
+        33,
+        34
+      ],
+      "evidence": {
+        "original_text": "#C C wipes the face"
+      }
+    },
+    {
+      "caption_id": "C34",
+      "frame_index": 34,
+      "sample_interval": [
+        34,
+        35
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ],
+        "original_text": "#C C moves the book"
+      }
+    },
+    {
+      "caption_id": "C35",
+      "frame_index": 35,
+      "sample_interval": [
+        35,
+        36
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the paper"
+      }
+    },
+    {
+      "caption_id": "C36",
+      "frame_index": 36,
+      "sample_interval": [
+        36,
+        37
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the paper "
+      }
+    },
+    {
+      "caption_id": "C37",
+      "frame_index": 37,
+      "sample_interval": [
+        37,
+        38
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture of a dog "
+      }
+    },
+    {
+      "caption_id": "C38",
+      "frame_index": 38,
+      "sample_interval": [
+        38,
+        39
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "sketch"
+          }
+        ],
+        "original_text": "#C C draws the sketch with the marker pen"
+      }
+    },
+    {
+      "caption_id": "C39",
+      "frame_index": 39,
+      "sample_interval": [
+        39,
+        40
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      }
+    },
+    {
+      "caption_id": "C40",
+      "frame_index": 40,
+      "sample_interval": [
+        40,
+        41
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "colors",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C colors a drawing"
+      }
+    },
+    {
+      "caption_id": "C41",
+      "frame_index": 41,
+      "sample_interval": [
+        41,
+        42
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the paper"
+      }
+    },
+    {
+      "caption_id": "C42",
+      "frame_index": 42,
+      "sample_interval": [
+        42,
+        43
+      ],
+      "evidence": {
+        "original_text": "#C C holds the book"
+      }
+    },
+    {
+      "caption_id": "C88",
+      "frame_index": 88,
+      "sample_interval": [
+        88,
+        89
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "art book"
+          }
+        ],
+        "original_text": "#C C turns the art book"
+      }
+    },
+    {
+      "caption_id": "C89",
+      "frame_index": 89,
+      "sample_interval": [
+        89,
+        90
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C picks a pen"
+      }
+    },
+    {
+      "caption_id": "C90",
+      "frame_index": 90,
+      "sample_interval": [
+        90,
+        91
+      ],
+      "evidence": {
+        "original_text": "#C C moves hand"
+      }
+    },
+    {
+      "caption_id": "C107",
+      "frame_index": 107,
+      "sample_interval": [
+        107,
+        108
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "drawing book"
+          }
+        ],
+        "original_text": "#C C holds the drawing book"
+      }
+    },
+    {
+      "caption_id": "C108",
+      "frame_index": 108,
+      "sample_interval": [
+        108,
+        109
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture of a man "
+      }
+    },
+    {
+      "caption_id": "C109",
+      "frame_index": 109,
+      "sample_interval": [
+        109,
+        110
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the art with a pen "
+      }
+    },
+    {
+      "caption_id": "C110",
+      "frame_index": 110,
+      "sample_interval": [
+        110,
+        111
+      ],
+      "evidence": {
+        "original_text": "#C C draws on a drawing"
+      }
+    },
+    {
+      "caption_id": "C111",
+      "frame_index": 111,
+      "sample_interval": [
+        111,
+        112
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C holds the picture"
+      }
+    },
+    {
+      "caption_id": "C112",
+      "frame_index": 112,
+      "sample_interval": [
+        112,
+        113
+      ],
+      "evidence": {
+        "original_text": "#C C turns around"
+      }
+    },
+    {
+      "caption_id": "C113",
+      "frame_index": 113,
+      "sample_interval": [
+        113,
+        114
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws the picture"
+      }
+    },
+    {
+      "caption_id": "C114",
+      "frame_index": 114,
+      "sample_interval": [
+        114,
+        115
+      ],
+      "evidence": {
+        "original_text": "#C C draws on a paper"
+      }
+    },
+    {
+      "caption_id": "C115",
+      "frame_index": 115,
+      "sample_interval": [
+        115,
+        116
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book"
+      }
+    },
+    {
+      "caption_id": "C116",
+      "frame_index": 116,
+      "sample_interval": [
+        116,
+        117
+      ],
+      "evidence": {
+        "original_text": "#C C draws on a paper "
+      }
+    },
+    {
+      "caption_id": "C117",
+      "frame_index": 117,
+      "sample_interval": [
+        117,
+        118
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      }
+    },
+    {
+      "caption_id": "C118",
+      "frame_index": 118,
+      "sample_interval": [
+        118,
+        119
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "art"
+          }
+        ],
+        "original_text": "#C C holds the art"
+      }
+    },
+    {
+      "caption_id": "C119",
+      "frame_index": 119,
+      "sample_interval": [
+        119,
+        120
+      ],
+      "evidence": {
+        "original_text": "#C C draws on a paper "
+      }
+    },
+    {
+      "caption_id": "C120",
+      "frame_index": 120,
+      "sample_interval": [
+        120,
+        121
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "paints",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C paints a picture with a pen"
+      }
+    },
+    {
+      "caption_id": "C121",
+      "frame_index": 121,
+      "sample_interval": [
+        121,
+        122
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      }
+    },
+    {
+      "caption_id": "C122",
+      "frame_index": 122,
+      "sample_interval": [
+        122,
+        123
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws the picture"
+      }
+    },
+    {
+      "caption_id": "C123",
+      "frame_index": 123,
+      "sample_interval": [
+        123,
+        124
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book"
+      }
+    },
+    {
+      "caption_id": "C124",
+      "frame_index": 124,
+      "sample_interval": [
+        124,
+        125
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      }
+    },
+    {
+      "caption_id": "C125",
+      "frame_index": 125,
+      "sample_interval": [
+        125,
+        126
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws the picture"
+      }
+    },
+    {
+      "caption_id": "C126",
+      "frame_index": 126,
+      "sample_interval": [
+        126,
+        127
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "art paper"
+          }
+        ],
+        "original_text": "#C C turns the art paper"
+      }
+    },
+    {
+      "caption_id": "C127",
+      "frame_index": 127,
+      "sample_interval": [
+        127,
+        128
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C draws a dog"
+      }
+    },
+    {
+      "caption_id": "C128",
+      "frame_index": 128,
+      "sample_interval": [
+        128,
+        129
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book"
+      }
+    },
+    {
+      "caption_id": "C129",
+      "frame_index": 129,
+      "sample_interval": [
+        129,
+        130
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "portrait"
+          }
+        ],
+        "original_text": "#C C draws a portrait"
+      }
+    },
+    {
+      "caption_id": "C130",
+      "frame_index": 130,
+      "sample_interval": [
+        130,
+        131
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws the picture"
+      }
+    },
+    {
+      "caption_id": "C131",
+      "frame_index": 131,
+      "sample_interval": [
+        131,
+        132
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book"
+      }
+    },
+    {
+      "caption_id": "C132",
+      "frame_index": 132,
+      "sample_interval": [
+        132,
+        133
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "art"
+          }
+        ],
+        "original_text": "#C C draws the art"
+      }
+    },
+    {
+      "caption_id": "C133",
+      "frame_index": 133,
+      "sample_interval": [
+        133,
+        134
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "image"
+          }
+        ],
+        "original_text": "#C C draws the image"
+      }
+    },
+    {
+      "caption_id": "C134",
+      "frame_index": 134,
+      "sample_interval": [
+        134,
+        135
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "image"
+          }
+        ],
+        "original_text": "#C C draws a image"
+      }
+    },
+    {
+      "caption_id": "C135",
+      "frame_index": 135,
+      "sample_interval": [
+        135,
+        136
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "drawing book"
+          }
+        ],
+        "original_text": "#C C moves the drawing book"
+      }
+    },
+    {
+      "caption_id": "C136",
+      "frame_index": 136,
+      "sample_interval": [
+        136,
+        137
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "lid"
+          }
+        ],
+        "original_text": "#C C turns the lid"
+      }
+    },
+    {
+      "caption_id": "C137",
+      "frame_index": 137,
+      "sample_interval": [
+        137,
+        138
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C holds pen"
+      }
+    },
+    {
+      "caption_id": "C138",
+      "frame_index": 138,
+      "sample_interval": [
+        138,
+        139
+      ],
+      "evidence": {
+        "original_text": "#C C touches the hands"
+      }
+    },
+    {
+      "caption_id": "C139",
+      "frame_index": 139,
+      "sample_interval": [
+        139,
+        140
+      ],
+      "evidence": {
+        "original_text": "#C C holds the hand "
+      }
+    },
+    {
+      "caption_id": "C140",
+      "frame_index": 140,
+      "sample_interval": [
+        140,
+        141
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "touches",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C touches the pen"
+      }
+    },
+    {
+      "caption_id": "C141",
+      "frame_index": 141,
+      "sample_interval": [
+        141,
+        142
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "closes",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C closes the pen"
+      }
+    },
+    {
+      "caption_id": "C142",
+      "frame_index": 142,
+      "sample_interval": [
+        142,
+        143
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C holds a pen with both hands"
+      }
+    },
+    {
+      "caption_id": "C143",
+      "frame_index": 143,
+      "sample_interval": [
+        143,
+        144
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C holds the pen"
+      }
+    },
+    {
+      "caption_id": "C144",
+      "frame_index": 144,
+      "sample_interval": [
+        144,
+        145
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pencil"
+          }
+        ],
+        "original_text": "#C C holds a pencil"
+      }
+    },
+    {
+      "caption_id": "C145",
+      "frame_index": 145,
+      "sample_interval": [
+        145,
+        146
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture "
+      }
+    },
+    {
+      "caption_id": "C146",
+      "frame_index": 146,
+      "sample_interval": [
+        146,
+        147
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the art"
+      }
+    },
+    {
+      "caption_id": "C147",
+      "frame_index": 147,
+      "sample_interval": [
+        147,
+        148
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the art book"
+      }
+    },
+    {
+      "caption_id": "C148",
+      "frame_index": 148,
+      "sample_interval": [
+        148,
+        149
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the art paper "
+      }
+    },
+    {
+      "caption_id": "C149",
+      "frame_index": 149,
+      "sample_interval": [
+        149,
+        150
+      ],
+      "evidence": {
+        "original_text": "#C C draws on the book"
+      }
+    },
+    {
+      "caption_id": "C150",
+      "frame_index": 150,
+      "sample_interval": [
+        150,
+        151
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      }
+    },
+    {
+      "caption_id": "C151",
+      "frame_index": 151,
+      "sample_interval": [
+        151,
+        152
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      }
+    }
+  ],
+  "temporal_memory": {
+    "entities": [
+      {
+        "id": "E1",
+        "label": "book",
+        "attributes": [],
+        "scene_ids": [
+          "S4",
+          "S0"
+        ],
+        "state_ids": [
+          "T1",
+          "T3"
+        ]
+      },
+      {
+        "id": "E2",
+        "label": "C",
+        "attributes": [],
+        "scene_ids": [
+          "S0"
+        ],
+        "state_ids": [
+          "T2"
+        ]
+      },
+      {
+        "id": "E0",
+        "label": "C",
+        "attributes": [],
+        "scene_ids": [
+          "S4"
+        ],
+        "state_ids": [
+          "T0"
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "T2",
+        "entity_id": "E2",
+        "scene_id": "S0",
+        "description": "#C C draws on the book with a pen ",
+        "logical_state_id": "T2",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 22,
+        "last_observed_at": 25,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          23
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C22",
+          "C25"
+        ],
+        "relation_ids": [
+          "R0"
+        ],
+        "observed_support_interval": [
+          22,
+          25
+        ],
+        "source_support_interval": [
+          22,
+          26
+        ]
+      },
+      {
+        "id": "T3",
+        "entity_id": "E1",
+        "scene_id": "S0",
+        "description": "#C C draws on the book with a pen ",
+        "logical_state_id": "T3",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 22,
+        "last_observed_at": 25,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          23
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C22",
+          "C25"
+        ],
+        "relation_ids": [
+          "R0"
+        ],
+        "observed_support_interval": [
+          22,
+          25
+        ],
+        "source_support_interval": [
+          22,
+          26
+        ]
+      },
+      {
+        "id": "T0",
+        "entity_id": "E0",
+        "scene_id": "S4",
+        "description": "#C C draws on the art paper ",
+        "logical_state_id": "T0",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 148,
+        "last_observed_at": 149,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          149
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C148",
+          "C149"
+        ],
+        "relation_ids": [
+          "R1"
+        ],
+        "observed_support_interval": [
+          148,
+          149
+        ],
+        "source_support_interval": [
+          148,
+          150
+        ]
+      },
+      {
+        "id": "T1",
+        "entity_id": "E1",
+        "scene_id": "S4",
+        "description": "#C C draws on the book",
+        "logical_state_id": "T1",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 149,
+        "last_observed_at": 149,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          150
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C149"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          149,
+          149
+        ],
+        "source_support_interval": [
+          149,
+          150
+        ]
+      }
+    ],
+    "transitions": [],
+    "relations": [
+      {
+        "id": "R0",
+        "subject": "E2",
+        "object": "E1",
+        "predicate": "draws on",
+        "scene_id": "S0",
+        "first_observed_at": 22,
+        "last_observed_at": 22,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          23
+        ],
+        "valid_to_bounds": null,
+        "source_caption_ids": [
+          "C22",
+          "C24",
+          "C25"
+        ],
+        "status": "caption_asserted"
+      },
+      {
+        "id": "R1",
+        "subject": "E0",
+        "object": "E1",
+        "predicate": "draws on",
+        "scene_id": "S4",
+        "first_observed_at": 148,
+        "last_observed_at": 148,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          149
+        ],
+        "valid_to_bounds": null,
+        "source_caption_ids": [
+          "C148",
+          "C149"
+        ],
+        "status": "caption_asserted"
+      }
+    ],
+    "lineage": [],
+    "context_selection": {
+      "total_entities": 3,
+      "selected_entities": 3,
+      "total_states": 4,
+      "selected_states": 4,
+      "attributes_per_entity": 16,
+      "note": "Full source graph is retained separately; this is a bounded retrieval view.",
+      "partial_memory": true
+    },
+    "source_type": "caption",
+    "evidence_policy": "Assertions extracted from original timestamped summaries; identities are text inferences, not pixel-verified facts. Unreported changes and persistence remain unknown.",
+    "identities": [
+      {
+        "relation": "different_instance",
+        "reason": "Captions describe different actions on books in different scenes",
+        "left_entity": "E2",
+        "right_entity": "E0",
+        "caption_ids": [
+          "C10",
+          "C22",
+          "C24",
+          "C148"
+        ],
+        "decision": "different",
+        "status": "text_inferred",
+        "physical_identity_confirmed": false,
+        "call_id": "d6878056-02da-484a-8541-f9eaad399db4",
+        "candidate_id": "I0",
+        "source_type": "caption"
+      },
+      {
+        "relation": "same_instance",
+        "reason": "Both captions mention drawing on a book labeled 'book' in scene S0 and S4",
+        "left_entity": "E1",
+        "right_entity": "E1",
+        "caption_ids": [
+          "C22",
+          "C24",
+          "C25",
+          "C149"
+        ],
+        "decision": "same",
+        "status": "text_inferred",
+        "physical_identity_confirmed": false,
+        "call_id": "d6878056-02da-484a-8541-f9eaad399db4",
+        "candidate_id": "I1",
+        "source_type": "caption"
+      },
+      {
+        "relation": "different_instance",
+        "reason": "Captions describe different actions on books in different scenes",
+        "left_entity": "E2",
+        "right_entity": "E1",
+        "caption_ids": [
+          "C10",
+          "C22",
+          "C24",
+          "C149"
+        ],
+        "decision": "different",
+        "status": "text_inferred",
+        "physical_identity_confirmed": false,
+        "call_id": "d6878056-02da-484a-8541-f9eaad399db4",
+        "candidate_id": "I2",
+        "source_type": "caption"
+      },
+      {
+        "relation": "different_instance",
+        "reason": "C draws on different objects (book vs. art paper).",
+        "left_entity": "E1",
+        "right_entity": "E0",
+        "caption_ids": [
+          "C22",
+          "C24",
+          "C25",
+          "C148",
+          "C149"
+        ],
+        "decision": "different",
+        "status": "text_inferred",
+        "physical_identity_confirmed": false,
+        "call_id": "5ac9fd8a-2752-41b2-bd9c-fef32583d640",
+        "candidate_id": "I3",
+        "source_type": "caption"
+      }
+    ],
+    "partial": true,
+    "unresolved_observations": [
+      {
+        "entity_id": "E2",
+        "scene_id": "S0",
+        "observation": {
+          "caption_id": "C24",
+          "continuity": "uncertain",
+          "state": "#C C draws on the book",
+          "cause": {
+            "action": null,
+            "actor": null,
+            "tool": null,
+            "basis": "unknown",
+            "source_caption_ids": []
+          }
+        },
+        "pts": 24,
+        "status": "unresolved_state_observation"
+      },
+      {
+        "entity_id": "E3",
+        "scene_id": "S0",
+        "observation": {
+          "caption_id": "C24",
+          "continuity": "uncertain",
+          "state": "#C C draws on the book",
+          "cause": {
+            "action": null,
+            "actor": null,
+            "tool": null,
+            "basis": "unknown",
+            "source_caption_ids": []
+          }
+        },
+        "pts": 24,
+        "status": "unresolved_state_observation"
+      }
+    ],
+    "temporal_organization_policy": "Original caption assertions and existing local entities only. Continuity and cross-scene identity are text inferences. Unknown gaps, causes and physical identities remain unknown. Repeated actions are not automatically a single continuous state."
+  },
+  "visual_observations": []
+}

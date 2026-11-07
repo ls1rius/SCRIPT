@@ -1,0 +1,225 @@
+{
+  "created_at": "2026-11-01T23:27:39.964844+08:00",
+  "state": "complete",
+  "authorization": "User requested complete removal of workdirs environments after migration tests, including the compatibility path.",
+  "canonical_python": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+  "removed_alias": "/mnt/ssd2/hli/work/workdirs/VideoAgent/query-runtime-env",
+  "controllers_before": {
+    "generalized-lazy-H-300-20261101-r5": {
+      "pid": 2109681,
+      "command": [
+        "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/query-runtime-env/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/control/run_generalized_lazy_experiment.py",
+        "queue",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5"
+      ],
+      "state": {
+        "state": "waiting_for_gpu",
+        "controller_pid": 2109681,
+        "updated_at": "2026-11-01T23:27:38.286610+08:00",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 15171,
+            "utilization": 97
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 12944,
+            "utilization": 100
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 14308,
+            "utilization": 73
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 13321,
+            "utilization": 100
+          }
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 10
+      },
+      "manifest_sha256": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc"
+    },
+    "merged-lazy-I-H-adjacent-300-20261101-r4-queue": {
+      "pid": 2109675,
+      "command": [
+        "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/query-runtime-env/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue/control/queue_merged_lazy_after_h.py",
+        "run",
+        "--queue-root",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue"
+      ],
+      "state": {
+        "state": "running",
+        "phase": "H_queue",
+        "controller_pid": 2109675,
+        "updated_at": "2026-11-01T23:27:34.070504+08:00",
+        "child_pid": 2109681
+      },
+      "manifest_sha256": "af70fc38f80ed2de0ec840971dab92648cb9e0da00bd85fb601da876668249fb"
+    },
+    "grounded-reader-J-300-20261101-r7-queue": {
+      "pid": 2218109,
+      "command": [
+        "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/query-runtime-env/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r7-queue/control/queue_grounded_reader_after_i.py",
+        "run",
+        "--queue-root",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r7-queue"
+      ],
+      "state": {
+        "state": "waiting_for_I",
+        "phase": "I",
+        "controller_pid": 2218109,
+        "updated_at": "2026-11-01T23:27:19.698742+08:00",
+        "dependency": "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue"
+      },
+      "manifest_sha256": "f1b48ee4918eb843dcb6133a65e9c7260eeb3015e68beb13d0058892fd9b2289"
+    }
+  },
+  "policy": "Restart idle controllers only using canonical vts; preserve frozen source, input/output paths, GPU thresholds, no-retry rule and existing launch history.",
+  "controllers_after": {
+    "generalized-lazy-H-300-20261101-r5": {
+      "pid": 2238576,
+      "state": {
+        "state": "waiting_for_gpu",
+        "controller_pid": 2238576,
+        "updated_at": "2026-11-01T23:28:33.430260+08:00",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 15171,
+            "utilization": 97
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 12944,
+            "utilization": 100
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 14308,
+            "utilization": 98
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 13321,
+            "utilization": 0
+          }
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 10
+      },
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/control/run_generalized_lazy_experiment.py",
+        "queue",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5"
+      ]
+    },
+    "merged-lazy-I-H-adjacent-300-20261101-r4-queue": {
+      "pid": 2238579,
+      "state": {
+        "state": "waiting_for_H",
+        "phase": "H",
+        "controller_pid": 2238579,
+        "updated_at": "2026-11-01T23:28:33.510792+08:00",
+        "dependency": "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5"
+      },
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue/control/queue_merged_lazy_after_h.py",
+        "run",
+        "--queue-root",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue"
+      ]
+    },
+    "grounded-reader-J-300-20261101-r7-queue": {
+      "pid": 2238580,
+      "state": {
+        "state": "waiting_for_I",
+        "phase": "I",
+        "controller_pid": 2238580,
+        "updated_at": "2026-11-01T23:28:33.580729+08:00",
+        "dependency": "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue"
+      },
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r7-queue/control/queue_grounded_reader_after_i.py",
+        "run",
+        "--queue-root",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r7-queue"
+      ]
+    }
+  },
+  "completed_at": "2026-11-01T23:28:33.657751+08:00",
+  "legacy_alias_removed": true,
+  "validation": {
+    "checked_at": "2026-11-01T23:29:45.209952+08:00",
+    "frozen_files_verified": 1405,
+    "no_physical_venvs_under_workdirs": true,
+    "legacy_environment_paths_absent": true,
+    "all_waiting_controllers_use_vts": {
+      "generalized-lazy-H-300-20261101-r5": {
+        "pid": 2238576,
+        "state": "waiting_for_gpu",
+        "python": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+      },
+      "merged-lazy-I-H-adjacent-300-20261101-r4-queue": {
+        "pid": 2238579,
+        "state": "waiting_for_H",
+        "python": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+      },
+      "grounded-reader-J-300-20261101-r7-queue": {
+        "pid": 2238580,
+        "state": "waiting_for_I",
+        "python": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+      }
+    },
+    "model_worker_retry": false
+  }
+}

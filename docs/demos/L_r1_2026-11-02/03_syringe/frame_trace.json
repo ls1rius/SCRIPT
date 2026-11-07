@@ -1,0 +1,3831 @@
+[
+  {
+    "caption_id": "C0",
+    "interval": [
+      0,
+      1
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/0.jpg",
+    "original": "#C C puts the plastic tube in the bottle",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R0"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [0,1) (source assertion), C puts the plastic tube in the bottle."
+    ]
+  },
+  {
+    "caption_id": "C1",
+    "interval": [
+      1,
+      2
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/1.jpg",
+    "original": "#C C tests the bottle top with a test tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "tests",
+          "patient": "bottle top",
+          "body_part": "test tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R1",
+      "R2"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C2",
+    "interval": [
+      2,
+      3
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/2.jpg",
+    "original": "#C C fixes the grease on the bottle",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C3",
+    "interval": [
+      3,
+      4
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/3.jpg",
+    "original": "#C C inserts the  tube top to the tube",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R4"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C4",
+    "interval": [
+      4,
+      5
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/4.jpg",
+    "original": "#C C  holds a pinch tube ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "pinch tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R5",
+      "R6"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C5",
+    "interval": [
+      5,
+      6
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/5.jpg",
+    "original": "#C C sprays the tube with a liquid",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R8"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C6",
+    "interval": [
+      6,
+      7
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/6.jpg",
+    "original": "#C C  fixes the piece of  silver tube on the bottle",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R9"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C7",
+    "interval": [
+      7,
+      8
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/7.jpg",
+    "original": "#C C puts the  tube top in the glue",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R10"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C8",
+    "interval": [
+      8,
+      9
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/8.jpg",
+    "original": "#C C sticks the tube top on the tube top",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sticks",
+          "patient": "tube top"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R11",
+      "R12"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C9",
+    "interval": [
+      9,
+      10
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/9.jpg",
+    "original": "#C C sticks the star on the finger",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R13"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C10",
+    "interval": [
+      10,
+      11
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/10.jpg",
+    "original": "#C C  puts a tube on the syringe ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R14",
+      "R277",
+      "R279"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C11",
+    "interval": [
+      11,
+      12
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/11.jpg",
+    "original": "#C C fixes the the small syringe on the tube",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R15",
+      "R277",
+      "R279"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C12",
+    "interval": [
+      12,
+      13
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/12.jpg",
+    "original": "#C C cuts the tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "cuts",
+          "patient": "tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16",
+      "R17"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C13",
+    "interval": [
+      13,
+      14
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/13.jpg",
+    "original": "#C C attaches the clip to the tube",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R18"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C14",
+    "interval": [
+      14,
+      15
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/14.jpg",
+    "original": "#C C  fixes a plastic paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "fixes",
+          "patient": "plastic paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R19",
+      "R20"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C15",
+    "interval": [
+      15,
+      16
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/15.jpg",
+    "original": "#C C sprays the  liquid",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "liquid"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R21",
+      "R22"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C16",
+    "interval": [
+      16,
+      17
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/16.jpg",
+    "original": "#C C  examines the tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "examines",
+          "patient": "tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R23",
+      "R24"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C17",
+    "interval": [
+      17,
+      18
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/17.jpg",
+    "original": "#C C  fixes the  spray on the holder ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "fixes",
+          "patient": "spray"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R25",
+      "R26"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C18",
+    "interval": [
+      18,
+      19
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/18.jpg",
+    "original": "#C C puts the glue on the finger",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R27"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C19",
+    "interval": [
+      19,
+      20
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/19.jpg",
+    "original": "#C C fixes the tube top in the microscope",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "fixes",
+          "patient": "tube top"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R28",
+      "R29"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C20",
+    "interval": [
+      20,
+      21
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/20.jpg",
+    "original": "#C C sprays the stem with a small syringe",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "stem"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R30",
+      "R31"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C21",
+    "interval": [
+      21,
+      22
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/21.jpg",
+    "original": "#C C puts the finger in the bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "finger",
+          "location": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R32",
+      "R33"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C22",
+    "interval": [
+      22,
+      23
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/22.jpg",
+    "original": "#C C fixes the gold ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "fixes",
+          "patient": "gold"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R34",
+      "R35"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C23",
+    "interval": [
+      23,
+      24
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/23.jpg",
+    "original": "#C C picks a bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R36",
+      "R37"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C24",
+    "interval": [
+      24,
+      25
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/24.jpg",
+    "original": "#C C picks up the glue stick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "glue stick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R38",
+      "R39"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C25",
+    "interval": [
+      25,
+      26
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/25.jpg",
+    "original": "#C C picks a star ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "star"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R40",
+      "R41"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C26",
+    "interval": [
+      26,
+      27
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/26.jpg",
+    "original": "#C C places the seal on the sample bottle",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R42"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C27",
+    "interval": [
+      27,
+      28
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/27.jpg",
+    "original": "#C C picks a glue ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "glue"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R43",
+      "R44"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C28",
+    "interval": [
+      28,
+      29
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/28.jpg",
+    "original": "#c c folds the velcro",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "folds",
+          "patient": "velcro"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R45",
+      "R46"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C29",
+    "interval": [
+      29,
+      30
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/29.jpg",
+    "original": "#C C inserts the glue on the tube",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R47"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C30",
+    "interval": [
+      30,
+      31
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/30.jpg",
+    "original": "#c c tighten the plastic paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "verb": "tighten",
+          "patient": "plastic paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R48",
+      "R49"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C31",
+    "interval": [
+      31,
+      32
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/31.jpg",
+    "original": "#C C fixes the wether on the bulb",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R50"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C32",
+    "interval": [
+      32,
+      33
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/32.jpg",
+    "original": "#C C inserts the adhesive",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "inserts",
+          "patient": "adhesive"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R51",
+      "R52"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C33",
+    "interval": [
+      33,
+      34
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/33.jpg",
+    "original": "#C C  fixes the glue on the lamp holder",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R53"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C34",
+    "interval": [
+      34,
+      35
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/34.jpg",
+    "original": "#C C holds the cable",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "cable"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R54",
+      "R55"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C35",
+    "interval": [
+      35,
+      36
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/35.jpg",
+    "original": "#C C places the glue on the lamp",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R56"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C36",
+    "interval": [
+      36,
+      37
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/36.jpg",
+    "original": "#C C puts the star glue on the bottle top",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R57"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C37",
+    "interval": [
+      37,
+      38
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/37.jpg",
+    "original": "#C C fixes the tip of the bottle top on the bottle top",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R58"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C38",
+    "interval": [
+      38,
+      39
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/38.jpg",
+    "original": "#C C attaches the tube top to the nail with the adhesive",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R59"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C39",
+    "interval": [
+      39,
+      40
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/39.jpg",
+    "original": "#C C pulls the thread with the screw driver",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "pulls",
+          "patient": "thread"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R60",
+      "R61"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C40",
+    "interval": [
+      40,
+      41
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/40.jpg",
+    "original": "#C C picks a glue",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "glue"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R43",
+      "R44"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C41",
+    "interval": [
+      41,
+      42
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/41.jpg",
+    "original": "#C C picks up the container",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "container"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R62",
+      "R63"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C42",
+    "interval": [
+      42,
+      43
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/42.jpg",
+    "original": "#C C picks up the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R64",
+      "R65"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C43",
+    "interval": [
+      43,
+      44
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/43.jpg",
+    "original": "#C C puts the star sauce into the holder",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R66"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C44",
+    "interval": [
+      44,
+      45
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/44.jpg",
+    "original": "#C C holds the bag of bugles ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "bag of bugles"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R67",
+      "R68"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C45",
+    "interval": [
+      45,
+      46
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/45.jpg",
+    "original": "#C C puts the seal tape on the screw",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R69"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C46",
+    "interval": [
+      46,
+      47
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/46.jpg",
+    "original": "#C C sprays the metal with a paint spray",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "metal"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R70",
+      "R71"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C47",
+    "interval": [
+      47,
+      48
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/47.jpg",
+    "original": "#C C puts the glue on the plastic",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R72"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C48",
+    "interval": [
+      48,
+      49
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/48.jpg",
+    "original": "#c c sticks the seal tape on the holder",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R73"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C49",
+    "interval": [
+      49,
+      50
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/49.jpg",
+    "original": "#C C sticks the seal tape on the plastic bag",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R74"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C50",
+    "interval": [
+      50,
+      51
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/50.jpg",
+    "original": "#C C picks the tape",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tape"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R75",
+      "R76"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C51",
+    "interval": [
+      51,
+      52
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/51.jpg",
+    "original": "#C C picks a paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R77",
+      "R78"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C52",
+    "interval": [
+      52,
+      53
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/52.jpg",
+    "original": "#C C picks up the tissue",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "tissue"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R79",
+      "R80"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C53",
+    "interval": [
+      53,
+      54
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/53.jpg",
+    "original": "#C C picks a paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R77",
+      "R78"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C54",
+    "interval": [
+      54,
+      55
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/54.jpg",
+    "original": "#C C picks a paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R77",
+      "R78"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C55",
+    "interval": [
+      55,
+      56
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/55.jpg",
+    "original": "#C C picks the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R78",
+      "R81"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C56",
+    "interval": [
+      56,
+      57
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/56.jpg",
+    "original": "#C C puts the paper on the table",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R82",
+      "R83"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C57",
+    "interval": [
+      57,
+      58
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/57.jpg",
+    "original": "#C C picks the plastic paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "plastic paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R84",
+      "R85"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C58",
+    "interval": [
+      58,
+      59
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/58.jpg",
+    "original": "#C C picks a  syringe",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "syringe"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R86",
+      "R87"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C59",
+    "interval": [
+      59,
+      60
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/59.jpg",
+    "original": "#c c removes the paper on the table",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "removes",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R88",
+      "R89"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C60",
+    "interval": [
+      60,
+      61
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/60.jpg",
+    "original": "#C C sticks the glue on the bottle top",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R90"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C61",
+    "interval": [
+      61,
+      62
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/61.jpg",
+    "original": "#C C puts the star ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "star"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R91",
+      "R92"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C62",
+    "interval": [
+      62,
+      63
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/62.jpg",
+    "original": "#C C presses the string holder",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "presses",
+          "patient": "string holder"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R93",
+      "R94"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C63",
+    "interval": [
+      63,
+      64
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/63.jpg",
+    "original": "#C C picks up the dye bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "dye bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R95",
+      "R96"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C64",
+    "interval": [
+      64,
+      65
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/64.jpg",
+    "original": "#C C picks the container",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "container"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R97",
+      "R98"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C65",
+    "interval": [
+      65,
+      66
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/65.jpg",
+    "original": "#C C places the marker in the box",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R99"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C66",
+    "interval": [
+      66,
+      67
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/66.jpg",
+    "original": "#C C cures the eye mask with the pliers",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "cures",
+          "patient": "eye mask"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R100",
+      "R101"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C67",
+    "interval": [
+      67,
+      68
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/67.jpg",
+    "original": "#C C  puts the bead on the bottle top",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R102"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C68",
+    "interval": [
+      68,
+      69
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/68.jpg",
+    "original": "#C C picks up a tape",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "tape"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R103",
+      "R104"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C69",
+    "interval": [
+      69,
+      70
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/69.jpg",
+    "original": "#c c  inserts the paper on the paper holder",
+    "accepted_fields": {
+      "actions": [
+        {
+          "verb": "inserts",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R105",
+      "R106"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C70",
+    "interval": [
+      70,
+      71
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/70.jpg",
+    "original": "#C C picks a pack of sprayer",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "pack of sprayer"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R107",
+      "R108"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C71",
+    "interval": [
+      71,
+      72
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/71.jpg",
+    "original": "#C C picks the tissue",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tissue"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R109",
+      "R110"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C72",
+    "interval": [
+      72,
+      73
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/72.jpg",
+    "original": "#C C moves the microscope",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "microscope"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R111",
+      "R112"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C73",
+    "interval": [
+      73,
+      74
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/73.jpg",
+    "original": "#C C puts the  paper test tube on the table ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "paper test tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R113",
+      "R114"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C74",
+    "interval": [
+      74,
+      75
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/74.jpg",
+    "original": "#C C picks a container",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "container"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R98",
+      "R115"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C75",
+    "interval": [
+      75,
+      76
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/75.jpg",
+    "original": "#C C puts the bottle of dye on the table",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "bottle of dye"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R116",
+      "R117"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C76",
+    "interval": [
+      76,
+      77
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/76.jpg",
+    "original": "#C C holds the sticker",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "sticker"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R118",
+      "R119"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C77",
+    "interval": [
+      77,
+      78
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/77.jpg",
+    "original": "#C C inserts the box in the small box",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "inserts",
+          "patient": "box",
+          "body_part": "small box"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R120",
+      "R121"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C78",
+    "interval": [
+      78,
+      79
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/78.jpg",
+    "original": "#C C picks up the pen",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "pen"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R122",
+      "R123"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C79",
+    "interval": [
+      79,
+      80
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/79.jpg",
+    "original": "#C C puts a seal on the glass ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R124"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C80",
+    "interval": [
+      80,
+      81
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/80.jpg",
+    "original": "#C C  fixes the glue on the mask",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R125"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C81",
+    "interval": [
+      81,
+      82
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/81.jpg",
+    "original": "#C C picks the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R78",
+      "R81"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C82",
+    "interval": [
+      82,
+      83
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/82.jpg",
+    "original": "#C C picks the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R78",
+      "R81"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C83",
+    "interval": [
+      83,
+      84
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/83.jpg",
+    "original": "#C C picks the cotton",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "cotton"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R126",
+      "R127"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C84",
+    "interval": [
+      84,
+      85
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/84.jpg",
+    "original": "#C C picks a tissue paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tissue paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R128",
+      "R129"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C85",
+    "interval": [
+      85,
+      86
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/85.jpg",
+    "original": "#C C picks the seal ring",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "seal ring"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R130",
+      "R131"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C86",
+    "interval": [
+      86,
+      87
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/86.jpg",
+    "original": "#C C picks up a paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R65",
+      "R132"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C87",
+    "interval": [
+      87,
+      88
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/87.jpg",
+    "original": "#C C picks up the plastic bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "plastic bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R133",
+      "R134"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C88",
+    "interval": [
+      88,
+      89
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/88.jpg",
+    "original": "#c c holds the wire",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "holds",
+          "patient": "wire"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R135",
+      "R136"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C89",
+    "interval": [
+      89,
+      90
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/89.jpg",
+    "original": "#C C puts a dab on the bottle",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R137"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C90",
+    "interval": [
+      90,
+      91
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/90.jpg",
+    "original": "#C C picks up the tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R138",
+      "R139"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C91",
+    "interval": [
+      91,
+      92
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/91.jpg",
+    "original": "#C C picks up the bottle top",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "bottle top"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R140",
+      "R141"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C92",
+    "interval": [
+      92,
+      93
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/92.jpg",
+    "original": "#C C takes a pop light",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "takes",
+          "patient": "pop light"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R142",
+      "R143"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C93",
+    "interval": [
+      93,
+      94
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/93.jpg",
+    "original": "#C C  puts the beads on the bottle",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R144"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C94",
+    "interval": [
+      94,
+      95
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/94.jpg",
+    "original": "#C C holds the wire",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "wire"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R145",
+      "R146"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C95",
+    "interval": [
+      95,
+      96
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/95.jpg",
+    "original": "#C C cuts the hook",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "cuts",
+          "patient": "hook"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R147",
+      "R148"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C96",
+    "interval": [
+      96,
+      97
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/96.jpg",
+    "original": "#C C removes the ring with the pliers",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "removes",
+          "patient": "ring",
+          "body_part": "pliers"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R149",
+      "R150"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C97",
+    "interval": [
+      97,
+      98
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/97.jpg",
+    "original": "#C C holds the ring",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "ring"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R151",
+      "R152"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C98",
+    "interval": [
+      98,
+      99
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/98.jpg",
+    "original": "#C C holds the metal tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "metal tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R153",
+      "R154"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C99",
+    "interval": [
+      99,
+      100
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/99.jpg",
+    "original": "#C C picks the tube ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R155",
+      "R156"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C100",
+    "interval": [
+      100,
+      101
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/100.jpg",
+    "original": "#C C picks a tape",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tape"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R76",
+      "R157"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C101",
+    "interval": [
+      101,
+      102
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/101.jpg",
+    "original": "#c c removes paper from the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "removes",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R89",
+      "R158"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C102",
+    "interval": [
+      102,
+      103
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/102.jpg",
+    "original": "#C C attaches the rubber to the glass",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "attaches",
+          "patient": "rubber",
+          "recipient": "glass"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R159",
+      "R160"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C103",
+    "interval": [
+      103,
+      104
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/103.jpg",
+    "original": "#C C holds the glue",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "glue"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R161",
+      "R162"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C104",
+    "interval": [
+      104,
+      105
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/104.jpg",
+    "original": "#C C drops the glue on the paper",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R163"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C105",
+    "interval": [
+      105,
+      106
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/105.jpg",
+    "original": "#C C wipes the bottle with a piece of paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "wipes",
+          "patient": "bottle",
+          "body_part": "piece of paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R164",
+      "R165"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C106",
+    "interval": [
+      106,
+      107
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/106.jpg",
+    "original": "#C C pours the liquid in the glass",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R166"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C107",
+    "interval": [
+      107,
+      108
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/107.jpg",
+    "original": "#C C puts the star glue in the container",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R167"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C108",
+    "interval": [
+      108,
+      109
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/108.jpg",
+    "original": "#C C picks a bottle of # unsure",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R37",
+      "R168"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C109",
+    "interval": [
+      109,
+      110
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/109.jpg",
+    "original": "#C C puts the spray on the container",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R169"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C110",
+    "interval": [
+      110,
+      111
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/110.jpg",
+    "original": "#C C picks a glue",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "glue"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R43",
+      "R44"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C111",
+    "interval": [
+      111,
+      112
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/111.jpg",
+    "original": "#C C picks the tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R155",
+      "R156"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C112",
+    "interval": [
+      112,
+      113
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/112.jpg",
+    "original": "#C C  puts the tag on the glass",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R170"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C113",
+    "interval": [
+      113,
+      114
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/113.jpg",
+    "original": "#C C picks the glue",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "glue"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R44",
+      "R171"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C114",
+    "interval": [
+      114,
+      115
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/114.jpg",
+    "original": "#C C holds the plastic paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "plastic paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R172",
+      "R173"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C115",
+    "interval": [
+      115,
+      116
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/115.jpg",
+    "original": "#C C removes the glue on the glass",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R174"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C116",
+    "interval": [
+      116,
+      117
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/116.jpg",
+    "original": "#C C attaches the clip to the glass",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R175"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C117",
+    "interval": [
+      117,
+      118
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/117.jpg",
+    "original": "#C C puts the stick in the  syringe",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R176",
+      "R278",
+      "R279"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C118",
+    "interval": [
+      118,
+      119
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/118.jpg",
+    "original": "#C C removes the beads from the bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "removes",
+          "patient": "beads",
+          "source_location": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R177",
+      "R178"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C119",
+    "interval": [
+      119,
+      120
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/119.jpg",
+    "original": "#c c puts the mark on the holder",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R179"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C120",
+    "interval": [
+      120,
+      121
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/120.jpg",
+    "original": "#c c picks the tie ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "picks",
+          "patient": "tie"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R180",
+      "R181"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C121",
+    "interval": [
+      121,
+      122
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/121.jpg",
+    "original": "#c c picks up the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "picks up",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R182",
+      "R183"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C122",
+    "interval": [
+      122,
+      123
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/122.jpg",
+    "original": "#C C picks a bottle of water from the table",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle of water"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R184",
+      "R185"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C123",
+    "interval": [
+      123,
+      124
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/123.jpg",
+    "original": "#C C picks the bottle ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R37",
+      "R186"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C124",
+    "interval": [
+      124,
+      125
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/124.jpg",
+    "original": "#C C puts the liquid on the table",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R187"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C125",
+    "interval": [
+      125,
+      126
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/125.jpg",
+    "original": "#c c puts the shell in the jar",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R188"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C126",
+    "interval": [
+      126,
+      127
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/126.jpg",
+    "original": "#C C puts a bottle on the sponge holder",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R189",
+      "R190"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C127",
+    "interval": [
+      127,
+      128
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/127.jpg",
+    "original": "#C C puts the glue  in the bottle ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R191"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C128",
+    "interval": [
+      128,
+      129
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/128.jpg",
+    "original": "#c c touches the eclipse on the glass",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R192"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C129",
+    "interval": [
+      129,
+      130
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/129.jpg",
+    "original": "#c c write on the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "verb": "write",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R193",
+      "R194"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C130",
+    "interval": [
+      130,
+      131
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/130.jpg",
+    "original": "#C C sticks the seal on the UV bag",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R195"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C131",
+    "interval": [
+      131,
+      132
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/131.jpg",
+    "original": "#C C removes the seal",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "removes",
+          "patient": "seal"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R196",
+      "R197"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C132",
+    "interval": [
+      132,
+      133
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/132.jpg",
+    "original": "#C C inserts the dry adhesive on the finger",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R198"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C133",
+    "interval": [
+      133,
+      134
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/133.jpg",
+    "original": "#C C sprays the compound on the holder",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R199"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C134",
+    "interval": [
+      134,
+      135
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/134.jpg",
+    "original": "#C C wipes the bottles with the finger",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "wipes",
+          "patient": "bottles",
+          "body_part": "finger"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R200",
+      "R201"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C135",
+    "interval": [
+      135,
+      136
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/135.jpg",
+    "original": "#C C   fixes the syringe with the screw driver",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "fixes",
+          "patient": "syringe"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R202",
+      "R203"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C136",
+    "interval": [
+      136,
+      137
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/136.jpg",
+    "original": "#C C touches the tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "touches",
+          "patient": "tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R204",
+      "R205"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C137",
+    "interval": [
+      137,
+      138
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/137.jpg",
+    "original": "#C C sprays the bottle with the spray",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R206",
+      "R207"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C138",
+    "interval": [
+      138,
+      139
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/138.jpg",
+    "original": "#C C sprays the bottle top with the spray",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "bottle top"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R208",
+      "R209"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C139",
+    "interval": [
+      139,
+      140
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/139.jpg",
+    "original": "#C C puts the seal on the liquid ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R210"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C140",
+    "interval": [
+      140,
+      141
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/140.jpg",
+    "original": "#c c picks up a bottle of dye",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "picks up",
+          "patient": "bottle of dye"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R211",
+      "R212"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C141",
+    "interval": [
+      141,
+      142
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/141.jpg",
+    "original": "#c c puts seal on the paper",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R213"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C142",
+    "interval": [
+      142,
+      143
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/142.jpg",
+    "original": "#C C picks the  box",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "box"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R214",
+      "R215"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C143",
+    "interval": [
+      143,
+      144
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/143.jpg",
+    "original": "#C C puts the small container on the table",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "small container"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R216",
+      "R217"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C144",
+    "interval": [
+      144,
+      145
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/144.jpg",
+    "original": "#C C puts the liquid on the paper",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R218"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C145",
+    "interval": [
+      145,
+      146
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/145.jpg",
+    "original": "#C C picks a spray",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "spray"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R219",
+      "R220"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C146",
+    "interval": [
+      146,
+      147
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/146.jpg",
+    "original": "#C C Picks the dried water",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "Picks",
+          "patient": "dried water"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R221",
+      "R222"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C147",
+    "interval": [
+      147,
+      148
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/147.jpg",
+    "original": "#C C drops the  liquid ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "drops",
+          "patient": "liquid"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R223",
+      "R224"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C148",
+    "interval": [
+      148,
+      149
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/148.jpg",
+    "original": "#C C picks up the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R64",
+      "R65"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C149",
+    "interval": [
+      149,
+      150
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/149.jpg",
+    "original": "#C C picks up a small container",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "small container"
+        }
+      ],
+      "attributes": [
+        {
+          "entity": "container",
+          "property": "color",
+          "value": "small"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R225",
+      "R226",
+      "R227"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C150",
+    "interval": [
+      150,
+      151
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/150.jpg",
+    "original": "#C C puts the spray on the table ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "spray"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R228",
+      "R229"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C151",
+    "interval": [
+      151,
+      152
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/151.jpg",
+    "original": "#C C takes a small plastic",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "takes",
+          "patient": "small plastic"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R230",
+      "R231"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C152",
+    "interval": [
+      152,
+      153
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/152.jpg",
+    "original": "#C C picks a seal from the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "seal"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R232",
+      "R233"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C153",
+    "interval": [
+      153,
+      154
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/153.jpg",
+    "original": "#C C picks up a paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R65",
+      "R132"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C154",
+    "interval": [
+      154,
+      155
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/154.jpg",
+    "original": "#C C puts the lid on the water reservoir",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R234"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C155",
+    "interval": [
+      155,
+      156
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/155.jpg",
+    "original": "#C C sprays the holder with the glue",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "holder"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R235",
+      "R236"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C156",
+    "interval": [
+      156,
+      157
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/156.jpg",
+    "original": "#C C sprays a container with a spray",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "container"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R237",
+      "R238"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C157",
+    "interval": [
+      157,
+      158
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/157.jpg",
+    "original": "#C C checks the test probe",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "checks",
+          "patient": "test probe"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R239",
+      "R240"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C158",
+    "interval": [
+      158,
+      159
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/158.jpg",
+    "original": "#C C sprays the beads on the container",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R241"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C159",
+    "interval": [
+      159,
+      160
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/159.jpg",
+    "original": "#C C sprays the pump",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "pump"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R242",
+      "R243"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C160",
+    "interval": [
+      160,
+      161
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/160.jpg",
+    "original": "#C C sprays the glue on the metal",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R244"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C161",
+    "interval": [
+      161,
+      162
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/161.jpg",
+    "original": "#c c spray the glass",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "spray",
+          "patient": "glass"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R245",
+      "R246"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C162",
+    "interval": [
+      162,
+      163
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/162.jpg",
+    "original": "#C C holds the bottle top",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "bottle top"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R247",
+      "R248"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C163",
+    "interval": [
+      163,
+      164
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/163.jpg",
+    "original": "#C C touches the bottle top",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "touches",
+          "patient": "bottle top"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R249",
+      "R250"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C164",
+    "interval": [
+      164,
+      165
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/164.jpg",
+    "original": "#C C fixes the metal on the bottle",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R251"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C165",
+    "interval": [
+      165,
+      166
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/165.jpg",
+    "original": "#C C picks the top of the plastic tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "top of the plastic tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R252",
+      "R253"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C166",
+    "interval": [
+      166,
+      167
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/166.jpg",
+    "original": "#c c  removes the paper with the syringe",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "removes",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R89",
+      "R254"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C167",
+    "interval": [
+      167,
+      168
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/167.jpg",
+    "original": "#c c holds the liquid glass",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "holds",
+          "patient": "liquid glass"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R255",
+      "R256"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C168",
+    "interval": [
+      168,
+      169
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/168.jpg",
+    "original": "#c c inserts the bottle with the spray",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "c",
+          "verb": "inserts",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R257",
+      "R258"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C169",
+    "interval": [
+      169,
+      170
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/169.jpg",
+    "original": "#C C inserts the eye cap into the lens with the UV rubber",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "inserts",
+          "patient": "eye cap",
+          "body_part": "UV rubber"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R259",
+      "R260"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C170",
+    "interval": [
+      170,
+      171
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/170.jpg",
+    "original": "#C C sprays the star ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "star"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R261",
+      "R262"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C171",
+    "interval": [
+      171,
+      172
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/171.jpg",
+    "original": "#C C sprays the fish with the nail spray",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "sprays",
+          "patient": "fish"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R263",
+      "R264"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C172",
+    "interval": [
+      172,
+      173
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/172.jpg",
+    "original": "#C C picks up the bottle ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R265",
+      "R266"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C173",
+    "interval": [
+      173,
+      174
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/173.jpg",
+    "original": "#C C puts the small plastic on the table",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "small plastic"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R267",
+      "R268"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C174",
+    "interval": [
+      174,
+      175
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/174.jpg",
+    "original": "#C C  fixes a clip on the pin ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R269"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C175",
+    "interval": [
+      175,
+      176
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/175.jpg",
+    "original": "#C C puts the glitter on the metal.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R270"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C176",
+    "interval": [
+      176,
+      177
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/176.jpg",
+    "original": "#C C touches the screw",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "touches",
+          "patient": "screw"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R271",
+      "R272"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C177",
+    "interval": [
+      177,
+      178
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/177.jpg",
+    "original": "#c c inserts the pin in the plastic",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R273"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C178",
+    "interval": [
+      178,
+      179
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/178.jpg",
+    "original": "#C C puts the epoxy test tube on the tube",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "epoxy test tube"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R274",
+      "R275"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C179",
+    "interval": [
+      179,
+      180
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/c7670500-3a0f-4f31-a85a-a1cf708b2f49/179.jpg",
+    "original": "#C C puts the thread through the  plastic",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R276"
+    ],
+    "final_paragraphs": []
+  }
+]

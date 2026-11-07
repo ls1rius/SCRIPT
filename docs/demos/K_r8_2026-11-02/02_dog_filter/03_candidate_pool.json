@@ -1,0 +1,3886 @@
+{
+  "version": "F-evidence-planner-K-v2-per-record-decisions",
+  "records": [
+    {
+      "id": "R0",
+      "text": "C walks with the dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C0",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C1",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C14",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C16",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C31",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C38",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C40",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C43",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C44",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C145",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C167",
+          "original_text": "#C C walks with the dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C172",
+          "original_text": "#C C walks with the dog"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C0",
+          "interval": [
+            0,
+            1
+          ]
+        },
+        {
+          "caption_id": "C1",
+          "interval": [
+            1,
+            2
+          ]
+        },
+        {
+          "caption_id": "C14",
+          "interval": [
+            14,
+            15
+          ]
+        },
+        {
+          "caption_id": "C16",
+          "interval": [
+            16,
+            17
+          ]
+        },
+        {
+          "caption_id": "C31",
+          "interval": [
+            31,
+            32
+          ]
+        },
+        {
+          "caption_id": "C38",
+          "interval": [
+            38,
+            39
+          ]
+        },
+        {
+          "caption_id": "C40",
+          "interval": [
+            40,
+            41
+          ]
+        },
+        {
+          "caption_id": "C43",
+          "interval": [
+            43,
+            44
+          ]
+        },
+        {
+          "caption_id": "C44",
+          "interval": [
+            44,
+            45
+          ]
+        },
+        {
+          "caption_id": "C145",
+          "interval": [
+            145,
+            146
+          ]
+        },
+        {
+          "caption_id": "C167",
+          "interval": [
+            167,
+            168
+          ]
+        },
+        {
+          "caption_id": "C172",
+          "interval": [
+            172,
+            173
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R1",
+      "text": "C moves a hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C2",
+          "original_text": "#C C moves a hand"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C2",
+          "interval": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "text": "C walks dog along the road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C3",
+          "original_text": "#C C walks dog along the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C174",
+          "original_text": "#C C walks dog along the road"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C3",
+          "interval": [
+            3,
+            4
+          ]
+        },
+        {
+          "caption_id": "C174",
+          "interval": [
+            174,
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "text": "C walks dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions",
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C3",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C4",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C17",
+          "original_text": "#C C walks dog"
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C17",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C18",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C139",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C148",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C157",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C173",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C174",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C3",
+          "interval": [
+            3,
+            4
+          ]
+        },
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        },
+        {
+          "caption_id": "C17",
+          "interval": [
+            17,
+            18
+          ]
+        },
+        {
+          "caption_id": "C18",
+          "interval": [
+            18,
+            19
+          ]
+        },
+        {
+          "caption_id": "C139",
+          "interval": [
+            139,
+            140
+          ]
+        },
+        {
+          "caption_id": "C148",
+          "interval": [
+            148,
+            149
+          ]
+        },
+        {
+          "caption_id": "C157",
+          "interval": [
+            157,
+            158
+          ]
+        },
+        {
+          "caption_id": "C173",
+          "interval": [
+            173,
+            174
+          ]
+        },
+        {
+          "caption_id": "C174",
+          "interval": [
+            174,
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "text": "C walks dog on the road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C4",
+          "original_text": "#C C walks dog on the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C139",
+          "original_text": "#C C walks dog on the road "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        },
+        {
+          "caption_id": "C139",
+          "interval": [
+            139,
+            140
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "text": "C walks on a pathway.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C5",
+          "original_text": "#C C walks on a pathway"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C5",
+          "interval": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "text": "C pulls a dog leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C6",
+          "original_text": "#C C pulls a dog leash "
+        },
+        {
+          "region": "description",
+          "caption_id": "C142",
+          "original_text": "#C C pulls a dog leash "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C6",
+          "interval": [
+            6,
+            7
+          ]
+        },
+        {
+          "caption_id": "C142",
+          "interval": [
+            142,
+            143
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "text": "C pulls dog leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions",
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C6",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C36",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C140",
+          "original_text": "#C C pulls dog leash"
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C140",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C142",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C151",
+          "original_text": "#C C pulls dog leash"
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C151",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C154",
+          "original_text": "#C C pulls dog leash"
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C154",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C175",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C176",
+          "original_text": "#C C pulls dog leash"
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C176",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C6",
+          "interval": [
+            6,
+            7
+          ]
+        },
+        {
+          "caption_id": "C36",
+          "interval": [
+            36,
+            37
+          ]
+        },
+        {
+          "caption_id": "C140",
+          "interval": [
+            140,
+            141
+          ]
+        },
+        {
+          "caption_id": "C142",
+          "interval": [
+            142,
+            143
+          ]
+        },
+        {
+          "caption_id": "C151",
+          "interval": [
+            151,
+            152
+          ]
+        },
+        {
+          "caption_id": "C154",
+          "interval": [
+            154,
+            155
+          ]
+        },
+        {
+          "caption_id": "C175",
+          "interval": [
+            175,
+            176
+          ]
+        },
+        {
+          "caption_id": "C176",
+          "interval": [
+            176,
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "text": "C moves hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C7",
+          "original_text": "#C C moves hand"
+        },
+        {
+          "region": "description",
+          "caption_id": "C27",
+          "original_text": "#C C moves hand"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C7",
+          "interval": [
+            7,
+            8
+          ]
+        },
+        {
+          "caption_id": "C27",
+          "interval": [
+            27,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R9",
+      "text": "C scratches face.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C8",
+          "original_text": "#C C scratches face"
+        },
+        {
+          "region": "description",
+          "caption_id": "C9",
+          "original_text": "#C C scratches face"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C8",
+          "interval": [
+            8,
+            9
+          ]
+        },
+        {
+          "caption_id": "C9",
+          "interval": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "text": "C moves the dog leash to the right hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C10",
+          "original_text": "#C C moves the dog leash to the right hand "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C10",
+          "interval": [
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "text": "C moves dog leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C10",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C21",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C22",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C41",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C10",
+          "interval": [
+            10,
+            11
+          ]
+        },
+        {
+          "caption_id": "C21",
+          "interval": [
+            21,
+            22
+          ]
+        },
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        },
+        {
+          "caption_id": "C41",
+          "interval": [
+            41,
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "text": "C holds the bag.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C11",
+          "original_text": "#C C holds the bag"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C11",
+          "interval": [
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "text": "C holds bag.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C11",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "bag"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C11",
+          "interval": [
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R14",
+      "text": "C holds the dog leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C12",
+          "original_text": "#C C holds the dog leash"
+        },
+        {
+          "region": "description",
+          "caption_id": "C42",
+          "original_text": "#C C holds the dog leash"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C12",
+          "interval": [
+            12,
+            13
+          ]
+        },
+        {
+          "caption_id": "C42",
+          "interval": [
+            42,
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "text": "C holds dog leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions",
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C12",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C39",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C42",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C136",
+          "original_text": "#C C holds dog leash"
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C136",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C169",
+          "original_text": "#C C holds dog leash"
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C169",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C177",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C12",
+          "interval": [
+            12,
+            13
+          ]
+        },
+        {
+          "caption_id": "C39",
+          "interval": [
+            39,
+            40
+          ]
+        },
+        {
+          "caption_id": "C42",
+          "interval": [
+            42,
+            43
+          ]
+        },
+        {
+          "caption_id": "C136",
+          "interval": [
+            136,
+            137
+          ]
+        },
+        {
+          "caption_id": "C169",
+          "interval": [
+            169,
+            170
+          ]
+        },
+        {
+          "caption_id": "C177",
+          "interval": [
+            177,
+            178
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "text": "C puts the carrier bag in the bag.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C13",
+          "original_text": "#C C puts the carrier bag in the bag"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C13",
+          "interval": [
+            13,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "text": "C walks with dog on the road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C15",
+          "original_text": "#C C walks with dog on the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C165",
+          "original_text": "#C C walks with dog on the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C166",
+          "original_text": "#C C walks with dog on the road"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C15",
+          "interval": [
+            15,
+            16
+          ]
+        },
+        {
+          "caption_id": "C165",
+          "interval": [
+            165,
+            166
+          ]
+        },
+        {
+          "caption_id": "C166",
+          "interval": [
+            166,
+            167
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "text": "C walks dog with a leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C18",
+          "original_text": "#C C walks dog with a leash"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C18",
+          "interval": [
+            18,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "text": "C walks around.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C19",
+          "original_text": "#C C walks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C20",
+          "original_text": "#C C walks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C158",
+          "original_text": "#C C walks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C162",
+          "original_text": "#C C walks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C168",
+          "original_text": "#C C walks around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C19",
+          "interval": [
+            19,
+            20
+          ]
+        },
+        {
+          "caption_id": "C20",
+          "interval": [
+            20,
+            21
+          ]
+        },
+        {
+          "caption_id": "C158",
+          "interval": [
+            158,
+            159
+          ]
+        },
+        {
+          "caption_id": "C162",
+          "interval": [
+            162,
+            163
+          ]
+        },
+        {
+          "caption_id": "C168",
+          "interval": [
+            168,
+            169
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "text": "C moves the dog leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C21",
+          "original_text": "#C C moves the dog leash"
+        },
+        {
+          "region": "description",
+          "caption_id": "C41",
+          "original_text": "#C C moves the dog leash"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C21",
+          "interval": [
+            21,
+            22
+          ]
+        },
+        {
+          "caption_id": "C41",
+          "interval": [
+            41,
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "text": "C moves the dog leash in her left hand to her right hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C22",
+          "original_text": "#C C moves the dog leash in her left hand to her right hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R22",
+      "text": "C walks with a dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C23",
+          "original_text": "#C C walks with a dog"
+        },
+        {
+          "region": "description",
+          "caption_id": "C152",
+          "original_text": "#C C walks with a dog"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C23",
+          "interval": [
+            23,
+            24
+          ]
+        },
+        {
+          "caption_id": "C152",
+          "interval": [
+            152,
+            153
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R23",
+      "text": "C walks with dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original",
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C24",
+          "original_text": "#C C walks with dog "
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C144",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "body_part": "dog"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C170",
+          "original_text": "#C C walks with dog"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C144",
+          "interval": [
+            144,
+            145
+          ]
+        },
+        {
+          "caption_id": "C170",
+          "interval": [
+            170,
+            171
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R24",
+      "text": "C walks around the road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C25",
+          "original_text": "#C C walks around the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C32",
+          "original_text": "#C C walks around the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C35",
+          "original_text": "#C C walks around the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C163",
+          "original_text": "#C C walks around the road"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        },
+        {
+          "caption_id": "C32",
+          "interval": [
+            32,
+            33
+          ]
+        },
+        {
+          "caption_id": "C35",
+          "interval": [
+            35,
+            36
+          ]
+        },
+        {
+          "caption_id": "C163",
+          "interval": [
+            163,
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R25",
+      "text": "C lifts up his hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C26",
+          "original_text": "#C C lifts up his hand"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C26",
+          "interval": [
+            26,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R26",
+      "text": "C pulls the leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C28",
+          "original_text": "#C C pulls the leash"
+        },
+        {
+          "region": "description",
+          "caption_id": "C171",
+          "original_text": "#C C pulls the leash"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C28",
+          "interval": [
+            28,
+            29
+          ]
+        },
+        {
+          "caption_id": "C171",
+          "interval": [
+            171,
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R27",
+      "text": "C pulls leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C28",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C171",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C28",
+          "interval": [
+            28,
+            29
+          ]
+        },
+        {
+          "caption_id": "C171",
+          "interval": [
+            171,
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R28",
+      "text": "C lifts the hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C29",
+          "original_text": "#C C lifts the hand"
+        },
+        {
+          "region": "description",
+          "caption_id": "C33",
+          "original_text": "#C C lifts the hand"
+        },
+        {
+          "region": "description",
+          "caption_id": "C34",
+          "original_text": "#C C lifts the hand"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C29",
+          "interval": [
+            29,
+            30
+          ]
+        },
+        {
+          "caption_id": "C33",
+          "interval": [
+            33,
+            34
+          ]
+        },
+        {
+          "caption_id": "C34",
+          "interval": [
+            34,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R29",
+      "text": "C moves the hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C30",
+          "original_text": "#C C moves the hand"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C30",
+          "interval": [
+            30,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R30",
+      "text": "C pulls the dog leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C36",
+          "original_text": "#C C pulls the dog leash"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C36",
+          "interval": [
+            36,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R31",
+      "text": "C touches the face.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C37",
+          "original_text": "#C C touches the face"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C37",
+          "interval": [
+            37,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R32",
+      "text": "C holds a dog leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C39",
+          "original_text": "#C C holds a dog leash"
+        },
+        {
+          "region": "description",
+          "caption_id": "C177",
+          "original_text": "#C C holds a dog leash "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C39",
+          "interval": [
+            39,
+            40
+          ]
+        },
+        {
+          "caption_id": "C177",
+          "interval": [
+            177,
+            178
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R33",
+      "text": "C walks on the road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C135",
+          "original_text": "#C C walks on the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C153",
+          "original_text": "#C C walks on the road"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C135",
+          "interval": [
+            135,
+            136
+          ]
+        },
+        {
+          "caption_id": "C153",
+          "interval": [
+            153,
+            154
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R34",
+      "text": "C stands on the road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C137",
+          "original_text": "#C C stands on the road"
+        },
+        {
+          "region": "description",
+          "caption_id": "C143",
+          "original_text": "#C C stands on the road"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C137",
+          "interval": [
+            137,
+            138
+          ]
+        },
+        {
+          "caption_id": "C143",
+          "interval": [
+            143,
+            144
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R35",
+      "text": "C looks around the road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C138",
+          "original_text": "#C C looks around the road "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C138",
+          "interval": [
+            138,
+            139
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R36",
+      "text": "C looks at dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C141",
+          "original_text": "#C C looks at dog "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C141",
+          "interval": [
+            141,
+            142
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R37",
+      "text": "C walks on the road with a dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C144",
+          "original_text": "#C C walks on the road with a dog "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C144",
+          "interval": [
+            144,
+            145
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R38",
+      "text": "C holds a leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C146",
+          "original_text": "#C C holds a leash"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C146",
+          "interval": [
+            146,
+            147
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R39",
+      "text": "C holds leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C146",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C159",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C146",
+          "interval": [
+            146,
+            147
+          ]
+        },
+        {
+          "caption_id": "C159",
+          "interval": [
+            159,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R40",
+      "text": "C stops walking.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C147",
+          "original_text": "#C C stops walking"
+        },
+        {
+          "region": "description",
+          "caption_id": "C149",
+          "original_text": "#C C stops walking"
+        },
+        {
+          "region": "description",
+          "caption_id": "C155",
+          "original_text": "#C C stops walking"
+        },
+        {
+          "region": "description",
+          "caption_id": "C161",
+          "original_text": "#C C stops walking"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C147",
+          "interval": [
+            147,
+            148
+          ]
+        },
+        {
+          "caption_id": "C149",
+          "interval": [
+            149,
+            150
+          ]
+        },
+        {
+          "caption_id": "C155",
+          "interval": [
+            155,
+            156
+          ]
+        },
+        {
+          "caption_id": "C161",
+          "interval": [
+            161,
+            162
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R41",
+      "text": "C walks the dog along the road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C148",
+          "original_text": "#C C walks the dog along the road"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C148",
+          "interval": [
+            148,
+            149
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R42",
+      "text": "C stops.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C150",
+          "original_text": "#C C stops "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C150",
+          "interval": [
+            150,
+            151
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R43",
+      "text": "C walks the dogs.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C156",
+          "original_text": "#C C walks the dogs"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C156",
+          "interval": [
+            156,
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R44",
+      "text": "C walks dogs.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C156",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dogs"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C156",
+          "interval": [
+            156,
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R45",
+      "text": "C walks dog on a road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C157",
+          "original_text": "#C C walks dog on a road"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C157",
+          "interval": [
+            157,
+            158
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R46",
+      "text": "C holds the leash with both hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C159",
+          "original_text": "#C C holds the leash with both hands"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C159",
+          "interval": [
+            159,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R47",
+      "text": "C walks with dog on road.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C160",
+          "original_text": "#C C walks with dog on road"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C160",
+          "interval": [
+            160,
+            161
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R48",
+      "text": "C walks around the road with the dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C164",
+          "original_text": "#C C walks around the road with the dog"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C164",
+          "interval": [
+            164,
+            165
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R49",
+      "text": "C walks the dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C173",
+          "original_text": "#C C walks the dog"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C173",
+          "interval": [
+            173,
+            174
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R50",
+      "text": "C pulls the dog leash with his left hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C175",
+          "original_text": "#C C pulls the dog leash with his left hand"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C175",
+          "interval": [
+            175,
+            176
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R51",
+      "text": "C looks around.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C178",
+          "original_text": "#C C looks around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C178",
+          "interval": [
+            178,
+            179
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R52",
+      "text": "C stares around.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C179",
+          "original_text": "#C C stares around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C179",
+          "interval": [
+            179,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R53",
+      "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T0",
+            "entity_id": "E0",
+            "scene_id": "S0",
+            "description": "#C C walks dog on the road",
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 4,
+            "last_observed_at": 16,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              5
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C4",
+              "C5",
+              "C15",
+              "C16"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              4,
+              16
+            ],
+            "source_support_interval": [
+              4,
+              17
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        },
+        {
+          "caption_id": "C5",
+          "interval": [
+            5,
+            6
+          ]
+        },
+        {
+          "caption_id": "C15",
+          "interval": [
+            15,
+            16
+          ]
+        },
+        {
+          "caption_id": "C16",
+          "interval": [
+            16,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R54",
+      "text": "C walks dog on the road. The text memory associates this observation with dog (text reference E1).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T1",
+            "entity_id": "E1",
+            "scene_id": "S0",
+            "description": "#C C walks dog on the road",
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 4,
+            "last_observed_at": 16,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              5
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C4",
+              "C15",
+              "C16"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              4,
+              16
+            ],
+            "source_support_interval": [
+              4,
+              17
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        },
+        {
+          "caption_id": "C15",
+          "interval": [
+            15,
+            16
+          ]
+        },
+        {
+          "caption_id": "C16",
+          "interval": [
+            16,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R55",
+      "text": "An unresolved source observation states: \"C walks with the dog\".",
+      "qualification": "unresolved hypothesis",
+      "kinds": [
+        "temporal unresolved observation"
+      ],
+      "sources": [
+        {
+          "region": "temporal unresolved observation",
+          "record": {
+            "entity_id": "E0",
+            "scene_id": "S0",
+            "observation": {
+              "caption_id": "C14",
+              "continuity": "uncertain",
+              "state": "#C C walks with the dog",
+              "cause": {
+                "action": null,
+                "actor": null,
+                "tool": null,
+                "basis": "unknown",
+                "source_caption_ids": []
+              }
+            },
+            "pts": 14,
+            "status": "unresolved_state_observation"
+          }
+        },
+        {
+          "region": "temporal unresolved observation",
+          "record": {
+            "entity_id": "E1",
+            "scene_id": "S0",
+            "observation": {
+              "caption_id": "C14",
+              "continuity": "uncertain",
+              "state": "#C C walks with the dog",
+              "cause": {
+                "action": null,
+                "actor": null,
+                "tool": null,
+                "basis": "unknown",
+                "source_caption_ids": []
+              }
+            },
+            "pts": 14,
+            "status": "unresolved_state_observation"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C14",
+          "interval": [
+            14,
+            15
+          ]
+        }
+      ]
+    }
+  ],
+  "source_memory": {
+    "observations": [
+      {
+        "caption_id": "C0",
+        "frame_index": 0,
+        "sample_interval": [
+          0,
+          1
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C1",
+        "frame_index": 1,
+        "sample_interval": [
+          1,
+          2
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C2",
+        "frame_index": 2,
+        "sample_interval": [
+          2,
+          3
+        ],
+        "evidence": {
+          "original_text": "#C C moves a hand"
+        }
+      },
+      {
+        "caption_id": "C3",
+        "frame_index": 3,
+        "sample_interval": [
+          3,
+          4
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks dog along the road"
+        }
+      },
+      {
+        "caption_id": "C4",
+        "frame_index": 4,
+        "sample_interval": [
+          4,
+          5
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks dog on the road"
+        }
+      },
+      {
+        "caption_id": "C5",
+        "frame_index": 5,
+        "sample_interval": [
+          5,
+          6
+        ],
+        "evidence": {
+          "original_text": "#C C walks on a pathway"
+        }
+      },
+      {
+        "caption_id": "C6",
+        "frame_index": 6,
+        "sample_interval": [
+          6,
+          7
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C pulls a dog leash "
+        }
+      },
+      {
+        "caption_id": "C7",
+        "frame_index": 7,
+        "sample_interval": [
+          7,
+          8
+        ],
+        "evidence": {
+          "original_text": "#C C moves hand"
+        }
+      },
+      {
+        "caption_id": "C8",
+        "frame_index": 8,
+        "sample_interval": [
+          8,
+          9
+        ],
+        "evidence": {
+          "original_text": "#C C scratches face"
+        }
+      },
+      {
+        "caption_id": "C9",
+        "frame_index": 9,
+        "sample_interval": [
+          9,
+          10
+        ],
+        "evidence": {
+          "original_text": "#C C scratches face"
+        }
+      },
+      {
+        "caption_id": "C10",
+        "frame_index": 10,
+        "sample_interval": [
+          10,
+          11
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C moves the dog leash to the right hand "
+        }
+      },
+      {
+        "caption_id": "C11",
+        "frame_index": 11,
+        "sample_interval": [
+          11,
+          12
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "bag"
+            }
+          ],
+          "original_text": "#C C holds the bag"
+        }
+      },
+      {
+        "caption_id": "C12",
+        "frame_index": 12,
+        "sample_interval": [
+          12,
+          13
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C holds the dog leash"
+        }
+      },
+      {
+        "caption_id": "C13",
+        "frame_index": 13,
+        "sample_interval": [
+          13,
+          14
+        ],
+        "evidence": {
+          "original_text": "#C C puts the carrier bag in the bag"
+        }
+      },
+      {
+        "caption_id": "C14",
+        "frame_index": 14,
+        "sample_interval": [
+          14,
+          15
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C15",
+        "frame_index": 15,
+        "sample_interval": [
+          15,
+          16
+        ],
+        "evidence": {
+          "original_text": "#C C walks with dog on the road"
+        }
+      },
+      {
+        "caption_id": "C16",
+        "frame_index": 16,
+        "sample_interval": [
+          16,
+          17
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C17",
+        "frame_index": 17,
+        "sample_interval": [
+          17,
+          18
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks dog"
+        }
+      },
+      {
+        "caption_id": "C18",
+        "frame_index": 18,
+        "sample_interval": [
+          18,
+          19
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks dog with a leash"
+        }
+      },
+      {
+        "caption_id": "C19",
+        "frame_index": 19,
+        "sample_interval": [
+          19,
+          20
+        ],
+        "evidence": {
+          "original_text": "#C C walks around"
+        }
+      },
+      {
+        "caption_id": "C20",
+        "frame_index": 20,
+        "sample_interval": [
+          20,
+          21
+        ],
+        "evidence": {
+          "original_text": "#C C walks around"
+        }
+      },
+      {
+        "caption_id": "C21",
+        "frame_index": 21,
+        "sample_interval": [
+          21,
+          22
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C moves the dog leash"
+        }
+      },
+      {
+        "caption_id": "C22",
+        "frame_index": 22,
+        "sample_interval": [
+          22,
+          23
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C moves the dog leash in her left hand to her right hand."
+        }
+      },
+      {
+        "caption_id": "C23",
+        "frame_index": 23,
+        "sample_interval": [
+          23,
+          24
+        ],
+        "evidence": {
+          "original_text": "#C C walks with a dog"
+        }
+      },
+      {
+        "caption_id": "C24",
+        "frame_index": 24,
+        "sample_interval": [
+          24,
+          25
+        ],
+        "evidence": {
+          "original_text": "#C C walks with dog "
+        }
+      },
+      {
+        "caption_id": "C25",
+        "frame_index": 25,
+        "sample_interval": [
+          25,
+          26
+        ],
+        "evidence": {
+          "original_text": "#C C walks around the road"
+        }
+      },
+      {
+        "caption_id": "C26",
+        "frame_index": 26,
+        "sample_interval": [
+          26,
+          27
+        ],
+        "evidence": {
+          "original_text": "#C C lifts up his hand"
+        }
+      },
+      {
+        "caption_id": "C27",
+        "frame_index": 27,
+        "sample_interval": [
+          27,
+          28
+        ],
+        "evidence": {
+          "original_text": "#C C moves hand"
+        }
+      },
+      {
+        "caption_id": "C28",
+        "frame_index": 28,
+        "sample_interval": [
+          28,
+          29
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "leash"
+            }
+          ],
+          "original_text": "#C C pulls the leash"
+        }
+      },
+      {
+        "caption_id": "C29",
+        "frame_index": 29,
+        "sample_interval": [
+          29,
+          30
+        ],
+        "evidence": {
+          "original_text": "#C C lifts the hand"
+        }
+      },
+      {
+        "caption_id": "C30",
+        "frame_index": 30,
+        "sample_interval": [
+          30,
+          31
+        ],
+        "evidence": {
+          "original_text": "#C C moves the hand"
+        }
+      },
+      {
+        "caption_id": "C31",
+        "frame_index": 31,
+        "sample_interval": [
+          31,
+          32
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C32",
+        "frame_index": 32,
+        "sample_interval": [
+          32,
+          33
+        ],
+        "evidence": {
+          "original_text": "#C C walks around the road"
+        }
+      },
+      {
+        "caption_id": "C33",
+        "frame_index": 33,
+        "sample_interval": [
+          33,
+          34
+        ],
+        "evidence": {
+          "original_text": "#C C lifts the hand"
+        }
+      },
+      {
+        "caption_id": "C34",
+        "frame_index": 34,
+        "sample_interval": [
+          34,
+          35
+        ],
+        "evidence": {
+          "original_text": "#C C lifts the hand"
+        }
+      },
+      {
+        "caption_id": "C35",
+        "frame_index": 35,
+        "sample_interval": [
+          35,
+          36
+        ],
+        "evidence": {
+          "original_text": "#C C walks around the road"
+        }
+      },
+      {
+        "caption_id": "C36",
+        "frame_index": 36,
+        "sample_interval": [
+          36,
+          37
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C pulls the dog leash"
+        }
+      },
+      {
+        "caption_id": "C37",
+        "frame_index": 37,
+        "sample_interval": [
+          37,
+          38
+        ],
+        "evidence": {
+          "original_text": "#C C touches the face"
+        }
+      },
+      {
+        "caption_id": "C38",
+        "frame_index": 38,
+        "sample_interval": [
+          38,
+          39
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C39",
+        "frame_index": 39,
+        "sample_interval": [
+          39,
+          40
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C holds a dog leash"
+        }
+      },
+      {
+        "caption_id": "C40",
+        "frame_index": 40,
+        "sample_interval": [
+          40,
+          41
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C41",
+        "frame_index": 41,
+        "sample_interval": [
+          41,
+          42
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C moves the dog leash"
+        }
+      },
+      {
+        "caption_id": "C42",
+        "frame_index": 42,
+        "sample_interval": [
+          42,
+          43
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C holds the dog leash"
+        }
+      },
+      {
+        "caption_id": "C43",
+        "frame_index": 43,
+        "sample_interval": [
+          43,
+          44
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C44",
+        "frame_index": 44,
+        "sample_interval": [
+          44,
+          45
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C135",
+        "frame_index": 135,
+        "sample_interval": [
+          135,
+          136
+        ],
+        "evidence": {
+          "original_text": "#C C walks on the road"
+        }
+      },
+      {
+        "caption_id": "C136",
+        "frame_index": 136,
+        "sample_interval": [
+          136,
+          137
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C holds dog leash"
+        }
+      },
+      {
+        "caption_id": "C137",
+        "frame_index": 137,
+        "sample_interval": [
+          137,
+          138
+        ],
+        "evidence": {
+          "original_text": "#C C stands on the road"
+        }
+      },
+      {
+        "caption_id": "C138",
+        "frame_index": 138,
+        "sample_interval": [
+          138,
+          139
+        ],
+        "evidence": {
+          "original_text": "#C C looks around the road "
+        }
+      },
+      {
+        "caption_id": "C139",
+        "frame_index": 139,
+        "sample_interval": [
+          139,
+          140
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks dog on the road "
+        }
+      },
+      {
+        "caption_id": "C140",
+        "frame_index": 140,
+        "sample_interval": [
+          140,
+          141
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C pulls dog leash"
+        }
+      },
+      {
+        "caption_id": "C141",
+        "frame_index": 141,
+        "sample_interval": [
+          141,
+          142
+        ],
+        "evidence": {
+          "original_text": "#C C looks at dog "
+        }
+      },
+      {
+        "caption_id": "C142",
+        "frame_index": 142,
+        "sample_interval": [
+          142,
+          143
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C pulls a dog leash "
+        }
+      },
+      {
+        "caption_id": "C143",
+        "frame_index": 143,
+        "sample_interval": [
+          143,
+          144
+        ],
+        "evidence": {
+          "original_text": "#C C stands on the road"
+        }
+      },
+      {
+        "caption_id": "C144",
+        "frame_index": 144,
+        "sample_interval": [
+          144,
+          145
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "body_part": "dog"
+            }
+          ],
+          "original_text": "#C C walks on the road with a dog "
+        }
+      },
+      {
+        "caption_id": "C145",
+        "frame_index": 145,
+        "sample_interval": [
+          145,
+          146
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C146",
+        "frame_index": 146,
+        "sample_interval": [
+          146,
+          147
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "leash"
+            }
+          ],
+          "original_text": "#C C holds a leash"
+        }
+      },
+      {
+        "caption_id": "C147",
+        "frame_index": 147,
+        "sample_interval": [
+          147,
+          148
+        ],
+        "evidence": {
+          "original_text": "#C C stops walking"
+        }
+      },
+      {
+        "caption_id": "C148",
+        "frame_index": 148,
+        "sample_interval": [
+          148,
+          149
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks the dog along the road"
+        }
+      },
+      {
+        "caption_id": "C149",
+        "frame_index": 149,
+        "sample_interval": [
+          149,
+          150
+        ],
+        "evidence": {
+          "original_text": "#C C stops walking"
+        }
+      },
+      {
+        "caption_id": "C150",
+        "frame_index": 150,
+        "sample_interval": [
+          150,
+          151
+        ],
+        "evidence": {
+          "original_text": "#C C stops "
+        }
+      },
+      {
+        "caption_id": "C151",
+        "frame_index": 151,
+        "sample_interval": [
+          151,
+          152
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C pulls dog leash"
+        }
+      },
+      {
+        "caption_id": "C152",
+        "frame_index": 152,
+        "sample_interval": [
+          152,
+          153
+        ],
+        "evidence": {
+          "original_text": "#C C walks with a dog"
+        }
+      },
+      {
+        "caption_id": "C153",
+        "frame_index": 153,
+        "sample_interval": [
+          153,
+          154
+        ],
+        "evidence": {
+          "original_text": "#C C walks on the road"
+        }
+      },
+      {
+        "caption_id": "C154",
+        "frame_index": 154,
+        "sample_interval": [
+          154,
+          155
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C pulls dog leash"
+        }
+      },
+      {
+        "caption_id": "C155",
+        "frame_index": 155,
+        "sample_interval": [
+          155,
+          156
+        ],
+        "evidence": {
+          "original_text": "#C C stops walking"
+        }
+      },
+      {
+        "caption_id": "C156",
+        "frame_index": 156,
+        "sample_interval": [
+          156,
+          157
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dogs"
+            }
+          ],
+          "original_text": "#C C walks the dogs"
+        }
+      },
+      {
+        "caption_id": "C157",
+        "frame_index": 157,
+        "sample_interval": [
+          157,
+          158
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks dog on a road"
+        }
+      },
+      {
+        "caption_id": "C158",
+        "frame_index": 158,
+        "sample_interval": [
+          158,
+          159
+        ],
+        "evidence": {
+          "original_text": "#C C walks around"
+        }
+      },
+      {
+        "caption_id": "C159",
+        "frame_index": 159,
+        "sample_interval": [
+          159,
+          160
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "leash"
+            }
+          ],
+          "original_text": "#C C holds the leash with both hands"
+        }
+      },
+      {
+        "caption_id": "C160",
+        "frame_index": 160,
+        "sample_interval": [
+          160,
+          161
+        ],
+        "evidence": {
+          "original_text": "#C C walks with dog on road"
+        }
+      },
+      {
+        "caption_id": "C161",
+        "frame_index": 161,
+        "sample_interval": [
+          161,
+          162
+        ],
+        "evidence": {
+          "original_text": "#C C stops walking"
+        }
+      },
+      {
+        "caption_id": "C162",
+        "frame_index": 162,
+        "sample_interval": [
+          162,
+          163
+        ],
+        "evidence": {
+          "original_text": "#C C walks around"
+        }
+      },
+      {
+        "caption_id": "C163",
+        "frame_index": 163,
+        "sample_interval": [
+          163,
+          164
+        ],
+        "evidence": {
+          "original_text": "#C C walks around the road"
+        }
+      },
+      {
+        "caption_id": "C164",
+        "frame_index": 164,
+        "sample_interval": [
+          164,
+          165
+        ],
+        "evidence": {
+          "original_text": "#C C walks around the road with the dog"
+        }
+      },
+      {
+        "caption_id": "C165",
+        "frame_index": 165,
+        "sample_interval": [
+          165,
+          166
+        ],
+        "evidence": {
+          "original_text": "#C C walks with dog on the road"
+        }
+      },
+      {
+        "caption_id": "C166",
+        "frame_index": 166,
+        "sample_interval": [
+          166,
+          167
+        ],
+        "evidence": {
+          "original_text": "#C C walks with dog on the road"
+        }
+      },
+      {
+        "caption_id": "C167",
+        "frame_index": 167,
+        "sample_interval": [
+          167,
+          168
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C168",
+        "frame_index": 168,
+        "sample_interval": [
+          168,
+          169
+        ],
+        "evidence": {
+          "original_text": "#C C walks around"
+        }
+      },
+      {
+        "caption_id": "C169",
+        "frame_index": 169,
+        "sample_interval": [
+          169,
+          170
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C holds dog leash"
+        }
+      },
+      {
+        "caption_id": "C170",
+        "frame_index": 170,
+        "sample_interval": [
+          170,
+          171
+        ],
+        "evidence": {
+          "original_text": "#C C walks with dog"
+        }
+      },
+      {
+        "caption_id": "C171",
+        "frame_index": 171,
+        "sample_interval": [
+          171,
+          172
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "leash"
+            }
+          ],
+          "original_text": "#C C pulls the leash"
+        }
+      },
+      {
+        "caption_id": "C172",
+        "frame_index": 172,
+        "sample_interval": [
+          172,
+          173
+        ],
+        "evidence": {
+          "original_text": "#C C walks with the dog"
+        }
+      },
+      {
+        "caption_id": "C173",
+        "frame_index": 173,
+        "sample_interval": [
+          173,
+          174
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks the dog"
+        }
+      },
+      {
+        "caption_id": "C174",
+        "frame_index": 174,
+        "sample_interval": [
+          174,
+          175
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "walks",
+              "patient": "dog"
+            }
+          ],
+          "original_text": "#C C walks dog along the road"
+        }
+      },
+      {
+        "caption_id": "C175",
+        "frame_index": 175,
+        "sample_interval": [
+          175,
+          176
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C pulls the dog leash with his left hand"
+        }
+      },
+      {
+        "caption_id": "C176",
+        "frame_index": 176,
+        "sample_interval": [
+          176,
+          177
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C pulls dog leash"
+        }
+      },
+      {
+        "caption_id": "C177",
+        "frame_index": 177,
+        "sample_interval": [
+          177,
+          178
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "dog leash"
+            }
+          ],
+          "original_text": "#C C holds a dog leash "
+        }
+      },
+      {
+        "caption_id": "C178",
+        "frame_index": 178,
+        "sample_interval": [
+          178,
+          179
+        ],
+        "evidence": {
+          "original_text": "#C C looks around"
+        }
+      },
+      {
+        "caption_id": "C179",
+        "frame_index": 179,
+        "sample_interval": [
+          179,
+          180
+        ],
+        "evidence": {
+          "original_text": "#C C stares around"
+        }
+      }
+    ]
+  },
+  "temporal_archive": {
+    "entities": [
+      {
+        "id": "E0",
+        "label": "C",
+        "attributes": [],
+        "scene_ids": [
+          "S0"
+        ],
+        "state_ids": [
+          "T0"
+        ]
+      },
+      {
+        "id": "E1",
+        "label": "dog",
+        "attributes": [],
+        "scene_ids": [
+          "S0"
+        ],
+        "state_ids": [
+          "T1"
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "T0",
+        "entity_id": "E0",
+        "scene_id": "S0",
+        "description": "#C C walks dog on the road",
+        "logical_state_id": "T0",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 4,
+        "last_observed_at": 16,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          5
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C4",
+          "C5",
+          "C15",
+          "C16"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          4,
+          16
+        ],
+        "source_support_interval": [
+          4,
+          17
+        ]
+      },
+      {
+        "id": "T1",
+        "entity_id": "E1",
+        "scene_id": "S0",
+        "description": "#C C walks dog on the road",
+        "logical_state_id": "T1",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 4,
+        "last_observed_at": 16,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          5
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C4",
+          "C15",
+          "C16"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          4,
+          16
+        ],
+        "source_support_interval": [
+          4,
+          17
+        ]
+      }
+    ],
+    "transitions": [],
+    "relations": [],
+    "lineage": [],
+    "context_selection": {
+      "total_entities": 2,
+      "selected_entities": 2,
+      "total_states": 2,
+      "selected_states": 2,
+      "attributes_per_entity": 16,
+      "note": "Full source graph is retained separately; this is a bounded retrieval view.",
+      "partial_memory": true
+    },
+    "source_type": "caption",
+    "evidence_policy": "Assertions extracted from original timestamped summaries; identities are text inferences, not pixel-verified facts. Unreported changes and persistence remain unknown.",
+    "identities": [],
+    "partial": true,
+    "unresolved_observations": [
+      {
+        "entity_id": "E0",
+        "scene_id": "S0",
+        "observation": {
+          "caption_id": "C14",
+          "continuity": "uncertain",
+          "state": "#C C walks with the dog",
+          "cause": {
+            "action": null,
+            "actor": null,
+            "tool": null,
+            "basis": "unknown",
+            "source_caption_ids": []
+          }
+        },
+        "pts": 14,
+        "status": "unresolved_state_observation"
+      },
+      {
+        "entity_id": "E1",
+        "scene_id": "S0",
+        "observation": {
+          "caption_id": "C14",
+          "continuity": "uncertain",
+          "state": "#C C walks with the dog",
+          "cause": {
+            "action": null,
+            "actor": null,
+            "tool": null,
+            "basis": "unknown",
+            "source_caption_ids": []
+          }
+        },
+        "pts": 14,
+        "status": "unresolved_state_observation"
+      }
+    ],
+    "temporal_organization_policy": "Original caption assertions and existing local entities only. Continuity and cross-scene identity are text inferences. Unknown gaps, causes and physical identities remain unknown. Repeated actions are not automatically a single continuous state."
+  },
+  "visual_archive": [],
+  "pool_sha256": "e0d3f4f54de98a0ed28678d6130da8b70d08debd5f013c17d2f3a97be73dc431",
+  "policy": "These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence.",
+  "source_counts": {
+    "description": 90,
+    "F fact": 34,
+    "temporal state": 2,
+    "temporal unresolved observation": 2
+  }
+}

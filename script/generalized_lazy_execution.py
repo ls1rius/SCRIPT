@@ -7,7 +7,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 BATCH_OPERATION = 'h_extract_batch'
-EXECUTION_VERSION = 'H-independent-source-batch-v1'
+EXECUTION_VERSION = 'H-independent-source-batch-v3-predicate-binding'
 
 
 def batch_module():
@@ -97,8 +97,7 @@ class SourceExtractor:
                 self.recovered_sources.append((raw['inputs'], raw['output']))
 
     def inputs(self, unit, fields):
-        return dict(unit=dict(id=unit['id'], text=self.core.joint.clean_unit(unit)['text']),
-            requested_fields=fields, source_type='caption')
+        return self.core.extraction_inputs(unit, fields)
 
     def guarded(self, unit, fields):
         text = self.core.joint.clean_unit(unit)['text']
@@ -113,8 +112,7 @@ class SourceExtractor:
         if result['error']:
             return dict(accepted=dict(facts=[], mentions=[], rejected=[], uncertain=True),
                 error=dict(type='ToolFailure', message=result['error']), model_called=True)
-        # Keep the exact original F acceptance boundary, including source markers.
-        return dict(accepted=self.core.joint.accept(unit, result['data']), error=None, model_called=True)
+        return dict(accepted=self.core.accept(unit, result['data']), error=None, model_called=True)
 
     def __call__(self, unit, fields):
         inputs = self.inputs(unit, fields)
@@ -151,7 +149,7 @@ class SourceExtractor:
             results[unit['id']] = self(unit, fields)
         elif pending:
             try:
-                output, _ = self.meter.call(BATCH_OPERATION,
+                output, _ = self.meter.call(getattr(self.core, 'BATCH_OPERATION', BATCH_OPERATION),
                     dict(requests=[inputs for _, _, inputs in pending]))
                 if len(output['items']) != len(pending):
                     raise ValueError('Batch response count does not match source requests')
@@ -199,7 +197,8 @@ def ensure_batched(store, video, units, rows, fields, extract, progress=None):
 
 def extraction_counts(calls, operation):
     single = sum(row['operation'] == operation for row in calls)
-    batches = [row for row in calls if row['operation'] == BATCH_OPERATION]
+    batch_operation = 'n_extract_batch' if operation == 'n_extract_fields' else BATCH_OPERATION
+    batches = [row for row in calls if row['operation'] == batch_operation]
     return dict(field_extraction_model_calls=single + len(batches),
         field_extraction_source_requests=single + sum(len(row['parameters']['requests']) for row in batches),
         extraction_batches=len(batches))

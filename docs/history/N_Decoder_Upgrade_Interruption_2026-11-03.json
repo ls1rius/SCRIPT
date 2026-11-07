@@ -1,0 +1,28 @@
+{
+  "reason": "user_requested_decoder_upgrade",
+  "authorization": "MN在bug修复后重新跑起来",
+  "prior_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2",
+  "worker_pid": 3015989,
+  "controller_pid": 3010375,
+  "requested_at": "2026-11-03T13:00:55.090749+08:00",
+  "interrupted_at": "2026-11-03T13:00:56.723119+08:00",
+  "between_calls_no_pending": true,
+  "pending_files": [],
+  "progress_at_interruption": {
+    "stage": "query",
+    "index": 41,
+    "question_id": "e04cd624-17e1-4986-b344-55aa92d7c0c3",
+    "updated_at": "2026-11-03T12:58:41.615401+08:00"
+  },
+  "frozen_file_count": 1601,
+  "frozen_hashes_unchanged": true,
+  "method": "SIGSTOP coordinator, verify no pending model calls, SIGINT coordinator then SIGCONT; loaded model worker closes via existing finally block. Runtime files unchanged.",
+  "stopped_at": "2026-11-03T13:01:01.535884+08:00",
+  "final_queue_status": {
+    "state": "failed",
+    "controller_pid": 3010375,
+    "updated_at": "2026-11-03T13:01:01.436095+08:00",
+    "error_type": "RuntimeError",
+    "error": "N worker failed or incomplete; exit=-2"
+  }
+}

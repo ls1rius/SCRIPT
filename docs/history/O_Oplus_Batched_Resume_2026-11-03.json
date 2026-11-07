@@ -1,0 +1,192 @@
+{
+  "updated_at": "2026-11-03T14:12:24.098849+08:00",
+  "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-batched-20261103-r2",
+  "controller": {
+    "pid": 3169731,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-batched-20261103-r2/cohost_queue.py"
+    ],
+    "started_at": "2026-11-03T14:09:29.974146+08:00"
+  },
+  "parent": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1",
+  "interruption": {
+    "updated_at": "2026-11-03T14:08:27.228581+08:00",
+    "reason": "User authorized batching upgrade; stop between model calls, preserve serial prefix",
+    "worker_pid": 3152235,
+    "controller_pid": 3152099,
+    "progress": {
+      "stage": "matrix_filter",
+      "case": 1,
+      "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+      "condition": "question_options",
+      "sentence": 105,
+      "total_sentences": 115,
+      "updated_at": "2026-11-03T14:08:27.215361+08:00"
+    },
+    "pending_calls": 0,
+    "model_failure": false
+  },
+  "inherited_files": 1384,
+  "inherited_answers": 2,
+  "batch_size": 4,
+  "isolation": [
+    "Single question and option condition per batch",
+    "Each tensor row is a separate unchanged prompt",
+    "Separate attention masks and JSON parser states",
+    "Output order, sentence identity, scope and input hash checked",
+    "No persistent KV state shared between calls"
+  ],
+  "cost_policy": "Charge batch wall time once; individual prompt/token/output audit retained, inherited serial costs charged once",
+  "cpu_validation": {
+    "regression_checks": 41,
+    "resume_checks": 13
+  },
+  "real_batch_validation": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "four_independent_source_prompts",
+        "passed": true
+      },
+      {
+        "name": "independent_filter_schemas_and_prompts",
+        "passed": true,
+        "serial_labels": [
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          }
+        ],
+        "batch_labels": [
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          }
+        ],
+        "labels_equal": true
+      },
+      {
+        "name": "identity_aliases_and_eos_padding",
+        "passed": true
+      }
+    ],
+    "error": null,
+    "speed": {
+      "serial_seconds": 21.408059157431126,
+      "batch_seconds": 11.250414576381445,
+      "ratio": 1.902868468720622,
+      "rows": 4,
+      "scope": "Same four requests on the shared GPU, serial then batched; changing contention is not controlled."
+    },
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 44.95837737247348,
+      "total": 44.95837737247348,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 44.95837737247348,
+      "text_cache_hits": 0,
+      "total_cap": 900,
+      "budget_violation": false,
+      "by_operation": {
+        "o_independent_batch": 23.550318215042353,
+        "o_filter": 21.408059157431126
+      },
+      "call_count": 7,
+      "resources": {
+        "cpu_seconds": 44.873733359,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 45.68561368435621,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17331165696
+      }
+    },
+    "updated_at": "2026-11-03T14:10:59.512112+08:00"
+  },
+  "MN_unchanged": true,
+  "semantic_core_unchanged": true,
+  "launch": {
+    "worker_pid": 3169832,
+    "gpu": "2",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-batched-20261103-r2/runtime/script/run_o_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-batched-20261103-r2"
+    ],
+    "started_at": "2026-11-03T14:09:50.385859+08:00"
+  },
+  "progress": {
+    "stage": "matrix_compose",
+    "case": 1,
+    "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+    "condition": "question_options",
+    "sentence": 79,
+    "total_sentences": 115,
+    "batch_size": 4,
+    "updated_at": "2026-11-03T14:12:03.312994+08:00"
+  },
+  "continuity_audit": {
+    "updated_at": "2026-11-03T14:12:24.098378+08:00",
+    "passed": true,
+    "frozen_files_verified": 4754,
+    "old_frozen_files_verified": 1641,
+    "inherited_artifacts_unchanged": 1375,
+    "inherited_call_log_prefixes_verified": 3,
+    "formal_batch_calls_verified": 5,
+    "formal_batch_rows_verified": 19,
+    "scope": "All committed formal batches at this timestamp; per-row question/options/source/selection/prompt/output mapping checked"
+  },
+  "queue_status": {
+    "state": "running",
+    "controller_pid": 3169731,
+    "updated_at": "2026-11-03T14:12:20.412188+08:00",
+    "worker_pid": 3169832,
+    "gpu": "2",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-batched-20261103-r2/runtime/script/run_o_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-batched-20261103-r2"
+    ],
+    "started_at": "2026-11-03T14:09:50.385859+08:00"
+  }
+}

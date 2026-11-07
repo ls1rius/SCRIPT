@@ -1,0 +1,201 @@
+{
+  "updated_at": "2026-11-03T16:56:39.882305+08:00",
+  "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-20261103-r1",
+  "controller": {
+    "pid": 3267898,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-20261103-r1/cohost_queue.py"
+    ],
+    "started_at": "2026-11-03T16:54:44.541921+08:00"
+  },
+  "planned": 300,
+  "planned_new_answers": 600,
+  "conditions": [
+    "question_only"
+  ],
+  "arms": [
+    "O_question_only",
+    "Oplus_question_only"
+  ],
+  "parent_N": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r3",
+  "source_ready": 66,
+  "source_policy": "Freeze each completed N case in original cohort order; wait for unfinished cases, stop if upstream fails.",
+  "source_scope": "Full 300-question cohort; O/O+ question-only selection/composition on frozen completed N evidence; not an independent navigation evaluation.",
+  "batch_size": 4,
+  "question_required": true,
+  "selection_and_composition_options": false,
+  "final_answer_options": "all",
+  "old_diagnostic_answers_reused": false,
+  "semantic_core_unchanged_from_diagnostic": true,
+  "frozen_files": 6629,
+  "cpu_checks": 35,
+  "real_batch_validation": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "four_independent_source_prompts",
+        "passed": true
+      },
+      {
+        "name": "independent_filter_schemas_and_prompts",
+        "passed": true,
+        "serial_labels": [
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          }
+        ],
+        "batch_labels": [
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          },
+          {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          }
+        ],
+        "labels_equal": true
+      },
+      {
+        "name": "identity_aliases_and_eos_padding",
+        "passed": true
+      }
+    ],
+    "error": null,
+    "speed": {
+      "serial_seconds": 11.7303951010108,
+      "batch_seconds": 7.095417991280556,
+      "ratio": 1.6532352449744459,
+      "rows": 4,
+      "scope": "Same four requests on the shared GPU, serial then batched; changing contention is not controlled."
+    },
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 26.467312593013048,
+      "total": 26.467312593013048,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 26.467312593013048,
+      "text_cache_hits": 0,
+      "total_cap": 900,
+      "budget_violation": false,
+      "by_operation": {
+        "o_independent_batch": 14.736917492002249,
+        "o_filter": 11.7303951010108
+      },
+      "call_count": 7,
+      "resources": {
+        "cpu_seconds": 26.319807904000008,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 27.16595147550106,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17331165696
+      }
+    },
+    "updated_at": "2026-11-03T16:55:53.796737+08:00"
+  },
+  "ablation": {
+    "deferred": true,
+    "implementation_retained": [
+      "script/o_composition_context_eval.py",
+      "script/run_o_sentence_experiment.py"
+    ],
+    "frozen_completed_results": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-batched-20261103-r2",
+    "arms": [
+      "O_question_options",
+      "Oplus_question_options"
+    ],
+    "run_now": false
+  },
+  "budget_per_case_seconds": 3600,
+  "failed_calls_stop": true,
+  "hidden_retries": false,
+  "MN_unchanged": true,
+  "default_L_E_unchanged": true,
+  "training": false,
+  "adapter": null,
+  "known_semantic_limitations": "Historical question-only partial_filter failed; this is a user-authorized evaluation of unchanged semantics, not a claim of semantic repair.",
+  "queue_status": {
+    "state": "running",
+    "controller_pid": 3267898,
+    "updated_at": "2026-11-03T16:56:35.041382+08:00",
+    "worker_pid": 3268061,
+    "gpu": "2",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-20261103-r1/runtime/script/run_o_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-20261103-r1"
+    ],
+    "started_at": "2026-11-03T16:55:05.027796+08:00"
+  },
+  "launch": {
+    "worker_pid": 3268061,
+    "gpu": "2",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-20261103-r1/runtime/script/run_o_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-20261103-r1"
+    ],
+    "started_at": "2026-11-03T16:55:05.027796+08:00"
+  },
+  "progress": {
+    "stage": "shared_extraction",
+    "case": 1,
+    "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+    "condition": "source_only",
+    "sentence": 29,
+    "total_sentences": 115,
+    "batch_size": 4,
+    "updated_at": "2026-11-03T16:56:33.858571+08:00"
+  },
+  "launch_audit": {
+    "passed": true,
+    "updated_at": "2026-11-03T16:56:39.878451+08:00",
+    "formal_extraction_batches": 7,
+    "formal_rows": 28,
+    "all_inputs_source_only": true,
+    "new_frozen_files": 6629,
+    "old_diagnostic_frozen_files": 4754,
+    "MN_frozen_hashes_unchanged": true,
+    "conditions": [
+      "question_only"
+    ]
+  }
+}

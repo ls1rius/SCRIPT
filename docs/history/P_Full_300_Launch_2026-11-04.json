@@ -1,0 +1,103 @@
+{
+  "at": "2026-11-04T11:23:30.568736+08:00",
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r1",
+  "request": "P继续跑啊 跑300题的",
+  "version": "P-blind-witness-explicit-semantic-rejection-v15",
+  "planned": 300,
+  "inherited_demo_results": 3,
+  "new_cases": 297,
+  "known_demo_correct": 2,
+  "new_processing_seconds": 0,
+  "prior_success_seconds": 829.5244764313102,
+  "method_files_unchanged": true,
+  "ready_source_cases": 139,
+  "fresh_gate_checks": 58,
+  "cpu_tests_passed": 46,
+  "parent_frozen_audit": {
+    "M": {
+      "frozen_files": 12446,
+      "passed": true
+    },
+    "N": {
+      "frozen_files": 8910,
+      "passed": true
+    },
+    "O": {
+      "frozen_files": 49467,
+      "passed": true
+    },
+    "P_demo": {
+      "frozen_files": 236,
+      "passed": true
+    }
+  },
+  "launch": {
+    "controller_pid": 3796570,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r1/runtime/script/run_p_full_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r1"
+    ],
+    "at": "2026-11-04T11:22:52.264662+08:00",
+    "user_request": "P继续跑啊 跑300题的"
+  },
+  "status": {
+    "state": "running",
+    "controller_pid": 3796570,
+    "updated_at": "2026-11-04T11:24:53.545710+08:00",
+    "worker_pid": 3796742
+  },
+  "source_policy": "Same N sources as O; freeze each completed source; original cohort order; no independent navigation; missing source releases GPU; no retries",
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 23552,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory",
+    "admission_mode": "memory_shared",
+    "allocator_limit_mib": 21504
+  },
+  "latest_reload": {
+    "at": "2026-11-04T11:23:39.232136+08:00",
+    "seconds": 8.976111855357885,
+    "details": {
+      "ready": true,
+      "preparation": {
+        "model_load_seconds": 5.9438466578722,
+        "tokenizer_constraint_seconds": 2.1593778170645237
+      },
+      "usage": {
+        "cuda_allocator_limit_mib": 21504,
+        "model_tensor_pixels": {},
+        "input_tokens_by_model": {},
+        "cpu_seconds": 8.406041592,
+        "gpu_resident_seconds": 6.183890923857689,
+        "gpu_peak_allocated_bytes": 16584893952
+      }
+    },
+    "gpu": {
+      "index": "1",
+      "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+      "free_mib": 63559,
+      "utilization": 98,
+      "effective_free_mib": 56325,
+      "reservation_id": "3796742-731c967b92594a1ea8246353a10129cd"
+    }
+  },
+  "progress": {
+    "stage": "generic_validation",
+    "updated_at": "2026-11-04T11:23:39.232589+08:00"
+  },
+  "launch_processes_alive": {
+    "3796570": true,
+    "3796742": true
+  }
+}

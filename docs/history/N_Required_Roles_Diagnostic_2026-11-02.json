@@ -1,0 +1,318 @@
+{
+  "version": "N-M-required-roles-source-closure-v2",
+  "extractor": "N-required-role-review-v2",
+  "run_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-brick-wall-diagnostic-20261102-r2",
+  "report": {
+    "case_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+    "complete": true,
+    "error": null,
+    "new_navigation": false,
+    "answer": {
+      "selected_option": "3",
+      "raw": "prediction: D"
+    },
+    "gold": "1",
+    "correct": false,
+    "frame107": {
+      "caption_id": "C107",
+      "frame_index": 107,
+      "sample_interval": [
+        107,
+        108
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick",
+            "body_part": "left hand",
+            "location": "brick wall"
+          }
+        ],
+        "original_text": "#C C moves a brick on the brick wall with his left hand. "
+      }
+    },
+    "frame107_candidates": [
+      {
+        "record": {
+          "id": "R43",
+          "text": "C moves a brick on the brick wall with his left hand.",
+          "qualification": "source assertion",
+          "kinds": [
+            "caption original"
+          ],
+          "sources": [
+            {
+              "region": "description",
+              "caption_id": "C107",
+              "original_text": "#C C moves a brick on the brick wall with his left hand. "
+            }
+          ],
+          "occurrences": [
+            {
+              "caption_id": "C107",
+              "interval": [
+                107,
+                108
+              ]
+            }
+          ]
+        },
+        "decision": "keep"
+      },
+      {
+        "record": {
+          "id": "R44",
+          "text": "C moves brick with left hand. The location of this action is brick wall.",
+          "qualification": "source assertion",
+          "kinds": [
+            "H actions"
+          ],
+          "sources": [
+            {
+              "region": "H fact",
+              "caption_id": "C107",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick",
+                "body_part": "left hand",
+                "location": "brick wall"
+              }
+            }
+          ],
+          "occurrences": [
+            {
+              "caption_id": "C107",
+              "interval": [
+                107,
+                108
+              ]
+            }
+          ]
+        },
+        "decision": "keep"
+      }
+    ],
+    "wall_in_accepted_fields": true,
+    "left_hand_in_accepted_fields": true,
+    "wall_in_final_description": true,
+    "left_hand_in_frame107_final": true,
+    "source_preservation": {
+      "overrides": [
+        {
+          "record_id": "R5",
+          "model_decision": "skip",
+          "actual_decision": "keep",
+          "caption_ids": [
+            "C129",
+            "C147",
+            "C160",
+            "C161",
+            "C4"
+          ],
+          "dependent_record_ids": [
+            "R6"
+          ],
+          "reason": "Selected H facts lack a whole-source coverage proof; preserve their archived original clause."
+        },
+        {
+          "record_id": "R26",
+          "model_decision": "skip",
+          "actual_decision": "keep",
+          "caption_ids": [
+            "C29"
+          ],
+          "dependent_record_ids": [
+            "R27"
+          ],
+          "reason": "Selected H facts lack a whole-source coverage proof; preserve their archived original clause."
+        },
+        {
+          "record_id": "R28",
+          "model_decision": "skip",
+          "actual_decision": "keep",
+          "caption_ids": [
+            "C32"
+          ],
+          "dependent_record_ids": [
+            "R29"
+          ],
+          "reason": "Selected H facts lack a whole-source coverage proof; preserve their archived original clause."
+        },
+        {
+          "record_id": "R39",
+          "model_decision": "skip",
+          "actual_decision": "keep",
+          "caption_ids": [
+            "C104",
+            "C141",
+            "C152"
+          ],
+          "dependent_record_ids": [
+            "R40"
+          ],
+          "reason": "Selected H facts lack a whole-source coverage proof; preserve their archived original clause."
+        },
+        {
+          "record_id": "R43",
+          "model_decision": "skip",
+          "actual_decision": "keep",
+          "caption_ids": [
+            "C107"
+          ],
+          "dependent_record_ids": [
+            "R44"
+          ],
+          "reason": "Selected H facts lack a whole-source coverage proof; preserve their archived original clause."
+        },
+        {
+          "record_id": "R64",
+          "model_decision": "skip",
+          "actual_decision": "keep",
+          "caption_ids": [
+            "C139"
+          ],
+          "dependent_record_ids": [
+            "R65"
+          ],
+          "reason": "Selected H facts lack a whole-source coverage proof; preserve their archived original clause."
+        },
+        {
+          "record_id": "R71",
+          "model_decision": "skip",
+          "actual_decision": "keep",
+          "caption_ids": [
+            "C151"
+          ],
+          "dependent_record_ids": [
+            "R50"
+          ],
+          "reason": "Selected H facts lack a whole-source coverage proof; preserve their archived original clause."
+        }
+      ],
+      "rule": "Retained partial H facts require their available original source; all-skipped sources stay skipped."
+    },
+    "final_wall_lines": [
+      "Frames [107,108): C moves a brick on the brick wall with his left hand.",
+      "Frames [107,108): C moves brick with left hand. The location of this action is brick wall."
+    ],
+    "pool_records": 82,
+    "retained_records": 49,
+    "old_L": {
+      "question_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+      "selected_option": "1",
+      "error": null,
+      "raw_response": "prediction: B",
+      "input_tokens": 1880,
+      "output_tokens": 4,
+      "seconds": 0.12913770601153374,
+      "input_sha256": "682a342b2844f09321e5930c33c404d57b5e55e93ab2e53d285bea1cd5ee0281",
+      "parser": "constrained_prediction_letter",
+      "reader_protocol": "K-constrained-prediction-letter-v1"
+    },
+    "old_all": {
+      "question_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+      "selected_option": "3",
+      "error": null,
+      "raw_response": "prediction: D",
+      "input_tokens": 3025,
+      "output_tokens": 4,
+      "seconds": 0.17984090745449066,
+      "input_sha256": "786638a60ef6a04cee49840cad1e5a806afb53fb2411c87dd2c47771c0f79f74",
+      "parser": "constrained_prediction_letter",
+      "reader_protocol": "K-constrained-prediction-letter-v1"
+    },
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 374.5304549112916,
+      "total": 374.5304549112916,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 374.5304549112916,
+      "text_cache_hits": 0,
+      "total_cap": 1500,
+      "budget_violation": false,
+      "by_operation": {
+        "f_batch_preparation": 0.7244450151920319,
+        "n_extract_batch": 332.8921991325915,
+        "n_evidence_materialization": 0.025266490876674652,
+        "n_evidence_plan": 40.39690809324384,
+        "n_answer": 0.4916361793875694
+      },
+      "call_count": 100,
+      "resources": {
+        "cpu_seconds": 374.5220976070001,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 374.7216973155737,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17643062272
+      }
+    },
+    "updated_at": "2026-11-02T23:42:50.406045+08:00"
+  },
+  "cpu_tests_passed": 109,
+  "extraction_omission_fixed_in_this_call": true,
+  "field_necessity_validated": false,
+  "answer_correct": false,
+  "improvement_over_original_L": false,
+  "interpretation": "Original L was correct (B); N v1 and v2 both wrong (D). Complete extraction is not sufficient or necessarily required for correct QA. No causal attribution to wall/hand: entire extraction and planning regenerated.",
+  "user_correction": "Necessary fields must be planned from question and all option distinctions. The original 10-field request includes apparently unnecessary body_part; current source-only extraction cannot judge task necessity.",
+  "scope": "Fixed original 135 samples, 64 sources and 10 fields; no new navigation or field planning; no retries, training or 300-question evaluation.",
+  "source_preservation": "7 original-caption skip decisions overridden to keep, with proposed and executed plans and source dependencies saved; can increase redundancy.",
+  "frozen_integrity": {
+    "scene-planned-M-L-300-20261102-r13": {
+      "files": 493,
+      "changed": []
+    },
+    "N-brick-wall-diagnostic-20261102-r1": {
+      "files": 205,
+      "changed": []
+    },
+    "N-brick-wall-diagnostic-20261102-r2": {
+      "files": 205,
+      "changed": []
+    },
+    "m_core_matches_frozen": true
+  },
+  "prior_attempts": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-brick-wall-diagnostic-20261102-r1",
+      "report_sha256": "ee56d9f08e1a4bae438c4a72236a260e19086119c10410fd65db39a1b8ffb313",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 205.29436986893415,
+        "total": 205.29436986893415,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 205.29436986893415,
+        "text_cache_hits": 0,
+        "total_cap": 1500,
+        "budget_violation": false,
+        "by_operation": {
+          "f_batch_preparation": 0.542841587215662,
+          "n_extract_batch": 166.21215711534023,
+          "n_evidence_materialization": 0.026837758719921112,
+          "n_evidence_plan": 38.056636832654476,
+          "n_answer": 0.4558965750038624
+        },
+        "call_count": 100,
+        "resources": {
+          "cpu_seconds": 205.260831206,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 205.4767768867314,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 17611624448
+        }
+      }
+    }
+  ],
+  "M_running_unchanged": true,
+  "defaults_unchanged": [
+    "L",
+    "E"
+  ]
+}

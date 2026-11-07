@@ -1,0 +1,150 @@
+{
+  "at": "2026-11-06T22:20:19.052430+08:00",
+  "active_root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r6",
+  "launch": {
+    "pid": 1591878,
+    "identity": "1782314193",
+    "at": "2026-11-06T22:15:06.143490+08:00"
+  },
+  "workers": {
+    "0": {
+      "gpu": "0",
+      "model_pid": 1592028,
+      "stage": "learning"
+    },
+    "1": {
+      "gpu": "1",
+      "model_pid": 1592801,
+      "stage": "actor_ready"
+    },
+    "2": {
+      "gpu": null,
+      "model_pid": null,
+      "stage": "waiting_for_gpu"
+    },
+    "3": {
+      "gpu": null,
+      "model_pid": null,
+      "stage": "waiting_for_gpu"
+    },
+    "4": {
+      "gpu": "0",
+      "model_pid": 1592813,
+      "stage": "actor_ready"
+    },
+    "5": {
+      "gpu": "0",
+      "model_pid": 1592849,
+      "stage": "actor_ready"
+    },
+    "6": {
+      "gpu": "1",
+      "model_pid": 1592786,
+      "stage": "actor_ready"
+    },
+    "7": {
+      "gpu": "1",
+      "model_pid": 1592829,
+      "stage": "actor_ready"
+    }
+  },
+  "training_status": {
+    "stage": "gradient_update",
+    "pid": 1592028,
+    "gpu": "0",
+    "at": "2026-11-06T22:20:05.095139+08:00",
+    "epoch": 1,
+    "epochs": 6,
+    "question": 18,
+    "questions": 200,
+    "completed_groups": 17,
+    "optimizer_steps": 7,
+    "policy_gradient_updates": 1
+  },
+  "checkpoint_resume": {
+    "checkpoint": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r4/training/policies/v000006",
+    "optimizer_steps": 6,
+    "completed_groups": 16,
+    "epoch": 1,
+    "next_offset": 16,
+    "policy_gradient_updates": 1,
+    "adapter_sha256": "1e0bec063d35f7748d1e56d3de1b2767572349bb78103ea52dc5375a356c5229",
+    "optimizer_sha256": "ca914245af11f09d2c5028c2406c7a7d8173bb300d3584f86a04c0ca60950de5",
+    "no_inflight_jobs": true,
+    "status": {
+      "stage": "group_complete",
+      "pid": 1575575,
+      "gpu": "1",
+      "at": "2026-11-06T22:04:42.720427+08:00",
+      "epoch": 1,
+      "epochs": 6,
+      "question": 16,
+      "questions": 200,
+      "completed_groups": 16,
+      "optimizer_steps": 6,
+      "policy_gradient_updates": 1,
+      "mean_reward": 0.53125
+    },
+    "captured_unix": 1793973884.644687
+  },
+  "optimizer_restore": {
+    "passed": true,
+    "optimizer_steps": 6,
+    "optimizer_state_entries": 112,
+    "completed_groups": 16,
+    "policy_sha256": "1e0bec063d35f7748d1e56d3de1b2767572349bb78103ea52dc5375a356c5229",
+    "model_identity": 138755717867776,
+    "at": "2026-11-06T22:15:35.771405+08:00"
+  },
+  "first_resumed_gradient": {
+    "passed": true,
+    "epoch": 1,
+    "question_ids": [
+      "9748f410-2316-4a2f-9893-56f8f240dc67"
+    ],
+    "optimizer_steps": 7,
+    "previous_optimizer_steps": 6,
+    "finite_nonzero_adapter_gradient": true,
+    "base_gradients_absent": true,
+    "maximum_likelihood_drift": 0.0,
+    "policy_signal": false,
+    "state_restored": true,
+    "at": "2026-11-06T22:17:53.636042+08:00"
+  },
+  "inherited_trajectory_count": 32,
+  "inherited_raw_files_verified": 3137,
+  "inherited_rollout_processing_seconds": 2050.815648674965,
+  "concurrency": "One learner, seven optional actor candidates; five actors admitted now. Adaptive1..4 question batches, same-policy barrier",
+  "gpu_admission_fix": "Bracket process usage with device inventory; min device free and hard total - committed capacities - outside allocations -1024MiB",
+  "original_admission_limits_mib": {
+    "learner": 43008,
+    "actor": 24576
+  },
+  "physical_pools_mib": {
+    "learner": 40960,
+    "actors": [
+      22528,
+      22528,
+      22528,
+      22528,
+      22528
+    ]
+  },
+  "optional_startup_oom_policy": "Only pre-model-load pool OOM releases admission and waits; no formal model calls repeated or invalid outputs converted to rewards",
+  "previous_r5_failed_before_any_new_optimizer_update": true,
+  "cpu_tests": "----------------------------------------------------------------------\nRan 57 tests in 13.598s\n\nOK (skipped=1)",
+  "monitor": {
+    "pid": 1594531,
+    "at": "2026-11-06T22:19:36.553696+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "frozen_runtime_hashes": {
+    "script/q6_parallel_rl.py": "4c1ab3c5ae6e7bc1704c0011f93954b3f375e380454468389f65db93f2d6f87d",
+    "script_core/q6_rl.py": "8c5986089012170778bc67a5765508ce974f6c6786f0e9d7cee7ffcbbb7fbc9f",
+    "script/gpu_queue.py": "8fc380f7cbdf713b5d085e39b37756424dba082a45b50dbac399d704cf26cb43",
+    "script/gpu_shared_queue.py": "34583065f52b5d6511b15ea6d8ed6217b67b9313033b6ca264d1951ca5ed15b5"
+  },
+  "limits": "Early epoch1; not6 completed epochs or RL QA improvement. GPU2/3 retained for other projects; original300 remains development validation."
+}

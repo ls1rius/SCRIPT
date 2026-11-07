@@ -1,0 +1,1375 @@
+{
+  "inputs": {
+    "question": "Based on the video, identify the primary responsibility of the person referred to as \"c\" and describe how their activities contribute to the overall scene.",
+    "options": [
+      "C is responsible for building the construction site.",
+      "The individual, c, is responsible for the crucial task of maintaining the construction site efficiently.",
+      "Person c is responsible for meticulously inspecting the construction site for safety and progress.",
+      "C is responsible for keeping the construction site clean and free of debris.",
+      "The individual, c, is duly responsible for meticulously repairing and maintaining the construction site."
+    ],
+    "captions": [
+      {
+        "id": "C45",
+        "interval": [
+          45,
+          46
+        ],
+        "text": "#C C holds the brush with the right hand"
+      },
+      {
+        "id": "C46",
+        "interval": [
+          46,
+          47
+        ],
+        "text": "#C C looks at the grass"
+      },
+      {
+        "id": "C47",
+        "interval": [
+          47,
+          48
+        ],
+        "text": "#C C looks at the grass on the road "
+      },
+      {
+        "id": "C48",
+        "interval": [
+          48,
+          49
+        ],
+        "text": "#C C looks at the ground"
+      },
+      {
+        "id": "C49",
+        "interval": [
+          49,
+          50
+        ],
+        "text": "#C C looks at the grass"
+      },
+      {
+        "id": "C50",
+        "interval": [
+          50,
+          51
+        ],
+        "text": "#C C looks at the grass"
+      },
+      {
+        "id": "C51",
+        "interval": [
+          51,
+          52
+        ],
+        "text": "#C C looks at the grass"
+      },
+      {
+        "id": "C52",
+        "interval": [
+          52,
+          53
+        ],
+        "text": "#C C looks around the compound"
+      },
+      {
+        "id": "C53",
+        "interval": [
+          53,
+          54
+        ],
+        "text": "#C C stands on the compound "
+      },
+      {
+        "id": "C54",
+        "interval": [
+          54,
+          55
+        ],
+        "text": "#O person Y walks on the compound."
+      },
+      {
+        "id": "C55",
+        "interval": [
+          55,
+          56
+        ],
+        "text": "#C C looks at the grass trimmer"
+      },
+      {
+        "id": "C56",
+        "interval": [
+          56,
+          57
+        ],
+        "text": "#C C Looks at the grass"
+      },
+      {
+        "id": "C57",
+        "interval": [
+          57,
+          58
+        ],
+        "text": "#C C looks around the compound."
+      },
+      {
+        "id": "C58",
+        "interval": [
+          58,
+          59
+        ],
+        "text": "#C C stares at the garden"
+      },
+      {
+        "id": "C59",
+        "interval": [
+          59,
+          60
+        ],
+        "text": "#C C looks at the rake"
+      },
+      {
+        "id": "C60",
+        "interval": [
+          60,
+          61
+        ],
+        "text": "#C C adjusts the camera"
+      },
+      {
+        "id": "C61",
+        "interval": [
+          61,
+          62
+        ],
+        "text": "#C C wears the glove"
+      },
+      {
+        "id": "C62",
+        "interval": [
+          62,
+          63
+        ],
+        "text": "#C C looks around"
+      },
+      {
+        "id": "C63",
+        "interval": [
+          63,
+          64
+        ],
+        "text": "#C C stands beside the lawn mower"
+      },
+      {
+        "id": "C64",
+        "interval": [
+          64,
+          65
+        ],
+        "text": "#C C looks at the horse pipe"
+      },
+      {
+        "id": "C65",
+        "interval": [
+          65,
+          66
+        ],
+        "text": "#C C walks around"
+      },
+      {
+        "id": "C66",
+        "interval": [
+          66,
+          67
+        ],
+        "text": "#C C stares at the garden"
+      },
+      {
+        "id": "C67",
+        "interval": [
+          67,
+          68
+        ],
+        "text": "#C C looks at the ground"
+      },
+      {
+        "id": "C68",
+        "interval": [
+          68,
+          69
+        ],
+        "text": "#C C holds a spray bottle "
+      },
+      {
+        "id": "C69",
+        "interval": [
+          69,
+          70
+        ],
+        "text": "#C C looks at the garden"
+      },
+      {
+        "id": "C70",
+        "interval": [
+          70,
+          71
+        ],
+        "text": "#C C holds a pipe"
+      },
+      {
+        "id": "C71",
+        "interval": [
+          71,
+          72
+        ],
+        "text": "#C C looks around"
+      },
+      {
+        "id": "C72",
+        "interval": [
+          72,
+          73
+        ],
+        "text": "#C C stares at the flower"
+      },
+      {
+        "id": "C73",
+        "interval": [
+          73,
+          74
+        ],
+        "text": "#C C looks at the garden"
+      },
+      {
+        "id": "C74",
+        "interval": [
+          74,
+          75
+        ],
+        "text": "#C C looks around the compound"
+      },
+      {
+        "id": "C75",
+        "interval": [
+          75,
+          76
+        ],
+        "text": "#C C looks around the compound"
+      },
+      {
+        "id": "C76",
+        "interval": [
+          76,
+          77
+        ],
+        "text": "#C C looks around"
+      },
+      {
+        "id": "C77",
+        "interval": [
+          77,
+          78
+        ],
+        "text": "#O A man T looks at the grass."
+      },
+      {
+        "id": "C78",
+        "interval": [
+          78,
+          79
+        ],
+        "text": "#C C walks around the compound"
+      },
+      {
+        "id": "C79",
+        "interval": [
+          79,
+          80
+        ],
+        "text": "#C C stands at the compound"
+      },
+      {
+        "id": "C80",
+        "interval": [
+          80,
+          81
+        ],
+        "text": "#C C holds the fence"
+      },
+      {
+        "id": "C81",
+        "interval": [
+          81,
+          82
+        ],
+        "text": "#C C looks around the compound"
+      },
+      {
+        "id": "C82",
+        "interval": [
+          82,
+          83
+        ],
+        "text": "#C C looks at the flower"
+      },
+      {
+        "id": "C83",
+        "interval": [
+          83,
+          84
+        ],
+        "text": "#C C moves the hand"
+      },
+      {
+        "id": "C84",
+        "interval": [
+          84,
+          85
+        ],
+        "text": "#C C looks at the garden"
+      },
+      {
+        "id": "C85",
+        "interval": [
+          85,
+          86
+        ],
+        "text": "#C C looks at the flower"
+      },
+      {
+        "id": "C86",
+        "interval": [
+          86,
+          87
+        ],
+        "text": "#C C looks at the plant"
+      },
+      {
+        "id": "C87",
+        "interval": [
+          87,
+          88
+        ],
+        "text": "#C C looks around"
+      },
+      {
+        "id": "C88",
+        "interval": [
+          88,
+          89
+        ],
+        "text": "#C C looks at the grass"
+      },
+      {
+        "id": "C89",
+        "interval": [
+          89,
+          90
+        ],
+        "text": "#C C looks around the compound "
+      }
+    ],
+    "entities": [],
+    "observations": [],
+    "relations": [],
+    "prior_requests": [],
+    "directory": [
+      {
+        "id": "S0",
+        "interval": [
+          0,
+          45
+        ],
+        "description": "场景描述了一个户外活动，参与者C在不同的地点进行了一系列动作。C首先环顾四周，然后观察花朵，接着站在地面上，随后站在院子里。C拿着绳子，打开手用空气过滤器，并查看草地。C手持钳子，观察水体，拿起手机并操作它，拍摄照片，继续操作手机并再次拍照。C在人行道上行走，停下脚步，继续在人行道上行走，左手持手机并操作。C环顾院子，查看手机，四处张望，捡起杆子，在草坪上行走，绕着院子走动，环顾院子，停止行走，站在水边，观察农场，凝视花园，查看草地，看向挡风玻璃，手持管道，站在人行道上，凝视修剪机，触摸脸部，用刷子吹去灰尘，手持刷子。"
+      },
+      {
+        "id": "S1",
+        "interval": [
+          45,
+          90
+        ],
+        "description": "场景描述了一个户外环境，参与者C在检查和观察周围的花园和草地。C手持刷子，四处查看草地，并调整了相机。C还戴上了手套，站在草坪割草机旁边，观察马管。C在围栏旁站立并观察周围环境，包括花和植物。期间，另一个人Y在场地上行走。"
+      },
+      {
+        "id": "S2",
+        "interval": [
+          90,
+          126
+        ],
+        "description": "场景描述了一个户外活动，参与者C在公园和花园中进行了一系列活动。C首先环顾四周，然后移动双手并停止行走。接着，C在围栏附近观察，随后检查空气过滤器，并继续环顾四周。C站在草地上，用水管浇灌植物，然后用扫帚清理地面。C在围栏附近站立，手持管道，环顾四周。最后，C在草地上移动一只手，站在杆子旁边，继续环顾四周。"
+      },
+      {
+        "id": "S3",
+        "interval": [
+          126,
+          133
+        ],
+        "description": "场景描述：人物C在户外环境中行走，环绕着一个院子。C先是在院子中四处走动，随后将手移开，看向地面，并踩在草地上。最后，C放下手。"
+      },
+      {
+        "id": "S4",
+        "interval": [
+          133,
+          164
+        ],
+        "description": "场景描述了一个工人C在工地上进行各种活动的过程。C首先四处走动，随后捡起一把耙子并放下水管，接着将卷尺放在地上，调整材料和机器。C用耙子拉土，用铲子推土，并将树干和木工刀放入桶中。C还拿起剪刀、铲子、金属物品以及从男人Y那里接过电话。C站在院子里，再次拿起耙子，整理衣物，继续四处走动。同时，另一个男人X正在用耙子扫沙。C又拿起割草机，继续在院子里走动，并指向花园里的花。"
+      },
+      {
+        "id": "S5",
+        "interval": [
+          164,
+          180
+        ],
+        "description": "场景描述了一个工人C在户外进行一系列工具操作的过程。C首先在围场内走动，然后在道路上行走。接着，C放下铲子并用双手握住割草机。随后，C放下屋顶修整器，并从切割机上拉出皮带。C取下机器盖子，打开土壤解算器，将锯放在地上。C拿起一把切割器，并将其放置在围栏上。之后，C移动机器，用双手握住砌体修整器。最后，C用卷尺测量木板，并手持一根杆子，环顾四周。"
+      }
+    ],
+    "allowed_scene_ids": [
+      "S2"
+    ],
+    "opened_scenes": [
+      "S0",
+      "S1"
+    ],
+    "current_scene": "S1",
+    "previous_reviews": [
+      {
+        "action": "resolve_verified_gap",
+        "evidence_status": "sufficient",
+        "supported_option": "O2",
+        "option_comparison": "",
+        "option_assessments": {
+          "O0": {
+            "reason": "当前场景中没有提到C负责建设工地的内容",
+            "status": "ruled_out",
+            "source_caption_ids": [
+              "C44"
+            ]
+          },
+          "O1": {
+            "reason": "当前场景中没有提到C负责高效维护工地的内容",
+            "status": "ruled_out",
+            "source_caption_ids": [
+              "C44"
+            ]
+          },
+          "O2": {
+            "reason": "当前场景中多次提到C仔细检查工地的安全和进度",
+            "status": "supported",
+            "source_caption_ids": [
+              "C44",
+              "C44"
+            ]
+          },
+          "O3": {
+            "reason": "当前场景中没有提到C负责保持工地清洁的内容",
+            "status": "ruled_out",
+            "source_caption_ids": [
+              "C44"
+            ]
+          },
+          "O4": {
+            "reason": "当前场景中没有提到C负责精心修理和维护工地的内容",
+            "status": "ruled_out",
+            "source_caption_ids": [
+              "C44"
+            ]
+          }
+        },
+        "reason": "当前场景中多次提到C仔细检查工地的安全和进度，支持选项2",
+        "gap": "specific tasks related to safety and progress inspection as mentioned in the candidate option",
+        "scene_id": "stop",
+        "current_scene_assessment": "needs_gap_resolution",
+        "local_unavailable_reason": "",
+        "caption_ids": [],
+        "entity_ids": [],
+        "focus": [],
+        "fields": [],
+        "sufficient": false,
+        "coverage_check": {
+          "enforced": false,
+          "met": null,
+          "missing": [],
+          "sample_times": [],
+          "status": "No temporal coverage gate; sufficiency follows observed evidence and explicit gaps"
+        },
+        "current_scene": "S0",
+        "sufficiency_checks": [
+          {
+            "option_id": "O0",
+            "alternative_ruled_out": true,
+            "reason": "The alternative option suggests that Person c is responsible for building the construction site, which contradicts the candidate's description of Person c's job",
+            "verdict": "ruled_out",
+            "source_caption_ids": [
+              "C0",
+              "C1",
+              "C2"
+            ],
+            "missing_detail": "The alternative option does not provide specific details about Person c's activities related to building the construction site"
+          },
+          {
+            "option_id": "O1",
+            "alternative_ruled_out": false,
+            "reason": "Both options suggest that Person c's primary responsibility involves overseeing the construction site, but the alternative option does not specify any specific,",
+            "verdict": "unresolved",
+            "source_caption_ids": [
+              "C0",
+              "C1",
+              "C2"
+            ],
+            "missing_detail": "specific tasks related to safety and progress inspection as mentioned in the candidate option"
+          },
+          {
+            "option_id": "O3",
+            "alternative_ruled_out": true,
+            "reason": "The alternative option suggests that Person c's primary responsibility is to keep the construction site clean and free of debris, but the video does not show c捡",
+            "verdict": "ruled_out",
+            "source_caption_ids": [
+              "C0",
+              "C1",
+              "C2"
+            ],
+            "missing_detail": "cleaning actions"
+          },
+          {
+            "option_id": "O4",
+            "alternative_ruled_out": true,
+            "reason": "The alternative option suggests that Person c is responsible for repairing and maintaining the construction site, which is not supported by the provided video.",
+            "verdict": "ruled_out",
+            "source_caption_ids": [
+              "C0",
+              "C1",
+              "C2"
+            ],
+            "missing_detail": "The video does not show any repair or maintenance activities being performed by Person c. The activities shown include looking around, holding a rope, using a手机"
+          }
+        ]
+      },
+      {
+        "resolution_status": "unresolved",
+        "reason": "当前场景中没有具体提到C负责安全和进度检查的具体任务",
+        "gap": "specific tasks related to safety and progress inspection as mentioned in the candidate option",
+        "action": "read_scene",
+        "scene_id": "S1",
+        "current_scene_assessment": "cannot_resolve_locally",
+        "local_unavailable_reason": "当前场景中没有具体提到C负责安全和进度检查的具体任务",
+        "caption_ids": [],
+        "entity_ids": [],
+        "focus": [],
+        "fields": [],
+        "sufficient": false,
+        "coverage_check": {
+          "enforced": false,
+          "met": null,
+          "missing": [],
+          "sample_times": [],
+          "status": "No temporal coverage gate; sufficiency follows observed evidence and explicit gaps"
+        },
+        "current_scene": "S0"
+      }
+    ],
+    "source_type": "caption",
+    "previous_scene_captions": [
+      {
+        "id": "C0",
+        "interval": [
+          0,
+          1
+        ],
+        "text": "#C C looks around"
+      },
+      {
+        "id": "C1",
+        "interval": [
+          1,
+          2
+        ],
+        "text": "#C C looks at the flower"
+      },
+      {
+        "id": "C2",
+        "interval": [
+          2,
+          3
+        ],
+        "text": "#C C stands on the ground"
+      },
+      {
+        "id": "C3",
+        "interval": [
+          3,
+          4
+        ],
+        "text": "#C C stands on the ground"
+      },
+      {
+        "id": "C4",
+        "interval": [
+          4,
+          5
+        ],
+        "text": "#C C stands on the compound"
+      },
+      {
+        "id": "C5",
+        "interval": [
+          5,
+          6
+        ],
+        "text": "#C C holds the rope"
+      },
+      {
+        "id": "C6",
+        "interval": [
+          6,
+          7
+        ],
+        "text": "#C C turns on the hand air filter"
+      },
+      {
+        "id": "C7",
+        "interval": [
+          7,
+          8
+        ],
+        "text": "#C C looks at the grass"
+      },
+      {
+        "id": "C8",
+        "interval": [
+          8,
+          9
+        ],
+        "text": "#C C holds a pliers."
+      },
+      {
+        "id": "C9",
+        "interval": [
+          9,
+          10
+        ],
+        "text": "#C C looks at the water"
+      },
+      {
+        "id": "C10",
+        "interval": [
+          10,
+          11
+        ],
+        "text": "#C C takes a phone"
+      },
+      {
+        "id": "C11",
+        "interval": [
+          11,
+          12
+        ],
+        "text": "#C C operates phone"
+      },
+      {
+        "id": "C12",
+        "interval": [
+          12,
+          13
+        ],
+        "text": "#C C looks at the phone"
+      },
+      {
+        "id": "C13",
+        "interval": [
+          13,
+          14
+        ],
+        "text": "#C C takes pictures with the phone."
+      },
+      {
+        "id": "C14",
+        "interval": [
+          14,
+          15
+        ],
+        "text": "#C C operates phone."
+      },
+      {
+        "id": "C15",
+        "interval": [
+          15,
+          16
+        ],
+        "text": "#C C takes a picture on the phone."
+      },
+      {
+        "id": "C16",
+        "interval": [
+          16,
+          17
+        ],
+        "text": "#C C walks on the pavement"
+      },
+      {
+        "id": "C17",
+        "interval": [
+          17,
+          18
+        ],
+        "text": "#C C stops on the path"
+      },
+      {
+        "id": "C18",
+        "interval": [
+          18,
+          19
+        ],
+        "text": "#C C walks on the pavement"
+      },
+      {
+        "id": "C19",
+        "interval": [
+          19,
+          20
+        ],
+        "text": "#C C holds the phone with the left hand"
+      },
+      {
+        "id": "C20",
+        "interval": [
+          20,
+          21
+        ],
+        "text": "#C C operates phone"
+      },
+      {
+        "id": "C21",
+        "interval": [
+          21,
+          22
+        ],
+        "text": "#C C operates phone"
+      },
+      {
+        "id": "C22",
+        "interval": [
+          22,
+          23
+        ],
+        "text": "#C C looks around the compound"
+      },
+      {
+        "id": "C23",
+        "interval": [
+          23,
+          24
+        ],
+        "text": "#C C looks around"
+      },
+      {
+        "id": "C24",
+        "interval": [
+          24,
+          25
+        ],
+        "text": "#C C holds the phone"
+      },
+      {
+        "id": "C25",
+        "interval": [
+          25,
+          26
+        ],
+        "text": "#C C stares at the phone"
+      },
+      {
+        "id": "C26",
+        "interval": [
+          26,
+          27
+        ],
+        "text": "#C C looks around"
+      },
+      {
+        "id": "C27",
+        "interval": [
+          27,
+          28
+        ],
+        "text": "#C C picks the poles"
+      },
+      {
+        "id": "C28",
+        "interval": [
+          28,
+          29
+        ],
+        "text": "#C C walks on the lawn"
+      },
+      {
+        "id": "C29",
+        "interval": [
+          29,
+          30
+        ],
+        "text": "#C C walks around the compound "
+      },
+      {
+        "id": "C30",
+        "interval": [
+          30,
+          31
+        ],
+        "text": "#C C looks around the compound"
+      },
+      {
+        "id": "C31",
+        "interval": [
+          31,
+          32
+        ],
+        "text": "#C C looks around the compound."
+      },
+      {
+        "id": "C32",
+        "interval": [
+          32,
+          33
+        ],
+        "text": "#C C stares around the compound"
+      },
+      {
+        "id": "C33",
+        "interval": [
+          33,
+          34
+        ],
+        "text": "#C C stops walking"
+      },
+      {
+        "id": "C34",
+        "interval": [
+          34,
+          35
+        ],
+        "text": "#C C stands near the water "
+      },
+      {
+        "id": "C35",
+        "interval": [
+          35,
+          36
+        ],
+        "text": "#C C looks at the farm"
+      },
+      {
+        "id": "C36",
+        "interval": [
+          36,
+          37
+        ],
+        "text": "#C C stares at the garden"
+      },
+      {
+        "id": "C37",
+        "interval": [
+          37,
+          38
+        ],
+        "text": "#C C looks at the grass"
+      },
+      {
+        "id": "C38",
+        "interval": [
+          38,
+          39
+        ],
+        "text": "#C C looks at the windscreen "
+      },
+      {
+        "id": "C39",
+        "interval": [
+          39,
+          40
+        ],
+        "text": "#C C holds the pipe"
+      },
+      {
+        "id": "C40",
+        "interval": [
+          40,
+          41
+        ],
+        "text": "#C C stands on the pavement"
+      },
+      {
+        "id": "C41",
+        "interval": [
+          41,
+          42
+        ],
+        "text": "#C C stares at the hedge trimmer"
+      },
+      {
+        "id": "C42",
+        "interval": [
+          42,
+          43
+        ],
+        "text": "#C C touches the face"
+      },
+      {
+        "id": "C43",
+        "interval": [
+          43,
+          44
+        ],
+        "text": "#C C  blows dust with a brush"
+      },
+      {
+        "id": "C44",
+        "interval": [
+          44,
+          45
+        ],
+        "text": "#C C holds the brush"
+      }
+    ],
+    "candidate_boundary_enforced": true,
+    "initial_candidate_order": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5"
+    ],
+    "remaining_candidate_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5"
+    ],
+    "local_scope_exhausted": false
+  },
+  "output": {
+    "data": "{\n  \"action\": \"stop\",\n  \"evidence_status\": \"sufficient\",\n  \"supported_option\": \"O2\",\n  \"option_comparison\": \"\",\n  \"option_assessments\": {\n    \"O0\": {\n      \"reason\": \"当前场景中没有提到C负责建设工地的内容\",\n      \"status\": \"ruled_out\",\n      \"source_caption_ids\": [\"ID95\"]\n    },\n    \"O1\": {\n      \"reason\": \"当前场景中没有提到C负责高效维护工地的内容\",\n      \"status\": \"ruled_out\",\n      \"source_caption_ids\": [\"ID95\"]\n    },\n    \"O2\": {\n      \"reason\": \"当前场景中多次提到C仔细检查工地的安全和进度\",\n      \"status\": \"supported\",\n      \"source_caption_ids\": [\"ID95\", \"ID95\"]\n    },\n    \"O3\": {\n      \"reason\": \"当前场景中没有提到C负责保持工地清洁的内容\",\n      \"status\": \"ruled_out\",\n      \"source_caption_ids\": [\"ID95\"]\n    },\n    \"O4\": {\n      \"reason\": \"当前场景中没有提到C负责精心修理和维护工地的内容\",\n      \"status\": \"ruled_out\",\n      \"source_caption_ids\": [\"ID95\"]\n    }\n  },\n  \"reason\": \"当前场景中多次提到C仔细检查工地的安全和进度，支持选项2\",\n  \"gap\": \"specific",
+    "raw_text": "{\n  \"action\": \"stop\",\n  \"evidence_status\": \"sufficient\",\n  \"supported_option\": \"O2\",\n  \"option_comparison\": \"\",\n  \"option_assessments\": {\n    \"O0\": {\n      \"reason\": \"当前场景中没有提到C负责建设工地的内容\",\n      \"status\": \"ruled_out\",\n      \"source_caption_ids\": [\"ID95\"]\n    },\n    \"O1\": {\n      \"reason\": \"当前场景中没有提到C负责高效维护工地的内容\",\n      \"status\": \"ruled_out\",\n      \"source_caption_ids\": [\"ID95\"]\n    },\n    \"O2\": {\n      \"reason\": \"当前场景中多次提到C仔细检查工地的安全和进度\",\n      \"status\": \"supported\",\n      \"source_caption_ids\": [\"ID95\", \"ID95\"]\n    },\n    \"O3\": {\n      \"reason\": \"当前场景中没有提到C负责保持工地清洁的内容\",\n      \"status\": \"ruled_out\",\n      \"source_caption_ids\": [\"ID95\"]\n    },\n    \"O4\": {\n      \"reason\": \"当前场景中没有提到C负责精心修理和维护工地的内容\",\n      \"status\": \"ruled_out\",\n      \"source_caption_ids\": [\"ID95\"]\n    }\n  },\n  \"reason\": \"当前场景中多次提到C仔细检查工地的安全和进度，支持选项2\",\n  \"gap\": \"specific",
+    "id_map": {
+      "ID0": "C45",
+      "ID1": "C46",
+      "ID2": "C47",
+      "ID3": "C48",
+      "ID4": "C49",
+      "ID5": "C50",
+      "ID6": "C51",
+      "ID7": "C52",
+      "ID8": "C53",
+      "ID9": "C54",
+      "ID10": "C55",
+      "ID11": "C56",
+      "ID12": "C57",
+      "ID13": "C58",
+      "ID14": "C59",
+      "ID15": "C60",
+      "ID16": "C61",
+      "ID17": "C62",
+      "ID18": "C63",
+      "ID19": "C64",
+      "ID20": "C65",
+      "ID21": "C66",
+      "ID22": "C67",
+      "ID23": "C68",
+      "ID24": "C69",
+      "ID25": "C70",
+      "ID26": "C71",
+      "ID27": "C72",
+      "ID28": "C73",
+      "ID29": "C74",
+      "ID30": "C75",
+      "ID31": "C76",
+      "ID32": "C77",
+      "ID33": "C78",
+      "ID34": "C79",
+      "ID35": "C80",
+      "ID36": "C81",
+      "ID37": "C82",
+      "ID38": "C83",
+      "ID39": "C84",
+      "ID40": "C85",
+      "ID41": "C86",
+      "ID42": "C87",
+      "ID43": "C88",
+      "ID44": "C89",
+      "ID45": "S0",
+      "ID46": "S1",
+      "ID47": "S2",
+      "ID48": "S3",
+      "ID49": "S4",
+      "ID50": "S5",
+      "ID51": "C0",
+      "ID52": "C1",
+      "ID53": "C2",
+      "ID54": "C3",
+      "ID55": "C4",
+      "ID56": "C5",
+      "ID57": "C6",
+      "ID58": "C7",
+      "ID59": "C8",
+      "ID60": "C9",
+      "ID61": "C10",
+      "ID62": "C11",
+      "ID63": "C12",
+      "ID64": "C13",
+      "ID65": "C14",
+      "ID66": "C15",
+      "ID67": "C16",
+      "ID68": "C17",
+      "ID69": "C18",
+      "ID70": "C19",
+      "ID71": "C20",
+      "ID72": "C21",
+      "ID73": "C22",
+      "ID74": "C23",
+      "ID75": "C24",
+      "ID76": "C25",
+      "ID77": "C26",
+      "ID78": "C27",
+      "ID79": "C28",
+      "ID80": "C29",
+      "ID81": "C30",
+      "ID82": "C31",
+      "ID83": "C32",
+      "ID84": "C33",
+      "ID85": "C34",
+      "ID86": "C35",
+      "ID87": "C36",
+      "ID88": "C37",
+      "ID89": "C38",
+      "ID90": "C39",
+      "ID91": "C40",
+      "ID92": "C41",
+      "ID93": "C42",
+      "ID94": "C43",
+      "ID95": "C44"
+    },
+    "decoder": "MN-navigation-unicode-scalar-v3",
+    "generated_token_ids": [
+      515,
+      220,
+      330,
+      1311,
+      788,
+      330,
+      9495,
+      756,
+      220,
+      330,
+      68,
+      27480,
+      4773,
+      788,
+      330,
+      82,
+      26683,
+      756,
+      220,
+      330,
+      18216,
+      9672,
+      788,
+      330,
+      46,
+      17,
+      756,
+      220,
+      330,
+      2047,
+      90797,
+      788,
+      8324,
+      220,
+      330,
+      2047,
+      12083,
+      433,
+      1368,
+      788,
+      341,
+      262,
+      330,
+      46,
+      15,
+      788,
+      341,
+      414,
+      330,
+      19895,
+      788,
+      330,
+      67949,
+      102122,
+      15946,
+      80443,
+      104496,
+      34,
+      100668,
+      99403,
+      106452,
+      104597,
+      756,
+      414,
+      330,
+      2829,
+      788,
+      330,
+      2672,
+      832,
+      6068,
+      756,
+      414,
+      330,
+      2427,
+      61705,
+      8077,
+      788,
+      4383,
+      915,
+      24,
+      20,
+      7026,
+      262,
+      1153,
+      262,
+      330,
+      46,
+      16,
+      788,
+      341,
+      414,
+      330,
+      19895,
+      788,
+      330,
+      67949,
+      102122,
+      15946,
+      80443,
+      104496,
+      34,
+      100668,
+      102202,
+      101999,
+      106452,
+      104597,
+      756,
+      414,
+      330,
+      2829,
+      788,
+      330,
+      2672,
+      832,
+      6068,
+      756,
+      414,
+      330,
+      2427,
+      61705,
+      8077,
+      788,
+      4383,
+      915,
+      24,
+      20,
+      7026,
+      262,
+      1153,
+      262,
+      330,
+      46,
+      17,
+      788,
+      341,
+      414,
+      330,
+      19895,
+      788,
+      330,
+      67949,
+      102122,
+      15946,
+      104183,
+      104496,
+      34,
+      104857,
+      101071,
+      106452,
+      106552,
+      33108,
+      105590,
+      756,
+      414,
+      330,
+      2829,
+      788,
+      330,
+      18216,
+      756,
+      414,
+      330,
+      2427,
+      61705,
+      8077,
+      788,
+      4383,
+      915,
+      24,
+      20,
+      497,
+      330,
+      915,
+      24,
+      20,
+      7026,
+      262,
+      1153,
+      262,
+      330,
+      46,
+      18,
+      788,
+      341,
+      414,
+      330,
+      19895,
+      788,
+      330,
+      67949,
+      102122,
+      15946,
+      80443,
+      104496,
+      34,
+      100668,
+      100662,
+      106452,
+      102353,
+      104597,
+      756,
+      414,
+      330,
+      2829,
+      788,
+      330,
+      2672,
+      832,
+      6068,
+      756,
+      414,
+      330,
+      2427,
+      61705,
+      8077,
+      788,
+      4383,
+      915,
+      24,
+      20,
+      7026,
+      262,
+      1153,
+      262,
+      330,
+      46,
+      19,
+      788,
+      341,
+      414,
+      330,
+      19895,
+      788,
+      330,
+      67949,
+      102122,
+      15946,
+      80443,
+      104496,
+      34,
+      100668,
+      105191,
+      111870,
+      33108,
+      101999,
+      106452,
+      104597,
+      756,
+      414,
+      330,
+      2829,
+      788,
+      330,
+      2672,
+      832,
+      6068,
+      756,
+      414,
+      330,
+      2427,
+      61705,
+      8077,
+      788,
+      4383,
+      915,
+      24,
+      20,
+      7026,
+      262,
+      456,
+      220,
+      1153,
+      220,
+      330,
+      19895,
+      788,
+      330,
+      67949,
+      102122,
+      15946,
+      104183,
+      104496,
+      34,
+      104857,
+      101071,
+      106452,
+      106552,
+      33108,
+      105590,
+      3837,
+      100143,
+      109487,
+      17,
+      756,
+      220,
+      330,
+      41410,
+      788,
+      330,
+      51240,
+      220,
+      151645
+    ],
+    "max_new_tokens": 1024,
+    "usage": {
+      "input_tokens": 6044,
+      "output_tokens": 303,
+      "model_caption_context": null,
+      "model_frame_views": [],
+      "context_projection": "facts_and_all_frames_v1",
+      "model_tensor_pixels": {},
+      "input_tokens_by_model": {
+        "vlm": 6044
+      },
+      "cpu_seconds": 16.357542259997217,
+      "gpu_resident_seconds": 16.365087408572435,
+      "gpu_peak_allocated_bytes": 19457721856
+    }
+  },
+  "error": null
+}

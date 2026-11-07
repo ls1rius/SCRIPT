@@ -315,74 +315,168 @@ def run(packet, directory, frames, backend, cfg, target, settings, memory_path=N
         answer_reserve=cfg['budget']['final_answer_reserve'], calls_path=target/'calls.jsonl')
     meter = Meter(backend, ledger, cfg, target/'raw_calls')
     opened, reviews, incomplete = [], [], []
+    sufficiency_feedback = []
+    local_scope_exhausted = False
     result = dict(arm='adaptive_partial', method=VERSION, question_id=query['id'],
         answer=None, error=None, reused_entity_count=reused)
     supplemental = dict(enabled=False, triggered=False, observations=[], frame_ids=[], seconds=0.)
     scenes = {s['id']: s for s in directory['scenes']}
     captions = packet['captions']
+    from . import m_scene_memory as m_core
+    if cfg['query'].get('temporal_qa_evidence') == 'role_bound_scene_script':
+        from . import n_scene_memory as m_core
+    m_enabled = cfg['query'].get('temporal_qa_evidence') == m_core.MODE
+    if m_enabled:
+        result['method'] = m_core.VERSION + '-source-navigation'
+    scene_directory = [dict(id=s['id'], interval=s['interval'], description=s['description'])
+                       for s in directory['scenes']]
+    navigation_events=[]
+    ranked=[]
+    @metered_cpu('checkpoint_write')
+    def trace(kind,**details):
+        if not m_enabled:return
+        navigation_events.append(dict(sequence=len(navigation_events),event=kind,**deepcopy(details)))
+        write_json(target/'navigation_trace.json',dict(version=m_core.VERSION,question=query,
+            scene_catalog=[dict(s,caption_ids=scenes[s['id']]['caption_ids']) for s in scene_directory],
+            candidate_selection=result.get('retrieval_proposal'),retrieval=result.get('retrieval'),
+            opened_scenes=list(opened),remaining_candidates=[s for s in ranked if s not in opened],
+            reviews=deepcopy(reviews),events=navigation_events,stop_reason=result.get('stop_reason'),
+            error=result.get('error')))
+    def opened_event(sid):
+        trace('scene_opened',scene_id=sid,selection_rule='next item in initial candidate ranking',
+            captions=[c for c in captions if c['id'] in scenes[sid]['caption_ids']],
+            caption_frame_indices=scenes[sid]['chronological_order'],model_viewed_pixels=False)
     @metered_cpu('checkpoint_write')
     def save():
         write_json(target/'network.json', memory)
         if memory_path:
             write_json(memory_path, memory)
     try:
-        scope, _ = meter.json('scene_scope', dict(question=query['question'], options=query['options']),
+        if m_enabled:
+            scope = dict(scope='question_driven', reason='Concrete semantic gaps; no temporal coverage gate')
+            trace('selection_started')
+            selection_inputs=dict(question=query['question'],options=query['options'],
+                                  directory=scene_directory,source_type='caption')
+            selection_operation = getattr(m_core, 'SELECT_OPERATION', 'm_select_scene')
+            if selection_operation in ('n_select_scene','m_candidate_rank'):
+                selection_inputs = m_core.prepare_selection_inputs(selection_inputs)
+                trace('selection_inputs', inputs=selection_inputs)
+                entry = m_core.review_scenes(selection_inputs, meter,
+                    lambda sid, request, output, call: trace('scene_candidate_review', scene_id=sid,
+                        inputs=request, model_output=output, call_id=call['call_id']))
+            else:
+                entry, _ = meter.json(selection_operation,selection_inputs,('scene_decisions','reason'))
+            result['retrieval_proposal']=deepcopy(entry)
+            trace('selection_proposed',selection=entry)
+            if selection_operation in ('n_select_scene','m_candidate_rank'):
+                entry = m_core.normalize_selection(entry, selection_inputs)
+                trace('selection_derived',selection=entry,
+                      rule='Candidate priorities from archived selector decisions; descending score; directory order breaks ties')
+            ranked=m_core.validate_candidates(entry,selection_inputs)
+            initial=ranked[0] if ranked else None
+            result['retrieval'] = dict(policy=m_core.VERSION, entry_scene=initial,
+                entry_reason=entry['scene_decisions'][initial]['reason'] if initial else entry['reason'],
+                directory=scene_directory,candidate_order=list(ranked),
+                scene_decisions=deepcopy(entry['scene_decisions']),candidate_boundary_enforced=True,
+                ranking_rule='Only relevance=candidate; descending model priority; equal scores use original directory order')
+            trace('candidate_set_frozen',candidate_order=ranked,scene_decisions=entry['scene_decisions'])
+            if not ranked:
+                result['stop_reason']='no_relevant_candidates'
+                incomplete.append(dict(stage='candidate_selection',reason='No relevant candidate scene was selected; no detailed source evidence read'))
+        else:
+            scope, _ = meter.json('scene_scope', dict(question=query['question'], options=query['options']),
                               ('scope', 'reason'))
-        embedded, _ = meter.call('clip_text', dict(texts=[query['question']] + query['options']), build=True)
-        vectors = np.asarray(embedded['vectors'])
-        centers = np.asarray([s['center'] for s in directory['scenes']])
-        scores = .5 * (centers @ vectors[0]) + .5 * (centers @ vectors[1:].T).mean(axis=1)
-        ranked = [directory['scenes'][i]['id'] for i in sorted(range(len(scores)),
+            embedded, _ = meter.call('clip_text', dict(texts=[query['question']] + query['options']), build=True)
+            vectors = np.asarray(embedded['vectors'])
+            centers = np.asarray([s['center'] for s in directory['scenes']])
+            scores = .5 * (centers @ vectors[0]) + .5 * (centers @ vectors[1:].T).mean(axis=1)
+            ranked = [directory['scenes'][i]['id'] for i in sorted(range(len(scores)),
                   key=lambda i: (-float(scores[i]), i))]
-        priority = set(source_priority(memory, query))
-        initial = next((s for s in ranked if priority.intersection(scenes[s]['caption_ids'])), ranked[0])
-        opened.append(initial)
-        result['retrieval'] = dict(scores=scores.tolist(), entry_scene=initial,
-                                    source_index_priority_caption_ids=sorted(priority))
-        for step in range(10):
+            priority = set(source_priority(memory, query))
+            initial = next((s for s in ranked if priority.intersection(scenes[s]['caption_ids'])), ranked[0])
+            result['retrieval'] = dict(scores=scores.tolist(), entry_scene=initial,
+                                      source_index_priority_caption_ids=sorted(priority))
+        if initial is not None:
+            opened.append(initial)
+            opened_event(initial)
+        for step in (range(10) if opened else []):
             selected = [c for c in captions if any(c['id'] in scenes[s]['caption_ids'] for s in opened)]
-            coverage = navigation_coverage(scope, scenes, opened, [0, len(captions)])
-            allowed = [s for s in ranked if s not in opened]
+            coverage = (m_core.coverage_status() if m_enabled else
+                        navigation_coverage(scope, scenes, opened, [0, len(captions)]))
+            remaining = [s for s in ranked if s not in opened]
+            allowed = remaining[:1] if m_enabled else remaining
             inp = dict(question=query['question'], options=query['options'],
-                captions=selected, entities=entity_profiles(memory),
+                captions=([c for c in selected if c['id'] in scenes[opened[-1]]['caption_ids']]
+                          if m_enabled else selected), entities=entity_profiles(memory),
                 observations=list(memory['observations'].values()), relations=memory['relations'],
                 prior_requests=memory['extraction_requests'][-8:],
-                directory=[dict(id=s['id'], interval=s['interval'], description=s['description'])
-                           for s in directory['scenes']],
+                directory=([s for s in scene_directory if s['id'] in ranked] if m_enabled else scene_directory),
                 allowed_scene_ids=allowed, opened_scenes=opened, coverage=coverage)
+            if m_enabled:
+                inp.pop('coverage')
+                inp.update(current_scene=opened[-1], previous_reviews=deepcopy(reviews), source_type='caption',
+                    previous_scene_captions=[c for c in selected
+                        if c['id'] not in scenes[opened[-1]]['caption_ids']])
+                inp.update(candidate_boundary_enforced=True,initial_candidate_order=list(ranked),
+                           remaining_candidate_ids=remaining,local_scope_exhausted=local_scope_exhausted)
+                if sufficiency_feedback:
+                    inp.update(sufficiency_feedback=deepcopy(sufficiency_feedback),sufficiency_blocked=True)
             try:
-                plan, _ = meter.json('transition_next', inp,
-                    ('sufficient', 'reason', 'gap', 'action', 'scene_id', 'caption_ids', 'entity_ids', 'focus', 'fields'))
+                operation=('m_resolve_gap' if sufficiency_feedback else 'm_transition_next') if m_enabled else 'transition_next'
+                plan, _ = meter.json(operation, inp,
+                    ('resolution_status' if operation=='m_resolve_gap' else 'evidence_status' if m_enabled else 'sufficient',
+                     'reason', 'gap', 'action', 'scene_id', 'caption_ids', 'entity_ids', 'focus', 'fields'))
+                if m_enabled:
+                    trace('review_proposed',operation=operation,model_decision=plan)
+                    m_core.validate_step(plan, inp)
             except (ResourceExhausted, ToolFailure) as exc:
                 if not exploration_exhausted(exc):
                     raise
                 incomplete.append(dict(stage='adaptive_plan', reason=str(exc)))
                 result['stop_reason'] = 'exploration_budget'
                 break
-            reviews.append(dict(plan, coverage_check=coverage))
-            if plan['sufficient'] and coverage['met']:
+            reviews.append(dict(plan, coverage_check=coverage, current_scene=opened[-1]))
+            trace('review_decision',decision=plan,current_scene=opened[-1],
+                  allowed_scene_ids=allowed,remaining_candidates=remaining)
+            if plan['sufficient'] and (m_enabled or coverage['met']):
+                if m_enabled:
+                    checks=m_core.check_sufficiency(plan,inp,meter)
+                    reviews[-1]['sufficiency_checks']=checks
+                    sufficiency_feedback=[c for c in checks if not c['alternative_ruled_out']]
+                    if sufficiency_feedback:
+                        reviews[-1].update(sufficient=False,action='resolve_verified_gap',
+                            gap='; '.join(c['missing_detail'] for c in sufficiency_feedback)[:160],
+                            current_scene_assessment='needs_gap_resolution')
+                        trace('sufficiency_rejected',proposal=plan,checks=checks,feedback=sufficiency_feedback)
+                        continue
                 result['stop_reason'] = 'sufficient'
                 break
             action = plan['action']
-            if not coverage['met'] and (plan['sufficient'] or action == 'stop'):
+            if not m_enabled and not coverage['met'] and (plan['sufficient'] or action == 'stop'):
                 action = 'read_scene'
             if action == 'read_scene':
-                if not allowed or len(opened) >= settings['max_scene_visits']:
+                visit_cap=settings.get('m_max_scene_visits',len(ranked)) if m_enabled else settings['max_scene_visits']
+                if not allowed or len(opened) >= visit_cap:
                     result['stop_reason'] = 'scene_limit'
                     break
                 nxt = plan['scene_id']
-                if not coverage['met']:
+                if not m_enabled and not coverage['met']:
                     # Coverage takes precedence over a local-sufficiency prediction.
                     missing = coverage['missing']
                     nxt = min(allowed, key=lambda sid: (
                         -sum(isinstance(t, (int, float)) and scenes[sid]['interval'][0] <= t <
                              scenes[sid]['interval'][1] for t in missing), ranked.index(sid)))
                 if nxt not in allowed:
+                    if m_enabled:
+                        raise ValueError('M selected an unavailable next scene')
                     nxt = allowed[0]
                 opened.append(nxt)
+                sufficiency_feedback=[]
+                local_scope_exhausted=False
+                opened_event(nxt)
                 continue
             if action == 'stop':
-                result['stop_reason'] = 'no_useful_expansion'
+                result['stop_reason'] = 'candidate_exhausted' if m_enabled and not remaining else 'no_useful_expansion'
                 break
             ids = set(plan['caption_ids'])
             if not ids or not plan['fields'] or not plan['focus']:
@@ -407,7 +501,7 @@ def run(packet, directory, frames, backend, cfg, target, settings, memory_path=N
                     gap=plan['gap'], focus=plan['focus'], fields=plan['fields'],
                     captions=sources, entities=entity_profiles(memory, sid), page_size=3,
                     source_type='caption')
-                for attempt in range(2):
+                for attempt in range(1 if m_enabled else 2):
                     try:
                         report, call = meter.json('transition_extract', extraction, ('entities', 'relations', 'unresolved'))
                     except (ResourceExhausted, ToolFailure) as exc:
@@ -421,28 +515,38 @@ def run(packet, directory, frames, backend, cfg, target, settings, memory_path=N
                         commit_delta(memory, report, sources, sid, request, call['call_id'])
                         break
                     except ValueError as exc:
-                        if attempt:
+                        if attempt or m_enabled:
                             raise
                         extraction['validation_feedback'] = str(exc)
                 if exhausted:
                     break
                 progressed = True
                 save()
+                trace('local_extraction_committed',scene_id=sid,request=request,call_id=call['call_id'])
             if exhausted:
                 break
             if not progressed:
-                result['stop_reason'] = 'scope_already_checked'
+                if m_enabled and remaining:
+                    sufficiency_feedback=[dict(missing_detail=plan['gap'],
+                        reason='The requested local source/field scope was already checked without resolving the gap')]
+                    local_scope_exhausted=True
+                    trace('local_scope_exhausted',feedback=sufficiency_feedback)
+                    continue
+                result['stop_reason'] = 'candidate_exhausted' if m_enabled else 'scope_already_checked'
                 break
+            sufficiency_feedback=[]
+            local_scope_exhausted=False
         else:
-            result['stop_reason'] = 'step_limit'
+            if opened:result['stop_reason'] = 'step_limit'
         rejections = memory['rejected_fields'][previous_rejections:]
         if rejections:
             incomplete.append(dict(stage='partial_extraction', reason='Rejected unsupported extraction fields',
                                    rejected_field_count=len(rejections)))
         selected_seconds = sorted(i for sid in opened for i in scenes[sid]['chronological_order'])
         result['scope_requirement'] = scope
-        result['coverage_check'] = navigation_coverage(scope, scenes, opened, [0, len(captions)])
-        if cfg['query'].get('temporal_sparse_visual', False):
+        result['coverage_check'] = (m_core.coverage_status() if m_enabled else
+                                   navigation_coverage(scope, scenes, opened, [0, len(captions)]))
+        if cfg['query'].get('temporal_sparse_visual', False) and opened:
             from .sparse_visual import supplement
             supplemental = supplement(query, directory, frames, opened, reviews, scope, meter, target)
         if evidence_only:
@@ -459,6 +563,7 @@ def run(packet, directory, frames, backend, cfg, target, settings, memory_path=N
         result['error'] = dict(type=type(exc).__name__, message=str(exc))
     finally:
         save()
+        trace('stopped',reason=result.get('stop_reason'),error=result.get('error'),incomplete=incomplete)
         result.update(opened_scenes=opened, reviews=reviews, incomplete=incomplete,
             entity_count=len(memory['entities']), observation_count=len(memory['observations']),
             relation_count=len(memory['relations']), extraction_request_count=len(memory['extraction_requests']),

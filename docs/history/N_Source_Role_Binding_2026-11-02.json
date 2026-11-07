@@ -1,0 +1,247 @@
+{
+  "checked_at": "2026-11-02T22:58:08.307240+08:00",
+  "case_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+  "caption_id": "C107",
+  "interval": [
+    107,
+    108
+  ],
+  "original_call": {
+    "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/materialized/951ccf40-1a99-4138-a441-4edf16af5446/raw_calls/0f54e6a6-8964-45f2-befb-eeaf8e102de2-0.json",
+    "sha256": "fd4d34e8e131e9bd05dee084f98e21c2adb7ed2edede7e8fe66ee25f9e916b4d",
+    "request": {
+      "unit": {
+        "id": "U35",
+        "text": "C moves a brick on the brick wall with his left hand."
+      },
+      "requested_fields": [
+        "actions.base",
+        "actions.body_part",
+        "actions.destination",
+        "actions.instrument",
+        "actions.location",
+        "actions.manner",
+        "actions.material",
+        "actions.recipient",
+        "actions.source_location",
+        "actions.surface"
+      ],
+      "source_type": "caption"
+    },
+    "output": {
+      "data": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "roles": [
+              {
+                "role": "patient",
+                "value": "brick"
+              }
+            ]
+          },
+          {
+            "actor": "C",
+            "verb": "moves",
+            "roles": [
+              {
+                "role": "body_part",
+                "value": "left hand"
+              }
+            ]
+          },
+          {
+            "actor": "C",
+            "verb": "moves",
+            "roles": [
+              {
+                "role": "patient",
+                "value": "brick"
+              },
+              {
+                "role": "destination",
+                "value": "brick wall"
+              }
+            ]
+          },
+          {
+            "actor": "C",
+            "verb": "moves",
+            "roles": [
+              {
+                "role": "patient",
+                "value": "brick"
+              },
+              {
+                "role": "instrument",
+                "value": "left hand"
+              }
+            ]
+          }
+        ],
+        "uncertain": true,
+        "attributes": [],
+        "states": [],
+        "relations": [],
+        "changes": [],
+        "results": [],
+        "event_links": []
+      },
+      "raw_text": "{\n  \"actions\": [\n    {\n      \"actor\": \"C\",\n      \"verb\": \"moves\",\n      \"roles\": [\n        {\n          \"role\": \"patient\",\n          \"value\": \"brick\"\n        }\n      ]\n    },\n    {\n      \"actor\": \"C\",\n      \"verb\": \"moves\",\n      \"roles\": [\n        {\n          \"role\": \"body_part\",\n          \"value\": \"left hand\"\n        }\n      ]\n    },\n    {\n      \"actor\": \"C\",\n      \"verb\": \"moves\",\n      \"roles\": [\n        {\n          \"role\": \"patient\",\n          \"value\": \"brick\"\n        },\n        {\n          \"role\": \"destination\",\n          \"value\": \"brick wall\"\n        }\n      ]\n    },\n    {\n      \"actor\": \"C\",\n      \"verb\": \"moves\",\n      \"roles\": [\n        {\n          \"role\": \"patient\",\n          \"value\": \"brick\"\n        },\n        {\n          \"role\": \"instrument\",\n          \"value\": \"left hand\"\n        }\n      ]\n    }\n  ],\n  \"uncertain\": true\n}",
+      "id_map": {
+        "ID0": "U35"
+      },
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 229
+      }
+    }
+  },
+  "frozen_acceptance_replay": {
+    "facts": [
+      {
+        "kind": "action",
+        "source_id": "U35",
+        "actor": "C",
+        "verb": "moves",
+        "patient": "brick"
+      },
+      {
+        "kind": "action",
+        "source_id": "U35",
+        "actor": "C",
+        "verb": "moves",
+        "body_part": "left hand"
+      }
+    ],
+    "mentions": [
+      {
+        "label": "C",
+        "head": "C",
+        "entity_type": "person"
+      },
+      {
+        "label": "brick",
+        "head": "brick",
+        "entity_type": "object"
+      },
+      {
+        "label": "left hand",
+        "head": "hand",
+        "entity_type": "body_part"
+      }
+    ],
+    "rejected": [
+      {
+        "record": {
+          "kind": "action",
+          "source_id": "U35",
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick",
+          "destination": "brick wall"
+        },
+        "reason": "unsupported_destination_binding"
+      },
+      {
+        "record": {
+          "kind": "action",
+          "source_id": "U35",
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick",
+          "instrument": "left hand"
+        },
+        "reason": "body_part_is_not_instrument"
+      }
+    ],
+    "uncertain": true
+  },
+  "combined_accepted_facts": [
+    {
+      "kind": "action",
+      "source_id": "U35",
+      "actor": "C",
+      "verb": "moves",
+      "patient": "brick",
+      "body_part": "left hand"
+    }
+  ],
+  "conclusion": "Fields were requested and brick wall was emitted as destination, then rejected for unsupported_destination_binding; the final L planner independently skipped both original R42 and fact R43.",
+  "correction": "Earlier inference that the model never extracted brick wall was incorrect; stored accepted facts omit rejected outputs.",
+  "workspace_version": "N-M-source-role-binding-v1",
+  "extractor_version": "generalized-lazy-memory-H-v3-predicate-binding:N-role-value-binding-v1",
+  "fix": {
+    "scope": "Only explicit N queries; M keeps original H extraction",
+    "mechanism": "Source connector and body-part role/value constraints before generation, with unchanged H acceptance.",
+    "operations": [
+      "n_extract_fields",
+      "n_extract_batch"
+    ],
+    "additional_model_calls": 0,
+    "automatic_relabeling": false,
+    "hidden_retries": false,
+    "new_model_run": false
+  },
+  "validation": {
+    "cpu_tests": 107,
+    "passed": true,
+    "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -m unittest tests.test_n_source_extraction tests.test_n_scene_memory tests.test_m_scene_memory tests.test_l_evidence_qa tests.test_generalized_lazy_memory tests.test_m_generation tests.test_m_scene_experiment tests.test_entity_evidence_qa tests.test_merged_lazy_memory tests.test_batch_extraction -q",
+    "real_decoder": "LMFE character parser; no inference",
+    "corrected_role_outputs": "Synthetic validation inputs only, not regenerated model results"
+  },
+  "limits": [
+    "Does not guarantee role recall or semantic correctness.",
+    "Does not repair the saved L answer or L skip decisions.",
+    "Does not merge original/derived duplicate candidates.",
+    "No new-model accuracy, latency, or sufficiency claim."
+  ],
+  "frozen_manifest_checks": {
+    "generalized-lazy-H-300-20261101-r5": {
+      "files": 1387,
+      "mismatches": []
+    },
+    "evidence-planner-L-I-300-20261102-r1": {
+      "files": 2117,
+      "mismatches": []
+    },
+    "scene-planned-M-L-300-20261102-r13": {
+      "files": 493,
+      "mismatches": []
+    }
+  },
+  "user_direction": "N is the successor for this change. Keep existing M running without stopping, restarting or replacing its runtime.",
+  "parent_version": "M-L-bounded-candidates-v7-ranked-decisions",
+  "m_core_matches_frozen_r13": true,
+  "m_readonly_status": {
+    "queue": {
+      "state": "running",
+      "controller_pid": 2749971,
+      "updated_at": "2026-11-02T22:58:07.879129+08:00",
+      "worker_pid": 2750068,
+      "gpu": "0",
+      "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runtime/script/run_m_scene_experiment.py",
+        "worker",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13"
+      ],
+      "started_at": "2026-11-02T21:58:27.321451+08:00"
+    },
+    "process_alive": {
+      "2749971": true,
+      "2750068": true
+    }
+  },
+  "n_entrypoints": {
+    "cli": "--memory N",
+    "config": "configs/script_N.yaml",
+    "mode": "role_bound_scene_script",
+    "cache": "memory_cache/N/I/h_script.sqlite3",
+    "artifacts": "partial_temporal/N/"
+  }
+}

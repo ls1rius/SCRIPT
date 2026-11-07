@@ -1,0 +1,194 @@
+{
+  "at": "2026-11-05T13:01:24.618011+08:00",
+  "request": "Restore original Q4 after unexpected exits; clean retired schemes, Q is primary.",
+  "cause": {
+    "time": "2026-11-05T12:42:07+08:00",
+    "observed": "OSError [Errno 28] No space left on device while committing model output in Q4 worker tracebacks",
+    "external_kill": "No evidence established; do not attribute actor",
+    "monitor": "old monitor was no longer alive and last status 12:42; restored once"
+  },
+  "storage": {
+    "output_root": "/var/tmp/videoagent-q4-disk-recovery-20261105-r1",
+    "original_path_symlinks_preserved": true,
+    "relocation_verified_files": {
+      "Q4-adaptive-300-20261105-r1": 20405,
+      "Q4-fixed-depth-300-20261105-r1": 24502,
+      "MNOP-alert-monitor-20261104-r1": 17
+    },
+    "free_ssd2_bytes": 29476618240,
+    "free_output_filesystem_bytes": 49857249280
+  },
+  "recovery": {
+    "control_root": "/var/tmp/videoagent-q4-disk-recovery-20261105-r1/continuation",
+    "frozen_runtime_and_config_unchanged": true,
+    "original_completed_preserved": 336,
+    "successful_call_prefix_reused": 85,
+    "successful_processing_seconds_reused_once": 345.6892463862896,
+    "interrupted_budget_seconds": 600,
+    "interruption_charge_policy": "four missing committed outputs at original 150-second reservations; conservative debt, not measured GPU time",
+    "case_cap_seconds": 3600,
+    "answer_reserve_seconds": 90,
+    "worker_count": 4,
+    "gpu_indices": [
+      0,
+      1
+    ],
+    "allocator_mib": 22528,
+    "admission_mib": 24576,
+    "cpu_no_model_prefix_checks": 4,
+    "replay_invariant_check_groups": 4,
+    "postlaunch": {
+      "at": "2026-11-05T13:00:39.658683+08:00",
+      "passed": true,
+      "recovered_audited": 4,
+      "expected_recoveries": 4,
+      "rows": [
+        {
+          "mode": "adaptive",
+          "question_id": "d430cf3f-da86-4d94-acd1-7e033d23598a",
+          "passed": true,
+          "reused_calls": 30,
+          "new_calls": 18,
+          "prior_successful_seconds": 123.46404714137316,
+          "new_processing_seconds": 57.38644840195775,
+          "interrupted_budget_seconds": 150,
+          "budgeted_total": 474.6790349371731
+        },
+        {
+          "mode": "adaptive",
+          "question_id": "d5ea4b32-7e72-4195-82c2-257ed2e455ef",
+          "passed": true,
+          "reused_calls": 2,
+          "new_calls": 21,
+          "prior_successful_seconds": 1.636838659644127,
+          "new_processing_seconds": 46.26248321682215,
+          "interrupted_budget_seconds": 150,
+          "budgeted_total": 233.45273089781404
+        },
+        {
+          "mode": "control",
+          "question_id": "d430cf3f-da86-4d94-acd1-7e033d23598a",
+          "passed": true,
+          "reused_calls": 38,
+          "new_calls": 10,
+          "prior_successful_seconds": 163.30055140331388,
+          "new_processing_seconds": 34.7438449524343,
+          "interrupted_budget_seconds": 150,
+          "budgeted_total": 491.8729357495904
+        },
+        {
+          "mode": "control",
+          "question_id": "d5ea4b32-7e72-4195-82c2-257ed2e455ef",
+          "passed": true,
+          "reused_calls": 15,
+          "new_calls": 8,
+          "prior_successful_seconds": 57.28780918195844,
+          "new_processing_seconds": 19.187535896897316,
+          "interrupted_budget_seconds": 150,
+          "budgeted_total": 262.0287541002035
+        }
+      ],
+      "groups": {
+        "adaptive": {
+          "completed": 170,
+          "errors": 0,
+          "workers": [
+            {
+              "stage": "query",
+              "pid": 557977,
+              "at": "2026-11-05T13:00:36.904966+08:00",
+              "gpu": "1",
+              "index": 172,
+              "question_id": "0aadf5ce-07eb-4934-9e07-317a46bc0b21",
+              "phase": "filter",
+              "iteration": 1,
+              "observations": 134
+            },
+            {
+              "stage": "query",
+              "pid": 557978,
+              "at": "2026-11-05T13:00:36.829917+08:00",
+              "gpu": "0",
+              "index": 171,
+              "question_id": "643d9ff3-8780-4c7f-84e2-290c16b8c3c1",
+              "phase": "filter",
+              "iteration": 2,
+              "observations": 139
+            }
+          ],
+          "report_at": "2026-11-05T13:00:34.839768+08:00"
+        },
+        "control": {
+          "completed": 170,
+          "errors": 0,
+          "workers": [
+            {
+              "stage": "query",
+              "pid": 557979,
+              "at": "2026-11-05T13:00:38.104346+08:00",
+              "gpu": "0",
+              "index": 171,
+              "question_id": "643d9ff3-8780-4c7f-84e2-290c16b8c3c1",
+              "phase": "filter",
+              "iteration": 4,
+              "observations": 163
+            },
+            {
+              "stage": "query",
+              "pid": 557980,
+              "at": "2026-11-05T13:00:38.507278+08:00",
+              "gpu": "1",
+              "index": 173,
+              "question_id": "d33126fd-07dd-480e-ad89-9fdca4f813c4",
+              "phase": "filter",
+              "iteration": 0,
+              "observations": 27
+            }
+          ],
+          "report_at": "2026-11-05T13:00:34.914615+08:00"
+        }
+      },
+      "original_completed_unchanged": 336,
+      "frozen_files_unchanged": 3504,
+      "checks": [
+        "original successful result hashes",
+        "frozen model-facing config/runtime/input hashes",
+        "fresh 17 gates and retrieval/early-stop/dual-reader flow per worker",
+        "exact durable call prefix consumed once",
+        "raw input/output hashes",
+        "exact keep-only final evidence",
+        "identical Q/Qplus evidence",
+        "original reader and options",
+        "no published pending calls",
+        "original budget with interruption debt"
+      ]
+    },
+    "checkpoint_files_preserved": true,
+    "original_partial_attempts_preserved": true
+  },
+  "cleanup_summary": {
+    "at": "2026-11-05T12:57:04.548508+08:00",
+    "retired_roots": 128,
+    "fully_removed": 123,
+    "dependency_only_roots": 5,
+    "deleted_files": 945148,
+    "deleted_allocated_bytes": 23050452992,
+    "retained_dependency_files_verified": 28091,
+    "retained_dependencies_unchanged": true,
+    "free_before_bytes": 5800235008,
+    "free_after_bytes": 29479362560
+  },
+  "cleanup_audit": "docs/history/Retired_Schemes_Cleanup_2026-11-05.json",
+  "historical_reports": "docs/experiments/Retired_Schemes_Records_2026-11-05.json",
+  "monitor": {
+    "pid": 558298,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/script/watch_mnop_alerts.py",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-alert-monitor-20261104-r1"
+    ],
+    "at": "2026-11-05T12:58:10.521385+08:00"
+  }
+}

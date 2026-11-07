@@ -1,0 +1,146 @@
+{
+  "at": "2026-11-08T00:03:51.298185+08:00",
+  "root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-GRPO8-200train-300val-20261107-r1",
+  "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-GRPO8-200train-300val-20261107-r1/gpu0-only-20261108-r1",
+  "user_instruction": "仅用0号卡",
+  "scope": "Remaining GRPO8 training and final300 evaluation",
+  "allowed_gpu_indices": [
+    "0"
+  ],
+  "excluded_gpu_indices": [
+    "1",
+    "2",
+    "3"
+  ],
+  "controller": 2747540,
+  "learner": {
+    "id": 0,
+    "pid": 2741955,
+    "identity": "1791546856"
+  },
+  "learner_model": {
+    "pid": 2742126,
+    "identity": "1791548991"
+  },
+  "learner_and_optimizer_restarted": false,
+  "release": {
+    "retired_workers": {
+      "1": {
+        "stage": "released_by_user",
+        "pid": 2742202,
+        "previous_stage": "waiting_for_gpu",
+        "reason": "GPU0-only user policy; completed in-flight job before release",
+        "retired_processes": [
+          {
+            "pid": 2742202,
+            "identity": "1791550357"
+          }
+        ],
+        "at": "2026-11-08T00:02:10.839097+08:00"
+      },
+      "3": {
+        "stage": "released_by_user",
+        "pid": 2742204,
+        "previous_stage": "waiting_for_gpu",
+        "reason": "GPU0-only user policy; completed in-flight job before release",
+        "retired_processes": [
+          {
+            "pid": 2742204,
+            "identity": "1791550358"
+          }
+        ],
+        "at": "2026-11-08T00:02:11.049777+08:00"
+      },
+      "4": {
+        "stage": "released_by_user",
+        "pid": 2742205,
+        "previous_stage": "waiting_for_gpu",
+        "reason": "GPU0-only user policy; completed in-flight job before release",
+        "retired_processes": [
+          {
+            "pid": 2742205,
+            "identity": "1791550358"
+          }
+        ],
+        "at": "2026-11-08T00:02:11.259340+08:00"
+      },
+      "5": {
+        "stage": "released_by_user",
+        "pid": 2742206,
+        "previous_stage": "waiting_for_gpu",
+        "reason": "GPU0-only user policy; completed in-flight job before release",
+        "retired_processes": [
+          {
+            "pid": 2742206,
+            "identity": "1791550358"
+          }
+        ],
+        "at": "2026-11-08T00:02:11.467798+08:00"
+      },
+      "2": {
+        "stage": "released_by_user",
+        "pid": 2742203,
+        "previous_stage": "actor_ready",
+        "reason": "GPU0-only user policy; completed in-flight job before release",
+        "retired_processes": [
+          {
+            "pid": 2742203,
+            "identity": "1791550358"
+          },
+          {
+            "pid": 2742460,
+            "identity": "1791552473"
+          },
+          {
+            "pid": 2742461,
+            "identity": "1791552473"
+          }
+        ],
+        "at": "2026-11-08T00:02:55.973338+08:00"
+      }
+    },
+    "learner": {
+      "id": 0,
+      "pid": 2741955,
+      "identity": "1791546856"
+    },
+    "learner_model": {
+      "pid": 2742126,
+      "identity": "1791548991"
+    },
+    "learner_and_optimizer_preserved": true,
+    "at": "2026-11-08T00:02:55.974291+08:00"
+  },
+  "completed_rollouts": 5,
+  "training_status": {
+    "stage": "parallel_rollouts",
+    "pid": 2742126,
+    "gpu": "0",
+    "at": "2026-11-07T23:55:16.776597+08:00",
+    "epoch": 1,
+    "epochs": 3,
+    "question": 1,
+    "questions": 200,
+    "completed_groups": 0,
+    "optimizer_steps": 0,
+    "policy_gradient_updates": 0,
+    "group_size": 8,
+    "behavior_version": 0
+  },
+  "checks": {
+    "tests_passed": 4,
+    "original_frozen_manifest_unchanged": true,
+    "completed_rollout_hashes_unchanged": true,
+    "retired_actor_leases_removed": true,
+    "retired_actor_model_absent": true,
+    "all_pending_jobs_restored": true
+  },
+  "protocol": {
+    "group_size": 8,
+    "epochs": 3,
+    "groups": 600,
+    "rollouts": 4800,
+    "final_validation": 300
+  },
+  "limitations": "Frozen experiment/runtime keeps historical GPU0/2 values; live scope is this external controller and queue_status. Never restart old supervisor/retired actors."
+}

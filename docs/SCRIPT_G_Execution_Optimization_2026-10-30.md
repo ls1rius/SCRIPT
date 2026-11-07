@@ -73,10 +73,10 @@ token 数在各执行方式间均一致。`validation/reference_unchanged.json` 
 ## 使用
 
 ```bash
-workdirs/query-runtime-env/bin/python script/benchmark_generalized_execution.py prepare \
+/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python script/benchmark_generalized_execution.py prepare \
   --reference workdirs/generalized-entities-G-300-20261030-r3 \
   --out workdirs/G-execution-batch-NEW --questions 8 --sources 64
-workdirs/query-runtime-env/bin/python \
+/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python \
   workdirs/G-execution-batch-NEW/control/benchmark_generalized_execution.py queue \
   --out workdirs/G-execution-batch-NEW
 ```

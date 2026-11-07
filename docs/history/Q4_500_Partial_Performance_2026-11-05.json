@@ -1,0 +1,383 @@
+{
+  "at": "2026-11-05T19:43:19.741962+08:00",
+  "complete": false,
+  "completed": 344,
+  "planned": 500,
+  "errors": 0,
+  "groups": {
+    "original300": {
+      "planned": 300,
+      "completed": 300,
+      "arms": {
+        "Q": {
+          "completed": 300,
+          "correct": 193,
+          "accuracy_among_completed": 0.6433333333333333,
+          "accuracy": 0.6433333333333333,
+          "mean_input_tokens": 4162.65,
+          "mean_answer_seconds": 0.6820143252859513
+        },
+        "Qplus": {
+          "completed": 300,
+          "correct": 193,
+          "accuracy_among_completed": 0.6433333333333333,
+          "accuracy": 0.6433333333333333,
+          "mean_input_tokens": 3064.3966666666665,
+          "mean_answer_seconds": 0.5505226939792435
+        }
+      },
+      "videotree": {
+        "planned": 300,
+        "completed": 300,
+        "pending": 0,
+        "correct": 189,
+        "errors": 8,
+        "accuracy": 0.63,
+        "accuracy_among_completed": 0.63,
+        "mean_seconds": 10.490875898003578,
+        "median_seconds": 8.289492074400187,
+        "incomplete": 0,
+        "parser_fallbacks": 0,
+        "complete": true,
+        "errors_count_wrong": true
+      },
+      "comparison_complete": true
+    },
+    "additional200": {
+      "planned": 200,
+      "completed": 44,
+      "arms": {
+        "Q": {
+          "completed": 44,
+          "correct": 25,
+          "accuracy_among_completed": 0.5681818181818182,
+          "accuracy": null,
+          "mean_input_tokens": 4465.181818181818,
+          "mean_answer_seconds": 0.8035431154580279
+        },
+        "Qplus": {
+          "completed": 44,
+          "correct": 27,
+          "accuracy_among_completed": 0.6136363636363636,
+          "accuracy": null,
+          "mean_input_tokens": 3279.1136363636365,
+          "mean_answer_seconds": 0.43011135718023236
+        }
+      },
+      "videotree": {
+        "planned": 200,
+        "completed": 200,
+        "pending": 0,
+        "correct": 115,
+        "errors": 4,
+        "accuracy": 0.575,
+        "accuracy_among_completed": 0.575,
+        "mean_seconds": 11.839228856936098,
+        "median_seconds": 8.82488489896059,
+        "incomplete": 0,
+        "parser_fallbacks": 0,
+        "complete": true,
+        "errors_count_wrong": true
+      },
+      "comparison_complete": false
+    },
+    "all500": {
+      "planned": 500,
+      "completed": 344,
+      "arms": {
+        "Q": {
+          "completed": 344,
+          "correct": 218,
+          "accuracy_among_completed": 0.6337209302325582,
+          "accuracy": null,
+          "mean_input_tokens": 4201.345930232558,
+          "mean_answer_seconds": 0.6975587054242401
+        },
+        "Qplus": {
+          "completed": 344,
+          "correct": 220,
+          "accuracy_among_completed": 0.6395348837209303,
+          "accuracy": null,
+          "mean_input_tokens": 3091.860465116279,
+          "mean_answer_seconds": 0.535121243923556
+        }
+      },
+      "videotree": {
+        "planned": 500,
+        "completed": 500,
+        "pending": 0,
+        "correct": 304,
+        "errors": 12,
+        "accuracy": 0.608,
+        "accuracy_among_completed": 0.608,
+        "mean_seconds": 11.030217081576586,
+        "median_seconds": 8.559507051482797,
+        "incomplete": 0,
+        "parser_fallbacks": 0,
+        "complete": true,
+        "errors_count_wrong": true
+      },
+      "comparison_complete": false
+    }
+  },
+  "latest_completed": {
+    "question_id": "2d954171-9ee2-4538-b1fd-80f4f77e6a06",
+    "at": "2026-11-05T17:53:02.553288+08:00"
+  },
+  "scheduler": {
+    "state": "running",
+    "controller_pid": 727125,
+    "controller_alive": true,
+    "workers": {
+      "0": {
+        "pid": 650043,
+        "stage": "waiting_for_gpu",
+        "kind": "source",
+        "minimum_free_mib": 32768
+      },
+      "1": {
+        "pid": 650044,
+        "stage": "waiting_for_gpu",
+        "kind": "source",
+        "minimum_free_mib": 32768
+      },
+      "2": {
+        "pid": 650045,
+        "stage": "waiting_for_gpu",
+        "kind": "source",
+        "minimum_free_mib": 32768
+      },
+      "3": {
+        "pid": 650046,
+        "stage": "waiting_for_gpu",
+        "kind": "source",
+        "minimum_free_mib": 32768
+      }
+    },
+    "available_gpu_mib": {
+      "0": {
+        "index": "0",
+        "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "free_mib": 22385,
+        "utilization": 95
+      },
+      "1": {
+        "index": "1",
+        "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+        "free_mib": 21964,
+        "utilization": 93
+      },
+      "2": {
+        "index": "2",
+        "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+        "free_mib": 12199,
+        "utilization": 94
+      },
+      "3": {
+        "index": "3",
+        "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+        "free_mib": 12867,
+        "utilization": 0
+      }
+    },
+    "effective_free_mib": {
+      "0": 22385,
+      "1": 21964,
+      "2": 12199,
+      "3": 12867
+    }
+  },
+  "new_question_costs": {
+    "questions": 44,
+    "Q4_call_totals": {
+      "calls": 1178,
+      "seconds": 3963.0013813376427,
+      "input_tokens": 5757462,
+      "output_tokens": 127267
+    },
+    "source_N_leaf_totals": {
+      "calls": 7612,
+      "seconds": 16770.64745021984,
+      "input_tokens": 6238360,
+      "output_tokens": 529013
+    },
+    "Q4_per_question": {
+      "calls": 26.772727272727273,
+      "seconds": 90.06821321221915,
+      "input_tokens": 130851.40909090909,
+      "output_tokens": 2892.431818181818
+    },
+    "source_N_per_question": {
+      "seconds": 381.15104625153947,
+      "input_tokens": 141780.9090909091,
+      "output_tokens": 12023.022727272728
+    },
+    "combined_per_question": {
+      "calls": 199.77272727272728,
+      "input_tokens": 272632.3181818182,
+      "output_tokens": 14915.454545454546,
+      "seconds": 471.21925946375865
+    },
+    "operations": {
+      "q3_filter": {
+        "calls": 351,
+        "seconds": 1710.5473061539233,
+        "input_tokens": 1148262,
+        "output_tokens": 81153
+      },
+      "q4_propose": {
+        "calls": 240,
+        "seconds": 351.2326941899955,
+        "input_tokens": 968919,
+        "output_tokens": 6965
+      },
+      "q4_pair": {
+        "calls": 380,
+        "seconds": 1792.3676707074046,
+        "input_tokens": 3118380,
+        "output_tokens": 37681
+      },
+      "q3_navigate": {
+        "calls": 105,
+        "seconds": 44.627001505345106,
+        "input_tokens": 114744,
+        "output_tokens": 945
+      },
+      "q_answer": {
+        "calls": 44,
+        "seconds": 35.35589708015323,
+        "input_tokens": 196468,
+        "output_tokens": 176
+      },
+      "qplus_answer": {
+        "calls": 44,
+        "seconds": 18.924899715930223,
+        "input_tokens": 144281,
+        "output_tokens": 176
+      },
+      "q3_reconsider": {
+        "calls": 14,
+        "seconds": 9.9459119848907,
+        "input_tokens": 66408,
+        "output_tokens": 171
+      }
+    },
+    "setup_seconds": {
+      "Q4": 397.6655867919326,
+      "source_N": 361.3924822360277
+    },
+    "validation_seconds": {
+      "Q4": 144.48793910443783,
+      "Q4_reader": 26.439499262720346,
+      "source_N": 674.9911080747843,
+      "source_batch": 99.33375353366137
+    }
+  },
+  "training": {
+    "stage": "waiting_for_untrained500",
+    "complete": false,
+    "teacher_questions_completed": 0,
+    "teacher_processing_seconds": 0,
+    "teacher_input_tokens": 0,
+    "teacher_output_tokens": 0,
+    "teacher_setup_seconds": 0,
+    "real_gradient_gate": {
+      "passed": true,
+      "losses": [
+        0.024076739326119423,
+        0.027014650404453278
+      ],
+      "finite_nonzero_gradients": true,
+      "base_gradients_absent": true,
+      "base_logits_bitwise_equal_when_disabled": true,
+      "adapter_round_trip_equal": true,
+      "modules": 56,
+      "trainable_parameters": 2523136,
+      "setup_seconds": 5.01309210807085,
+      "wall_seconds": 6.418593879789114,
+      "input_tokens": 920,
+      "supervised_tokens": 6,
+      "peak_allocated_mib": 16138.26904296875,
+      "gpu": {
+        "index": "1",
+        "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+        "free_mib": 80379,
+        "utilization": 38,
+        "effective_free_mib": 64477,
+        "reservation_id": "664572-b9d1036ed9a046658391951b65071d84"
+      },
+      "at": "2026-11-05T16:23:46.551222+08:00"
+    },
+    "training": null,
+    "training_progress": null,
+    "evaluation": null,
+    "failure": null,
+    "updated_at": "2026-11-05T19:43:00.030529+08:00"
+  },
+  "validation": {
+    "passed": true,
+    "published_new_results": 44,
+    "all_new_cases_budget_within_cap": true,
+    "keep_only": true,
+    "same_evidence_both_readers": true,
+    "no_pending_calls": true,
+    "question_options_match_frozen_packets": true,
+    "Q4_call_seconds_reconcile": true,
+    "N_leaf_seconds_reconcile_within_0_01": true,
+    "original_inherited300_hashes_unchanged": true,
+    "new_result_hashes": {
+      "0074f737-11cb-497d-8d07-77c3a8127391": "b2c51bc1befc3c50adc046178ac38ee46e80d966d6cc38983338f5cbfa5f81fe",
+      "026a2f15-c454-4c28-80e0-24c85d7f4ecf": "fb83bbe3603be38adc7c3a00a319cc99d2f6dea310365d2ef1cdc0bce7276e34",
+      "0437cf5f-5014-47d6-b4b3-f299380aa688": "7ee1ba93307f3a19e5b28ab3d45cef650928198775fe9f2007a594b35ff2886a",
+      "049249dc-bdad-48c4-bdc0-511814c5781c": "0787b6853ebcce82f8511eb39bc920db3b8dbdb67535074940cb0a8d190a08da",
+      "057f8774-15c2-4e2e-b9fd-75f26d4b3b83": "937d9b5955fa26b397010fca21f7e24052e4bb173389d48db0d9a04ddaf96132",
+      "05f1fc03-0c9e-4fd4-9d85-bb7be4e69234": "909e275a5683d93dd9b4bc48fc444dc52523bed06de61d131b1acf26a2d06d32",
+      "0688f66e-f115-49c6-85ff-712bf4f4a758": "94921e280720ffc6a3799ae934ed4c1a1a07d02291ea776334ac6af6f11771a7",
+      "06899b20-702f-450f-8422-2ae6dc9a6da8": "a9a2d03b7008362b3fc60e3b526b1f85b73db70e495218fc40e910bd76801c01",
+      "0725f410-3cf9-4f24-98ac-6610d1038ab1": "f960fc9408947b8d5263ca3dab872633f1d72e8b6a912d221a97a8332f0ec122",
+      "0750fa27-b049-4ded-9dd1-d495ffe23e75": "cbfbff76eaa13f55e1d145e63a30443eb83a0cda7b3986795bf784d3646bb177",
+      "07a9d3ee-6d81-4bb4-ba24-f8555f8b1929": "20ceb8111ee2e9a6ac7fcb7e9daec0877a3ca1c9a76d3af48d67d13a14c760e7",
+      "07fefc78-cfd2-4e04-8489-8ce4287158dd": "924e70c07a0352b77bcb034268d4c5fdc244209f8ee7c6718e253657c7eecbf6",
+      "080eb552-9103-4f3e-a7e9-3417c1c0bcec": "7026e944cc7751af25658dd35d85cc4a6b9c355cdfb6dff041a8dd965aa2baaf",
+      "096734f9-4368-4470-8a7e-3b166b5ac753": "32199636b06f7e772ae4f6a0454f1dc6bfaaf6ba274194424d25f43c07f5ed06",
+      "0a8b2c9d-b54c-4811-acf3-5977895d2445": "a4d48e63e653a262d0441580589134352da2814e410c7d2df3643a9a847a6b0e",
+      "0db8a74b-042d-401c-9f0f-ea404514c769": "38468b9c2cb5ed241a35ff4601a1d231331a8bbd1dba3fb5721f10aa3cecda76",
+      "0e4804e0-85fa-48bc-ada3-a94167b06e53": "e9ad5a1c0ab9fa279f94c411a51a7fd5974346737b4d312639a01b12e34d1520",
+      "10054e44-9575-408c-941c-a3b96789dc96": "f2073a15a003574727c88d01bcc3d47bd87a1b97c5298f80fc613d4b433b03d7",
+      "13b86f2e-c0a4-44f3-a871-2138576aa127": "eea41d0b3ebbf4ef79310ec6e25996f3cfd8478c3f41988ae2eb9db69705787f",
+      "1794015e-26c9-47ae-b147-b7ff04998cf5": "c87f98b934cdf1d81ec3a1707f17aaaae19921b328fcca4e690a6c6e9f6c1d16",
+      "1a463736-fb76-45e4-862f-5bd77f5ee60e": "d0adac630722a327b1637299cf94e34d85bb927bf7c7f59d09155f4c60ba4a99",
+      "1a48816e-0a15-4f4b-a181-df70568bb6ad": "781d82b0ef0ef0d0fae7eb2a8573de7a3eeecd5baa96a50e8afdc421aed74985",
+      "1b332cec-98c0-4428-bf7b-d6477235f025": "91c2151efd7ae5043d87ddb865c9488cf606c39f4b35141380d9d9a5d4965e13",
+      "1c1c9e3b-2392-4de9-a0cf-3d53ef302353": "5a7078debf8cf34ed7c6ced349aff910b342db67add2ead018d5851c24695d26",
+      "1dace116-5838-4b5b-9876-54bbfb6b1e06": "91bae1d535d2c9bdca0d0faa45c9ad8c84b3671e9cb85588447520ffcacae1c2",
+      "1e4ce899-0b37-44f2-9c89-dcd06c61a94f": "d7967b10eb1df61f911546008b35abba29efc203334b9547ea12e4505c8c8cfc",
+      "1e99206e-c4f1-4d0e-8caf-d8795acdbda9": "0895b301c6483e0602c06a03ac9d0b0a91390b013465ed311f18897c98c04ded",
+      "1eb2f153-055f-4004-ad55-154359af8025": "68044b55eba18a71ff5e501c4f5a0f8cff7beeb6b44862041c878de22cb4ee79",
+      "1efd3bbf-4096-4317-913c-7d89778badf1": "ad51345397c757cbae7504b66bada5701ee5f08e02865648f2ea4e813dca19f1",
+      "1f0bdc87-aa40-4fb3-934e-10e9bc19ec4c": "99e48adb95f38cf71ef8f5d68c8b145268889c4c37dcd55e1263376cc3950a7f",
+      "1f0ebef9-1ad7-41f1-951c-5309b1e55341": "c1d1a97a12060c7fd3325ee96d4cd3aacc41fac45e8009fa69f8a6fa29c46e4c",
+      "1fa3efdb-e85d-4d47-82ab-b216d9020388": "24174046c02a2e634287eb86f7bd674b3fb14bbded463fab081ba6efda18746d",
+      "20e97dbe-dfd5-489c-9244-bad5064ccbb1": "b884df6fb79708cf2a82eb5cfa3bfc5222ead60b0f18a39b24f653f20863a836",
+      "21195533-2e83-48ce-ab48-a754c4fd61fc": "f9a6eae358e14a82a44077e770b3be1a7d9d5c592927bce0b050193a371535a2",
+      "22a479e6-4054-4520-89a7-c7d068eadbe3": "0bef528ee3614ef062434b2bfdd155893a909df49f09dc37684474673b7ac697",
+      "22e620ee-82bc-44d5-adde-f555710585e2": "eb628f2c43834d0c58eb188e8251de696cfc712c5e3652506346782d05b7317f",
+      "2487a677-28a5-4767-a03b-f34e3f7ba151": "d599839b3886ca97fbcd0f4dad7712c5c09a126753c7442105c75f876b7c292e",
+      "2622c5be-1147-4a6a-bd4a-cca88b4aa4f7": "44738a69f29c980280d15dc690863139262da05b723471945ea0d266d9a1e928",
+      "2a9d3ac9-ee8e-4bbf-aaad-19c8c54c8794": "14616e88d742603f8d925448fab17b727cf411380610e277b978993472e655c2",
+      "2b627c1c-73ea-4096-aa3b-9894291dffdb": "5e957abdac3730f36be7601b26c39d749b6e793598a548051b7b4ffb699cc6fb",
+      "2c3c743d-96fd-4772-ba8c-e28f5a6ea741": "e574d130dcc62ac2346292a71a898671982ed5a3ecdb7f7095c0286339cbeb5f",
+      "2d0cbcf9-3ae9-4149-8d45-8b31dfc0631c": "d82a36edce0b629d79629d2ffe3cb920831c93d1fbd558e094aa8734e0b138ea",
+      "2d954171-9ee2-4538-b1fd-80f4f77e6a06": "b1ed0da6a9ae2b262ce2e37835013c580be9bb087e66e320ae18d680dced9cce",
+      "2e22aafd-1fbb-4e73-ab6f-d8f628b66ba1": "aef94f65449ed3500098b51a6f9c75c8ca2fc6020f37384d17929e3b8c12850e"
+    }
+  },
+  "limits": [
+    "Only44of200 new questions complete; do not present scores as full500 results.",
+    "VideoTree archived predictions on these exact44new IDs are unavailable; its115/200 and304/500 cannot provide a paired subset comparison.",
+    "Combined processing includes new N source preparation once plus shared Q4/Q4plus processing; GPU queue waits, model setup and validation are separate.",
+    "Training stage has not begun; there are no trained Q4 evaluation scores.",
+    "Four workers currently wait for32GiB source admission; GPU use belongs to other projects. No worker failure or model exception.",
+    "Timing across shared GPUs and different question subsets is not a controlled speed comparison."
+  ]
+}

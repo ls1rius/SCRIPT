@@ -1,0 +1,80 @@
+{
+  "at": "2026-11-04T11:33:53.921286+08:00",
+  "request": "别傻等 现在卡多加快进度",
+  "N_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+  "scheduler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r1",
+  "controller": {
+    "controller_pid": 3799805,
+    "worker_pids": [
+      3799806,
+      3799807
+    ],
+    "at": "2026-11-04T11:30:41.671801+08:00"
+  },
+  "workers": {
+    "0": {
+      "stage": "query",
+      "pid": 3799806,
+      "at": "2026-11-04T11:31:27.143862+08:00",
+      "index": 142,
+      "question_id": "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+      "gpu": "1"
+    },
+    "1": {
+      "stage": "query",
+      "pid": 3799807,
+      "at": "2026-11-04T11:31:25.609890+08:00",
+      "index": 141,
+      "question_id": "e4bfdb91-65d9-4a35-917e-d986a285f911",
+      "gpu": "0"
+    }
+  },
+  "method_changed": false,
+  "source_consumers_unchanged": [
+    "O",
+    "O+",
+    "P"
+  ],
+  "M_unchanged": true,
+  "completed_preserved": 140,
+  "preserved_files_checked": 12631,
+  "frozen_file_counts": {
+    "M": 12446,
+    "N": 8910,
+    "O": 49467,
+    "P": 15845
+  },
+  "input_isolation_checks": [
+    {
+      "question_id": "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+      "packet_hash": "4471a63a55f172226591e470071d814631426f3931bdbf3133a585c92cf5b601",
+      "query_hash": "da0a712a45958239d4afa9f5fc61012b4673a88057643583cfb711f2b2f53ff5",
+      "passed": true
+    },
+    {
+      "question_id": "e4bfdb91-65d9-4a35-917e-d986a285f911",
+      "packet_hash": "d2e59a31ed3abbf018ba16e36625aaafc89cc200d558770589249412d443763e",
+      "query_hash": "e3653ffb28c8f7825a5c6f111d383d521b49039cc9c0b3c67f2d87be83d12a18",
+      "passed": true
+    }
+  ],
+  "cpu_tests": 18,
+  "interrupted_processing_seconds": 423.63394916057587,
+  "interrupted_cases": [
+    "e4bfdb91-65d9-4a35-917e-d986a285f911"
+  ],
+  "pending_calls_at_interruption": 1,
+  "current_report": {
+    "completed": 140,
+    "correct": 72,
+    "errors": 0,
+    "parallel_worker_count": 2
+  },
+  "P_gate": {
+    "passed": true,
+    "checks": 58,
+    "all_fresh": true
+  },
+  "publication": "Each complete N result atomically published into original N/runs; absolute call-path aliases maintained separately; no duplicate claims or automatic retry",
+  "timing": "Shared GPUs; no claimed controlled speedup"
+}

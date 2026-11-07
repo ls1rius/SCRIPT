@@ -1,0 +1,630 @@
+{
+  "at": "2026-11-05T15:23:57.907893+08:00",
+  "scope": "Same 300 IDs, original questions/options and gold verified; v3 full coverage baseline; post-analysis evaluation, shared GPUs, not a controlled speed comparison",
+  "summary": {
+    "v3": {
+      "arms": {
+        "Q": {
+          "completed": 300,
+          "correct": 188,
+          "mean_input_tokens": 4628.413333333333,
+          "mean_answer_seconds": 0.3342068100348115
+        },
+        "Qplus": {
+          "completed": 300,
+          "correct": 192,
+          "mean_input_tokens": 3394.03,
+          "mean_answer_seconds": 0.2581341156984369
+        }
+      },
+      "committed_successful_calls": {
+        "calls": 10958,
+        "input_tokens": 55667281,
+        "output_tokens": 1415424,
+        "seconds": 25300.566994082183
+      },
+      "per_case": {
+        "mean_calls": 36.526666666666664,
+        "mean_input_tokens": 185557.60333333333,
+        "mean_output_tokens": 4718.08,
+        "mean_seconds": 84.33522331360727
+      },
+      "operations": {
+        "q3_filter": {
+          "calls": 2549,
+          "input_tokens": 8366296,
+          "output_tokens": 589441,
+          "seconds": 6242.205558724701
+        },
+        "q3_option_audit": {
+          "calls": 5256,
+          "input_tokens": 35873050,
+          "output_tokens": 777823,
+          "seconds": 17387.685088735074
+        },
+        "q3_coverage": {
+          "calls": 1752,
+          "input_tokens": 7915850,
+          "output_tokens": 38330,
+          "seconds": 1277.8526934832335
+        },
+        "q3_navigate": {
+          "calls": 776,
+          "input_tokens": 991151,
+          "output_tokens": 6982,
+          "seconds": 200.86209781095386
+        },
+        "q_answer": {
+          "calls": 300,
+          "input_tokens": 1388524,
+          "output_tokens": 1200,
+          "seconds": 100.26204301044345
+        },
+        "qplus_answer": {
+          "calls": 300,
+          "input_tokens": 1018209,
+          "output_tokens": 1200,
+          "seconds": 77.44023470953107
+        },
+        "q3_reconsider": {
+          "calls": 25,
+          "input_tokens": 114201,
+          "output_tokens": 448,
+          "seconds": 14.259277608245611
+        }
+      },
+      "source_dependency_seconds": 141440.38761853054,
+      "setup_seconds": 17.7378305234015,
+      "validation_seconds": 96.08848562464118,
+      "outage_reservation_debt_seconds": 0,
+      "wall_seconds": 12800.560114,
+      "mean_new_scenes": 2.5866666666666664,
+      "early_stop": 0,
+      "report_sha256": "4d822f0daf8c19835b2d1576040a2e82f25c8cb64d316f51e43d7bf49f90bb2a"
+    },
+    "v4": {
+      "arms": {
+        "Q": {
+          "completed": 300,
+          "correct": 193,
+          "mean_input_tokens": 4162.65,
+          "mean_answer_seconds": 0.6820143252859513
+        },
+        "Qplus": {
+          "completed": 300,
+          "correct": 193,
+          "mean_input_tokens": 3064.3966666666665,
+          "mean_answer_seconds": 0.5505226939792435
+        }
+      },
+      "committed_successful_calls": {
+        "calls": 7136,
+        "input_tokens": 32764044,
+        "output_tokens": 776170,
+        "seconds": 31513.137013040483
+      },
+      "per_case": {
+        "mean_calls": 23.786666666666665,
+        "mean_input_tokens": 109213.48,
+        "mean_output_tokens": 2587.233333333333,
+        "mean_seconds": 105.04379004346828
+      },
+      "operations": {
+        "q3_filter": {
+          "calls": 2205,
+          "input_tokens": 7226704,
+          "output_tokens": 505859,
+          "seconds": 14550.561008125544
+        },
+        "q4_propose": {
+          "calls": 1475,
+          "input_tokens": 5585067,
+          "output_tokens": 42014,
+          "seconds": 2958.7190735265613
+        },
+        "q4_pair": {
+          "calls": 2182,
+          "input_tokens": 16825935,
+          "output_tokens": 219457,
+          "seconds": 13170.58673292026
+        },
+        "q3_reconsider": {
+          "calls": 72,
+          "input_tokens": 276615,
+          "output_tokens": 1020,
+          "seconds": 89.6956024132669
+        },
+        "q_answer": {
+          "calls": 300,
+          "input_tokens": 1248795,
+          "output_tokens": 1200,
+          "seconds": 204.6042975857854
+        },
+        "qplus_answer": {
+          "calls": 300,
+          "input_tokens": 919319,
+          "output_tokens": 1200,
+          "seconds": 165.15680819377303
+        },
+        "q3_navigate": {
+          "calls": 602,
+          "input_tokens": 681609,
+          "output_tokens": 5420,
+          "seconds": 373.8134902752936
+        }
+      },
+      "source_dependency_seconds": 141440.38761853054,
+      "setup_seconds": 32.18228305503726,
+      "validation_seconds": 241.911102052778,
+      "outage_reservation_debt_seconds": 300.0,
+      "wall_seconds": 16962.719141,
+      "mean_new_scenes": 2.006666666666667,
+      "early_stop": 79,
+      "report_sha256": "2a11ad21a647cd6ad7839431eca6fd16bb930253dbebcfe9a74d3a572f10e2c5"
+    },
+    "control": {
+      "arms": {
+        "Q": {
+          "completed": 300,
+          "correct": 193,
+          "mean_input_tokens": 4634.283333333334,
+          "mean_answer_seconds": 0.5713031551117699
+        },
+        "Qplus": {
+          "completed": 300,
+          "correct": 193,
+          "mean_input_tokens": 3398.2166666666667,
+          "mean_answer_seconds": 0.45952442126969495
+        }
+      },
+      "committed_successful_calls": {
+        "calls": 8637,
+        "input_tokens": 41637579,
+        "output_tokens": 936545,
+        "seconds": 28628.750225450844
+      },
+      "per_case": {
+        "mean_calls": 28.79,
+        "mean_input_tokens": 138791.93,
+        "mean_output_tokens": 3121.8166666666666,
+        "mean_seconds": 95.42916741816948
+      },
+      "operations": {
+        "q3_filter": {
+          "calls": 2604,
+          "input_tokens": 8556119,
+          "output_tokens": 603296,
+          "seconds": 12703.523373488337
+        },
+        "q4_propose": {
+          "calls": 1779,
+          "input_tokens": 6952534,
+          "output_tokens": 50920,
+          "seconds": 2679.709802057594
+        },
+        "q4_pair": {
+          "calls": 2788,
+          "input_tokens": 22503235,
+          "output_tokens": 271618,
+          "seconds": 12504.108340859413
+        },
+        "q3_reconsider": {
+          "calls": 90,
+          "input_tokens": 356290,
+          "output_tokens": 1325,
+          "seconds": 77.70247204601765
+        },
+        "q3_navigate": {
+          "calls": 776,
+          "input_tokens": 859651,
+          "output_tokens": 6986,
+          "seconds": 354.4579640850425
+        },
+        "q_answer": {
+          "calls": 300,
+          "input_tokens": 1390285,
+          "output_tokens": 1200,
+          "seconds": 171.39094653353095
+        },
+        "qplus_answer": {
+          "calls": 300,
+          "input_tokens": 1019465,
+          "output_tokens": 1200,
+          "seconds": 137.8573263809085
+        }
+      },
+      "source_dependency_seconds": 141440.38761853054,
+      "setup_seconds": 31.541983135044575,
+      "validation_seconds": 153.37391546741128,
+      "outage_reservation_debt_seconds": 300.0,
+      "wall_seconds": 17688.164155,
+      "mean_new_scenes": 2.5866666666666664,
+      "early_stop": 0,
+      "report_sha256": "7e0f400b2c2db4ec24a9e2420ddad95e5e2c2ebb41ebfc4e34e8bc41e8a49632"
+    }
+  },
+  "paired": {
+    "v4_vs_v3": {
+      "Q": {
+        "corrected": [
+          "b5865ae0-e176-4e82-a651-2507ee2d6930",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "263666b2-3229-429a-b5a7-defc6433dc29",
+          "0b4529ac-5a4e-4d30-b6b6-c6504c509c0c",
+          "5f584429-b12b-4b15-9975-bf0cbfeaf2bc"
+        ],
+        "regressed": [
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece"
+        ],
+        "changed": [
+          "b5865ae0-e176-4e82-a651-2507ee2d6930",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "263666b2-3229-429a-b5a7-defc6433dc29",
+          "0b4529ac-5a4e-4d30-b6b6-c6504c509c0c",
+          "5f584429-b12b-4b15-9975-bf0cbfeaf2bc",
+          "628e252f-e743-4054-92fd-b0ed6983571d",
+          "08c5a715-ee90-4bba-8b8b-5f0834620f78",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece",
+          "05ad5736-88f5-42bb-ac9f-689e199c50de"
+        ]
+      },
+      "Qplus": {
+        "corrected": [
+          "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "16eb6914-00e7-4692-a7d7-d6ba36f61a5d"
+        ],
+        "regressed": [
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "4e1e182e-0592-4397-8654-a628d783990b"
+        ],
+        "changed": [
+          "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "b5865ae0-e176-4e82-a651-2507ee2d6930",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "4e1e182e-0592-4397-8654-a628d783990b",
+          "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+          "1bf1fdea-6f44-4d3a-b5c0-6852aaada71b"
+        ]
+      }
+    },
+    "control_vs_v3": {
+      "Q": {
+        "corrected": [
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "263666b2-3229-429a-b5a7-defc6433dc29",
+          "0b4529ac-5a4e-4d30-b6b6-c6504c509c0c",
+          "5f584429-b12b-4b15-9975-bf0cbfeaf2bc"
+        ],
+        "regressed": [],
+        "changed": [
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "263666b2-3229-429a-b5a7-defc6433dc29",
+          "0b4529ac-5a4e-4d30-b6b6-c6504c509c0c",
+          "5f584429-b12b-4b15-9975-bf0cbfeaf2bc",
+          "628e252f-e743-4054-92fd-b0ed6983571d",
+          "08c5a715-ee90-4bba-8b8b-5f0834620f78",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "05ad5736-88f5-42bb-ac9f-689e199c50de"
+        ]
+      },
+      "Qplus": {
+        "corrected": [
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece"
+        ],
+        "regressed": [
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "4e1e182e-0592-4397-8654-a628d783990b"
+        ],
+        "changed": [
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece",
+          "4e1e182e-0592-4397-8654-a628d783990b",
+          "1bf1fdea-6f44-4d3a-b5c0-6852aaada71b"
+        ]
+      }
+    },
+    "v4_vs_control": {
+      "Q": {
+        "corrected": [
+          "b5865ae0-e176-4e82-a651-2507ee2d6930"
+        ],
+        "regressed": [
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece"
+        ],
+        "changed": [
+          "b5865ae0-e176-4e82-a651-2507ee2d6930",
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece"
+        ]
+      },
+      "Qplus": {
+        "corrected": [
+          "a4663dd4-73e2-4e2a-b66b-731527a10c2c"
+        ],
+        "regressed": [
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece"
+        ],
+        "changed": [
+          "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+          "b5865ae0-e176-4e82-a651-2507ee2d6930",
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece",
+          "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9"
+        ]
+      }
+    },
+    "v3_vs_L": {
+      "Q": {
+        "corrected": [
+          "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+          "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+          "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+          "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+          "73ecc613-5e39-4348-94ba-ee6cb197367a",
+          "a0a00d56-0f2d-4f3d-ae12-ee5bc4c7ba19",
+          "548cbaae-8311-4709-9822-185e18ff895b",
+          "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+          "d299858f-cde8-49a9-a713-fb546db0a268",
+          "24f4b88e-2294-4017-a669-9e27c07d44e7",
+          "73ecef43-37f0-4f09-ad82-1bcc5031577e",
+          "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+          "4e1e182e-0592-4397-8654-a628d783990b",
+          "df060e0b-bd32-4e38-939f-f15919b836ae",
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece",
+          "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "2f814211-32de-4e8f-b26e-096ab47d20e8",
+          "293f6799-01e3-485c-8e89-bfd0e0c7b545",
+          "d38b4b2b-3422-4618-ab2a-6f0d08f13e00"
+        ],
+        "regressed": [
+          "98427b0b-20ed-45bb-b772-91573ce90b5a",
+          "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+          "b8bdd88f-996d-47bc-beb8-3b54c60754ec",
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "530a5959-0ba6-4fde-9b19-494ef51fed33",
+          "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+          "9557e88b-8880-4f64-88ec-815452f8ee4c",
+          "5f584429-b12b-4b15-9975-bf0cbfeaf2bc",
+          "c7670500-3a0f-4f31-a85a-a1cf708b2f49",
+          "bbe35aed-1c92-42de-8f50-7004cdae317e",
+          "a6f20af7-21e8-4ee9-aa66-f23056ecab48",
+          "951ccf40-1a99-4138-a441-4edf16af5446",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "263666b2-3229-429a-b5a7-defc6433dc29",
+          "0b4529ac-5a4e-4d30-b6b6-c6504c509c0c",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "628e252f-e743-4054-92fd-b0ed6983571d",
+          "3181b730-2539-46d5-b818-86db8965515a",
+          "0d977872-1093-4c7b-b372-f9734293ebe8",
+          "249a0fc4-ccf4-4e6f-9ca5-29f11cf5e1ad"
+        ]
+      },
+      "Qplus": {
+        "corrected": [
+          "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+          "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+          "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+          "9e50476f-2e77-46f3-8b06-f1005ee55974",
+          "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+          "73ecc613-5e39-4348-94ba-ee6cb197367a",
+          "a0a00d56-0f2d-4f3d-ae12-ee5bc4c7ba19",
+          "548cbaae-8311-4709-9822-185e18ff895b",
+          "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+          "24f4b88e-2294-4017-a669-9e27c07d44e7",
+          "4e1e182e-0592-4397-8654-a628d783990b",
+          "df060e0b-bd32-4e38-939f-f15919b836ae",
+          "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "2f814211-32de-4e8f-b26e-096ab47d20e8",
+          "293f6799-01e3-485c-8e89-bfd0e0c7b545",
+          "d38b4b2b-3422-4618-ab2a-6f0d08f13e00"
+        ],
+        "regressed": [
+          "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+          "b8bdd88f-996d-47bc-beb8-3b54c60754ec",
+          "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+          "9557e88b-8880-4f64-88ec-815452f8ee4c",
+          "c7670500-3a0f-4f31-a85a-a1cf708b2f49",
+          "aafd0923-bfdb-4271-960e-02a4a5a75ed3",
+          "bbe35aed-1c92-42de-8f50-7004cdae317e",
+          "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+          "628e252f-e743-4054-92fd-b0ed6983571d",
+          "9796f529-40ca-4e74-89ed-6a25efb24c8c",
+          "3181b730-2539-46d5-b818-86db8965515a",
+          "87555387-5ded-400b-b273-fe5b16c853e2",
+          "ab4bd39c-a184-421d-9f38-bf18dd238b2d"
+        ]
+      }
+    },
+    "v4_vs_L": {
+      "Q": {
+        "corrected": [
+          "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+          "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+          "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+          "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+          "73ecc613-5e39-4348-94ba-ee6cb197367a",
+          "a0a00d56-0f2d-4f3d-ae12-ee5bc4c7ba19",
+          "548cbaae-8311-4709-9822-185e18ff895b",
+          "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+          "d299858f-cde8-49a9-a713-fb546db0a268",
+          "24f4b88e-2294-4017-a669-9e27c07d44e7",
+          "73ecef43-37f0-4f09-ad82-1bcc5031577e",
+          "b5865ae0-e176-4e82-a651-2507ee2d6930",
+          "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+          "4e1e182e-0592-4397-8654-a628d783990b",
+          "df060e0b-bd32-4e38-939f-f15919b836ae",
+          "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "2f814211-32de-4e8f-b26e-096ab47d20e8",
+          "293f6799-01e3-485c-8e89-bfd0e0c7b545",
+          "d38b4b2b-3422-4618-ab2a-6f0d08f13e00"
+        ],
+        "regressed": [
+          "98427b0b-20ed-45bb-b772-91573ce90b5a",
+          "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+          "b8bdd88f-996d-47bc-beb8-3b54c60754ec",
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "530a5959-0ba6-4fde-9b19-494ef51fed33",
+          "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+          "9557e88b-8880-4f64-88ec-815452f8ee4c",
+          "c7670500-3a0f-4f31-a85a-a1cf708b2f49",
+          "bbe35aed-1c92-42de-8f50-7004cdae317e",
+          "a6f20af7-21e8-4ee9-aa66-f23056ecab48",
+          "951ccf40-1a99-4138-a441-4edf16af5446",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "628e252f-e743-4054-92fd-b0ed6983571d",
+          "3181b730-2539-46d5-b818-86db8965515a",
+          "0d977872-1093-4c7b-b372-f9734293ebe8",
+          "249a0fc4-ccf4-4e6f-9ca5-29f11cf5e1ad"
+        ]
+      },
+      "Qplus": {
+        "corrected": [
+          "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+          "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+          "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+          "9e50476f-2e77-46f3-8b06-f1005ee55974",
+          "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+          "73ecc613-5e39-4348-94ba-ee6cb197367a",
+          "a0a00d56-0f2d-4f3d-ae12-ee5bc4c7ba19",
+          "548cbaae-8311-4709-9822-185e18ff895b",
+          "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+          "24f4b88e-2294-4017-a669-9e27c07d44e7",
+          "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+          "df060e0b-bd32-4e38-939f-f15919b836ae",
+          "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "2f814211-32de-4e8f-b26e-096ab47d20e8",
+          "293f6799-01e3-485c-8e89-bfd0e0c7b545",
+          "d38b4b2b-3422-4618-ab2a-6f0d08f13e00"
+        ],
+        "regressed": [
+          "b8bdd88f-996d-47bc-beb8-3b54c60754ec",
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+          "9557e88b-8880-4f64-88ec-815452f8ee4c",
+          "c7670500-3a0f-4f31-a85a-a1cf708b2f49",
+          "aafd0923-bfdb-4271-960e-02a4a5a75ed3",
+          "bbe35aed-1c92-42de-8f50-7004cdae317e",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "628e252f-e743-4054-92fd-b0ed6983571d",
+          "9796f529-40ca-4e74-89ed-6a25efb24c8c",
+          "3181b730-2539-46d5-b818-86db8965515a",
+          "87555387-5ded-400b-b273-fe5b16c853e2",
+          "ab4bd39c-a184-421d-9f38-bf18dd238b2d"
+        ]
+      }
+    },
+    "control_vs_L": {
+      "Q": {
+        "corrected": [
+          "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+          "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+          "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+          "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+          "73ecc613-5e39-4348-94ba-ee6cb197367a",
+          "a0a00d56-0f2d-4f3d-ae12-ee5bc4c7ba19",
+          "548cbaae-8311-4709-9822-185e18ff895b",
+          "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+          "d299858f-cde8-49a9-a713-fb546db0a268",
+          "24f4b88e-2294-4017-a669-9e27c07d44e7",
+          "73ecef43-37f0-4f09-ad82-1bcc5031577e",
+          "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+          "4e1e182e-0592-4397-8654-a628d783990b",
+          "df060e0b-bd32-4e38-939f-f15919b836ae",
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece",
+          "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "2f814211-32de-4e8f-b26e-096ab47d20e8",
+          "293f6799-01e3-485c-8e89-bfd0e0c7b545",
+          "d38b4b2b-3422-4618-ab2a-6f0d08f13e00"
+        ],
+        "regressed": [
+          "98427b0b-20ed-45bb-b772-91573ce90b5a",
+          "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+          "b8bdd88f-996d-47bc-beb8-3b54c60754ec",
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "530a5959-0ba6-4fde-9b19-494ef51fed33",
+          "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+          "9557e88b-8880-4f64-88ec-815452f8ee4c",
+          "c7670500-3a0f-4f31-a85a-a1cf708b2f49",
+          "bbe35aed-1c92-42de-8f50-7004cdae317e",
+          "a6f20af7-21e8-4ee9-aa66-f23056ecab48",
+          "951ccf40-1a99-4138-a441-4edf16af5446",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "628e252f-e743-4054-92fd-b0ed6983571d",
+          "3181b730-2539-46d5-b818-86db8965515a",
+          "0d977872-1093-4c7b-b372-f9734293ebe8",
+          "249a0fc4-ccf4-4e6f-9ca5-29f11cf5e1ad"
+        ]
+      },
+      "Qplus": {
+        "corrected": [
+          "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+          "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+          "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+          "9e50476f-2e77-46f3-8b06-f1005ee55974",
+          "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+          "73ecc613-5e39-4348-94ba-ee6cb197367a",
+          "a0a00d56-0f2d-4f3d-ae12-ee5bc4c7ba19",
+          "548cbaae-8311-4709-9822-185e18ff895b",
+          "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+          "24f4b88e-2294-4017-a669-9e27c07d44e7",
+          "df060e0b-bd32-4e38-939f-f15919b836ae",
+          "223164c8-abed-4f1a-8f7c-4088c89d3ece",
+          "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "53bd3263-96b7-426a-b869-b14457ef3f84",
+          "2f814211-32de-4e8f-b26e-096ab47d20e8",
+          "293f6799-01e3-485c-8e89-bfd0e0c7b545",
+          "d38b4b2b-3422-4618-ab2a-6f0d08f13e00"
+        ],
+        "regressed": [
+          "b8bdd88f-996d-47bc-beb8-3b54c60754ec",
+          "8345d177-0ed4-4965-8455-bd17d2b42399",
+          "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+          "9557e88b-8880-4f64-88ec-815452f8ee4c",
+          "c7670500-3a0f-4f31-a85a-a1cf708b2f49",
+          "aafd0923-bfdb-4271-960e-02a4a5a75ed3",
+          "bbe35aed-1c92-42de-8f50-7004cdae317e",
+          "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+          "628e252f-e743-4054-92fd-b0ed6983571d",
+          "9796f529-40ca-4e74-89ed-6a25efb24c8c",
+          "3181b730-2539-46d5-b818-86db8965515a",
+          "87555387-5ded-400b-b273-fe5b16c853e2",
+          "ab4bd39c-a184-421d-9f38-bf18dd238b2d"
+        ]
+      }
+    }
+  },
+  "cost_scope": "Successful committed formal calls counted once including exact outage prefix reuse. Historical N source budgets, setup, gates, development failures, wall downtime and missing-output reservation debt are separate. Token counts exclude uncommitted outputs and synthetic/setup/development calls.",
+  "L_baseline": {
+    "completed": 300,
+    "planned": 300,
+    "correct": 189,
+    "successful": 300,
+    "pending": 0,
+    "errors": 0,
+    "accuracy_among_completed": 0.63,
+    "accuracy": 0.63,
+    "mean_input_tokens": 3408.53,
+    "mean_qa_seconds": 0.33807623604933423
+  }
+}

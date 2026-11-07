@@ -1,0 +1,199 @@
+{
+  "at": "2026-11-06T20:26:36.991708+08:00",
+  "user_instruction": "Run independent RL Q6 andQ6plus; explicitly confirmed warmstart fromQ5 SFT",
+  "active_root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r3",
+  "launch": {
+    "pid": 1525857,
+    "identity": "1781632570",
+    "at": "2026-11-06T20:21:30.668429+08:00"
+  },
+  "workers": [
+    {
+      "id": 0,
+      "pid": 1525897,
+      "identity": "1781632788"
+    }
+  ],
+  "status": {
+    "stage": "rollout",
+    "pid": 1526453,
+    "gpu": "1",
+    "at": "2026-11-06T20:25:03.190266+08:00",
+    "epoch": 1,
+    "epochs": 6,
+    "question": 2,
+    "questions": 200,
+    "question_id": "6c8fe7a9-3917-4397-b73b-90d93371b008",
+    "rollout": 1,
+    "completed_groups": 1,
+    "optimizer_steps": 0,
+    "policy_gradient_updates": 0
+  },
+  "policy_gradient_check": null,
+  "experiment": {
+    "version": "Q6-outcome-RL-v1",
+    "plus_version": "Q6plus-outcome-RL-v1",
+    "primary_arm": "Qplus",
+    "comparison_arms": [
+      "Q"
+    ],
+    "mode": "adaptive",
+    "epochs": 6,
+    "training_questions": 200,
+    "validation_questions": 300,
+    "parent_sft": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-fixed6-200train-300val-20261106-r1",
+    "source_root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1",
+    "initial_adapter_sha256": "c24ab540f945c7fbd3611d015317eba9210409444ce3e05b39f034d40b7402e0",
+    "allowed_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "resource_policy": "One resident42GiB RL primary; after epoch6 up to3 resident24GiB evaluation helpers; shared admission",
+    "validation_scope": "User-designated original300 development validation; not unseen holdout; scoring only after6 epochs",
+    "rollout_count": 2400,
+    "rollouts_per_question_per_epoch": 2,
+    "model_protocol": "Original Q4 adaptive with only contribution action decoder/weights changed",
+    "at": "2026-11-06T20:20:34.213209+08:00"
+  },
+  "settings": {
+    "seed": 20261106,
+    "epochs": 6,
+    "group_size": 2,
+    "algorithm": "on-policy REINFORCE with leave-one-out baseline",
+    "learning_rate": 5e-06,
+    "weight_decay": 0.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "gradient_clip": 1.0,
+    "epsilon": 0.1,
+    "temperature": 1.0,
+    "kl_coefficient": 0.02,
+    "policy_gradient_normalizer": 256.0,
+    "max_sequence_length": 2048,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "reward": "Q6plus final answer correct=1 incorrect=0; no retention/length reward",
+    "reference": "fixed Q5 epoch6 adapter; exact four-action categorical KL on visited states",
+    "action_policy": "first-token categorical over direct/context/irrelevant/uncertain; JSON and remaining label tokens forced",
+    "optimizer_initializations": 1,
+    "adapter_initializations": 1,
+    "internal_validation": false,
+    "selection": "fixed final epoch6",
+    "loss": "-LOO advantage * sum action log-probs /256 + .02 mean categorical KL; one update per question group",
+    "rollout_dropout": false,
+    "replay_epochs": 1,
+    "training_questions": 200,
+    "validation_questions": 300,
+    "inference": "same four-action policy argmax; adapter only q3_filter; base readers/audits/navigation",
+    "primary_arm": "Qplus",
+    "comparison_arms": [
+      "Q"
+    ]
+  },
+  "cpu_tests": "----------------------------------------------------------------------\nRan 47 tests in 13.167s\n\nOK (skipped=1)",
+  "full_qwen_likelihood_gate": {
+    "passed": true,
+    "max_logprob_drift": 0.0,
+    "seconds": 0.8188801519572735,
+    "additional_recompute_input_tokens": 405,
+    "optimizer_updates": 0,
+    "adapter_initializations": 1,
+    "at": "2026-11-06T20:22:02.256922+08:00"
+  },
+  "full_qwen_semantic_gate_passed": true,
+  "full_qwen_temporal_reader_gate_passed": true,
+  "first_trajectory_audit": {
+    "passed": true,
+    "at": "2026-11-06T20:24:59.552341+08:00",
+    "trajectory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r3/training/rollouts/epoch-1/80e5c962-37d4-4394-825c-e4c81b539e78/0",
+    "question_id": "80e5c962-37d4-4394-825c-e4c81b539e78",
+    "reward": 1.0,
+    "traces": 17,
+    "actions": 129,
+    "active_filter_calls": 5,
+    "base_calls": 8,
+    "strict_filter_input_no_gold_or_options": true,
+    "final_readers_keep_only_same_evidence": true,
+    "reward_train200_only": true,
+    "all_pending_closed": true,
+    "original_budget_checked": true,
+    "formal_policy_gradient_check": "Pending first mixed reward group; this audit does not claim an optimizer update"
+  },
+  "physical_pool": {
+    "capacity_mib": 40960,
+    "reserved_bytes": 42949672960,
+    "live_bytes": 16638111744,
+    "peak_live_bytes": 16865154048,
+    "release_policy": "worker_process_exit"
+  },
+  "prior_integrity": {
+    "at": "2026-11-06T20:24:10.553443+08:00",
+    "checks": [
+      {
+        "manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/frozen_hashes.json",
+        "checked": 248,
+        "differences": []
+      },
+      {
+        "manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/recovery-20261106-r3/frozen_hashes.json",
+        "checked": 15,
+        "differences": []
+      },
+      {
+        "manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-fixed6-200train-300val-20261106-r1/frozen_hashes.json",
+        "checked": 252,
+        "differences": []
+      },
+      {
+        "manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-fixed6-200train-300val-20261106-r1/control/frozen_hashes.json",
+        "checked": 5,
+        "differences": []
+      }
+    ]
+  },
+  "development_failures": [
+    {
+      "root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r1",
+      "formal_training_started": false,
+      "optimizer_updates": 0,
+      "gate_processing_seconds": 51.99847936630249,
+      "failed_checks": [
+        "filter_context"
+      ],
+      "frozen_manifest_sha256": "6c0510004e6a123b4903e0e76e5911ffd30aaf4851bf5983d8c60a7cbbb51f06"
+    },
+    {
+      "root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r2",
+      "formal_training_started": false,
+      "optimizer_updates": 0,
+      "gate_processing_seconds": 50.45638348162174,
+      "failed_checks": [
+        "filter_context"
+      ],
+      "frozen_manifest_sha256": "1224ad943c2acf88871117568d6a1711eb89d1d977cd28d090393cf900e04214"
+    }
+  ],
+  "development_failed_gate_seconds": 102.45486284792423,
+  "prior_sft_still_running": true,
+  "prior_sft_evaluation_completed": 146,
+  "no_existing_model_process_interrupted": true,
+  "existing_monitor_pid": 1240673,
+  "duplicate_monitor_started": false,
+  "source_sha256": {
+    "script/train_q6_rl.py": "dc9616e1b41007a690f6a5ed25210189aa8714c6ac1e73db42107b8c0d755ab0",
+    "script_core/q6_rl.py": "0e20c407dcde6e4e057cb4aa3221c2cf7330d0ad88740b99b2516f8d20191429",
+    "tests/test_q6_rl.py": "c98ea4c5f71ac93f22af0d8155fd7df0af50ae3475c57bd7e07f26265c2ed22a",
+    "docs/Q6_Outcome_RL_2026-11-06.md": "6053d6bf9237b193f60b6d083268f293ab153318a9ec6aa40b589bd1b7e9ad3c"
+  },
+  "limitations": [
+    "Current run is at early epoch1, not6 epochs complete; check actual optimizer counters before claiming weight updates",
+    "Rewarding same-policy rollouts can give zero advantage; equal reward groups correctly have no policy gradient",
+    "Physical pool reserves tensor capacity; CUDA/library headroom still requires validation",
+    "Original300 is development validation, not unseen holdout; no claim of QA improvement"
+  ]
+}

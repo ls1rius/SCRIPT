@@ -1,0 +1,2170 @@
+{
+  "at": "2026-11-04T03:40:55.422885+08:00",
+  "request": "修复bug继续跑；检查共享风险；P不得针对数据特殊设计",
+  "cpu_tests": 86,
+  "cpu_passed": true,
+  "cpu_log": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/runtime-repair-audit-20261104-r1/shared_cpu_final.log",
+  "methods": {
+    "M": {
+      "run": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/scene-planned-M-L-300-20261104-r17",
+      "queue": {
+        "state": "running",
+        "controller_pid": 3612350,
+        "updated_at": "2026-11-04T03:40:54.689125+08:00",
+        "worker_pid": 3613160,
+        "gpu": "2",
+        "gpu_uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r17/runtime/script/run_runtime_repair_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r17"
+        ],
+        "started_at": "2026-11-04T03:34:04.611913+08:00"
+      },
+      "prior_unchanged_files": 12591,
+      "inherited_success_count": 135,
+      "restart_question": "f1d2978d-4802-498a-aac7-e240e379d175",
+      "prior_failed_current_attempt_seconds": 346.2870873399079,
+      "functional/decoder/result.json": {
+        "passed": true,
+        "checks": [
+          {
+            "operation": "m_sufficiency_check",
+            "passed": true,
+            "result": {
+              "reason": "The captions do not provide specific information about the purpose of creating delicious pastries. The actions described involve various kitchen activities such",
+              "verdict": "unresolved",
+              "source_caption_ids": [
+                "C151",
+                "C152",
+                "C153"
+              ],
+              "missing_detail": "the exact nature of the pastries being made or the specific goal of the actions beyond making cakes. The captions suggest a general baking process but do not\n\n퀀"
+            }
+          }
+        ]
+      },
+      "validation/functional.json": {
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "case": "new_activity_candidate_semantics",
+            "passed": true,
+            "candidates": [
+              "S1",
+              "S0"
+            ]
+          },
+          {
+            "case": "temporal_attribute_presentation",
+            "passed": true
+          },
+          {
+            "case": "I_H_features",
+            "passed": true,
+            "plan": {
+              "keep": [
+                "R0",
+                "R1"
+              ],
+              "skip": [
+                "R2"
+              ],
+              "uncertain": [],
+              "merge_groups": []
+            },
+            "audit": {
+              "pool_sha256": "b103ea7c8a0f724319a6b1d19a59697576c367912633218ecb276ceb999407c4",
+              "total_records": 3,
+              "retained_records": 2,
+              "skipped_records": 1,
+              "uncertain_records": 0,
+              "merge_groups": 0,
+              "retained_caption_ids": [
+                "C0",
+                "C1",
+                "C2"
+              ],
+              "groups": [
+                {
+                  "record_ids": [
+                    "R0"
+                  ],
+                  "sources": [
+                    {
+                      "region": "H fact",
+                      "caption_id": "C0",
+                      "category": "actions",
+                      "fact_index": 0,
+                      "record": {
+                        "verb": "moved",
+                        "patient": "box",
+                        "instrument": "crane"
+                      }
+                    },
+                    {
+                      "region": "H fact",
+                      "caption_id": "C1",
+                      "category": "actions",
+                      "fact_index": 0,
+                      "record": {
+                        "verb": "moved",
+                        "patient": "box",
+                        "instrument": "crane"
+                      }
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "caption_id": "C0",
+                      "interval": [
+                        0,
+                        1
+                      ]
+                    },
+                    {
+                      "caption_id": "C1",
+                      "interval": [
+                        1,
+                        2
+                      ]
+                    }
+                  ],
+                  "interval_display": [
+                    {
+                      "record_id": "R0",
+                      "original_sample_intervals": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          2
+                        ]
+                      ],
+                      "display_intervals": [
+                        [
+                          0,
+                          2
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "record_ids": [
+                    "R1"
+                  ],
+                  "sources": [
+                    {
+                      "region": "H fact",
+                      "caption_id": "C2",
+                      "category": "states",
+                      "fact_index": 0,
+                      "record": {
+                        "entity": "server",
+                        "description": "unreachable"
+                      }
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "caption_id": "C2",
+                      "interval": [
+                        2,
+                        3
+                      ]
+                    }
+                  ],
+                  "interval_display": [
+                    {
+                      "record_id": "R1",
+                      "original_sample_intervals": [
+                        [
+                          2,
+                          3
+                        ]
+                      ],
+                      "display_intervals": [
+                        [
+                          2,
+                          3
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "skipped_ids": [
+                "R2"
+              ],
+              "original_sources_retained": true,
+              "inferred_continuity": false,
+              "inferred_event_counts": false,
+              "semantic_paraphrasing": false,
+              "version": "I-evidence-planner-L-v1-open-state-adjacent",
+              "parent_memory_variant": "I",
+              "underlying_memory_variant": "H",
+              "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement"
+            }
+          },
+          {
+            "case": "130_records",
+            "passed": true,
+            "plan": {
+              "keep": [
+                "R0",
+                "R129"
+              ],
+              "skip": [
+                "R1",
+                "R2",
+                "R3",
+                "R4",
+                "R5",
+                "R6",
+                "R7",
+                "R8",
+                "R9",
+                "R10",
+                "R11",
+                "R12",
+                "R13",
+                "R14",
+                "R15",
+                "R16",
+                "R17",
+                "R18",
+                "R19",
+                "R20",
+                "R21",
+                "R22",
+                "R23",
+                "R24",
+                "R25",
+                "R26",
+                "R27",
+                "R28",
+                "R29",
+                "R30",
+                "R31",
+                "R32",
+                "R33",
+                "R34",
+                "R35",
+                "R36",
+                "R37",
+                "R38",
+                "R39",
+                "R40",
+                "R41",
+                "R42",
+                "R43",
+                "R44",
+                "R45",
+                "R46",
+                "R47",
+                "R48",
+                "R49",
+                "R50",
+                "R51",
+                "R52",
+                "R53",
+                "R54",
+                "R55",
+                "R56",
+                "R57",
+                "R58",
+                "R59",
+                "R60",
+                "R61",
+                "R62",
+                "R63",
+                "R64",
+                "R65",
+                "R66",
+                "R67",
+                "R68",
+                "R69",
+                "R70",
+                "R71",
+                "R72",
+                "R73",
+                "R74",
+                "R75",
+                "R76",
+                "R77",
+                "R78",
+                "R79",
+                "R80",
+                "R81",
+                "R82",
+                "R83",
+                "R84",
+                "R85",
+                "R86",
+                "R87",
+                "R88",
+                "R89",
+                "R90",
+                "R91",
+                "R92",
+                "R93",
+                "R94",
+                "R95",
+                "R96",
+                "R97",
+                "R98",
+                "R99",
+                "R100",
+                "R101",
+                "R102",
+                "R103",
+                "R104",
+                "R105",
+                "R106",
+                "R107",
+                "R108",
+                "R109",
+                "R110",
+                "R111",
+                "R112",
+                "R113",
+                "R114",
+                "R115",
+                "R116",
+                "R117",
+                "R118",
+                "R119",
+                "R120",
+                "R121",
+                "R122",
+                "R123",
+                "R124",
+                "R125",
+                "R126",
+                "R127",
+                "R128"
+              ],
+              "uncertain": [],
+              "merge_groups": []
+            },
+            "audit": {
+              "pool_sha256": "bc1fc4da3580e394a76bbeae03e75c47e9f78f72267b86e367ecc95d5e0283cf",
+              "total_records": 130,
+              "retained_records": 2,
+              "skipped_records": 128,
+              "uncertain_records": 0,
+              "merge_groups": 0,
+              "retained_caption_ids": [],
+              "groups": [
+                {
+                  "record_ids": [
+                    "R0"
+                  ],
+                  "sources": [
+                    {
+                      "region": "probe"
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "interval": [
+                        0,
+                        1
+                      ]
+                    }
+                  ],
+                  "interval_display": [
+                    {
+                      "record_id": "R0",
+                      "original_sample_intervals": [
+                        [
+                          0,
+                          1
+                        ]
+                      ],
+                      "display_intervals": [
+                        [
+                          0,
+                          1
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "record_ids": [
+                    "R129"
+                  ],
+                  "sources": [
+                    {
+                      "region": "probe"
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "interval": [
+                        129,
+                        130
+                      ]
+                    }
+                  ],
+                  "interval_display": [
+                    {
+                      "record_id": "R129",
+                      "original_sample_intervals": [
+                        [
+                          129,
+                          130
+                        ]
+                      ],
+                      "display_intervals": [
+                        [
+                          129,
+                          130
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "skipped_ids": [
+                "R1",
+                "R2",
+                "R3",
+                "R4",
+                "R5",
+                "R6",
+                "R7",
+                "R8",
+                "R9",
+                "R10",
+                "R11",
+                "R12",
+                "R13",
+                "R14",
+                "R15",
+                "R16",
+                "R17",
+                "R18",
+                "R19",
+                "R20",
+                "R21",
+                "R22",
+                "R23",
+                "R24",
+                "R25",
+                "R26",
+                "R27",
+                "R28",
+                "R29",
+                "R30",
+                "R31",
+                "R32",
+                "R33",
+                "R34",
+                "R35",
+                "R36",
+                "R37",
+                "R38",
+                "R39",
+                "R40",
+                "R41",
+                "R42",
+                "R43",
+                "R44",
+                "R45",
+                "R46",
+                "R47",
+                "R48",
+                "R49",
+                "R50",
+                "R51",
+                "R52",
+                "R53",
+                "R54",
+                "R55",
+                "R56",
+                "R57",
+                "R58",
+                "R59",
+                "R60",
+                "R61",
+                "R62",
+                "R63",
+                "R64",
+                "R65",
+                "R66",
+                "R67",
+                "R68",
+                "R69",
+                "R70",
+                "R71",
+                "R72",
+                "R73",
+                "R74",
+                "R75",
+                "R76",
+                "R77",
+                "R78",
+                "R79",
+                "R80",
+                "R81",
+                "R82",
+                "R83",
+                "R84",
+                "R85",
+                "R86",
+                "R87",
+                "R88",
+                "R89",
+                "R90",
+                "R91",
+                "R92",
+                "R93",
+                "R94",
+                "R95",
+                "R96",
+                "R97",
+                "R98",
+                "R99",
+                "R100",
+                "R101",
+                "R102",
+                "R103",
+                "R104",
+                "R105",
+                "R106",
+                "R107",
+                "R108",
+                "R109",
+                "R110",
+                "R111",
+                "R112",
+                "R113",
+                "R114",
+                "R115",
+                "R116",
+                "R117",
+                "R118",
+                "R119",
+                "R120",
+                "R121",
+                "R122",
+                "R123",
+                "R124",
+                "R125",
+                "R126",
+                "R127",
+                "R128"
+              ],
+              "original_sources_retained": true,
+              "inferred_continuity": false,
+              "inferred_event_counts": false,
+              "semantic_paraphrasing": false,
+              "version": "I-evidence-planner-L-v1-open-state-adjacent",
+              "parent_memory_variant": "I",
+              "underlying_memory_variant": "H",
+              "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement"
+            }
+          },
+          {
+            "case": "explicit_gap_expansion_contract",
+            "passed": true,
+            "decision": {
+              "resolution_status": "unresolved",
+              "reason": "The condition of the book before wiping is not observed; only the after condition is stated by C1",
+              "gap": "The condition of the book before wiping is unobserved; C1 states only the after condition",
+              "action": "read_scene",
+              "scene_id": "S0",
+              "current_scene_assessment": "cannot_resolve_locally",
+              "local_unavailable_reason": "The condition of the book before wiping is not observed",
+              "caption_ids": [],
+              "entity_ids": [],
+              "focus": [],
+              "fields": [],
+              "sufficient": false
+            }
+          },
+          {
+            "case": "single",
+            "candidates": [
+              "S0"
+            ],
+            "opened": [
+              "S0"
+            ],
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "forced_coverage": false,
+            "raw_calls": 53
+          },
+          {
+            "case": "comparison",
+            "candidates": [
+              "S0",
+              "S1"
+            ],
+            "opened": [
+              "S0",
+              "S1"
+            ],
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "forced_coverage": false,
+            "raw_calls": 57
+          },
+          {
+            "case": "empty",
+            "candidates": [],
+            "opened": [],
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "forced_coverage": false,
+            "raw_calls": 18
+          }
+        ],
+        "updated_at": "2026-11-04T03:38:26.778475+08:00",
+        "semantic_navigation_probe_passed": true,
+        "semantic_diagnostics": [
+          {
+            "case": "comparison",
+            "passed": true,
+            "opened": [
+              "S0",
+              "S1"
+            ],
+            "expected_opened": [
+              "S0",
+              "S1"
+            ],
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "limitation": "Autonomous early stopping can mistake a partial option match for full discrimination."
+          }
+        ],
+        "benchmark_labels_used": false,
+        "scope": "Technical planning, source, gap execution and complete-pipeline contracts; autonomous semantic sufficiency is a separately reported diagnostic.",
+        "gate_policy": "Semantic diagnostic failures remain visible limitations and are not claimed repaired; benchmark measures actual M decisions.",
+        "shared_runtime_repair_checks": [
+          {
+            "operation": "m_sufficiency_check",
+            "passed": true,
+            "result": {
+              "reason": "The captions do not provide specific information about the purpose of creating delicious pastries. The actions described involve various kitchen activities such",
+              "verdict": "unresolved",
+              "source_caption_ids": [
+                "C151",
+                "C152",
+                "C153"
+              ],
+              "missing_detail": "the exact nature of the pastries being made or the specific goal of the actions beyond making cakes. The captions suggest a general baking process but do not\n\n퀀"
+            }
+          }
+        ]
+      },
+      "progress.json": {
+        "stage": "query",
+        "index": 136,
+        "question_id": "f1d2978d-4802-498a-aac7-e240e379d175",
+        "updated_at": "2026-11-04T03:38:26.782694+08:00"
+      }
+    },
+    "N": {
+      "run": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/scene-planned-N-L-300-20261104-r4",
+      "queue": {
+        "state": "running",
+        "controller_pid": 3612328,
+        "updated_at": "2026-11-04T03:40:53.878466+08:00",
+        "worker_pid": 3612568,
+        "gpu": "0",
+        "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/runtime/script/run_runtime_repair_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4"
+        ],
+        "started_at": "2026-11-04T03:33:03.786572+08:00"
+      },
+      "prior_unchanged_files": 9079,
+      "inherited_success_count": 91,
+      "restart_question": "101628a9-37be-4555-99c0-589ced677ee6",
+      "prior_failed_current_attempt_seconds": 1092.6880620643497,
+      "functional/decoder/result.json": {
+        "passed": true,
+        "checks": [
+          {
+            "operation": "m_sufficiency_check",
+            "passed": true,
+            "result": {
+              "reason": "The captions do not provide specific information about the purpose of creating delicious pastries. The actions described involve various kitchen activities such",
+              "verdict": "unresolved",
+              "source_caption_ids": [
+                "C151",
+                "C152",
+                "C153"
+              ],
+              "missing_detail": "the exact nature of the pastries being made or the specific goal of the actions beyond making cakes. The captions suggest a general baking process but do not\n\n퀀"
+            }
+          },
+          {
+            "operation": "n_evidence_plan",
+            "passed": true,
+            "input_tokens": 16775,
+            "decisions": 322
+          }
+        ]
+      },
+      "validation/functional.json": {
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "case": "new_activity_candidate_semantics",
+            "passed": true,
+            "candidates": [
+              "S1",
+              "S0"
+            ]
+          },
+          {
+            "case": "temporal_attribute_presentation",
+            "passed": true
+          },
+          {
+            "case": "I_H_features",
+            "passed": true,
+            "plan": {
+              "keep": [
+                "R0",
+                "R1"
+              ],
+              "skip": [
+                "R2"
+              ],
+              "uncertain": [],
+              "merge_groups": []
+            },
+            "audit": {
+              "pool_sha256": "b103ea7c8a0f724319a6b1d19a59697576c367912633218ecb276ceb999407c4",
+              "total_records": 3,
+              "retained_records": 2,
+              "skipped_records": 1,
+              "uncertain_records": 0,
+              "merge_groups": 0,
+              "retained_caption_ids": [
+                "C0",
+                "C1",
+                "C2"
+              ],
+              "groups": [
+                {
+                  "record_ids": [
+                    "R0"
+                  ],
+                  "sources": [
+                    {
+                      "region": "H fact",
+                      "caption_id": "C0",
+                      "category": "actions",
+                      "fact_index": 0,
+                      "record": {
+                        "verb": "moved",
+                        "patient": "box",
+                        "instrument": "crane"
+                      }
+                    },
+                    {
+                      "region": "H fact",
+                      "caption_id": "C1",
+                      "category": "actions",
+                      "fact_index": 0,
+                      "record": {
+                        "verb": "moved",
+                        "patient": "box",
+                        "instrument": "crane"
+                      }
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "caption_id": "C0",
+                      "interval": [
+                        0,
+                        1
+                      ]
+                    },
+                    {
+                      "caption_id": "C1",
+                      "interval": [
+                        1,
+                        2
+                      ]
+                    }
+                  ],
+                  "interval_display": [
+                    {
+                      "record_id": "R0",
+                      "original_sample_intervals": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          2
+                        ]
+                      ],
+                      "display_intervals": [
+                        [
+                          0,
+                          2
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "record_ids": [
+                    "R1"
+                  ],
+                  "sources": [
+                    {
+                      "region": "H fact",
+                      "caption_id": "C2",
+                      "category": "states",
+                      "fact_index": 0,
+                      "record": {
+                        "entity": "server",
+                        "description": "unreachable"
+                      }
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "caption_id": "C2",
+                      "interval": [
+                        2,
+                        3
+                      ]
+                    }
+                  ],
+                  "interval_display": [
+                    {
+                      "record_id": "R1",
+                      "original_sample_intervals": [
+                        [
+                          2,
+                          3
+                        ]
+                      ],
+                      "display_intervals": [
+                        [
+                          2,
+                          3
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "skipped_ids": [
+                "R2"
+              ],
+              "original_sources_retained": true,
+              "inferred_continuity": false,
+              "inferred_event_counts": false,
+              "semantic_paraphrasing": false,
+              "version": "I-evidence-planner-L-v1-open-state-adjacent",
+              "parent_memory_variant": "I",
+              "underlying_memory_variant": "H",
+              "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement"
+            }
+          },
+          {
+            "case": "130_records",
+            "passed": true,
+            "plan": {
+              "keep": [
+                "R0",
+                "R129"
+              ],
+              "skip": [
+                "R1",
+                "R2",
+                "R3",
+                "R4",
+                "R5",
+                "R6",
+                "R7",
+                "R8",
+                "R9",
+                "R10",
+                "R11",
+                "R12",
+                "R13",
+                "R14",
+                "R15",
+                "R16",
+                "R17",
+                "R18",
+                "R19",
+                "R20",
+                "R21",
+                "R22",
+                "R23",
+                "R24",
+                "R25",
+                "R26",
+                "R27",
+                "R28",
+                "R29",
+                "R30",
+                "R31",
+                "R32",
+                "R33",
+                "R34",
+                "R35",
+                "R36",
+                "R37",
+                "R38",
+                "R39",
+                "R40",
+                "R41",
+                "R42",
+                "R43",
+                "R44",
+                "R45",
+                "R46",
+                "R47",
+                "R48",
+                "R49",
+                "R50",
+                "R51",
+                "R52",
+                "R53",
+                "R54",
+                "R55",
+                "R56",
+                "R57",
+                "R58",
+                "R59",
+                "R60",
+                "R61",
+                "R62",
+                "R63",
+                "R64",
+                "R65",
+                "R66",
+                "R67",
+                "R68",
+                "R69",
+                "R70",
+                "R71",
+                "R72",
+                "R73",
+                "R74",
+                "R75",
+                "R76",
+                "R77",
+                "R78",
+                "R79",
+                "R80",
+                "R81",
+                "R82",
+                "R83",
+                "R84",
+                "R85",
+                "R86",
+                "R87",
+                "R88",
+                "R89",
+                "R90",
+                "R91",
+                "R92",
+                "R93",
+                "R94",
+                "R95",
+                "R96",
+                "R97",
+                "R98",
+                "R99",
+                "R100",
+                "R101",
+                "R102",
+                "R103",
+                "R104",
+                "R105",
+                "R106",
+                "R107",
+                "R108",
+                "R109",
+                "R110",
+                "R111",
+                "R112",
+                "R113",
+                "R114",
+                "R115",
+                "R116",
+                "R117",
+                "R118",
+                "R119",
+                "R120",
+                "R121",
+                "R122",
+                "R123",
+                "R124",
+                "R125",
+                "R126",
+                "R127",
+                "R128"
+              ],
+              "uncertain": [],
+              "merge_groups": []
+            },
+            "audit": {
+              "pool_sha256": "bc1fc4da3580e394a76bbeae03e75c47e9f78f72267b86e367ecc95d5e0283cf",
+              "total_records": 130,
+              "retained_records": 2,
+              "skipped_records": 128,
+              "uncertain_records": 0,
+              "merge_groups": 0,
+              "retained_caption_ids": [],
+              "groups": [
+                {
+                  "record_ids": [
+                    "R0"
+                  ],
+                  "sources": [
+                    {
+                      "region": "probe"
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "interval": [
+                        0,
+                        1
+                      ]
+                    }
+                  ],
+                  "interval_display": [
+                    {
+                      "record_id": "R0",
+                      "original_sample_intervals": [
+                        [
+                          0,
+                          1
+                        ]
+                      ],
+                      "display_intervals": [
+                        [
+                          0,
+                          1
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "record_ids": [
+                    "R129"
+                  ],
+                  "sources": [
+                    {
+                      "region": "probe"
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "interval": [
+                        129,
+                        130
+                      ]
+                    }
+                  ],
+                  "interval_display": [
+                    {
+                      "record_id": "R129",
+                      "original_sample_intervals": [
+                        [
+                          129,
+                          130
+                        ]
+                      ],
+                      "display_intervals": [
+                        [
+                          129,
+                          130
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "skipped_ids": [
+                "R1",
+                "R2",
+                "R3",
+                "R4",
+                "R5",
+                "R6",
+                "R7",
+                "R8",
+                "R9",
+                "R10",
+                "R11",
+                "R12",
+                "R13",
+                "R14",
+                "R15",
+                "R16",
+                "R17",
+                "R18",
+                "R19",
+                "R20",
+                "R21",
+                "R22",
+                "R23",
+                "R24",
+                "R25",
+                "R26",
+                "R27",
+                "R28",
+                "R29",
+                "R30",
+                "R31",
+                "R32",
+                "R33",
+                "R34",
+                "R35",
+                "R36",
+                "R37",
+                "R38",
+                "R39",
+                "R40",
+                "R41",
+                "R42",
+                "R43",
+                "R44",
+                "R45",
+                "R46",
+                "R47",
+                "R48",
+                "R49",
+                "R50",
+                "R51",
+                "R52",
+                "R53",
+                "R54",
+                "R55",
+                "R56",
+                "R57",
+                "R58",
+                "R59",
+                "R60",
+                "R61",
+                "R62",
+                "R63",
+                "R64",
+                "R65",
+                "R66",
+                "R67",
+                "R68",
+                "R69",
+                "R70",
+                "R71",
+                "R72",
+                "R73",
+                "R74",
+                "R75",
+                "R76",
+                "R77",
+                "R78",
+                "R79",
+                "R80",
+                "R81",
+                "R82",
+                "R83",
+                "R84",
+                "R85",
+                "R86",
+                "R87",
+                "R88",
+                "R89",
+                "R90",
+                "R91",
+                "R92",
+                "R93",
+                "R94",
+                "R95",
+                "R96",
+                "R97",
+                "R98",
+                "R99",
+                "R100",
+                "R101",
+                "R102",
+                "R103",
+                "R104",
+                "R105",
+                "R106",
+                "R107",
+                "R108",
+                "R109",
+                "R110",
+                "R111",
+                "R112",
+                "R113",
+                "R114",
+                "R115",
+                "R116",
+                "R117",
+                "R118",
+                "R119",
+                "R120",
+                "R121",
+                "R122",
+                "R123",
+                "R124",
+                "R125",
+                "R126",
+                "R127",
+                "R128"
+              ],
+              "original_sources_retained": true,
+              "inferred_continuity": false,
+              "inferred_event_counts": false,
+              "semantic_paraphrasing": false,
+              "version": "I-evidence-planner-L-v1-open-state-adjacent",
+              "parent_memory_variant": "I",
+              "underlying_memory_variant": "H",
+              "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement"
+            }
+          },
+          {
+            "case": "explicit_gap_expansion_contract",
+            "passed": true,
+            "decision": {
+              "resolution_status": "unresolved",
+              "reason": "The condition of the book before wiping is not observed; only the after condition is stated by C1",
+              "gap": "The condition of the book before wiping is unobserved; C1 states only the after condition",
+              "action": "read_scene",
+              "scene_id": "S0",
+              "current_scene_assessment": "cannot_resolve_locally",
+              "local_unavailable_reason": "The condition of the book before wiping is not observed",
+              "caption_ids": [],
+              "entity_ids": [],
+              "focus": [],
+              "fields": [],
+              "sufficient": false
+            }
+          },
+          {
+            "case": "single",
+            "candidates": [
+              "S0"
+            ],
+            "opened": [
+              "S0"
+            ],
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "forced_coverage": false,
+            "raw_calls": 53
+          },
+          {
+            "case": "comparison",
+            "candidates": [
+              "S0",
+              "S1"
+            ],
+            "opened": [
+              "S0",
+              "S1"
+            ],
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "forced_coverage": false,
+            "raw_calls": 57
+          },
+          {
+            "case": "empty",
+            "candidates": [],
+            "opened": [],
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "forced_coverage": false,
+            "raw_calls": 18
+          }
+        ],
+        "updated_at": "2026-11-04T03:39:26.337232+08:00",
+        "semantic_navigation_probe_passed": true,
+        "semantic_diagnostics": [
+          {
+            "case": "comparison",
+            "passed": true,
+            "opened": [
+              "S0",
+              "S1"
+            ],
+            "expected_opened": [
+              "S0",
+              "S1"
+            ],
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "limitation": "Autonomous early stopping can mistake a partial option match for full discrimination."
+          }
+        ],
+        "benchmark_labels_used": false,
+        "scope": "Technical planning, source, gap execution and complete-pipeline contracts; autonomous semantic sufficiency is a separately reported diagnostic.",
+        "gate_policy": "Semantic diagnostic failures remain visible limitations and are not claimed repaired; benchmark measures actual M decisions.",
+        "N_variant_checks": [
+          {
+            "case": "single",
+            "passed": true,
+            "method": "N-M-neutral-query-joint-candidates-v8",
+            "operations": [
+              "adaptive_memory_projection",
+              "adaptive_scheme4_state_assembly",
+              "checkpoint_write",
+              "entity_evidence_materialization",
+              "f_batch_preparation",
+              "h_plan_fields",
+              "m_candidate_query",
+              "m_candidate_rank",
+              "m_sufficiency_check",
+              "m_transition_next",
+              "n_answer",
+              "n_evidence_materialization",
+              "n_evidence_plan",
+              "n_extract_fields",
+              "partial_temporal_source_projection",
+              "structured_output_validation",
+              "temporal_qa_check"
+            ],
+            "empty": false
+          },
+          {
+            "case": "comparison",
+            "passed": true,
+            "method": "N-M-neutral-query-joint-candidates-v8",
+            "operations": [
+              "adaptive_memory_projection",
+              "adaptive_scheme4_state_assembly",
+              "checkpoint_write",
+              "entity_evidence_materialization",
+              "f_batch_preparation",
+              "h_plan_fields",
+              "m_candidate_query",
+              "m_candidate_rank",
+              "m_sufficiency_check",
+              "m_transition_next",
+              "n_answer",
+              "n_evidence_materialization",
+              "n_evidence_plan",
+              "n_extract_batch",
+              "partial_temporal_source_projection",
+              "structured_output_validation",
+              "temporal_qa_check"
+            ],
+            "empty": false
+          },
+          {
+            "case": "empty",
+            "passed": true,
+            "method": "N-M-neutral-query-joint-candidates-v8",
+            "operations": [
+              "adaptive_memory_projection",
+              "checkpoint_write",
+              "m_candidate_query",
+              "m_candidate_rank",
+              "n_answer",
+              "structured_output_validation",
+              "temporal_qa_check"
+            ],
+            "empty": true
+          }
+        ],
+        "shared_runtime_repair_checks": [
+          {
+            "operation": "m_sufficiency_check",
+            "passed": true,
+            "result": {
+              "reason": "The captions do not provide specific information about the purpose of creating delicious pastries. The actions described involve various kitchen activities such",
+              "verdict": "unresolved",
+              "source_caption_ids": [
+                "C151",
+                "C152",
+                "C153"
+              ],
+              "missing_detail": "the exact nature of the pastries being made or the specific goal of the actions beyond making cakes. The captions suggest a general baking process but do not\n\n퀀"
+            }
+          },
+          {
+            "operation": "n_evidence_plan",
+            "passed": true,
+            "input_tokens": 16775,
+            "decisions": 322
+          }
+        ]
+      },
+      "progress.json": {
+        "stage": "query",
+        "index": 92,
+        "question_id": "101628a9-37be-4555-99c0-589ced677ee6",
+        "updated_at": "2026-11-04T03:39:26.353073+08:00"
+      }
+    },
+    "O": {
+      "run": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/O-Oplus-N-question-only-300-source-bound-20261104-r3",
+      "queue": {
+        "state": "waiting_for_N_source",
+        "controller_pid": 3613205,
+        "question_id": "101628a9-37be-4555-99c0-589ced677ee6",
+        "parent": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+        "model_loaded": false,
+        "updated_at": "2026-11-04T03:40:38.719197+08:00"
+      },
+      "prior_unchanged_files": 49482,
+      "inherited_complete_pairs": 91,
+      "validation/functional.json": {
+        "passed": false,
+        "checks": [
+          {
+            "case": "actor_patient",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D gives a cup to E."
+                }
+              },
+              "text": "D gives a cup to E."
+            }
+          },
+          {
+            "case": "actor_patient",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D gives a cup to E."
+                }
+              },
+              "text": "D gives a cup to E."
+            }
+          },
+          {
+            "case": "question_cannot_supply_action",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: C."
+                }
+              },
+              "text": "Actor: C."
+            }
+          },
+          {
+            "case": "question_cannot_supply_action",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: C."
+                }
+              },
+              "text": "Actor: C."
+            }
+          },
+          {
+            "case": "options_cannot_supply_fact",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D puts a cup."
+                }
+              },
+              "text": "D puts a cup."
+            }
+          },
+          {
+            "case": "options_cannot_supply_fact",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D puts a cup."
+                }
+              },
+              "text": "D puts a cup."
+            }
+          },
+          {
+            "case": "partial_repeated_evidence",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D tightens a screw."
+                }
+              },
+              "text": "D tightens a screw."
+            }
+          },
+          {
+            "case": "partial_repeated_evidence",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D tightens a screw."
+                }
+              },
+              "text": "D tightens a screw."
+            }
+          },
+          {
+            "case": "subject_identity_question",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: D."
+                },
+                "b": {
+                  "text": "Actor: E."
+                }
+              },
+              "text": "Actor: D. Actor: E."
+            }
+          },
+          {
+            "case": "subject_identity_question",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: D."
+                },
+                "b": {
+                  "text": "Actor: E."
+                }
+              },
+              "text": "Actor: D. Actor: E."
+            }
+          },
+          {
+            "case": "uninformative_placeholder",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          },
+          {
+            "case": "uninformative_placeholder",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          },
+          {
+            "case": "independent_events",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D opens drawer."
+                },
+                "b": {
+                  "text": "E reads book."
+                }
+              },
+              "text": "D opens drawer. E reads book."
+            }
+          },
+          {
+            "case": "independent_events",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D opens drawer."
+                },
+                "b": {
+                  "text": "E reads book."
+                }
+              },
+              "text": "D opens drawer. E reads book."
+            }
+          },
+          {
+            "case": "partial_filter",
+            "arm": "question_only",
+            "passed": false,
+            "labels": {
+              "U0": 0,
+              "U1": 0,
+              "U2": 0
+            }
+          },
+          {
+            "case": "irrelevant_filter",
+            "arm": "question_only",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          },
+          {
+            "case": "partial_filter",
+            "arm": "question_options",
+            "passed": true,
+            "labels": {
+              "U0": 1,
+              "U1": 1,
+              "U2": 1
+            }
+          },
+          {
+            "case": "irrelevant_filter",
+            "arm": "question_options",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          }
+        ],
+        "error": null,
+        "technical_checks": [
+          {
+            "case": "identity_alias",
+            "actor": "繫",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          },
+          {
+            "case": "identity_alias",
+            "actor": "D\"E",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          }
+        ],
+        "execution_allowed_for_diagnostic": true,
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 48.798922669142485,
+          "total": 48.798922669142485,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 48.798922669142485,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "oplus_compose": 24.507436223328114,
+            "o_filter_plan": 7.336151026189327,
+            "o_filter": 16.955335419625044
+          },
+          "call_count": 22,
+          "resources": {
+            "cpu_seconds": 48.728324331000024,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 48.85624488443136,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16808126976
+          }
+        },
+        "updated_at": "2026-11-03T13:30:41.833833+08:00",
+        "inherited_from": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-batched-20261103-r2/validation/functional.json",
+        "historical": true,
+        "scope": "Historical diagnostic semantic result; not a new full-run gate."
+      }
+    },
+    "P": {
+      "run": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/P-three-demo-validation-20261104-r2",
+      "queue": {
+        "state": "failed",
+        "controller_pid": 3611793,
+        "updated_at": "2026-11-04T03:34:02.626639+08:00",
+        "error": "P failed; records retained"
+      },
+      "gate_passed": false,
+      "passed_checks": 9,
+      "total_checks": 16,
+      "failed_checks": [
+        {
+          "name": "source_roles_2",
+          "held_out_new": false,
+          "passed": false,
+          "input": {
+            "id": "S2",
+            "text": "Worker T2 leans backward."
+          },
+          "output": {
+            "extraction_status": "extracted",
+            "actions": [
+              {
+                "actor": "Worker T2",
+                "verb": "leans",
+                "roles": {
+                  "patient": "Worker T2",
+                  "body_part": "back",
+                  "destination": "backward",
+                  "instrument": null,
+                  "location": null,
+                  "manner": null,
+                  "material": null,
+                  "recipient": null,
+                  "source_location": null,
+                  "surface": null
+                }
+              }
+            ],
+            "attributes": [],
+            "states": [],
+            "relations": [],
+            "changes": [],
+            "results": [],
+            "event_links": []
+          },
+          "identity": true,
+          "predicates": true,
+          "title_not_patient": false,
+          "roles": false
+        },
+        {
+          "name": "source_roles_3",
+          "held_out_new": false,
+          "passed": false,
+          "input": {
+            "id": "S3",
+            "text": "Visitor V8 waits beside the doorway."
+          },
+          "output": {
+            "extraction_status": "extracted",
+            "actions": [
+              {
+                "actor": "Visitor V8",
+                "verb": "waits",
+                "roles": {
+                  "patient": "doorway",
+                  "body_part": null,
+                  "destination": null,
+                  "instrument": null,
+                  "location": null,
+                  "manner": null,
+                  "material": null,
+                  "recipient": null,
+                  "source_location": null,
+                  "surface": null
+                }
+              }
+            ],
+            "attributes": [],
+            "states": [],
+            "relations": [],
+            "changes": [],
+            "results": [],
+            "event_links": []
+          },
+          "identity": true,
+          "predicates": true,
+          "title_not_patient": true,
+          "roles": false
+        },
+        {
+          "name": "source_roles_6",
+          "held_out_new": false,
+          "passed": false,
+          "input": {
+            "id": "S6",
+            "text": "Runner K8 steps sideways."
+          },
+          "output": {
+            "extraction_status": "extracted",
+            "actions": [
+              {
+                "actor": "Runner K8",
+                "verb": "steps",
+                "roles": {
+                  "patient": "sideways",
+                  "body_part": null,
+                  "destination": null,
+                  "instrument": null,
+                  "location": null,
+                  "manner": null,
+                  "material": null,
+                  "recipient": null,
+                  "source_location": null,
+                  "surface": null
+                }
+              }
+            ],
+            "attributes": [],
+            "states": [],
+            "relations": [],
+            "changes": [],
+            "results": [],
+            "event_links": []
+          },
+          "identity": true,
+          "predicates": true,
+          "title_not_patient": true,
+          "roles": false
+        },
+        {
+          "name": "source_roles_7",
+          "held_out_new": false,
+          "passed": false,
+          "input": {
+            "id": "S7",
+            "text": "Visitor L3 pauses near the gate."
+          },
+          "output": {
+            "extraction_status": "extracted",
+            "actions": [
+              {
+                "actor": "Visitor L3",
+                "verb": "pauses",
+                "roles": {
+                  "patient": "near the gate",
+                  "body_part": null,
+                  "destination": null,
+                  "instrument": null,
+                  "location": null,
+                  "manner": null,
+                  "material": null,
+                  "recipient": null,
+                  "source_location": null,
+                  "surface": null
+                }
+              }
+            ],
+            "attributes": [],
+            "states": [],
+            "relations": [],
+            "changes": [],
+            "results": [],
+            "event_links": []
+          },
+          "identity": true,
+          "predicates": true,
+          "title_not_patient": true,
+          "roles": false
+        },
+        {
+          "name": "source_roles_10",
+          "held_out_new": true,
+          "passed": false,
+          "input": {
+            "id": "S10",
+            "text": "Pilot Y9 turns slowly."
+          },
+          "output": {
+            "extraction_status": "extracted",
+            "actions": [
+              {
+                "actor": "Pilot Y9",
+                "verb": "turns",
+                "roles": {
+                  "patient": "Pilot Y9",
+                  "body_part": null,
+                  "destination": null,
+                  "instrument": null,
+                  "location": null,
+                  "manner": "slowly",
+                  "material": null,
+                  "recipient": null,
+                  "source_location": null,
+                  "surface": null
+                }
+              }
+            ],
+            "attributes": [],
+            "states": [],
+            "relations": [],
+            "changes": [],
+            "results": [],
+            "event_links": []
+          },
+          "identity": true,
+          "predicates": true,
+          "title_not_patient": false,
+          "roles": true
+        },
+        {
+          "name": "source_roles_11",
+          "held_out_new": true,
+          "passed": false,
+          "input": {
+            "id": "S11",
+            "text": "Guard Z4 stands behind the desk."
+          },
+          "output": {
+            "extraction_status": "extracted",
+            "actions": [
+              {
+                "actor": "Guard Z4",
+                "verb": "stands",
+                "roles": {
+                  "patient": "Guard Z4",
+                  "body_part": null,
+                  "destination": null,
+                  "instrument": null,
+                  "location": "behind the desk",
+                  "manner": null,
+                  "material": null,
+                  "recipient": null,
+                  "source_location": null,
+                  "surface": null
+                }
+              }
+            ],
+            "attributes": [],
+            "states": [],
+            "relations": [],
+            "changes": [],
+            "results": [],
+            "event_links": []
+          },
+          "identity": true,
+          "predicates": true,
+          "title_not_patient": false,
+          "roles": true
+        },
+        {
+          "name": "filter_decision_2",
+          "passed": false,
+          "input": {
+            "question": "Which actions does Technician Q7 perform while moving a tray?",
+            "sentence": "Technician Q7 slides a tray backward.",
+            "candidates": [
+              {
+                "id": "U0",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "actor",
+                "value": "Technician Q7"
+              },
+              {
+                "id": "U1",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "verb",
+                "value": "slides"
+              },
+              {
+                "id": "U2",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "patient",
+                "value": "a tray"
+              },
+              {
+                "id": "U3",
+                "kind": "action_field",
+                "group": "actions_0",
+                "field": "body_part",
+                "value": "backward"
+              }
+            ]
+          },
+          "output": {
+            "decisions": {
+              "U0": {
+                "fidelity": "unfaithful",
+                "decision": "drop_unfaithful"
+              },
+              "U1": {
+                "fidelity": "faithful",
+                "decision": "keep_local"
+              },
+              "U2": {
+                "fidelity": "faithful",
+                "decision": "keep_local"
+              },
+              "U3": {
+                "fidelity": "unfaithful",
+                "decision": "drop_unfaithful"
+              }
+            }
+          },
+          "labels": {
+            "U0": 0,
+            "U1": 1,
+            "U2": 1,
+            "U3": 0
+          }
+        }
+      ],
+      "cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 61.78659388050437,
+        "total": 61.78659388050437,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 61.78659388050437,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "p_independent_batch": 61.78659388050437
+        },
+        "call_count": 4,
+        "resources": {
+          "cpu_seconds": 61.71771512599999,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 61.79863100498915,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 17841401344
+        }
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 9.487926680594683,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 6.158143363893032,
+            "tokenizer_constraint_seconds": 2.327354025095701
+          },
+          "usage": {
+            "cuda_allocator_limit_mib": 22528,
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 8.755770566,
+            "gpu_resident_seconds": 6.5021295212209225,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      },
+      "formal_case_count": 0
+    }
+  },
+  "shared_fixes": [
+    "Shared backend structured JSON and O/P serial/batch JSON guard UTF-16 surrogate escape code units before generation; ordinary escapes/BMP escapes and supported literal Unicode remain",
+    "Shared L/M/N/O/P reader/planner checks input plus output reserve against native model context; M/N/O continuation config input limit 32768; no truncation",
+    "P only: explicit null-or-value role review and fidelity-before-relevance decision; semantic validation still FAILED; not propagated to O/M/N/default L/E"
+  ],
+  "limitations": [
+    "No claim of eliminating all Unicode/tokenization issues; supplementary characters use literal Unicode, not surrogate escapes",
+    "P semantic repair unsuccessful; no QA case run, gate unchanged except four new held-out sources",
+    "No semantic prompts or filtering changes to M/N/O; preserved successes are mixed historical/repaired runtime cohort, not a fresh all-300 benchmark"
+  ],
+  "saved_output_audit": {
+    "scene-planned-M-L-300-20261103-r16": {
+      "raw_files": 8182,
+      "json_responses": 12464,
+      "invalid_json": 0,
+      "invalid_unicode": 1,
+      "max_reported_input_tokens": 14742,
+      "hashes": 8182
+    },
+    "scene-planned-N-L-300-20261103-r3": {
+      "raw_files": 5620,
+      "json_responses": 8565,
+      "invalid_json": 0,
+      "invalid_unicode": 0,
+      "max_reported_input_tokens": 14730,
+      "hashes": 5620
+    },
+    "O-Oplus-N-question-only-300-source-bound-20261103-r2": {
+      "raw_files": 4408,
+      "json_responses": 16240,
+      "invalid_json": 0,
+      "invalid_unicode": 0,
+      "max_reported_input_tokens": 8611,
+      "hashes": 4408
+    },
+    "P-three-demo-validation-20261104-r1": {
+      "raw_files": 3,
+      "json_responses": 12,
+      "invalid_json": 0,
+      "invalid_unicode": 0,
+      "max_reported_input_tokens": 5788,
+      "hashes": 3
+    },
+    "P-three-demo-validation-20261104-r2": {
+      "raw_files": 4,
+      "json_responses": 16,
+      "invalid_json": 0,
+      "invalid_unicode": 0,
+      "max_reported_input_tokens": 5992,
+      "hashes": 4
+    }
+  },
+  "saved_output_totals": {
+    "raw_files": 18217,
+    "json_responses": 37297,
+    "invalid_json": 0,
+    "invalid_unicode": 1
+  }
+}

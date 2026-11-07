@@ -1,0 +1,538 @@
+{
+  "at": "2026-11-04T23:47:50.373826+08:00",
+  "request": "Release GPUs 2/3 for other work, use only GPUs 0/1 and move former GPU2/3 tasks there with bounded concurrency",
+  "migration_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1",
+  "guardian": {
+    "pid": 192259,
+    "state": "running",
+    "updated_at": "2026-11-04T23:47:50.268609+08:00"
+  },
+  "released_at": "2026-11-04T23:23:24.496007+08:00",
+  "allowed_gpu_indices": [
+    "0",
+    "1"
+  ],
+  "schemes": {
+    "P": {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4",
+      "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1",
+      "queue": {
+        "state": "running",
+        "controller_pid": 192259,
+        "worker_pids": [
+          138512,
+          138513,
+          138514,
+          201166
+        ],
+        "worker_pid": 138512,
+        "workers": {
+          "3": {
+            "stage": "query",
+            "pid": 138512,
+            "at": "2026-11-04T23:42:00.144533+08:00",
+            "index": 275,
+            "question_id": "3181b730-2539-46d5-b818-86db8965515a",
+            "gpu": "1"
+          },
+          "4": {
+            "stage": "query",
+            "pid": 138513,
+            "at": "2026-11-04T23:45:10.726645+08:00",
+            "index": 277,
+            "question_id": "470dad8b-6c95-440c-b990-5b123ec64497",
+            "gpu": "1"
+          },
+          "5": {
+            "stage": "query",
+            "pid": 138514,
+            "at": "2026-11-04T23:44:11.552982+08:00",
+            "index": 276,
+            "question_id": "fe375c7f-6cf0-41aa-8eac-df89817c38e2",
+            "gpu": "0"
+          },
+          "6": {
+            "stage": "query",
+            "pid": 201166,
+            "at": "2026-11-04T23:40:36.902298+08:00",
+            "index": 260,
+            "question_id": "e5becfe2-05aa-4ef2-bca8-a859dfe9d4f4",
+            "gpu": "0"
+          }
+        },
+        "scheduler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1",
+        "effective_worker_count": 4,
+        "updated_at": "2026-11-04T23:47:50.197621+08:00",
+        "allowed_gpu_indices": [
+          "0",
+          "1"
+        ],
+        "migration_paused_questions": 0,
+        "gpu_migration": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1"
+      },
+      "completed": 273,
+      "planned": 300,
+      "errors": 0,
+      "scheduler_failure": null,
+      "frozen_manifests_verified": [
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/frozen_hashes.json",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/frozen_hashes.json"
+      ],
+      "kept_worker_identity": [
+        {
+          "id": 3,
+          "pid": 138512,
+          "identity": "1764686857",
+          "gpu": "1",
+          "scheme": "P"
+        },
+        {
+          "id": 4,
+          "pid": 138513,
+          "identity": "1764686857",
+          "gpu": "1",
+          "scheme": "P"
+        },
+        {
+          "id": 5,
+          "pid": 138514,
+          "identity": "1764686857",
+          "gpu": "0",
+          "scheme": "P"
+        }
+      ],
+      "additional_workers": [
+        {
+          "id": 6,
+          "pid": 201166,
+          "identity": "1765512632",
+          "scheme": "P",
+          "allowed_gpus": [
+            "0",
+            "1"
+          ],
+          "command": [
+            "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+            "-u",
+            "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/script/gpu01_recovery_worker.py",
+            "--folder",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1",
+            "--scheme",
+            "P",
+            "--worker-id",
+            "6"
+          ]
+        }
+      ]
+    },
+    "O": {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4",
+      "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/parallel-20261104-r1",
+      "queue": {
+        "state": "running",
+        "controller_pid": 192259,
+        "worker_pids": [
+          14273,
+          201167
+        ],
+        "worker_pid": 14273,
+        "workers": {
+          "0": {
+            "stage": "query",
+            "pid": 14273,
+            "at": "2026-11-04T23:38:02.667474+08:00",
+            "index": 298,
+            "question_id": "0d977872-1093-4c7b-b372-f9734293ebe8",
+            "gpu": "1"
+          },
+          "2": {
+            "stage": "query",
+            "pid": 201167,
+            "at": "2026-11-04T23:41:14.884603+08:00",
+            "index": 300,
+            "question_id": "532bcfc7-d64a-4bdd-ba30-76e95136674e",
+            "gpu": "0"
+          }
+        },
+        "scheduler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/parallel-20261104-r1",
+        "effective_worker_count": 2,
+        "updated_at": "2026-11-04T23:47:55.292287+08:00",
+        "allowed_gpu_indices": [
+          "0",
+          "1"
+        ],
+        "migration_paused_questions": 0,
+        "gpu_migration": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1"
+      },
+      "completed": 298,
+      "planned": 300,
+      "errors": 0,
+      "scheduler_failure": null,
+      "frozen_manifests_verified": [
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/frozen_hashes.json",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/parallel-20261104-r1/frozen_hashes.json"
+      ],
+      "kept_worker_identity": [
+        {
+          "id": 0,
+          "pid": 14273,
+          "identity": "1763038023",
+          "gpu": "1",
+          "scheme": "O"
+        }
+      ],
+      "additional_workers": [
+        {
+          "id": 2,
+          "pid": 201167,
+          "identity": "1765512632",
+          "scheme": "O",
+          "allowed_gpus": [
+            "0",
+            "1"
+          ],
+          "command": [
+            "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+            "-u",
+            "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/script/gpu01_recovery_worker.py",
+            "--folder",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1",
+            "--scheme",
+            "O",
+            "--worker-id",
+            "2"
+          ]
+        }
+      ]
+    }
+  },
+  "checkpoints": [
+    {
+      "worker": {
+        "id": 1,
+        "pid": 14274,
+        "identity": "1763038024",
+        "gpu": "3",
+        "scheme": "O"
+      },
+      "at": "2026-11-04T23:23:24.182475+08:00",
+      "question_id": "ab4bd39c-a184-421d-9f38-bf18dd238b2d",
+      "index": 295,
+      "original_attempt": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/parallel-20261104-r1/workers/1/view/runs/ab4bd39c-a184-421d-9f38-bf18dd238b2d",
+      "successful_seconds": 590.1787805296481,
+      "interrupted_budget_seconds": 150.0,
+      "checkpoint": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1/checkpoints/O-1.json",
+      "successful_calls": 73,
+      "all_successful_raw_inputs_outputs_verified": true,
+      "all_original_owned_processes_released": true,
+      "pending": [
+        {
+          "call_id": "fc0f0506-7d71-42e2-bb97-700e8b2ccbb8",
+          "reservation": 150.0,
+          "operation": "o_independent_batch",
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/parallel-20261104-r1/workers/1/view/runs/ab4bd39c-a184-421d-9f38-bf18dd238b2d/question_only/raw_calls/fc0f0506-7d71-42e2-bb97-700e8b2ccbb8-0.pending.json",
+          "observed_elapsed_seconds": 8.829067707061768
+        }
+      ],
+      "recovery_state": "complete",
+      "recovery": {
+        "at": "2026-11-04T23:39:01.270778+08:00",
+        "result": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/runs/ab4bd39c-a184-421d-9f38-bf18dd238b2d/result.json",
+        "replayed_success_seconds": 590.1787805296481,
+        "interrupted_budget_seconds": 150.0
+      },
+      "result_sha256": "416350b02e012343f920bc244201c9951c7a9ec991b3a572bf4ef015eed2e3d2",
+      "budget_summaries": [
+        {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 300.01898933947086,
+          "total": 300.01898933947086,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 300.01898933947086,
+          "text_cache_hits": 43,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "o_independent_batch": 300.01898933947086
+          },
+          "call_count": 43,
+          "resources": {
+            "cpu_seconds": 0.015581229999995116,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 0.0,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 0
+          },
+          "migration_successful_call_seconds": 299.95933640003204,
+          "migration_interrupted_budget_seconds": 0.0
+        },
+        {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 494.3786527775228,
+          "total": 494.3786527775228,
+          "shared_dependency_seconds": 450.01898933947086,
+          "budgeted_total": 944.3976421169937,
+          "text_cache_hits": 30,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "o_filter_plan": 2.51779830083251,
+            "o_independent_batch": 490.20980967208743,
+            "o_answer": 1.1978378668427467,
+            "oplus_answer": 0.45320693776011467
+          },
+          "call_count": 77,
+          "resources": {
+            "cpu_seconds": 203.94993573200009,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 205.42052179574966,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 17977184256
+          },
+          "migration_successful_call_seconds": 290.219444129616,
+          "migration_interrupted_budget_seconds": 150.0
+        }
+      ],
+      "no_pending_in_published_run": true
+    },
+    {
+      "worker": {
+        "id": 0,
+        "pid": 93050,
+        "identity": "1764041201",
+        "gpu": "2",
+        "scheme": "P"
+      },
+      "at": "2026-11-04T23:23:23.118015+08:00",
+      "question_id": "e5becfe2-05aa-4ef2-bca8-a859dfe9d4f4",
+      "index": 260,
+      "original_attempt": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/attempts/e5becfe2-05aa-4ef2-bca8-a859dfe9d4f4/run",
+      "successful_seconds": 18.122511487454176,
+      "interrupted_budget_seconds": 150.0,
+      "checkpoint": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1/checkpoints/P-0.json",
+      "successful_calls": 2,
+      "all_successful_raw_inputs_outputs_verified": true,
+      "all_original_owned_processes_released": true,
+      "pending": [
+        {
+          "call_id": "f257cdf8-b09d-4de9-80ec-1baeab65db00",
+          "reservation": 150.0,
+          "operation": "p_independent_batch",
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/attempts/e5becfe2-05aa-4ef2-bca8-a859dfe9d4f4/run/raw_calls/f257cdf8-b09d-4de9-80ec-1baeab65db00-0.pending.json",
+          "observed_elapsed_seconds": 6.970822334289551
+        }
+      ],
+      "recovery_state": "running",
+      "claim": {
+        "state": "running",
+        "index": 260,
+        "worker_id": 6,
+        "pid": 201166,
+        "at": "2026-11-04T23:40:36.900596+08:00",
+        "migration": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1",
+        "interrupted_at": "2026-11-04T23:23:23.118627+08:00",
+        "migration_recovery": true
+      }
+    },
+    {
+      "worker": {
+        "id": 1,
+        "pid": 93051,
+        "identity": "1764041202",
+        "gpu": "3",
+        "scheme": "P"
+      },
+      "at": "2026-11-04T23:23:23.473015+08:00",
+      "question_id": "ec5eddb0-8c4b-4d06-8e45-00f221b1dd25",
+      "index": 254,
+      "original_attempt": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/attempts/ec5eddb0-8c4b-4d06-8e45-00f221b1dd25/run",
+      "successful_seconds": 309.82272943481803,
+      "interrupted_budget_seconds": 150.0,
+      "checkpoint": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1/checkpoints/P-1.json",
+      "successful_calls": 110,
+      "all_successful_raw_inputs_outputs_verified": true,
+      "all_original_owned_processes_released": true,
+      "pending": [
+        {
+          "call_id": "5093b2d2-a68a-4797-b463-b9e977339fe1",
+          "reservation": 150.0,
+          "operation": "p_independent_batch",
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/attempts/ec5eddb0-8c4b-4d06-8e45-00f221b1dd25/run/raw_calls/5093b2d2-a68a-4797-b463-b9e977339fe1-0.pending.json",
+          "observed_elapsed_seconds": 24.675992012023926
+        }
+      ],
+      "recovery_state": "complete",
+      "recovery": {
+        "at": "2026-11-04T23:37:57.719201+08:00",
+        "result": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/runs/ec5eddb0-8c4b-4d06-8e45-00f221b1dd25/result.json",
+        "replayed_success_seconds": 309.82272943481803,
+        "interrupted_budget_seconds": 150.0
+      },
+      "result_sha256": "d3e5a66b7d26ebd3000935bad24e4d3fc188c0add1bb1abdd2ce9208103f5be3",
+      "budget_summaries": [
+        {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 46.9462275095284,
+          "total": 46.9462275095284,
+          "shared_dependency_seconds": 459.82272943481803,
+          "budgeted_total": 506.7689569443464,
+          "text_cache_hits": 110,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "p_independent_batch": 45.67067367956042,
+            "p_answer": 1.2755538299679756
+          },
+          "call_count": 112,
+          "resources": {
+            "cpu_seconds": 46.71276748699999,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 47.12236803397536,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 19238619136
+          },
+          "migration_successful_call_seconds": 309.82272943481803,
+          "migration_interrupted_budget_seconds": 150.0
+        }
+      ],
+      "no_pending_in_published_run": true
+    },
+    {
+      "worker": {
+        "id": 2,
+        "pid": 138511,
+        "identity": "1764686857",
+        "gpu": "3",
+        "scheme": "P"
+      },
+      "at": "2026-11-04T23:23:23.833490+08:00",
+      "question_id": "ce09bc68-1e3b-49c2-bbaf-115c7ca3c54f",
+      "index": 259,
+      "original_attempt": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/attempts/ce09bc68-1e3b-49c2-bbaf-115c7ca3c54f/run",
+      "successful_seconds": 40.73222468793392,
+      "interrupted_budget_seconds": 150.0,
+      "checkpoint": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-gpu01-migration-20261104-r1/checkpoints/P-2.json",
+      "successful_calls": 3,
+      "all_successful_raw_inputs_outputs_verified": true,
+      "all_original_owned_processes_released": true,
+      "pending": [
+        {
+          "call_id": "71e4427c-79c3-47ba-8418-685dbd9e750d",
+          "reservation": 150.0,
+          "operation": "p_independent_batch",
+          "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/attempts/ce09bc68-1e3b-49c2-bbaf-115c7ca3c54f/run/raw_calls/71e4427c-79c3-47ba-8418-685dbd9e750d-0.pending.json",
+          "observed_elapsed_seconds": 12.612178564071655
+        }
+      ],
+      "recovery_state": "complete",
+      "recovery": {
+        "at": "2026-11-04T23:40:36.899794+08:00",
+        "result": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/runs/ce09bc68-1e3b-49c2-bbaf-115c7ca3c54f/result.json",
+        "replayed_success_seconds": 40.73222468793392,
+        "interrupted_budget_seconds": 150.0
+      },
+      "result_sha256": "df19e8eb3d1f33809bd8a497293ac45a09f977fa3d22dcaeea42e2553f7d89aa",
+      "budget_summaries": [
+        {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 158.9848561733961,
+          "total": 158.9848561733961,
+          "shared_dependency_seconds": 190.73222468793392,
+          "budgeted_total": 349.71708086133003,
+          "text_cache_hits": 3,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "p_independent_batch": 158.74934520944953,
+            "p_answer": 0.2355109639465809
+          },
+          "call_count": 54,
+          "resources": {
+            "cpu_seconds": 158.93312380100002,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 159.1789328828454,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 19238619136
+          },
+          "migration_successful_call_seconds": 40.73222468793392,
+          "migration_interrupted_budget_seconds": 150.0
+        }
+      ],
+      "no_pending_in_published_run": true
+    }
+  ],
+  "total_preserved_successful_calls": 188,
+  "total_preserved_successful_seconds": 958.8562461398542,
+  "total_conservative_interrupted_budget_seconds": 600.0,
+  "interruption_policy": "Each uncommitted in-flight call retains its full original 150-second reservation conservatively. This is not an exact measurement of GPU runtime; observed elapsed wall time is separately preserved. Original 3600-second question caps unchanged.",
+  "archived_pending_policy": "Old original attempts retain pending markers as archival scheduling-interruption evidence. They are not active calls. Published recovered runs must have no pending marker.",
+  "method_policy": "Original frozen model/prompt/schema/batch/input/limits unchanged. Only orchestration and exact successful call-prefix reuse changed. No semantic improvement or controlled speedup claim.",
+  "cost_aggregation_policy": "P result cost_summary.total contains new execution only. Add migration_successful_call_dependency_seconds once for processing comparisons; migration_interrupted_budget_seconds is conservative budget debt, not measured processing. O stage totals already include prior successful stage seconds once; do not add them again.",
+  "verification": {
+    "cpu_replay_preflight": {
+      "P": {
+        "passed": true,
+        "at": "2026-11-04T23:32:44.725319+08:00",
+        "results": [
+          {
+            "question_id": "ce09bc68-1e3b-49c2-bbaf-115c7ca3c54f",
+            "passed": true,
+            "successful_calls": 3,
+            "successful_seconds": 40.73222468793392,
+            "interrupted_budget_seconds": 150.0
+          },
+          {
+            "question_id": "e5becfe2-05aa-4ef2-bca8-a859dfe9d4f4",
+            "passed": true,
+            "successful_calls": 2,
+            "successful_seconds": 18.122511487454176,
+            "interrupted_budget_seconds": 150.0
+          },
+          {
+            "question_id": "ec5eddb0-8c4b-4d06-8e45-00f221b1dd25",
+            "passed": true,
+            "successful_calls": 110,
+            "successful_seconds": 309.82272943481803,
+            "interrupted_budget_seconds": 150.0
+          }
+        ],
+        "no_model_calls": true
+      },
+      "O": {
+        "passed": true,
+        "at": "2026-11-04T23:32:45.876667+08:00",
+        "results": [
+          {
+            "question_id": "ab4bd39c-a184-421d-9f38-bf18dd238b2d",
+            "passed": true,
+            "successful_calls": 73,
+            "successful_seconds": 590.1787805296481,
+            "interrupted_budget_seconds": 150.0
+          }
+        ],
+        "no_model_calls": true
+      }
+    },
+    "unit_regressions": {
+      "passed": 39,
+      "command": "python -m unittest tests.test_gpu01_migration tests.test_gpu01_recovery tests.test_parallel_scheme_pool tests.test_scale_live_parallel_pool",
+      "scope": "Completed before production recovery launch; exact PID handling, durable prefixes, cost/identity checks, shared claims and publication"
+    }
+  },
+  "monitor": {
+    "pid": 3925416,
+    "status": {
+      "pid": 3925416,
+      "at": "2026-11-04T23:47:05.362326+08:00",
+      "state": "watching",
+      "interval_seconds": 60,
+      "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+    },
+    "policy": "Original monitor follows same P/O control paths; no duplicate monitor launched."
+  },
+  "gpu_snapshot": "0, 77121 MiB, 20133 MiB, 74 %\n1, 75515 MiB, 21738 MiB, 29 %\n2, 83993 MiB, 13261 MiB, 96 %\n3, 84721 MiB, 12533 MiB, 0 %\n"
+}

@@ -110,8 +110,9 @@ class BatchExtractor:
         finally:
             tokenizer.padding_side = old_padding
         width = encoded.input_ids.shape[-1]
-        if width > self.cfg['models']['max_input_tokens']:
-            raise ValueError('Batch prompt exceeds context allowance; sources were not truncated')
+        from .generation_capacity import context_preflight
+        capacity = context_preflight(getattr(model, 'config', None), int(width), 1024,
+            self.cfg['models']['max_input_tokens'], label='Extraction batch')
         input_tokens = encoded.attention_mask.sum(dim=1).tolist()
         eos = getattr(model.generation_config, 'eos_token_id', None)
         eos_ids = set(eos if isinstance(eos, list) else [eos] if eos is not None else [])
@@ -140,6 +141,7 @@ class BatchExtractor:
             except (ValueError, IndexError):
                 data = raw
             outputs.append(dict(data=data, raw_text=raw, id_map=packet['inverse'],
+                capacity_preflight=capacity,
                 usage=dict(input_tokens=int(input_tokens[index]), output_tokens=len(tokens))))
         return outputs
 
@@ -153,7 +155,8 @@ def inspect_output(inputs, output, runtime):
         schema = runtime.memory.output_schema(runtime.memory.EXTRACT, inputs)
         data = runtime.schemas.restore_empty_arrays(data, schema)
         runtime.schemas.validate_output(data, schema)
-        accepted = runtime.memory.joint.accept(inputs['unit'], data)
+        accept = getattr(runtime.memory, 'inspect_accept', runtime.memory.joint.accept)
+        accepted = accept(inputs['unit'], data)
         whole = runtime.memory.joint.complete_simple_source(inputs['unit'], accepted)
         return dict(data=data, accepted=accepted, complete_simple=whole, error=None,
             retained_original=None if whole else inputs['unit']['text'])

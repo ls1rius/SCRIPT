@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-02T17:29:23.879018+08:00",
+  "version": "M-L-gap-driven-scenes-v1",
+  "parent": "L",
+  "user_decision": "All scene summaries -> most relevant one -> current-scene inspection -> explicit evidence gap -> next relevant scene only when current cannot fill the gap -> stop when sufficient",
+  "future_improvements": "M",
+  "forced_temporal_coverage": false,
+  "default_on_demand": "I",
+  "complete_default": "E",
+  "entry": "script_qa.py query --memory M",
+  "configuration": "configs/script_M.yaml",
+  "validation": {
+    "cpu_tests_passed": 106,
+    "real_tokenizer_constraints": true,
+    "local_processor_tokenizer_comparison": true,
+    "end_to_end": "simulated backend, no model weights loaded",
+    "real_model_functional_gate": "not_run",
+    "formal_evaluation": "not_started",
+    "git_diff_check": "passed"
+  },
+  "limitations": [
+    "Navigation reviews original current/previous captions and source-grounded partial deltas; H/I field extraction and L final selection follow navigation.",
+    "Gap/local inability reasons are model judgments, not semantic proofs.",
+    "L nonempty constraint and possible evidence over-filtering remain inherited limitations."
+  ],
+  "frozen_runs": [
+    {
+      "run": "evidence-planner-K-F-300-20261102-r8",
+      "files_checked": 3258,
+      "mismatches": [],
+      "state": "complete",
+      "gpu": "1",
+      "worker_pid": 2571063,
+      "worker_alive": false,
+      "completed": 300,
+      "as_of": "2026-11-02T17:17:40.578115+08:00"
+    },
+    {
+      "run": "evidence-planner-L-I-300-20261102-r1",
+      "files_checked": 2117,
+      "mismatches": [],
+      "state": "running",
+      "gpu": "3",
+      "worker_pid": 2600515,
+      "worker_alive": true,
+      "completed": 60,
+      "as_of": "2026-11-02T17:29:19.681452+08:00"
+    }
+  ],
+  "files_sha256": {
+    "script_core/m_scene_memory.py": "d9225ef98935b342e6ae8897b18cb1846c8945a478df1b1be18bb1a53627de5a",
+    "script_core/m_generation.py": "7a5d5d838a2b432c4aeb1b3bec7c9f5daf07724e6d8acd4671aab25b1e48b014",
+    "script_core/adaptive_transition.py": "4de51c4a8a266369ce23de91811c1efc115b7136354d88d17d17e55dff1395f2",
+    "script_core/partial_temporal.py": "060c12d4509870daa05614792285e409c8cdf23361cddee8fa08c7fb98a51790",
+    "script_core/scheme4.py": "8b1b57f9cb57748f4ca94d10b49e9b886c7048a1f7bb0325cdc610186337c5a7",
+    "script_core/schemas.py": "d288fcccf0492f04092f100be922822f2497823e82dd9b91d0fa7fe7bd02fc60",
+    "script_core/prompts.py": "67e47ef402908be4c82434a6c1166aa392c635e6eec49213985641319e1bf35c",
+    "script_core/backend.py": "bb3dea1c1b20284115dfb34c8db6b2b8144e4b803e9f1b0b84c1ac5447680824",
+    "script_core/config.py": "270047a31739872839181eead9663769c086bf4386b8c0d0fd77366abfe03699",
+    "script_qa.py": "091191e05450f5612fca9a1f80357ca3aff949cb134f05c25db6b239e51cd45a",
+    "configs/script_M.yaml": "c6e13469fec5262b9323bffc9030577288f4556835f4b2df5d55d301058bad91",
+    "tests/test_m_scene_memory.py": "15e8c2af4982c45adfdc8f89c70a00dab568998f018d3d18387ad9a8598b6584",
+    "tests/test_m_generation.py": "2ffebf4a02eb7d94679a38cb00839b265e6d3ecbba7dd1784373ce5166a47e9b",
+    "docs/SCRIPT_M_L_Gap_Driven_Scenes_2026-11-02.md": "b6e3b2126559a73bca81ce6dbd0bf38478b3a06a24d900d9a7cbf193ae606403"
+  }
+}

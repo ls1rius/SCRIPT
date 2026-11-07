@@ -1,0 +1,52 @@
+{
+  "updated_at": "2026-11-02T10:35:09.835707+08:00",
+  "old": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r4",
+  "new": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r5",
+  "controller": {
+    "pid": 2456708,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r5/control/run_evidence_planner_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r5"
+    ],
+    "started_at": "2026-11-02T10:35:09.835374+08:00",
+    "interpreter": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+  },
+  "identical_files": 2102,
+  "old_manifest_sha256": "4ed1382315e73f8761ebcb90bcfe47f552f399b784a27775f0850d4df937ecc7",
+  "new_manifest_sha256": "87bec32d5e2b1c2f7ee428ad4056390f78527e9d8fd66d31ed2dd3471124d774",
+  "model_and_method_unchanged": true,
+  "after_queue": null,
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3
+  },
+  "prior_preparation_seconds": 43.32317757606506,
+  "prior_runtime_seconds": 29.68406656756997,
+  "checks_passed": 18,
+  "authorization": "User: no idle GPU required; run when memory is sufficient.",
+  "confirmed_launch": {
+    "worker_pid": 2456816,
+    "gpu": "0",
+    "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r5/control/run_evidence_planner_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r5"
+    ],
+    "started_at": "2026-11-02T10:35:30.337708+08:00"
+  }
+}

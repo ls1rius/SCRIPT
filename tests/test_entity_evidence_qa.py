@@ -60,8 +60,10 @@ class Backend:
 
 class EntityEvidenceQATests(unittest.TestCase):
     def test_python_cli_profiles_and_explicit_controls_agree(self):
-        for path in [None,'configs/script.yaml','configs/script_local.yaml','configs/script_F.yaml']:
-            self.assertEqual(load_config(path)['query']['temporal_qa_evidence'],'lazy_script')
+        for path in [None,'configs/script.yaml','configs/script_local.yaml','configs/script_L.yaml']:
+            self.assertEqual(load_config(path)['query']['temporal_qa_evidence'],'planned_lazy_script')
+        self.assertEqual(load_config('configs/script_I.yaml')['query']['temporal_qa_evidence'],'merged_lazy_script')
+        self.assertEqual(load_config('configs/script_F.yaml')['query']['temporal_qa_evidence'],'lazy_script')
         self.assertEqual(load_config('configs/script_E.yaml')['query']['temporal_qa_evidence'],'joint_entities')
         self.assertEqual(load_config('configs/script_D.yaml')['query']['temporal_qa_evidence'],'state_segments')
         self.assertEqual(load_config('configs/script_temporal_full.yaml')['query']['temporal_qa_evidence'],'full')
@@ -95,12 +97,19 @@ class EntityEvidenceQATests(unittest.TestCase):
                     self.assertTrue(any(op=='f_plan_fields' for op,_ in backend.calls))
                     self.assertTrue(any(op=='f_extract_batch' for op,_ in backend.calls))
                     body=io.parts(answers[0])[1];self.assertIn('Frame [1,2)',body);self.assertIn('Frame [2,3)',body)
+                    self.assertIn('C moves red book with left hand.', body)
+                    self.assertIn('#C The book is wet.', body)
+                    self.assertNotIn('actor=', body)
+                    self.assertNotIn('State:', body)
+                    archive=json.loads((Path(td)/filename).read_text())
+                    self.assertEqual(archive['observations'][0]['evidence']['actions'][0]['body_part'],'left hand')
+                    self.assertEqual(result['qa_evidence']['fact_presentation'],'sentences')
                 else:self.assertFalse(any(op.startswith('f_') for op,_ in backend.calls))
 
     def test_f_reuses_fields_across_questions_without_leaking_unselected_sources(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td);settings=dict(online_seconds=1500,memory_cache_directory=str(root/'shared'))
-            cfg=load_config();backend=Backend()
+            cfg=load_config('configs/script_F.yaml');backend=Backend()
             for qid,question,selected in [('q0','Which hand?',(0,1,2)),('q1','What is wet?',(1,2))]:
                 packet,bundle=fixture(qid,question,selected)
                 result=partial_temporal.run(packet,bundle,backend,cfg,root/qid,settings)
@@ -135,7 +144,7 @@ class EntityEvidenceQATests(unittest.TestCase):
 
     def test_cli_switches_memory_before_preflight_and_rejects_conflicting_controls(self):
         import script_qa
-        for variant,mode in [('E','joint_entities'),('F','lazy_script')]:
+        for variant,mode in [('E','joint_entities'),('F','lazy_script'),('I','merged_lazy_script'),('L','planned_lazy_script')]:
             class Stop(Exception):pass
             def preflight(cfg):
                 self.assertEqual(cfg['query']['temporal_qa_evidence'],mode);raise Stop()
@@ -170,7 +179,7 @@ class EntityEvidenceQATests(unittest.TestCase):
 
     def test_cache_is_invalidated_when_caption_timeline_is_revised(self):
         with tempfile.TemporaryDirectory() as td:
-            backend=Backend();cfg=load_config();settings=dict(online_seconds=1500,memory_cache_directory=td+'/shared')
+            backend=Backend();cfg=load_config('configs/script_F.yaml');settings=dict(online_seconds=1500,memory_cache_directory=td+'/shared')
             for index in range(2):
                 packet,bundle=fixture(qid=str(index))
                 if index:
@@ -191,7 +200,7 @@ class EntityEvidenceQATests(unittest.TestCase):
             return original(operation,inputs,*args)
         backend.call=call
         with tempfile.TemporaryDirectory() as td:
-            result=partial_temporal.run(packet,bundle,backend,load_config(),td,dict(online_seconds=1500))
+            result=partial_temporal.run(packet,bundle,backend,load_config('configs/script_F.yaml'),td,dict(online_seconds=1500))
         self.assertIsNotNone(result['error'])
         self.assertEqual([op for op,_ in backend.calls],['f_plan_fields'])
 

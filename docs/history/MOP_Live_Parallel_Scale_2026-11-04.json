@@ -1,0 +1,595 @@
+{
+  "at": "2026-11-04T16:44:16.849333+08:00",
+  "tests": {
+    "passed": 37,
+    "scope": "Boundary drain including actual subprocess shutdown, M cache inventory, exact P/O adapters, claims/failure/publication/origin paths, existing N scale regressions"
+  },
+  "runs": {
+    "M": {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18",
+      "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18/parallel-20261104-r2",
+      "controller_launch": {
+        "pid": 9939,
+        "phase": "running",
+        "worker_pids": [
+          13301,
+          13302
+        ],
+        "at": "2026-11-04T16:40:53.901936+08:00"
+      },
+      "worker_statuses": {
+        "0": {
+          "stage": "query",
+          "pid": 13301,
+          "at": "2026-11-04T16:43:02.606041+08:00",
+          "index": 233,
+          "question_id": "04c51dba-1dcb-4b8f-a62c-efc363561d7b",
+          "gpu": "0"
+        },
+        "1": {
+          "stage": "query",
+          "pid": 13302,
+          "at": "2026-11-04T16:41:38.337468+08:00",
+          "index": 232,
+          "question_id": "4c778f65-eeca-4280-a608-d17b0c9493c2",
+          "gpu": "1"
+        }
+      },
+      "setup": {
+        "0": {
+          "seconds": 8.890512712299824,
+          "reloads": [
+            {
+              "at": "2026-11-04T16:43:02.605238+08:00",
+              "gpu": {
+                "index": "0",
+                "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+                "free_mib": 43113,
+                "utilization": 94,
+                "effective_free_mib": 33489,
+                "reservation_id": "13301-023a81ac66244e99b63a89d6b326633f"
+              },
+              "details": {
+                "ready": true,
+                "preparation": {
+                  "model_load_seconds": 6.646135475486517,
+                  "tokenizer_constraint_seconds": 2.1922749653458595
+                },
+                "usage": {
+                  "model_tensor_pixels": {},
+                  "input_tokens_by_model": {},
+                  "cpu_seconds": 9.273270783000001,
+                  "gpu_resident_seconds": 6.217482071369886,
+                  "gpu_peak_allocated_bytes": 16584893952
+                }
+              }
+            }
+          ],
+          "gates": {
+            "inherited": true,
+            "files": [
+              "functional.json"
+            ],
+            "scope": "Technical gates inherited, not new semantic validation"
+          }
+        },
+        "1": {
+          "seconds": 7.954074513167143,
+          "reloads": [
+            {
+              "at": "2026-11-04T16:41:38.336911+08:00",
+              "gpu": {
+                "index": "1",
+                "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+                "free_mib": 70605,
+                "utilization": 0,
+                "effective_free_mib": 64477,
+                "reservation_id": "13302-4c4f7a8f0c944e3095c97660e8e7fb71"
+              },
+              "details": {
+                "ready": true,
+                "preparation": {
+                  "model_load_seconds": 5.8437065705657005,
+                  "tokenizer_constraint_seconds": 2.0635847114026546
+                },
+                "usage": {
+                  "model_tensor_pixels": {},
+                  "input_tokens_by_model": {},
+                  "cpu_seconds": 8.332871772,
+                  "gpu_resident_seconds": 5.322805151343346,
+                  "gpu_peak_allocated_bytes": 16584893952
+                }
+              }
+            }
+          ],
+          "gates": {
+            "inherited": true,
+            "files": [
+              "functional.json"
+            ],
+            "scope": "Technical gates inherited, not new semantic validation"
+          }
+        }
+      },
+      "inherited_successes": 231,
+      "changed_inherited_results": [],
+      "new_completed_questions": [],
+      "boundary": {
+        "passed": true,
+        "question_id": "30e895e3-c176-43aa-9471-e9027f0b9518",
+        "at": "2026-11-04T16:40:43.855453+08:00",
+        "pending_model_calls": 0,
+        "all_started_questions_successfully_complete": true,
+        "worker_paused_between_questions": true
+      },
+      "handoff": {
+        "passed": true,
+        "inherited_successes": 231,
+        "at": "2026-11-04T16:40:53.900036+08:00",
+        "interrupted_model_calls": 0
+      },
+      "frozen_manifests_unchanged": true,
+      "successful_call_references_checked": 21,
+      "bad_references_or_scopes": [],
+      "batch_input_scopes": [],
+      "failure": null,
+      "passed": true
+    },
+    "O/O+": {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4",
+      "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/parallel-20261104-r1",
+      "controller_launch": {
+        "pid": 8147,
+        "phase": "running",
+        "worker_pids": [
+          14273,
+          14274
+        ],
+        "at": "2026-11-04T16:42:23.024421+08:00"
+      },
+      "worker_statuses": {
+        "0": {
+          "stage": "query",
+          "pid": 14273,
+          "at": "2026-11-04T16:43:05.212532+08:00",
+          "index": 176,
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "gpu": "1"
+        },
+        "1": {
+          "stage": "query",
+          "pid": 14274,
+          "at": "2026-11-04T16:43:06.856513+08:00",
+          "index": 177,
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "gpu": "3"
+        }
+      },
+      "setup": {
+        "0": {
+          "seconds": 7.684385925531387,
+          "reloads": [
+            {
+              "at": "2026-11-04T16:43:05.211822+08:00",
+              "gpu": {
+                "index": "1",
+                "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+                "free_mib": 52259,
+                "utilization": 85,
+                "effective_free_mib": 31703,
+                "reservation_id": "14273-47da501a58594cfe82a36e7a89d4819a"
+              },
+              "details": {
+                "ready": true,
+                "preparation": {
+                  "model_load_seconds": 4.80266984179616,
+                  "tokenizer_constraint_seconds": 2.072088308632374
+                },
+                "usage": {
+                  "cuda_allocator_limit_mib": 22528,
+                  "model_tensor_pixels": {},
+                  "input_tokens_by_model": {},
+                  "cpu_seconds": 8.038811419,
+                  "gpu_resident_seconds": 5.077868979424238,
+                  "gpu_peak_allocated_bytes": 16584893952
+                }
+              }
+            }
+          ],
+          "gates": {
+            "inherited": true,
+            "files": [
+              "source_bound_functional.json",
+              "batch_functional.json"
+            ],
+            "scope": "Technical gates inherited, not new semantic validation"
+          }
+        },
+        "1": {
+          "seconds": 9.071008991450071,
+          "reloads": [
+            {
+              "at": "2026-11-04T16:43:06.855986+08:00",
+              "gpu": {
+                "index": "3",
+                "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+                "free_mib": 39141,
+                "utilization": 93,
+                "effective_free_mib": 31703,
+                "reservation_id": "14274-6a02d14dde34428c91ff1356747d9ed5"
+              },
+              "details": {
+                "ready": true,
+                "preparation": {
+                  "model_load_seconds": 6.0290412530303,
+                  "tokenizer_constraint_seconds": 2.1051055565476418
+                },
+                "usage": {
+                  "cuda_allocator_limit_mib": 22528,
+                  "model_tensor_pixels": {},
+                  "input_tokens_by_model": {},
+                  "cpu_seconds": 9.310215656,
+                  "gpu_resident_seconds": 6.236744858324528,
+                  "gpu_peak_allocated_bytes": 16584893952
+                }
+              }
+            }
+          ],
+          "gates": {
+            "inherited": true,
+            "files": [
+              "source_bound_functional.json",
+              "batch_functional.json"
+            ],
+            "scope": "Technical gates inherited, not new semantic validation"
+          }
+        }
+      },
+      "inherited_successes": 175,
+      "changed_inherited_results": [],
+      "new_completed_questions": [],
+      "boundary": {
+        "passed": true,
+        "question_id": "cd5fc9e9-7a80-4bd6-a175-f07ad35ee7f6",
+        "at": "2026-11-04T16:42:18.584030+08:00",
+        "pending_model_calls": 0,
+        "all_started_questions_successfully_complete": true,
+        "worker_paused_between_questions": true
+      },
+      "handoff": {
+        "passed": true,
+        "inherited_successes": 175,
+        "at": "2026-11-04T16:42:23.021482+08:00",
+        "interrupted_model_calls": 0
+      },
+      "frozen_manifests_unchanged": true,
+      "successful_call_references_checked": 19,
+      "bad_references_or_scopes": [],
+      "batch_input_scopes": [
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "0",
+          "question_id": "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "fec37c37-f9ae-42a5-86de-508fffa3d881",
+          "operation": "o_extract",
+          "batch_size": 4
+        }
+      ],
+      "failure": null,
+      "passed": true
+    },
+    "P": {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3",
+      "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3/parallel-20261104-r1",
+      "controller_launch": {
+        "pid": 8116,
+        "phase": "running",
+        "worker_pids": [
+          12682,
+          12683
+        ],
+        "at": "2026-11-04T16:39:34.779762+08:00"
+      },
+      "worker_statuses": {
+        "0": {
+          "stage": "query",
+          "pid": 12682,
+          "at": "2026-11-04T16:44:01.812123+08:00",
+          "index": 57,
+          "question_id": "8955952a-946c-4841-895f-1fe0e2f000fb",
+          "gpu": "2"
+        },
+        "1": {
+          "stage": "query",
+          "pid": 12683,
+          "at": "2026-11-04T16:42:57.005855+08:00",
+          "index": 56,
+          "question_id": "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+          "gpu": "2"
+        }
+      },
+      "setup": {
+        "0": {
+          "seconds": 9.10057808086276,
+          "reloads": [
+            {
+              "at": "2026-11-04T16:40:21.486057+08:00",
+              "gpu": {
+                "index": "2",
+                "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+                "free_mib": 57145,
+                "utilization": 94,
+                "effective_free_mib": 33593,
+                "reservation_id": "12682-8598a1ee46d8445e98f860171905751e"
+              },
+              "details": {
+                "ready": true,
+                "preparation": {
+                  "model_load_seconds": 6.0168363228440285,
+                  "tokenizer_constraint_seconds": 2.2026770524680614
+                },
+                "usage": {
+                  "cuda_allocator_limit_mib": 21504,
+                  "model_tensor_pixels": {},
+                  "input_tokens_by_model": {},
+                  "cpu_seconds": 9.479525146,
+                  "gpu_resident_seconds": 6.317353766411543,
+                  "gpu_peak_allocated_bytes": 16584893952
+                }
+              }
+            }
+          ],
+          "gates": {
+            "inherited": true,
+            "files": [
+              "repair_functional.json",
+              "role_contract_functional.json"
+            ],
+            "scope": "Technical gates inherited, not new semantic validation"
+          }
+        },
+        "1": {
+          "seconds": 8.948158528655767,
+          "reloads": [
+            {
+              "at": "2026-11-04T16:40:20.644048+08:00",
+              "gpu": {
+                "index": "2",
+                "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+                "free_mib": 57145,
+                "utilization": 95,
+                "effective_free_mib": 57145,
+                "reservation_id": "12683-9eb1f97417d94892a3b5c9113f1ac5c0"
+              },
+              "details": {
+                "ready": true,
+                "preparation": {
+                  "model_load_seconds": 5.886195674538612,
+                  "tokenizer_constraint_seconds": 2.2212506942451
+                },
+                "usage": {
+                  "cuda_allocator_limit_mib": 21504,
+                  "model_tensor_pixels": {},
+                  "input_tokens_by_model": {},
+                  "cpu_seconds": 9.336619725,
+                  "gpu_resident_seconds": 6.189755123108625,
+                  "gpu_peak_allocated_bytes": 16584893952
+                }
+              }
+            }
+          ],
+          "gates": {
+            "inherited": true,
+            "files": [
+              "repair_functional.json",
+              "role_contract_functional.json"
+            ],
+            "scope": "Technical gates inherited, not new semantic validation"
+          }
+        }
+      },
+      "inherited_successes": 52,
+      "changed_inherited_results": [],
+      "new_completed_questions": [
+        "9377c192-d46d-4016-9db4-df8007dbe82b",
+        "f98ccd46-72ac-4ead-96a2-9fa07e826cf3",
+        "73ecc613-5e39-4348-94ba-ee6cb197367a"
+      ],
+      "boundary": {
+        "passed": true,
+        "question_id": "3223ece4-dc21-4ca9-8e78-2af8036ec4e8",
+        "at": "2026-11-04T16:39:30.455156+08:00",
+        "pending_model_calls": 0,
+        "all_started_questions_successfully_complete": true,
+        "worker_paused_between_questions": true
+      },
+      "handoff": {
+        "passed": true,
+        "inherited_successes": 52,
+        "at": "2026-11-04T16:39:34.776184+08:00",
+        "interrupted_model_calls": 0
+      },
+      "frozen_manifests_unchanged": true,
+      "successful_call_references_checked": 6,
+      "bad_references_or_scopes": [],
+      "batch_input_scopes": [
+        {
+          "worker": "0",
+          "question_id": "8955952a-946c-4841-895f-1fe0e2f000fb",
+          "operation": "p_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+          "operation": "p_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+          "operation": "p_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+          "operation": "p_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+          "operation": "p_extract",
+          "batch_size": 4
+        },
+        {
+          "worker": "1",
+          "question_id": "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+          "operation": "p_extract",
+          "batch_size": 4
+        }
+      ],
+      "failure": null,
+      "passed": true
+    }
+  },
+  "method_scope": "Identical per-scheme frozen model/config/prompts/schema/batch/inputs and per-question budgets; technical gates inherited, not new semantic validation; four-GPU shared-memory admission retained",
+  "monitor": {
+    "last_checked_at": "2026-11-04T16:44:04.344128+08:00",
+    "snapshots": {
+      "M": {
+        "state": "running",
+        "controller_pid": 9939,
+        "event": null,
+        "terminal": false
+      },
+      "N": {
+        "state": "running",
+        "controller_pid": 4173554,
+        "event": null,
+        "terminal": false
+      },
+      "O/O+": {
+        "state": "running",
+        "controller_pid": 8147,
+        "event": null,
+        "terminal": false
+      },
+      "P": {
+        "state": "running",
+        "controller_pid": 8116,
+        "event": null,
+        "terminal": false
+      }
+    }
+  },
+  "passed": true,
+  "completed_at": "2026-11-04T16:44:28.092653+08:00",
+  "published_P_reference_audit": {
+    "at": "2026-11-04T16:45:59.199189+08:00",
+    "checked": 148,
+    "bad": [],
+    "passed": true
+  }
+}

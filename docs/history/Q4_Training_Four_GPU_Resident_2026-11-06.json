@@ -1,0 +1,271 @@
+{
+  "at": "2026-11-06T01:01:56.660621+08:00",
+  "passed": true,
+  "user_request": "训练版也保持驻留，两个版本都监听4卡，空了就跑",
+  "training_controller": 999980,
+  "training_workers": [
+    {
+      "id": 0,
+      "pid": 999999,
+      "identity": "1774667235",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/resident-20261106-r1/resident_train_q4.py",
+        "worker",
+        "--control",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/resident-20261106-r1",
+        "--worker-id",
+        "0"
+      ]
+    },
+    {
+      "id": 1,
+      "pid": 1000000,
+      "identity": "1774667235",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/resident-20261106-r1/resident_train_q4.py",
+        "worker",
+        "--control",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/resident-20261106-r1",
+        "--worker-id",
+        "1"
+      ]
+    }
+  ],
+  "old_training_controller": 664560,
+  "old_controller_exited": true,
+  "old_training_frozen_runtime_and_parameters_verified": true,
+  "new_external_manifest_verified": true,
+  "resource_policy": {
+    "allowed_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "stable_observations": 3,
+    "poll_seconds": 10,
+    "primary_admission_mib": 43008,
+    "helper_admission_mib": 24576,
+    "teacher_allocator_mib": 22528,
+    "training_allocator_mib": 40960,
+    "evaluation_allocator_mib": 22528,
+    "teacher_workers": 2,
+    "evaluation_workers": 4,
+    "share_global_memory_leases_with_untrained": true,
+    "wait_for_untrained500_removed": true,
+    "gradient_training_single_gpu_not_DDP": true
+  },
+  "lifecycle": "Primary holds same loaded base model and 42GiB GPU lease through annotation, fresh resident gradient gate, original epoch selection/refit and 300 QA. Helper teacher holds same model and 24GiB lease until adapter is ready, then participates in evaluation. Additional 2 QA workers admit on spare memory. No per-question unloading or stage-to-stage lease reacquisition.",
+  "frozen_routines": "Teacher annotation and Q4 worker generated only by replacing ModelWorker allocation/closing and GPU lease context. Training uses exact original train() and optimizer/split/epoch-selection/refit; original training_model loader replaced with already loaded base. Evaluation policy expanded to four GPUs before manifest freeze.",
+  "inference_restoration": "After training disable gradient checkpointing/input grads, restore use_cache, freeze gradients/eval mode and bind trained adapter. Same model stays loaded. Free unused allocator cache only; do not unload model or release lease. Adapter remains active only for q3_filter.",
+  "formal_training_labels_started": 0,
+  "formal_training_started": false,
+  "new_resident_real_gradient_gate": "pending first GPU admission; original separate gate passed",
+  "additional_real_gate": "Same resident teacher model repeats original two-step gradient/base-logits/adapter round-trip gate before primary formal annotation; probe LoRA removed, original frozen base retained.",
+  "tests": {
+    "passed": 38,
+    "modules": [
+      "test_q4_resident_training",
+      "test_q4_retention_training",
+      "test_q4_resident",
+      "test_gpu_shared_queue",
+      "test_q4_500_extension"
+    ],
+    "isolated_frozen_import_passed": true
+  },
+  "training_queue": {
+    "state": "running",
+    "stage": "annotate",
+    "controller_pid": 999980,
+    "started_at": "2026-11-05T16:15:09.817541+08:00",
+    "allowed_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "updated_at": "2026-11-06T01:01:55.159912+08:00",
+    "resident_control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/resident-20261106-r1",
+    "workers": {
+      "0": {
+        "stage": "waiting_for_gpu",
+        "pid": 999999,
+        "at": "2026-11-06T01:01:47.551376+08:00",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 21831,
+            "utilization": 94
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 17914,
+            "utilization": 97
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 12199,
+            "utilization": 95
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12051,
+            "utilization": 94
+          }
+        },
+        "effective_free_mib": {
+          "0": 21831,
+          "1": 17914,
+          "2": 12199,
+          "3": 12051
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 43008,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      },
+      "1": {
+        "stage": "waiting_for_gpu",
+        "pid": 1000000,
+        "at": "2026-11-06T01:01:48.052852+08:00",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 21831,
+            "utilization": 96
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 17914,
+            "utilization": 95
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 12199,
+            "utilization": 93
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12051,
+            "utilization": 94
+          }
+        },
+        "effective_free_mib": {
+          "0": 21831,
+          "1": 17914,
+          "2": 12199,
+          "3": 12051
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 24576,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      }
+    },
+    "resource_policy": {
+      "allowed_gpu_indices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "primary_admission_mib": 43008,
+      "helper_admission_mib": 24576,
+      "continuous_model_and_lease": true,
+      "independent_of_untrained500_completion": true
+    }
+  },
+  "untrained_queue": {
+    "controller_pid": 992502,
+    "workers": {
+      "8": {
+        "pid": 992522,
+        "stage": "waiting_for_gpu",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "9": {
+        "pid": 992523,
+        "stage": "waiting_for_gpu",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "10": {
+        "pid": 992524,
+        "stage": "waiting_for_gpu",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "11": {
+        "pid": 992525,
+        "stage": "waiting_for_gpu",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    },
+    "completed": 358,
+    "errors": 0
+  },
+  "current_actual_GPU_residency": false,
+  "current_limitation": "All cards below even 24GiB admission. Both versions have healthy GPU watchers and wait for sufficient memory.",
+  "untrained_358_results_preserved": true,
+  "monitor_unchanged": {
+    "pid": 668477,
+    "at": "2026-11-06T01:01:42.526306+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "model_calls_interrupted": 0,
+  "other_projects_signaled": false
+}

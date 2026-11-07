@@ -20,7 +20,7 @@ GPU 0 和 GPU 3 各承担一个互不重叠的抽取批次，GPU 3 同时保留�
 CPU 预览命令（不调用模型、不生成答案；输出目录须新建）：
 
 ```bash
-workdirs/query-runtime-env/bin/python script/preview_compact_evidence.py \
+/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python script/preview_compact_evidence.py \
   --run workdirs/controlled-memory-300-20261028-r1 \
   --out workdirs/compact-evidence-preview-NEW \
   --tokenizer checkpoints/Qwen/Qwen2.5-VL-7B-Instruct

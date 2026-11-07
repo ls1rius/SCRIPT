@@ -1,0 +1,2946 @@
+[
+  {
+    "caption_id": "C0",
+    "interval": [
+      0,
+      1
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/0.jpg",
+    "original": "#C C picks blocks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "blocks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R0",
+      "R72"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [0,1), [19,21), [96,97), [106,107) (source assertion), C picks blocks.",
+      "At sampled intervals [0,1) (source assertion), C picks blocks. The text memory associates this observation with C (text reference E0)."
+    ]
+  },
+  {
+    "caption_id": "C1",
+    "interval": [
+      1,
+      2
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/1.jpg",
+    "original": "#C C moves a brick mold on the ground with his hands. ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick mold"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R1",
+      "R2"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C2",
+    "interval": [
+      2,
+      3
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/2.jpg",
+    "original": "#C C walks around the field ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C3",
+    "interval": [
+      3,
+      4
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/3.jpg",
+    "original": "#C C picks the brick mold on the ground",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick mold"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R4",
+      "R5"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C4",
+    "interval": [
+      4,
+      5
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/4.jpg",
+    "original": "#C C picks a brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R6",
+      "R7",
+      "R73",
+      "R74"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [4,5) (source assertion), C picks a brick. The text memory associates this observation with brick (text reference E1).",
+      "At sampled intervals [4,5) (unresolved hypothesis), An unresolved source observation states: \"C picks a brick\"."
+    ]
+  },
+  {
+    "caption_id": "C5",
+    "interval": [
+      5,
+      6
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/5.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C6",
+    "interval": [
+      6,
+      7
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/6.jpg",
+    "original": "#C C Looks around a field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R8"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C7",
+    "interval": [
+      7,
+      8
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/7.jpg",
+    "original": "#C C moves around the brick ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R9"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C8",
+    "interval": [
+      8,
+      9
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/8.jpg",
+    "original": "#C C puts brick down",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R10",
+      "R11"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C9",
+    "interval": [
+      9,
+      10
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/9.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C10",
+    "interval": [
+      10,
+      11
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/10.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C11",
+    "interval": [
+      11,
+      12
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/11.jpg",
+    "original": "#C C converses with a man Z ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R13"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C12",
+    "interval": [
+      12,
+      13
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/12.jpg",
+    "original": "#C C walks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R14"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C13",
+    "interval": [
+      13,
+      14
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/13.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C14",
+    "interval": [
+      14,
+      15
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/14.jpg",
+    "original": "#C C walks around the field ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C15",
+    "interval": [
+      15,
+      16
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/15.jpg",
+    "original": "#C C picks bricks from the ground",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R15",
+      "R16",
+      "R75"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [15,16), [179,180) (source assertion), C picks bricks from the ground.",
+      "At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks.",
+      "At sampled intervals [15,16) (unresolved hypothesis), An unresolved source observation states: \"C picks bricks from the ground\"."
+    ]
+  },
+  {
+    "caption_id": "C16",
+    "interval": [
+      16,
+      17
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/16.jpg",
+    "original": "#C C picks up bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R17"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [16,17), [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up bricks."
+    ]
+  },
+  {
+    "caption_id": "C17",
+    "interval": [
+      17,
+      18
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/17.jpg",
+    "original": "#C C looks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R18"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C18",
+    "interval": [
+      18,
+      19
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/18.jpg",
+    "original": "#C C moves around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R19"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C19",
+    "interval": [
+      19,
+      20
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/19.jpg",
+    "original": "#C C picks the blocks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "blocks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R0",
+      "R20"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [0,1), [19,21), [96,97), [106,107) (source assertion), C picks blocks.",
+      "At sampled intervals [19,20), [96,97) (source assertion), C picks the blocks."
+    ]
+  },
+  {
+    "caption_id": "C20",
+    "interval": [
+      20,
+      21
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/20.jpg",
+    "original": "#C C picks blocks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "blocks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R0"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [0,1), [19,21), [96,97), [106,107) (source assertion), C picks blocks."
+    ]
+  },
+  {
+    "caption_id": "C21",
+    "interval": [
+      21,
+      22
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/21.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C22",
+    "interval": [
+      22,
+      23
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/22.jpg",
+    "original": "#C C walks around the field ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C23",
+    "interval": [
+      23,
+      24
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/23.jpg",
+    "original": "#C C walks around the field.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C24",
+    "interval": [
+      24,
+      25
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/24.jpg",
+    "original": "#C C picks a brick from the ground",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R21"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [24,25), [33,34), [92,93), [110,111), [138,139), [142,143) (source assertion), C picks a brick from the ground."
+    ]
+  },
+  {
+    "caption_id": "C25",
+    "interval": [
+      25,
+      26
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/25.jpg",
+    "original": "#C C picks up a brick ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R22",
+      "R23"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [25,26), [100,101), [119,120) (source assertion), C picks up a brick.",
+      "At sampled intervals [25,26), [100,102), [119,120), [125,126), [128,129), [146,147) (source assertion), C picks up brick."
+    ]
+  },
+  {
+    "caption_id": "C26",
+    "interval": [
+      26,
+      27
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/26.jpg",
+    "original": "#C C moves around the field ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "around the field"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R24"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [26,27), [144,145) (source assertion), C moves around the field."
+    ]
+  },
+  {
+    "caption_id": "C27",
+    "interval": [
+      27,
+      28
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/27.jpg",
+    "original": "#C C moves around ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R19"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C28",
+    "interval": [
+      28,
+      29
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/28.jpg",
+    "original": "#C C picks the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16",
+      "R25"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks.",
+      "At sampled intervals [28,29), [115,116), [156,157), [169,171) (source assertion), C picks the bricks."
+    ]
+  },
+  {
+    "caption_id": "C29",
+    "interval": [
+      29,
+      30
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/29.jpg",
+    "original": "#C C moves the brick towards the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R26",
+      "R27"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [29,30), [41,42), [123,124), [132,133), [163,165) (source assertion), C moves brick."
+    ]
+  },
+  {
+    "caption_id": "C30",
+    "interval": [
+      30,
+      31
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/30.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C31",
+    "interval": [
+      31,
+      32
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/31.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C32",
+    "interval": [
+      32,
+      33
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/32.jpg",
+    "original": "#C C moves the brick mold",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick mold"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R2",
+      "R28"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C33",
+    "interval": [
+      33,
+      34
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/33.jpg",
+    "original": "#C C picks a brick from the ground",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R21"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [24,25), [33,34), [92,93), [110,111), [138,139), [142,143) (source assertion), C picks a brick from the ground."
+    ]
+  },
+  {
+    "caption_id": "C34",
+    "interval": [
+      34,
+      35
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/34.jpg",
+    "original": "#C C walks around the field ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C35",
+    "interval": [
+      35,
+      36
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/35.jpg",
+    "original": "#C C looks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R29"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [35,36), [103,104), [121,122), [140,141), [148,149), [162,163), [166,167) (source assertion), C looks around."
+    ]
+  },
+  {
+    "caption_id": "C36",
+    "interval": [
+      36,
+      37
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/36.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C37",
+    "interval": [
+      37,
+      38
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/37.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C38",
+    "interval": [
+      38,
+      39
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/38.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C39",
+    "interval": [
+      39,
+      40
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/39.jpg",
+    "original": "#C C walks on the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R30"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C40",
+    "interval": [
+      40,
+      41
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/40.jpg",
+    "original": "#C C walks in the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R31"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C41",
+    "interval": [
+      41,
+      42
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/41.jpg",
+    "original": "#C C moves brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R27"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [29,30), [41,42), [123,124), [132,133), [163,165) (source assertion), C moves brick."
+    ]
+  },
+  {
+    "caption_id": "C42",
+    "interval": [
+      42,
+      43
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/42.jpg",
+    "original": "#C C puts the bricks on the ground",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R32"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C43",
+    "interval": [
+      43,
+      44
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/43.jpg",
+    "original": "#C C puts brick down",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R10",
+      "R11"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C44",
+    "interval": [
+      44,
+      45
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/44.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C90",
+    "interval": [
+      90,
+      91
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/90.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C91",
+    "interval": [
+      91,
+      92
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/91.jpg",
+    "original": "#C C talks to person X",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R33"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C92",
+    "interval": [
+      92,
+      93
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/92.jpg",
+    "original": "#C C picks a brick from the ground ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R21"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [24,25), [33,34), [92,93), [110,111), [138,139), [142,143) (source assertion), C picks a brick from the ground."
+    ]
+  },
+  {
+    "caption_id": "C93",
+    "interval": [
+      93,
+      94
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/93.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C94",
+    "interval": [
+      94,
+      95
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/94.jpg",
+    "original": "#C C looks around the construction site",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R34"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C95",
+    "interval": [
+      95,
+      96
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/95.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C96",
+    "interval": [
+      96,
+      97
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/96.jpg",
+    "original": "#C C picks the blocks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "blocks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R0",
+      "R20"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [0,1), [19,21), [96,97), [106,107) (source assertion), C picks blocks.",
+      "At sampled intervals [19,20), [96,97) (source assertion), C picks the blocks."
+    ]
+  },
+  {
+    "caption_id": "C97",
+    "interval": [
+      97,
+      98
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/97.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C98",
+    "interval": [
+      98,
+      99
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/98.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C99",
+    "interval": [
+      99,
+      100
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/99.jpg",
+    "original": "#C C throws away the stick",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R35"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C100",
+    "interval": [
+      100,
+      101
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/100.jpg",
+    "original": "#C C picks up a brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R22",
+      "R23"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [25,26), [100,101), [119,120) (source assertion), C picks up a brick.",
+      "At sampled intervals [25,26), [100,102), [119,120), [125,126), [128,129), [146,147) (source assertion), C picks up brick."
+    ]
+  },
+  {
+    "caption_id": "C101",
+    "interval": [
+      101,
+      102
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/101.jpg",
+    "original": "#C C picks up the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R23",
+      "R36"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [25,26), [100,102), [119,120), [125,126), [128,129), [146,147) (source assertion), C picks up brick.",
+      "At sampled intervals [101,102), [125,126), [128,129) (source assertion), C picks up the brick."
+    ]
+  },
+  {
+    "caption_id": "C102",
+    "interval": [
+      102,
+      103
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/102.jpg",
+    "original": "#C C picks a brick mold from the ground ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick mold"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R5",
+      "R37"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C103",
+    "interval": [
+      103,
+      104
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/103.jpg",
+    "original": "#C C looks around ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R29"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [35,36), [103,104), [121,122), [140,141), [148,149), [162,163), [166,167) (source assertion), C looks around."
+    ]
+  },
+  {
+    "caption_id": "C104",
+    "interval": [
+      104,
+      105
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/104.jpg",
+    "original": "#C C moves the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R38",
+      "R39"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [104,105), [141,142), [152,153) (source assertion), C moves the bricks.",
+      "At sampled intervals [104,105), [141,142), [152,153) (source assertion), C moves bricks."
+    ]
+  },
+  {
+    "caption_id": "C105",
+    "interval": [
+      105,
+      106
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/105.jpg",
+    "original": "#C C picks the block",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "block"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R40",
+      "R41"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks the block.",
+      "At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks block."
+    ]
+  },
+  {
+    "caption_id": "C106",
+    "interval": [
+      106,
+      107
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/106.jpg",
+    "original": "#C C picks blocks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "blocks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R0"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [0,1), [19,21), [96,97), [106,107) (source assertion), C picks blocks."
+    ]
+  },
+  {
+    "caption_id": "C107",
+    "interval": [
+      107,
+      108
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/107.jpg",
+    "original": "#C C moves a brick on the brick wall with his left hand. ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick",
+          "body_part": "left hand"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R42",
+      "R43"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C108",
+    "interval": [
+      108,
+      109
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/108.jpg",
+    "original": "#C C talks to a man Z ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R44"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [108,109) (source assertion), C talks to a man Z."
+    ]
+  },
+  {
+    "caption_id": "C109",
+    "interval": [
+      109,
+      110
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/109.jpg",
+    "original": "#C C walks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R14"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C110",
+    "interval": [
+      110,
+      111
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/110.jpg",
+    "original": "#C C picks a brick from the ground. ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R21"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [24,25), [33,34), [92,93), [110,111), [138,139), [142,143) (source assertion), C picks a brick from the ground."
+    ]
+  },
+  {
+    "caption_id": "C111",
+    "interval": [
+      111,
+      112
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/111.jpg",
+    "original": "#C C picks up the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R17",
+      "R45"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [16,17), [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up bricks.",
+      "At sampled intervals [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up the bricks."
+    ]
+  },
+  {
+    "caption_id": "C112",
+    "interval": [
+      112,
+      113
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/112.jpg",
+    "original": "#C C stares at the ground",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R46"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C113",
+    "interval": [
+      113,
+      114
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/113.jpg",
+    "original": "#C C looks at man Y ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R47"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C114",
+    "interval": [
+      114,
+      115
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/114.jpg",
+    "original": "#C C picks bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks."
+    ]
+  },
+  {
+    "caption_id": "C115",
+    "interval": [
+      115,
+      116
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/115.jpg",
+    "original": "#C C picks the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16",
+      "R25"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks.",
+      "At sampled intervals [28,29), [115,116), [156,157), [169,171) (source assertion), C picks the bricks."
+    ]
+  },
+  {
+    "caption_id": "C116",
+    "interval": [
+      116,
+      117
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/116.jpg",
+    "original": "#C C holds bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R48"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [116,117), [151,152) (source assertion), C holds bricks."
+    ]
+  },
+  {
+    "caption_id": "C117",
+    "interval": [
+      117,
+      118
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/117.jpg",
+    "original": "#C C picks the brick mold from the ground",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick mold"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R5",
+      "R49"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C118",
+    "interval": [
+      118,
+      119
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/118.jpg",
+    "original": "#C C moves around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R19"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C119",
+    "interval": [
+      119,
+      120
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/119.jpg",
+    "original": "#C C picks up a brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R22",
+      "R23"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [25,26), [100,101), [119,120) (source assertion), C picks up a brick.",
+      "At sampled intervals [25,26), [100,102), [119,120), [125,126), [128,129), [146,147) (source assertion), C picks up brick."
+    ]
+  },
+  {
+    "caption_id": "C120",
+    "interval": [
+      120,
+      121
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/120.jpg",
+    "original": "#C C walks around the construction site",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R50"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C121",
+    "interval": [
+      121,
+      122
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/121.jpg",
+    "original": "#C C looks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R29"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [35,36), [103,104), [121,122), [140,141), [148,149), [162,163), [166,167) (source assertion), C looks around."
+    ]
+  },
+  {
+    "caption_id": "C122",
+    "interval": [
+      122,
+      123
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/122.jpg",
+    "original": "#C C moves around ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R19"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C123",
+    "interval": [
+      123,
+      124
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/123.jpg",
+    "original": "#C C moves the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R27",
+      "R51"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [29,30), [41,42), [123,124), [132,133), [163,165) (source assertion), C moves brick.",
+      "At sampled intervals [123,124), [163,164) (source assertion), C moves the brick."
+    ]
+  },
+  {
+    "caption_id": "C124",
+    "interval": [
+      124,
+      125
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/124.jpg",
+    "original": "#C C picks up the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R17",
+      "R45"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [16,17), [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up bricks.",
+      "At sampled intervals [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up the bricks."
+    ]
+  },
+  {
+    "caption_id": "C125",
+    "interval": [
+      125,
+      126
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/125.jpg",
+    "original": "#C C picks up the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R23",
+      "R36"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [25,26), [100,102), [119,120), [125,126), [128,129), [146,147) (source assertion), C picks up brick.",
+      "At sampled intervals [101,102), [125,126), [128,129) (source assertion), C picks up the brick."
+    ]
+  },
+  {
+    "caption_id": "C126",
+    "interval": [
+      126,
+      127
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/126.jpg",
+    "original": "#C C walks on the ground",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R52"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C127",
+    "interval": [
+      127,
+      128
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/127.jpg",
+    "original": "#O A man X picks a brick molder",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "X",
+          "verb": "picks",
+          "patient": "brick molder"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R53",
+      "R54"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C128",
+    "interval": [
+      128,
+      129
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/128.jpg",
+    "original": "#C C picks up the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R23",
+      "R36"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [25,26), [100,102), [119,120), [125,126), [128,129), [146,147) (source assertion), C picks up brick.",
+      "At sampled intervals [101,102), [125,126), [128,129) (source assertion), C picks up the brick."
+    ]
+  },
+  {
+    "caption_id": "C129",
+    "interval": [
+      129,
+      130
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/129.jpg",
+    "original": "#C C picks a brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R6",
+      "R7"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick."
+    ]
+  },
+  {
+    "caption_id": "C130",
+    "interval": [
+      130,
+      131
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/130.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C131",
+    "interval": [
+      131,
+      132
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/131.jpg",
+    "original": "#O man Z walks",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R55"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C132",
+    "interval": [
+      132,
+      133
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/132.jpg",
+    "original": "#C C moves a brick on the ground",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R27",
+      "R56"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [29,30), [41,42), [123,124), [132,133), [163,165) (source assertion), C moves brick.",
+      "At sampled intervals [132,133) (source assertion), C moves a brick on the ground."
+    ]
+  },
+  {
+    "caption_id": "C133",
+    "interval": [
+      133,
+      134
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/133.jpg",
+    "original": "#C C picks up the block",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "block"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R57",
+      "R58"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [133,134) (source assertion), C picks up the block.",
+      "At sampled intervals [133,134) (source assertion), C picks up block."
+    ]
+  },
+  {
+    "caption_id": "C134",
+    "interval": [
+      134,
+      135
+    ],
+    "scene": "S2",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/134.jpg",
+    "original": "#C C picks up the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R17",
+      "R45"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [16,17), [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up bricks.",
+      "At sampled intervals [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up the bricks."
+    ]
+  },
+  {
+    "caption_id": "C135",
+    "interval": [
+      135,
+      136
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/135.jpg",
+    "original": "#C C walks around the field ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C136",
+    "interval": [
+      136,
+      137
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/136.jpg",
+    "original": "#C C walks around the field ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C137",
+    "interval": [
+      137,
+      138
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/137.jpg",
+    "original": "#C C picks a brick mold",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick mold"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R5",
+      "R59"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C138",
+    "interval": [
+      138,
+      139
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/138.jpg",
+    "original": "#C C picks a brick from the ground",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R21"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [24,25), [33,34), [92,93), [110,111), [138,139), [142,143) (source assertion), C picks a brick from the ground."
+    ]
+  },
+  {
+    "caption_id": "C139",
+    "interval": [
+      139,
+      140
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/139.jpg",
+    "original": "#C C throws the  stick on the ground",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "throws",
+          "patient": "stick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R60",
+      "R61"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C140",
+    "interval": [
+      140,
+      141
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/140.jpg",
+    "original": "#C C looks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R29"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [35,36), [103,104), [121,122), [140,141), [148,149), [162,163), [166,167) (source assertion), C looks around."
+    ]
+  },
+  {
+    "caption_id": "C141",
+    "interval": [
+      141,
+      142
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/141.jpg",
+    "original": "#C C moves the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R38",
+      "R39"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [104,105), [141,142), [152,153) (source assertion), C moves the bricks.",
+      "At sampled intervals [104,105), [141,142), [152,153) (source assertion), C moves bricks."
+    ]
+  },
+  {
+    "caption_id": "C142",
+    "interval": [
+      142,
+      143
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/142.jpg",
+    "original": "#C C picks a brick from the ground ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R21"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [24,25), [33,34), [92,93), [110,111), [138,139), [142,143) (source assertion), C picks a brick from the ground."
+    ]
+  },
+  {
+    "caption_id": "C143",
+    "interval": [
+      143,
+      144
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/143.jpg",
+    "original": "#C C drops the brick on the brick on the arranged brick with his left hand. ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "drops",
+          "patient": "brick",
+          "body_part": "left hand"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R62",
+      "R63"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [143,144) (source assertion), C drops the brick on the brick on the arranged brick with his left hand.",
+      "At sampled intervals [143,144) (source assertion), C drops brick with left hand."
+    ]
+  },
+  {
+    "caption_id": "C144",
+    "interval": [
+      144,
+      145
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/144.jpg",
+    "original": "#C C moves around the field ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "around the field"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R24"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [26,27), [144,145) (source assertion), C moves around the field."
+    ]
+  },
+  {
+    "caption_id": "C145",
+    "interval": [
+      145,
+      146
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/145.jpg",
+    "original": "#C C touches his mouth",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R64"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C146",
+    "interval": [
+      146,
+      147
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/146.jpg",
+    "original": "#C C picks up brick ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R23"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [25,26), [100,102), [119,120), [125,126), [128,129), [146,147) (source assertion), C picks up brick."
+    ]
+  },
+  {
+    "caption_id": "C147",
+    "interval": [
+      147,
+      148
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/147.jpg",
+    "original": "#C C picks a brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R6",
+      "R7"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick."
+    ]
+  },
+  {
+    "caption_id": "C148",
+    "interval": [
+      148,
+      149
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/148.jpg",
+    "original": "#C C looks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R29"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [35,36), [103,104), [121,122), [140,141), [148,149), [162,163), [166,167) (source assertion), C looks around."
+    ]
+  },
+  {
+    "caption_id": "C149",
+    "interval": [
+      149,
+      150
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/149.jpg",
+    "original": "#C C talks to a man X ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R65"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C150",
+    "interval": [
+      150,
+      151
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/150.jpg",
+    "original": "#C C picks up the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R17",
+      "R45"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [16,17), [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up bricks.",
+      "At sampled intervals [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up the bricks."
+    ]
+  },
+  {
+    "caption_id": "C151",
+    "interval": [
+      151,
+      152
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/151.jpg",
+    "original": "#C C holds the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "holds",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R48",
+      "R66"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [116,117), [151,152) (source assertion), C holds bricks."
+    ]
+  },
+  {
+    "caption_id": "C152",
+    "interval": [
+      152,
+      153
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/152.jpg",
+    "original": "#C C moves the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R38",
+      "R39"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [104,105), [141,142), [152,153) (source assertion), C moves the bricks.",
+      "At sampled intervals [104,105), [141,142), [152,153) (source assertion), C moves bricks."
+    ]
+  },
+  {
+    "caption_id": "C153",
+    "interval": [
+      153,
+      154
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/153.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C154",
+    "interval": [
+      154,
+      155
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/154.jpg",
+    "original": "#C C turns over the brick ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R67"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C155",
+    "interval": [
+      155,
+      156
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/155.jpg",
+    "original": "#C C picks the block",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "block"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R40",
+      "R41"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks the block.",
+      "At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks block."
+    ]
+  },
+  {
+    "caption_id": "C156",
+    "interval": [
+      156,
+      157
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/156.jpg",
+    "original": "#C C picks the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16",
+      "R25"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks.",
+      "At sampled intervals [28,29), [115,116), [156,157), [169,171) (source assertion), C picks the bricks."
+    ]
+  },
+  {
+    "caption_id": "C157",
+    "interval": [
+      157,
+      158
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/157.jpg",
+    "original": "#C C picks the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R12"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.",
+      "At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick."
+    ]
+  },
+  {
+    "caption_id": "C158",
+    "interval": [
+      158,
+      159
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/158.jpg",
+    "original": "#C C walks on the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R30"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C159",
+    "interval": [
+      159,
+      160
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/159.jpg",
+    "original": "#C C moves around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R19"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C160",
+    "interval": [
+      160,
+      161
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/160.jpg",
+    "original": "#C C picks a brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R6",
+      "R7"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick."
+    ]
+  },
+  {
+    "caption_id": "C161",
+    "interval": [
+      161,
+      162
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/161.jpg",
+    "original": "#C C picks a brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R6",
+      "R7"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick."
+    ]
+  },
+  {
+    "caption_id": "C162",
+    "interval": [
+      162,
+      163
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/162.jpg",
+    "original": "#C C looks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R29"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [35,36), [103,104), [121,122), [140,141), [148,149), [162,163), [166,167) (source assertion), C looks around."
+    ]
+  },
+  {
+    "caption_id": "C163",
+    "interval": [
+      163,
+      164
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/163.jpg",
+    "original": "#C C moves the brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R27",
+      "R51"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [29,30), [41,42), [123,124), [132,133), [163,165) (source assertion), C moves brick.",
+      "At sampled intervals [123,124), [163,164) (source assertion), C moves the brick."
+    ]
+  },
+  {
+    "caption_id": "C164",
+    "interval": [
+      164,
+      165
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/164.jpg",
+    "original": "#C C moves the brick to the other side ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R27",
+      "R68"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [29,30), [41,42), [123,124), [132,133), [163,165) (source assertion), C moves brick."
+    ]
+  },
+  {
+    "caption_id": "C165",
+    "interval": [
+      165,
+      166
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/165.jpg",
+    "original": "#C C picks brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick."
+    ]
+  },
+  {
+    "caption_id": "C166",
+    "interval": [
+      166,
+      167
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/166.jpg",
+    "original": "#C C looks around",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R29"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [35,36), [103,104), [121,122), [140,141), [148,149), [162,163), [166,167) (source assertion), C looks around."
+    ]
+  },
+  {
+    "caption_id": "C167",
+    "interval": [
+      167,
+      168
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/167.jpg",
+    "original": "#C C walks in the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R31"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C168",
+    "interval": [
+      168,
+      169
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/168.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C169",
+    "interval": [
+      169,
+      170
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/169.jpg",
+    "original": "#C C picks the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16",
+      "R25"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks.",
+      "At sampled intervals [28,29), [115,116), [156,157), [169,171) (source assertion), C picks the bricks."
+    ]
+  },
+  {
+    "caption_id": "C170",
+    "interval": [
+      170,
+      171
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/170.jpg",
+    "original": "#C C picks the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16",
+      "R25"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks.",
+      "At sampled intervals [28,29), [115,116), [156,157), [169,171) (source assertion), C picks the bricks."
+    ]
+  },
+  {
+    "caption_id": "C171",
+    "interval": [
+      171,
+      172
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/171.jpg",
+    "original": "#C C walks away from the clay soil",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R69"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C172",
+    "interval": [
+      172,
+      173
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/172.jpg",
+    "original": "#C C picks the block",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "block"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R40",
+      "R41"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks the block.",
+      "At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks block."
+    ]
+  },
+  {
+    "caption_id": "C173",
+    "interval": [
+      173,
+      174
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/173.jpg",
+    "original": "#C C Picks up bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "Picks up",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R70"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [173,174) (source assertion), C Picks up bricks."
+    ]
+  },
+  {
+    "caption_id": "C174",
+    "interval": [
+      174,
+      175
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/174.jpg",
+    "original": "#C C picks the block",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "block"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R40",
+      "R41"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks the block.",
+      "At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks block."
+    ]
+  },
+  {
+    "caption_id": "C175",
+    "interval": [
+      175,
+      176
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/175.jpg",
+    "original": "#C C picks brick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "brick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick."
+    ]
+  },
+  {
+    "caption_id": "C176",
+    "interval": [
+      176,
+      177
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/176.jpg",
+    "original": "#O A man Y stands on the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R71"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C177",
+    "interval": [
+      177,
+      178
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/177.jpg",
+    "original": "#C C walks around the field",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C178",
+    "interval": [
+      178,
+      179
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/178.jpg",
+    "original": "#C C picks up the bricks",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R17",
+      "R45"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [16,17), [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up bricks.",
+      "At sampled intervals [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up the bricks."
+    ]
+  },
+  {
+    "caption_id": "C179",
+    "interval": [
+      179,
+      180
+    ],
+    "scene": "S3",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/951ccf40-1a99-4138-a441-4edf16af5446/179.jpg",
+    "original": "#C C picks bricks from the ground ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bricks"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R15",
+      "R16"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [15,16), [179,180) (source assertion), C picks bricks from the ground.",
+      "At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks."
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "source_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-L-I-300-20261102-r1",
+  "question_id": "73ecc613-5e39-4348-94ba-ee6cb197367a",
+  "export_type": "read-only export plus explicitly labeled presentation and caption summaries; no model inference",
+  "source_selected_input_sha256": "f9adb43b9d401d110423c5d8cd8d63a49d7df536d390e17a24add0c4d34b65ea",
+  "files_sha256": {
+    "18_per_frame_before_after.md": "e8727b1c1b8494a82e857158ab2d4a31edd66ace89dfc28017ee5450bc98f90d",
+    "16_actual_chat_template.txt": "82b731618c8ef19ef267c8c0cfe0728bb37059bebc8f0a22484592c3996ccdc6",
+    "02_scene_directory.json": "87a8024d899470a4388c599b0e2d2bd036e9102c9ff85b1bdb2a789e7d213eb6",
+    "13_reformatted_audit.json": "94e4f6807d388ec38af47899a030f04f842be7da1c64a3a7f0b5aae609dae7ba",
+    "07_raw_planner_output.json": "ad870e443846cd1aa2e55e8f6197507d5f64fa107b1aa9807b9006372b5eb9af",
+    "05_I_memory.json": "2940297605c4a68e0411f43a3615374ed871d6d8b0748aa4e3087040f4655e62",
+    "04_H_observations.json": "96a441a3c2ad7da1644d1cecb1ee44c2d091c8c2ff0a7cd8f391dcedb8992e03",
+    "03_selected_frame_trace.json": "49f5ce619c9ceee3e41b5f0286f4163e324377ca9e8b762891fbd6f46eb171f1",
+    "09_actual_plan_audit.json": "197ff44eca6362f3a68f899126877f3a108fc9d3f7e2afe890a69198950100b5",
+    "L_evidence_planner_actual_input.json": "f9adb43b9d401d110423c5d8cd8d63a49d7df536d390e17a24add0c4d34b65ea",
+    "08_plan.json": "6ba8f7bc568cf72ebb72af17e6505549eb22cd97096f91fcd7ee85b9d6955716",
+    "11_actual_description.txt": "8959a10cf2257783096454a3a07e2fa095fe58f933b2aa2294ee72a5a40bf688",
+    "01_question_options.json": "ffeb670c9bca6c7faeee9fbe88ac0a0da0289a658bc932b85f6eb2c229f6841f",
+    "I_control_actual_input.json": "3fd623565dd8377c37d1d905d6d724d71ce0cb6aab5865245da06d71c49343a4",
+    "07_actual_planner_input.json": "2392cb46234e6db0bd7b4e924cfaeb170564caa1bd3c266a315e85448cb36304",
+    "15_observed_answers.json": "a26e4ae2de6024cfefce1955ad5c766748e15cd8ad960d15ee8fd2b7e56df405",
+    "06_candidate_pool.json": "29220d1aec87275c2effee7c12625fb8b0283e1b3cd1cd135324870484f5215f",
+    "demo.md": "3aedd61692b38d22b6d6e836eae556bdd30e93807db3c28708dd716e7a89e678",
+    "10_actual_final_input.json": "f9adb43b9d401d110423c5d8cd8d63a49d7df536d390e17a24add0c4d34b65ea",
+    "19_per_frame_before_after.csv": "8e8c2dce68167f3070770b33e8b2258cf750c0ebfc369bb72a02d208c3c55ce3",
+    "12_reformatted_final_input.json": "305534f73bc7b84c6b96ec512a8312067ef363cf1081e9e2b755e7b37ef90336",
+    "17_reformatted_chat_template.txt": "4f78498182bf889763d60feec93783507f26b72054c44f972918cb72b8297785",
+    "14_reformatted_description.txt": "6ef5ab84063220fbd2631a66528367bbea6c66bdd6c5a2bffd383dc3bbdbc035",
+    "L_all_evidence_actual_input.json": "782806b809f2214c761703d54d4c2cf7ece5a238542a890ed2245c3021e6dac5"
+  }
+}

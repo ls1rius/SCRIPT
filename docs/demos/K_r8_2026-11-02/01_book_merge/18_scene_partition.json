@@ -1,0 +1,184 @@
+{
+  "question_id": "916476da-a699-4132-b5cb-ae992e647b1b",
+  "source_settings_archive": "docs/experiments/Early_Schemes_Records_2026-11-01.json",
+  "source_record": "partial-temporal-300-20261027-r2/metadata/settings.json",
+  "settings": {
+    "penalty": 1.0,
+    "min_samples": 4,
+    "max_scene_seconds": 45,
+    "frame_batch": 6,
+    "entities_per_page": 4,
+    "max_pages": 8,
+    "max_scene_visits": 4,
+    "semantic_links": 2,
+    "online_seconds": 1500,
+    "directory_seconds": 600,
+    "adaptive_initial_frames": 2,
+    "adaptive_expand_frames": 3,
+    "adaptive_max_steps": 16,
+    "optimized_max_plans": 4,
+    "optimized_initial_captions": 6,
+    "optimized_batch_captions": 8
+  },
+  "feature_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_features/916476da-a699-4132-b5cb-ae992e647b1b.pt",
+  "feature_sha256": "091fe12f4d969fa7834b701a193c0a5192639fd20abcb1cf1b7a673d826eba34",
+  "verification": "CPU-only deterministic reconstruction using retained visual features and archived original segmentation settings. No model inference or experiment restart.",
+  "interval_convention": "left-closed right-open seconds on the one-second source grid",
+  "scene_count": 6,
+  "scenes": [
+    {
+      "scene_id": "S0",
+      "interval": [
+        0,
+        43
+      ],
+      "duration_seconds": 43,
+      "selected_caption_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "selected_count": 43
+    },
+    {
+      "scene_id": "S1",
+      "interval": [
+        43,
+        88
+      ],
+      "duration_seconds": 45,
+      "selected_caption_indices": [],
+      "selected_count": 0
+    },
+    {
+      "scene_id": "S2",
+      "interval": [
+        88,
+        91
+      ],
+      "duration_seconds": 3,
+      "selected_caption_indices": [
+        88,
+        89,
+        90
+      ],
+      "selected_count": 3
+    },
+    {
+      "scene_id": "S3",
+      "interval": [
+        91,
+        107
+      ],
+      "duration_seconds": 16,
+      "selected_caption_indices": [],
+      "selected_count": 0
+    },
+    {
+      "scene_id": "S4",
+      "interval": [
+        107,
+        152
+      ],
+      "duration_seconds": 45,
+      "selected_caption_indices": [
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151
+      ],
+      "selected_count": 45
+    },
+    {
+      "scene_id": "S5",
+      "interval": [
+        152,
+        180
+      ],
+      "duration_seconds": 28,
+      "selected_caption_indices": [],
+      "selected_count": 0
+    }
+  ]
+}

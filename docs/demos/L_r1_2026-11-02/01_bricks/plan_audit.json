@@ -1,0 +1,3834 @@
+{
+  "pool_sha256": "a61629d0426f08fb557c1f34948c656b09420580935f4243c8a6b3b3053ff24a",
+  "total_records": 76,
+  "retained_records": 33,
+  "skipped_records": 43,
+  "uncertain_records": 0,
+  "merge_groups": 0,
+  "retained_caption_ids": [
+    "C0",
+    "C10",
+    "C100",
+    "C101",
+    "C103",
+    "C104",
+    "C105",
+    "C106",
+    "C108",
+    "C110",
+    "C111",
+    "C114",
+    "C115",
+    "C116",
+    "C119",
+    "C121",
+    "C123",
+    "C124",
+    "C125",
+    "C128",
+    "C129",
+    "C132",
+    "C133",
+    "C134",
+    "C138",
+    "C140",
+    "C141",
+    "C142",
+    "C143",
+    "C144",
+    "C146",
+    "C147",
+    "C148",
+    "C15",
+    "C150",
+    "C151",
+    "C152",
+    "C153",
+    "C155",
+    "C156",
+    "C157",
+    "C16",
+    "C160",
+    "C161",
+    "C162",
+    "C163",
+    "C164",
+    "C165",
+    "C166",
+    "C169",
+    "C170",
+    "C172",
+    "C173",
+    "C174",
+    "C175",
+    "C178",
+    "C179",
+    "C19",
+    "C20",
+    "C21",
+    "C24",
+    "C25",
+    "C26",
+    "C28",
+    "C29",
+    "C33",
+    "C35",
+    "C36",
+    "C37",
+    "C38",
+    "C4",
+    "C41",
+    "C9",
+    "C92",
+    "C95",
+    "C96",
+    "C97"
+  ],
+  "groups": [
+    {
+      "record_ids": [
+        "R0"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C0",
+          "original_text": "#C C picks blocks"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C0",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "blocks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C19",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "blocks"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C20",
+          "original_text": "#C C picks blocks"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C20",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "blocks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C96",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "blocks"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C106",
+          "original_text": "#C C picks blocks"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C106",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "blocks"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C0",
+          "interval": [
+            0,
+            1
+          ]
+        },
+        {
+          "caption_id": "C19",
+          "interval": [
+            19,
+            20
+          ]
+        },
+        {
+          "caption_id": "C20",
+          "interval": [
+            20,
+            21
+          ]
+        },
+        {
+          "caption_id": "C96",
+          "interval": [
+            96,
+            97
+          ]
+        },
+        {
+          "caption_id": "C106",
+          "interval": [
+            106,
+            107
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R0",
+          "original_sample_intervals": [
+            [
+              0,
+              1
+            ],
+            [
+              19,
+              20
+            ],
+            [
+              20,
+              21
+            ],
+            [
+              96,
+              97
+            ],
+            [
+              106,
+              107
+            ]
+          ],
+          "display_intervals": [
+            [
+              0,
+              1
+            ],
+            [
+              19,
+              21
+            ],
+            [
+              96,
+              97
+            ],
+            [
+              106,
+              107
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R72"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T0",
+            "entity_id": "E0",
+            "scene_id": "S0",
+            "description": "#C C picks blocks",
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 0,
+            "last_observed_at": 0,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              1
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C0"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              0,
+              0
+            ],
+            "source_support_interval": [
+              0,
+              1
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C0",
+          "interval": [
+            0,
+            1
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R72",
+          "original_sample_intervals": [
+            [
+              0,
+              1
+            ]
+          ],
+          "display_intervals": [
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R7"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C4",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C9",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C10",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C21",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C24",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C33",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C36",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C37",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C38",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C92",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C95",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C97",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C110",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C129",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C138",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C142",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C147",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C153",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C157",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C160",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C161",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C165",
+          "original_text": "#C C picks brick"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C165",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C175",
+          "original_text": "#C C picks brick"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C175",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "brick"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        },
+        {
+          "caption_id": "C9",
+          "interval": [
+            9,
+            10
+          ]
+        },
+        {
+          "caption_id": "C10",
+          "interval": [
+            10,
+            11
+          ]
+        },
+        {
+          "caption_id": "C21",
+          "interval": [
+            21,
+            22
+          ]
+        },
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C33",
+          "interval": [
+            33,
+            34
+          ]
+        },
+        {
+          "caption_id": "C36",
+          "interval": [
+            36,
+            37
+          ]
+        },
+        {
+          "caption_id": "C37",
+          "interval": [
+            37,
+            38
+          ]
+        },
+        {
+          "caption_id": "C38",
+          "interval": [
+            38,
+            39
+          ]
+        },
+        {
+          "caption_id": "C92",
+          "interval": [
+            92,
+            93
+          ]
+        },
+        {
+          "caption_id": "C95",
+          "interval": [
+            95,
+            96
+          ]
+        },
+        {
+          "caption_id": "C97",
+          "interval": [
+            97,
+            98
+          ]
+        },
+        {
+          "caption_id": "C110",
+          "interval": [
+            110,
+            111
+          ]
+        },
+        {
+          "caption_id": "C129",
+          "interval": [
+            129,
+            130
+          ]
+        },
+        {
+          "caption_id": "C138",
+          "interval": [
+            138,
+            139
+          ]
+        },
+        {
+          "caption_id": "C142",
+          "interval": [
+            142,
+            143
+          ]
+        },
+        {
+          "caption_id": "C147",
+          "interval": [
+            147,
+            148
+          ]
+        },
+        {
+          "caption_id": "C153",
+          "interval": [
+            153,
+            154
+          ]
+        },
+        {
+          "caption_id": "C157",
+          "interval": [
+            157,
+            158
+          ]
+        },
+        {
+          "caption_id": "C160",
+          "interval": [
+            160,
+            161
+          ]
+        },
+        {
+          "caption_id": "C161",
+          "interval": [
+            161,
+            162
+          ]
+        },
+        {
+          "caption_id": "C165",
+          "interval": [
+            165,
+            166
+          ]
+        },
+        {
+          "caption_id": "C175",
+          "interval": [
+            175,
+            176
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R7",
+          "original_sample_intervals": [
+            [
+              4,
+              5
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              21,
+              22
+            ],
+            [
+              24,
+              25
+            ],
+            [
+              33,
+              34
+            ],
+            [
+              36,
+              37
+            ],
+            [
+              37,
+              38
+            ],
+            [
+              38,
+              39
+            ],
+            [
+              92,
+              93
+            ],
+            [
+              95,
+              96
+            ],
+            [
+              97,
+              98
+            ],
+            [
+              110,
+              111
+            ],
+            [
+              129,
+              130
+            ],
+            [
+              138,
+              139
+            ],
+            [
+              142,
+              143
+            ],
+            [
+              147,
+              148
+            ],
+            [
+              153,
+              154
+            ],
+            [
+              157,
+              158
+            ],
+            [
+              160,
+              161
+            ],
+            [
+              161,
+              162
+            ],
+            [
+              165,
+              166
+            ],
+            [
+              175,
+              176
+            ]
+          ],
+          "display_intervals": [
+            [
+              4,
+              5
+            ],
+            [
+              9,
+              11
+            ],
+            [
+              21,
+              22
+            ],
+            [
+              24,
+              25
+            ],
+            [
+              33,
+              34
+            ],
+            [
+              36,
+              39
+            ],
+            [
+              92,
+              93
+            ],
+            [
+              95,
+              96
+            ],
+            [
+              97,
+              98
+            ],
+            [
+              110,
+              111
+            ],
+            [
+              129,
+              130
+            ],
+            [
+              138,
+              139
+            ],
+            [
+              142,
+              143
+            ],
+            [
+              147,
+              148
+            ],
+            [
+              153,
+              154
+            ],
+            [
+              157,
+              158
+            ],
+            [
+              160,
+              162
+            ],
+            [
+              165,
+              166
+            ],
+            [
+              175,
+              176
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R73"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T1",
+            "entity_id": "E1",
+            "scene_id": "S0",
+            "description": "#C C picks a brick",
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 4,
+            "last_observed_at": 4,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              5
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C4"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              4,
+              4
+            ],
+            "source_support_interval": [
+              4,
+              5
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R73",
+          "original_sample_intervals": [
+            [
+              4,
+              5
+            ]
+          ],
+          "display_intervals": [
+            [
+              4,
+              5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R74"
+      ],
+      "sources": [
+        {
+          "region": "temporal unresolved observation",
+          "record": {
+            "entity_id": "E0",
+            "scene_id": "S0",
+            "observation": {
+              "caption_id": "C4",
+              "continuity": "uncertain",
+              "state": "#C C picks a brick",
+              "cause": {
+                "action": null,
+                "actor": null,
+                "tool": null,
+                "basis": "unknown",
+                "source_caption_ids": []
+              }
+            },
+            "pts": 4,
+            "status": "unresolved_state_observation"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R74",
+          "original_sample_intervals": [
+            [
+              4,
+              5
+            ]
+          ],
+          "display_intervals": [
+            [
+              4,
+              5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R12"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C9",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C10",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C21",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C36",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C37",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C38",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C95",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C97",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C153",
+          "original_text": "#C C picks the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C157",
+          "original_text": "#C C picks the brick"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C9",
+          "interval": [
+            9,
+            10
+          ]
+        },
+        {
+          "caption_id": "C10",
+          "interval": [
+            10,
+            11
+          ]
+        },
+        {
+          "caption_id": "C21",
+          "interval": [
+            21,
+            22
+          ]
+        },
+        {
+          "caption_id": "C36",
+          "interval": [
+            36,
+            37
+          ]
+        },
+        {
+          "caption_id": "C37",
+          "interval": [
+            37,
+            38
+          ]
+        },
+        {
+          "caption_id": "C38",
+          "interval": [
+            38,
+            39
+          ]
+        },
+        {
+          "caption_id": "C95",
+          "interval": [
+            95,
+            96
+          ]
+        },
+        {
+          "caption_id": "C97",
+          "interval": [
+            97,
+            98
+          ]
+        },
+        {
+          "caption_id": "C153",
+          "interval": [
+            153,
+            154
+          ]
+        },
+        {
+          "caption_id": "C157",
+          "interval": [
+            157,
+            158
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R12",
+          "original_sample_intervals": [
+            [
+              9,
+              10
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              21,
+              22
+            ],
+            [
+              36,
+              37
+            ],
+            [
+              37,
+              38
+            ],
+            [
+              38,
+              39
+            ],
+            [
+              95,
+              96
+            ],
+            [
+              97,
+              98
+            ],
+            [
+              153,
+              154
+            ],
+            [
+              157,
+              158
+            ]
+          ],
+          "display_intervals": [
+            [
+              9,
+              11
+            ],
+            [
+              21,
+              22
+            ],
+            [
+              36,
+              39
+            ],
+            [
+              95,
+              96
+            ],
+            [
+              97,
+              98
+            ],
+            [
+              153,
+              154
+            ],
+            [
+              157,
+              158
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R15"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C15",
+          "original_text": "#C C picks bricks from the ground"
+        },
+        {
+          "region": "description",
+          "caption_id": "C179",
+          "original_text": "#C C picks bricks from the ground "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C15",
+          "interval": [
+            15,
+            16
+          ]
+        },
+        {
+          "caption_id": "C179",
+          "interval": [
+            179,
+            180
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R15",
+          "original_sample_intervals": [
+            [
+              15,
+              16
+            ],
+            [
+              179,
+              180
+            ]
+          ],
+          "display_intervals": [
+            [
+              15,
+              16
+            ],
+            [
+              179,
+              180
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R16"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C15",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C28",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C114",
+          "original_text": "#C C picks bricks"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C114",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C115",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C156",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C169",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C170",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C179",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "bricks"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C15",
+          "interval": [
+            15,
+            16
+          ]
+        },
+        {
+          "caption_id": "C28",
+          "interval": [
+            28,
+            29
+          ]
+        },
+        {
+          "caption_id": "C114",
+          "interval": [
+            114,
+            115
+          ]
+        },
+        {
+          "caption_id": "C115",
+          "interval": [
+            115,
+            116
+          ]
+        },
+        {
+          "caption_id": "C156",
+          "interval": [
+            156,
+            157
+          ]
+        },
+        {
+          "caption_id": "C169",
+          "interval": [
+            169,
+            170
+          ]
+        },
+        {
+          "caption_id": "C170",
+          "interval": [
+            170,
+            171
+          ]
+        },
+        {
+          "caption_id": "C179",
+          "interval": [
+            179,
+            180
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R16",
+          "original_sample_intervals": [
+            [
+              15,
+              16
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              114,
+              115
+            ],
+            [
+              115,
+              116
+            ],
+            [
+              156,
+              157
+            ],
+            [
+              169,
+              170
+            ],
+            [
+              170,
+              171
+            ],
+            [
+              179,
+              180
+            ]
+          ],
+          "display_intervals": [
+            [
+              15,
+              16
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              114,
+              116
+            ],
+            [
+              156,
+              157
+            ],
+            [
+              169,
+              171
+            ],
+            [
+              179,
+              180
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R75"
+      ],
+      "sources": [
+        {
+          "region": "temporal unresolved observation",
+          "record": {
+            "entity_id": "E0",
+            "scene_id": "S0",
+            "observation": {
+              "caption_id": "C15",
+              "continuity": "uncertain",
+              "state": "#C C picks bricks from the ground",
+              "cause": {
+                "action": null,
+                "actor": null,
+                "tool": null,
+                "basis": "unknown",
+                "source_caption_ids": []
+              }
+            },
+            "pts": 15,
+            "status": "unresolved_state_observation"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C15",
+          "interval": [
+            15,
+            16
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R75",
+          "original_sample_intervals": [
+            [
+              15,
+              16
+            ]
+          ],
+          "display_intervals": [
+            [
+              15,
+              16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R17"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C16",
+          "original_text": "#C C picks up bricks"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C16",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C111",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C124",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C134",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C150",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C178",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "bricks"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C16",
+          "interval": [
+            16,
+            17
+          ]
+        },
+        {
+          "caption_id": "C111",
+          "interval": [
+            111,
+            112
+          ]
+        },
+        {
+          "caption_id": "C124",
+          "interval": [
+            124,
+            125
+          ]
+        },
+        {
+          "caption_id": "C134",
+          "interval": [
+            134,
+            135
+          ]
+        },
+        {
+          "caption_id": "C150",
+          "interval": [
+            150,
+            151
+          ]
+        },
+        {
+          "caption_id": "C178",
+          "interval": [
+            178,
+            179
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R17",
+          "original_sample_intervals": [
+            [
+              16,
+              17
+            ],
+            [
+              111,
+              112
+            ],
+            [
+              124,
+              125
+            ],
+            [
+              134,
+              135
+            ],
+            [
+              150,
+              151
+            ],
+            [
+              178,
+              179
+            ]
+          ],
+          "display_intervals": [
+            [
+              16,
+              17
+            ],
+            [
+              111,
+              112
+            ],
+            [
+              124,
+              125
+            ],
+            [
+              134,
+              135
+            ],
+            [
+              150,
+              151
+            ],
+            [
+              178,
+              179
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R20"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C19",
+          "original_text": "#C C picks the blocks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C96",
+          "original_text": "#C C picks the blocks"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C19",
+          "interval": [
+            19,
+            20
+          ]
+        },
+        {
+          "caption_id": "C96",
+          "interval": [
+            96,
+            97
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R20",
+          "original_sample_intervals": [
+            [
+              19,
+              20
+            ],
+            [
+              96,
+              97
+            ]
+          ],
+          "display_intervals": [
+            [
+              19,
+              20
+            ],
+            [
+              96,
+              97
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R21"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C24",
+          "original_text": "#C C picks a brick from the ground"
+        },
+        {
+          "region": "description",
+          "caption_id": "C33",
+          "original_text": "#C C picks a brick from the ground"
+        },
+        {
+          "region": "description",
+          "caption_id": "C92",
+          "original_text": "#C C picks a brick from the ground "
+        },
+        {
+          "region": "description",
+          "caption_id": "C110",
+          "original_text": "#C C picks a brick from the ground. "
+        },
+        {
+          "region": "description",
+          "caption_id": "C138",
+          "original_text": "#C C picks a brick from the ground"
+        },
+        {
+          "region": "description",
+          "caption_id": "C142",
+          "original_text": "#C C picks a brick from the ground "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C33",
+          "interval": [
+            33,
+            34
+          ]
+        },
+        {
+          "caption_id": "C92",
+          "interval": [
+            92,
+            93
+          ]
+        },
+        {
+          "caption_id": "C110",
+          "interval": [
+            110,
+            111
+          ]
+        },
+        {
+          "caption_id": "C138",
+          "interval": [
+            138,
+            139
+          ]
+        },
+        {
+          "caption_id": "C142",
+          "interval": [
+            142,
+            143
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R21",
+          "original_sample_intervals": [
+            [
+              24,
+              25
+            ],
+            [
+              33,
+              34
+            ],
+            [
+              92,
+              93
+            ],
+            [
+              110,
+              111
+            ],
+            [
+              138,
+              139
+            ],
+            [
+              142,
+              143
+            ]
+          ],
+          "display_intervals": [
+            [
+              24,
+              25
+            ],
+            [
+              33,
+              34
+            ],
+            [
+              92,
+              93
+            ],
+            [
+              110,
+              111
+            ],
+            [
+              138,
+              139
+            ],
+            [
+              142,
+              143
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R22"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C25",
+          "original_text": "#C C picks up a brick "
+        },
+        {
+          "region": "description",
+          "caption_id": "C100",
+          "original_text": "#C C picks up a brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C119",
+          "original_text": "#C C picks up a brick"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        },
+        {
+          "caption_id": "C100",
+          "interval": [
+            100,
+            101
+          ]
+        },
+        {
+          "caption_id": "C119",
+          "interval": [
+            119,
+            120
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R22",
+          "original_sample_intervals": [
+            [
+              25,
+              26
+            ],
+            [
+              100,
+              101
+            ],
+            [
+              119,
+              120
+            ]
+          ],
+          "display_intervals": [
+            [
+              25,
+              26
+            ],
+            [
+              100,
+              101
+            ],
+            [
+              119,
+              120
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R23"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C25",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C100",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C101",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C119",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C125",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C128",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C146",
+          "original_text": "#C C picks up brick "
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C146",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "brick"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        },
+        {
+          "caption_id": "C100",
+          "interval": [
+            100,
+            101
+          ]
+        },
+        {
+          "caption_id": "C101",
+          "interval": [
+            101,
+            102
+          ]
+        },
+        {
+          "caption_id": "C119",
+          "interval": [
+            119,
+            120
+          ]
+        },
+        {
+          "caption_id": "C125",
+          "interval": [
+            125,
+            126
+          ]
+        },
+        {
+          "caption_id": "C128",
+          "interval": [
+            128,
+            129
+          ]
+        },
+        {
+          "caption_id": "C146",
+          "interval": [
+            146,
+            147
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R23",
+          "original_sample_intervals": [
+            [
+              25,
+              26
+            ],
+            [
+              100,
+              101
+            ],
+            [
+              101,
+              102
+            ],
+            [
+              119,
+              120
+            ],
+            [
+              125,
+              126
+            ],
+            [
+              128,
+              129
+            ],
+            [
+              146,
+              147
+            ]
+          ],
+          "display_intervals": [
+            [
+              25,
+              26
+            ],
+            [
+              100,
+              102
+            ],
+            [
+              119,
+              120
+            ],
+            [
+              125,
+              126
+            ],
+            [
+              128,
+              129
+            ],
+            [
+              146,
+              147
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R24"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C26",
+          "original_text": "#C C moves around the field "
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C26",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "around the field"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C144",
+          "original_text": "#C C moves around the field "
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C144",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "around the field"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C26",
+          "interval": [
+            26,
+            27
+          ]
+        },
+        {
+          "caption_id": "C144",
+          "interval": [
+            144,
+            145
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R24",
+          "original_sample_intervals": [
+            [
+              26,
+              27
+            ],
+            [
+              144,
+              145
+            ]
+          ],
+          "display_intervals": [
+            [
+              26,
+              27
+            ],
+            [
+              144,
+              145
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R25"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C28",
+          "original_text": "#C C picks the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C115",
+          "original_text": "#C C picks the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C156",
+          "original_text": "#C C picks the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C169",
+          "original_text": "#C C picks the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C170",
+          "original_text": "#C C picks the bricks"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C28",
+          "interval": [
+            28,
+            29
+          ]
+        },
+        {
+          "caption_id": "C115",
+          "interval": [
+            115,
+            116
+          ]
+        },
+        {
+          "caption_id": "C156",
+          "interval": [
+            156,
+            157
+          ]
+        },
+        {
+          "caption_id": "C169",
+          "interval": [
+            169,
+            170
+          ]
+        },
+        {
+          "caption_id": "C170",
+          "interval": [
+            170,
+            171
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R25",
+          "original_sample_intervals": [
+            [
+              28,
+              29
+            ],
+            [
+              115,
+              116
+            ],
+            [
+              156,
+              157
+            ],
+            [
+              169,
+              170
+            ],
+            [
+              170,
+              171
+            ]
+          ],
+          "display_intervals": [
+            [
+              28,
+              29
+            ],
+            [
+              115,
+              116
+            ],
+            [
+              156,
+              157
+            ],
+            [
+              169,
+              171
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R27"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C29",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "description",
+          "caption_id": "C41",
+          "original_text": "#C C moves brick"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C41",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C123",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C132",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C163",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C164",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C29",
+          "interval": [
+            29,
+            30
+          ]
+        },
+        {
+          "caption_id": "C41",
+          "interval": [
+            41,
+            42
+          ]
+        },
+        {
+          "caption_id": "C123",
+          "interval": [
+            123,
+            124
+          ]
+        },
+        {
+          "caption_id": "C132",
+          "interval": [
+            132,
+            133
+          ]
+        },
+        {
+          "caption_id": "C163",
+          "interval": [
+            163,
+            164
+          ]
+        },
+        {
+          "caption_id": "C164",
+          "interval": [
+            164,
+            165
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R27",
+          "original_sample_intervals": [
+            [
+              29,
+              30
+            ],
+            [
+              41,
+              42
+            ],
+            [
+              123,
+              124
+            ],
+            [
+              132,
+              133
+            ],
+            [
+              163,
+              164
+            ],
+            [
+              164,
+              165
+            ]
+          ],
+          "display_intervals": [
+            [
+              29,
+              30
+            ],
+            [
+              41,
+              42
+            ],
+            [
+              123,
+              124
+            ],
+            [
+              132,
+              133
+            ],
+            [
+              163,
+              165
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R29"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C35",
+          "original_text": "#C C looks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C103",
+          "original_text": "#C C looks around "
+        },
+        {
+          "region": "description",
+          "caption_id": "C121",
+          "original_text": "#C C looks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C140",
+          "original_text": "#C C looks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C148",
+          "original_text": "#C C looks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C162",
+          "original_text": "#C C looks around"
+        },
+        {
+          "region": "description",
+          "caption_id": "C166",
+          "original_text": "#C C looks around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C35",
+          "interval": [
+            35,
+            36
+          ]
+        },
+        {
+          "caption_id": "C103",
+          "interval": [
+            103,
+            104
+          ]
+        },
+        {
+          "caption_id": "C121",
+          "interval": [
+            121,
+            122
+          ]
+        },
+        {
+          "caption_id": "C140",
+          "interval": [
+            140,
+            141
+          ]
+        },
+        {
+          "caption_id": "C148",
+          "interval": [
+            148,
+            149
+          ]
+        },
+        {
+          "caption_id": "C162",
+          "interval": [
+            162,
+            163
+          ]
+        },
+        {
+          "caption_id": "C166",
+          "interval": [
+            166,
+            167
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R29",
+          "original_sample_intervals": [
+            [
+              35,
+              36
+            ],
+            [
+              103,
+              104
+            ],
+            [
+              121,
+              122
+            ],
+            [
+              140,
+              141
+            ],
+            [
+              148,
+              149
+            ],
+            [
+              162,
+              163
+            ],
+            [
+              166,
+              167
+            ]
+          ],
+          "display_intervals": [
+            [
+              35,
+              36
+            ],
+            [
+              103,
+              104
+            ],
+            [
+              121,
+              122
+            ],
+            [
+              140,
+              141
+            ],
+            [
+              148,
+              149
+            ],
+            [
+              162,
+              163
+            ],
+            [
+              166,
+              167
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R36"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C101",
+          "original_text": "#C C picks up the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C125",
+          "original_text": "#C C picks up the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C128",
+          "original_text": "#C C picks up the brick"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C101",
+          "interval": [
+            101,
+            102
+          ]
+        },
+        {
+          "caption_id": "C125",
+          "interval": [
+            125,
+            126
+          ]
+        },
+        {
+          "caption_id": "C128",
+          "interval": [
+            128,
+            129
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R36",
+          "original_sample_intervals": [
+            [
+              101,
+              102
+            ],
+            [
+              125,
+              126
+            ],
+            [
+              128,
+              129
+            ]
+          ],
+          "display_intervals": [
+            [
+              101,
+              102
+            ],
+            [
+              125,
+              126
+            ],
+            [
+              128,
+              129
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R38"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C104",
+          "original_text": "#C C moves the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C141",
+          "original_text": "#C C moves the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C152",
+          "original_text": "#C C moves the bricks"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C104",
+          "interval": [
+            104,
+            105
+          ]
+        },
+        {
+          "caption_id": "C141",
+          "interval": [
+            141,
+            142
+          ]
+        },
+        {
+          "caption_id": "C152",
+          "interval": [
+            152,
+            153
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R38",
+          "original_sample_intervals": [
+            [
+              104,
+              105
+            ],
+            [
+              141,
+              142
+            ],
+            [
+              152,
+              153
+            ]
+          ],
+          "display_intervals": [
+            [
+              104,
+              105
+            ],
+            [
+              141,
+              142
+            ],
+            [
+              152,
+              153
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R39"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C104",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C141",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C152",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "bricks"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C104",
+          "interval": [
+            104,
+            105
+          ]
+        },
+        {
+          "caption_id": "C141",
+          "interval": [
+            141,
+            142
+          ]
+        },
+        {
+          "caption_id": "C152",
+          "interval": [
+            152,
+            153
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R39",
+          "original_sample_intervals": [
+            [
+              104,
+              105
+            ],
+            [
+              141,
+              142
+            ],
+            [
+              152,
+              153
+            ]
+          ],
+          "display_intervals": [
+            [
+              104,
+              105
+            ],
+            [
+              141,
+              142
+            ],
+            [
+              152,
+              153
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R40"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C105",
+          "original_text": "#C C picks the block"
+        },
+        {
+          "region": "description",
+          "caption_id": "C155",
+          "original_text": "#C C picks the block"
+        },
+        {
+          "region": "description",
+          "caption_id": "C172",
+          "original_text": "#C C picks the block"
+        },
+        {
+          "region": "description",
+          "caption_id": "C174",
+          "original_text": "#C C picks the block"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C105",
+          "interval": [
+            105,
+            106
+          ]
+        },
+        {
+          "caption_id": "C155",
+          "interval": [
+            155,
+            156
+          ]
+        },
+        {
+          "caption_id": "C172",
+          "interval": [
+            172,
+            173
+          ]
+        },
+        {
+          "caption_id": "C174",
+          "interval": [
+            174,
+            175
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R40",
+          "original_sample_intervals": [
+            [
+              105,
+              106
+            ],
+            [
+              155,
+              156
+            ],
+            [
+              172,
+              173
+            ],
+            [
+              174,
+              175
+            ]
+          ],
+          "display_intervals": [
+            [
+              105,
+              106
+            ],
+            [
+              155,
+              156
+            ],
+            [
+              172,
+              173
+            ],
+            [
+              174,
+              175
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R41"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C105",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "block"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C155",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "block"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C172",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "block"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C174",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "block"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C105",
+          "interval": [
+            105,
+            106
+          ]
+        },
+        {
+          "caption_id": "C155",
+          "interval": [
+            155,
+            156
+          ]
+        },
+        {
+          "caption_id": "C172",
+          "interval": [
+            172,
+            173
+          ]
+        },
+        {
+          "caption_id": "C174",
+          "interval": [
+            174,
+            175
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R41",
+          "original_sample_intervals": [
+            [
+              105,
+              106
+            ],
+            [
+              155,
+              156
+            ],
+            [
+              172,
+              173
+            ],
+            [
+              174,
+              175
+            ]
+          ],
+          "display_intervals": [
+            [
+              105,
+              106
+            ],
+            [
+              155,
+              156
+            ],
+            [
+              172,
+              173
+            ],
+            [
+              174,
+              175
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R44"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C108",
+          "original_text": "#C C talks to a man Z "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C108",
+          "interval": [
+            108,
+            109
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R44",
+          "original_sample_intervals": [
+            [
+              108,
+              109
+            ]
+          ],
+          "display_intervals": [
+            [
+              108,
+              109
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R45"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C111",
+          "original_text": "#C C picks up the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C124",
+          "original_text": "#C C picks up the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C134",
+          "original_text": "#C C picks up the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C150",
+          "original_text": "#C C picks up the bricks"
+        },
+        {
+          "region": "description",
+          "caption_id": "C178",
+          "original_text": "#C C picks up the bricks"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C111",
+          "interval": [
+            111,
+            112
+          ]
+        },
+        {
+          "caption_id": "C124",
+          "interval": [
+            124,
+            125
+          ]
+        },
+        {
+          "caption_id": "C134",
+          "interval": [
+            134,
+            135
+          ]
+        },
+        {
+          "caption_id": "C150",
+          "interval": [
+            150,
+            151
+          ]
+        },
+        {
+          "caption_id": "C178",
+          "interval": [
+            178,
+            179
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R45",
+          "original_sample_intervals": [
+            [
+              111,
+              112
+            ],
+            [
+              124,
+              125
+            ],
+            [
+              134,
+              135
+            ],
+            [
+              150,
+              151
+            ],
+            [
+              178,
+              179
+            ]
+          ],
+          "display_intervals": [
+            [
+              111,
+              112
+            ],
+            [
+              124,
+              125
+            ],
+            [
+              134,
+              135
+            ],
+            [
+              150,
+              151
+            ],
+            [
+              178,
+              179
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R48"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C116",
+          "original_text": "#C C holds bricks"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C116",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "bricks"
+          }
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C151",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "bricks"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C116",
+          "interval": [
+            116,
+            117
+          ]
+        },
+        {
+          "caption_id": "C151",
+          "interval": [
+            151,
+            152
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R48",
+          "original_sample_intervals": [
+            [
+              116,
+              117
+            ],
+            [
+              151,
+              152
+            ]
+          ],
+          "display_intervals": [
+            [
+              116,
+              117
+            ],
+            [
+              151,
+              152
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R51"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C123",
+          "original_text": "#C C moves the brick"
+        },
+        {
+          "region": "description",
+          "caption_id": "C163",
+          "original_text": "#C C moves the brick"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C123",
+          "interval": [
+            123,
+            124
+          ]
+        },
+        {
+          "caption_id": "C163",
+          "interval": [
+            163,
+            164
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R51",
+          "original_sample_intervals": [
+            [
+              123,
+              124
+            ],
+            [
+              163,
+              164
+            ]
+          ],
+          "display_intervals": [
+            [
+              123,
+              124
+            ],
+            [
+              163,
+              164
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R56"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C132",
+          "original_text": "#C C moves a brick on the ground"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C132",
+          "interval": [
+            132,
+            133
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R56",
+          "original_sample_intervals": [
+            [
+              132,
+              133
+            ]
+          ],
+          "display_intervals": [
+            [
+              132,
+              133
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R57"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C133",
+          "original_text": "#C C picks up the block"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C133",
+          "interval": [
+            133,
+            134
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R57",
+          "original_sample_intervals": [
+            [
+              133,
+              134
+            ]
+          ],
+          "display_intervals": [
+            [
+              133,
+              134
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R58"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C133",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks up",
+            "patient": "block"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C133",
+          "interval": [
+            133,
+            134
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R58",
+          "original_sample_intervals": [
+            [
+              133,
+              134
+            ]
+          ],
+          "display_intervals": [
+            [
+              133,
+              134
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R62"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C143",
+          "original_text": "#C C drops the brick on the brick on the arranged brick with his left hand. "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C143",
+          "interval": [
+            143,
+            144
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R62",
+          "original_sample_intervals": [
+            [
+              143,
+              144
+            ]
+          ],
+          "display_intervals": [
+            [
+              143,
+              144
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R63"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C143",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "drops",
+            "patient": "brick",
+            "body_part": "left hand"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C143",
+          "interval": [
+            143,
+            144
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R63",
+          "original_sample_intervals": [
+            [
+              143,
+              144
+            ]
+          ],
+          "display_intervals": [
+            [
+              143,
+              144
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "record_ids": [
+        "R70"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C173",
+          "original_text": "#C C Picks up bricks"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C173",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "Picks up",
+            "patient": "bricks"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C173",
+          "interval": [
+            173,
+            174
+          ]
+        }
+      ],
+      "interval_display": [
+        {
+          "record_id": "R70",
+          "original_sample_intervals": [
+            [
+              173,
+              174
+            ]
+          ],
+          "display_intervals": [
+            [
+              173,
+              174
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "skipped_ids": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R13",
+    "R14",
+    "R18",
+    "R19",
+    "R26",
+    "R28",
+    "R30",
+    "R31",
+    "R32",
+    "R33",
+    "R34",
+    "R35",
+    "R37",
+    "R42",
+    "R43",
+    "R46",
+    "R47",
+    "R49",
+    "R50",
+    "R52",
+    "R53",
+    "R54",
+    "R55",
+    "R59",
+    "R60",
+    "R61",
+    "R64",
+    "R65",
+    "R66",
+    "R67",
+    "R68",
+    "R69",
+    "R71"
+  ],
+  "original_sources_retained": true,
+  "inferred_continuity": false,
+  "inferred_event_counts": false,
+  "semantic_paraphrasing": false,
+  "version": "I-evidence-planner-L-v1-open-state-adjacent",
+  "parent_memory_variant": "I",
+  "underlying_memory_variant": "H",
+  "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement"
+}

@@ -605,3 +605,21 @@ from .joint_entity_memory import PROMPT as E_JOINT_PROMPT
 from .lazy_script_memory import PLAN_PROMPT as F_PLAN_PROMPT, EXTRACT_PROMPT as F_EXTRACT_PROMPT
 CONTRACTS.update(e_joint_extract=E_JOINT_PROMPT, f_plan_fields=F_PLAN_PROMPT,
     f_extract_fields=F_EXTRACT_PROMPT, f_extract_batch=F_EXTRACT_PROMPT)
+
+# I inherits H's source-only extraction contracts; merging happens after storage.
+from .generalized_lazy_memory import PLAN_PROMPT as H_PLAN_PROMPT, EXTRACT_PROMPT as H_EXTRACT_PROMPT
+CONTRACTS.update(h_plan_fields=H_PLAN_PROMPT, h_extract_fields=H_EXTRACT_PROMPT,
+    h_extract_batch=H_EXTRACT_PROMPT)
+
+from .n_source_extraction import EXTRACT_PROMPT as N_SOURCE_PROMPT
+CONTRACTS.update(n_extract_fields=N_SOURCE_PROMPT, n_extract_batch=N_SOURCE_PROMPT)
+from .n_scene_selection import PROMPT as N_SELECT_PROMPT
+CONTRACTS['n_select_scene'] = N_SELECT_PROMPT
+
+# M changes navigation independently of I/L's frozen methods.
+from .m_scene_memory import SELECT_PROMPT as M_SELECT_PROMPT, REVIEW_PROMPT as M_REVIEW_PROMPT, SUFFICIENCY_PROMPT as M_SUFFICIENCY_PROMPT, RESOLVE_PROMPT as M_RESOLVE_PROMPT
+CONTRACTS.update(m_select_scene=M_SELECT_PROMPT, m_transition_next=M_REVIEW_PROMPT,
+                 m_sufficiency_check=M_SUFFICIENCY_PROMPT,m_resolve_gap=M_RESOLVE_PROMPT)
+
+from .m_candidate_selection import PLAN_PROMPT as CANDIDATE_QUERY_PROMPT, PROMPT as CANDIDATE_RANK_PROMPT
+CONTRACTS.update(m_candidate_query=CANDIDATE_QUERY_PROMPT, m_candidate_rank=CANDIDATE_RANK_PROMPT)

@@ -1,0 +1,960 @@
+{
+  "user_request": "单独跑一下这个case，看看这样修改后是否有改善，这题能否答对",
+  "run": "workdirs/P-O-direct-question-coordination-20261103-r1",
+  "status": {
+    "state": "complete",
+    "controller_pid": 3488287,
+    "updated_at": "2026-11-03T22:58:49.443900+08:00",
+    "worker_pid": 3488494,
+    "gpu": "0",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-O-direct-question-coordination-20261103-r1/runtime/script/run_p_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-O-direct-question-coordination-20261103-r1"
+    ],
+    "at": "2026-11-03T22:53:24.387320+08:00"
+  },
+  "version": "P-O-direct-original-question-v1",
+  "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+  "scope": "Single known fixed-source O/P comparison; same 126 source sentences and 397 candidates; new filtering and answer only",
+  "automatic_retry": false,
+  "all_options_in_final_answer": true,
+  "options_in_filter": false,
+  "task_brief": false,
+  "composition": false,
+  "result": {
+    "at": "2026-11-03T22:58:59.382199+08:00",
+    "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+    "version": "P-O-direct-original-question-v1",
+    "gold": "B",
+    "O_answer": {
+      "selected_option": "0",
+      "raw": "prediction: A"
+    },
+    "P_answer": {
+      "selected_option": "0",
+      "raw": "prediction: A"
+    },
+    "P_correct": false,
+    "O_retained_sentences": 29,
+    "P_retained_sentences": 79,
+    "O_retained_units": 84,
+    "P_retained_units": 249,
+    "added_sentences": [
+      "S0",
+      "S6",
+      "S7",
+      "S8",
+      "S13",
+      "S15",
+      "S16",
+      "S19",
+      "S20",
+      "S24",
+      "S27",
+      "S29",
+      "S30",
+      "S32",
+      "S37",
+      "S38",
+      "S40",
+      "S43",
+      "S44",
+      "S47",
+      "S50",
+      "S54",
+      "S55",
+      "S56",
+      "S57",
+      "S58",
+      "S62",
+      "S65",
+      "S67",
+      "S68",
+      "S69",
+      "S73",
+      "S74",
+      "S77",
+      "S84",
+      "S85",
+      "S86",
+      "S87",
+      "S89",
+      "S90",
+      "S91",
+      "S96",
+      "S97",
+      "S98",
+      "S101",
+      "S102",
+      "S104",
+      "S105",
+      "S108",
+      "S111",
+      "S113",
+      "S114",
+      "S118",
+      "S119",
+      "S120",
+      "S121",
+      "S123",
+      "S125"
+    ],
+    "removed_sentences": [
+      "S14",
+      "S18",
+      "S51",
+      "S53",
+      "S94",
+      "S95",
+      "S115",
+      "S124"
+    ],
+    "changed_sentences": [
+      "S0",
+      "S6",
+      "S7",
+      "S8",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S18",
+      "S19",
+      "S20",
+      "S24",
+      "S27",
+      "S29",
+      "S30",
+      "S32",
+      "S37",
+      "S38",
+      "S40",
+      "S43",
+      "S44",
+      "S47",
+      "S50",
+      "S51",
+      "S53",
+      "S54",
+      "S55",
+      "S56",
+      "S57",
+      "S58",
+      "S62",
+      "S65",
+      "S67",
+      "S68",
+      "S69",
+      "S73",
+      "S74",
+      "S77",
+      "S84",
+      "S85",
+      "S86",
+      "S87",
+      "S88",
+      "S89",
+      "S90",
+      "S91",
+      "S94",
+      "S95",
+      "S96",
+      "S97",
+      "S98",
+      "S100",
+      "S101",
+      "S102",
+      "S104",
+      "S105",
+      "S108",
+      "S111",
+      "S113",
+      "S114",
+      "S115",
+      "S118",
+      "S119",
+      "S120",
+      "S121",
+      "S123",
+      "S124",
+      "S125"
+    ],
+    "input_tokens": 4612,
+    "new_processing_seconds": 296.11205516010523,
+    "inherited_extraction_seconds": 305.87176770716906,
+    "model_loading": 8.737428322434425,
+    "calls": 33,
+    "audited_rows": 126,
+    "all_source_hashes_unchanged": true,
+    "original_question_and_single_sentence_isolation_passed": true,
+    "task_brief_calls": 0,
+    "composition_calls": 0,
+    "all_candidates_identical": true,
+    "key_rows": [
+      {
+        "source_id": "S2",
+        "source": {
+          "id": "S2",
+          "text": "#C C stretches  her right leg",
+          "original_source_id": "S8a1de18de7fc07ee6d106b1607eda087d195345b39a31a39f80ecc097bb8f5ac",
+          "part": 0,
+          "source_caption_ids": [
+            "C2",
+            "C24"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              2,
+              3
+            ],
+            [
+              24,
+              25
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "stretches"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "body_part",
+            "value": "her right leg"
+          }
+        ],
+        "O_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_model_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_overrides": [],
+        "O_reason": "The action of stretching the right leg could be part of a coordinated movement involving the right hand, which aligns with the question's focus on how C uses both limbs together and the purpose of such movements. However, this single observation alone does not provide enough information to determine if it is done in a coordinated manner or the specific goal,",
+        "P_reason": "The action of stretching a leg is part of a coordinated movement but does not provide information on the use of the right hand or the purpose of the movements. The question asks about the use of both legs and hands in coordination, which this sentence does not address fully. It only mentions one leg being stretched. Therefore, it provides partial evidence to"
+      },
+      {
+        "source_id": "S15",
+        "source": {
+          "id": "S15",
+          "text": "#C C stretches her right leg.",
+          "original_source_id": "S3f231f6fae36c53bf72ad30fe8d812edac5e618c137b4a0e99067ee944d6ed14",
+          "part": 0,
+          "source_caption_ids": [
+            "C18",
+            "C141"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              18,
+              19
+            ],
+            [
+              141,
+              142
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "stretches"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "body_part",
+            "value": "her right leg"
+          }
+        ],
+        "O_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_model_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_overrides": [],
+        "O_reason": "The action of stretching the right leg is relevant to understanding how C uses her right leg and her right hand in a coordinated manner, but it does not provide information on the coordination with her right hand or the purpose of these movements. The current observation alone cannot fully answer the question or support any option provided. However, it is a ",
+        "P_reason": "The action of stretching a leg is part of a coordinated movement but does not provide information on the use of the right hand or the purpose of the movements"
+      },
+      {
+        "source_id": "S18",
+        "source": {
+          "id": "S18",
+          "text": "#C C walks around",
+          "original_source_id": "S41479a9b9d56ea6bdc29a9e616b25f5d668786e408ac432b5fb75778979f4149",
+          "part": 0,
+          "source_caption_ids": [
+            "C21",
+            "C48",
+            "C63",
+            "C173"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              21,
+              22
+            ],
+            [
+              48,
+              49
+            ],
+            [
+              63,
+              64
+            ],
+            [
+              173,
+              174
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "walks"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "location",
+            "value": "around"
+          }
+        ],
+        "O_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_model_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_overrides": [],
+        "O_reason": "The observation of walking around is relevant to understanding how C uses her right leg and right hand in coordination, as it involves both legs and hands moving together in a specific manner. However, this single observation alone does not provide enough information to determine the purpose of these movements. The purpose would require more context or a set",
+        "P_reason": "Walking around does not provide evidence for how C uses her right leg and right hand in a coordinated manner or the purpose of those movements. The sentence only describes a general action without specifying the use of specific limbs or their coordination. Therefore, it is unrelated to the question asked."
+      },
+      {
+        "source_id": "S22",
+        "source": {
+          "id": "S22",
+          "text": "#C C stretches' the right hand",
+          "original_source_id": "S838bc5b2da1234be21c807bd452b63314a3ebf12a5fd3a4955c914ed698cecbd",
+          "part": 0,
+          "source_caption_ids": [
+            "C27"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              27,
+              28
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "stretches"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "body_part",
+            "value": "the right hand"
+          }
+        ],
+        "O_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_model_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_overrides": [],
+        "O_reason": "The action of stretching the right hand is relevant to understanding how C uses her right leg and hand in coordination, but it alone does not provide information on the purpose of these movements as per the question's requirement for coordination with the right leg and drawing conclusions about the purpose of the movements. The observation does not directly,",
+        "P_reason": "The action of stretching the right hand does not provide evidence for how C uses her right leg and hand in a coordinated manner or the purpose of these movements. The sentence only describes one part of the movement without context on the other leg or the overall coordination. Therefore, it is not relevant to the question asked."
+      },
+      {
+        "source_id": "S48",
+        "source": {
+          "id": "S48",
+          "text": "#C C stretches the right hand",
+          "original_source_id": "S9688e927cba1763e7ab28cf8be8e1261bf58c524fda5e1994991136ba44ee594",
+          "part": 0,
+          "source_caption_ids": [
+            "C67"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              67,
+              68
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "stretches"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "body_part",
+            "value": "right hand"
+          }
+        ],
+        "O_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_model_labels": {
+          "U0": 0,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1
+        },
+        "P_overrides": [
+          {
+            "id": "U0",
+            "before": 0,
+            "after": 1,
+            "group": "actions_0",
+            "rule": "retained_action_keeps_its_extracted_actor_and_patient"
+          }
+        ],
+        "O_reason": "The action of stretching the right hand is relevant to the question about how C uses her right leg and right hand coordinately, as it indicates an action that could be part of a coordinated movement sequence. However, this single observation alone does not provide enough information to determine the purpose of the movements or if they are coordinated with a腿",
+        "P_reason": "The action of stretching the right hand does not provide evidence for how C uses her right leg and hand in a coordinated manner or the purpose of these movements. The sentence only describes one part of the movement without context on the other leg or hand. Therefore, it is not relevant to the question asked."
+      },
+      {
+        "source_id": "S57",
+        "source": {
+          "id": "S57",
+          "text": "#C C moves her right hand to her chest.",
+          "original_source_id": "S01c72ae99f2fd350574f97293b4d6730b8b6a13716e99b86225832ae2c50160b",
+          "part": 0,
+          "source_caption_ids": [
+            "C78"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              78,
+              79
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "moves"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "her right hand"
+          },
+          {
+            "id": "U3",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "destination",
+            "value": "her chest"
+          }
+        ],
+        "O_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0,
+          "U3": 0
+        },
+        "P_model_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1,
+          "U3": 1
+        },
+        "P_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1,
+          "U3": 1
+        },
+        "P_overrides": [],
+        "O_reason": "The movement of the right hand to the chest is part of the coordinated actions described in the question, but it does not directly provide information on the use of the right leg or its coordination with the right hand. The question asks for a conclusion about the purpose of these movements, which cannot be directly inferred from this single observation. The",
+        "P_reason": "The movement of the right hand to the chest does not provide evidence for how the right leg and right hand are used coordinately or the purpose of these movements. The question asks about coordination between the right leg and right hand, which is not addressed by this sentence. The sentence only describes one action involving the right hand, not the leg or協"
+      },
+      {
+        "source_id": "S70",
+        "source": {
+          "id": "S70",
+          "text": "#O person C touches her waist",
+          "original_source_id": "S8ab6037d6829b5788fca3c28abb233cf8fe9c26aa2936f1524b0ec1b4d4bdbb9",
+          "part": 0,
+          "source_caption_ids": [
+            "C94"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              94,
+              95
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "person C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "touches"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "body_part",
+            "value": "waist"
+          }
+        ],
+        "O_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_model_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0
+        },
+        "P_overrides": [],
+        "O_reason": "The action of touching the waist does not provide information about using the right leg and hand in a coordinated manner or the purpose of those movements. The question asks for coordination between the right leg and hand, which is not addressed by this observation. The observation also does not provide any information about the purpose of the movements, as扣",
+        "P_reason": "The sentence describes an action but does not provide information on how the right leg and right hand are used or their coordination with each other. Therefore, it cannot be used as evidence for the purpose of the movements described in the question. The sentence also does not mention any conclusion that can be drawn about the purpose of these movements. The"
+      },
+      {
+        "source_id": "S91",
+        "source": {
+          "id": "S91",
+          "text": "#C C holds her waist with her hands",
+          "original_source_id": "S0f74f9cbe921afb513bcd73d64f951cf93210d0bd7d01420f3f501bd78ea9b05",
+          "part": 0,
+          "source_caption_ids": [
+            "C122"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              122,
+              123
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "holds"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "her waist"
+          },
+          {
+            "id": "U3",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "instrument",
+            "value": "her hands"
+          }
+        ],
+        "O_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0,
+          "U3": 0
+        },
+        "P_model_labels": {
+          "U0": 0,
+          "U1": 1,
+          "U2": 1,
+          "U3": 1
+        },
+        "P_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1,
+          "U3": 1
+        },
+        "P_overrides": [
+          {
+            "id": "U0",
+            "before": 0,
+            "after": 1,
+            "group": "actions_0",
+            "rule": "retained_action_keeps_its_extracted_actor_and_patient"
+          }
+        ],
+        "O_reason": "The action of holding the waist with hands does not directly relate to using the right leg and hand in a coordinated manner as described in the question. The observation does not provide evidence for the coordination or purpose of the movements mentioned in the question. Therefore, it is irrelevant to the specific actions and their purpose asked in the query",
+        "P_reason": "The action of holding the waist with hands does not provide evidence for using the right leg and hand in a coordinated manner or drawing conclusions about their purpose. The sentence does not mention any leg movement or coordination between the leg and hand. The question asks about the right leg and hand, but the given sentence only describes the use of the腰"
+      },
+      {
+        "source_id": "S125",
+        "source": {
+          "id": "S125",
+          "text": "#C C puts her hands on her chest",
+          "original_source_id": "Sd5b61ad43198a37cd03ae054ce5d44719deb0e1242dcc5e8677128a5a996a12c",
+          "part": 0,
+          "source_caption_ids": [
+            "C178"
+          ],
+          "source_frame_ids": [],
+          "source_intervals": [
+            [
+              178,
+              179
+            ]
+          ],
+          "source_type": "caption",
+          "source_status": "caption_asserted"
+        },
+        "candidates": [
+          {
+            "id": "U0",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "actor",
+            "value": "C"
+          },
+          {
+            "id": "U1",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "verb",
+            "value": "puts"
+          },
+          {
+            "id": "U2",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "patient",
+            "value": "her hands"
+          },
+          {
+            "id": "U3",
+            "kind": "action_field",
+            "group": "actions_0",
+            "field": "location",
+            "value": "her chest"
+          }
+        ],
+        "O_labels": {
+          "U0": 0,
+          "U1": 0,
+          "U2": 0,
+          "U3": 0
+        },
+        "P_model_labels": {
+          "U0": 0,
+          "U1": 1,
+          "U2": 1,
+          "U3": 1
+        },
+        "P_labels": {
+          "U0": 1,
+          "U1": 1,
+          "U2": 1,
+          "U3": 1
+        },
+        "P_overrides": [
+          {
+            "id": "U0",
+            "before": 0,
+            "after": 1,
+            "group": "actions_0",
+            "rule": "retained_action_keeps_its_extracted_actor_and_patient"
+          }
+        ],
+        "O_reason": "The action of putting hands on the chest does not directly relate to using the right leg and hand in a coordinated manner as described in the question. The observation does not provide evidence for the coordination or purpose of the movements mentioned in the question. The action of putting hands on the chest is unrelated to the specific movements involving腿",
+        "P_reason": "The action of putting hands on the chest does not provide evidence for how C uses her right leg and right hand in a coordinated manner or the purpose of those movements. The sentence does not mention any leg movement or coordination with the right hand. The question asks about the use of the right leg and right hand, which are not present in the given action"
+      }
+    ],
+    "scope": "Known single fixed-source case. No controlled ablation distinguishing prompt wording from removed task brief. No general performance claim."
+  },
+  "report": {
+    "version": "P-O-direct-original-question-v1",
+    "planned": 1,
+    "completed": 1,
+    "errors": 0,
+    "correct": 0,
+    "complete": true,
+    "cases": [
+      {
+        "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+        "version": "P-O-direct-original-question-v1",
+        "complete": true,
+        "error": null,
+        "extraction_reused": true,
+        "inherited_extraction_seconds": 305.87176770716906,
+        "task_brief_generated": false,
+        "composition_called": false,
+        "answer": {
+          "selected_option": "0",
+          "raw": "prediction: A"
+        },
+        "input_tokens": 4612,
+        "retained_sentences": 79,
+        "retained_units": 249,
+        "candidate_units": 397,
+        "all_zero_sentences": 47,
+        "answer_seconds": 0.8831691443920135,
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 296.11205516010523,
+          "total": 296.11205516010523,
+          "shared_dependency_seconds": 305.87176770716906,
+          "budgeted_total": 601.9838228672743,
+          "text_cache_hits": 0,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "p_independent_batch": 295.2288860157132,
+            "p_answer": 0.8831691443920135
+          },
+          "call_count": 33,
+          "resources": {
+            "cpu_seconds": 296.0301851899998,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 296.29478630796075,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 17546756608
+          }
+        },
+        "updated_at": "2026-11-03T22:58:44.816087+08:00"
+      }
+    ],
+    "task_brief_generated": false,
+    "composition_called": false,
+    "new_processing_seconds": 296.11205516010523,
+    "inherited_extraction_seconds": 305.87176770716906,
+    "updated_at": "2026-11-03T22:58:49.443340+08:00",
+    "matched_O": {
+      "completed": 1,
+      "correct": 0
+    }
+  },
+  "final_key_evidence": {
+    "S57": {
+      "source_id": "S57",
+      "intervals": [
+        [
+          78,
+          79
+        ]
+      ],
+      "information": [
+        {
+          "kind": "action",
+          "event_id": "actions_0",
+          "actor": "C",
+          "verb": "moves",
+          "patient": "her right hand",
+          "destination": "her chest"
+        }
+      ]
+    },
+    "S91": {
+      "source_id": "S91",
+      "intervals": [
+        [
+          122,
+          123
+        ]
+      ],
+      "information": [
+        {
+          "kind": "action",
+          "event_id": "actions_0",
+          "actor": "C",
+          "verb": "holds",
+          "patient": "her waist",
+          "instrument": "her hands"
+        }
+      ]
+    },
+    "S125": {
+      "source_id": "S125",
+      "intervals": [
+        [
+          178,
+          179
+        ]
+      ],
+      "information": [
+        {
+          "kind": "action",
+          "event_id": "actions_0",
+          "actor": "C",
+          "verb": "puts",
+          "patient": "her hands",
+          "location": "her chest"
+        }
+      ]
+    }
+  }
+}

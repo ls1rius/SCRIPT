@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-08T00:38:53.102339+08:00",
+  "state": "paused_by_user",
+  "root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-GRPO8-200train-300val-20261107-r1",
+  "completed_groups": 1,
+  "complete_rollouts": 9,
+  "optimizer_steps": 2,
+  "policy_gradient_updates": 0,
+  "held_rollouts": 7,
+  "in_flight_jobs": 0,
+  "processes_stopped": [
+    {
+      "pid": 2747540,
+      "identity": "1791596750",
+      "at": "2026-11-08T00:02:10.586680+08:00"
+    },
+    {
+      "pid": 2741955,
+      "identity": "1791546856"
+    },
+    {
+      "pid": 2742125,
+      "identity": "1791548991"
+    },
+    {
+      "pid": 2742126,
+      "identity": "1791548991"
+    }
+  ],
+  "removed_leases": [
+    {
+      "key": "2741955-619be79c242e40c1ad157844529c54c5",
+      "lease": {
+        "pid": 2741955,
+        "start": "1791546856",
+        "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "capacity_mib": 43008,
+        "created_at": 1794066852.6901693
+      }
+    }
+  ],
+  "all_protected_artifacts_unchanged": true,
+  "checkpoint_verified": true,
+  "allowed_gpu_indices": [
+    "0"
+  ],
+  "resume_only_on_explicit_request": true,
+  "handoff": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-GRPO8-200train-300val-20261107-r1/handoff_paused_checkpoint.json",
+  "gpu_model_absent_verified": true,
+  "gpu_verification_at": "2026-11-08T00:39:12.100894+08:00"
+}

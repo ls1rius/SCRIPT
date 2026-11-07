@@ -1,0 +1,34 @@
+These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence. Compact ranges combine exactly adjacent samples of the same statement; all original sample intervals remain archived and do not prove continuous activity.
+At sampled intervals [0,1), [19,21), [96,97), [106,107) (source assertion), C picks blocks.
+At sampled intervals [0,1) (source assertion), C picks blocks. The text memory associates this observation with C (text reference E0).
+At sampled intervals [4,5), [9,11), [21,22), [24,25), [33,34), [36,39), [92,93), [95,96), [97,98), [110,111), [129,130), [138,139), [142,143), [147,148), [153,154), [157,158), [160,162), [165,166), [175,176) (source assertion), C picks brick.
+At sampled intervals [4,5) (source assertion), C picks a brick. The text memory associates this observation with brick (text reference E1).
+At sampled intervals [4,5) (unresolved hypothesis), An unresolved source observation states: "C picks a brick".
+At sampled intervals [9,11), [21,22), [36,39), [95,96), [97,98), [153,154), [157,158) (source assertion), C picks the brick.
+At sampled intervals [15,16), [179,180) (source assertion), C picks bricks from the ground.
+At sampled intervals [15,16), [28,29), [114,116), [156,157), [169,171), [179,180) (source assertion), C picks bricks.
+At sampled intervals [15,16) (unresolved hypothesis), An unresolved source observation states: "C picks bricks from the ground".
+At sampled intervals [16,17), [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up bricks.
+At sampled intervals [19,20), [96,97) (source assertion), C picks the blocks.
+At sampled intervals [24,25), [33,34), [92,93), [110,111), [138,139), [142,143) (source assertion), C picks a brick from the ground.
+At sampled intervals [25,26), [100,101), [119,120) (source assertion), C picks up a brick.
+At sampled intervals [25,26), [100,102), [119,120), [125,126), [128,129), [146,147) (source assertion), C picks up brick.
+At sampled intervals [26,27), [144,145) (source assertion), C moves around the field.
+At sampled intervals [28,29), [115,116), [156,157), [169,171) (source assertion), C picks the bricks.
+At sampled intervals [29,30), [41,42), [123,124), [132,133), [163,165) (source assertion), C moves brick.
+At sampled intervals [35,36), [103,104), [121,122), [140,141), [148,149), [162,163), [166,167) (source assertion), C looks around.
+At sampled intervals [101,102), [125,126), [128,129) (source assertion), C picks up the brick.
+At sampled intervals [104,105), [141,142), [152,153) (source assertion), C moves the bricks.
+At sampled intervals [104,105), [141,142), [152,153) (source assertion), C moves bricks.
+At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks the block.
+At sampled intervals [105,106), [155,156), [172,173), [174,175) (source assertion), C picks block.
+At sampled intervals [108,109) (source assertion), C talks to a man Z.
+At sampled intervals [111,112), [124,125), [134,135), [150,151), [178,179) (source assertion), C picks up the bricks.
+At sampled intervals [116,117), [151,152) (source assertion), C holds bricks.
+At sampled intervals [123,124), [163,164) (source assertion), C moves the brick.
+At sampled intervals [132,133) (source assertion), C moves a brick on the ground.
+At sampled intervals [133,134) (source assertion), C picks up the block.
+At sampled intervals [133,134) (source assertion), C picks up block.
+At sampled intervals [143,144) (source assertion), C drops the brick on the brick on the arranged brick with his left hand.
+At sampled intervals [143,144) (source assertion), C drops brick with left hand.
+At sampled intervals [173,174) (source assertion), C Picks up bricks.

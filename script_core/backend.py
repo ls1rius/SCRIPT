@@ -10,16 +10,50 @@ DETECTION_TERMS = ('person bag backpack handbag briefcase envelope folder docume
                    'cabinet shelf drawer door window bed refrigerator sink vehicle bicycle dog cat').split()
 
 
+def navigation_tokenizer_data(tokenizer_data):
+    """Keep UTF-8 fragments out of LMFE's character-counted navigation strings.
+
+    LMFE admits byte fragments as replacement characters, then applies their
+    combined Unicode character without rechecking the alphabet/length. An
+    unsupported character can empty the parser stack and incorrectly allow EOS.
+    Use complete tokens (including Chinese) for these free-text/ASCII-ID outputs;
+    JSON unicode escapes remain available. Do not change source extractors.
+    """
+    from lmformatenforcer.tokenenforcer import TokenEnforcerTokenizerData
+    if not hasattr(tokenizer_data, '_navigation_complete_unicode'):
+        tokens = [row for row in tokenizer_data.regular_tokens if '\ufffd' not in row[1]]
+        safe = TokenEnforcerTokenizerData(tokens, tokenizer_data.decoder,
+            tokenizer_data.eos_token_id, tokenizer_data.use_bitmask, tokenizer_data.vocab_size)
+        # LMFE's default alphabet includes only token-leading characters, while
+        # its free-text shortcut can admit every character inside a token.
+        safe.tokenizer_alphabet = ''.join(sorted({char for _, value, _ in tokens for char in value}))
+        tokenizer_data._navigation_complete_unicode = safe
+    return tokenizer_data._navigation_complete_unicode
+
+
 def constrained_prefix(tokenizer_data, schema, operation):
     """Configure the live parser AFTER LMFE installs its tokenizer alphabet."""
     from lmformatenforcer import JsonSchemaParser
     from lmformatenforcer.integrations.transformers import build_transformers_prefix_allowed_tokens_fn
+    if operation in ('m_transition_next', 'm_sufficiency_check', 'm_resolve_gap', 'm_candidate_query'):
+        tokenizer_data = navigation_tokenizer_data(tokenizer_data)
     parser = JsonSchemaParser(schema)
-    prefix = build_transformers_prefix_allowed_tokens_fn(tokenizer_data, parser)
+    from .json_unicode_guard import ScalarEscapeParser, tokenizer_data as scalar_data
+    tokenizer_data = scalar_data(tokenizer_data)
+    live_parser = ScalarEscapeParser(parser)
+    prefix = build_transformers_prefix_allowed_tokens_fn(tokenizer_data, live_parser)
+    if operation.startswith(('m_', 'n_')):
+        # LMFE replaces config.alphabet above but leaves its cached minLength
+        # alphabet at the ASCII default. A first CJK token can otherwise move
+        # an unfinished JSON string into a false accepting/EOS state.
+        parser.context.alphabet_without_quotes=parser.config.alphabet.replace('"','')
     # TokenEnforcer.__init__ replaces parser.config. Setting this in the
     # JsonSchemaParser constructor is silently undone by the integration.
-    if operation in ('e_joint_extract','f_plan_fields','f_extract_fields','semantic_memory_extract','normalize_memory_units','temporal_observe', 'temporal_align','caption_temporal_observe', 'adaptive_extract', 'transition_extract', 'transition_next', 'optimized_plan', 'optimized_extract', 'optimized_events', 'partial_temporal_organize', 'partial_temporal_identity'):
+    if operation in ('n_extract_fields', 'm_select_scene', 'm_transition_next', 'm_sufficiency_check', 'm_resolve_gap', 'h_plan_fields', 'h_extract_fields', 'e_joint_extract','f_plan_fields','f_extract_fields','semantic_memory_extract','normalize_memory_units','temporal_observe', 'temporal_align','caption_temporal_observe', 'adaptive_extract', 'transition_extract', 'transition_next', 'optimized_plan', 'optimized_extract', 'optimized_events', 'partial_temporal_organize', 'partial_temporal_identity'):
         parser.config.force_json_field_order = True
+    if operation in ('m_select_scene','n_select_scene','m_candidate_query','m_candidate_rank'):
+        parser.config.force_json_field_order = True
+        parser.config.max_consecutive_whitespaces=1
     return prefix
 
 
@@ -62,12 +96,54 @@ class LocalModels:
             raise SoftDeadlineExceeded('Processing deadline reached; worker retained')
 
     def call(self, operation, inputs):
+        if operation == 'q4_independent_batch':
+            from .q_v4 import OPS
+            from .o_batch_generation import generate_batch
+            if inputs.get('operation') not in OPS:
+                raise ValueError('Q4 transport requires a Q4 supported operation')
+            return generate_batch(self, inputs)
+        if operation == 'q3_independent_batch':
+            from .q_repair import OPS
+            from .o_batch_generation import generate_batch
+            if inputs.get('operation') not in OPS:
+                raise ValueError('Q3 transport requires a Q3 operation')
+            return generate_batch(self, inputs)
+        if operation == 'p_independent_batch':
+            if inputs.get('operation') not in ('p_filter','p_extract','p_fidelity','p_relevance','p_reader_review'):
+                raise ValueError('P batch only accepts P extraction/fidelity/relevance operations')
+            from .o_batch_generation import generate_batch
+            return generate_batch(self, inputs)
+        if operation == 'q_independent_batch':
+            if inputs.get('operation') != 'q_filter':
+                raise ValueError('Q batch only accepts Q observation filtering')
+            from .o_batch_generation import generate_batch
+            return generate_batch(self, inputs)
+        if operation == 'o_independent_batch':
+            if inputs.get('operation') == 'q_filter':
+                raise ValueError('Q filtering requires its own batch operation')
+            if inputs.get('operation') in ('p_filter','p_extract','p_fidelity','p_relevance','p_reader_review'):
+                raise ValueError('P filtering requires its own batch operation')
+            from .o_batch_generation import generate_batch
+            return generate_batch(self, inputs)
         self.check_deadline()
-        if operation == 'f_extract_batch':
+        if operation in ('o_extract', 'o_filter', 'o_filter_plan', 'oplus_compose'):
+            from .o_generation import generate
+            return generate(self, operation, inputs)
+        if operation in ('o_answer', 'oplus_answer', 'p_answer', 'q_answer', 'qplus_answer'):
+            from .m_generation import generate
+            return generate(self, operation, inputs)
+        if operation in ('l_evidence_plan', 'l_answer', 'm_evidence_plan', 'm_answer', 'n_evidence_plan', 'n_answer'):
+            from .m_generation import generate
+            return generate(self, operation, inputs)
+        if operation in ('f_extract_batch', 'h_extract_batch', 'n_extract_batch'):
             if set(inputs) != {'requests'}:
-                raise ValueError('F batch accepts independent source requests only')
+                raise ValueError('Field batch accepts independent source requests only')
             from types import SimpleNamespace
             from . import backend, context, prompts, schemas, lazy_script_memory
+            if operation == 'h_extract_batch':
+                from . import generalized_lazy_memory as lazy_script_memory
+            if operation == 'n_extract_batch':
+                from . import n_source_extraction as lazy_script_memory
             from .batch_extraction import BatchExtractor
             runtime = SimpleNamespace(backend=backend, context=context, prompts=prompts,
                 schemas=schemas, memory=lazy_script_memory)
@@ -156,6 +232,8 @@ class LocalModels:
     def load(self, kind):
         if kind in self.loaded:
             return self.loaded[kind]
+        from .physical_cuda_pool import ensure
+        ensure(self.cfg['models'])
         import torch
         from transformers import (AutoModel, AutoProcessor, AutoTokenizer, CLIPImageProcessor,
                                   AutoModelForImageTextToText, AutoModelForZeroShotObjectDetection)
@@ -463,9 +541,13 @@ class LocalModels:
         with torch.inference_mode():
             self.check_deadline()
             kwargs = dict(self.cfg['models']['generation'], prefix_allowed_tokens_fn=prefix)
+            if original_op=='m_select_scene':kwargs['max_new_tokens']=4096
+            if original_op=='n_select_scene':kwargs['max_new_tokens']=512
+            if original_op=='m_candidate_query':kwargs['max_new_tokens']=1536
+            if original_op=='m_candidate_rank':kwargs['max_new_tokens']=4096
             if original_op == 'e_joint_extract':
                 kwargs['max_new_tokens'] = 1536
-            if original_op in ('f_plan_fields', 'f_extract_fields'):
+            if original_op in ('n_extract_fields', 'h_plan_fields', 'h_extract_fields', 'f_plan_fields', 'f_extract_fields'):
                 kwargs['max_new_tokens'] = 1024
             if operation == 'summary_graph' or (operation == 'repair' and inputs.get('original_operation') == 'summary_graph'):
                 kwargs['max_new_tokens'] = 2048  # Offline extraction only; QA settings stay unchanged.
@@ -500,7 +582,11 @@ class LocalModels:
             data = substitute(data, old_map | inverse)
         except (ValueError, IndexError):
             data = output
-        return {'data': data, 'raw_text': output, 'id_map': inverse,
+        navigation_audit = ({'decoder': 'MN-navigation-unicode-scalar-v3',
+                             'generated_token_ids': tokens.tolist(),
+                             'max_new_tokens': kwargs['max_new_tokens']}
+                            if original_op in ('m_transition_next', 'm_sufficiency_check', 'm_resolve_gap', 'm_candidate_query') else {})
+        return {'data': data, 'raw_text': output, 'id_map': inverse, **navigation_audit,
                 'usage': {'input_tokens': input_tokens, 'output_tokens': len(tokens),
                           'model_caption_context': caption_selection,
                           'model_frame_views': [dict(frame_id=f['frame_id'], **view)

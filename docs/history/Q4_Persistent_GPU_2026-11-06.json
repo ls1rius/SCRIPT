@@ -1,0 +1,435 @@
+{
+  "at": "2026-11-06T00:50:51.617356+08:00",
+  "passed": true,
+  "controller_pid": 992502,
+  "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1",
+  "workers": [
+    {
+      "id": 8,
+      "pid": 992522,
+      "identity": "1774599503",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1/resident_q4_500.py",
+        "worker",
+        "--control",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1",
+        "--worker-id",
+        "8"
+      ]
+    },
+    {
+      "id": 9,
+      "pid": 992523,
+      "identity": "1774599503",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1/resident_q4_500.py",
+        "worker",
+        "--control",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1",
+        "--worker-id",
+        "9"
+      ]
+    },
+    {
+      "id": 10,
+      "pid": 992524,
+      "identity": "1774599504",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1/resident_q4_500.py",
+        "worker",
+        "--control",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1",
+        "--worker-id",
+        "10"
+      ]
+    },
+    {
+      "id": 11,
+      "pid": 992525,
+      "identity": "1774599504",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1/resident_q4_500.py",
+        "worker",
+        "--control",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1",
+        "--worker-id",
+        "11"
+      ]
+    }
+  ],
+  "user_request": "不要释放，占住就一直做；后续有未完成队列时模型和GPU租约持续驻留，不按阶段或题释放",
+  "old_processes_exited": true,
+  "old_processes_signaled": [
+    {
+      "id": 0,
+      "pid": 650043,
+      "identity": "1771350186",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py",
+        "worker",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1",
+        "--worker-id",
+        "0"
+      ]
+    },
+    {
+      "id": 1,
+      "pid": 650044,
+      "identity": "1771350186",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py",
+        "worker",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1",
+        "--worker-id",
+        "1"
+      ]
+    },
+    {
+      "id": 2,
+      "pid": 650045,
+      "identity": "1771350186",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py",
+        "worker",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1",
+        "--worker-id",
+        "2"
+      ]
+    },
+    {
+      "id": 3,
+      "pid": 650046,
+      "identity": "1771350186",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py",
+        "worker",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1",
+        "--worker-id",
+        "3"
+      ]
+    },
+    {
+      "pid": 727125,
+      "identity": "1772044472"
+    }
+  ],
+  "handoff_idle_only": true,
+  "model_calls_interrupted": 0,
+  "published_results_unchanged": 358,
+  "original_frozen_runtime_config_verified": true,
+  "new_controller_manifest_verified": true,
+  "pending_source": {
+    "question_id": "456447c2-98ca-4285-94dc-d2f0d1b398f6",
+    "files": 100,
+    "new_worker_id": 8,
+    "new_pid": 992522,
+    "Q4_attempt_started": false,
+    "source_not_recomputed": true
+  },
+  "lifecycle": "One CUDA model process plus one 32GiB shared lease for the remaining queue. Same loaded model across N/Q4 and consecutive questions. Close only on drained queue or failure. No empty_cache or repeated prepare during normal stage changes.",
+  "config_switch": "Frozen original model-process loop with one private IPC control branch. Validates equal configs except original per-stage allocator 30/22GiB and extraction batch4/2, sets LocalModels.cfg and allocator fraction, keeps loaded models. Control overhead separately recorded.",
+  "semantic_scope": "Original model weights/prompts/inputs/decoding/schema/call deadlines/source and Q4 budgets/keep-only/paired readers/claims publication unchanged. Already successful answers unchanged.",
+  "initial_admission_mib": 32768,
+  "stable_observations": 3,
+  "allowed_gpus": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "current_workers": 4,
+  "max_workers": 8,
+  "CPU_tests": {
+    "passed": 30,
+    "modules": [
+      "test_q4_resident",
+      "test_q4_autoscale",
+      "test_gpu_shared_queue",
+      "test_q4_500_extension"
+    ],
+    "isolated_frozen_import_passed": true
+  },
+  "real_resident_gate": "Pending GPU capacity. Every new worker runs original Q4/full N/batch gates plus a Q4 round-trip gate after N on the same model process before claiming formal questions.",
+  "current_queue": {
+    "state": "running",
+    "controller_pid": 992502,
+    "workers": {
+      "8": {
+        "stage": "waiting_for_gpu",
+        "pid": 992522,
+        "at": "2026-11-06T00:50:44.502306+08:00",
+        "kind": "q4",
+        "resident": true,
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 21831,
+            "utilization": 94
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 17914,
+            "utilization": 96
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 12199,
+            "utilization": 95
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12051,
+            "utilization": 100
+          }
+        },
+        "effective_free_mib": {
+          "0": 21831,
+          "1": 17914,
+          "2": 12199,
+          "3": 12051
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      },
+      "9": {
+        "stage": "waiting_for_gpu",
+        "pid": 992523,
+        "at": "2026-11-06T00:50:45.098793+08:00",
+        "kind": "q4",
+        "resident": true,
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 21831,
+            "utilization": 95
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 17914,
+            "utilization": 96
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 12199,
+            "utilization": 95
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12051,
+            "utilization": 59
+          }
+        },
+        "effective_free_mib": {
+          "0": 21831,
+          "1": 17914,
+          "2": 12199,
+          "3": 12051
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      },
+      "10": {
+        "stage": "waiting_for_gpu",
+        "pid": 992524,
+        "at": "2026-11-06T00:50:45.966569+08:00",
+        "kind": "q4",
+        "resident": true,
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 21831,
+            "utilization": 93
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 17914,
+            "utilization": 97
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 12199,
+            "utilization": 93
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12051,
+            "utilization": 100
+          }
+        },
+        "effective_free_mib": {
+          "0": 21831,
+          "1": 17914,
+          "2": 12199,
+          "3": 12051
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      },
+      "11": {
+        "stage": "waiting_for_gpu",
+        "pid": 992525,
+        "at": "2026-11-06T00:50:47.466347+08:00",
+        "kind": "q4",
+        "resident": true,
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 21831,
+            "utilization": 95
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 17914,
+            "utilization": 97
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 12199,
+            "utilization": 94
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12051,
+            "utilization": 100
+          }
+        },
+        "effective_free_mib": {
+          "0": 21831,
+          "1": 17914,
+          "2": 12199,
+          "3": 12051
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      }
+    },
+    "effective_worker_count": 4,
+    "configured_maximum_worker_count": 8,
+    "allowed_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "autoscaler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1",
+    "resident_control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/resident-20261106-r1",
+    "resident_models": true,
+    "updated_at": "2026-11-06T00:50:49.602486+08:00",
+    "error": null,
+    "unclaimed_questions": 141
+  },
+  "completed": 358,
+  "errors": 0,
+  "training_queue": {
+    "state": "running",
+    "stage": "waiting_for_untrained500",
+    "controller_pid": 664560,
+    "started_at": "2026-11-05T16:15:09.817541+08:00",
+    "allowed_gpu_indices": [
+      "0",
+      "1"
+    ],
+    "updated_at": "2026-11-06T00:50:46.178198+08:00",
+    "untrained500_completed": 358
+  },
+  "existing_monitor": {
+    "pid": 668477,
+    "at": "2026-11-06T00:50:42.503857+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "actual_GPU_residency_now": false,
+  "remaining_limit": "Four GPUs currently below 32GiB admission. New workers waiting, not claimed to be on GPU yet.",
+  "training_supervisor_unchanged": true,
+  "monitor_unchanged": true,
+  "other_project_processes_signaled": false
+}

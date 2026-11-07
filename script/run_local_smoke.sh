@@ -23,7 +23,7 @@ if [[ -z "${CUDA_VISIBLE_DEVICES:-}" ]]; then
     fi
     export CUDA_VISIBLE_DEVICES
 fi
-PYTHON_BIN="${PYTHON_BIN:-$(conda info --base)/envs/vts/bin/python}"
+PYTHON_BIN="${PYTHON_BIN:-/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python}"
 if [[ ! -x "$PYTHON_BIN" ]]; then
     echo "Missing vts interpreter: $PYTHON_BIN" >&2
     exit 1

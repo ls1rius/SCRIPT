@@ -1,0 +1,120 @@
+<|im_start|>system
+You are presented with a textual description of a video clip, it consists of frame captions sparsely sampled from the video. Your task is to answer a question related to this video, choosing the correct option out of five possible answers. Please provide the answer with a single-letter (A, B, C, D, E)It is crucial that you imagine the visual scene as vividly as possible to enhance the accuracy of your response. After selecting your answer, rate your confidence level in this choice on a scale from 1 to 100, where 1 indicates low confidence and 100 signifies high confidence. Please provide a concise one-sentence explanation for your chosen answer. If you are uncertain about the correct option, select the one that seems closest to being correct. <|im_end|>
+<|im_start|>user
+Here are a few examples. 
+None 
+
+###
+
+  Description: These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence. Compact ranges combine exactly adjacent samples of the same statement; all original sample intervals remain archived and do not prove continuous activity.
+At sampled intervals [17,18) (source assertion), C holds a kitchen towel.
+At sampled intervals [17,18) (source assertion), C holds kitchen towel.
+At sampled intervals [32,33) (source assertion), man X carries a chair. The text memory associates this observation with carries a chair (text reference E0).
+At sampled intervals [33,34) (source assertion), the dog Y walks into the kitchen. The text memory associates this observation with walks into the kitchen (text reference E1).
+At sampled intervals [79,80) (source assertion), C carries the baby sitting on the chair.
+At sampled intervals [79,80) (source assertion), C carries baby.
+At sampled intervals [80,81) (source assertion), man Y pulls the chair.
+At sampled intervals [80,81) (source assertion), man Y pulls chair.
+At sampled intervals [81,82) (source assertion), C pulls the hand towel.
+At sampled intervals [81,82) (source assertion), C pulls hand towel.
+At sampled intervals [82,83) (source assertion), man Y picks the bottle from the table.
+At sampled intervals [82,83) (source assertion), man Y picks bottle.
+At sampled intervals [83,84) (source assertion), C places the pillow on a chair.
+At sampled intervals [84,85) (source assertion), C looks around the house.
+At sampled intervals [85,86) (source assertion), The baby X touches the baby.
+At sampled intervals [85,86) (source assertion), X touches baby.
+At sampled intervals [86,87) (source assertion), Woman Y moves the hand from the table.
+At sampled intervals [87,88) (source assertion), C holds a book.
+At sampled intervals [87,88) (source assertion), C holds book.
+At sampled intervals [88,89) (source assertion), C holds the chair.
+At sampled intervals [88,89) (source assertion), C holds chair.
+At sampled intervals [89,90) (source assertion), C looks around.
+At sampled intervals [90,91) (source assertion), C walks to a chair.
+At sampled intervals [91,92) (source assertion), C Looks at the chairs.
+At sampled intervals [92,93), [94,95) (source assertion), C looks around the room.
+At sampled intervals [93,94), [95,96) (source assertion), C looks at the chair.
+At sampled intervals [96,97) (source assertion), C walks towards the kitchen.
+At sampled intervals [97,98) (source assertion), woman Y touches her phone.
+At sampled intervals [97,98) (source assertion), woman Y touches phone.
+At sampled intervals [98,99) (source assertion), Woman X Picks a piece of cloth.
+At sampled intervals [98,99) (source assertion), Woman X Picks piece of cloth.
+At sampled intervals [99,100) (source assertion), The woman X drops the red toy on the table with her left hand.
+At sampled intervals [99,100) (source assertion), X drops red toy.
+At sampled intervals [99,100) (source assertion), The color of toy is red.
+At sampled intervals [100,101) (source assertion), C moves around the room.
+At sampled intervals [101,102) (source assertion), C picks the cloth.
+At sampled intervals [101,102) (source assertion), C picks cloth.
+At sampled intervals [102,103) (source assertion), C puts the paper in the bucket.
+At sampled intervals [102,103) (source assertion), C puts paper.
+At sampled intervals [103,104) (source assertion), C puts the handbag down.
+At sampled intervals [103,104) (source assertion), C puts handbag.
+At sampled intervals [104,105) (source assertion), C moves the chair.
+At sampled intervals [104,105) (source assertion), C moves chair.
+At sampled intervals [150,151) (source assertion), C holds the book in her hands.
+At sampled intervals [150,151) (source assertion), C holds book with hands.
+At sampled intervals [151,152) (source assertion), C talks to a man X.
+At sampled intervals [152,153) (source assertion), C looks at the window.
+At sampled intervals [153,154) (source assertion), C looks at the dog.
+At sampled intervals [154,155) (source assertion), C looks at the room.
+At sampled intervals [155,156) (source assertion), C touches a chair.
+At sampled intervals [155,156) (source assertion), C touches chair.
+At sampled intervals [156,157) (source assertion), C moves the hand.
+At sampled intervals [156,157) (source assertion), C moves hand.
+At sampled intervals [157,158) (source assertion), C looks at the baby.
+At sampled intervals [158,159) (source assertion), C folds the top of the blanket on her laps with both hands.
+At sampled intervals [158,159) (source assertion), C folds top of the blanket with both hands.
+At sampled intervals [159,160) (source assertion), C pulls the paper.
+At sampled intervals [159,160) (source assertion), C pulls paper.
+At sampled intervals [160,161) (source assertion), C unfolds the cloth.
+At sampled intervals [160,161) (source assertion), C unfolds cloth.
+At sampled intervals [161,162) (source assertion), C holds the white wooden spoon with both hands.
+At sampled intervals [161,162) (source assertion), C holds white wooden spoon with both hands.
+At sampled intervals [162,163) (source assertion), C folds the paper.
+At sampled intervals [162,163) (source assertion), C folds paper.
+At sampled intervals [163,164) (source assertion), C lifts a bowl on the dining table.
+At sampled intervals [163,164) (source assertion), C lifts bowl.
+At sampled intervals [164,165) (source assertion), C lifts the baby.
+At sampled intervals [164,165) (source assertion), C lifts baby.
+At sampled intervals [165,166) (source assertion), C removes the biscuit from the pack with both hands.
+At sampled intervals [165,166) (source assertion), C removes biscuit with both hands.
+At sampled intervals [166,167) (source assertion), C takes food.
+At sampled intervals [167,168) (source assertion), C reads the instructions.
+At sampled intervals [167,168) (source assertion), C reads instructions.
+At sampled intervals [168,169) (source assertion), A woman X talks to C.
+At sampled intervals [168,169) (source assertion), The color of X is woman.
+At sampled intervals [169,170) (source assertion), C puts the bottle in the bag.
+At sampled intervals [170,171) (source assertion), The woman X adjusts her left hand on her right leg.
+At sampled intervals [171,172) (source assertion), A woman X touches the book.
+At sampled intervals [171,172) (source assertion), X touches book.
+At sampled intervals [172,173) (source assertion), Man X holds a spoon with his right hand.
+At sampled intervals [172,173) (source assertion), Man X holds spoon with right hand.
+At sampled intervals [173,174) (source assertion), The baby Y holds the toy with his left hand.
+At sampled intervals [173,174) (source assertion), baby Y holds toy with left hand.
+At sampled intervals [174,175) (source assertion), A woman X reads a paper.
+At sampled intervals [174,175) (source assertion), X reads paper.
+At sampled intervals [175,176) (source assertion), C touches the book.
+At sampled intervals [175,176) (source assertion), C touches book.
+At sampled intervals [176,177) (source assertion), C stretches the cloth.
+At sampled intervals [176,177) (source assertion), C stretches cloth.
+At sampled intervals [177,178) (source assertion), C puts the baby in the basket.
+At sampled intervals [178,179) (source assertion), C adjusts the a plastic with her left hand.
+At sampled intervals [179,180) (source assertion), C moves the leg.
+At sampled intervals [179,180) (source assertion), C moves leg.
+
+###
+
+ Questions: Based on the video, what additional activity was c engaged in while primarily focusing on working on the baby swing chair? 
+ Options: 
+ A: C was also listening to music while assembling the baby swing chair. 
+ B: C was also talking to a woman while assembling the baby swing chair. 
+ C: Concurrently, c was attentively watching tv while skillfully assembling the comfy baby swing chair. 
+ D: Concurrently, c was eating as well as meticulously assembling the baby's comfortable swing chair. 
+ E: Curiously, c was also dozing off intermittently while diligently assembling the baby swing chair. 
+
+###
+
+ The prediction, explanation, confidence is (please response in the format of 'prediction: 
+ explanation: 
+ confidence: 
+ '):<|im_end|>
+<|im_start|>assistant

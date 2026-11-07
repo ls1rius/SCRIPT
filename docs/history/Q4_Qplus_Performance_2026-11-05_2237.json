@@ -1,0 +1,152 @@
+{
+  "at": "2026-11-05T22:39:10.084505+08:00",
+  "completed": 357,
+  "planned": 500,
+  "complete": false,
+  "errors": 0,
+  "groups": {
+    "original300": {
+      "planned": 300,
+      "completed": 300,
+      "arms": {
+        "Q": {
+          "completed": 300,
+          "correct": 193,
+          "accuracy_among_completed": 0.6433333333333333,
+          "accuracy": 0.6433333333333333,
+          "mean_input_tokens": 4162.65,
+          "mean_answer_seconds": 0.6820143252859513
+        },
+        "Qplus": {
+          "completed": 300,
+          "correct": 193,
+          "accuracy_among_completed": 0.6433333333333333,
+          "accuracy": 0.6433333333333333,
+          "mean_input_tokens": 3064.3966666666665,
+          "mean_answer_seconds": 0.5505226939792435
+        }
+      },
+      "videotree": {
+        "planned": 300,
+        "completed": 300,
+        "pending": 0,
+        "correct": 189,
+        "errors": 8,
+        "accuracy": 0.63,
+        "accuracy_among_completed": 0.63,
+        "mean_seconds": 10.490875898003578,
+        "median_seconds": 8.289492074400187,
+        "incomplete": 0,
+        "parser_fallbacks": 0,
+        "complete": true,
+        "errors_count_wrong": true
+      },
+      "comparison_complete": true
+    },
+    "additional200": {
+      "planned": 200,
+      "completed": 57,
+      "arms": {
+        "Q": {
+          "completed": 57,
+          "correct": 32,
+          "accuracy_among_completed": 0.5614035087719298,
+          "accuracy": null,
+          "mean_input_tokens": 4488.964912280701,
+          "mean_answer_seconds": 0.8256725427090076
+        },
+        "Qplus": {
+          "completed": 57,
+          "correct": 33,
+          "accuracy_among_completed": 0.5789473684210527,
+          "accuracy": null,
+          "mean_input_tokens": 3299.4210526315787,
+          "mean_answer_seconds": 0.44963473277656657
+        }
+      },
+      "videotree": {
+        "planned": 200,
+        "completed": 200,
+        "pending": 0,
+        "correct": 115,
+        "errors": 4,
+        "accuracy": 0.575,
+        "accuracy_among_completed": 0.575,
+        "mean_seconds": 11.839228856936098,
+        "median_seconds": 8.82488489896059,
+        "incomplete": 0,
+        "parser_fallbacks": 0,
+        "complete": true,
+        "errors_count_wrong": true
+      },
+      "comparison_complete": false
+    },
+    "all500": {
+      "planned": 500,
+      "completed": 357,
+      "arms": {
+        "Q": {
+          "completed": 357,
+          "correct": 225,
+          "accuracy_among_completed": 0.6302521008403361,
+          "accuracy": null,
+          "mean_input_tokens": 4214.750700280112,
+          "mean_answer_seconds": 0.7049513515971956
+        },
+        "Qplus": {
+          "completed": 357,
+          "correct": 226,
+          "accuracy_among_completed": 0.6330532212885154,
+          "accuracy": null,
+          "mean_input_tokens": 3101.921568627451,
+          "mean_answer_seconds": 0.5344145321065471
+        }
+      },
+      "videotree": {
+        "planned": 500,
+        "completed": 500,
+        "pending": 0,
+        "correct": 304,
+        "errors": 12,
+        "accuracy": 0.608,
+        "accuracy_among_completed": 0.608,
+        "mean_seconds": 11.030217081576586,
+        "median_seconds": 8.559507051482797,
+        "incomplete": 0,
+        "parser_fallbacks": 0,
+        "complete": true,
+        "errors_count_wrong": true
+      },
+      "comparison_complete": false
+    }
+  },
+  "paired": {
+    "Q_only_correct": 10,
+    "Qplus_only_correct": 11,
+    "both_correct": 215,
+    "both_wrong": 121
+  },
+  "final_input_reduction_fraction": 0.2640320177368266,
+  "final_answer_time_reduction_fraction": 0.2419128910161904,
+  "new_question_costs": {
+    "questions": 57,
+    "Q4_per_question": {
+      "seconds": 86.44889828405883,
+      "input_tokens": 119223.73684210527,
+      "output_tokens": 2675.438596491228
+    },
+    "N_source_per_question": {
+      "seconds": 433.8610714079257,
+      "input_tokens": 166507.2105263158,
+      "output_tokens": 13315.40350877193
+    },
+    "combined_per_question": {
+      "seconds": 520.3099696919845,
+      "input_tokens": 285730.94736842107,
+      "output_tokens": 15990.842105263158
+    }
+  },
+  "cost_scope": "Same completed new questions only; N preparation and shared Q4/Q4plus processing counted once; queue wait/model setup/validation separate. Final-reader means refer to all completed357.",
+  "trained": false,
+  "training_state": "waiting_for_untrained500"
+}

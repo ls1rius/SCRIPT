@@ -1,0 +1,839 @@
+{
+  "created_at": "2026-11-03T00:45:10.466003+08:00",
+  "run_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r5",
+  "current_version": "N-M-reasoned-pair-candidates-v7",
+  "selection_version": "N-isolated-scene-option-pairs-v5-reason-first",
+  "semantic_fix_passed": false,
+  "latest_report": {
+    "complete": true,
+    "passed": false,
+    "error": null,
+    "cases": [
+      {
+        "id": "unrelated",
+        "kind": "synthetic_negative",
+        "passed": true,
+        "candidate_order": [],
+        "missing_required_candidates": [],
+        "expected_empty": true,
+        "failed_priority_pairs": [],
+        "derived_selection": {
+          "scene_decisions": {
+            "S0": {
+              "relevance": "excluded",
+              "priority": 0,
+              "reason": "All option reviews assigned zero; individual model reasons are archived."
+            },
+            "S1": {
+              "relevance": "excluded",
+              "priority": 0,
+              "reason": "All option reviews assigned zero; individual model reasons are archived."
+            }
+          },
+          "reason": "Program union of positive option-scene reviews; maximum priority, ties in original directory order."
+        },
+        "model_output": {
+          "scene_reviews": {
+            "S0": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "The scene does not provide any information about tools being used to open a jar or any related行动",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O1": {
+                  "reason": "The scene does not provide any information about tools being used to open a jar or the presence/",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "The scene does not provide any information about tools being used to open a jar or any related活動",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O3": {
+                  "reason": "The scene does not provide any information about tools being used to open a jar or any related活动",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "The scene does not provide any information about tools being used to open a jar or any related活动",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S1": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "The scene does not provide any information about tools being used to open a jar or any related行动",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O1": {
+                  "reason": "The scene does not describe any person or object handling, making it irrelevant to the tool used",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "The scene does not provide information about opening a sealed jar or using tools. It only states",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O3": {
+                  "reason": "The scene does not provide any information about tools being used to open a jar or any related行动",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "The scene does not provide any information about opening a jar or using tools. It only mentions空",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            }
+          }
+        },
+        "seconds": 25.937783773988485,
+        "input_tokens": 11914,
+        "output_tokens": 618,
+        "model_calls": 10
+      },
+      {
+        "id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "kind": "archived_failure",
+        "passed": false,
+        "candidate_order": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "missing_required_candidates": [],
+        "expected_empty": false,
+        "failed_priority_pairs": [
+          [
+            "S3",
+            "S0"
+          ]
+        ],
+        "derived_selection": {
+          "scene_decisions": {
+            "S0": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=60, O1=70, O2=80, O3=80"
+            },
+            "S1": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O1=70, O2=80, O3=80"
+            },
+            "S2": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=70, O1=70, O2=80, O3=80"
+            },
+            "S3": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=80, O1=70, O2=80, O3=80"
+            },
+            "S4": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=80, O1=80, O2=80, O3=80"
+            },
+            "S5": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=30, O1=70, O2=80, O3=80"
+            },
+            "S6": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=30, O1=70, O2=80, O3=80"
+            }
+          },
+          "reason": "Program union of positive option-scene reviews; maximum priority, ties in original directory order."
+        },
+        "model_output": {
+          "scene_reviews": {
+            "S0": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C在房屋内外的移动过程，包括在房子周围走动，这与选项O0中提到的反复环顾四周的行为相符，表明C可能在寻找某物。",
+                  "priority": 60,
+                  "anchor": "然后在房子周围走动，"
+                },
+                "O1": {
+                  "reason": "场景中描述了C在房屋内外的移动过程，包括在房子周围走动，这与选项O1中提到的反复在房间里走动相符，暗示C可能试图找到舒适的位置。",
+                  "priority": 70,
+                  "anchor": "C随后在走廊上行走，"
+                },
+                "O2": {
+                  "reason": "场景中C频繁使用笔记本电脑，这表明C正在努力完成工作。",
+                  "priority": 80,
+                  "anchor": "C随后在走廊上行走，"
+                },
+                "O3": {
+                  "reason": "场景中C在不同房间内反复移动，这与选项O3中提到的反复拿起放下物体的行为一致，表明C可能在整理物品，决定打包什么以及如何打包。",
+                  "priority": 80,
+                  "anchor": "C随后在走廊上行走，"
+                },
+                "O4": {
+                  "reason": "场景中没有描述C反复遮盖笔的行为，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S1": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景中没有明确描述C反复四处张望的行为，因此无法验证此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O1": {
+                  "reason": "场景中描述了C在屋内走动的行为，这与选项O1中提到的反复移动一致，表明C可能试图找到舒适的位置。",
+                  "priority": 70,
+                  "anchor": "C继续在屋内走动，"
+                },
+                "O2": {
+                  "reason": "场景中C频繁使用笔记本电脑，这表明C正在努力完成工作。",
+                  "priority": 80,
+                  "anchor": "C在键盘上操作，"
+                },
+                "O3": {
+                  "reason": "场景中C频繁地拿起和放下笔记本电脑、电缆和充电器，这表明C正在决定要打包什么以及如何打包。",
+                  "priority": 80,
+                  "anchor": "C移动鼠标，"
+                },
+                "O4": {
+                  "reason": "场景中没有明确描述C反复遮盖笔的行为，因此无法评估其是否试图隐藏某物。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S2": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C在房间内四处走动，这与选项O0中提到的反复环顾四周的行为相符，表明C可能在寻找某物。",
+                  "priority": 70,
+                  "anchor": "C继续在房间里移动，"
+                },
+                "O1": {
+                  "reason": "场景描述了C在房间内移动，这与选项O1一致，表明C可能试图找到舒适的位置。",
+                  "priority": 70,
+                  "anchor": "C继续在房间里移动，"
+                },
+                "O2": {
+                  "reason": "场景描述了C在室内环境中频繁使用笔记本电脑的行为，这与选项O2一致，表明C正在努力完成工作。",
+                  "priority": 80,
+                  "anchor": "C从电缆支架上取下电线，"
+                },
+                "O3": {
+                  "reason": "场景描述了C在房间内移动物体的行为，这与选项O3中提到的反复拿起和放下物体相符，暗示C可能在决定打包什么以及如何打包。",
+                  "priority": 80,
+                  "anchor": "C再次拿起遥控器，"
+                },
+                "O4": {
+                  "reason": "场景中没有描述C反复遮盖笔的行为，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S3": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C在房间内进行一系列物品整理和打包的动作，这与C反复环顾房间的行为一致，表明C可能在寻找某样东西。",
+                  "priority": 80,
+                  "anchor": "C首先拿起手机，"
+                },
+                "O1": {
+                  "reason": "场景描述了C在房间内进行一系列物品整理和打包的动作，这与选项O1中提到的反复移动房间的行为一致，表明C可能试图找到舒适的位置。",
+                  "priority": 70,
+                  "anchor": "C走向一把椅子，"
+                },
+                "O2": {
+                  "reason": "场景描述了C在房间内进行一系列物品整理和打包的动作，其中多次提到C使用笔记本电脑，这表明C正在努力完成和结束工作。",
+                  "priority": 80,
+                  "anchor": "C走向一把椅子，"
+                },
+                "O3": {
+                  "reason": "场景描述了C在房间内进行一系列物品整理和打包的动作，包括拿起和放下笔记本电脑、电缆和充电器等物品，这与选项O3中提到的反复拿起和放下物体相符，表明C可能在决定要打包什么以及如何打包。",
+                  "priority": 80,
+                  "anchor": "C从桌子上取下夹克，"
+                },
+                "O4": {
+                  "reason": "场景描述了C在房间内进行一系列物品整理和打包的动作，包括拿起各种物品并放入包中。这与选项O4中提到的反复遮盖笔的行为不符，因此优先级为0。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S4": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C在家中进行一系列物品整理活动，包括移动物品、放置物品等，这与C反复环顾房间的行为一致，表明C可能在寻找某样东西。",
+                  "priority": 80,
+                  "anchor": "C随后拿起一个袋子，"
+                },
+                "O1": {
+                  "reason": "场景描述了C在家中四处走动的行为，这与选项O1中提到的反复移动房间相符，表明C可能试图找到舒适的位置。",
+                  "priority": 80,
+                  "anchor": "C继续四处走动，"
+                },
+                "O2": {
+                  "reason": "场景描述了C频繁地使用笔记本电脑，这表明C正在努力完成和结束工作。这与焦点选项紧密相关，因为C的行为直接支持了这一假设。",
+                  "priority": 80,
+                  "anchor": "C随后拿起一个袋子，"
+                },
+                "O3": {
+                  "reason": "场景描述了C在家中进行一系列物品整理活动，包括移动各种物品如托盘、盒子、椅子、袋子等，这表明C可能在决定打包什么以及如何打包。这与选项O3中提到的反复拿起和放下物品相符，暗示C正在考虑打包事宜",
+                  "priority": 80,
+                  "anchor": "C将一个托盘和一个盒子拿起来，"
+                },
+                "O4": {
+                  "reason": "场景描述了C在家中进行一系列物品整理活动，包括移动各种物品和绕着房子走动。这些行为与选项O4中提到的反复覆盖笔的行为没有直接关联，因此优先级为0。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S5": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景中描述了C在屋内移动并捡起手机的行为，这与选项O0中提到的反复四处张望相符，暗示C可能在寻找某物。",
+                  "priority": 30,
+                  "anchor": "C在屋内移动，"
+                },
+                "O1": {
+                  "reason": "场景中描述了C在屋内移动，这与选项O1中提到的行为一致，表明C可能试图找到舒适的位置。",
+                  "priority": 70,
+                  "anchor": "C在屋内移动，"
+                },
+                "O2": {
+                  "reason": "场景中C频繁使用笔记本电脑，这表明C正在努力完成工作。",
+                  "priority": 80,
+                  "anchor": "C在屋内移动，"
+                },
+                "O3": {
+                  "reason": "场景中C反复拿起和放下笔记本电脑、电缆和充电器，这表明C正在决定要打包什么以及如何打包。",
+                  "priority": 80,
+                  "anchor": "C在屋内移动，"
+                },
+                "O4": {
+                  "reason": "场景中没有描述C反复遮盖笔的行为，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S6": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C在进行一系列物品整理活动，包括移动篮子、触碰耳机、搬动椅子、拿起盖子、拿起平板电脑的袋子、调整三脚架、移动笔记本电脑、取出充电器等。这些行为表明C正在积极地整理物品，而不是随意地环",
+                  "priority": 30,
+                  "anchor": "C随后拿起一个平板电脑的袋子并将其放在椅子上，"
+                },
+                "O1": {
+                  "reason": "场景描述了C在进行一系列物品整理活动，这与选项O1中提到的反复移动房间的行为一致，表明C可能试图找到舒适的位置。",
+                  "priority": 70,
+                  "anchor": "C随后拿起一个平板电脑的袋子并将其放在椅子上，"
+                },
+                "O2": {
+                  "reason": "场景描述了C频繁使用笔记本电脑，这表明C正在努力完成工作。",
+                  "priority": 80,
+                  "anchor": "C拿着笔记本电脑，"
+                },
+                "O3": {
+                  "reason": "场景描述了C在进行一系列物品整理活动，包括移动篮子、触碰耳机、搬动椅子、拿起盖子、拿起平板电脑的袋子、调整三脚架、移动笔记本电脑、取出充电器、移除充电器的电缆、放入电源线以及移动笔记本电脑和其",
+                  "priority": 80,
+                  "anchor": "C拿着笔记本电脑，"
+                },
+                "O4": {
+                  "reason": "场景描述了C在进行一系列物品整理活动，包括移动篮子、触碰耳机、搬动椅子、拿起盖子、拿起平板电脑的袋子、调整三脚架、移动笔记本电脑、取出充电器等。这些行为与选项O4中提到的反复覆盖笔的行为没有交",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            }
+          }
+        },
+        "seconds": 108.32650990411639,
+        "input_tokens": 62694,
+        "output_tokens": 2913,
+        "model_calls": 35
+      },
+      {
+        "id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "kind": "archived_failure",
+        "passed": true,
+        "candidate_order": [
+          "S0",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7"
+        ],
+        "missing_required_candidates": [],
+        "expected_empty": false,
+        "failed_priority_pairs": [],
+        "derived_selection": {
+          "scene_decisions": {
+            "S0": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=30, O2=80"
+            },
+            "S1": {
+              "relevance": "excluded",
+              "priority": 0,
+              "reason": "All option reviews assigned zero; individual model reasons are archived."
+            },
+            "S2": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O2=80"
+            },
+            "S3": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=80, O2=80"
+            },
+            "S4": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O0=80, O1=60, O2=60, O3=60"
+            },
+            "S5": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O2=80"
+            },
+            "S6": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O2=80"
+            },
+            "S7": {
+              "relevance": "candidate",
+              "priority": 80,
+              "reason": "Positive reviews: O2=80"
+            }
+          },
+          "reason": "Program union of positive option-scene reviews; maximum priority, ties in original directory order."
+        },
+        "model_output": {
+          "scene_reviews": {
+            "S0": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C在熨烫衬衫的过程中折叠衬衫，这与选项0中提到的C仔细地用精确的方式折叠连衣裙相符。",
+                  "priority": 30,
+                  "anchor": "C正在折叠衬衫，"
+                },
+                "O1": {
+                  "reason": "场景描述了C在熨烫衬衫的过程，没有提到挂衣服的动作，因此无法验证此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "场景描述了C在熨烫一件衬衫的过程，这与选项2中提到的C在熨烫一件连衣裙相符。",
+                  "priority": 80,
+                  "anchor": "C用右手拿着熨斗熨烫衬衫，"
+                },
+                "O3": {
+                  "reason": "场景描述了C在熨烫衬衫的过程，没有提到包装衣服的动作，因此优先级为0。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "场景描述的是C在熨烫衬衫，没有提到洗衣服的行为，因此无法支持C在洗衣服的假设。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S1": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景中没有描述折衣服的动作，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O1": {
+                  "reason": "场景中没有提到挂衣服的动作，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "场景中没有描述任何与熨烫相关的行为，因此无法评估熨烫行为是否发生。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O3": {
+                  "reason": "场景中没有描述任何关于打包的动作，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "场景中没有描述任何与洗衣服相关的活动，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S2": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C正在熨烫衬衫的过程，没有提到折衣服的动作，因此无法验证此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O1": {
+                  "reason": "场景描述了C正在熨烫衬衫的过程，没有提到挂衣服的动作，因此无法验证此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "场景描述了C正在熨烫衬衫的过程，这与选项O2相符。",
+                  "priority": 80,
+                  "anchor": "场景描述了一个穿着衬衫的人（C）正在熨烫一件衬衫的过程。"
+                },
+                "O3": {
+                  "reason": "场景描述了C正在熨烫衬衫的过程，没有涉及打包衣服的动作。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "场景描述的是C正在熨烫衬衫，而O4提到C正在洗衣服，两者之间没有直接相关性。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S3": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C在整理衣物的过程，包括熨烫和折叠，这与选项O0中提到的仔细折叠裙子相符。",
+                  "priority": 80,
+                  "anchor": "C又拿起了一件衣物并调整了裙子，"
+                },
+                "O1": {
+                  "reason": "场景描述了C在整理衣物的过程，包括熨烫和调整衣物，但没有提到挂衣服的动作。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "场景中描述了C熨烫衬衫和衣物的过程，这与选项O2相符。",
+                  "priority": 80,
+                  "anchor": "C用熨斗熨烫了衬衫和衣物，"
+                },
+                "O3": {
+                  "reason": "场景中没有提到C正在打包衣服的动作，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "场景中没有描述C正在洗衣服的行为，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S4": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景中描述了C在房间内四处走动，挑选并处理了几件衣物，其中包括挑选连衣裙。这表明C正在折叠连衣裙，符合选项O0的描述。",
+                  "priority": 80,
+                  "anchor": "C在房间内四处走动，"
+                },
+                "O1": {
+                  "reason": "场景描述了C在房间内四处走动，挑选并处理了几件衣物，其中包括挑选连衣裙，这表明C可能在挂衣服。",
+                  "priority": 60,
+                  "anchor": "C在房间内四处走动，"
+                },
+                "O2": {
+                  "reason": "场景中描述了C在屋内四处走动，挑选并处理了几件衣物，其中包括翻转衬衫、折叠衬衫等，这表明C正在进行衣物整理活动。虽然没有直接提到熨烫的动作，但考虑到C在屋内四处走动并处理衣物，可以推测她可能在",
+                  "priority": 60,
+                  "anchor": "C在房间内四处走动，"
+                },
+                "O3": {
+                  "reason": "场景中描述了C在房间内四处走动，挑选并处理了几件衣物，这与选项O3中提到的C正在仔细地将一件美丽的连衣裙装进她的包里相符。",
+                  "priority": 60,
+                  "anchor": "C在房间内四处走动，"
+                },
+                "O4": {
+                  "reason": "场景中没有提到C正在洗衣服，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S5": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C在熨烫衣物的过程，没有提到折叠的动作。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O1": {
+                  "reason": "场景描述了C在整理衣物的过程，包括熨烫衬衫和布料，但没有提到挂衣服的动作。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "场景描述了C在熨烫衣物的过程，这与选项O2相符。",
+                  "priority": 80,
+                  "anchor": "C继续拿起衬衫，"
+                },
+                "O3": {
+                  "reason": "场景描述了C在整理衣物的过程，包括熨烫衬衫和布料，这与选项O3中提到的打包行为无关。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "场景描述中没有提到C在洗衣服，因此无法评估此选项。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S6": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C正在熨烫衣服的过程，没有提到折叠的动作，因此无法验证此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O1": {
+                  "reason": "场景描述了C正在熨烫衣服的过程，没有提到挂衣服的动作，因此无法验证此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "场景描述了C正在熨烫衣服的过程，这与focus_option一致。",
+                  "priority": 80,
+                  "anchor": "场景描述了一个穿着衬衫的人（C）正在熨烫一件衣服的过程。"
+                },
+                "O3": {
+                  "reason": "场景描述了C正在熨烫衣服的过程，这与选项O3中提到的打包行为无关，因此优先级为0。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "场景描述了C正在熨烫衣服的过程，没有提到洗衣服的动作。因此，该场景对检查C是否在洗衣服没有相关性。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            },
+            "S7": {
+              "option_reviews": {
+                "O0": {
+                  "reason": "场景描述了C熨烫衣物的过程，但没有提到折衣服的动作。因此，该场景对检验C仔细折叠连衣裙的假设没有直接相关性。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O1": {
+                  "reason": "场景描述了C在熨烫衣物的过程，没有提到挂衣服的动作，因此无法检验此选项。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O2": {
+                  "reason": "场景描述了C熨烫衣物的过程，这与focus_option一致，因此优先级为80。",
+                  "priority": 80,
+                  "anchor": "场景描述了一个穿着者C在熨烫衣物的过程。"
+                },
+                "O3": {
+                  "reason": "场景描述了C熨烫衣物的过程，但没有提到包装衣服的动作。因此，该场景对检验O3的假设无关。",
+                  "priority": 0,
+                  "anchor": null
+                },
+                "O4": {
+                  "reason": "场景描述了一个穿着者C在熨烫衣物的过程，而选项O4提到C正在洗衣服，这与场景描述不符。",
+                  "priority": 0,
+                  "anchor": null
+                }
+              }
+            }
+          }
+        },
+        "seconds": 109.94413769617677,
+        "input_tokens": 60250,
+        "output_tokens": 2810,
+        "model_calls": 40
+      }
+    ],
+    "scope": "selection_only",
+    "updated_at": "2026-11-03T00:44:01.271138+08:00",
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 244.23169293627143,
+      "total": 244.23169293627143,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 244.23169293627143,
+      "text_cache_hits": 0,
+      "total_cap": 1500,
+      "budget_violation": false,
+      "by_operation": {
+        "structured_output_validation": 0.02326156198978424,
+        "n_select_scene": 244.20843137428164
+      },
+      "call_count": 255,
+      "resources": {
+        "cpu_seconds": 244.21596940499995,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 244.37065292149782,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17049968128
+      }
+    }
+  },
+  "manual_review": {
+    "reviewed_at": "2026-11-03T00:45:10.465654+08:00",
+    "passed": false,
+    "conclusion": "Empty-candidate failure is removed in the two cases, but packing relevance explanations and ranking remain incorrect. Do not claim the semantic selector is repaired.",
+    "confirmed_failure": {
+      "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+      "scene_id": "S0",
+      "option_id": "O3",
+      "actual": {
+        "scene_reviews": {
+          "S0": {
+            "option_reviews": {
+              "O3": {
+                "reason": "场景中C在不同房间内反复移动，这与选项O3中提到的反复拿起放下物体的行为一致，表明C可能在整理物品，决定打包什么以及如何打包。",
+                "priority": 80,
+                "anchor": "C随后在走廊上行走，"
+              }
+            }
+          }
+        }
+      },
+      "issue": "Walking between rooms is falsely equated with picking up/putting down objects. All scene aggregate priorities are 80."
+    },
+    "improvements": [
+      "Irrelevant sky/road negative returns an empty set.",
+      "Ironing scene summaries are no longer excluded merely for differing from folding; S1 cable scene excluded.",
+      "Every option is explicitly reviewed with its exact original text; source citations and all raw calls preserved."
+    ],
+    "limitations": [
+      "Only two historical cases plus one negative; no option reordering, full QA or 300-question evaluation.",
+      "A local literal citation constrains provenance, not semantic validity of an inference.",
+      "Each scene/option pair is a separate call: 35 for packing, 40 for ironing, 10 for negative."
+    ],
+    "next_direction": "Do not keep expanding schemas as proof of semantic correctness. Need a separately validated method for grounding observable action matches and assessing candidate relevance before any full run."
+  },
+  "attempts": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r1",
+      "version": "N-M-option-wise-candidates-v3",
+      "selection_version": "N-option-wise-scene-union-v1",
+      "complete": true,
+      "automated_passed": true,
+      "error": null,
+      "processing_seconds": 278.64696725830436,
+      "setup_seconds": 9.804000362753868,
+      "semantic_review": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r1/semantic_review.json"
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r2",
+      "version": "N-M-grounded-option-candidates-v4",
+      "selection_version": "N-grounded-option-scene-union-v2",
+      "complete": false,
+      "automated_passed": false,
+      "error": {
+        "type": "ToolDeadlineExceeded",
+        "message": "ToolDeadlineExceeded: SoftDeadlineExceeded: Processing deadline reached; worker retained"
+      },
+      "processing_seconds": 254.0761279501021,
+      "setup_seconds": 10.660003747791052,
+      "semantic_review": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r2/semantic_review.json"
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r3",
+      "version": "N-M-isolated-option-candidates-v5",
+      "selection_version": "N-isolated-grounded-option-reviews-v3",
+      "complete": true,
+      "automated_passed": false,
+      "error": null,
+      "processing_seconds": 235.01447119563818,
+      "setup_seconds": 8.586287520825863,
+      "semantic_review": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r3/semantic_review.json"
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r4",
+      "version": "N-M-isolated-pair-candidates-v6",
+      "selection_version": "N-isolated-scene-option-pairs-v4",
+      "complete": true,
+      "automated_passed": false,
+      "error": null,
+      "processing_seconds": 140.9822947792709,
+      "setup_seconds": 8.085989035665989,
+      "semantic_review": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r4/semantic_review.json"
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r5",
+      "version": "N-M-reasoned-pair-candidates-v7",
+      "selection_version": "N-isolated-scene-option-pairs-v5-reason-first",
+      "complete": true,
+      "automated_passed": false,
+      "error": null,
+      "processing_seconds": 244.23169293627143,
+      "setup_seconds": 7.555765334516764,
+      "semantic_review": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-option-scene-selection-20261103-r5/semantic_review.json"
+    }
+  ],
+  "total_attempt_processing_seconds": 1152.951554119587,
+  "total_setup_seconds": 44.692046001553535,
+  "cpu_validation": {
+    "passed": true,
+    "tests": 34,
+    "seconds": 9.39,
+    "suites": [
+      "test_n_scene_selection",
+      "test_n_scene_memory",
+      "test_m_scene_memory",
+      "test_m_generation"
+    ],
+    "previous_broader_regression_tests": 116,
+    "actual_model_inference": false,
+    "finished_at": "2026-11-03T00:40:00.210566+08:00"
+  },
+  "frozen_M_files_checked": 493,
+  "frozen_M_files_changed": [],
+  "M_status": {
+    "state": "running",
+    "controller_pid": 2749971,
+    "updated_at": "2026-11-03T00:45:09.018433+08:00",
+    "worker_pid": 2750068,
+    "gpu": "0",
+    "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runtime/script/run_m_scene_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13"
+    ],
+    "started_at": "2026-11-02T21:58:27.321451+08:00"
+  },
+  "defaults_unchanged": [
+    "L",
+    "E"
+  ],
+  "source_extraction_changes_from_N_v2_not_reverted": true
+}

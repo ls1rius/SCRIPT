@@ -1,0 +1,2944 @@
+{
+  "source_parent": "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261030-r3",
+  "question_id": "15bae307-992b-4359-9fe0-3f622f957d42",
+  "selection_stage": "Upstream frozen SCRIPT/F selection, inherited unchanged by K; K selects evidence records, not new pixels.",
+  "index_semantics": "One-second sampled caption/frame indices, not raw video frame numbers at native FPS.",
+  "total_caption_samples": 180,
+  "upstream_selected_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179
+  ],
+  "selected_observations": [
+    {
+      "caption_id": "C0",
+      "sampled_frame_index": 0,
+      "sample_interval": [
+        0,
+        1
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C1",
+      "sampled_frame_index": 1,
+      "sample_interval": [
+        1,
+        2
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C2",
+      "sampled_frame_index": 2,
+      "sample_interval": [
+        2,
+        3
+      ],
+      "original_caption": "#C C moves a hand",
+      "archived_F_evidence": {
+        "original_text": "#C C moves a hand"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R1",
+          "text": "C moves a hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C3",
+      "sampled_frame_index": 3,
+      "sample_interval": [
+        3,
+        4
+      ],
+      "original_caption": "#C C walks dog along the road",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog along the road"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R2",
+          "text": "C walks dog along the road.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C4",
+      "sampled_frame_index": 4,
+      "sample_interval": [
+        4,
+        5
+      ],
+      "original_caption": "#C C walks dog on the road",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog on the road"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R4",
+          "text": "C walks dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R53",
+          "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R54",
+          "text": "C walks dog on the road. The text memory associates this observation with dog (text reference E1).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        }
+      ],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C5",
+      "sampled_frame_index": 5,
+      "sample_interval": [
+        5,
+        6
+      ],
+      "original_caption": "#C C walks on a pathway",
+      "archived_F_evidence": {
+        "original_text": "#C C walks on a pathway"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C walks on a pathway.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R53",
+          "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        }
+      ],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C6",
+      "sampled_frame_index": 6,
+      "sample_interval": [
+        6,
+        7
+      ],
+      "original_caption": "#C C pulls a dog leash ",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls a dog leash "
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C pulls a dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C7",
+      "sampled_frame_index": 7,
+      "sample_interval": [
+        7,
+        8
+      ],
+      "original_caption": "#C C moves hand",
+      "archived_F_evidence": {
+        "original_text": "#C C moves hand"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R8",
+          "text": "C moves hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C8",
+      "sampled_frame_index": 8,
+      "sample_interval": [
+        8,
+        9
+      ],
+      "original_caption": "#C C scratches face",
+      "archived_F_evidence": {
+        "original_text": "#C C scratches face"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R9",
+          "text": "C scratches face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C9",
+      "sampled_frame_index": 9,
+      "sample_interval": [
+        9,
+        10
+      ],
+      "original_caption": "#C C scratches face",
+      "archived_F_evidence": {
+        "original_text": "#C C scratches face"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R9",
+          "text": "C scratches face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C10",
+      "sampled_frame_index": 10,
+      "sample_interval": [
+        10,
+        11
+      ],
+      "original_caption": "#C C moves the dog leash to the right hand ",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C moves the dog leash to the right hand "
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R10",
+          "text": "C moves the dog leash to the right hand.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R11",
+          "text": "C moves dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C11",
+      "sampled_frame_index": 11,
+      "sample_interval": [
+        11,
+        12
+      ],
+      "original_caption": "#C C holds the bag",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "bag"
+          }
+        ],
+        "original_text": "#C C holds the bag"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "bag"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R12",
+          "text": "C holds the bag.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R13",
+          "text": "C holds bag.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C12",
+      "sampled_frame_index": 12,
+      "sample_interval": [
+        12,
+        13
+      ],
+      "original_caption": "#C C holds the dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds the dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R14",
+          "text": "C holds the dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C13",
+      "sampled_frame_index": 13,
+      "sample_interval": [
+        13,
+        14
+      ],
+      "original_caption": "#C C puts the carrier bag in the bag",
+      "archived_F_evidence": {
+        "original_text": "#C C puts the carrier bag in the bag"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R16",
+          "text": "C puts the carrier bag in the bag.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C14",
+      "sampled_frame_index": 14,
+      "sample_interval": [
+        14,
+        15
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R55",
+          "text": "An unresolved source observation states: \"C walks with the dog\".",
+          "decision": "skip",
+          "retained": false,
+          "qualification": "unresolved hypothesis"
+        }
+      ],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C15",
+      "sampled_frame_index": 15,
+      "sample_interval": [
+        15,
+        16
+      ],
+      "original_caption": "#C C walks with dog on the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with dog on the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "C walks with dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R53",
+          "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R54",
+          "text": "C walks dog on the road. The text memory associates this observation with dog (text reference E1).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        }
+      ],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C16",
+      "sampled_frame_index": 16,
+      "sample_interval": [
+        16,
+        17
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R53",
+          "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R54",
+          "text": "C walks dog on the road. The text memory associates this observation with dog (text reference E1).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        }
+      ],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C17",
+      "sampled_frame_index": 17,
+      "sample_interval": [
+        17,
+        18
+      ],
+      "original_caption": "#C C walks dog",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C18",
+      "sampled_frame_index": 18,
+      "sample_interval": [
+        18,
+        19
+      ],
+      "original_caption": "#C C walks dog with a leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog with a leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R18",
+          "text": "C walks dog with a leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C19",
+      "sampled_frame_index": 19,
+      "sample_interval": [
+        19,
+        20
+      ],
+      "original_caption": "#C C walks around",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C20",
+      "sampled_frame_index": 20,
+      "sample_interval": [
+        20,
+        21
+      ],
+      "original_caption": "#C C walks around",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C21",
+      "sampled_frame_index": 21,
+      "sample_interval": [
+        21,
+        22
+      ],
+      "original_caption": "#C C moves the dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C moves the dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R11",
+          "text": "C moves dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R20",
+          "text": "C moves the dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C22",
+      "sampled_frame_index": 22,
+      "sample_interval": [
+        22,
+        23
+      ],
+      "original_caption": "#C C moves the dog leash in her left hand to her right hand.",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C moves the dog leash in her left hand to her right hand."
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R11",
+          "text": "C moves dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R21",
+          "text": "C moves the dog leash in her left hand to her right hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C23",
+      "sampled_frame_index": 23,
+      "sample_interval": [
+        23,
+        24
+      ],
+      "original_caption": "#C C walks with a dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with a dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R22",
+          "text": "C walks with a dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C24",
+      "sampled_frame_index": 24,
+      "sample_interval": [
+        24,
+        25
+      ],
+      "original_caption": "#C C walks with dog ",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with dog "
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R23",
+          "text": "C walks with dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C25",
+      "sampled_frame_index": 25,
+      "sample_interval": [
+        25,
+        26
+      ],
+      "original_caption": "#C C walks around the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "C walks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C26",
+      "sampled_frame_index": 26,
+      "sample_interval": [
+        26,
+        27
+      ],
+      "original_caption": "#C C lifts up his hand",
+      "archived_F_evidence": {
+        "original_text": "#C C lifts up his hand"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R25",
+          "text": "C lifts up his hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C27",
+      "sampled_frame_index": 27,
+      "sample_interval": [
+        27,
+        28
+      ],
+      "original_caption": "#C C moves hand",
+      "archived_F_evidence": {
+        "original_text": "#C C moves hand"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R8",
+          "text": "C moves hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C28",
+      "sampled_frame_index": 28,
+      "sample_interval": [
+        28,
+        29
+      ],
+      "original_caption": "#C C pulls the leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        ],
+        "original_text": "#C C pulls the leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R26",
+          "text": "C pulls the leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R27",
+          "text": "C pulls leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C29",
+      "sampled_frame_index": 29,
+      "sample_interval": [
+        29,
+        30
+      ],
+      "original_caption": "#C C lifts the hand",
+      "archived_F_evidence": {
+        "original_text": "#C C lifts the hand"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R28",
+          "text": "C lifts the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C30",
+      "sampled_frame_index": 30,
+      "sample_interval": [
+        30,
+        31
+      ],
+      "original_caption": "#C C moves the hand",
+      "archived_F_evidence": {
+        "original_text": "#C C moves the hand"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R29",
+          "text": "C moves the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C31",
+      "sampled_frame_index": 31,
+      "sample_interval": [
+        31,
+        32
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C32",
+      "sampled_frame_index": 32,
+      "sample_interval": [
+        32,
+        33
+      ],
+      "original_caption": "#C C walks around the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "C walks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C33",
+      "sampled_frame_index": 33,
+      "sample_interval": [
+        33,
+        34
+      ],
+      "original_caption": "#C C lifts the hand",
+      "archived_F_evidence": {
+        "original_text": "#C C lifts the hand"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R28",
+          "text": "C lifts the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C34",
+      "sampled_frame_index": 34,
+      "sample_interval": [
+        34,
+        35
+      ],
+      "original_caption": "#C C lifts the hand",
+      "archived_F_evidence": {
+        "original_text": "#C C lifts the hand"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R28",
+          "text": "C lifts the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C35",
+      "sampled_frame_index": 35,
+      "sample_interval": [
+        35,
+        36
+      ],
+      "original_caption": "#C C walks around the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "C walks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C36",
+      "sampled_frame_index": 36,
+      "sample_interval": [
+        36,
+        37
+      ],
+      "original_caption": "#C C pulls the dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls the dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R30",
+          "text": "C pulls the dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C37",
+      "sampled_frame_index": 37,
+      "sample_interval": [
+        37,
+        38
+      ],
+      "original_caption": "#C C touches the face",
+      "archived_F_evidence": {
+        "original_text": "#C C touches the face"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C touches the face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C38",
+      "sampled_frame_index": 38,
+      "sample_interval": [
+        38,
+        39
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C39",
+      "sampled_frame_index": 39,
+      "sample_interval": [
+        39,
+        40
+      ],
+      "original_caption": "#C C holds a dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds a dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R32",
+          "text": "C holds a dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C40",
+      "sampled_frame_index": 40,
+      "sample_interval": [
+        40,
+        41
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C41",
+      "sampled_frame_index": 41,
+      "sample_interval": [
+        41,
+        42
+      ],
+      "original_caption": "#C C moves the dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C moves the dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R11",
+          "text": "C moves dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R20",
+          "text": "C moves the dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C42",
+      "sampled_frame_index": 42,
+      "sample_interval": [
+        42,
+        43
+      ],
+      "original_caption": "#C C holds the dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds the dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R14",
+          "text": "C holds the dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C43",
+      "sampled_frame_index": 43,
+      "sample_interval": [
+        43,
+        44
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C44",
+      "sampled_frame_index": 44,
+      "sample_interval": [
+        44,
+        45
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C135",
+      "sampled_frame_index": 135,
+      "sample_interval": [
+        135,
+        136
+      ],
+      "original_caption": "#C C walks on the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks on the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R33",
+          "text": "C walks on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C136",
+      "sampled_frame_index": 136,
+      "sample_interval": [
+        136,
+        137
+      ],
+      "original_caption": "#C C holds dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C137",
+      "sampled_frame_index": 137,
+      "sample_interval": [
+        137,
+        138
+      ],
+      "original_caption": "#C C stands on the road",
+      "archived_F_evidence": {
+        "original_text": "#C C stands on the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R34",
+          "text": "C stands on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C138",
+      "sampled_frame_index": 138,
+      "sample_interval": [
+        138,
+        139
+      ],
+      "original_caption": "#C C looks around the road ",
+      "archived_F_evidence": {
+        "original_text": "#C C looks around the road "
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R35",
+          "text": "C looks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C139",
+      "sampled_frame_index": 139,
+      "sample_interval": [
+        139,
+        140
+      ],
+      "original_caption": "#C C walks dog on the road ",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog on the road "
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R4",
+          "text": "C walks dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C140",
+      "sampled_frame_index": 140,
+      "sample_interval": [
+        140,
+        141
+      ],
+      "original_caption": "#C C pulls dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C141",
+      "sampled_frame_index": 141,
+      "sample_interval": [
+        141,
+        142
+      ],
+      "original_caption": "#C C looks at dog ",
+      "archived_F_evidence": {
+        "original_text": "#C C looks at dog "
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R36",
+          "text": "C looks at dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C142",
+      "sampled_frame_index": 142,
+      "sample_interval": [
+        142,
+        143
+      ],
+      "original_caption": "#C C pulls a dog leash ",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls a dog leash "
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C pulls a dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C143",
+      "sampled_frame_index": 143,
+      "sample_interval": [
+        143,
+        144
+      ],
+      "original_caption": "#C C stands on the road",
+      "archived_F_evidence": {
+        "original_text": "#C C stands on the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R34",
+          "text": "C stands on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C144",
+      "sampled_frame_index": 144,
+      "sample_interval": [
+        144,
+        145
+      ],
+      "original_caption": "#C C walks on the road with a dog ",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "body_part": "dog"
+          }
+        ],
+        "original_text": "#C C walks on the road with a dog "
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "body_part": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R23",
+          "text": "C walks with dog.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R37",
+          "text": "C walks on the road with a dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C145",
+      "sampled_frame_index": 145,
+      "sample_interval": [
+        145,
+        146
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C146",
+      "sampled_frame_index": 146,
+      "sample_interval": [
+        146,
+        147
+      ],
+      "original_caption": "#C C holds a leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        ],
+        "original_text": "#C C holds a leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R38",
+          "text": "C holds a leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R39",
+          "text": "C holds leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C147",
+      "sampled_frame_index": 147,
+      "sample_interval": [
+        147,
+        148
+      ],
+      "original_caption": "#C C stops walking",
+      "archived_F_evidence": {
+        "original_text": "#C C stops walking"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R40",
+          "text": "C stops walking.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C148",
+      "sampled_frame_index": 148,
+      "sample_interval": [
+        148,
+        149
+      ],
+      "original_caption": "#C C walks the dog along the road",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks the dog along the road"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R41",
+          "text": "C walks the dog along the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C149",
+      "sampled_frame_index": 149,
+      "sample_interval": [
+        149,
+        150
+      ],
+      "original_caption": "#C C stops walking",
+      "archived_F_evidence": {
+        "original_text": "#C C stops walking"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R40",
+          "text": "C stops walking.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C150",
+      "sampled_frame_index": 150,
+      "sample_interval": [
+        150,
+        151
+      ],
+      "original_caption": "#C C stops ",
+      "archived_F_evidence": {
+        "original_text": "#C C stops "
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R42",
+          "text": "C stops.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C151",
+      "sampled_frame_index": 151,
+      "sample_interval": [
+        151,
+        152
+      ],
+      "original_caption": "#C C pulls dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C152",
+      "sampled_frame_index": 152,
+      "sample_interval": [
+        152,
+        153
+      ],
+      "original_caption": "#C C walks with a dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with a dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R22",
+          "text": "C walks with a dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C153",
+      "sampled_frame_index": 153,
+      "sample_interval": [
+        153,
+        154
+      ],
+      "original_caption": "#C C walks on the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks on the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R33",
+          "text": "C walks on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C154",
+      "sampled_frame_index": 154,
+      "sample_interval": [
+        154,
+        155
+      ],
+      "original_caption": "#C C pulls dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C155",
+      "sampled_frame_index": 155,
+      "sample_interval": [
+        155,
+        156
+      ],
+      "original_caption": "#C C stops walking",
+      "archived_F_evidence": {
+        "original_text": "#C C stops walking"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R40",
+          "text": "C stops walking.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C156",
+      "sampled_frame_index": 156,
+      "sample_interval": [
+        156,
+        157
+      ],
+      "original_caption": "#C C walks the dogs",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dogs"
+          }
+        ],
+        "original_text": "#C C walks the dogs"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dogs"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R43",
+          "text": "C walks the dogs.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R44",
+          "text": "C walks dogs.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C157",
+      "sampled_frame_index": 157,
+      "sample_interval": [
+        157,
+        158
+      ],
+      "original_caption": "#C C walks dog on a road",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog on a road"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R45",
+          "text": "C walks dog on a road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C158",
+      "sampled_frame_index": 158,
+      "sample_interval": [
+        158,
+        159
+      ],
+      "original_caption": "#C C walks around",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C159",
+      "sampled_frame_index": 159,
+      "sample_interval": [
+        159,
+        160
+      ],
+      "original_caption": "#C C holds the leash with both hands",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        ],
+        "original_text": "#C C holds the leash with both hands"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R39",
+          "text": "C holds leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R46",
+          "text": "C holds the leash with both hands.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C160",
+      "sampled_frame_index": 160,
+      "sample_interval": [
+        160,
+        161
+      ],
+      "original_caption": "#C C walks with dog on road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with dog on road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R47",
+          "text": "C walks with dog on road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C161",
+      "sampled_frame_index": 161,
+      "sample_interval": [
+        161,
+        162
+      ],
+      "original_caption": "#C C stops walking",
+      "archived_F_evidence": {
+        "original_text": "#C C stops walking"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R40",
+          "text": "C stops walking.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C162",
+      "sampled_frame_index": 162,
+      "sample_interval": [
+        162,
+        163
+      ],
+      "original_caption": "#C C walks around",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C163",
+      "sampled_frame_index": 163,
+      "sample_interval": [
+        163,
+        164
+      ],
+      "original_caption": "#C C walks around the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "C walks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C164",
+      "sampled_frame_index": 164,
+      "sample_interval": [
+        164,
+        165
+      ],
+      "original_caption": "#C C walks around the road with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around the road with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R48",
+          "text": "C walks around the road with the dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C165",
+      "sampled_frame_index": 165,
+      "sample_interval": [
+        165,
+        166
+      ],
+      "original_caption": "#C C walks with dog on the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with dog on the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "C walks with dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C166",
+      "sampled_frame_index": 166,
+      "sample_interval": [
+        166,
+        167
+      ],
+      "original_caption": "#C C walks with dog on the road",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with dog on the road"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "C walks with dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C167",
+      "sampled_frame_index": 167,
+      "sample_interval": [
+        167,
+        168
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C168",
+      "sampled_frame_index": 168,
+      "sample_interval": [
+        168,
+        169
+      ],
+      "original_caption": "#C C walks around",
+      "archived_F_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C169",
+      "sampled_frame_index": 169,
+      "sample_interval": [
+        169,
+        170
+      ],
+      "original_caption": "#C C holds dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C170",
+      "sampled_frame_index": 170,
+      "sample_interval": [
+        170,
+        171
+      ],
+      "original_caption": "#C C walks with dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R23",
+          "text": "C walks with dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C171",
+      "sampled_frame_index": 171,
+      "sample_interval": [
+        171,
+        172
+      ],
+      "original_caption": "#C C pulls the leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        ],
+        "original_text": "#C C pulls the leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R26",
+          "text": "C pulls the leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R27",
+          "text": "C pulls leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C172",
+      "sampled_frame_index": 172,
+      "sample_interval": [
+        172,
+        173
+      ],
+      "original_caption": "#C C walks with the dog",
+      "archived_F_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C173",
+      "sampled_frame_index": 173,
+      "sample_interval": [
+        173,
+        174
+      ],
+      "original_caption": "#C C walks the dog",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks the dog"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R49",
+          "text": "C walks the dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C174",
+      "sampled_frame_index": 174,
+      "sample_interval": [
+        174,
+        175
+      ],
+      "original_caption": "#C C walks dog along the road",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog along the road"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R2",
+          "text": "C walks dog along the road.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C175",
+      "sampled_frame_index": 175,
+      "sample_interval": [
+        175,
+        176
+      ],
+      "original_caption": "#C C pulls the dog leash with his left hand",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls the dog leash with his left hand"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R50",
+          "text": "C pulls the dog leash with his left hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C176",
+      "sampled_frame_index": 176,
+      "sample_interval": [
+        176,
+        177
+      ],
+      "original_caption": "#C C pulls dog leash",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls dog leash"
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C177",
+      "sampled_frame_index": 177,
+      "sample_interval": [
+        177,
+        178
+      ],
+      "original_caption": "#C C holds a dog leash ",
+      "archived_F_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds a dog leash "
+      },
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R32",
+          "text": "C holds a dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": true
+    },
+    {
+      "caption_id": "C178",
+      "sampled_frame_index": 178,
+      "sample_interval": [
+        178,
+        179
+      ],
+      "original_caption": "#C C looks around",
+      "archived_F_evidence": {
+        "original_text": "#C C looks around"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R51",
+          "text": "C looks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    },
+    {
+      "caption_id": "C179",
+      "sampled_frame_index": 179,
+      "sample_interval": [
+        179,
+        180
+      ],
+      "original_caption": "#C C stares around",
+      "archived_F_evidence": {
+        "original_text": "#C C stares around"
+      },
+      "accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R52",
+          "text": "C stares around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "referenced_by_retained_candidate": false
+    }
+  ],
+  "retained_reference_indices": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    31,
+    36,
+    38,
+    39,
+    40,
+    42,
+    43,
+    44,
+    136,
+    139,
+    140,
+    142,
+    145,
+    148,
+    151,
+    154,
+    157,
+    167,
+    169,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177
+  ],
+  "qualification": "A temporal candidate can reference a caption without retaining that entire caption or proving every word is directly stated by that caption."
+}

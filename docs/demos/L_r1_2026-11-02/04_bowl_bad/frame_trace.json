@@ -1,0 +1,2119 @@
+[
+  {
+    "caption_id": "C0",
+    "interval": [
+      0,
+      1
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/0.jpg",
+    "original": "#C C picks a bottle of drink",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle of drink"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R0",
+      "R1"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C1",
+    "interval": [
+      1,
+      2
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/1.jpg",
+    "original": "#C C picks a packet of milk",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "packet of milk"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R2",
+      "R3"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C2",
+    "interval": [
+      2,
+      3
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/2.jpg",
+    "original": "#C C looks around the fridge",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R4"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C3",
+    "interval": [
+      3,
+      4
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/3.jpg",
+    "original": "#C C picks the bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R5",
+      "R6"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C4",
+    "interval": [
+      4,
+      5
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/4.jpg",
+    "original": "#C C puts the bottle in the fridge ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R7",
+      "R8"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C5",
+    "interval": [
+      5,
+      6
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/5.jpg",
+    "original": "#C C picks a bottle of water",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle of water"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R9",
+      "R10"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C6",
+    "interval": [
+      6,
+      7
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/6.jpg",
+    "original": "#C C picks the glass of water",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "glass of water"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R11",
+      "R12"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C7",
+    "interval": [
+      7,
+      8
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/7.jpg",
+    "original": "#C C picks a glass of water from the countertop ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "glass of water"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R12",
+      "R13"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C8",
+    "interval": [
+      8,
+      9
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/8.jpg",
+    "original": "#C C walks towards a sink table.",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R14"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C9",
+    "interval": [
+      9,
+      10
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/9.jpg",
+    "original": "#C C walks to the kitchen",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R15"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C10",
+    "interval": [
+      10,
+      11
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/10.jpg",
+    "original": "#C C picks a glass cup",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "glass cup"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R16",
+      "R17"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C11",
+    "interval": [
+      11,
+      12
+    ],
+    "scene": "S0",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/11.jpg",
+    "original": "#C C walks towards the cabinet",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "walks",
+          "patient": "towards the cabinet"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R18"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C12",
+    "interval": [
+      12,
+      13
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/12.jpg",
+    "original": "#C C picks a bottle of water",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle of water"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R9",
+      "R10"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C13",
+    "interval": [
+      13,
+      14
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/13.jpg",
+    "original": "#C C puts the can of soy sauce in the counter",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "can of soy sauce"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R19",
+      "R20"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C14",
+    "interval": [
+      14,
+      15
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/14.jpg",
+    "original": "#C C closes the bottle of cooking oil ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "closes",
+          "patient": "bottle of cooking oil"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R21",
+      "R22",
+      "R138"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C15",
+    "interval": [
+      15,
+      16
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/15.jpg",
+    "original": "#C C picks the rice",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "rice"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R23",
+      "R24",
+      "R138"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C16",
+    "interval": [
+      16,
+      17
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/16.jpg",
+    "original": "#C C picks the pot of rice",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "pot of rice"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R25",
+      "R26",
+      "R138"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C17",
+    "interval": [
+      17,
+      18
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/17.jpg",
+    "original": "#C C puts the rice down ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts",
+          "patient": "rice"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R27",
+      "R28"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C18",
+    "interval": [
+      18,
+      19
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/18.jpg",
+    "original": "#C C pours the water in the pot",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R29"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C19",
+    "interval": [
+      19,
+      20
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/19.jpg",
+    "original": "#C C moves the bowl ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "bowl"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R30",
+      "R31"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C20",
+    "interval": [
+      20,
+      21
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/20.jpg",
+    "original": "#C C pours the water in the bowl",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R32"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C21",
+    "interval": [
+      21,
+      22
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/21.jpg",
+    "original": "#C C picks the bowl",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bowl"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R33",
+      "R34"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C22",
+    "interval": [
+      22,
+      23
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/22.jpg",
+    "original": "#C C moves the pot",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "pot"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R35",
+      "R36"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C23",
+    "interval": [
+      23,
+      24
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/23.jpg",
+    "original": "#C C picks the tin of spice",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tin of spice"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R37",
+      "R38",
+      "R140"
+    ],
+    "final_paragraphs": [
+      "At sampled intervals [23,24) (unresolved hypothesis), An unresolved source observation states: \"C picks the tin of spice\"."
+    ]
+  },
+  {
+    "caption_id": "C24",
+    "interval": [
+      24,
+      25
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/24.jpg",
+    "original": "#C C picks the tin",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tin"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R39",
+      "R40",
+      "R138"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C25",
+    "interval": [
+      25,
+      26
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/25.jpg",
+    "original": "#C C picks the rice",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "rice"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R23",
+      "R24",
+      "R138"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C26",
+    "interval": [
+      26,
+      27
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/26.jpg",
+    "original": "#C C pours the rice on the paper",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R41"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C27",
+    "interval": [
+      27,
+      28
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/27.jpg",
+    "original": "#C C pours the soy in the tin",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R42"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C28",
+    "interval": [
+      28,
+      29
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/28.jpg",
+    "original": "#C C puts down the bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "puts down",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R43",
+      "R44",
+      "R139"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C29",
+    "interval": [
+      29,
+      30
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/29.jpg",
+    "original": "#C C picks up the paper",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "paper"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R45",
+      "R46"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C30",
+    "interval": [
+      30,
+      31
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/30.jpg",
+    "original": "#C C opens the tin",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "opens",
+          "patient": "tin"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R47",
+      "R48"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C31",
+    "interval": [
+      31,
+      32
+    ],
+    "scene": "S1",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/31.jpg",
+    "original": "#C C puts the container in the tin ",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R49"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C103",
+    "interval": [
+      103,
+      104
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/103.jpg",
+    "original": "#C C picks a tin",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "tin"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R40",
+      "R50"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C104",
+    "interval": [
+      104,
+      105
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/104.jpg",
+    "original": "#C C picks up a cup from the counter top",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "cup"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R51",
+      "R52"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C105",
+    "interval": [
+      105,
+      106
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/105.jpg",
+    "original": "#C C picks up the cup",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "cup"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R52",
+      "R53"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C106",
+    "interval": [
+      106,
+      107
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/106.jpg",
+    "original": "#C C opens the box",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "opens",
+          "patient": "box"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R54",
+      "R55"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C107",
+    "interval": [
+      107,
+      108
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/107.jpg",
+    "original": "#C C opens the packet of soy sauce",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "opens",
+          "patient": "packet of soy sauce"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R56",
+      "R57"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C108",
+    "interval": [
+      108,
+      109
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/108.jpg",
+    "original": "#C C picks a rice",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "rice"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R24",
+      "R58"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C109",
+    "interval": [
+      109,
+      110
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/109.jpg",
+    "original": "#C C stirs the soy sauce in the bowl",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "soy sauce",
+          "body_part": "bowl"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R59",
+      "R60"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C110",
+    "interval": [
+      110,
+      111
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/110.jpg",
+    "original": "#C C pours the flour in the tin",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R61"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C111",
+    "interval": [
+      111,
+      112
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/111.jpg",
+    "original": "#C C mixes the rice ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "rice"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R62",
+      "R63"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C112",
+    "interval": [
+      112,
+      113
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/112.jpg",
+    "original": "#C C stirs the flour",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "flour"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R64",
+      "R65"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C113",
+    "interval": [
+      113,
+      114
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/113.jpg",
+    "original": "#C C mixes the flour ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "flour"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R66",
+      "R67"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C114",
+    "interval": [
+      114,
+      115
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/114.jpg",
+    "original": "#C C mixes the food",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "food"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R68",
+      "R69"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C115",
+    "interval": [
+      115,
+      116
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/115.jpg",
+    "original": "#C C mixes the flour",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "flour"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R66",
+      "R67"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C116",
+    "interval": [
+      116,
+      117
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/116.jpg",
+    "original": "#C C moves the hand to the sink",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "moves",
+          "patient": "hand"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R70",
+      "R71"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C117",
+    "interval": [
+      117,
+      118
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/117.jpg",
+    "original": "#C C shakes the plastic bag",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "shakes",
+          "patient": "plastic bag"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R72",
+      "R73"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C118",
+    "interval": [
+      118,
+      119
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/118.jpg",
+    "original": "#C C picks the spice from the bowl",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R74"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C119",
+    "interval": [
+      119,
+      120
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/119.jpg",
+    "original": "#C C puts the cocoa flakes in the plate",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R75"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C120",
+    "interval": [
+      120,
+      121
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/120.jpg",
+    "original": "#C C applies the starch on the hands",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R76"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C121",
+    "interval": [
+      121,
+      122
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/121.jpg",
+    "original": "#C C pours the rice in the sugar",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R77"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C122",
+    "interval": [
+      122,
+      123
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/122.jpg",
+    "original": "#C C puts the food in the bowl",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R78"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C123",
+    "interval": [
+      123,
+      124
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/123.jpg",
+    "original": "#C C picks up the container",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks up",
+          "patient": "container"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R79",
+      "R80"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C124",
+    "interval": [
+      124,
+      125
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/124.jpg",
+    "original": "#C C picks a paper towel",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "paper towel"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R81",
+      "R82"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C125",
+    "interval": [
+      125,
+      126
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/125.jpg",
+    "original": "#C C picks a bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R6",
+      "R83"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C126",
+    "interval": [
+      126,
+      127
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/126.jpg",
+    "original": "#C C opens the bottle",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "opens",
+          "patient": "bottle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R84",
+      "R85"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C127",
+    "interval": [
+      127,
+      128
+    ],
+    "scene": "S5",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/127.jpg",
+    "original": "#C C walks to the cabinet",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R86"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C137",
+    "interval": [
+      137,
+      138
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/137.jpg",
+    "original": "#C C picks a bowl of vegetables from the countertop",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bowl of vegetables"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R87",
+      "R88"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C138",
+    "interval": [
+      138,
+      139
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/138.jpg",
+    "original": "#C C stirs the groundnuts in the bowl with the cooking stick ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "groundnuts",
+          "body_part": "cooking stick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R89",
+      "R90"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C139",
+    "interval": [
+      139,
+      140
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/139.jpg",
+    "original": "#C C mixes the mixture of ingredients with the cooking stick ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "mixture of ingredients"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R91",
+      "R92"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C140",
+    "interval": [
+      140,
+      141
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/140.jpg",
+    "original": "#C C mixes the food in the bowl",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "food",
+          "body_part": "bowl"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R93",
+      "R94"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C141",
+    "interval": [
+      141,
+      142
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/141.jpg",
+    "original": "#C C mixes the ingredients",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "ingredients"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R95",
+      "R96"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C142",
+    "interval": [
+      142,
+      143
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/142.jpg",
+    "original": "#C C stirs  the  flour in the bowl with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "flour",
+          "body_part": "spoon"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R97",
+      "R98"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C143",
+    "interval": [
+      143,
+      144
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/143.jpg",
+    "original": "#C C stirs the mixture with a wooden ladle ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "mixture",
+          "body_part": "wooden ladle"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R99",
+      "R100"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C144",
+    "interval": [
+      144,
+      145
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/144.jpg",
+    "original": "#C C stirs the mixture of flour and sugar in the bowl with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "mixture of flour and sugar",
+          "body_part": "spoon"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R101",
+      "R102"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C145",
+    "interval": [
+      145,
+      146
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/145.jpg",
+    "original": "#C C stirs the mixture of flour and salt",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "mixture of flour and salt"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R103",
+      "R104"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C146",
+    "interval": [
+      146,
+      147
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/146.jpg",
+    "original": "#C C mixes the food with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "food"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R69",
+      "R105"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C147",
+    "interval": [
+      147,
+      148
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/147.jpg",
+    "original": "#C C mixes the rice and the flour together",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R106"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C148",
+    "interval": [
+      148,
+      149
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/148.jpg",
+    "original": "#C C picks the bowl with flour from the countertop",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bowl with flour"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R107",
+      "R108"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C149",
+    "interval": [
+      149,
+      150
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/149.jpg",
+    "original": "#C C mixes the flour and the flour",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R109"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C150",
+    "interval": [
+      150,
+      151
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/150.jpg",
+    "original": "#C C mixes the food with the bowl",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R110"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C151",
+    "interval": [
+      151,
+      152
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/151.jpg",
+    "original": "#C C mixes the food with a bowl",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "food",
+          "instrument": "bowl"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R111",
+      "R112"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C152",
+    "interval": [
+      152,
+      153
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/152.jpg",
+    "original": "#C C mixes the flour and rice",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "flour and rice"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R113",
+      "R114"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C153",
+    "interval": [
+      153,
+      154
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/153.jpg",
+    "original": "#C C mixes the flour with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "flour"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R67",
+      "R115"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C154",
+    "interval": [
+      154,
+      155
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/154.jpg",
+    "original": "#C C mixes the flour",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "flour"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R66",
+      "R67"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C155",
+    "interval": [
+      155,
+      156
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/155.jpg",
+    "original": "#C C mixes the flour with the spoon ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "flour"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R67",
+      "R115"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C156",
+    "interval": [
+      156,
+      157
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/156.jpg",
+    "original": "#C C mixes the food with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "food"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R69",
+      "R105"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C157",
+    "interval": [
+      157,
+      158
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/157.jpg",
+    "original": "#C C mixes the flour in the bowl with the spoon",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R116"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C158",
+    "interval": [
+      158,
+      159
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/158.jpg",
+    "original": "#C C stirs the mixture of ingredients with a spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "mixture of ingredients"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R117",
+      "R118"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C159",
+    "interval": [
+      159,
+      160
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/159.jpg",
+    "original": "#C C picks the powder",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "powder"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R119",
+      "R120"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C160",
+    "interval": [
+      160,
+      161
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/160.jpg",
+    "original": "#C C stirs the mixture of flour and flour mixture with the hands",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "mixture of flour and flour mixture"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R121",
+      "R122"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C161",
+    "interval": [
+      161,
+      162
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/161.jpg",
+    "original": "#C C mixes the food with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "food"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R69",
+      "R105"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C162",
+    "interval": [
+      162,
+      163
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/162.jpg",
+    "original": "#C C mixes the flour in the bowl with her hand",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "flour",
+          "body_part": "hand"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R123",
+      "R124"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C163",
+    "interval": [
+      163,
+      164
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/163.jpg",
+    "original": "#C C picks the bowl",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bowl"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R33",
+      "R34"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C164",
+    "interval": [
+      164,
+      165
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/164.jpg",
+    "original": "#C C mixes the food with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "food"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R69",
+      "R105"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C165",
+    "interval": [
+      165,
+      166
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/165.jpg",
+    "original": "#C C stirs the mixture of flour and salt ",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "mixture of flour and salt"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R103",
+      "R104"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C166",
+    "interval": [
+      166,
+      167
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/166.jpg",
+    "original": "#C C mixes the flour with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "flour"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R67",
+      "R115"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C167",
+    "interval": [
+      167,
+      168
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/167.jpg",
+    "original": "#C C stirs the mixture of powder and sugar",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "mixture of powder and sugar"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R125",
+      "R126"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C168",
+    "interval": [
+      168,
+      169
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/168.jpg",
+    "original": "#C C stirs the mixture of flour and sugar",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "mixture of flour and sugar"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R127",
+      "R128"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C169",
+    "interval": [
+      169,
+      170
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/169.jpg",
+    "original": "#C C stirs the food with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "food"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R129",
+      "R130"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C170",
+    "interval": [
+      170,
+      171
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/170.jpg",
+    "original": "#C C picks the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "spoon"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R131",
+      "R132"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C171",
+    "interval": [
+      171,
+      172
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/171.jpg",
+    "original": "#C C mixes the groundnuts with a cooking stick",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "mixes",
+          "patient": "groundnuts",
+          "body_part": "cooking stick"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R133",
+      "R134"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C172",
+    "interval": [
+      172,
+      173
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/172.jpg",
+    "original": "#C C stirs the ingredients with the spoon",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "stirs",
+          "patient": "ingredients"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R135",
+      "R136"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C173",
+    "interval": [
+      173,
+      174
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/173.jpg",
+    "original": "#C C mixes the flour with the bowl",
+    "accepted_fields": {},
+    "candidate_ids": [
+      "R137"
+    ],
+    "final_paragraphs": []
+  },
+  {
+    "caption_id": "C174",
+    "interval": [
+      174,
+      175
+    ],
+    "scene": "S7",
+    "image": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/b45379aa-d6f3-4033-83df-5577fc49cfc0/174.jpg",
+    "original": "#C C picks the bowl",
+    "accepted_fields": {
+      "actions": [
+        {
+          "actor": "C",
+          "verb": "picks",
+          "patient": "bowl"
+        }
+      ]
+    },
+    "candidate_ids": [
+      "R33",
+      "R34"
+    ],
+    "final_paragraphs": []
+  }
+]

@@ -1,0 +1,4056 @@
+{
+  "question_id": "916476da-a699-4132-b5cb-ae992e647b1b",
+  "rows": [
+    {
+      "sampled_frame_index": 0,
+      "sample_interval": [
+        0,
+        1
+      ],
+      "original_caption": "#C C moves book",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ],
+        "original_text": "#C C moves book"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C moves book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [6,7), [34,35) (source assertion), C moves book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 1,
+      "sample_interval": [
+        1,
+        2
+      ],
+      "original_caption": "#C C rubs the paint",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "paint"
+          }
+        ],
+        "original_text": "#C C rubs the paint"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "paint"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R1",
+          "text": "C rubs the paint.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R2",
+          "text": "C rubs paint.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 2,
+      "sample_interval": [
+        2,
+        3
+      ],
+      "original_caption": "#C C draws on the paper",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the paper"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C draws on the paper.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [2,3), [26,27), [35,36), [36,37), [41,42) (source assertion), C draws on the paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 3,
+      "sample_interval": [
+        3,
+        4
+      ],
+      "original_caption": "#C C draws on the painting paper",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the painting paper"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R4",
+          "text": "C draws on the painting paper.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 4,
+      "sample_interval": [
+        4,
+        5
+      ],
+      "original_caption": "#C C draws a picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 5,
+      "sample_interval": [
+        5,
+        6
+      ],
+      "original_caption": "#C C adjusts the drawing",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "adjusts",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C adjusts the drawing"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "adjusts",
+            "patient": "drawing"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C adjusts the drawing.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R8",
+          "text": "C adjusts drawing.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 6,
+      "sample_interval": [
+        6,
+        7
+      ],
+      "original_caption": "#C C moves the book",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ],
+        "original_text": "#C C moves the book"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C moves book.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R9",
+          "text": "C moves the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [6,7), [34,35) (source assertion), C moves book."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R9",
+          "grouped_record_ids": [
+            "R9"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [34,35) (source assertion), C moves the book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 7,
+      "sample_interval": [
+        7,
+        8
+      ],
+      "original_caption": "#C C moves hand on the table",
+      "F_archived_evidence": {
+        "original_text": "#C C moves hand on the table"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R10",
+          "text": "C moves hand on the table.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 8,
+      "sample_interval": [
+        8,
+        9
+      ],
+      "original_caption": "#C C moves a rubber on the table",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "rubber"
+          }
+        ],
+        "original_text": "#C C moves a rubber on the table"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "rubber"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R11",
+          "text": "C moves a rubber on the table.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R12",
+          "text": "C moves rubber.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 9,
+      "sample_interval": [
+        9,
+        10
+      ],
+      "original_caption": "#C C draws on the drawing book with a pencil",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the drawing book with a pencil"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R13",
+          "text": "C draws on the drawing book with a pencil.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 10,
+      "sample_interval": [
+        10,
+        11
+      ],
+      "original_caption": "#C C moves pen",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C moves pen"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "pen"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R14",
+          "text": "C moves pen.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R92",
+          "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+          "decision": "group:R92",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R94",
+          "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+          "decision": "group:R94",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        }
+      ],
+      "processing_status": "直接候选跳过，仅保留上游时序关联",
+      "final_input_paragraphs": [
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R92",
+          "grouped_record_ids": [
+            "R92"
+          ],
+          "exact_final_paragraph": "At sampled intervals [10,11), [22,23), [24,25), [148,149) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R94",
+          "grouped_record_ids": [
+            "R94"
+          ],
+          "exact_final_paragraph": "At sampled intervals [10,11), [22,23), [24,25), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\"."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 11,
+      "sample_interval": [
+        11,
+        12
+      ],
+      "original_caption": "#C C moves the pencil to the right",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "pencil"
+          }
+        ],
+        "original_text": "#C C moves the pencil to the right"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "pencil"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C moves the pencil to the right.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R16",
+          "text": "C moves pencil.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 12,
+      "sample_interval": [
+        12,
+        13
+      ],
+      "original_caption": "#C C moves the drawing book ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "drawing book"
+          }
+        ],
+        "original_text": "#C C moves the drawing book "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "drawing book"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "C moves the drawing book.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R18",
+          "text": "C moves drawing book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R17",
+          "grouped_record_ids": [
+            "R17"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [135,136) (source assertion), C moves the drawing book."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R18",
+          "grouped_record_ids": [
+            "R18"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [135,136) (source assertion), C moves drawing book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 13,
+      "sample_interval": [
+        13,
+        14
+      ],
+      "original_caption": "#C C rubs a drawing",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C rubs a drawing"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C rubs a drawing.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R20",
+          "text": "C rubs drawing.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 14,
+      "sample_interval": [
+        14,
+        15
+      ],
+      "original_caption": "#C C rubs a drawing with a rubber",
+      "F_archived_evidence": {
+        "original_text": "#C C rubs a drawing with a rubber"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R21",
+          "text": "C rubs a drawing with a rubber.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 15,
+      "sample_interval": [
+        15,
+        16
+      ],
+      "original_caption": "#C C rubs a drawing",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C rubs a drawing"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C rubs a drawing.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R20",
+          "text": "C rubs drawing.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 16,
+      "sample_interval": [
+        16,
+        17
+      ],
+      "original_caption": "#C C rubs drawing",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C rubs drawing"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "rubs",
+            "patient": "drawing"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R20",
+          "text": "C rubs drawing.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 17,
+      "sample_interval": [
+        17,
+        18
+      ],
+      "original_caption": "#C C  moves hands ",
+      "F_archived_evidence": {
+        "original_text": "#C C  moves hands "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R22",
+          "text": "C  moves hands.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 18,
+      "sample_interval": [
+        18,
+        19
+      ],
+      "original_caption": "#C C scratches the book",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "scratches",
+            "patient": "book"
+          }
+        ],
+        "original_text": "#C C scratches the book"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "scratches",
+            "patient": "book"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R23",
+          "text": "C scratches the book.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R24",
+          "text": "C scratches book.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 19,
+      "sample_interval": [
+        19,
+        20
+      ],
+      "original_caption": "#C C wipes the face",
+      "F_archived_evidence": {
+        "original_text": "#C C wipes the face"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R25",
+          "text": "C wipes the face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 20,
+      "sample_interval": [
+        20,
+        21
+      ],
+      "original_caption": "#C C scratches her face",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "scratches",
+            "patient": "face"
+          }
+        ],
+        "original_text": "#C C scratches her face"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "scratches",
+            "patient": "face"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R26",
+          "text": "C scratches her face.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R27",
+          "text": "C scratches face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 21,
+      "sample_interval": [
+        21,
+        22
+      ],
+      "original_caption": "#C C drops pencil",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "drops",
+            "patient": "pencil"
+          }
+        ],
+        "original_text": "#C C drops pencil"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "drops",
+            "patient": "pencil"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R28",
+          "text": "C drops pencil.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 22,
+      "sample_interval": [
+        22,
+        23
+      ],
+      "original_caption": "#C C draws on the book with a pen ",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book with a pen "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R29",
+          "text": "C draws on the book with a pen.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R86",
+          "text": "C draws on the book with a pen. The text memory associates this observation with C (text reference E2).",
+          "decision": "group:R86",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R87",
+          "text": "C draws on the book with a pen. The text memory associates this observation with book (text reference E1).",
+          "decision": "group:R86",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R90",
+          "text": "The source describes \"C (text reference E2)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object.",
+          "decision": "group:R90",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R92",
+          "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+          "decision": "group:R92",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R93",
+          "text": "The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\".",
+          "decision": "group:R93",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R94",
+          "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+          "decision": "group:R94",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R95",
+          "text": "The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\".",
+          "decision": "group:R95",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        }
+      ],
+      "processing_status": "直接候选跳过，仅保留上游时序关联",
+      "final_input_paragraphs": [
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R86",
+          "grouped_record_ids": [
+            "R86",
+            "R87"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [25,26) (source assertion), C draws on the book with a pen. The text memory associates this observation with C (text reference E2). At sampled intervals [22,23), [25,26) (source assertion), C draws on the book with a pen. The text memory associates this observation with book (text reference E1)."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R90",
+          "grouped_record_ids": [
+            "R90"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26) (source assertion), The source describes \"C (text reference E2)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R92",
+          "grouped_record_ids": [
+            "R92"
+          ],
+          "exact_final_paragraph": "At sampled intervals [10,11), [22,23), [24,25), [148,149) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R93",
+          "grouped_record_ids": [
+            "R93"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [149,150) (text-inferred hypothesis), The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R94",
+          "grouped_record_ids": [
+            "R94"
+          ],
+          "exact_final_paragraph": "At sampled intervals [10,11), [22,23), [24,25), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R95",
+          "grouped_record_ids": [
+            "R95"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [148,149), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\"."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 23,
+      "sample_interval": [
+        23,
+        24
+      ],
+      "original_caption": "#C C draws on a paper",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on a paper"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R30",
+          "text": "C draws on a paper.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 24,
+      "sample_interval": [
+        24,
+        25
+      ],
+      "original_caption": "#C C draws on the book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C draws on the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R90",
+          "text": "The source describes \"C (text reference E2)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object.",
+          "decision": "group:R90",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R92",
+          "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+          "decision": "group:R92",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R93",
+          "text": "The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\".",
+          "decision": "group:R93",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R94",
+          "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+          "decision": "group:R94",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R95",
+          "text": "The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\".",
+          "decision": "group:R95",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R96",
+          "text": "An unresolved source observation states: \"C draws on the book\".",
+          "decision": "skip",
+          "retained": false,
+          "qualification": "unresolved hypothesis"
+        }
+      ],
+      "processing_status": "直接证据及上游时序关联均保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R31",
+          "grouped_record_ids": [
+            "R31"
+          ],
+          "exact_final_paragraph": "At sampled intervals [24,25), [25,26), [27,28), [115,116), [123,124), [128,129), [131,132), [149,150) (source assertion), C draws on the book."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R90",
+          "grouped_record_ids": [
+            "R90"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26) (source assertion), The source describes \"C (text reference E2)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R92",
+          "grouped_record_ids": [
+            "R92"
+          ],
+          "exact_final_paragraph": "At sampled intervals [10,11), [22,23), [24,25), [148,149) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R93",
+          "grouped_record_ids": [
+            "R93"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [149,150) (text-inferred hypothesis), The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R94",
+          "grouped_record_ids": [
+            "R94"
+          ],
+          "exact_final_paragraph": "At sampled intervals [10,11), [22,23), [24,25), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R95",
+          "grouped_record_ids": [
+            "R95"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [148,149), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\"."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 25,
+      "sample_interval": [
+        25,
+        26
+      ],
+      "original_caption": "#C C draws on the book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C draws on the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R86",
+          "text": "C draws on the book with a pen. The text memory associates this observation with C (text reference E2).",
+          "decision": "group:R86",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R87",
+          "text": "C draws on the book with a pen. The text memory associates this observation with book (text reference E1).",
+          "decision": "group:R86",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R90",
+          "text": "The source describes \"C (text reference E2)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object.",
+          "decision": "group:R90",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R93",
+          "text": "The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\".",
+          "decision": "group:R93",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R95",
+          "text": "The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\".",
+          "decision": "group:R95",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        }
+      ],
+      "processing_status": "直接证据及上游时序关联均保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R31",
+          "grouped_record_ids": [
+            "R31"
+          ],
+          "exact_final_paragraph": "At sampled intervals [24,25), [25,26), [27,28), [115,116), [123,124), [128,129), [131,132), [149,150) (source assertion), C draws on the book."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R86",
+          "grouped_record_ids": [
+            "R86",
+            "R87"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [25,26) (source assertion), C draws on the book with a pen. The text memory associates this observation with C (text reference E2). At sampled intervals [22,23), [25,26) (source assertion), C draws on the book with a pen. The text memory associates this observation with book (text reference E1)."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R90",
+          "grouped_record_ids": [
+            "R90"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26) (source assertion), The source describes \"C (text reference E2)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R93",
+          "grouped_record_ids": [
+            "R93"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [149,150) (text-inferred hypothesis), The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R95",
+          "grouped_record_ids": [
+            "R95"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [148,149), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\"."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 26,
+      "sample_interval": [
+        26,
+        27
+      ],
+      "original_caption": "#C C draws on the paper",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the paper"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C draws on the paper.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [2,3), [26,27), [35,36), [36,37), [41,42) (source assertion), C draws on the paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 27,
+      "sample_interval": [
+        27,
+        28
+      ],
+      "original_caption": "#C C draws on the book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C draws on the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R31",
+          "grouped_record_ids": [
+            "R31"
+          ],
+          "exact_final_paragraph": "At sampled intervals [24,25), [25,26), [27,28), [115,116), [123,124), [128,129), [131,132), [149,150) (source assertion), C draws on the book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 28,
+      "sample_interval": [
+        28,
+        29
+      ],
+      "original_caption": "#C C draws on the drawing book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the drawing book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R32",
+          "text": "C draws on the drawing book.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 29,
+      "sample_interval": [
+        29,
+        30
+      ],
+      "original_caption": "#C C draws on a paper",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on a paper"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R30",
+          "text": "C draws on a paper.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 30,
+      "sample_interval": [
+        30,
+        31
+      ],
+      "original_caption": "#C C draws a picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 31,
+      "sample_interval": [
+        31,
+        32
+      ],
+      "original_caption": "#C C lifts the hand",
+      "F_archived_evidence": {
+        "original_text": "#C C lifts the hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R33",
+          "text": "C lifts the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 32,
+      "sample_interval": [
+        32,
+        33
+      ],
+      "original_caption": "#C C holds the pencil",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pencil"
+          }
+        ],
+        "original_text": "#C C holds the pencil"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pencil"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R34",
+          "text": "C holds the pencil.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R35",
+          "text": "C holds pencil.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 33,
+      "sample_interval": [
+        33,
+        34
+      ],
+      "original_caption": "#C C wipes the face",
+      "F_archived_evidence": {
+        "original_text": "#C C wipes the face"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R25",
+          "text": "C wipes the face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 34,
+      "sample_interval": [
+        34,
+        35
+      ],
+      "original_caption": "#C C moves the book",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ],
+        "original_text": "#C C moves the book"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C moves book.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R9",
+          "text": "C moves the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [6,7), [34,35) (source assertion), C moves book."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R9",
+          "grouped_record_ids": [
+            "R9"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [34,35) (source assertion), C moves the book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 35,
+      "sample_interval": [
+        35,
+        36
+      ],
+      "original_caption": "#C C draws on the paper",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the paper"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C draws on the paper.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [2,3), [26,27), [35,36), [36,37), [41,42) (source assertion), C draws on the paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 36,
+      "sample_interval": [
+        36,
+        37
+      ],
+      "original_caption": "#C C draws on the paper ",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the paper "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C draws on the paper.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [2,3), [26,27), [35,36), [36,37), [41,42) (source assertion), C draws on the paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 37,
+      "sample_interval": [
+        37,
+        38
+      ],
+      "original_caption": "#C C draws a picture of a dog ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture of a dog "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R36",
+          "text": "C draws a picture of a dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 38,
+      "sample_interval": [
+        38,
+        39
+      ],
+      "original_caption": "#C C draws the sketch with the marker pen",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "sketch"
+          }
+        ],
+        "original_text": "#C C draws the sketch with the marker pen"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "sketch"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R37",
+          "text": "C draws the sketch with the marker pen.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R38",
+          "text": "C draws sketch.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 39,
+      "sample_interval": [
+        39,
+        40
+      ],
+      "original_caption": "#C C draws a picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 40,
+      "sample_interval": [
+        40,
+        41
+      ],
+      "original_caption": "#C C colors a drawing",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "colors",
+            "patient": "drawing"
+          }
+        ],
+        "original_text": "#C C colors a drawing"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "colors",
+            "patient": "drawing"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R39",
+          "text": "C colors a drawing.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R40",
+          "text": "C colors drawing.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 41,
+      "sample_interval": [
+        41,
+        42
+      ],
+      "original_caption": "#C C draws on the paper",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the paper"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C draws on the paper.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [2,3), [26,27), [35,36), [36,37), [41,42) (source assertion), C draws on the paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 42,
+      "sample_interval": [
+        42,
+        43
+      ],
+      "original_caption": "#C C holds the book",
+      "F_archived_evidence": {
+        "original_text": "#C C holds the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R41",
+          "text": "C holds the book.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 88,
+      "sample_interval": [
+        88,
+        89
+      ],
+      "original_caption": "#C C turns the art book",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "art book"
+          }
+        ],
+        "original_text": "#C C turns the art book"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "art book"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R42",
+          "text": "C turns the art book.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R43",
+          "text": "C turns art book.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 89,
+      "sample_interval": [
+        89,
+        90
+      ],
+      "original_caption": "#C C picks a pen",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C picks a pen"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "pen"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R44",
+          "text": "C picks a pen.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R45",
+          "text": "C picks pen.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 90,
+      "sample_interval": [
+        90,
+        91
+      ],
+      "original_caption": "#C C moves hand",
+      "F_archived_evidence": {
+        "original_text": "#C C moves hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R46",
+          "text": "C moves hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 107,
+      "sample_interval": [
+        107,
+        108
+      ],
+      "original_caption": "#C C holds the drawing book",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "drawing book"
+          }
+        ],
+        "original_text": "#C C holds the drawing book"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "drawing book"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R47",
+          "text": "C holds the drawing book.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R48",
+          "text": "C holds drawing book.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 108,
+      "sample_interval": [
+        108,
+        109
+      ],
+      "original_caption": "#C C draws a picture of a man ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture of a man "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R49",
+          "text": "C draws a picture of a man.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 109,
+      "sample_interval": [
+        109,
+        110
+      ],
+      "original_caption": "#C C draws on the art with a pen ",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the art with a pen "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R50",
+          "text": "C draws on the art with a pen.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 110,
+      "sample_interval": [
+        110,
+        111
+      ],
+      "original_caption": "#C C draws on a drawing",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on a drawing"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R51",
+          "text": "C draws on a drawing.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 111,
+      "sample_interval": [
+        111,
+        112
+      ],
+      "original_caption": "#C C holds the picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C holds the picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R52",
+          "text": "C holds the picture.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R53",
+          "text": "C holds picture.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 112,
+      "sample_interval": [
+        112,
+        113
+      ],
+      "original_caption": "#C C turns around",
+      "F_archived_evidence": {
+        "original_text": "#C C turns around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R54",
+          "text": "C turns around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 113,
+      "sample_interval": [
+        113,
+        114
+      ],
+      "original_caption": "#C C draws the picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws the picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R55",
+          "text": "C draws the picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R55",
+          "grouped_record_ids": [
+            "R55"
+          ],
+          "exact_final_paragraph": "At sampled intervals [113,114), [122,123), [125,126), [130,131) (source assertion), C draws the picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 114,
+      "sample_interval": [
+        114,
+        115
+      ],
+      "original_caption": "#C C draws on a paper",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on a paper"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R30",
+          "text": "C draws on a paper.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 115,
+      "sample_interval": [
+        115,
+        116
+      ],
+      "original_caption": "#C C draws on the book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C draws on the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R31",
+          "grouped_record_ids": [
+            "R31"
+          ],
+          "exact_final_paragraph": "At sampled intervals [24,25), [25,26), [27,28), [115,116), [123,124), [128,129), [131,132), [149,150) (source assertion), C draws on the book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 116,
+      "sample_interval": [
+        116,
+        117
+      ],
+      "original_caption": "#C C draws on a paper ",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on a paper "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R30",
+          "text": "C draws on a paper.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 117,
+      "sample_interval": [
+        117,
+        118
+      ],
+      "original_caption": "#C C draws a picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 118,
+      "sample_interval": [
+        118,
+        119
+      ],
+      "original_caption": "#C C holds the art",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "art"
+          }
+        ],
+        "original_text": "#C C holds the art"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "art"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R56",
+          "text": "C holds the art.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R57",
+          "text": "C holds art.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 119,
+      "sample_interval": [
+        119,
+        120
+      ],
+      "original_caption": "#C C draws on a paper ",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on a paper "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R30",
+          "text": "C draws on a paper.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 120,
+      "sample_interval": [
+        120,
+        121
+      ],
+      "original_caption": "#C C paints a picture with a pen",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "paints",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C paints a picture with a pen"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "paints",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R58",
+          "text": "C paints a picture with a pen.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R59",
+          "text": "C paints picture.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 121,
+      "sample_interval": [
+        121,
+        122
+      ],
+      "original_caption": "#C C draws a picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 122,
+      "sample_interval": [
+        122,
+        123
+      ],
+      "original_caption": "#C C draws the picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws the picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R55",
+          "text": "C draws the picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R55",
+          "grouped_record_ids": [
+            "R55"
+          ],
+          "exact_final_paragraph": "At sampled intervals [113,114), [122,123), [125,126), [130,131) (source assertion), C draws the picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 123,
+      "sample_interval": [
+        123,
+        124
+      ],
+      "original_caption": "#C C draws on the book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C draws on the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R31",
+          "grouped_record_ids": [
+            "R31"
+          ],
+          "exact_final_paragraph": "At sampled intervals [24,25), [25,26), [27,28), [115,116), [123,124), [128,129), [131,132), [149,150) (source assertion), C draws on the book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 124,
+      "sample_interval": [
+        124,
+        125
+      ],
+      "original_caption": "#C C draws a picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 125,
+      "sample_interval": [
+        125,
+        126
+      ],
+      "original_caption": "#C C draws the picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws the picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R55",
+          "text": "C draws the picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R55",
+          "grouped_record_ids": [
+            "R55"
+          ],
+          "exact_final_paragraph": "At sampled intervals [113,114), [122,123), [125,126), [130,131) (source assertion), C draws the picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 126,
+      "sample_interval": [
+        126,
+        127
+      ],
+      "original_caption": "#C C turns the art paper",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "art paper"
+          }
+        ],
+        "original_text": "#C C turns the art paper"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "art paper"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R60",
+          "text": "C turns the art paper.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R61",
+          "text": "C turns art paper.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 127,
+      "sample_interval": [
+        127,
+        128
+      ],
+      "original_caption": "#C C draws a dog",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C draws a dog"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R62",
+          "text": "C draws a dog.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R63",
+          "text": "C draws dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 128,
+      "sample_interval": [
+        128,
+        129
+      ],
+      "original_caption": "#C C draws on the book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C draws on the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R31",
+          "grouped_record_ids": [
+            "R31"
+          ],
+          "exact_final_paragraph": "At sampled intervals [24,25), [25,26), [27,28), [115,116), [123,124), [128,129), [131,132), [149,150) (source assertion), C draws on the book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 129,
+      "sample_interval": [
+        129,
+        130
+      ],
+      "original_caption": "#C C draws a portrait",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "portrait"
+          }
+        ],
+        "original_text": "#C C draws a portrait"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "portrait"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R64",
+          "text": "C draws a portrait.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R65",
+          "text": "C draws portrait.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 130,
+      "sample_interval": [
+        130,
+        131
+      ],
+      "original_caption": "#C C draws the picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws the picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R55",
+          "text": "C draws the picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R55",
+          "grouped_record_ids": [
+            "R55"
+          ],
+          "exact_final_paragraph": "At sampled intervals [113,114), [122,123), [125,126), [130,131) (source assertion), C draws the picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 131,
+      "sample_interval": [
+        131,
+        132
+      ],
+      "original_caption": "#C C draws on the book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C draws on the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R31",
+          "grouped_record_ids": [
+            "R31"
+          ],
+          "exact_final_paragraph": "At sampled intervals [24,25), [25,26), [27,28), [115,116), [123,124), [128,129), [131,132), [149,150) (source assertion), C draws on the book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 132,
+      "sample_interval": [
+        132,
+        133
+      ],
+      "original_caption": "#C C draws the art",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "art"
+          }
+        ],
+        "original_text": "#C C draws the art"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "art"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R66",
+          "text": "C draws the art.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R67",
+          "text": "C draws art.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 133,
+      "sample_interval": [
+        133,
+        134
+      ],
+      "original_caption": "#C C draws the image",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "image"
+          }
+        ],
+        "original_text": "#C C draws the image"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "image"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R68",
+          "text": "C draws the image.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R69",
+          "text": "C draws image.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 134,
+      "sample_interval": [
+        134,
+        135
+      ],
+      "original_caption": "#C C draws a image",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "image"
+          }
+        ],
+        "original_text": "#C C draws a image"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "image"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R69",
+          "text": "C draws image.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R70",
+          "text": "C draws a image.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 135,
+      "sample_interval": [
+        135,
+        136
+      ],
+      "original_caption": "#C C moves the drawing book",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "drawing book"
+          }
+        ],
+        "original_text": "#C C moves the drawing book"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "drawing book"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "C moves the drawing book.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R18",
+          "text": "C moves drawing book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R17",
+          "grouped_record_ids": [
+            "R17"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [135,136) (source assertion), C moves the drawing book."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R18",
+          "grouped_record_ids": [
+            "R18"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [135,136) (source assertion), C moves drawing book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 136,
+      "sample_interval": [
+        136,
+        137
+      ],
+      "original_caption": "#C C turns the lid",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "lid"
+          }
+        ],
+        "original_text": "#C C turns the lid"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "turns",
+            "patient": "lid"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R71",
+          "text": "C turns the lid.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R72",
+          "text": "C turns lid.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 137,
+      "sample_interval": [
+        137,
+        138
+      ],
+      "original_caption": "#C C holds pen",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C holds pen"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R73",
+          "text": "C holds pen.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 138,
+      "sample_interval": [
+        138,
+        139
+      ],
+      "original_caption": "#C C touches the hands",
+      "F_archived_evidence": {
+        "original_text": "#C C touches the hands"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R74",
+          "text": "C touches the hands.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 139,
+      "sample_interval": [
+        139,
+        140
+      ],
+      "original_caption": "#C C holds the hand ",
+      "F_archived_evidence": {
+        "original_text": "#C C holds the hand "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R75",
+          "text": "C holds the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 140,
+      "sample_interval": [
+        140,
+        141
+      ],
+      "original_caption": "#C C touches the pen",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "touches",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C touches the pen"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "touches",
+            "patient": "pen"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R76",
+          "text": "C touches the pen.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R77",
+          "text": "C touches pen.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 141,
+      "sample_interval": [
+        141,
+        142
+      ],
+      "original_caption": "#C C closes the pen",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "closes",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C closes the pen"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "closes",
+            "patient": "pen"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R78",
+          "text": "C closes the pen.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R79",
+          "text": "C closes pen.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 142,
+      "sample_interval": [
+        142,
+        143
+      ],
+      "original_caption": "#C C holds a pen with both hands",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C holds a pen with both hands"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R73",
+          "text": "C holds pen.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R80",
+          "text": "C holds a pen with both hands.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 143,
+      "sample_interval": [
+        143,
+        144
+      ],
+      "original_caption": "#C C holds the pen",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ],
+        "original_text": "#C C holds the pen"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pen"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R73",
+          "text": "C holds pen.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R81",
+          "text": "C holds the pen.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 144,
+      "sample_interval": [
+        144,
+        145
+      ],
+      "original_caption": "#C C holds a pencil",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pencil"
+          }
+        ],
+        "original_text": "#C C holds a pencil"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "pencil"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R35",
+          "text": "C holds pencil.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R82",
+          "text": "C holds a pencil.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 145,
+      "sample_interval": [
+        145,
+        146
+      ],
+      "original_caption": "#C C draws a picture ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 146,
+      "sample_interval": [
+        146,
+        147
+      ],
+      "original_caption": "#C C draws on the art",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the art"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R83",
+          "text": "C draws on the art.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 147,
+      "sample_interval": [
+        147,
+        148
+      ],
+      "original_caption": "#C C draws on the art book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the art book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R84",
+          "text": "C draws on the art book.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 148,
+      "sample_interval": [
+        148,
+        149
+      ],
+      "original_caption": "#C C draws on the art paper ",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the art paper "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R85",
+          "text": "C draws on the art paper.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R88",
+          "text": "C draws on the art paper. The text memory associates this observation with C (text reference E0).",
+          "decision": "group:R88",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R91",
+          "text": "The source describes \"C (text reference E0)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object.",
+          "decision": "group:R91",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R92",
+          "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+          "decision": "group:R92",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R95",
+          "text": "The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\".",
+          "decision": "group:R95",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        }
+      ],
+      "processing_status": "直接候选跳过，仅保留上游时序关联",
+      "final_input_paragraphs": [
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R88",
+          "grouped_record_ids": [
+            "R88"
+          ],
+          "exact_final_paragraph": "At sampled intervals [148,149), [149,150) (source assertion), C draws on the art paper. The text memory associates this observation with C (text reference E0)."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R91",
+          "grouped_record_ids": [
+            "R91"
+          ],
+          "exact_final_paragraph": "At sampled intervals [148,149), [149,150) (source assertion), The source describes \"C (text reference E0)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R92",
+          "grouped_record_ids": [
+            "R92"
+          ],
+          "exact_final_paragraph": "At sampled intervals [10,11), [22,23), [24,25), [148,149) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R95",
+          "grouped_record_ids": [
+            "R95"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [148,149), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\"."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 149,
+      "sample_interval": [
+        149,
+        150
+      ],
+      "original_caption": "#C C draws on the book",
+      "F_archived_evidence": {
+        "original_text": "#C C draws on the book"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C draws on the book.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R88",
+          "text": "C draws on the art paper. The text memory associates this observation with C (text reference E0).",
+          "decision": "group:R88",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R89",
+          "text": "C draws on the book. The text memory associates this observation with book (text reference E1).",
+          "decision": "group:R89",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R91",
+          "text": "The source describes \"C (text reference E0)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object.",
+          "decision": "group:R91",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R93",
+          "text": "The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\".",
+          "decision": "group:R93",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R94",
+          "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+          "decision": "group:R94",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        },
+        {
+          "id": "R95",
+          "text": "The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\".",
+          "decision": "group:R95",
+          "retained": true,
+          "qualification": "text-inferred hypothesis"
+        }
+      ],
+      "processing_status": "直接证据及上游时序关联均保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R31",
+          "grouped_record_ids": [
+            "R31"
+          ],
+          "exact_final_paragraph": "At sampled intervals [24,25), [25,26), [27,28), [115,116), [123,124), [128,129), [131,132), [149,150) (source assertion), C draws on the book."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R88",
+          "grouped_record_ids": [
+            "R88"
+          ],
+          "exact_final_paragraph": "At sampled intervals [148,149), [149,150) (source assertion), C draws on the art paper. The text memory associates this observation with C (text reference E0)."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R89",
+          "grouped_record_ids": [
+            "R89"
+          ],
+          "exact_final_paragraph": "At sampled intervals [149,150) (source assertion), C draws on the book. The text memory associates this observation with book (text reference E1)."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R91",
+          "grouped_record_ids": [
+            "R91"
+          ],
+          "exact_final_paragraph": "At sampled intervals [148,149), [149,150) (source assertion), The source describes \"C (text reference E0)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R93",
+          "grouped_record_ids": [
+            "R93"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [149,150) (text-inferred hypothesis), The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R94",
+          "grouped_record_ids": [
+            "R94"
+          ],
+          "exact_final_paragraph": "At sampled intervals [10,11), [22,23), [24,25), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\"."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R95",
+          "grouped_record_ids": [
+            "R95"
+          ],
+          "exact_final_paragraph": "At sampled intervals [22,23), [24,25), [25,26), [148,149), [149,150) (text-inferred hypothesis), The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\"."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 150,
+      "sample_interval": [
+        150,
+        151
+      ],
+      "original_caption": "#C C draws a picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 151,
+      "sample_interval": [
+        151,
+        152
+      ],
+      "original_caption": "#C C draws a picture",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ],
+        "original_text": "#C C draws a picture"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C draws a picture.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R6",
+          "text": "C draws picture.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R5",
+          "grouped_record_ids": [
+            "R5"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [39,40), [117,118), [121,122), [124,125), [145,146), [150,151), [151,152) (source assertion), C draws a picture."
+        },
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R6",
+          "grouped_record_ids": [
+            "R6"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [30,31), [37,38), [39,40), [108,109), [113,114), [117,118), [121,122), [122,123), [124,125), [125,126), [130,131), [145,146), [150,151), [151,152) (source assertion), C draws picture."
+        }
+      ]
+    }
+  ],
+  "note": "Final paragraphs are copied literally. Multiple frames can map to the same shared paragraph; repeated display in this trace does not mean repeated sending to the model.",
+  "system_and_question_options_remain_in_original_final_input": true,
+  "full_final_input_file": "12_actual_chat_template.txt",
+  "final_description_policy_prefix": "These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence.",
+  "unique_final_paragraphs": 18
+}

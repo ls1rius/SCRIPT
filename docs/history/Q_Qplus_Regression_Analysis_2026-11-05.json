@@ -1,0 +1,117 @@
+{
+  "at": "2026-11-05T00:41:05.385348+08:00",
+  "snapshot_cutoff": "2026-11-05T00:29:37.185256+08:00",
+  "n": 106,
+  "scores": {
+    "L": 59,
+    "O": 58,
+    "Oplus": 56,
+    "Q": 56,
+    "Qplus": 55
+  },
+  "pairs": {
+    "Q_vs_O": {
+      "improved": [
+        "00b9a0de-c59e-49cb-a127-6081e2fb8c8e"
+      ],
+      "regressed": [
+        "b664157e-612e-477c-8ef7-04c15be9c66c",
+        "a7b381f3-7f73-46fa-a99c-80a717a34556",
+        "a46b0bc8-65d6-4831-91cb-d2495859b8a2"
+      ]
+    },
+    "Qplus_vs_Oplus": {
+      "improved": [
+        "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+        "17d3ed08-b062-4197-9497-d06c6fd4f562",
+        "00b9a0de-c59e-49cb-a127-6081e2fb8c8e",
+        "2297b62e-33bc-4910-8d80-e304526b537d"
+      ],
+      "regressed": [
+        "cd384dae-4229-4fa5-9fed-e4b5a1432f29",
+        "b664157e-612e-477c-8ef7-04c15be9c66c",
+        "7ba34dd0-aa19-49ae-9bb9-81247f21e39e",
+        "a46b0bc8-65d6-4831-91cb-d2495859b8a2",
+        "530a5959-0ba6-4fde-9b19-494ef51fed33"
+      ]
+    },
+    "Q_vs_L": {
+      "improved": [
+        "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+        "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+        "9e50476f-2e77-46f3-8b06-f1005ee55974",
+        "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+        "a0a00d56-0f2d-4f3d-ae12-ee5bc4c7ba19",
+        "548cbaae-8311-4709-9822-185e18ff895b",
+        "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+        "d299858f-cde8-49a9-a713-fb546db0a268",
+        "02925d7a-a5db-4127-8c31-b232e78b684d"
+      ],
+      "regressed": [
+        "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+        "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+        "a7b381f3-7f73-46fa-a99c-80a717a34556",
+        "9377c192-d46d-4016-9db4-df8007dbe82b",
+        "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+        "b8bdd88f-996d-47bc-beb8-3b54c60754ec",
+        "a46b0bc8-65d6-4831-91cb-d2495859b8a2",
+        "8345d177-0ed4-4965-8455-bd17d2b42399",
+        "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+        "9557e88b-8880-4f64-88ec-815452f8ee4c",
+        "2297b62e-33bc-4910-8d80-e304526b537d",
+        "5f584429-b12b-4b15-9975-bf0cbfeaf2bc"
+      ]
+    },
+    "Qplus_vs_Q": {
+      "improved": [
+        "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+        "2297b62e-33bc-4910-8d80-e304526b537d"
+      ],
+      "regressed": [
+        "cd384dae-4229-4fa5-9fed-e4b5a1432f29",
+        "530a5959-0ba6-4fde-9b19-494ef51fed33",
+        "d299858f-cde8-49a9-a713-fb546db0a268"
+      ]
+    }
+  },
+  "Q_v1_decisions": {
+    "keep": 3450,
+    "uncertain": 3441,
+    "drop": 344
+  },
+  "Q_v1_source_observations": 7235,
+  "Q_v1_reader_observations": 6891,
+  "Q_v1_uncertain_fraction_in_reader": 0.499346974314323,
+  "new_regression_source_coverage": [
+    {
+      "uid": "b664157e-612e-477c-8ef7-04c15be9c66c",
+      "Q_source_rows": 108,
+      "O_source_rows": 68,
+      "all_O_retained_source_rows_still_present": true,
+      "uncertain": 64
+    },
+    {
+      "uid": "a7b381f3-7f73-46fa-a99c-80a717a34556",
+      "Q_source_rows": 14,
+      "O_source_rows": 13,
+      "all_O_retained_source_rows_still_present": true,
+      "uncertain": 9
+    },
+    {
+      "uid": "a46b0bc8-65d6-4831-91cb-d2495859b8a2",
+      "Q_source_rows": 32,
+      "O_source_rows": 18,
+      "all_O_retained_source_rows_still_present": true,
+      "uncertain": 13
+    }
+  ],
+  "verified_findings": [
+    "Q v1 reader flattens keep and uncertain into identical unlabelled source rows; relevance decision remains in selection archive but is absent from reader input.",
+    "All three Q-vs-O new losses in this snapshot preserve every source row retained by O. They cannot be explained by additional whole-source deletion alone.",
+    "Q and Qplus have equal retained evidence hashes; differing answers therefore arise downstream of identical selection, with representation/reader response as the changing factors.",
+    "a7b381f3 asks first-half versus second-half over [0,180], but the inherited O/N source only covers [0,15), and N stopped as sufficient. O correctness on that same source is not proof of adequate temporal coverage.",
+    "a46b0bc8 source has separate people preparing food without explicit interaction; Q selects cooperation. The question presupposition is not evidence for interaction; internal reasoning cannot be recovered from a single-letter answer."
+  ],
+  "attribution_limit": "Input differences and source loss/coverage are verified; noisy-context salience and semantic reader triggers are hypotheses without isolated counterfactual model runs. No new model calls for this analysis.",
+  "user_revision": "User explicitly requests ignoring uncertain observations; implemented independently as Q/Qplus keep-only v2, preserving the entire v1 archive."
+}

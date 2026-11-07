@@ -1,0 +1,529 @@
+{
+  "inputs": {
+    "question": "Based on the actions in the video, determine the overarching goal of the individual's actions, and identify key steps they took to achieve it.",
+    "options": [
+      "Ultimately, the individual's overarching goal and primary focus was to successfully create a detailed sketch.",
+      "The individual's overarching goal was to create a notebook cover.",
+      "Ultimately, the individual's overarching goal was to diligently create a comprehensive, accurate map.",
+      "The individual's overarching goal was to create a blueprint.",
+      "The ultimate objective of the individual was to successfully create a comprehensive list themselves."
+    ],
+    "captions": [
+      {
+        "id": "C0",
+        "interval": [
+          0,
+          1
+        ],
+        "text": "#C C pulls a book"
+      },
+      {
+        "id": "C1",
+        "interval": [
+          1,
+          2
+        ],
+        "text": "#C C moves the phone"
+      },
+      {
+        "id": "C2",
+        "interval": [
+          2,
+          3
+        ],
+        "text": "#C C picks a paper"
+      },
+      {
+        "id": "C3",
+        "interval": [
+          3,
+          4
+        ],
+        "text": "#C C pulls the paper"
+      },
+      {
+        "id": "C4",
+        "interval": [
+          4,
+          5
+        ],
+        "text": "#C C moves the book"
+      },
+      {
+        "id": "C5",
+        "interval": [
+          5,
+          6
+        ],
+        "text": "#C C turns the book pages"
+      },
+      {
+        "id": "C6",
+        "interval": [
+          6,
+          7
+        ],
+        "text": "#C C  turns the paper"
+      },
+      {
+        "id": "C7",
+        "interval": [
+          7,
+          8
+        ],
+        "text": "#C C moves the book"
+      },
+      {
+        "id": "C8",
+        "interval": [
+          8,
+          9
+        ],
+        "text": "#C C picks the paper"
+      },
+      {
+        "id": "C9",
+        "interval": [
+          9,
+          10
+        ],
+        "text": "#C C removes the cover paper from the book"
+      },
+      {
+        "id": "C10",
+        "interval": [
+          10,
+          11
+        ],
+        "text": "#C C moves the book"
+      },
+      {
+        "id": "C11",
+        "interval": [
+          11,
+          12
+        ],
+        "text": "#C C moves the book"
+      },
+      {
+        "id": "C12",
+        "interval": [
+          12,
+          13
+        ],
+        "text": "#C C picks the paper"
+      },
+      {
+        "id": "C13",
+        "interval": [
+          13,
+          14
+        ],
+        "text": "#C C removes the paper from the drawing paper"
+      },
+      {
+        "id": "C14",
+        "interval": [
+          14,
+          15
+        ],
+        "text": "#C C pushes the paper to the table "
+      },
+      {
+        "id": "C15",
+        "interval": [
+          15,
+          16
+        ],
+        "text": "#C C holds the picture"
+      },
+      {
+        "id": "C16",
+        "interval": [
+          16,
+          17
+        ],
+        "text": "#C C flips the picture"
+      },
+      {
+        "id": "C17",
+        "interval": [
+          17,
+          18
+        ],
+        "text": "#C C lifts the book"
+      },
+      {
+        "id": "C18",
+        "interval": [
+          18,
+          19
+        ],
+        "text": "#C C picks the art paper from the table"
+      },
+      {
+        "id": "C19",
+        "interval": [
+          19,
+          20
+        ],
+        "text": "#C C removes the box of the tape from the box."
+      },
+      {
+        "id": "C20",
+        "interval": [
+          20,
+          21
+        ],
+        "text": "#C C holds the elastic band"
+      },
+      {
+        "id": "C21",
+        "interval": [
+          21,
+          22
+        ],
+        "text": "#C C picks a paper cutter"
+      },
+      {
+        "id": "C22",
+        "interval": [
+          22,
+          23
+        ],
+        "text": "#C C lifts the cartridge"
+      },
+      {
+        "id": "C23",
+        "interval": [
+          23,
+          24
+        ],
+        "text": "#C C moves the hand"
+      },
+      {
+        "id": "C24",
+        "interval": [
+          24,
+          25
+        ],
+        "text": "#C C holds the paper with his left hand"
+      },
+      {
+        "id": "C25",
+        "interval": [
+          25,
+          26
+        ],
+        "text": "#C C moves the hand from the left hand "
+      },
+      {
+        "id": "C26",
+        "interval": [
+          26,
+          27
+        ],
+        "text": "#C C holds the paper"
+      },
+      {
+        "id": "C27",
+        "interval": [
+          27,
+          28
+        ],
+        "text": "#C C holds the papers"
+      },
+      {
+        "id": "C28",
+        "interval": [
+          28,
+          29
+        ],
+        "text": "#C C adjusts the book with both hands"
+      },
+      {
+        "id": "C29",
+        "interval": [
+          29,
+          30
+        ],
+        "text": "#C C holds the paper with his hands"
+      },
+      {
+        "id": "C30",
+        "interval": [
+          30,
+          31
+        ],
+        "text": "#C C holds the  tape measure"
+      },
+      {
+        "id": "C31",
+        "interval": [
+          31,
+          32
+        ],
+        "text": "#C C  holds the paper"
+      },
+      {
+        "id": "C32",
+        "interval": [
+          32,
+          33
+        ],
+        "text": "#C C holds the paper"
+      },
+      {
+        "id": "C33",
+        "interval": [
+          33,
+          34
+        ],
+        "text": "#C C draws the picture"
+      },
+      {
+        "id": "C34",
+        "interval": [
+          34,
+          35
+        ],
+        "text": "#C C places the rubber on the table"
+      },
+      {
+        "id": "C35",
+        "interval": [
+          35,
+          36
+        ],
+        "text": "#C C draws a picture on the table"
+      },
+      {
+        "id": "C36",
+        "interval": [
+          36,
+          37
+        ],
+        "text": "#C C moves the hand"
+      },
+      {
+        "id": "C37",
+        "interval": [
+          37,
+          38
+        ],
+        "text": "#C C  moves the paper on the table"
+      },
+      {
+        "id": "C38",
+        "interval": [
+          38,
+          39
+        ],
+        "text": "#C C picks the paper"
+      },
+      {
+        "id": "C39",
+        "interval": [
+          39,
+          40
+        ],
+        "text": "#C C puts the page of the drawing book on the table"
+      },
+      {
+        "id": "C40",
+        "interval": [
+          40,
+          41
+        ],
+        "text": "#C C picks the paper"
+      },
+      {
+        "id": "C41",
+        "interval": [
+          41,
+          42
+        ],
+        "text": "#C C picks up the paper"
+      },
+      {
+        "id": "C42",
+        "interval": [
+          42,
+          43
+        ],
+        "text": "#C C removes the stick"
+      },
+      {
+        "id": "C43",
+        "interval": [
+          43,
+          44
+        ],
+        "text": "#C C removes the piece of the elastic foam from the circular saw"
+      },
+      {
+        "id": "C44",
+        "interval": [
+          44,
+          45
+        ],
+        "text": "#C C picks up a tape measure from the table"
+      }
+    ],
+    "entities": [],
+    "observations": [],
+    "relations": [],
+    "prior_requests": [],
+    "directory": [
+      {
+        "id": "S0",
+        "interval": [
+          0,
+          45
+        ],
+        "description": "场景描述了一个人物C在进行一系列与书籍和纸张相关的活动。C首先拉出一本书，然后移动手机，接着拿起一张纸并将其拉出。C继续移动书本，并翻阅书页，随后又翻转了纸张。C再次移动书本，拿起另一张纸，并从书本中移除封面纸。C继续移动书本，再次拿起纸张，并从画纸中移除纸张，将其推到桌子上。C拿着一幅图片并翻转它，然后举起书本，从桌子上拿起艺术纸。接下来，C从盒子中取出胶带盒，并拿起橡皮筋。C接着拿起纸剪刀，抬起墨盒，移动手部，用左手握住纸张，然后用右手握住纸张。C同时用双手调整书本，用双手握住纸张，然后用左手握住卷尺，右手握住纸张。C继续用双手握住纸张，绘制图画，并将橡皮放在桌子上。C在桌子上绘制图画，移动手部，然后移动桌上的纸张。C拿起纸张，将绘画书页放在桌子上，再次拿起纸张，并将其抬起。C移除粘贴物，移除圆形锯上的泡沫塑料片，最后从桌子上拿起卷尺。"
+      },
+      {
+        "id": "S1",
+        "interval": [
+          45,
+          77
+        ],
+        "description": "场景描述了一个参与者C C在处理一张纸的过程。C C首先移动手，然后用双手握住纸张，将其翻转并放置在桌子上。接着，C C将纸张粘贴在书本上，并将其放在绘画纸上。C C多次打开和查看纸张，包括将其翻转、调整位置以及折叠。过程中，C C还擦拭了绘画纸，并伸展了袖子。"
+      },
+      {
+        "id": "S2",
+        "interval": [
+          77,
+          122
+        ],
+        "description": "场景描述了一个连续的动作序列，涉及C C在进行一些手工活动。C C首先移除袖子，然后拿起瓶盖并打开图片纸。接着，他转动纸张并将其放在画册上。C C随后移动绘图笔到左手，并拿起铅笔，之后又放下铅笔。C C继续拿起纸张并移动手，然后再次拿起纸张并擦拭纸张。C C从桌子上拿起另一张纸并擦拭它，接着用另一张纸擦拭纸张，并将纸张放在桌子上。C C用手擦拭纸张，然后在桌子上覆盖画纸。C C取下画笔的盖子，移除钢笔盖子，放下铅笔，并移动手臂。C C放下缝纫针，移动灯泡，拿起台灯。C C从桌子上拿起手镯，拿起线轴，拿着几张纸，拿起铅笔，将纸张放在桌子上，然后将纸张放在画纸上。C C放下纸张，将纸张放在桌子上。"
+      },
+      {
+        "id": "S3",
+        "interval": [
+          122,
+          132
+        ],
+        "description": "场景描述了一个学生C在进行书写和擦除的动作。C首先用纸巾擦拭纸张（ID0），接着用手继续擦拭（ID1）。然后C调整了记号笔（ID2），并把纸压在书本上（ID3）。随后C擦去铅笔上的痕迹（ID4），再次用手擦拭纸张（ID5）。C从桌面上拿起一张纸（ID6），并确认手中有一张纸（ID7）。C将铅笔放在桌子上（ID8），最后又拿起一张纸（ID9）准备继续书写。"
+      },
+      {
+        "id": "S4",
+        "interval": [
+          132,
+          177
+        ],
+        "description": "场景描述了一个艺术家C在进行一系列绘画活动的过程。C首先从桌子上拿起一张纸，调整铅笔并开始绘制艺术作品。他使用铅笔在纸上画线、圆圈，并绘制各种图案，包括一个人物H的肖像和一个装饰品。C还调整了纸张的位置，翻阅书籍页面，并在不同的表面上绘制图画。整个过程中，C不断调整铅笔和纸张的位置，以确保精确的绘画效果。"
+      },
+      {
+        "id": "S5",
+        "interval": [
+          177,
+          180
+        ],
+        "description": "场景描述了一个人正在绘制和书写的过程。首先，C在一张纸上画了一条线（ID0），接着继续在纸上绘画（ID1）。随后，C用铅笔在桌子上写字（ID2）。\n\n参与者：C\n\n主要活动：绘制和书写\n\n环境变化：无显著变化"
+      }
+    ],
+    "allowed_scene_ids": [
+      "S3"
+    ],
+    "opened_scenes": [
+      "S0"
+    ],
+    "current_scene": "S0",
+    "previous_reviews": [],
+    "source_type": "caption",
+    "previous_scene_captions": [],
+    "candidate_boundary_enforced": true,
+    "initial_candidate_order": [
+      "S0",
+      "S3",
+      "S4",
+      "S5",
+      "S1",
+      "S2"
+    ],
+    "remaining_candidate_ids": [
+      "S3",
+      "S4",
+      "S5",
+      "S1",
+      "S2"
+    ],
+    "local_scope_exhausted": false
+  },
+  "output": {
+    "data": "{\n  \"action\": \"stop\",\n  \"evidence_status\": \"sufficient\",\n  \"supported_option\": \"O0\",\n  \"option_comparison\": \"\",\n  \"option_assessments\": {\n    \"O0\": {\n      \"reason\": \"The individual's actions involved handling books, papers, and drawing, which aligns with creating a \",\n      \"status\": \"supported\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    },\n    \"O1\": {\n      \"reason\": \"The individual's actions did not involve creating a notebook cover, as there were no specific steps\",\n      \"status\": \"ruled_out\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    },\n    \"O2\": {\n      \"reason\": \"The individual's actions did not involve creating a comprehensive, accurate map, as there were no\",\n      \"status\": \"ruled_out\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    },\n    \"O3\": {\n      \"reason\": \"The individual's actions did not involve creating a blueprint, as there were no specific steps\",\n      \"status\": \"ruled_out\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    },\n    \"O4\": {\n      \"reason\": \"The individual's actions did not involve creating a comprehensive list, as there were no specific\",\n      \"status\": \"ruled_out\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    }\n  },\n  \"reason\": \"The individual's actions involved handling books, papers, and drawing, which aligns with creating a detailed sketch. The presence of drawing activities and the扥",
+    "raw_text": "{\n  \"action\": \"stop\",\n  \"evidence_status\": \"sufficient\",\n  \"supported_option\": \"O0\",\n  \"option_comparison\": \"\",\n  \"option_assessments\": {\n    \"O0\": {\n      \"reason\": \"The individual's actions involved handling books, papers, and drawing, which aligns with creating a \",\n      \"status\": \"supported\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    },\n    \"O1\": {\n      \"reason\": \"The individual's actions did not involve creating a notebook cover, as there were no specific steps\",\n      \"status\": \"ruled_out\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    },\n    \"O2\": {\n      \"reason\": \"The individual's actions did not involve creating a comprehensive, accurate map, as there were no\",\n      \"status\": \"ruled_out\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    },\n    \"O3\": {\n      \"reason\": \"The individual's actions did not involve creating a blueprint, as there were no specific steps\",\n      \"status\": \"ruled_out\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    },\n    \"O4\": {\n      \"reason\": \"The individual's actions did not involve creating a comprehensive list, as there were no specific\",\n      \"status\": \"ruled_out\"\n    ,\n      \"source_caption_ids\": [\"ID44\", \"ID43\", \"ID42\"]\n    }\n  },\n  \"reason\": \"The individual's actions involved handling books, papers, and drawing, which aligns with creating a detailed sketch. The presence of drawing activities and the扥",
+    "id_map": {
+      "ID0": "C0",
+      "ID1": "C1",
+      "ID2": "C2",
+      "ID3": "C3",
+      "ID4": "C4",
+      "ID5": "C5",
+      "ID6": "C6",
+      "ID7": "C7",
+      "ID8": "C8",
+      "ID9": "C9",
+      "ID10": "C10",
+      "ID11": "C11",
+      "ID12": "C12",
+      "ID13": "C13",
+      "ID14": "C14",
+      "ID15": "C15",
+      "ID16": "C16",
+      "ID17": "C17",
+      "ID18": "C18",
+      "ID19": "C19",
+      "ID20": "C20",
+      "ID21": "C21",
+      "ID22": "C22",
+      "ID23": "C23",
+      "ID24": "C24",
+      "ID25": "C25",
+      "ID26": "C26",
+      "ID27": "C27",
+      "ID28": "C28",
+      "ID29": "C29",
+      "ID30": "C30",
+      "ID31": "C31",
+      "ID32": "C32",
+      "ID33": "C33",
+      "ID34": "C34",
+      "ID35": "C35",
+      "ID36": "C36",
+      "ID37": "C37",
+      "ID38": "C38",
+      "ID39": "C39",
+      "ID40": "C40",
+      "ID41": "C41",
+      "ID42": "C42",
+      "ID43": "C43",
+      "ID44": "C44",
+      "ID45": "S0",
+      "ID46": "S1",
+      "ID47": "S2",
+      "ID48": "S3",
+      "ID49": "S4",
+      "ID50": "S5"
+    },
+    "usage": {
+      "input_tokens": 3973,
+      "output_tokens": 399,
+      "model_caption_context": null,
+      "model_frame_views": [],
+      "context_projection": "facts_and_all_frames_v1",
+      "model_tensor_pixels": {},
+      "input_tokens_by_model": {
+        "vlm": 3973
+      },
+      "cpu_seconds": 19.900158445999715,
+      "gpu_resident_seconds": 19.904708694666624,
+      "gpu_peak_allocated_bytes": 19100700672
+    }
+  },
+  "error": null,
+  "source_sha256": "e4aa890cd39196f6c074c57b911e3ed5a9f805c92604f54ab70ecc3aff435330",
+  "source_path": "workdirs/scene-planned-M-L-300-20261103-r14/runs/d85518f1-eee2-4d34-b955-6052f3d7dd2d/partial_search/raw_calls/daa442a6-4d16-42a5-8a16-2aa8c72cdaae-0.json"
+}

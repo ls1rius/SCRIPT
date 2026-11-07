@@ -1,0 +1,134 @@
+{
+  "at": "2026-11-06T11:57:15.392827+08:00",
+  "authorization": "All200 blind training with one initial LoRA, fixed six epochs; original300 as validation evaluation",
+  "new_root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-fixed6-200train-300val-20261106-r1",
+  "controller_pid": 1266141,
+  "worker_pid": 1266151,
+  "queue": {
+    "state": "running",
+    "stage": "training_fixed6",
+    "controller_pid": 1266141,
+    "workers": {
+      "0": {
+        "stage": "waiting_for_gpu",
+        "pid": 1266151,
+        "at": "2026-11-06T11:56:58.944130+08:00",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 47364,
+            "utilization": 96
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 46684,
+            "utilization": 96
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 12199,
+            "utilization": 99
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12049,
+            "utilization": 94
+          }
+        },
+        "effective_free_mib": {
+          "0": 21486,
+          "1": 17544,
+          "2": 12199,
+          "3": 12049
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 43008,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      }
+    },
+    "allowed_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "updated_at": "2026-11-06T11:57:06.582189+08:00"
+  },
+  "protocol": {
+    "training_questions": 200,
+    "training_windows": 4600,
+    "epochs": 6,
+    "adapter_initializations": 1,
+    "optimizer_initializations": 1,
+    "internal_validation_questions": 0,
+    "checkpoint_selection": false,
+    "refit": false,
+    "final_adapter": "epoch6",
+    "validation_questions": 300,
+    "validation_schedule": "Full300 once after epoch6; no labels used for gradients or choosing a checkpoint",
+    "student_input": "Original question and bounded observation window only; teacher labels already generated from training200",
+    "gradient_integrity": "Checked on first formal microstep without extra initialization or synthetic optimizer updates",
+    "base_model": "Frozen Qwen2.5-VL-7B-Instruct",
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "learning_rate": 2e-05,
+    "adapter_scope": "q4_independent_batch/q3_filter only",
+    "resource_policy": "Four GPU shared lease; primary43008MiB admission, 40960MiB training allocator; same primary model and lease through final validation; helper24576MiB/22528MiB",
+    "evaluation_scope": "User-designated development validation300, previously evaluated; no unseen holdout claim"
+  },
+  "old_experiment": {
+    "root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1",
+    "completed_evaluation": 99,
+    "state": "superseded",
+    "inflight_questions_finished": 4,
+    "unstarted_questions_withheld": 201,
+    "model_call_interruption": false,
+    "published_hashes_preserved": 99,
+    "old_supervisor_exited": true,
+    "training_and_adapter_kept": true
+  },
+  "teacher_reused": {
+    "questions": 200,
+    "files_verified": 1800,
+    "processing_dependency_seconds": 12638.665434800088,
+    "new_teacher_calls": 0
+  },
+  "untrained500": {
+    "controller_pid": 1239862,
+    "completed": 369,
+    "controller_unchanged": true,
+    "prior365_results_unchanged": true
+  },
+  "checks": {
+    "cpu_tests_passed": 22,
+    "frozen_standalone_import_passed": true,
+    "configuration_switch_passed": true,
+    "question_isolation_passed": true,
+    "real_training_started": false,
+    "real_gradient_check_passed": false
+  },
+  "launch_validation": "Initial queue-only launcher replaced before any lease/model/training call to correct final status handling; archived under launch_validation/",
+  "monitor": {
+    "pid": 1240673,
+    "new_root_added_old_training_root_removed": true,
+    "existing_dedup_and_state_preserved": true
+  },
+  "frozen_manifest_sha256": "4afaeef2361e90f9af127e55f05423be828c3651dbdf81c3c954855187f3eb13"
+}

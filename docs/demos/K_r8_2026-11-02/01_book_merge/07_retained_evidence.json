@@ -1,0 +1,1565 @@
+{
+  "keep": [
+    "R0",
+    "R3",
+    "R5",
+    "R6",
+    "R9",
+    "R17",
+    "R18",
+    "R31",
+    "R55",
+    "R88",
+    "R89",
+    "R90",
+    "R91",
+    "R92",
+    "R93",
+    "R94",
+    "R95"
+  ],
+  "uncertain": [],
+  "merge_groups": [
+    [
+      "R86",
+      "R87"
+    ]
+  ],
+  "records": [
+    {
+      "id": "R0",
+      "text": "C moves book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original",
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C0",
+          "original_text": "#C C moves book"
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C0",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C6",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C34",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "book"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C0",
+          "interval": [
+            0,
+            1
+          ]
+        },
+        {
+          "caption_id": "C6",
+          "interval": [
+            6,
+            7
+          ]
+        },
+        {
+          "caption_id": "C34",
+          "interval": [
+            34,
+            35
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R3",
+      "text": "C draws on the paper.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C2",
+          "original_text": "#C C draws on the paper"
+        },
+        {
+          "region": "description",
+          "caption_id": "C26",
+          "original_text": "#C C draws on the paper"
+        },
+        {
+          "region": "description",
+          "caption_id": "C35",
+          "original_text": "#C C draws on the paper"
+        },
+        {
+          "region": "description",
+          "caption_id": "C36",
+          "original_text": "#C C draws on the paper "
+        },
+        {
+          "region": "description",
+          "caption_id": "C41",
+          "original_text": "#C C draws on the paper"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C2",
+          "interval": [
+            2,
+            3
+          ]
+        },
+        {
+          "caption_id": "C26",
+          "interval": [
+            26,
+            27
+          ]
+        },
+        {
+          "caption_id": "C35",
+          "interval": [
+            35,
+            36
+          ]
+        },
+        {
+          "caption_id": "C36",
+          "interval": [
+            36,
+            37
+          ]
+        },
+        {
+          "caption_id": "C41",
+          "interval": [
+            41,
+            42
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R5",
+      "text": "C draws a picture.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C4",
+          "original_text": "#C C draws a picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C30",
+          "original_text": "#C C draws a picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C39",
+          "original_text": "#C C draws a picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C117",
+          "original_text": "#C C draws a picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C121",
+          "original_text": "#C C draws a picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C124",
+          "original_text": "#C C draws a picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C145",
+          "original_text": "#C C draws a picture "
+        },
+        {
+          "region": "description",
+          "caption_id": "C150",
+          "original_text": "#C C draws a picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C151",
+          "original_text": "#C C draws a picture"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        },
+        {
+          "caption_id": "C30",
+          "interval": [
+            30,
+            31
+          ]
+        },
+        {
+          "caption_id": "C39",
+          "interval": [
+            39,
+            40
+          ]
+        },
+        {
+          "caption_id": "C117",
+          "interval": [
+            117,
+            118
+          ]
+        },
+        {
+          "caption_id": "C121",
+          "interval": [
+            121,
+            122
+          ]
+        },
+        {
+          "caption_id": "C124",
+          "interval": [
+            124,
+            125
+          ]
+        },
+        {
+          "caption_id": "C145",
+          "interval": [
+            145,
+            146
+          ]
+        },
+        {
+          "caption_id": "C150",
+          "interval": [
+            150,
+            151
+          ]
+        },
+        {
+          "caption_id": "C151",
+          "interval": [
+            151,
+            152
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R6",
+      "text": "C draws picture.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C4",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C30",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C37",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C39",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C108",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C113",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C117",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C121",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C122",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C124",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C125",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C130",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C145",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C150",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C151",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "draws",
+            "patient": "picture"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C4",
+          "interval": [
+            4,
+            5
+          ]
+        },
+        {
+          "caption_id": "C30",
+          "interval": [
+            30,
+            31
+          ]
+        },
+        {
+          "caption_id": "C37",
+          "interval": [
+            37,
+            38
+          ]
+        },
+        {
+          "caption_id": "C39",
+          "interval": [
+            39,
+            40
+          ]
+        },
+        {
+          "caption_id": "C108",
+          "interval": [
+            108,
+            109
+          ]
+        },
+        {
+          "caption_id": "C113",
+          "interval": [
+            113,
+            114
+          ]
+        },
+        {
+          "caption_id": "C117",
+          "interval": [
+            117,
+            118
+          ]
+        },
+        {
+          "caption_id": "C121",
+          "interval": [
+            121,
+            122
+          ]
+        },
+        {
+          "caption_id": "C122",
+          "interval": [
+            122,
+            123
+          ]
+        },
+        {
+          "caption_id": "C124",
+          "interval": [
+            124,
+            125
+          ]
+        },
+        {
+          "caption_id": "C125",
+          "interval": [
+            125,
+            126
+          ]
+        },
+        {
+          "caption_id": "C130",
+          "interval": [
+            130,
+            131
+          ]
+        },
+        {
+          "caption_id": "C145",
+          "interval": [
+            145,
+            146
+          ]
+        },
+        {
+          "caption_id": "C150",
+          "interval": [
+            150,
+            151
+          ]
+        },
+        {
+          "caption_id": "C151",
+          "interval": [
+            151,
+            152
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R9",
+      "text": "C moves the book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C6",
+          "original_text": "#C C moves the book"
+        },
+        {
+          "region": "description",
+          "caption_id": "C34",
+          "original_text": "#C C moves the book"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C6",
+          "interval": [
+            6,
+            7
+          ]
+        },
+        {
+          "caption_id": "C34",
+          "interval": [
+            34,
+            35
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R17",
+      "text": "C moves the drawing book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C12",
+          "original_text": "#C C moves the drawing book "
+        },
+        {
+          "region": "description",
+          "caption_id": "C135",
+          "original_text": "#C C moves the drawing book"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C12",
+          "interval": [
+            12,
+            13
+          ]
+        },
+        {
+          "caption_id": "C135",
+          "interval": [
+            135,
+            136
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R18",
+      "text": "C moves drawing book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "F actions"
+      ],
+      "sources": [
+        {
+          "region": "F fact",
+          "caption_id": "C12",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "drawing book"
+          }
+        },
+        {
+          "region": "F fact",
+          "caption_id": "C135",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "drawing book"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C12",
+          "interval": [
+            12,
+            13
+          ]
+        },
+        {
+          "caption_id": "C135",
+          "interval": [
+            135,
+            136
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R31",
+      "text": "C draws on the book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C24",
+          "original_text": "#C C draws on the book"
+        },
+        {
+          "region": "description",
+          "caption_id": "C25",
+          "original_text": "#C C draws on the book"
+        },
+        {
+          "region": "description",
+          "caption_id": "C27",
+          "original_text": "#C C draws on the book"
+        },
+        {
+          "region": "description",
+          "caption_id": "C115",
+          "original_text": "#C C draws on the book"
+        },
+        {
+          "region": "description",
+          "caption_id": "C123",
+          "original_text": "#C C draws on the book"
+        },
+        {
+          "region": "description",
+          "caption_id": "C128",
+          "original_text": "#C C draws on the book"
+        },
+        {
+          "region": "description",
+          "caption_id": "C131",
+          "original_text": "#C C draws on the book"
+        },
+        {
+          "region": "description",
+          "caption_id": "C149",
+          "original_text": "#C C draws on the book"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        },
+        {
+          "caption_id": "C27",
+          "interval": [
+            27,
+            28
+          ]
+        },
+        {
+          "caption_id": "C115",
+          "interval": [
+            115,
+            116
+          ]
+        },
+        {
+          "caption_id": "C123",
+          "interval": [
+            123,
+            124
+          ]
+        },
+        {
+          "caption_id": "C128",
+          "interval": [
+            128,
+            129
+          ]
+        },
+        {
+          "caption_id": "C131",
+          "interval": [
+            131,
+            132
+          ]
+        },
+        {
+          "caption_id": "C149",
+          "interval": [
+            149,
+            150
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R55",
+      "text": "C draws the picture.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C113",
+          "original_text": "#C C draws the picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C122",
+          "original_text": "#C C draws the picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C125",
+          "original_text": "#C C draws the picture"
+        },
+        {
+          "region": "description",
+          "caption_id": "C130",
+          "original_text": "#C C draws the picture"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C113",
+          "interval": [
+            113,
+            114
+          ]
+        },
+        {
+          "caption_id": "C122",
+          "interval": [
+            122,
+            123
+          ]
+        },
+        {
+          "caption_id": "C125",
+          "interval": [
+            125,
+            126
+          ]
+        },
+        {
+          "caption_id": "C130",
+          "interval": [
+            130,
+            131
+          ]
+        }
+      ],
+      "planner_decision": "keep"
+    },
+    {
+      "id": "R86",
+      "text": "C draws on the book with a pen. The text memory associates this observation with C (text reference E2).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T2",
+            "entity_id": "E2",
+            "scene_id": "S0",
+            "description": "#C C draws on the book with a pen ",
+            "logical_state_id": "T2",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 22,
+            "last_observed_at": 25,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              23
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C22",
+              "C25"
+            ],
+            "relation_ids": [
+              "R0"
+            ],
+            "observed_support_interval": [
+              22,
+              25
+            ],
+            "source_support_interval": [
+              22,
+              26
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        },
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        }
+      ],
+      "planner_decision": "group:R86"
+    },
+    {
+      "id": "R87",
+      "text": "C draws on the book with a pen. The text memory associates this observation with book (text reference E1).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T3",
+            "entity_id": "E1",
+            "scene_id": "S0",
+            "description": "#C C draws on the book with a pen ",
+            "logical_state_id": "T3",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 22,
+            "last_observed_at": 25,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              23
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C22",
+              "C25"
+            ],
+            "relation_ids": [
+              "R0"
+            ],
+            "observed_support_interval": [
+              22,
+              25
+            ],
+            "source_support_interval": [
+              22,
+              26
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        },
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        }
+      ],
+      "planner_decision": "group:R86"
+    },
+    {
+      "id": "R88",
+      "text": "C draws on the art paper. The text memory associates this observation with C (text reference E0).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T0",
+            "entity_id": "E0",
+            "scene_id": "S4",
+            "description": "#C C draws on the art paper ",
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 148,
+            "last_observed_at": 149,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              149
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C148",
+              "C149"
+            ],
+            "relation_ids": [
+              "R1"
+            ],
+            "observed_support_interval": [
+              148,
+              149
+            ],
+            "source_support_interval": [
+              148,
+              150
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C148",
+          "interval": [
+            148,
+            149
+          ]
+        },
+        {
+          "caption_id": "C149",
+          "interval": [
+            149,
+            150
+          ]
+        }
+      ],
+      "planner_decision": "group:R88"
+    },
+    {
+      "id": "R89",
+      "text": "C draws on the book. The text memory associates this observation with book (text reference E1).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T1",
+            "entity_id": "E1",
+            "scene_id": "S4",
+            "description": "#C C draws on the book",
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 149,
+            "last_observed_at": 149,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              150
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C149"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              149,
+              149
+            ],
+            "source_support_interval": [
+              149,
+              150
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C149",
+          "interval": [
+            149,
+            150
+          ]
+        }
+      ],
+      "planner_decision": "group:R89"
+    },
+    {
+      "id": "R90",
+      "text": "The source describes \"C (text reference E2)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object.",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal relation"
+      ],
+      "sources": [
+        {
+          "region": "temporal relation",
+          "record": {
+            "id": "R0",
+            "subject": "E2",
+            "object": "E1",
+            "predicate": "draws on",
+            "scene_id": "S0",
+            "first_observed_at": 22,
+            "last_observed_at": 22,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              23
+            ],
+            "valid_to_bounds": null,
+            "source_caption_ids": [
+              "C22",
+              "C24",
+              "C25"
+            ],
+            "status": "caption_asserted"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        },
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        }
+      ],
+      "planner_decision": "group:R90"
+    },
+    {
+      "id": "R91",
+      "text": "The source describes \"C (text reference E0)\" as the subject of \"draws on\", with \"book (text reference E1)\" as its object.",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal relation"
+      ],
+      "sources": [
+        {
+          "region": "temporal relation",
+          "record": {
+            "id": "R1",
+            "subject": "E0",
+            "object": "E1",
+            "predicate": "draws on",
+            "scene_id": "S4",
+            "first_observed_at": 148,
+            "last_observed_at": 148,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              149
+            ],
+            "valid_to_bounds": null,
+            "source_caption_ids": [
+              "C148",
+              "C149"
+            ],
+            "status": "caption_asserted"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C148",
+          "interval": [
+            148,
+            149
+          ]
+        },
+        {
+          "caption_id": "C149",
+          "interval": [
+            149,
+            150
+          ]
+        }
+      ],
+      "planner_decision": "group:R91"
+    },
+    {
+      "id": "R92",
+      "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"C (text reference E0)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+      "qualification": "text-inferred hypothesis",
+      "kinds": [
+        "temporal identity"
+      ],
+      "sources": [
+        {
+          "region": "temporal identity",
+          "record": {
+            "relation": "different_instance",
+            "reason": "Captions describe different actions on books in different scenes",
+            "left_entity": "E2",
+            "right_entity": "E0",
+            "caption_ids": [
+              "C10",
+              "C22",
+              "C24",
+              "C148"
+            ],
+            "decision": "different",
+            "status": "text_inferred",
+            "physical_identity_confirmed": false,
+            "call_id": "d6878056-02da-484a-8541-f9eaad399db4",
+            "candidate_id": "I0",
+            "source_type": "caption"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C10",
+          "interval": [
+            10,
+            11
+          ]
+        },
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        },
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C148",
+          "interval": [
+            148,
+            149
+          ]
+        }
+      ],
+      "planner_decision": "group:R92"
+    },
+    {
+      "id": "R93",
+      "text": "The text memory proposes \"same_instance\" between \"book (text reference E1)\" and \"book (text reference E1)\"; the recorded rationale is \"Both captions mention drawing on a book labeled 'book' in scene S0 and S4\".",
+      "qualification": "text-inferred hypothesis",
+      "kinds": [
+        "temporal identity"
+      ],
+      "sources": [
+        {
+          "region": "temporal identity",
+          "record": {
+            "relation": "same_instance",
+            "reason": "Both captions mention drawing on a book labeled 'book' in scene S0 and S4",
+            "left_entity": "E1",
+            "right_entity": "E1",
+            "caption_ids": [
+              "C22",
+              "C24",
+              "C25",
+              "C149"
+            ],
+            "decision": "same",
+            "status": "text_inferred",
+            "physical_identity_confirmed": false,
+            "call_id": "d6878056-02da-484a-8541-f9eaad399db4",
+            "candidate_id": "I1",
+            "source_type": "caption"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        },
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        },
+        {
+          "caption_id": "C149",
+          "interval": [
+            149,
+            150
+          ]
+        }
+      ],
+      "planner_decision": "group:R93"
+    },
+    {
+      "id": "R94",
+      "text": "The text memory proposes \"different_instance\" between \"C (text reference E2)\" and \"book (text reference E1)\"; the recorded rationale is \"Captions describe different actions on books in different scenes\".",
+      "qualification": "text-inferred hypothesis",
+      "kinds": [
+        "temporal identity"
+      ],
+      "sources": [
+        {
+          "region": "temporal identity",
+          "record": {
+            "relation": "different_instance",
+            "reason": "Captions describe different actions on books in different scenes",
+            "left_entity": "E2",
+            "right_entity": "E1",
+            "caption_ids": [
+              "C10",
+              "C22",
+              "C24",
+              "C149"
+            ],
+            "decision": "different",
+            "status": "text_inferred",
+            "physical_identity_confirmed": false,
+            "call_id": "d6878056-02da-484a-8541-f9eaad399db4",
+            "candidate_id": "I2",
+            "source_type": "caption"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C10",
+          "interval": [
+            10,
+            11
+          ]
+        },
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        },
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C149",
+          "interval": [
+            149,
+            150
+          ]
+        }
+      ],
+      "planner_decision": "group:R94"
+    },
+    {
+      "id": "R95",
+      "text": "The text memory proposes \"different_instance\" between \"book (text reference E1)\" and \"C (text reference E0)\"; the recorded rationale is \"C draws on different objects (book vs. art paper).\".",
+      "qualification": "text-inferred hypothesis",
+      "kinds": [
+        "temporal identity"
+      ],
+      "sources": [
+        {
+          "region": "temporal identity",
+          "record": {
+            "relation": "different_instance",
+            "reason": "C draws on different objects (book vs. art paper).",
+            "left_entity": "E1",
+            "right_entity": "E0",
+            "caption_ids": [
+              "C22",
+              "C24",
+              "C25",
+              "C148",
+              "C149"
+            ],
+            "decision": "different",
+            "status": "text_inferred",
+            "physical_identity_confirmed": false,
+            "call_id": "5ac9fd8a-2752-41b2-bd9c-fef32583d640",
+            "candidate_id": "I3",
+            "source_type": "caption"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        },
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        },
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        },
+        {
+          "caption_id": "C148",
+          "interval": [
+            148,
+            149
+          ]
+        },
+        {
+          "caption_id": "C149",
+          "interval": [
+            149,
+            150
+          ]
+        }
+      ],
+      "planner_decision": "group:R95"
+    }
+  ],
+  "skipped_ids": [
+    "R1",
+    "R2",
+    "R4",
+    "R7",
+    "R8",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R29",
+    "R30",
+    "R32",
+    "R33",
+    "R34",
+    "R35",
+    "R36",
+    "R37",
+    "R38",
+    "R39",
+    "R40",
+    "R41",
+    "R42",
+    "R43",
+    "R44",
+    "R45",
+    "R46",
+    "R47",
+    "R48",
+    "R49",
+    "R50",
+    "R51",
+    "R52",
+    "R53",
+    "R54",
+    "R56",
+    "R57",
+    "R58",
+    "R59",
+    "R60",
+    "R61",
+    "R62",
+    "R63",
+    "R64",
+    "R65",
+    "R66",
+    "R67",
+    "R68",
+    "R69",
+    "R70",
+    "R71",
+    "R72",
+    "R73",
+    "R74",
+    "R75",
+    "R76",
+    "R77",
+    "R78",
+    "R79",
+    "R80",
+    "R81",
+    "R82",
+    "R83",
+    "R84",
+    "R85",
+    "R96"
+  ]
+}

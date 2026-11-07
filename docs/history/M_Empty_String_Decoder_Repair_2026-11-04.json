@@ -1,0 +1,191 @@
+{
+  "at": "2026-11-04T12:16:13.741002+08:00",
+  "user_request": "修复MNOP继续后台跑，尽量减少串行预处理",
+  "variant": "M",
+  "prior_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r17",
+  "new_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18",
+  "successful_inherited": 197,
+  "restart_index": 198,
+  "restart_question_id": "93b1de09-2f89-4b4b-94ac-9d2d94df3d66",
+  "failure_operation": "m_transition_next",
+  "failure_raw_path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r17/runs/93b1de09-2f89-4b4b-94ac-9d2d94df3d66/partial_search/raw_calls/3943e63e-042d-4363-8506-b9b2d20131f3-0.json",
+  "root_cause": "LMFE JsonSchemaParser.shortcut_key evaluates max_length or sys.maxsize; zero maxLength became unlimited in token shortcut. stop+sufficient requires gap empty, but token specific was admitted, dropped parser stack, and allowed premature EOS at 303 tokens (limit 1024).",
+  "repair": "Only decoder_schema: string maxLength=0 becomes equivalent enum containing empty string. Canonical schema and semantic prompts unchanged; no generated-output completion or retry.",
+  "shared_path": "script_core/schemas.py",
+  "fixture": "tests/fixtures/m_empty_gap_false_eos.json",
+  "cpu_verification": {
+    "passed": true,
+    "test_count": 20,
+    "command": "python -m unittest tests.test_mn_empty_string_decoder tests.test_mn_decoder_resume tests.test_unicode_scalar_guard tests.test_parallel_scene_scheduler -q",
+    "scope": "Saved failing token stream, legal empty/nonempty strings, previous Unicode failures, continuation/archive/cost checks, parallel scheduler contracts"
+  },
+  "preservation": {
+    "passed": true,
+    "prior_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r17",
+    "files": 18109,
+    "old_successful_questions": 197,
+    "old_changed_files": []
+  },
+  "current_failed_processing_seconds": 126.14982439950109,
+  "historical_failed_processing_seconds": 583.876089822501,
+  "prior_runtime_seconds": 1381.512572184205,
+  "cpu_preparation_seconds": 3.277026977390051,
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory",
+    "admission_mode": "memory_shared"
+  },
+  "controller": {
+    "pid": 3822711,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18/runtime/script/run_mn_empty_string_resume.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18"
+    ],
+    "at": "2026-11-04T12:08:57.236410+08:00"
+  },
+  "worker": {
+    "worker_pid": 3822881,
+    "gpu": "1",
+    "gpu_uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18/runtime/script/run_mn_empty_string_resume.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18"
+    ],
+    "started_at": "2026-11-04T12:09:18.707037+08:00"
+  },
+  "runtime_changed": [
+    "script/gpu_queue.py",
+    "script/gpu_shared_queue.py",
+    "script/run_mn_empty_string_resume.py",
+    "script_core/schemas.py"
+  ],
+  "real_gate": {
+    "state": "passed",
+    "policy": "Original saved failing input, then full original M technical gate; no QA improvement claim.",
+    "saved_failure_call_passed": true,
+    "saved_failure_output": {
+      "action": "stop",
+      "evidence_status": "sufficient",
+      "supported_option": "O2",
+      "option_comparison": "",
+      "option_assessments": {
+        "O0": {
+          "reason": "当前场景中没有提到C负责建设工地的内容",
+          "status": "ruled_out",
+          "source_caption_ids": [
+            "C44"
+          ]
+        },
+        "O1": {
+          "reason": "当前场景中没有提到C负责高效维护工地的内容",
+          "status": "ruled_out",
+          "source_caption_ids": [
+            "C44"
+          ]
+        },
+        "O2": {
+          "reason": "当前场景中多次提到C仔细检查工地的安全和进度",
+          "status": "supported",
+          "source_caption_ids": [
+            "C44",
+            "C44"
+          ]
+        },
+        "O3": {
+          "reason": "当前场景中没有提到C负责保持工地清洁的内容",
+          "status": "ruled_out",
+          "source_caption_ids": [
+            "C44"
+          ]
+        },
+        "O4": {
+          "reason": "当前场景中没有提到C负责精心修理和维护工地的内容",
+          "status": "ruled_out",
+          "source_caption_ids": [
+            "C44"
+          ]
+        }
+      },
+      "reason": "当前场景中多次提到C仔细检查工地的安全和进度，支持选项2",
+      "gap": "",
+      "scene_id": "stop",
+      "current_scene_assessment": "sufficient",
+      "local_unavailable_reason": "",
+      "caption_ids": [],
+      "entity_ids": [],
+      "focus": [],
+      "fields": []
+    },
+    "saved_failure_cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 20.965294018387794,
+      "total": 20.965294018387794,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 20.965294018387794,
+      "text_cache_hits": 0,
+      "total_cap": 150,
+      "budget_violation": false,
+      "by_operation": {
+        "structured_output_validation": 0.003949400037527084,
+        "m_transition_next": 20.961344618350267
+      },
+      "call_count": 3,
+      "resources": {
+        "cpu_seconds": 20.951506196,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 20.980222940444946,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17837138944
+      }
+    },
+    "all_original_technical_checks_passed": true,
+    "semantic_navigation_probe_passed": true,
+    "passed_at": "2026-11-04T12:15:52.930534+08:00",
+    "seconds": 369.5208412744105,
+    "checks": 8,
+    "scope": "Technical planning, source, gap execution and complete-pipeline contracts; autonomous semantic sufficiency is a separately reported diagnostic."
+  },
+  "cost_policy": "Successful calls inherited once; old failed attempt and setup/gates separately counted; no hidden retries.",
+  "scope": "M continuation only; N repair separately owned, O/P frozen runtimes not touched.",
+  "latest_progress": {
+    "stage": "query",
+    "index": 198,
+    "question_id": "93b1de09-2f89-4b4b-94ac-9d2d94df3d66",
+    "updated_at": "2026-11-04T12:15:52.941912+08:00"
+  },
+  "latest_queue": {
+    "state": "running",
+    "controller_pid": 3822711,
+    "updated_at": "2026-11-04T12:16:08.786288+08:00",
+    "worker_pid": 3822881,
+    "gpu": "1",
+    "gpu_uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18/runtime/script/run_mn_empty_string_resume.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18"
+    ],
+    "started_at": "2026-11-04T12:09:18.707037+08:00"
+  },
+  "next_query_model_call_observed": true
+}

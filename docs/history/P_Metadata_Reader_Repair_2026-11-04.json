@@ -1,0 +1,231 @@
+{
+  "at": "2026-11-04T08:46:28.481413+08:00",
+  "version": "P-source-metadata-separated-evidence-reviewed-reader-v11",
+  "prior_P": {
+    "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r8",
+    "completed": 3,
+    "correct": 1,
+    "runtime_errors": 0,
+    "file_count": 1909
+  },
+  "findings": [
+    {
+      "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+      "nonverbatim_actors_after_metadata_separation": [
+        {
+          "source_id": "S16",
+          "source": "#C C moves around",
+          "actor": "C C",
+          "retained": false
+        },
+        {
+          "source_id": "S20",
+          "source": "#C C moves both hands",
+          "actor": "C C",
+          "retained": false
+        },
+        {
+          "source_id": "S22",
+          "source": "#C C stretches' the right hand",
+          "actor": "C C",
+          "retained": true
+        },
+        {
+          "source_id": "S33",
+          "source": "#C C stretches' hands",
+          "actor": "C C",
+          "retained": true
+        },
+        {
+          "source_id": "S76",
+          "source": "#C C moves her body",
+          "actor": "C C",
+          "retained": true
+        },
+        {
+          "source_id": "S81",
+          "source": "#C C stretches' her sleeves",
+          "actor": "C C",
+          "retained": false
+        },
+        {
+          "source_id": "S87",
+          "source": "#C C moves hands towards head",
+          "actor": "C C",
+          "retained": true
+        },
+        {
+          "source_id": "S96",
+          "source": "#C C dances in the compound",
+          "actor": "C C",
+          "retained": true
+        },
+        {
+          "source_id": "S108",
+          "source": "#C C moves towards the woman X.",
+          "actor": "C C",
+          "retained": false
+        },
+        {
+          "source_id": "S112",
+          "source": "#C C stretches' the legs",
+          "actor": "C C",
+          "retained": true
+        }
+      ]
+    },
+    {
+      "question_id": "5d15c716-f179-462c-84a6-fa94e9d14e94",
+      "nonverbatim_actors_after_metadata_separation": [
+        {
+          "source_id": "S49",
+          "source": "#C C lifts the hand up",
+          "actor": "C C",
+          "retained": true
+        },
+        {
+          "source_id": "S74",
+          "source": "#C C moves around",
+          "actor": "C C",
+          "retained": true
+        }
+      ]
+    },
+    {
+      "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+      "nonverbatim_actors_after_metadata_separation": []
+    }
+  ],
+  "protected_frozen_checks": [
+    {
+      "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r8",
+      "files": 236,
+      "mismatches": []
+    },
+    {
+      "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r17",
+      "files": 12446,
+      "mismatches": []
+    },
+    {
+      "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+      "files": 8910,
+      "mismatches": []
+    },
+    {
+      "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r3",
+      "files": 49467,
+      "mismatches": []
+    }
+  ],
+  "new_frozen_files": 235,
+  "cpu_tests": {
+    "passed": true,
+    "unique_count": 60,
+    "initial_suite": 59,
+    "final_P_suite": 21
+  },
+  "sources_equal_previous_P": true,
+  "formal_cases": 3,
+  "all_50_functional_probes_are_new_model_calls": true,
+  "probe_note": "36 extraction (28 historical + 8 tagged/untagged), 12 filter (8 historical + 4 identity), 2 synthetic reader regressions. Repeated regression inputs are not independent held-out data.",
+  "functional_and_QA_status": "not_started",
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 23552,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory",
+    "admission_mode": "memory_shared",
+    "allocator_limit_mib": 21504
+  },
+  "changes": [
+    "Separate one leading metadata tag with reversible source offset before P extraction/filtering.",
+    "Reject extraction format failure after preserving raw output instead of treating raw-source fallback as success.",
+    "Strengthen complete-identity instructions with two generic format examples, no benchmark facts.",
+    "Final reader assesses all options using only retained source IDs; annotations are not evidence; final observations unchanged."
+  ],
+  "limitations": [
+    "No claim of QA improvement before fresh results.",
+    "Reference/schema checks do not prove semantic correctness.",
+    "No M/N/O runtime mutation or restart; no expansion to 300."
+  ],
+  "preworker_correction": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r9/preworker_metadata_fallback_correction/audit.json",
+  "prior_P_all_files_unchanged": true,
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r9",
+  "background_launch": {
+    "pid": 3723302,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r9/runtime/script/run_p_sentence_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-three-demo-validation-20261104-r9"
+    ],
+    "at": "2026-11-04T08:46:28.481283+08:00"
+  },
+  "latest_queue_status": {
+    "state": "waiting_for_gpu",
+    "controller_pid": 3723302,
+    "updated_at": "2026-11-04T08:47:20.703543+08:00",
+    "watched_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "gpu_observations": {
+      "0": {
+        "index": "0",
+        "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "free_mib": 12608,
+        "utilization": 98
+      },
+      "1": {
+        "index": "1",
+        "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+        "free_mib": 13361,
+        "utilization": 94
+      },
+      "2": {
+        "index": "2",
+        "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+        "free_mib": 19583,
+        "utilization": 99
+      },
+      "3": {
+        "index": "3",
+        "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+        "free_mib": 12651,
+        "utilization": 100
+      }
+    },
+    "effective_free_mib": {
+      "0": 7148,
+      "1": 13361,
+      "2": 19583,
+      "3": 12651
+    },
+    "stable_observations": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "minimum_free_mib": 23552,
+    "maximum_utilization": 100,
+    "scheduling": "shared_memory_reservations"
+  },
+  "latest_report": {
+    "completed": 0,
+    "planned": 3,
+    "errors": 0
+  },
+  "final_verification_at": "2026-11-04T08:47:30.181380+08:00"
+}

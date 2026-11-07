@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-05T17:37:09.654576+08:00",
+  "user_instruction": "可以占用多卡来跑",
+  "authorization": "后续调度可使用GPU0/1/2/3的有效空余显存，覆盖之前本批只允许01的资源偏好；保留其他项目进程、在途调用、单题预算与冻结模型方法。",
+  "current": {
+    "allowed_gpu_indices": [
+      "0",
+      "1"
+    ],
+    "configured_workers": 4,
+    "controller_pid": 649986,
+    "completed": 342,
+    "errors": 0,
+    "gpu_inventory": "0, 78697, 18557, 95\n1, 70513, 26740, 95\n2, 85053, 12201, 100\n3, 84387, 12867, 94\n"
+  },
+  "decision": "Current Q4 already uses GPU0/1 with four bounded workers. GPU2/3 have only about12GiB free, below24GiB Q4 or32GiB source admission, so no additional GPU worker can currently be admitted there.",
+  "actions": {
+    "new_workers_launched": 0,
+    "existing_processes_interrupted": 0,
+    "frozen_runtime_or_configuration_changed": false,
+    "authorization_recorded": true
+  },
+  "future": "When preparing an additional worker or a new scheduler, consider all four GPUs and enforce the existing memory leases/admission. This authorization entry itself does not modify the already-running frozen01-only schedulers."
+}

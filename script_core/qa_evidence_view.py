@@ -10,6 +10,93 @@ CATEGORIES = {
     'event_links': 'Event link',
 }
 
+NARRATIVE_VERSION = 'F-fact-sentences-v1'
+
+
+def _sentence(text):
+    text = text.strip()
+    return text if text.endswith(('.', '!', '?', '。', '！', '？')) else text + '.'
+
+
+def _fact_sentence(category, fact):
+    """Verbalize literal values; schema labels remain in the archive only."""
+    specifications = {
+        'actions': ({'actor', 'verb'}, {'patient', 'instrument', 'material',
+            'body_part', 'surface', 'source_location', 'destination', 'location',
+            'manner', 'recipient'}),
+        'attributes': ({'entity', 'property', 'value'}, set()),
+        'states': ({'entity', 'dimension', 'value'}, set()),
+        'relations': ({'left', 'predicate', 'right', 'relation_type'}, set()),
+        'changes': ({'entity', 'before', 'after'}, set()),
+        'results': ({'entity', 'predicate', 'value'}, set()),
+        'event_links': ({'left_event', 'connector', 'right_event', 'link_type'}, set()),
+    }
+    required, optional = specifications[category]
+    if not required <= fact.keys() or fact.keys() - required - optional:
+        raise ValueError('Unsupported narrative fact fields; preserve the source clause')
+    if category == 'actions':
+        words = [fact['actor']]
+        if 'manner' in fact:
+            words.append(fact['manner'])
+        words.append(fact['verb'])
+        if 'patient' in fact:
+            words.append(fact['patient'])
+        # These connect the typed action roles without inventing an actor,
+        # object, outcome, purpose, or a relation between separate samples.
+        for role, connector in [('instrument', 'using'), ('body_part', 'with'),
+                ('source_location', 'from'), ('destination', 'to'), ('recipient', 'to')]:
+            if role in fact:
+                words.extend([connector, fact[role]])
+        sentences = [_sentence(' '.join(words))]
+        # Neutral role sentences avoid guessing the original preposition
+        # (e.g. in/on/under for location, or on/against for a surface).
+        for role, template in [('material', 'The material used in this action is {}'),
+                ('surface', 'The working surface for this action is {}'),
+                ('location', 'The location of this action is {}')]:
+            if role in fact:
+                sentences.append(_sentence(template.format(fact[role])))
+        return ' '.join(sentences)
+    if category == 'attributes':
+        return _sentence('The ' + fact['property'] + ' of ' + fact['entity'] + ' is ' + fact['value'])
+    if category == 'states':
+        return _sentence('The observed state of ' + fact['entity'] + ' is ' + fact['value'])
+    if category == 'relations':
+        predicate = fact['predicate']
+        finite = {'has', 'have', 'holds', 'owns', 'possesses', 'belongs to',
+            'contains', 'includes', 'consists of'}
+        copula = '' if predicate.casefold() in finite or predicate.casefold().startswith(
+            ('is ', 'are ', 'was ', 'were ')) else 'is '
+        return _sentence(fact['left'] + ' ' + copula + predicate + ' ' + fact['right'])
+    if category == 'changes':
+        return _sentence(fact['entity'] + ' changes from ' + fact['before'] + ' to ' + fact['after'])
+    if category == 'results':
+        return _sentence(fact['entity'] + ' ' + fact['predicate'] + ' ' + fact['value'])
+    # Retain the source connector rather than strengthening temporal order
+    # into a causal or intentional interpretation.
+    return _sentence(fact['left_event'] + ' ' + fact['connector'] + ' ' + fact['right_event'])
+
+
+def narrative_description(payload):
+    """F's sentence view; original clauses and all sample occurrences survive.
+
+    This does not change extraction or cached facts. The legacy renderer is
+    retained for other variants and frozen experiment presentation.
+    """
+    _, audit = compact_description(payload)
+    rendered = deepcopy(payload)
+    for row in rendered['observations']:
+        evidence = row['evidence']
+        if 'original_text' in evidence or 'categorized_original' in evidence:
+            continue
+        sentences = [_fact_sentence(category, fact)
+            for category in CATEGORIES for fact in evidence.get(category, [])]
+        row['evidence'] = dict(original_text=' '.join(sentences))
+    text, sentence_audit = compact_description(rendered)
+    for before, after in zip(audit['rows'], sentence_audit['rows']):
+        before['prompt_line'] = after['prompt_line']
+    audit.update(render_version=NARRATIVE_VERSION, fact_presentation='sentences')
+    return text, audit
+
 
 def compact_description(payload, *, merge_repeated=False):
     """Return readable evidence and a source map kept outside the model prompt.

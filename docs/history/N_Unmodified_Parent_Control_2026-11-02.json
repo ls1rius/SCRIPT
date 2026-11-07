@@ -1,0 +1,278 @@
+{
+  "checked_at": "2026-11-02T23:55:02.244697+08:00",
+  "question_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+  "checks": {
+    "pool_records_equal_old_L": true,
+    "plan_equal_old_L": true,
+    "planner_input_equal_old_L": true,
+    "all_inherited_files_unchanged": true,
+    "M_frozen_493_files_unchanged": true,
+    "M_running": true
+  },
+  "variants": [
+    {
+      "run_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-unmodified-parent-brick-control-20261102-r1",
+      "version": "M-L-bounded-candidates-v7-ranked-decisions",
+      "answer": {
+        "selected_option": "1",
+        "raw": "prediction: B"
+      },
+      "correct": true,
+      "pool_records": 76,
+      "retained_records": 33,
+      "wall_in_final_description": false,
+      "processing_seconds": 218.34098885580897
+    },
+    {
+      "run_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-brick-wall-diagnostic-20261102-r1",
+      "version": "N-M-source-role-binding-v1",
+      "answer": {
+        "selected_option": "3",
+        "raw": "prediction: D"
+      },
+      "correct": false,
+      "pool_records": 77,
+      "retained_records": 31,
+      "wall_in_final_description": false,
+      "processing_seconds": 205.29436986893415
+    },
+    {
+      "run_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-brick-wall-diagnostic-20261102-r2",
+      "version": "N-M-required-roles-source-closure-v2",
+      "answer": {
+        "selected_option": "3",
+        "raw": "prediction: D"
+      },
+      "correct": false,
+      "pool_records": 82,
+      "retained_records": 49,
+      "wall_in_final_description": true,
+      "processing_seconds": 374.5304549112916
+    }
+  ],
+  "scope": "Fresh frozen-M-parent extraction, planning and answer on same fixed 135 samples, 64 sources and original fields. No new scene navigation or field planning. No hidden retries.",
+  "conclusion": "Unmodified parent control answers B correctly, matching old L pool and plan. Both N modifications answer D incorrectly. This is evidence of a regression introduced with the initial N changes on this fixed-source case; does not isolate a specific role, source sentence, or full-navigation behavior.",
+  "source_runtime": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runtime",
+  "inherited_files": 187,
+  "report": {
+    "case_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+    "complete": true,
+    "error": null,
+    "new_navigation": false,
+    "variant": "unmodified_M_parent_control",
+    "version": "M-L-bounded-candidates-v7-ranked-decisions",
+    "answer": {
+      "selected_option": "1",
+      "raw": "prediction: B"
+    },
+    "gold": "1",
+    "correct": true,
+    "frame107": {
+      "caption_id": "C107",
+      "frame_index": 107,
+      "sample_interval": [
+        107,
+        108
+      ],
+      "evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "brick",
+            "body_part": "left hand"
+          }
+        ],
+        "original_text": "#C C moves a brick on the brick wall with his left hand. "
+      }
+    },
+    "frame107_candidates": [
+      {
+        "record": {
+          "id": "R42",
+          "text": "C moves a brick on the brick wall with his left hand.",
+          "qualification": "source assertion",
+          "kinds": [
+            "caption original"
+          ],
+          "sources": [
+            {
+              "region": "description",
+              "caption_id": "C107",
+              "original_text": "#C C moves a brick on the brick wall with his left hand. "
+            }
+          ],
+          "occurrences": [
+            {
+              "caption_id": "C107",
+              "interval": [
+                107,
+                108
+              ]
+            }
+          ]
+        },
+        "decision": "skip"
+      },
+      {
+        "record": {
+          "id": "R43",
+          "text": "C moves brick with left hand.",
+          "qualification": "source assertion",
+          "kinds": [
+            "H actions"
+          ],
+          "sources": [
+            {
+              "region": "H fact",
+              "caption_id": "C107",
+              "category": "actions",
+              "fact_index": 0,
+              "record": {
+                "actor": "C",
+                "verb": "moves",
+                "patient": "brick",
+                "body_part": "left hand"
+              }
+            }
+          ],
+          "occurrences": [
+            {
+              "caption_id": "C107",
+              "interval": [
+                107,
+                108
+              ]
+            }
+          ]
+        },
+        "decision": "skip"
+      }
+    ],
+    "wall_in_accepted_fields": false,
+    "left_hand_in_accepted_fields": true,
+    "wall_in_final_description": false,
+    "left_hand_in_frame107_final": false,
+    "source_preservation": {
+      "enabled": false,
+      "overrides": [],
+      "reason": "Unmodified frozen M parent; no N source-preservation rule."
+    },
+    "final_wall_lines": [],
+    "pool_records": 76,
+    "retained_records": 33,
+    "old_L": {
+      "question_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+      "selected_option": "1",
+      "error": null,
+      "raw_response": "prediction: B",
+      "input_tokens": 1880,
+      "output_tokens": 4,
+      "seconds": 0.12913770601153374,
+      "input_sha256": "682a342b2844f09321e5930c33c404d57b5e55e93ab2e53d285bea1cd5ee0281",
+      "parser": "constrained_prediction_letter",
+      "reader_protocol": "K-constrained-prediction-letter-v1"
+    },
+    "old_all": {
+      "question_id": "951ccf40-1a99-4138-a441-4edf16af5446",
+      "selected_option": "3",
+      "error": null,
+      "raw_response": "prediction: D",
+      "input_tokens": 3025,
+      "output_tokens": 4,
+      "seconds": 0.17984090745449066,
+      "input_sha256": "786638a60ef6a04cee49840cad1e5a806afb53fb2411c87dd2c47771c0f79f74",
+      "parser": "constrained_prediction_letter",
+      "reader_protocol": "K-constrained-prediction-letter-v1"
+    },
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 0.0,
+      "online": 218.34098885580897,
+      "total": 218.34098885580897,
+      "shared_dependency_seconds": 0.0,
+      "budgeted_total": 218.34098885580897,
+      "text_cache_hits": 0,
+      "total_cap": 1500,
+      "budget_violation": false,
+      "by_operation": {
+        "f_batch_preparation": 0.25680164247751236,
+        "h_extract_batch": 180.44033782556653,
+        "m_evidence_materialization": 0.026771243661642075,
+        "m_evidence_plan": 37.16713312640786,
+        "m_answer": 0.44994501769542694
+      },
+      "call_count": 100,
+      "resources": {
+        "cpu_seconds": 218.31408803600002,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 218.51428347453475,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 17598791168
+      }
+    },
+    "updated_at": "2026-11-02T23:53:58.226838+08:00"
+  },
+  "prior_attempts": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-brick-wall-diagnostic-20261102-r1",
+      "report_sha256": "ee56d9f08e1a4bae438c4a72236a260e19086119c10410fd65db39a1b8ffb313",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 205.29436986893415,
+        "total": 205.29436986893415,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 205.29436986893415,
+        "text_cache_hits": 0,
+        "total_cap": 1500,
+        "budget_violation": false,
+        "by_operation": {
+          "f_batch_preparation": 0.542841587215662,
+          "n_extract_batch": 166.21215711534023,
+          "n_evidence_materialization": 0.026837758719921112,
+          "n_evidence_plan": 38.056636832654476,
+          "n_answer": 0.4558965750038624
+        },
+        "call_count": 100,
+        "resources": {
+          "cpu_seconds": 205.260831206,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 205.4767768867314,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 17611624448
+        }
+      }
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/N-brick-wall-diagnostic-20261102-r2",
+      "report_sha256": "b8c7a1a3a2d1b39be53e65bfb0215c150c343b3d4fffba37a5963225513f4243",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 374.5304549112916,
+        "total": 374.5304549112916,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 374.5304549112916,
+        "text_cache_hits": 0,
+        "total_cap": 1500,
+        "budget_violation": false,
+        "by_operation": {
+          "f_batch_preparation": 0.7244450151920319,
+          "n_extract_batch": 332.8921991325915,
+          "n_evidence_materialization": 0.025266490876674652,
+          "n_evidence_plan": 40.39690809324384,
+          "n_answer": 0.4916361793875694
+        },
+        "call_count": 100,
+        "resources": {
+          "cpu_seconds": 374.5220976070001,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 374.7216973155737,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 17643062272
+        }
+      }
+    }
+  ]
+}

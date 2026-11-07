@@ -1,0 +1,7 @@
+These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence.
+At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog.
+At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog.
+At sampled intervals [4,5), [5,6), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with C (text reference E0).
+At sampled intervals [4,5), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with dog (text reference E1).
+At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash.
+At sampled intervals [12,13), [39,40), [42,43), [136,137), [169,170), [177,178) (source assertion), C holds dog leash.

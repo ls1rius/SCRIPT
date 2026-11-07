@@ -1,0 +1,1017 @@
+{
+  "at": "2026-11-05T10:08:01.093722+08:00",
+  "status": "three_workers_processing_formal_cases_one_waiting_for_memory",
+  "roots": {
+    "adaptive": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-300-20261105-r1",
+    "fixed-depth": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-fixed-depth-300-20261105-r1"
+  },
+  "diagnosis": "docs/history/Q_V3_V4_Diagnosis_2026-11-05.json",
+  "baseline": "docs/history/Q_V4_Baseline_Freeze_2026-11-05.json",
+  "versions": [
+    "Q-comparative-evidence-keep-only-v4",
+    "Qplus-comparative-evidence-keep-only-v4"
+  ],
+  "tests": {
+    "cpu_real_tokenizer_passed": 81,
+    "live_checks_passed": 17,
+    "reader_pair_with_early_stop": true
+  },
+  "pilots": [
+    {
+      "directory": "workdirs/Q4-semantic-gate-20261105-r1",
+      "frozen_manifest_hash": "c22064efd43fc2b5c17d4eb6b056d44ed54f5501eea35e6e43971445cc204009",
+      "status": {
+        "stage": "failed",
+        "error": "V4 semantic readiness gate failed; formal cohort not started",
+        "at": "2026-11-05T09:51:17.299546+08:00"
+      },
+      "functional_passed": false,
+      "failed_checks": [
+        "literal_choice_C",
+        "missing_later_action",
+        "specific_motive_missing",
+        "negation",
+        "two_halves_complete",
+        "filter_context"
+      ],
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 84.62675001844764,
+        "total": 84.62675001844764,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 84.62675001844764,
+        "text_cache_hits": 0,
+        "total_cap": 900,
+        "budget_violation": false,
+        "by_operation": {
+          "q4_independent_batch": 84.62675001844764
+        },
+        "call_count": 14,
+        "resources": {
+          "cpu_seconds": 84.54467271300001,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 85.43778183311224,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16941088768
+        }
+      },
+      "reader_result": null,
+      "setup": {
+        "seconds": 9.265338622033596,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 6.050732299685478,
+            "tokenizer_constraint_seconds": 2.3032261952757835
+          },
+          "usage": {
+            "cuda_allocator_limit_mib": 22528,
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 18.306461699,
+            "gpu_resident_seconds": 5.836190711706877,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        },
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 65109,
+          "utilization": 97,
+          "effective_free_mib": 65109,
+          "reservation_id": "455231-4c53cbb70a22496aa6a57fcfbef279a4"
+        }
+      },
+      "reference_config_role": "experiment.json supplies inherited GPU resource policy only; actual pilot method is frozen q_v4.py"
+    },
+    {
+      "directory": "workdirs/Q4-semantic-gate-20261105-r2",
+      "frozen_manifest_hash": "8e017291aac59137a31d860225029c55b35df604de01a3c32414f05342f91ac5",
+      "status": {
+        "stage": "failed",
+        "error": "V4 semantic readiness gate failed; formal cohort not started",
+        "at": "2026-11-05T09:56:30.958467+08:00"
+      },
+      "functional_passed": false,
+      "failed_checks": [
+        "literal_choice_C",
+        "modal_not_fact",
+        "two_halves_complete",
+        "filter_context"
+      ],
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 83.97571191191673,
+        "total": 83.97571191191673,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 83.97571191191673,
+        "text_cache_hits": 0,
+        "total_cap": 900,
+        "budget_violation": false,
+        "by_operation": {
+          "q4_independent_batch": 83.97571191191673
+        },
+        "call_count": 26,
+        "resources": {
+          "cpu_seconds": 83.94347647400005,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 84.76585488766432,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16942721024
+        }
+      },
+      "reader_result": null,
+      "setup": {
+        "seconds": 9.129463497549295,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 6.045336455106735,
+            "tokenizer_constraint_seconds": 2.1872326657176018
+          },
+          "usage": {
+            "cuda_allocator_limit_mib": 22528,
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 18.622009468,
+            "gpu_resident_seconds": 6.206185694783926,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        },
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 65109,
+          "utilization": 97,
+          "effective_free_mib": 65109,
+          "reservation_id": "457991-c881e0d974344aef95742f9fe2a65c62"
+        }
+      },
+      "reference_config_role": "experiment.json supplies inherited GPU resource policy only; actual pilot method is frozen q_v4.py"
+    },
+    {
+      "directory": "workdirs/Q4-semantic-gate-20261105-r3",
+      "frozen_manifest_hash": "4118d303a3936d0aa86734aad5a42cd52ff64c887123ad698e551ac6bb3f7f6b",
+      "status": {
+        "stage": "failed",
+        "error": "V4 semantic readiness gate failed; formal cohort not started",
+        "at": "2026-11-05T09:59:03.078057+08:00"
+      },
+      "functional_passed": false,
+      "failed_checks": [
+        "modal_not_fact"
+      ],
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 43.1941015124321,
+        "total": 43.1941015124321,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 43.1941015124321,
+        "text_cache_hits": 0,
+        "total_cap": 900,
+        "budget_violation": false,
+        "by_operation": {
+          "q4_independent_batch": 43.1941015124321
+        },
+        "call_count": 26,
+        "resources": {
+          "cpu_seconds": 43.151887477,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 43.949851773679256,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16942940160
+        }
+      },
+      "reader_result": null,
+      "setup": {
+        "seconds": 8.990717593580484,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.864351999014616,
+            "tokenizer_constraint_seconds": 2.318600531667471
+          },
+          "usage": {
+            "cuda_allocator_limit_mib": 22528,
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 18.401295645,
+            "gpu_resident_seconds": 6.341369055211544,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        },
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 65109,
+          "utilization": 96,
+          "effective_free_mib": 65109,
+          "reservation_id": "459891-3a7517a4664c4371a142a00c932d177e"
+        }
+      },
+      "reference_config_role": "experiment.json supplies inherited GPU resource policy only; actual pilot method is frozen q_v4.py"
+    },
+    {
+      "directory": "workdirs/Q4-semantic-gate-20261105-r4",
+      "frozen_manifest_hash": "068eed05efdf7604a2de92074ce8110a94cd891a1bd01411489f7b5d0cb68a95",
+      "status": {
+        "stage": "failed",
+        "error": "ToolFailure: ModuleNotFoundError: No module named 'model'",
+        "at": "2026-11-05T10:03:29.767554+08:00"
+      },
+      "functional_passed": true,
+      "failed_checks": [],
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 50.03716150671244,
+        "total": 50.03716150671244,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 50.03716150671244,
+        "text_cache_hits": 0,
+        "total_cap": 900,
+        "budget_violation": false,
+        "by_operation": {
+          "q4_independent_batch": 50.03716150671244
+        },
+        "call_count": 31,
+        "resources": {
+          "cpu_seconds": 49.958379285999996,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 50.82626336812973,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16942940160
+        }
+      },
+      "reader_result": {
+        "question_id": "q4-synthetic-retrieval",
+        "version": "Q-comparative-evidence-keep-only-v4",
+        "plus_version": "Qplus-comparative-evidence-keep-only-v4",
+        "mode": "adaptive",
+        "complete": false,
+        "error": "ToolFailure: ModuleNotFoundError: No module named 'model'",
+        "arms": {},
+        "new_navigation": true,
+        "source_dependency_seconds": 0.0,
+        "source_dependency_policy": "conservative full archived N budgeted case, charged once",
+        "selection_policy": "keep_only; uncertain archived",
+        "extraction_called": false,
+        "composition_called": false,
+        "stop_reason": "audited_sufficient",
+        "source_observations": 2,
+        "initial_source_observations": 1,
+        "retained_observations": 2,
+        "decisions": {
+          "keep": 2,
+          "uncertain": 0,
+          "drop": 0
+        },
+        "retained_evidence_hash": "f5fe96c1cd4cc6f6e072420361c8aaa290976d539ec9a0a11326d0a30fcb6d70",
+        "retrievals": [
+          {
+            "scene_id": "T1",
+            "added_observations": 1
+          }
+        ],
+        "final_certificate": {
+          "sufficient": true,
+          "readiness_meaning": "relative evidence readiness, not proof that every rival is false",
+          "missing_regions": [],
+          "blocking_reasons": [],
+          "assessment": {
+            "proposal": {
+              "choice": "A",
+              "w0": "S0",
+              "w1": "R_C1",
+              "temporal": {
+                "first_half": "S0",
+                "second_half": "R_C1"
+              }
+            },
+            "pairs": {
+              "B": {
+                "choice": "A",
+                "w0": "S0",
+                "w1": "R_C1",
+                "basis": "direct",
+                "gap": "none",
+                "missing": "",
+                "temporal": {
+                  "first_half": "S0",
+                  "second_half": "R_C1"
+                }
+              }
+            },
+            "qualification_blocks": {
+              "B": false
+            },
+            "option_labels": [
+              "A",
+              "B"
+            ],
+            "regions": [
+              {
+                "id": "first_half",
+                "interval": [
+                  0,
+                  2.0
+                ]
+              },
+              {
+                "id": "second_half",
+                "interval": [
+                  2.0,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        "regions": [
+          {
+            "id": "first_half",
+            "interval": [
+              0,
+              2.0
+            ]
+          },
+          {
+            "id": "second_half",
+            "interval": [
+              2.0,
+              4
+            ]
+          }
+        ],
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 8.791177231818438,
+          "total": 8.791177231818438,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 8.791177231818438,
+          "text_cache_hits": 0,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "q4_independent_batch": 8.787798419594765,
+            "q_answer": 0.003378812223672867
+          },
+          "call_count": 8,
+          "resources": {
+            "cpu_seconds": 8.789362819000004,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 8.802916213870049,
+            "gpu_unmeasured_calls": 1,
+            "gpu_peak_allocated_bytes": 16942940160
+          }
+        },
+        "updated_at": "2026-11-05T10:03:29.767221+08:00"
+      },
+      "setup": {
+        "seconds": 9.108557261526585,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 6.0168098993599415,
+            "tokenizer_constraint_seconds": 2.1904767602682114
+          },
+          "usage": {
+            "cuda_allocator_limit_mib": 22528,
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 18.521482098,
+            "gpu_resident_seconds": 6.227854490280151,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        },
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 65109,
+          "utilization": 99,
+          "effective_free_mib": 65109,
+          "reservation_id": "461924-b7c0590bc8304c3ab2cdf3de0c4cf612"
+        }
+      },
+      "reference_config_role": "experiment.json supplies inherited GPU resource policy only; actual pilot method is frozen q_v4.py"
+    },
+    {
+      "directory": "workdirs/Q4-semantic-gate-20261105-r5",
+      "frozen_manifest_hash": "96e2e4dfb2d3c8783f4bd02f4f5a2786d7f9d324bfb1f3c10b976afbc0401dc2",
+      "status": {
+        "stage": "complete",
+        "pid": 463617,
+        "gpu": "0",
+        "at": "2026-11-05T10:06:41.054254+08:00"
+      },
+      "functional_passed": true,
+      "failed_checks": [],
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 50.01755329966545,
+        "total": 50.01755329966545,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 50.01755329966545,
+        "text_cache_hits": 0,
+        "total_cap": 900,
+        "budget_violation": false,
+        "by_operation": {
+          "q4_independent_batch": 50.01755329966545
+        },
+        "call_count": 31,
+        "resources": {
+          "cpu_seconds": 49.95265740499998,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 50.820956245064735,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16942940160
+        }
+      },
+      "reader_result": {
+        "question_id": "q4-synthetic-retrieval",
+        "version": "Q-comparative-evidence-keep-only-v4",
+        "plus_version": "Qplus-comparative-evidence-keep-only-v4",
+        "mode": "adaptive",
+        "complete": true,
+        "error": null,
+        "arms": {
+          "Q": {
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "input_tokens": 157,
+            "answer_seconds": 0.4421861916780472,
+            "retained_evidence_hash": "f5fe96c1cd4cc6f6e072420361c8aaa290976d539ec9a0a11326d0a30fcb6d70"
+          },
+          "Qplus": {
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "input_tokens": 137,
+            "answer_seconds": 0.19832870364189148,
+            "retained_evidence_hash": "f5fe96c1cd4cc6f6e072420361c8aaa290976d539ec9a0a11326d0a30fcb6d70"
+          }
+        },
+        "new_navigation": true,
+        "source_dependency_seconds": 0.0,
+        "source_dependency_policy": "conservative full archived N budgeted case, charged once",
+        "selection_policy": "keep_only; uncertain archived",
+        "extraction_called": false,
+        "composition_called": false,
+        "stop_reason": "audited_sufficient",
+        "source_observations": 2,
+        "initial_source_observations": 1,
+        "retained_observations": 2,
+        "decisions": {
+          "keep": 2,
+          "uncertain": 0,
+          "drop": 0
+        },
+        "retained_evidence_hash": "f5fe96c1cd4cc6f6e072420361c8aaa290976d539ec9a0a11326d0a30fcb6d70",
+        "retrievals": [
+          {
+            "scene_id": "T1",
+            "added_observations": 1
+          }
+        ],
+        "final_certificate": {
+          "sufficient": true,
+          "readiness_meaning": "relative evidence readiness, not proof that every rival is false",
+          "missing_regions": [],
+          "blocking_reasons": [],
+          "assessment": {
+            "proposal": {
+              "choice": "A",
+              "w0": "S0",
+              "w1": "R_C1",
+              "temporal": {
+                "first_half": "S0",
+                "second_half": "R_C1"
+              }
+            },
+            "pairs": {
+              "B": {
+                "choice": "A",
+                "w0": "S0",
+                "w1": "R_C1",
+                "basis": "direct",
+                "gap": "none",
+                "missing": "",
+                "temporal": {
+                  "first_half": "S0",
+                  "second_half": "R_C1"
+                }
+              }
+            },
+            "qualification_blocks": {
+              "B": false
+            },
+            "option_labels": [
+              "A",
+              "B"
+            ],
+            "regions": [
+              {
+                "id": "first_half",
+                "interval": [
+                  0,
+                  2.0
+                ]
+              },
+              {
+                "id": "second_half",
+                "interval": [
+                  2.0,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        "regions": [
+          {
+            "id": "first_half",
+            "interval": [
+              0,
+              2.0
+            ]
+          },
+          {
+            "id": "second_half",
+            "interval": [
+              2.0,
+              4
+            ]
+          }
+        ],
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 9.512555334717035,
+          "total": 9.512555334717035,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 9.512555334717035,
+          "text_cache_hits": 0,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "q4_independent_batch": 8.872040439397097,
+            "q_answer": 0.4421861916780472,
+            "qplus_answer": 0.19832870364189148
+          },
+          "call_count": 9,
+          "resources": {
+            "cpu_seconds": 9.511300009000028,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 9.5320457033813,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16942940160
+          }
+        },
+        "updated_at": "2026-11-05T10:06:41.053300+08:00"
+      },
+      "setup": {
+        "seconds": 8.725679278373718,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.615138359367847,
+            "tokenizer_constraint_seconds": 2.227089799940586
+          },
+          "usage": {
+            "cuda_allocator_limit_mib": 22528,
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 17.713873389,
+            "gpu_resident_seconds": 5.907028760761023,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        },
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 65109,
+          "utilization": 97,
+          "effective_free_mib": 65109,
+          "reservation_id": "463617-53e1b873b3554e9ea9bd88a5607242ac"
+        }
+      },
+      "reference_config_role": "experiment.json supplies inherited GPU resource policy only; actual pilot method is frozen q_v4.py"
+    }
+  ],
+  "monitor": {
+    "pid": 466251,
+    "identity": "1769311830",
+    "previous_status": {
+      "pid": 292370,
+      "at": "2026-11-05T06:30:24.628376+08:00",
+      "state": "complete",
+      "interval_seconds": 60,
+      "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+    },
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/script/watch_mnop_alerts.py",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-alert-monitor-20261104-r1"
+    ],
+    "at": "2026-11-05T10:08:01.092492+08:00"
+  },
+  "evaluation_scope": "Same previously analyzed 300, no unseen holdout claim",
+  "limit": "Caption archive only, same filter and final reader formats; lexical modality guard is incomplete and conservative; semantic gates do not prove accuracy gains",
+  "iteration_notes": [
+    "r1 joint output confused per-option support and permitted unsupported concrete steps/motives",
+    "r2 explicit-text pairs still rejected clear direct evidence and accepted qualified evidence as factual",
+    "r3 A/B/U comparison passed direct/functional/time positives but failed modality",
+    "r4 conservative qualification guard and qualified/conditional/reverse checks passed all17; frozen pilot lacked root model.py and final reader failed before generation",
+    "r5 same method with complete frozen reader dependencies passed all17 and source expansion/early stop/two readers",
+    "Unchanged V3 filter alignment S0 label tracked rather than mandatory; clamp use and drilling S1/S2 must keep. Criteria revision explicit, original failures preserved."
+  ],
+  "baseline_verified_at": "2026-11-05T10:10:24.507834+08:00",
+  "baseline_unchanged_count": 2418,
+  "launches": {
+    "adaptive": {
+      "controller_pid": 465320,
+      "workers": [
+        {
+          "id": 0,
+          "pid": 465336,
+          "identity": "1769307200",
+          "command": [
+            "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+            "-u",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-300-20261105-r1/runtime/script/run_q_v4_experiment.py",
+            "worker",
+            "--out",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-300-20261105-r1",
+            "--worker-id",
+            "0"
+          ]
+        },
+        {
+          "id": 1,
+          "pid": 465337,
+          "identity": "1769307200",
+          "command": [
+            "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+            "-u",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-300-20261105-r1/runtime/script/run_q_v4_experiment.py",
+            "worker",
+            "--out",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-300-20261105-r1",
+            "--worker-id",
+            "1"
+          ]
+        }
+      ],
+      "at": "2026-11-05T10:07:14.785674+08:00"
+    },
+    "fixed-depth": {
+      "controller_pid": 466308,
+      "workers": [
+        {
+          "id": 0,
+          "pid": 466317,
+          "identity": "1769312671",
+          "command": [
+            "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+            "-u",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-fixed-depth-300-20261105-r1/runtime/script/run_q_v4_experiment.py",
+            "worker",
+            "--out",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-fixed-depth-300-20261105-r1",
+            "--worker-id",
+            "0"
+          ]
+        },
+        {
+          "id": 1,
+          "pid": 466318,
+          "identity": "1769312671",
+          "command": [
+            "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+            "-u",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-fixed-depth-300-20261105-r1/runtime/script/run_q_v4_experiment.py",
+            "worker",
+            "--out",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-fixed-depth-300-20261105-r1",
+            "--worker-id",
+            "1"
+          ]
+        }
+      ],
+      "at": "2026-11-05T10:08:09.496899+08:00"
+    }
+  },
+  "snapshots": {
+    "adaptive": {
+      "state": "running",
+      "controller_pid": 465320,
+      "workers": {
+        "0": {
+          "stage": "query",
+          "pid": 465336,
+          "at": "2026-11-05T10:10:00.326337+08:00",
+          "gpu": "0",
+          "index": 2,
+          "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+          "phase": "audit",
+          "iteration": 1
+        },
+        "1": {
+          "stage": "query",
+          "pid": 465337,
+          "at": "2026-11-05T10:10:18.114787+08:00",
+          "gpu": "0",
+          "index": 3,
+          "question_id": "c5004075-e154-4bb8-baea-e41915190319",
+          "phase": "filter",
+          "iteration": 0,
+          "observations": 100
+        }
+      },
+      "effective_worker_count": 2,
+      "allowed_gpu_indices": [
+        "0",
+        "1"
+      ],
+      "updated_at": "2026-11-05T10:10:20.059118+08:00",
+      "error": null
+    },
+    "fixed-depth": {
+      "state": "running",
+      "controller_pid": 466308,
+      "workers": {
+        "0": {
+          "stage": "query",
+          "pid": 466317,
+          "at": "2026-11-05T10:10:14.695186+08:00",
+          "gpu": "1",
+          "index": 2,
+          "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+          "phase": "audit",
+          "iteration": 1
+        },
+        "1": {
+          "stage": "waiting_for_gpu",
+          "pid": 466318,
+          "at": "2026-11-05T10:10:18.793921+08:00",
+          "watched_gpu_indices": [
+            "0",
+            "1"
+          ],
+          "gpu_observations": {
+            "0": {
+              "index": "0",
+              "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+              "free_mib": 26534,
+              "utilization": 98
+            },
+            "1": {
+              "index": "1",
+              "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+              "free_mib": 3625,
+              "utilization": 82
+            },
+            "2": {
+              "index": "2",
+              "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+              "free_mib": 13257,
+              "utilization": 0
+            },
+            "3": {
+              "index": "3",
+              "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+              "free_mib": 12527,
+              "utilization": 100
+            }
+          },
+          "effective_free_mib": {
+            "0": 15946,
+            "1": 299,
+            "2": 13257,
+            "3": 12527
+          },
+          "stable_observations": {
+            "0": 0,
+            "1": 0
+          },
+          "minimum_free_mib": 24576,
+          "maximum_utilization": 100,
+          "scheduling": "shared_memory_reservations"
+        }
+      },
+      "effective_worker_count": 2,
+      "allowed_gpu_indices": [
+        "0",
+        "1"
+      ],
+      "updated_at": "2026-11-05T10:10:19.697209+08:00",
+      "error": null
+    }
+  },
+  "worker_validation": {
+    "adaptive": [
+      {
+        "worker": "0",
+        "functional": true,
+        "functional_seconds": 65.77518119290471,
+        "reader_pair": true,
+        "reader_pair_seconds": 12.586449414491653
+      },
+      {
+        "worker": "1",
+        "functional": true,
+        "functional_seconds": 65.80035734176636,
+        "reader_pair": true,
+        "reader_pair_seconds": 12.537934355437756
+      }
+    ],
+    "fixed-depth": [
+      {
+        "worker": "0",
+        "functional": true,
+        "functional_seconds": 21.11276964098215,
+        "reader_pair": true,
+        "reader_pair_seconds": 6.957303613424301
+      }
+    ]
+  },
+  "postlaunch_audits": {
+    "adaptive": {
+      "at": "2026-11-05T10:10:24.103605+08:00",
+      "passed": true,
+      "completed_audited": 2,
+      "rows": [
+        {
+          "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+          "model_calls": 13,
+          "retained": 105,
+          "retrievals": 0,
+          "budgeted_seconds": 1009.5339313261211
+        },
+        {
+          "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+          "model_calls": 20,
+          "retained": 60,
+          "retrievals": 1,
+          "budgeted_seconds": 248.97951243072748
+        }
+      ],
+      "queue": {
+        "state": "running",
+        "controller_pid": 465320,
+        "workers": {
+          "0": {
+            "stage": "query",
+            "pid": 465336,
+            "at": "2026-11-05T10:10:00.326337+08:00",
+            "gpu": "0",
+            "index": 2,
+            "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+            "phase": "audit",
+            "iteration": 1
+          },
+          "1": {
+            "stage": "query",
+            "pid": 465337,
+            "at": "2026-11-05T10:10:18.114787+08:00",
+            "gpu": "0",
+            "index": 3,
+            "question_id": "c5004075-e154-4bb8-baea-e41915190319",
+            "phase": "filter",
+            "iteration": 0,
+            "observations": 100
+          }
+        },
+        "effective_worker_count": 2,
+        "allowed_gpu_indices": [
+          "0",
+          "1"
+        ],
+        "updated_at": "2026-11-05T10:10:20.059118+08:00",
+        "error": null
+      },
+      "report_completed": 1,
+      "checks": [
+        "frozen manifest",
+        "exact keep-only set",
+        "identical arm evidence",
+        "fixed original reader boundary",
+        "literal selected scene reads",
+        "request scope and hashes",
+        "raw references and output hashes",
+        "budget including historical dependency",
+        "no pending calls"
+      ],
+      "limitation": "Technical/provenance audit; not a claim of semantic accuracy improvement"
+    },
+    "fixed-depth": {
+      "at": "2026-11-05T10:10:24.278365+08:00",
+      "passed": true,
+      "completed_audited": 1,
+      "rows": [
+        {
+          "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+          "model_calls": 25,
+          "retained": 130,
+          "retrievals": 1,
+          "budgeted_seconds": 989.1024505868554
+        }
+      ],
+      "queue": {
+        "state": "running",
+        "controller_pid": 466308,
+        "workers": {
+          "0": {
+            "stage": "query",
+            "pid": 466317,
+            "at": "2026-11-05T10:10:14.695186+08:00",
+            "gpu": "1",
+            "index": 2,
+            "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+            "phase": "audit",
+            "iteration": 1
+          },
+          "1": {
+            "stage": "waiting_for_gpu",
+            "pid": 466318,
+            "at": "2026-11-05T10:10:18.793921+08:00",
+            "watched_gpu_indices": [
+              "0",
+              "1"
+            ],
+            "gpu_observations": {
+              "0": {
+                "index": "0",
+                "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+                "free_mib": 26534,
+                "utilization": 98
+              },
+              "1": {
+                "index": "1",
+                "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+                "free_mib": 3625,
+                "utilization": 82
+              },
+              "2": {
+                "index": "2",
+                "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+                "free_mib": 13257,
+                "utilization": 0
+              },
+              "3": {
+                "index": "3",
+                "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+                "free_mib": 12527,
+                "utilization": 100
+              }
+            },
+            "effective_free_mib": {
+              "0": 15946,
+              "1": 299,
+              "2": 13257,
+              "3": 12527
+            },
+            "stable_observations": {
+              "0": 0,
+              "1": 0
+            },
+            "minimum_free_mib": 24576,
+            "maximum_utilization": 100,
+            "scheduling": "shared_memory_reservations"
+          }
+        },
+        "effective_worker_count": 2,
+        "allowed_gpu_indices": [
+          "0",
+          "1"
+        ],
+        "updated_at": "2026-11-05T10:10:19.697209+08:00",
+        "error": null
+      },
+      "report_completed": 1,
+      "checks": [
+        "frozen manifest",
+        "exact keep-only set",
+        "identical arm evidence",
+        "fixed original reader boundary",
+        "literal selected scene reads",
+        "request scope and hashes",
+        "raw references and output hashes",
+        "budget including historical dependency",
+        "no pending calls"
+      ],
+      "limitation": "Technical/provenance audit; not a claim of semantic accuracy improvement"
+    }
+  },
+  "updated_at": "2026-11-05T10:10:54.295550+08:00"
+}

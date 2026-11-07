@@ -1,0 +1,262 @@
+{
+  "at": "2026-11-06T21:55:09.999087+08:00",
+  "user_request": "Inspect progress then use all available GPU capacity; repair and continue independentQ6/Q6plus RL",
+  "active_root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r4",
+  "launch": {
+    "pid": 1574753,
+    "identity": "1782136455",
+    "at": "2026-11-06T21:45:28.772485+08:00"
+  },
+  "workers": [
+    {
+      "id": 0,
+      "pid": 1574982,
+      "identity": "1782136598"
+    },
+    {
+      "id": 1,
+      "pid": 1575635,
+      "identity": "1782139599"
+    },
+    {
+      "id": 2,
+      "pid": 1575636,
+      "identity": "1782139599"
+    },
+    {
+      "id": 3,
+      "pid": 1575637,
+      "identity": "1782139599"
+    },
+    {
+      "id": 4,
+      "pid": 1575638,
+      "identity": "1782139599"
+    }
+  ],
+  "status": {
+    "stage": "parallel_rollouts",
+    "pid": 1575575,
+    "gpu": "1",
+    "at": "2026-11-06T21:54:36.677778+08:00",
+    "epoch": 1,
+    "epochs": 6,
+    "question": 11,
+    "questions": 200,
+    "batch_questions": 2,
+    "completed_groups": 10,
+    "optimizer_steps": 3,
+    "policy_gradient_updates": 1
+  },
+  "real_first_reward_gradient": {
+    "passed": true,
+    "epoch": 1,
+    "question_ids": [
+      "1e4ce899-0b37-44f2-9c89-dcd06c61a94f"
+    ],
+    "rewards": {
+      "1e4ce899-0b37-44f2-9c89-dcd06c61a94f": [
+        1.0,
+        0.0
+      ]
+    },
+    "advantages": {
+      "1e4ce899-0b37-44f2-9c89-dcd06c61a94f": [
+        1.0,
+        -1.0
+      ]
+    },
+    "gradient_norm": 0.43828797340393066,
+    "maximum_likelihood_drift": 0.0,
+    "finite_nonzero_adapter_gradient": true,
+    "base_gradients_absent": true,
+    "optimizer_steps": 1,
+    "adapter_initializations": 1,
+    "optimizer_initializations": 1,
+    "behavior_replay": "identical cached chunks with reentrant checkpoint",
+    "at": "2026-11-06T21:48:25.918710+08:00"
+  },
+  "inherited_likelihood_gate": {
+    "passed": true,
+    "maximum_drift": 0.0,
+    "actions": 1757,
+    "seconds": 81.9889473579824,
+    "optimizer_steps": 0,
+    "at": "2026-11-06T21:47:42.355450+08:00"
+  },
+  "inherited_rollouts": 12,
+  "inherited_raw_files_verified": 970,
+  "prior_frozen_integrity": [
+    {
+      "manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/frozen_hashes.json",
+      "checked": 248,
+      "differences": []
+    },
+    {
+      "manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/recovery-20261106-r3/frozen_hashes.json",
+      "checked": 15,
+      "differences": []
+    },
+    {
+      "manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-fixed6-200train-300val-20261106-r1/frozen_hashes.json",
+      "checked": 252,
+      "differences": []
+    },
+    {
+      "manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-fixed6-200train-300val-20261106-r1/control/frozen_hashes.json",
+      "checked": 5,
+      "differences": []
+    }
+  ],
+  "inherited_raw_and_results_changed": false,
+  "recovery_costs": {
+    "at": "2026-11-06T21:51:54.267834+08:00",
+    "inherited_full_rollout_processing_seconds": 909.8610198907554,
+    "inherited_already_committed_prefix_processing_seconds": 630.9070683531463,
+    "inherited_failed_group_rollout_processing_seconds": 278.9539515376091,
+    "logical_training_processing_formula": "committed_prefix + training.result.inherited_consumed_processing_seconds + training.result.new_rollout_processing_seconds",
+    "warning": "Do not add inherited_full_rollout_processing_seconds to a total already including prefix and failed-group replay; replay probability/gradient forward is separate compute, not a repeated rollout",
+    "inherited_raw_artifact_count": 970
+  },
+  "all_five_actual_model_gates": {
+    "0": {
+      "functional": true,
+      "reader": true
+    },
+    "1": {
+      "functional": true,
+      "reader": true
+    },
+    "2": {
+      "functional": true,
+      "reader": true
+    },
+    "3": {
+      "functional": true,
+      "reader": true
+    },
+    "4": {
+      "functional": true,
+      "reader": true
+    }
+  },
+  "first_parallel_batch_audit": {
+    "passed": true,
+    "at": "2026-11-06T21:54:14.509372+08:00",
+    "jobs": [
+      {
+        "key": "1/bd389c94-28a0-4ef4-a8ee-9759291beb72/0",
+        "worker_id": 3,
+        "policy_version": 1,
+        "weights_sha256": "3d5b71ce48093e7cf55c223cc367aeb92ca84997ca266de0413163f6bc588bc3",
+        "actions": 299,
+        "processing_seconds": 92.74564028531313
+      },
+      {
+        "key": "1/bd389c94-28a0-4ef4-a8ee-9759291beb72/1",
+        "worker_id": 2,
+        "policy_version": 1,
+        "weights_sha256": "3d5b71ce48093e7cf55c223cc367aeb92ca84997ca266de0413163f6bc588bc3",
+        "actions": 299,
+        "processing_seconds": 134.7904950156808
+      },
+      {
+        "key": "1/c50c237d-28b2-4907-8730-31060589eb68/0",
+        "worker_id": 4,
+        "policy_version": 1,
+        "weights_sha256": "3d5b71ce48093e7cf55c223cc367aeb92ca84997ca266de0413163f6bc588bc3",
+        "actions": 162,
+        "processing_seconds": 61.90593953803182
+      },
+      {
+        "key": "1/c50c237d-28b2-4907-8730-31060589eb68/1",
+        "worker_id": 1,
+        "policy_version": 1,
+        "weights_sha256": "3d5b71ce48093e7cf55c223cc367aeb92ca84997ca266de0413163f6bc588bc3",
+        "actions": 162,
+        "processing_seconds": 92.6573965139687
+      }
+    ],
+    "all_four_actors_published": true,
+    "same_policy_version_and_weights": true,
+    "learner_weights_differ_from_initial_sft": true,
+    "strict_result_keep_only_budget_no_pending": true
+  },
+  "failed_parent": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r3",
+  "repair": "Same incremental KV chunks and projection shape, no-grad reentrant-checkpoint forward, cached backward; original0.05 guard retained",
+  "concurrency": "One learner plus four resident actor replicas; two questions per on-policy update after recovering group6 alone",
+  "physical_pools_mib": {
+    "learner": 40960,
+    "actors": [
+      22528,
+      22528,
+      22528,
+      22528
+    ]
+  },
+  "allowed_gpu_indices": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "current_gpu_placement": {
+    "0": [
+      "actor1",
+      "actor2"
+    ],
+    "1": [
+      "learner",
+      "actor3",
+      "actor4"
+    ]
+  },
+  "gpu23_note": "Free22.8GiB/12GiB below24GiB actor admission; other projects retained",
+  "model_identity_policy": "Each replica attaches LoRA once; policy broadcasts copy existing tensor values; no reattachment",
+  "source_hashes": {
+    "script/q6_parallel_rl.py": "5bdb6f353e15ecbe510026ef6693ddccd73fde697c305386ba6c4e06cc87c983",
+    "script_core/q6_rl.py": "8c5986089012170778bc67a5765508ce974f6c6786f0e9d7cee7ffcbbb7fbc9f",
+    "tests/test_q6_parallel_rl.py": "510477931ac00519bf7e301cf6787859f62254dea74cbb6d04136007358d2869",
+    "tests/test_q6_rl.py": "947634e43990308b0e8c3450e933819857c378f85ced983db53b770a02661308"
+  },
+  "cpu_tests": {
+    "at": "2026-11-06T21:49:44.344786+08:00",
+    "command": "python -m unittest tests.test_q6_parallel_rl tests.test_q6_rl tests.test_physical_cuda_pool tests.test_q4_resident tests.test_q4_resident_training tests.test_gpu_shared_queue tests.test_q4_fixed_epochs tests.test_q4_retention_training -q",
+    "tests_run": 53,
+    "skipped": 1,
+    "passed": 52,
+    "success": true,
+    "checks": "parallel claim uniqueness, policy version barrier, immutable replay checks, tensor-copy broadcast without LoRA reinitialization, first-error preservation, exact cached checkpoint gradients, prior lifecycle/lease regression"
+  },
+  "monitor": {
+    "pid": 1576693,
+    "at": "2026-11-06T21:54:20.268916+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "jobs_summary": {
+    "total": 12,
+    "completed": 10,
+    "running": 2
+  },
+  "q5_completed_summary": {
+    "Qplus": {
+      "trained_correct": 195,
+      "untrained_correct": 193,
+      "fixed": 4,
+      "regressed": 2
+    },
+    "Q": {
+      "trained_correct": 194,
+      "untrained_correct": 193,
+      "fixed": 6,
+      "regressed": 5
+    }
+  },
+  "limitations": [
+    "Early epoch1, not six epochs complete or QA improvement proof",
+    "One learner GPU, not DDP; actors synchronize at policy barriers",
+    "Source/failed-prefix/gradient-replay costs preserved separately; no repeated successful rollout"
+  ]
+}

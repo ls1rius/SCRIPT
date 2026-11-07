@@ -1,0 +1,133 @@
+{
+  "user_request": "在新的P方案上修复并验证；所有操作必须通用，不针对某个数据特殊设计",
+  "version": "P-source-schema-first-single-decision-neutral-reader-v3",
+  "run": "workdirs/P-repaired-coordination-20261103-r3",
+  "prior_run": "workdirs/P-O-direct-question-coordination-20261103-r1",
+  "cpu_checks": 39,
+  "method_changes": [
+    "fresh source-only role-aware extraction",
+    "no worked examples or generated task brief",
+    "single categorical decision projected to binary",
+    "no actor or patient restoration",
+    "neutral reader with matching letter-only contract"
+  ],
+  "generic_probe_count": 12,
+  "queue": {
+    "state": "waiting_for_gpu",
+    "controller_pid": 3524695,
+    "updated_at": "2026-11-03T23:41:03.581009+08:00",
+    "watched_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "gpu_observations": {
+      "0": {
+        "index": "0",
+        "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "free_mib": 27185,
+        "utilization": 98
+      },
+      "1": {
+        "index": "1",
+        "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+        "free_mib": 13361,
+        "utilization": 76
+      },
+      "2": {
+        "index": "2",
+        "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+        "free_mib": 16831,
+        "utilization": 96
+      },
+      "3": {
+        "index": "3",
+        "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+        "free_mib": 12651,
+        "utilization": 100
+      }
+    },
+    "stable_observations": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100
+  },
+  "method_contains_case_specific_terms": false,
+  "probe_result": null,
+  "case_result": null,
+  "scope": "One known QA case plus synthetic contract probes; CPU and static checks passed, current real validation waits for GPU capacity. No general accuracy claim; no hidden retries; old P remains frozen.",
+  "regression_probe_count": 8,
+  "new_held_out_probe_count": 4,
+  "updated_at": "2026-11-03T23:41:11.742046+08:00",
+  "static_audit": "workdirs/P-repair-audit-20261103-r1/prelaunch_v3.json",
+  "cpu_log": "workdirs/P-repair-audit-20261103-r1/cpu_v3.log",
+  "prior_attempts": [
+    {
+      "run": "workdirs/P-repaired-coordination-20261103-r2",
+      "version": "P-source-roles-single-decision-neutral-reader-v2",
+      "probe_passed": false,
+      "technical_passed": true,
+      "passed_checks": 3,
+      "checks": 8,
+      "failed_checks": [
+        "source_roles_0",
+        "source_roles_1",
+        "source_roles_2",
+        "source_roles_3",
+        "filter_decision_2"
+      ],
+      "failure": "All four extraction rows unavailable; invalid body_part dropped as unrelated instead of unfaithful",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 6.141880847513676,
+        "total": 6.141880847513676,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 6.141880847513676,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "p_independent_batch": 6.141880847513676
+        },
+        "call_count": 2,
+        "resources": {
+          "cpu_seconds": 6.122392526000002,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 6.1486321948468685,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 17105341952
+        }
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 8.575026590377092,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.593006603419781,
+            "tokenizer_constraint_seconds": 2.2261120602488518
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 8.049892109,
+            "gpu_resident_seconds": 5.72899491712451,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      },
+      "formal_case_started": false
+    }
+  ],
+  "v3_changes": [
+    "Full extraction schema exposed as format metadata in system prompt, no example facts",
+    "Extract representable facts despite missing roles; omit absent roles",
+    "Fidelity and role typing precede relevance for every unit"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "at": "2026-11-04T19:34:09.536787+08:00",
+  "passed": true,
+  "parent": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3",
+  "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4",
+  "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1",
+  "tests_passed": 103,
+  "inherited_results_checked": 86,
+  "inherited_files_checked": 43370,
+  "inherited_changed": [],
+  "recovered": {
+    "d135be4f-96a4-4a14-82a1-7d8d34546752": {
+      "new_seconds": 20.574042469263077,
+      "old_success_seconds": 995.2646873816848,
+      "old_failed_review_seconds": 0.24146218970417976,
+      "budgeted_total": 1016.080192040652,
+      "cap": 3600,
+      "call_count": 2,
+      "gpu_peak_allocated_bytes": 21931488256
+    },
+    "d299858f-cde8-49a9-a713-fb546db0a268": {
+      "new_seconds": 69.60510364919901,
+      "old_success_seconds": 707.4547431468964,
+      "old_failed_review_seconds": 63.297586385160685,
+      "budgeted_total": 840.357433181256,
+      "cap": 3600,
+      "call_count": 2,
+      "gpu_peak_allocated_bytes": 19075235328
+    }
+  },
+  "reader_real_gate_seconds": {
+    "0": 18.789540506899357,
+    "1": 19.96154384315014
+  },
+  "reader_gate_scope": "Two fresh real model format/local-reference uniqueness checks; not QA quality validation",
+  "strict_preprocessing_replay": {
+    "sentences": 271,
+    "successful_calls": 394,
+    "seconds": 1702.7194305285811
+  },
+  "failed_review_seconds": 63.539048574864864,
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory",
+    "admission_mode": "memory_shared",
+    "allocator_limit_mib": 30720
+  },
+  "allocator_limit_mib": 30720,
+  "live_M_O_frozen_files_checked": 417,
+  "new_review_input_tokens": {
+    "original_OOM_input": 26388,
+    "original_duplicate_input": 12197
+  },
+  "review_output_reserve": 2048,
+  "uniqueness_replay": {
+    "passed": true,
+    "question_id": "d299858f-cde8-49a9-a713-fb546db0a268",
+    "old_raw_path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3/parallel-20261104-r1/attempts/d299858f-cde8-49a9-a713-fb546db0a268/run/raw_calls/f4d90e7d-aab0-4dcc-8133-7ad9fadefddc-0.json",
+    "blocked": {
+      "token_index": 287,
+      "token_text": "8",
+      "prefix_tail": "4\", \"S45\", \"S46\", \"S47\", \"S4"
+    },
+    "scope": "CPU real-tokenizer replay, not new model inference; old failed output is not repaired or accepted"
+  },
+  "current_queue": {
+    "state": "running",
+    "controller_pid": 93037,
+    "worker_pids": [
+      93050,
+      93051
+    ],
+    "workers": {
+      "0": {
+        "stage": "query",
+        "pid": 93050,
+        "at": "2026-11-04T19:31:00.832937+08:00",
+        "index": 89,
+        "question_id": "901ae1fe-5be2-495b-9506-9ec2a28d8ae0",
+        "gpu": "2"
+      },
+      "1": {
+        "stage": "query",
+        "pid": 93051,
+        "at": "2026-11-04T19:31:51.486094+08:00",
+        "index": 91,
+        "question_id": "1541b81e-cc80-4201-a636-9a39c2d20faa",
+        "gpu": "3"
+      }
+    },
+    "scheduler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1",
+    "effective_worker_count": 2,
+    "updated_at": "2026-11-04T19:34:06.795406+08:00"
+  },
+  "current_report": {
+    "completed": 89,
+    "correct": 50,
+    "errors": 0,
+    "version_subgroups": {
+      "P-blind-witness-explicit-semantic-rejection-v15": {
+        "completed": 17,
+        "correct": 10
+      },
+      "P-complete-unique-role-slots-v16": {
+        "completed": 69,
+        "correct": 39
+      },
+      "P-unique-review-references-v17": {
+        "completed": 3,
+        "correct": 1
+      }
+    },
+    "scheduler_failure": null
+  },
+  "accounting": "Successful preprocessing reused once as dependency; old failed review cost also consumes the original 3600-second question cap. All old attempts retained; no output deduplication, answer reuse, truncation or automatic retry."
+}

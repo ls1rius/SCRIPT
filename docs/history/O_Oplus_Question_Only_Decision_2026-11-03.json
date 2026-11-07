@@ -1,0 +1,59 @@
+{
+  "updated_at": "2026-11-03T16:55:45.984002+08:00",
+  "user_instruction": "不用跑带选项的了",
+  "scope": "Future O/O+ experiments",
+  "filtering": {
+    "question": true,
+    "options": false
+  },
+  "composition": {
+    "question": true,
+    "options": false
+  },
+  "final_answer": {
+    "question": true,
+    "options": "all"
+  },
+  "retained_arms": [
+    "O_question_only",
+    "Oplus_question_only"
+  ],
+  "basis": {
+    "report": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/O-Oplus-N-ten-case-matrix-batched-20261103-r2/report.json",
+    "completed": 10,
+    "arms": {
+      "O_question_only": {
+        "completed": 10,
+        "correct": 8,
+        "mean_input_tokens": 2672.7
+      },
+      "Oplus_question_only": {
+        "completed": 10,
+        "correct": 8,
+        "mean_input_tokens": 3219.1
+      },
+      "O_question_options": {
+        "completed": 10,
+        "correct": 5,
+        "mean_input_tokens": 1612.2
+      },
+      "Oplus_question_options": {
+        "completed": 10,
+        "correct": 4,
+        "mean_input_tokens": 2386.9
+      }
+    }
+  },
+  "existing_results_preserved": true,
+  "new_experiment_started": true,
+  "defaults_L_E_unchanged": true,
+  "MN_unchanged": true,
+  "implementation_note": "Experiment direction recorded; historical four-arm runners and frozen configurations retained. Future preparations must select only the two retained arms.",
+  "deferred_ablation_arms": [
+    "O_question_options",
+    "Oplus_question_options"
+  ],
+  "options_implementation_retained": true,
+  "full_run_authorized": true,
+  "full_run_directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-20261103-r1"
+}

@@ -1,0 +1,86 @@
+{
+  "at": "2026-11-06T23:42:53.881158+08:00",
+  "released_gpu_indices": [
+    "1",
+    "3"
+  ],
+  "q6_fully_removed_from_reserved_gpus": true,
+  "all_q6_reservations_removed_from_reserved_gpus": true,
+  "remaining_gpu_indices": [
+    "0"
+  ],
+  "controller_pid": 1639115,
+  "learner_pid": 1592028,
+  "learner_process_restarted": false,
+  "optimizer_state_reset": false,
+  "kept_workers": [
+    {
+      "id": 0,
+      "pid": 1591905,
+      "identity": "1782314336"
+    },
+    {
+      "id": 4,
+      "pid": 1592221,
+      "identity": "1782317337"
+    },
+    {
+      "id": 5,
+      "pid": 1592222,
+      "identity": "1782317337"
+    }
+  ],
+  "checkpoint": {
+    "checkpoint": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q6-RL-200train-300val-20261106-r6/training/policies/v000027",
+    "optimizer_steps": 27,
+    "completed_groups": 80,
+    "epoch": 1,
+    "next_offset": 80,
+    "policy_gradient_updates": 2,
+    "adapter_sha256": "a6d76e2a2eb217eeff55b8714a306f091ab09437572e3fb7ecc6c6237177b607",
+    "optimizer_sha256": "4a806a467474290c643db55a4ca37af86ff992b7e8ce56592b49a779618b8643",
+    "no_inflight_jobs": true,
+    "status": {
+      "stage": "group_complete",
+      "pid": 1592028,
+      "gpu": "0",
+      "at": "2026-11-06T23:38:56.221153+08:00",
+      "epoch": 1,
+      "epochs": 6,
+      "question": 80,
+      "questions": 200,
+      "completed_groups": 80,
+      "optimizer_steps": 27,
+      "policy_gradient_updates": 2,
+      "mean_reward": 0.6125
+    },
+    "captured_unix": 1793979537.987901
+  },
+  "current_training": {
+    "stage": "parallel_rollouts",
+    "pid": 1592028,
+    "gpu": "0",
+    "at": "2026-11-06T23:40:44.625695+08:00",
+    "epoch": 1,
+    "epochs": 6,
+    "question": 81,
+    "questions": 200,
+    "batch_questions": 4,
+    "completed_groups": 80,
+    "optimizer_steps": 27,
+    "policy_gradient_updates": 2
+  },
+  "non_q6_processes_on_reserved_cards": [
+    {
+      "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+      "pid": 1639356,
+      "mib": 72070
+    },
+    {
+      "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+      "pid": 1638444,
+      "mib": 31376
+    }
+  ],
+  "note": "GPU3 now has a newly started unrelated process; only Q6 was released. Do not kill unrelated workloads."
+}

@@ -1,0 +1,126 @@
+{
+  "at": "2026-11-05T13:00:39.658683+08:00",
+  "passed": true,
+  "recovered_audited": 4,
+  "expected_recoveries": 4,
+  "rows": [
+    {
+      "mode": "adaptive",
+      "question_id": "d430cf3f-da86-4d94-acd1-7e033d23598a",
+      "passed": true,
+      "reused_calls": 30,
+      "new_calls": 18,
+      "prior_successful_seconds": 123.46404714137316,
+      "new_processing_seconds": 57.38644840195775,
+      "interrupted_budget_seconds": 150,
+      "budgeted_total": 474.6790349371731
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "d5ea4b32-7e72-4195-82c2-257ed2e455ef",
+      "passed": true,
+      "reused_calls": 2,
+      "new_calls": 21,
+      "prior_successful_seconds": 1.636838659644127,
+      "new_processing_seconds": 46.26248321682215,
+      "interrupted_budget_seconds": 150,
+      "budgeted_total": 233.45273089781404
+    },
+    {
+      "mode": "control",
+      "question_id": "d430cf3f-da86-4d94-acd1-7e033d23598a",
+      "passed": true,
+      "reused_calls": 38,
+      "new_calls": 10,
+      "prior_successful_seconds": 163.30055140331388,
+      "new_processing_seconds": 34.7438449524343,
+      "interrupted_budget_seconds": 150,
+      "budgeted_total": 491.8729357495904
+    },
+    {
+      "mode": "control",
+      "question_id": "d5ea4b32-7e72-4195-82c2-257ed2e455ef",
+      "passed": true,
+      "reused_calls": 15,
+      "new_calls": 8,
+      "prior_successful_seconds": 57.28780918195844,
+      "new_processing_seconds": 19.187535896897316,
+      "interrupted_budget_seconds": 150,
+      "budgeted_total": 262.0287541002035
+    }
+  ],
+  "groups": {
+    "adaptive": {
+      "completed": 170,
+      "errors": 0,
+      "workers": [
+        {
+          "stage": "query",
+          "pid": 557977,
+          "at": "2026-11-05T13:00:36.904966+08:00",
+          "gpu": "1",
+          "index": 172,
+          "question_id": "0aadf5ce-07eb-4934-9e07-317a46bc0b21",
+          "phase": "filter",
+          "iteration": 1,
+          "observations": 134
+        },
+        {
+          "stage": "query",
+          "pid": 557978,
+          "at": "2026-11-05T13:00:36.829917+08:00",
+          "gpu": "0",
+          "index": 171,
+          "question_id": "643d9ff3-8780-4c7f-84e2-290c16b8c3c1",
+          "phase": "filter",
+          "iteration": 2,
+          "observations": 139
+        }
+      ],
+      "report_at": "2026-11-05T13:00:34.839768+08:00"
+    },
+    "control": {
+      "completed": 170,
+      "errors": 0,
+      "workers": [
+        {
+          "stage": "query",
+          "pid": 557979,
+          "at": "2026-11-05T13:00:38.104346+08:00",
+          "gpu": "0",
+          "index": 171,
+          "question_id": "643d9ff3-8780-4c7f-84e2-290c16b8c3c1",
+          "phase": "filter",
+          "iteration": 4,
+          "observations": 163
+        },
+        {
+          "stage": "query",
+          "pid": 557980,
+          "at": "2026-11-05T13:00:38.507278+08:00",
+          "gpu": "1",
+          "index": 173,
+          "question_id": "d33126fd-07dd-480e-ad89-9fdca4f813c4",
+          "phase": "filter",
+          "iteration": 0,
+          "observations": 27
+        }
+      ],
+      "report_at": "2026-11-05T13:00:34.914615+08:00"
+    }
+  },
+  "original_completed_unchanged": 336,
+  "frozen_files_unchanged": 3504,
+  "checks": [
+    "original successful result hashes",
+    "frozen model-facing config/runtime/input hashes",
+    "fresh 17 gates and retrieval/early-stop/dual-reader flow per worker",
+    "exact durable call prefix consumed once",
+    "raw input/output hashes",
+    "exact keep-only final evidence",
+    "identical Q/Qplus evidence",
+    "original reader and options",
+    "no published pending calls",
+    "original budget with interruption debt"
+  ]
+}

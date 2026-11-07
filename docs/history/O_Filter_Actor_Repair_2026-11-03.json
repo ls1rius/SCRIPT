@@ -1,0 +1,1244 @@
+{
+  "updated_at": "2026-11-03T12:35:28.347375+08:00",
+  "versions": {
+    "version": "O-N-observable-option-brief-action-core-v10",
+    "plus_version": "Oplus-N-action-core-grouped-composition-v10"
+  },
+  "cpu_checks": 12,
+  "real_checks": 24,
+  "new_navigation": false,
+  "training": false,
+  "adapter": null,
+  "default_LE_unchanged": true,
+  "running_N_frozen_unchanged": true,
+  "repairs": [
+    "Source-only full-category extraction; preserve explicit subjects and participant roles.",
+    "Filter question and all options by partial observable evidence, with one per-question option brief.",
+    "Retained verbs keep already-extracted actor/patient in their own group; archive raw and adjusted labels.",
+    "O+ sees selected groups only and generates separate text per group; no question/options/source input."
+  ],
+  "r9_complete_new_generation": [
+    {
+      "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+      "complete": true,
+      "error": null,
+      "arms": {
+        "O": {
+          "answer": {
+            "selected_option": "2",
+            "raw": "prediction: C"
+          },
+          "correct": true,
+          "input_tokens": 849,
+          "seconds": 0.09902195632457733
+        },
+        "O+": {
+          "answer": {
+            "selected_option": "2",
+            "raw": "prediction: C"
+          },
+          "correct": true,
+          "input_tokens": 629,
+          "seconds": 0.08322939649224281
+        }
+      },
+      "new_navigation": false,
+      "gold": "2",
+      "sentences": 11,
+      "candidates": 40,
+      "retained_units": 36,
+      "all_zero_sentences": 1,
+      "fallback_sentences": 0,
+      "composition_empty_sentences": 0,
+      "baseline_N": {
+        "selected_option": "0",
+        "raw": "prediction: A"
+      },
+      "shared_selection_hash": "c2b93b7e9295dba5ef42285e1921c6db2c3041ef957862ced12932ca3fa24225",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 49.87013006210327,
+        "total": 49.87013006210327,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 49.87013006210327,
+        "text_cache_hits": 0,
+        "total_cap": 3600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 20.030919197946787,
+          "o_filter_plan": 7.390488140285015,
+          "o_filter": 16.107638243585825,
+          "oplus_compose": 6.158833127468824,
+          "o_answer": 0.09902195632457733,
+          "oplus_answer": 0.08322939649224281
+        },
+        "call_count": 35,
+        "resources": {
+          "cpu_seconds": 49.86030207100003,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 49.93087560683489,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16862518784
+        }
+      },
+      "updated_at": "2026-11-03T12:24:48.995244+08:00"
+    },
+    {
+      "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+      "complete": true,
+      "error": null,
+      "arms": {
+        "O": {
+          "answer": {
+            "selected_option": "3",
+            "raw": "prediction: D"
+          },
+          "correct": true,
+          "input_tokens": 3682,
+          "seconds": 0.22249231860041618
+        },
+        "O+": {
+          "answer": {
+            "selected_option": "3",
+            "raw": "prediction: D"
+          },
+          "correct": true,
+          "input_tokens": 2350,
+          "seconds": 0.15806277841329575
+        }
+      },
+      "new_navigation": false,
+      "gold": "3",
+      "sentences": 96,
+      "candidates": 315,
+      "retained_units": 211,
+      "all_zero_sentences": 31,
+      "fallback_sentences": 0,
+      "composition_empty_sentences": 0,
+      "baseline_N": {
+        "selected_option": "3",
+        "raw": "prediction: D"
+      },
+      "shared_selection_hash": "0d6d1a8f57dd73aad8c4dc69eee7f786814091ba15af44c32df6e54f532bb946",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 328.62291326001287,
+        "total": 328.62291326001287,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 328.62291326001287,
+        "text_cache_hits": 0,
+        "total_cap": 3600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 165.7644224949181,
+          "o_filter_plan": 6.855605091899633,
+          "o_filter": 118.56960094347596,
+          "oplus_compose": 37.05272963270545,
+          "o_answer": 0.22249231860041618,
+          "oplus_answer": 0.15806277841329575
+        },
+        "call_count": 260,
+        "resources": {
+          "cpu_seconds": 328.50380669100014,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 329.0803120471537,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 17366929408
+        }
+      },
+      "updated_at": "2026-11-03T12:30:18.078345+08:00"
+    }
+  ],
+  "r10_controlled_selection_replay": [
+    {
+      "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+      "complete": true,
+      "error": null,
+      "arms": {
+        "O": {
+          "answer": {
+            "selected_option": "2",
+            "raw": "prediction: C"
+          },
+          "correct": true,
+          "input_tokens": 854,
+          "seconds": 0.09729495272040367
+        },
+        "O+": {
+          "answer": {
+            "selected_option": "2",
+            "raw": "prediction: C"
+          },
+          "correct": true,
+          "input_tokens": 631,
+          "seconds": 0.08351589739322662
+        }
+      },
+      "new_navigation": false,
+      "inherited_extraction_filter_costs": {
+        "o_extract": 20.030919197946787,
+        "o_filter": 16.107638243585825,
+        "o_filter_plan": 7.390488140285015
+      },
+      "selection_replay_from": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r9",
+      "gold": "2",
+      "sentences": 11,
+      "candidates": 40,
+      "retained_units": 37,
+      "action_core_adjustments": 1,
+      "all_zero_sentences": 1,
+      "fallback_sentences": 0,
+      "composition_empty_sentences": 0,
+      "baseline_N": {
+        "selected_option": "0",
+        "raw": "prediction: A"
+      },
+      "shared_selection_hash": "1e9cc3e625ef77e1e767f8c541700d459ad943cd007fa40079734bfde921b2ba",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 6.491903502494097,
+        "total": 6.491903502494097,
+        "shared_dependency_seconds": 43.52904558181763,
+        "budgeted_total": 50.020949084311724,
+        "text_cache_hits": 0,
+        "total_cap": 3600,
+        "budget_violation": false,
+        "by_operation": {
+          "oplus_compose": 6.3110926523804665,
+          "o_answer": 0.09729495272040367,
+          "oplus_answer": 0.08351589739322662
+        },
+        "call_count": 12,
+        "resources": {
+          "cpu_seconds": 6.485853688000001,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 6.512991011142731,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16862518784
+        }
+      },
+      "updated_at": "2026-11-03T12:33:53.644085+08:00"
+    },
+    {
+      "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+      "complete": true,
+      "error": null,
+      "arms": {
+        "O": {
+          "answer": {
+            "selected_option": "3",
+            "raw": "prediction: D"
+          },
+          "correct": true,
+          "input_tokens": 3686,
+          "seconds": 0.22407002747058868
+        },
+        "O+": {
+          "answer": {
+            "selected_option": "3",
+            "raw": "prediction: D"
+          },
+          "correct": true,
+          "input_tokens": 2350,
+          "seconds": 0.15842240676283836
+        }
+      },
+      "new_navigation": false,
+      "inherited_extraction_filter_costs": {
+        "o_extract": 165.7644224949181,
+        "o_filter": 118.56960094347596,
+        "o_filter_plan": 6.855605091899633
+      },
+      "selection_replay_from": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r9",
+      "gold": "3",
+      "sentences": 96,
+      "candidates": 315,
+      "retained_units": 212,
+      "action_core_adjustments": 1,
+      "all_zero_sentences": 31,
+      "fallback_sentences": 0,
+      "composition_empty_sentences": 0,
+      "baseline_N": {
+        "selected_option": "3",
+        "raw": "prediction: D"
+      },
+      "shared_selection_hash": "cf7d051de68520ee90e8cdaa83f150e632d119c7e00ba2f2dfbecd48a8ee9b88",
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 37.628461726009846,
+        "total": 37.628461726009846,
+        "shared_dependency_seconds": 291.1896285302937,
+        "budgeted_total": 328.81809025630355,
+        "text_cache_hits": 0,
+        "total_cap": 3600,
+        "budget_violation": false,
+        "by_operation": {
+          "oplus_compose": 37.24596929177642,
+          "o_answer": 0.22407002747058868,
+          "oplus_answer": 0.15842240676283836
+        },
+        "call_count": 67,
+        "resources": {
+          "cpu_seconds": 37.59126888499995,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 37.80664050579071,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 17367045120
+        }
+      },
+      "updated_at": "2026-11-03T12:34:31.454754+08:00"
+    }
+  ],
+  "r10_replay_audit": {
+    "frozen_and_parent_hashes_unchanged": true,
+    "parent_files": 1176,
+    "cases": [
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "source_only_extraction": true,
+        "filter_only_current_sentence": true,
+        "composition_only_selected_groups": true,
+        "explicit_C_actor_missing_groups": [],
+        "selected_actor_omitted_from_group_text": [],
+        "adjustments": [
+          {
+            "sentence": "S8",
+            "id": "U2",
+            "before": 0,
+            "after": 1,
+            "group": "actions_0",
+            "rule": "retained_action_keeps_its_extracted_actor_and_patient"
+          }
+        ],
+        "model_labels_unchanged_from_replay": true,
+        "candidates_unchanged_from_replay": true,
+        "qa_correct": {
+          "O": true,
+          "O+": true
+        },
+        "limitations": [
+          "Two previously inspected fixed-source cases, not random/full evaluation.",
+          "Actor text check is a literal diagnostic, not a semantic source validator.",
+          "Relevance consistency and extraction role accuracy are not guaranteed."
+        ]
+      },
+      {
+        "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "source_only_extraction": true,
+        "filter_only_current_sentence": true,
+        "composition_only_selected_groups": true,
+        "explicit_C_actor_missing_groups": [],
+        "selected_actor_omitted_from_group_text": [],
+        "adjustments": [
+          {
+            "sentence": "S19",
+            "id": "U0",
+            "before": 0,
+            "after": 1,
+            "group": "actions_0",
+            "rule": "retained_action_keeps_its_extracted_actor_and_patient"
+          }
+        ],
+        "model_labels_unchanged_from_replay": true,
+        "candidates_unchanged_from_replay": true,
+        "qa_correct": {
+          "O": true,
+          "O+": true
+        },
+        "limitations": [
+          "Two previously inspected fixed-source cases, not random/full evaluation.",
+          "Actor text check is a literal diagnostic, not a semantic source validator.",
+          "Relevance consistency and extraction role accuracy are not guaranteed."
+        ]
+      }
+    ]
+  },
+  "r9_input_audit": {
+    "frozen_and_parent_hashes_unchanged": true,
+    "parent_files": 146,
+    "cases": [
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "source_only_extraction": true,
+        "filter_only_current_sentence": true,
+        "composition_only_selected_groups": true,
+        "explicit_C_actor_missing_groups": [],
+        "selected_actor_omitted_from_group_text": [],
+        "adjustments": [],
+        "model_labels_unchanged_from_replay": null,
+        "candidates_unchanged_from_replay": null,
+        "qa_correct": {
+          "O": true,
+          "O+": true
+        },
+        "limitations": [
+          "Two previously inspected fixed-source cases, not random/full evaluation.",
+          "Actor text check is a literal diagnostic, not a semantic source validator.",
+          "Relevance consistency and extraction role accuracy are not guaranteed."
+        ]
+      },
+      {
+        "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "source_only_extraction": true,
+        "filter_only_current_sentence": true,
+        "composition_only_selected_groups": true,
+        "explicit_C_actor_missing_groups": [],
+        "selected_actor_omitted_from_group_text": [],
+        "adjustments": [],
+        "model_labels_unchanged_from_replay": null,
+        "candidates_unchanged_from_replay": null,
+        "qa_correct": {
+          "O": true,
+          "O+": true
+        },
+        "limitations": [
+          "Two previously inspected fixed-source cases, not random/full evaluation.",
+          "Actor text check is a literal diagnostic, not a semantic source validator.",
+          "Relevance consistency and extraction role accuracy are not guaranteed."
+        ]
+      }
+    ]
+  },
+  "r10_new_case_processing_seconds": 44.12036522850394,
+  "r10_inherited_extraction_filter_seconds": 334.71867411211133,
+  "attempts": [
+    {
+      "round": 3,
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r3",
+      "functional_passed": true,
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 5.491894114762545,
+        "total": 5.491894114762545,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 5.491894114762545,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 3.4301058650016785,
+          "o_filter": 0.8265035189688206,
+          "oplus_compose": 0.7973078414797783,
+          "o_answer": 0.3377375416457653,
+          "oplus_answer": 0.100239347666502
+        },
+        "call_count": 9,
+        "resources": {
+          "cpu_seconds": 5.469462202999999,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 5.511429350823164,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16731168256
+        }
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.4592328406870365,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.276712778955698,
+            "tokenizer_constraint_seconds": 2.115040458738804
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 7.826925417,
+            "gpu_resident_seconds": 4.789123486727476,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      },
+      "cases": [
+        {
+          "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "O": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "correct": false,
+              "input_tokens": 439,
+              "seconds": 0.08320658281445503
+            },
+            "O+": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "correct": false,
+              "input_tokens": 403,
+              "seconds": 0.07890256121754646
+            }
+          },
+          "new_navigation": false,
+          "gold": "2",
+          "sentences": 11,
+          "candidates": 55,
+          "retained_units": 6,
+          "all_zero_sentences": 9,
+          "fallback_sentences": 0,
+          "composition_empty_sentences": 0,
+          "baseline_N": {
+            "selected_option": "0",
+            "raw": "prediction: A"
+          },
+          "shared_selection_hash": "65085fdf185f6fc816be4509a2e97017d2191dcecfced5d39d9a15fdece98a20",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 51.707506999373436,
+            "total": 51.707506999373436,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 51.707506999373436,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "o_extract": 44.745873626321554,
+              "o_filter": 6.2342834658920765,
+              "oplus_compose": 0.5652407631278038,
+              "o_answer": 0.08320658281445503,
+              "oplus_answer": 0.07890256121754646
+            },
+            "call_count": 26,
+            "resources": {
+              "cpu_seconds": 51.70626512300001,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 51.754474963992834,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 16773093376
+            }
+          },
+          "updated_at": "2026-11-03T11:50:40.573624+08:00"
+        },
+        {
+          "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "O": {
+              "answer": {
+                "selected_option": "2",
+                "raw": "prediction: C"
+              },
+              "correct": false,
+              "input_tokens": 669,
+              "seconds": 0.09277699142694473
+            },
+            "O+": {
+              "answer": {
+                "selected_option": "2",
+                "raw": "prediction: C"
+              },
+              "correct": false,
+              "input_tokens": 513,
+              "seconds": 0.08202691748738289
+            }
+          },
+          "new_navigation": false,
+          "gold": "3",
+          "sentences": 96,
+          "candidates": 404,
+          "retained_units": 11,
+          "all_zero_sentences": 90,
+          "fallback_sentences": 0,
+          "composition_empty_sentences": 2,
+          "baseline_N": {
+            "selected_option": "3",
+            "raw": "prediction: D"
+          },
+          "shared_selection_hash": "fffedc7d6cbe29ab2e1e3546dafdf7471ee8417d527a88800b99796617145010",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 212.91834278404713,
+            "total": 212.91834278404713,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 212.91834278404713,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "o_extract": 165.41485010832548,
+              "o_filter": 46.177633833140135,
+              "oplus_compose": 1.151054933667183,
+              "o_answer": 0.09277699142694473,
+              "oplus_answer": 0.08202691748738289
+            },
+            "call_count": 200,
+            "resources": {
+              "cpu_seconds": 212.84452978700008,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 213.24619502946734,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 16775853568
+            }
+          },
+          "updated_at": "2026-11-03T11:54:13.821543+08:00"
+        }
+      ],
+      "functional_failures": []
+    },
+    {
+      "round": 4,
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r4",
+      "functional_passed": true,
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 13.532917350530624,
+        "total": 13.532917350530624,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 13.532917350530624,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 10.186731144785881,
+          "o_filter": 2.2009161561727524,
+          "oplus_compose": 0.6970809288322926,
+          "o_answer": 0.3486188165843487,
+          "oplus_answer": 0.09957030415534973
+        },
+        "call_count": 15,
+        "resources": {
+          "cpu_seconds": 13.506931729000005,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 13.56045674905181,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16727414784
+        }
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.697762202471495,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.538926564157009,
+            "tokenizer_constraint_seconds": 2.100805625319481
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 8.077872081,
+            "gpu_resident_seconds": 5.039571430534124,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      },
+      "cases": [],
+      "functional_failures": []
+    },
+    {
+      "round": 6,
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r6",
+      "functional_passed": false,
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 21.91001032292843,
+        "total": 21.91001032292843,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 21.91001032292843,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 11.66652262955904,
+          "o_filter": 7.006357159465551,
+          "oplus_compose": 2.7964886724948883,
+          "o_answer": 0.3420381210744381,
+          "oplus_answer": 0.0986037403345108
+        },
+        "call_count": 30,
+        "resources": {
+          "cpu_seconds": 21.88338915700001,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 21.944789342582226,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16845378560
+        }
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.692161154001951,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.579368785023689,
+            "tokenizer_constraint_seconds": 2.0499824807047844
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 8.060335303,
+            "gpu_resident_seconds": 4.970309153199196,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      },
+      "cases": [],
+      "functional_failures": [
+        {
+          "case": "uninformative_placeholder_can_return_empty",
+          "passed": false,
+          "output": {
+            "text": "Actor: someone."
+          }
+        },
+        {
+          "case": "fixed_filter_r4_S5",
+          "passed": false,
+          "labels": {
+            "U0": 0,
+            "U1": 0
+          }
+        },
+        {
+          "case": "fixed_filter_r4_S59",
+          "passed": false,
+          "labels": {
+            "U0": 0,
+            "U1": 0,
+            "U2": 0,
+            "U3": 0
+          }
+        },
+        {
+          "case": "fixed_filter_r4_S93",
+          "passed": false,
+          "labels": {
+            "U0": 0,
+            "U1": 0,
+            "U2": 0
+          }
+        },
+        {
+          "case": "fixed_filter_r3_S7",
+          "passed": false,
+          "labels": {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1,
+            "U3": 1,
+            "U4": 0,
+            "U5": 0,
+            "U6": 0,
+            "U7": 0,
+            "U8": 0,
+            "U9": 0,
+            "U10": 0,
+            "U11": 0,
+            "U12": 0
+          }
+        },
+        {
+          "case": "fixed_filter_held_partial_repetition",
+          "passed": false,
+          "labels": {
+            "U0": 0,
+            "U1": 1,
+            "U2": 0
+          }
+        },
+        {
+          "case": "extract_and_keep_explicit_actor_S5",
+          "passed": false
+        },
+        {
+          "case": "extract_and_keep_explicit_actor_S59",
+          "passed": false
+        },
+        {
+          "case": "extract_and_keep_explicit_actor_S93",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r7",
+      "functional_passed": false,
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 64.34348570927978,
+        "total": 64.34348570927978,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 64.34348570927978,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 11.75177252665162,
+          "o_filter": 49.430292434990406,
+          "oplus_compose": 2.7200545966625214,
+          "o_answer": 0.34309767186641693,
+          "oplus_answer": 0.09826847910881042
+        },
+        "call_count": 30,
+        "resources": {
+          "cpu_seconds": 64.315156001,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 64.38272523507476,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16862620160
+        }
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.7935040555894375,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.57757168635726,
+            "tokenizer_constraint_seconds": 2.149512253701687
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 8.161253959,
+            "gpu_resident_seconds": 5.148881673812866,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      },
+      "cases": [],
+      "functional_failures": [
+        {
+          "case": "preserve_valid_verb_beside_malformed_field",
+          "passed": false,
+          "output": {
+            "text": "Walks room."
+          }
+        },
+        {
+          "case": "fixed_filter_r4_S59",
+          "passed": false,
+          "labels": {
+            "U0": 0,
+            "U1": 0,
+            "U2": 0,
+            "U3": 0
+          }
+        },
+        {
+          "case": "fixed_filter_r4_S93",
+          "passed": false,
+          "labels": {
+            "U0": 0,
+            "U1": 0,
+            "U2": 0
+          }
+        },
+        {
+          "case": "extract_and_keep_explicit_actor_S59",
+          "passed": false
+        },
+        {
+          "case": "extract_and_keep_explicit_actor_S93",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r9",
+      "functional_passed": true,
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 70.45620762556791,
+        "total": 70.45620762556791,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 70.45620762556791,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 11.76659233123064,
+          "o_filter_plan": 30.63692505285144,
+          "o_filter": 22.74254011362791,
+          "oplus_compose": 4.847283363342285,
+          "o_answer": 0.3633430749177933,
+          "oplus_answer": 0.09952368959784508
+        },
+        "call_count": 35,
+        "resources": {
+          "cpu_seconds": 70.43504995699999,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 70.50883828476071,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16862518784
+        }
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.505943030118942,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.346828036010265,
+            "tokenizer_constraint_seconds": 2.0972649678587914
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 7.88432941,
+            "gpu_resident_seconds": 4.92386120557785,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      },
+      "cases": [
+        {
+          "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "O": {
+              "answer": {
+                "selected_option": "2",
+                "raw": "prediction: C"
+              },
+              "correct": true,
+              "input_tokens": 849,
+              "seconds": 0.09902195632457733
+            },
+            "O+": {
+              "answer": {
+                "selected_option": "2",
+                "raw": "prediction: C"
+              },
+              "correct": true,
+              "input_tokens": 629,
+              "seconds": 0.08322939649224281
+            }
+          },
+          "new_navigation": false,
+          "gold": "2",
+          "sentences": 11,
+          "candidates": 40,
+          "retained_units": 36,
+          "all_zero_sentences": 1,
+          "fallback_sentences": 0,
+          "composition_empty_sentences": 0,
+          "baseline_N": {
+            "selected_option": "0",
+            "raw": "prediction: A"
+          },
+          "shared_selection_hash": "c2b93b7e9295dba5ef42285e1921c6db2c3041ef957862ced12932ca3fa24225",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 49.87013006210327,
+            "total": 49.87013006210327,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 49.87013006210327,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "o_extract": 20.030919197946787,
+              "o_filter_plan": 7.390488140285015,
+              "o_filter": 16.107638243585825,
+              "oplus_compose": 6.158833127468824,
+              "o_answer": 0.09902195632457733,
+              "oplus_answer": 0.08322939649224281
+            },
+            "call_count": 35,
+            "resources": {
+              "cpu_seconds": 49.86030207100003,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 49.93087560683489,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 16862518784
+            }
+          },
+          "updated_at": "2026-11-03T12:24:48.995244+08:00"
+        },
+        {
+          "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "O": {
+              "answer": {
+                "selected_option": "3",
+                "raw": "prediction: D"
+              },
+              "correct": true,
+              "input_tokens": 3682,
+              "seconds": 0.22249231860041618
+            },
+            "O+": {
+              "answer": {
+                "selected_option": "3",
+                "raw": "prediction: D"
+              },
+              "correct": true,
+              "input_tokens": 2350,
+              "seconds": 0.15806277841329575
+            }
+          },
+          "new_navigation": false,
+          "gold": "3",
+          "sentences": 96,
+          "candidates": 315,
+          "retained_units": 211,
+          "all_zero_sentences": 31,
+          "fallback_sentences": 0,
+          "composition_empty_sentences": 0,
+          "baseline_N": {
+            "selected_option": "3",
+            "raw": "prediction: D"
+          },
+          "shared_selection_hash": "0d6d1a8f57dd73aad8c4dc69eee7f786814091ba15af44c32df6e54f532bb946",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 328.62291326001287,
+            "total": 328.62291326001287,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 328.62291326001287,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "o_extract": 165.7644224949181,
+              "o_filter_plan": 6.855605091899633,
+              "o_filter": 118.56960094347596,
+              "oplus_compose": 37.05272963270545,
+              "o_answer": 0.22249231860041618,
+              "oplus_answer": 0.15806277841329575
+            },
+            "call_count": 260,
+            "resources": {
+              "cpu_seconds": 328.50380669100014,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 329.0803120471537,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 17366929408
+            }
+          },
+          "updated_at": "2026-11-03T12:30:18.078345+08:00"
+        }
+      ],
+      "functional_failures": []
+    },
+    {
+      "round": 10,
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r10",
+      "functional_passed": true,
+      "functional_cost": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 71.20545317977667,
+        "total": 71.20545317977667,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 71.20545317977667,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 12.01644479483366,
+          "o_filter_plan": 30.94469588622451,
+          "o_filter": 22.930946823209524,
+          "oplus_compose": 4.876195106655359,
+          "o_answer": 0.33821922168135643,
+          "oplus_answer": 0.09895134717226028
+        },
+        "call_count": 35,
+        "resources": {
+          "cpu_seconds": 71.178576431,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 71.259910389781,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16862518784
+        }
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 8.348664030432701,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.970048248767853,
+            "tokenizer_constraint_seconds": 2.3155132941901684
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 8.673638654,
+            "gpu_resident_seconds": 5.645088266581297,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      },
+      "cases": [
+        {
+          "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "O": {
+              "answer": {
+                "selected_option": "2",
+                "raw": "prediction: C"
+              },
+              "correct": true,
+              "input_tokens": 854,
+              "seconds": 0.09729495272040367
+            },
+            "O+": {
+              "answer": {
+                "selected_option": "2",
+                "raw": "prediction: C"
+              },
+              "correct": true,
+              "input_tokens": 631,
+              "seconds": 0.08351589739322662
+            }
+          },
+          "new_navigation": false,
+          "inherited_extraction_filter_costs": {
+            "o_extract": 20.030919197946787,
+            "o_filter": 16.107638243585825,
+            "o_filter_plan": 7.390488140285015
+          },
+          "selection_replay_from": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r9",
+          "gold": "2",
+          "sentences": 11,
+          "candidates": 40,
+          "retained_units": 37,
+          "action_core_adjustments": 1,
+          "all_zero_sentences": 1,
+          "fallback_sentences": 0,
+          "composition_empty_sentences": 0,
+          "baseline_N": {
+            "selected_option": "0",
+            "raw": "prediction: A"
+          },
+          "shared_selection_hash": "1e9cc3e625ef77e1e767f8c541700d459ad943cd007fa40079734bfde921b2ba",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 6.491903502494097,
+            "total": 6.491903502494097,
+            "shared_dependency_seconds": 43.52904558181763,
+            "budgeted_total": 50.020949084311724,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "oplus_compose": 6.3110926523804665,
+              "o_answer": 0.09729495272040367,
+              "oplus_answer": 0.08351589739322662
+            },
+            "call_count": 12,
+            "resources": {
+              "cpu_seconds": 6.485853688000001,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 6.512991011142731,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 16862518784
+            }
+          },
+          "updated_at": "2026-11-03T12:33:53.644085+08:00"
+        },
+        {
+          "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "O": {
+              "answer": {
+                "selected_option": "3",
+                "raw": "prediction: D"
+              },
+              "correct": true,
+              "input_tokens": 3686,
+              "seconds": 0.22407002747058868
+            },
+            "O+": {
+              "answer": {
+                "selected_option": "3",
+                "raw": "prediction: D"
+              },
+              "correct": true,
+              "input_tokens": 2350,
+              "seconds": 0.15842240676283836
+            }
+          },
+          "new_navigation": false,
+          "inherited_extraction_filter_costs": {
+            "o_extract": 165.7644224949181,
+            "o_filter": 118.56960094347596,
+            "o_filter_plan": 6.855605091899633
+          },
+          "selection_replay_from": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r9",
+          "gold": "3",
+          "sentences": 96,
+          "candidates": 315,
+          "retained_units": 212,
+          "action_core_adjustments": 1,
+          "all_zero_sentences": 31,
+          "fallback_sentences": 0,
+          "composition_empty_sentences": 0,
+          "baseline_N": {
+            "selected_option": "3",
+            "raw": "prediction: D"
+          },
+          "shared_selection_hash": "cf7d051de68520ee90e8cdaa83f150e632d119c7e00ba2f2dfbecd48a8ee9b88",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 37.628461726009846,
+            "total": 37.628461726009846,
+            "shared_dependency_seconds": 291.1896285302937,
+            "budgeted_total": 328.81809025630355,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "oplus_compose": 37.24596929177642,
+              "o_answer": 0.22407002747058868,
+              "oplus_answer": 0.15842240676283836
+            },
+            "call_count": 67,
+            "resources": {
+              "cpu_seconds": 37.59126888499995,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 37.80664050579071,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 17367045120
+            }
+          },
+          "updated_at": "2026-11-03T12:34:31.454754+08:00"
+        }
+      ],
+      "functional_failures": []
+    }
+  ],
+  "prepared_without_model_calls": [
+    5,
+    8
+  ],
+  "limits": [
+    "Two previously inspected fixed-source cases; no broad accuracy claim.",
+    "Frozen r9 extraction and raw filter labels reused in r10; no new formal extraction/filter calls.",
+    "Sentence input isolation does not prove absence of hallucinations or intra-sentence role mistakes.",
+    "Filter relevance remains imperfect: S19 walking kept, S34 walking dropped.",
+    "No semantic source validation restored; malformed semantic fields can survive."
+  ]
+}

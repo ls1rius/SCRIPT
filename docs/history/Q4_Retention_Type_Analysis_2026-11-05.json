@@ -1,0 +1,382 @@
+{
+  "at": "2026-11-05T16:27:20.168488+08:00",
+  "analysis_root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-retention-type-analysis-300-20261105-r1",
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-300-20261105-r1",
+  "read_only": true,
+  "model_calls": 0,
+  "questions": 300,
+  "counts": {
+    "all_observations": 39042,
+    "all_drop": 3053,
+    "initial_observations": 21362,
+    "initial_drop": 1266,
+    "initial_with_typed_fact": 17823,
+    "all_keep": 35989,
+    "initial_keep": 20096,
+    "initial_without_typed_fact": 3539,
+    "additional_observations": 17680,
+    "additional_keep": 15893,
+    "additional_drop": 1787,
+    "initial_skipped": 1266,
+    "additional_skipped": 1787,
+    "all_skipped": 3053
+  },
+  "skip_rates": {
+    "initial": 0.05926411384701807,
+    "additional": 0.10107466063348416,
+    "all": 0.07819783822550075
+  },
+  "types": [
+    {
+      "category": "actions",
+      "name": "动作/事件",
+      "initial_extracted_distinct_facts": 17714,
+      "carried_by_kept_sources": 16740,
+      "carried_by_skipped_sources": 974,
+      "drop": 974,
+      "uncertain": 0,
+      "skip_rate": 0.05498475781867449,
+      "carrier_observations": {
+        "total": 17697,
+        "drop": 972,
+        "keep": 16725
+      },
+      "questions_with_category": 279,
+      "associations": {
+        "Q": {
+          "groups": {
+            "any_skipped": {
+              "questions": 121,
+              "correct": 73,
+              "accuracy": 0.6033057851239669
+            },
+            "wrong": {
+              "facts": 7418,
+              "skipped": 555,
+              "skip_rate": 0.07481801024534915
+            },
+            "correct": {
+              "facts": 10296,
+              "skipped": 419,
+              "skip_rate": 0.040695415695415696
+            },
+            "none_skipped": {
+              "questions": 158,
+              "correct": 112,
+              "accuracy": 0.7088607594936709
+            }
+          },
+          "accuracy_difference_any_minus_none": -0.10555497436970396
+        },
+        "Qplus": {
+          "groups": {
+            "any_skipped": {
+              "questions": 121,
+              "correct": 74,
+              "accuracy": 0.6115702479338843
+            },
+            "wrong": {
+              "facts": 7357,
+              "skipped": 559,
+              "skip_rate": 0.07598205790403698
+            },
+            "correct": {
+              "facts": 10357,
+              "skipped": 415,
+              "skip_rate": 0.040069518200251036
+            },
+            "none_skipped": {
+              "questions": 158,
+              "correct": 111,
+              "accuracy": 0.7025316455696202
+            }
+          },
+          "accuracy_difference_any_minus_none": -0.09096139763573596
+        }
+      }
+    },
+    {
+      "category": "attributes",
+      "name": "实体属性",
+      "initial_extracted_distinct_facts": 184,
+      "carried_by_kept_sources": 172,
+      "carried_by_skipped_sources": 12,
+      "drop": 12,
+      "uncertain": 0,
+      "skip_rate": 0.06521739130434782,
+      "carrier_observations": {
+        "total": 183,
+        "keep": 171,
+        "drop": 12
+      },
+      "questions_with_category": 77,
+      "associations": {
+        "Q": {
+          "groups": {
+            "none_skipped": {
+              "questions": 66,
+              "correct": 46,
+              "accuracy": 0.696969696969697
+            },
+            "correct": {
+              "facts": 126,
+              "skipped": 6,
+              "skip_rate": 0.047619047619047616
+            },
+            "wrong": {
+              "facts": 58,
+              "skipped": 6,
+              "skip_rate": 0.10344827586206896
+            },
+            "any_skipped": {
+              "questions": 11,
+              "correct": 5,
+              "accuracy": 0.45454545454545453
+            }
+          },
+          "accuracy_difference_any_minus_none": -0.2424242424242425
+        },
+        "Qplus": {
+          "groups": {
+            "none_skipped": {
+              "questions": 66,
+              "correct": 46,
+              "accuracy": 0.696969696969697
+            },
+            "correct": {
+              "facts": 126,
+              "skipped": 6,
+              "skip_rate": 0.047619047619047616
+            },
+            "wrong": {
+              "facts": 58,
+              "skipped": 6,
+              "skip_rate": 0.10344827586206896
+            },
+            "any_skipped": {
+              "questions": 11,
+              "correct": 5,
+              "accuracy": 0.45454545454545453
+            }
+          },
+          "accuracy_difference_any_minus_none": -0.2424242424242425
+        }
+      }
+    },
+    {
+      "category": "states",
+      "name": "实体状态",
+      "initial_extracted_distinct_facts": 86,
+      "carried_by_kept_sources": 68,
+      "carried_by_skipped_sources": 18,
+      "drop": 18,
+      "uncertain": 0,
+      "skip_rate": 0.20930232558139536,
+      "carrier_observations": {
+        "total": 82,
+        "keep": 64,
+        "drop": 18
+      },
+      "questions_with_category": 1,
+      "associations": {
+        "Q": {
+          "groups": {
+            "any_skipped": {
+              "questions": 1,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "wrong": {
+              "facts": 86,
+              "skipped": 18,
+              "skip_rate": 0.20930232558139536
+            }
+          },
+          "accuracy_difference_any_minus_none": null
+        },
+        "Qplus": {
+          "groups": {
+            "any_skipped": {
+              "questions": 1,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "wrong": {
+              "facts": 86,
+              "skipped": 18,
+              "skip_rate": 0.20930232558139536
+            }
+          },
+          "accuracy_difference_any_minus_none": null
+        }
+      }
+    },
+    {
+      "category": "relations",
+      "name": "实体关系",
+      "initial_extracted_distinct_facts": 3,
+      "carried_by_kept_sources": 3,
+      "carried_by_skipped_sources": 0,
+      "drop": 0,
+      "uncertain": 0,
+      "skip_rate": 0.0,
+      "carrier_observations": {
+        "total": 3,
+        "keep": 3
+      },
+      "questions_with_category": 1,
+      "associations": {
+        "Q": {
+          "groups": {
+            "none_skipped": {
+              "questions": 1,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "wrong": {
+              "facts": 3,
+              "skipped": 0,
+              "skip_rate": 0.0
+            }
+          },
+          "accuracy_difference_any_minus_none": null
+        },
+        "Qplus": {
+          "groups": {
+            "none_skipped": {
+              "questions": 1,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "wrong": {
+              "facts": 3,
+              "skipped": 0,
+              "skip_rate": 0.0
+            }
+          },
+          "accuracy_difference_any_minus_none": null
+        }
+      }
+    },
+    {
+      "category": "changes",
+      "name": "变化",
+      "initial_extracted_distinct_facts": 0,
+      "carried_by_kept_sources": 0,
+      "carried_by_skipped_sources": 0,
+      "drop": 0,
+      "uncertain": 0,
+      "skip_rate": null,
+      "carrier_observations": {},
+      "questions_with_category": 0,
+      "associations": {
+        "Q": {
+          "groups": {},
+          "accuracy_difference_any_minus_none": null
+        },
+        "Qplus": {
+          "groups": {},
+          "accuracy_difference_any_minus_none": null
+        }
+      }
+    },
+    {
+      "category": "results",
+      "name": "结果",
+      "initial_extracted_distinct_facts": 0,
+      "carried_by_kept_sources": 0,
+      "carried_by_skipped_sources": 0,
+      "drop": 0,
+      "uncertain": 0,
+      "skip_rate": null,
+      "carrier_observations": {},
+      "questions_with_category": 0,
+      "associations": {
+        "Q": {
+          "groups": {},
+          "accuracy_difference_any_minus_none": null
+        },
+        "Qplus": {
+          "groups": {},
+          "accuracy_difference_any_minus_none": null
+        }
+      }
+    },
+    {
+      "category": "event_links",
+      "name": "事件联系",
+      "initial_extracted_distinct_facts": 0,
+      "carried_by_kept_sources": 0,
+      "carried_by_skipped_sources": 0,
+      "drop": 0,
+      "uncertain": 0,
+      "skip_rate": null,
+      "carrier_observations": {},
+      "questions_with_category": 0,
+      "associations": {
+        "Q": {
+          "groups": {},
+          "accuracy_difference_any_minus_none": null
+        },
+        "Qplus": {
+          "groups": {},
+          "accuracy_difference_any_minus_none": null
+        }
+      }
+    }
+  ],
+  "conceptual_categories": [
+    "实体（含属性、开放状态）",
+    "动作/事件",
+    "实体关系",
+    "变化与结果",
+    "事件联系"
+  ],
+  "notes": [
+    "Five top-level design concepts differ from seven physical fact collections; entity IDs are not independently filtered in Q4.",
+    "Category counts are source-carried upstream N facts for initial21362 observations only. They are not direct Q4 field-selection logs.",
+    "Deduplicate equal fact records across repeated caption IDs of one question/source; never merge across different sources or questions.",
+    "Additional gap-retrieved captions have no Q4 type extraction, so type-level statistics cannot cover them.",
+    "No facts of a type means no usable extraction sample here, not that the video lacks that information or the type is unimportant.",
+    "All percentages are empirical frequencies. Question-level accuracy associations are observational, confounded and not causal ablations.",
+    "States and relations occur in only one question each; observations within that question are not independent QA samples.",
+    "Read-only completed original300 development analysis; no model calls, no changes to frozen training/500 runtimes or parameters."
+  ],
+  "validation": {
+    "passed": true,
+    "questions": 300,
+    "hashes_verified": 1481,
+    "fact_mapping": "Exact question-local caption IDs, no text heuristics or model classification",
+    "initial_sources_fully_joined": true,
+    "source_count_reconciles": true,
+    "model_calls": 0,
+    "existing_result_hashes_unchanged": true,
+    "at": "2026-11-05T16:27:20.582258+08:00",
+    "independent_unmerged_caption_annotation_crosscheck_passed": true,
+    "independent_fact_counts": {
+      "actions": 17714,
+      "attributes": 184,
+      "states": 86,
+      "relations": 3
+    },
+    "independent_skipped_counts": {
+      "actions": 974,
+      "attributes": 12,
+      "states": 18,
+      "relations": 0
+    },
+    "reader_correctness_patterns": {
+      "(False, False)": 99,
+      "(True, True)": 185,
+      "(False, True)": 8,
+      "(True, False)": 8
+    }
+  },
+  "interpretation": {
+    "priority": "Investigate action/event source rejection first: broadest coverage (279questions), 974carried action facts excluded, Q accuracy with any action rejection73/121 vs112/158 without; Qplus74/121 vs111/158. Descriptive association, not causal.",
+    "attribute_signal": "5/11 vs46/66; larger observed accuracy gap but only11questions with any attribute rejection.",
+    "insufficient_types": "States86facts come from one question; relations3facts from one question. Changes/results/event_links0structured records; cannot rank their causal effects.",
+    "coverage": "Type proxy only initial21362 observations, of which17823 contain upstream structured facts. Additional17680 reads have no new type extraction.",
+    "semantic_warning": "Labels are inherited upstream model extraction categories, not manually validated semantics. Zero structured event_links does not mean source text has no temporal/causal information."
+  }
+}

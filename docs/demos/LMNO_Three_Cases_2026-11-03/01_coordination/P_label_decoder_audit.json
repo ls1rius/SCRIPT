@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "model_calls": 0,
+  "checks": [
+    {
+      "source_id": "S8",
+      "field": "U1",
+      "zero_allowed": true,
+      "one_allowed": true,
+      "actual_next_token": "1",
+      "raw_call": "workdirs/P-O-direct-question-coordination-20261103-r1/runs/7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe/raw_calls/f611bedf-da32-4cba-ad96-efaf98ce5951-0.json"
+    },
+    {
+      "source_id": "S123",
+      "field": "U1",
+      "zero_allowed": true,
+      "one_allowed": true,
+      "actual_next_token": "1",
+      "raw_call": "workdirs/P-O-direct-question-coordination-20261103-r1/runs/7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe/raw_calls/4d50a715-b1e0-48cb-bfd8-e372dca617d0-0.json"
+    },
+    {
+      "source_id": "S57",
+      "field": "U1",
+      "zero_allowed": true,
+      "one_allowed": true,
+      "actual_next_token": "1",
+      "raw_call": "workdirs/P-O-direct-question-coordination-20261103-r1/runs/7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe/raw_calls/8d2b71fa-246f-4c26-9759-e202581a8871-0.json"
+    }
+  ]
+}

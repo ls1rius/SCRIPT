@@ -1,0 +1,1835 @@
+{
+  "updated_at": "2026-11-03T13:01:02.551140+08:00",
+  "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r14",
+  "version": "O-N-question-required-local-evidence-examples-v14",
+  "plus_version": "Oplus-N-question-context-identity-schema-v14",
+  "factorial_design": {
+    "representation": [
+      "O_structured",
+      "Oplus_model_composition"
+    ],
+    "options": [
+      "absent",
+      "all"
+    ],
+    "question": "Required for filtering and composition; all final readers get the same question and all options.",
+    "extraction": "Same frozen source-only extraction across all four arms.",
+    "selection": "Fresh labels per option condition; shared by O/O+ in that condition."
+  },
+  "report": {
+    "updated_at": "2026-11-03T13:00:11.976373+08:00",
+    "scope": "2x2 O/O+ and optional options; frozen extraction, fresh per-condition filters, composition and answers.",
+    "completed": 2,
+    "planned": 2,
+    "complete": true,
+    "errors": 0,
+    "cases": [
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "complete": true,
+        "error": null,
+        "arms": {
+          "O_question_only": {
+            "answer": {
+              "selected_option": "2",
+              "raw": "prediction: C"
+            },
+            "correct": true,
+            "input_tokens": 900,
+            "retained_sentences": 11,
+            "answer_seconds": 0.3630671203136444,
+            "shared_selection_hash": "2db99c5be569a9a6a92a5c0f0664d7a45691be694c6dec3eb4e73edc3283cc24"
+          },
+          "Oplus_question_only": {
+            "answer": {
+              "selected_option": "2",
+              "raw": "prediction: C"
+            },
+            "correct": true,
+            "input_tokens": 660,
+            "retained_sentences": 11,
+            "answer_seconds": 0.09068156778812408,
+            "shared_selection_hash": "2db99c5be569a9a6a92a5c0f0664d7a45691be694c6dec3eb4e73edc3283cc24"
+          },
+          "O_question_options": {
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "correct": false,
+            "input_tokens": 592,
+            "retained_sentences": 5,
+            "answer_seconds": 0.08658408746123314,
+            "shared_selection_hash": "07cb2b61380529c6c0098b658d5e0a78ccc68e501ffac40f3935be6f52eb2d38"
+          },
+          "Oplus_question_options": {
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "correct": false,
+            "input_tokens": 491,
+            "retained_sentences": 5,
+            "answer_seconds": 0.07990061864256859,
+            "shared_selection_hash": "07cb2b61380529c6c0098b658d5e0a78ccc68e501ffac40f3935be6f52eb2d38"
+          }
+        },
+        "conditions": {
+          "question_only": {
+            "cost_summary": {
+              "unit": "processing_seconds",
+              "initialization": 0.0,
+              "online": 38.41450725123286,
+              "total": 38.41450725123286,
+              "shared_dependency_seconds": 0.0,
+              "budgeted_total": 38.41450725123286,
+              "text_cache_hits": 0,
+              "total_cap": 3600,
+              "budget_violation": false,
+              "by_operation": {
+                "o_filter_plan": 1.3428515642881393,
+                "o_filter": 29.064490385353565,
+                "oplus_compose": 7.553416613489389,
+                "o_answer": 0.3630671203136444,
+                "oplus_answer": 0.09068156778812408
+              },
+              "call_count": 25,
+              "resources": {
+                "cpu_seconds": 38.413789591,
+                "cpu_unmeasured_calls": 0,
+                "gpu_resident_seconds": 38.46098554134369,
+                "gpu_unmeasured_calls": 0,
+                "gpu_peak_allocated_bytes": 16837755904
+              }
+            },
+            "retained_units": 40,
+            "all_zero_sentences": 0,
+            "composition_empty_sentences": 0
+          },
+          "question_options": {
+            "cost_summary": {
+              "unit": "processing_seconds",
+              "initialization": 0.0,
+              "online": 43.82748959213495,
+              "total": 43.82748959213495,
+              "shared_dependency_seconds": 0.0,
+              "budgeted_total": 43.82748959213495,
+              "text_cache_hits": 0,
+              "total_cap": 3600,
+              "budget_violation": false,
+              "by_operation": {
+                "o_filter_plan": 7.634261060506105,
+                "o_filter": 31.653866413980722,
+                "oplus_compose": 4.372877411544323,
+                "o_answer": 0.08658408746123314,
+                "oplus_answer": 0.07990061864256859
+              },
+              "call_count": 19,
+              "resources": {
+                "cpu_seconds": 43.83564537699999,
+                "cpu_unmeasured_calls": 0,
+                "gpu_resident_seconds": 43.86431060731411,
+                "gpu_unmeasured_calls": 0,
+                "gpu_peak_allocated_bytes": 16889904128
+              }
+            },
+            "retained_units": 18,
+            "all_zero_sentences": 6,
+            "composition_empty_sentences": 0
+          }
+        },
+        "archived_controls": {
+          "O": {
+            "answer": {
+              "selected_option": "2",
+              "raw": "prediction: C"
+            },
+            "correct": true,
+            "input_tokens": 854,
+            "seconds": 0.09729495272040367
+          },
+          "O+": {
+            "answer": {
+              "selected_option": "2",
+              "raw": "prediction: C"
+            },
+            "correct": true,
+            "input_tokens": 631,
+            "seconds": 0.08351589739322662
+          }
+        },
+        "frozen_extraction_reference": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r14/cases/98427b0b-20ed-45bb-b772-91573ce90b5a/selection_replay",
+        "shared_extraction_seconds": 20.030919197946787,
+        "new_extraction": false,
+        "new_filtering": true,
+        "updated_at": "2026-11-03T12:50:03.288570+08:00"
+      },
+      {
+        "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "complete": true,
+        "error": null,
+        "arms": {
+          "O_question_only": {
+            "answer": {
+              "selected_option": "3",
+              "raw": "prediction: D"
+            },
+            "correct": true,
+            "input_tokens": 3880,
+            "retained_sentences": 70,
+            "answer_seconds": 0.23356638103723526,
+            "shared_selection_hash": "c99ef4c0e8b8f5822b46076a842b9366af243834c9f147dacb85a97e1fece253"
+          },
+          "Oplus_question_only": {
+            "answer": {
+              "selected_option": "3",
+              "raw": "prediction: D"
+            },
+            "correct": true,
+            "input_tokens": 3408,
+            "retained_sentences": 70,
+            "answer_seconds": 0.20975404232740402,
+            "shared_selection_hash": "c99ef4c0e8b8f5822b46076a842b9366af243834c9f147dacb85a97e1fece253"
+          },
+          "O_question_options": {
+            "answer": {
+              "selected_option": "3",
+              "raw": "prediction: D"
+            },
+            "correct": true,
+            "input_tokens": 613,
+            "retained_sentences": 4,
+            "answer_seconds": 0.08673245459794998,
+            "shared_selection_hash": "bb78924103269b29b5a7b7551015ae501b231fd45888626fa1f7eedd095d7d9d"
+          },
+          "Oplus_question_options": {
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "correct": false,
+            "input_tokens": 703,
+            "retained_sentences": 4,
+            "answer_seconds": 0.08878593891859055,
+            "shared_selection_hash": "bb78924103269b29b5a7b7551015ae501b231fd45888626fa1f7eedd095d7d9d"
+          }
+        },
+        "conditions": {
+          "question_only": {
+            "cost_summary": {
+              "unit": "processing_seconds",
+              "initialization": 0.0,
+              "online": 314.36231511458755,
+              "total": 314.36231511458755,
+              "shared_dependency_seconds": 0.0,
+              "budgeted_total": 314.36231511458755,
+              "text_cache_hits": 0,
+              "total_cap": 3600,
+              "budget_violation": false,
+              "by_operation": {
+                "o_filter_plan": 1.2494334504008293,
+                "o_filter": 235.4478553161025,
+                "oplus_compose": 77.22170592471957,
+                "o_answer": 0.23356638103723526,
+                "oplus_answer": 0.20975404232740402
+              },
+              "call_count": 169,
+              "resources": {
+                "cpu_seconds": 314.36577448699967,
+                "cpu_unmeasured_calls": 0,
+                "gpu_resident_seconds": 314.7000173777342,
+                "gpu_unmeasured_calls": 0,
+                "gpu_peak_allocated_bytes": 17399754240
+              }
+            },
+            "retained_units": 230,
+            "all_zero_sentences": 26,
+            "composition_empty_sentences": 0
+          },
+          "question_options": {
+            "cost_summary": {
+              "unit": "processing_seconds",
+              "initialization": 0.0,
+              "online": 290.29363730177283,
+              "total": 290.29363730177283,
+              "shared_dependency_seconds": 0.0,
+              "budgeted_total": 290.29363730177283,
+              "text_cache_hits": 0,
+              "total_cap": 3600,
+              "budget_violation": false,
+              "by_operation": {
+                "o_filter_plan": 7.032478630542755,
+                "o_filter": 275.7602663077414,
+                "oplus_compose": 7.325373969972134,
+                "o_answer": 0.08673245459794998,
+                "oplus_answer": 0.08878593891859055
+              },
+              "call_count": 103,
+              "resources": {
+                "cpu_seconds": 290.34026137999996,
+                "cpu_unmeasured_calls": 0,
+                "gpu_resident_seconds": 290.5419570915401,
+                "gpu_unmeasured_calls": 0,
+                "gpu_peak_allocated_bytes": 17399754240
+              }
+            },
+            "retained_units": 13,
+            "all_zero_sentences": 92,
+            "composition_empty_sentences": 0
+          }
+        },
+        "archived_controls": {
+          "O": {
+            "answer": {
+              "selected_option": "3",
+              "raw": "prediction: D"
+            },
+            "correct": true,
+            "input_tokens": 3686,
+            "seconds": 0.22407002747058868
+          },
+          "O+": {
+            "answer": {
+              "selected_option": "3",
+              "raw": "prediction: D"
+            },
+            "correct": true,
+            "input_tokens": 2350,
+            "seconds": 0.15842240676283836
+          }
+        },
+        "frozen_extraction_reference": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r14/cases/6dd07731-937c-4b63-b296-0a947ffe6996/selection_replay",
+        "shared_extraction_seconds": 165.7644224949181,
+        "new_extraction": false,
+        "new_filtering": true,
+        "updated_at": "2026-11-03T13:00:08.530451+08:00"
+      }
+    ],
+    "arms": {
+      "O_question_only": {
+        "completed": 2,
+        "correct": 2,
+        "mean_input_tokens": 2390.0
+      },
+      "Oplus_question_only": {
+        "completed": 2,
+        "correct": 2,
+        "mean_input_tokens": 2034.0
+      },
+      "O_question_options": {
+        "completed": 2,
+        "correct": 1,
+        "mean_input_tokens": 602.5
+      },
+      "Oplus_question_options": {
+        "completed": 2,
+        "correct": 0,
+        "mean_input_tokens": 597.0
+      }
+    },
+    "functional": {
+      "passed": false,
+      "checks": [
+        {
+          "case": "actor_patient",
+          "arm": "question_only",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "D gives a cup to E."
+              }
+            },
+            "text": "D gives a cup to E."
+          }
+        },
+        {
+          "case": "actor_patient",
+          "arm": "question_options",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "D gives a cup to E."
+              }
+            },
+            "text": "D gives a cup to E."
+          }
+        },
+        {
+          "case": "question_cannot_supply_action",
+          "arm": "question_only",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "Actor: C."
+              }
+            },
+            "text": "Actor: C."
+          }
+        },
+        {
+          "case": "question_cannot_supply_action",
+          "arm": "question_options",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "Actor: C."
+              }
+            },
+            "text": "Actor: C."
+          }
+        },
+        {
+          "case": "options_cannot_supply_fact",
+          "arm": "question_only",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "D puts a cup."
+              }
+            },
+            "text": "D puts a cup."
+          }
+        },
+        {
+          "case": "options_cannot_supply_fact",
+          "arm": "question_options",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "D puts a cup."
+              }
+            },
+            "text": "D puts a cup."
+          }
+        },
+        {
+          "case": "partial_repeated_evidence",
+          "arm": "question_only",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "D tightens a screw."
+              }
+            },
+            "text": "D tightens a screw."
+          }
+        },
+        {
+          "case": "partial_repeated_evidence",
+          "arm": "question_options",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "D tightens a screw."
+              }
+            },
+            "text": "D tightens a screw."
+          }
+        },
+        {
+          "case": "subject_identity_question",
+          "arm": "question_only",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "Actor: D."
+              },
+              "b": {
+                "text": "Actor: E."
+              }
+            },
+            "text": "Actor: D. Actor: E."
+          }
+        },
+        {
+          "case": "subject_identity_question",
+          "arm": "question_options",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "Actor: D."
+              },
+              "b": {
+                "text": "Actor: E."
+              }
+            },
+            "text": "Actor: D. Actor: E."
+          }
+        },
+        {
+          "case": "uninformative_placeholder",
+          "arm": "question_only",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": ""
+              }
+            },
+            "text": ""
+          }
+        },
+        {
+          "case": "uninformative_placeholder",
+          "arm": "question_options",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": ""
+              }
+            },
+            "text": ""
+          }
+        },
+        {
+          "case": "independent_events",
+          "arm": "question_only",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "D opens drawer."
+              },
+              "b": {
+                "text": "E reads book."
+              }
+            },
+            "text": "D opens drawer. E reads book."
+          }
+        },
+        {
+          "case": "independent_events",
+          "arm": "question_options",
+          "passed": true,
+          "output": {
+            "groups": {
+              "a": {
+                "text": "D opens drawer."
+              },
+              "b": {
+                "text": "E reads book."
+              }
+            },
+            "text": "D opens drawer. E reads book."
+          }
+        },
+        {
+          "case": "partial_filter",
+          "arm": "question_only",
+          "passed": false,
+          "labels": {
+            "U0": 0,
+            "U1": 0,
+            "U2": 0
+          }
+        },
+        {
+          "case": "irrelevant_filter",
+          "arm": "question_only",
+          "passed": true,
+          "labels": {
+            "U0": 0
+          }
+        },
+        {
+          "case": "partial_filter",
+          "arm": "question_options",
+          "passed": true,
+          "labels": {
+            "U0": 1,
+            "U1": 1,
+            "U2": 1
+          }
+        },
+        {
+          "case": "irrelevant_filter",
+          "arm": "question_options",
+          "passed": true,
+          "labels": {
+            "U0": 0
+          }
+        }
+      ],
+      "error": null,
+      "execution_allowed_for_diagnostic": true,
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 19.53333818912506,
+        "total": 19.53333818912506,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 19.53333818912506,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "oplus_compose": 8.659706234931946,
+          "o_filter_plan": 3.5876324214041233,
+          "o_filter": 7.285999532788992
+        },
+        "call_count": 20,
+        "resources": {
+          "cpu_seconds": 19.510582636000006,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 19.57610673084855,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16808126976
+        }
+      },
+      "updated_at": "2026-11-03T12:48:40.963736+08:00"
+    },
+    "semantic_probe_passed": false,
+    "diagnostic_only": true
+  },
+  "audit": {
+    "parent_hashes_unchanged": true,
+    "parent_files": 857,
+    "cases": [
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "conditions": {
+          "question_only": {
+            "frozen_candidates_equal": true,
+            "context_inputs_correct": true,
+            "shared_O_Oplus_selection": true,
+            "actor_omission_literal_diagnostic": [],
+            "empty_composition_sentence_ids": [],
+            "program_adjustments": [],
+            "cost_summary": {
+              "unit": "processing_seconds",
+              "initialization": 0.0,
+              "online": 38.41450725123286,
+              "total": 38.41450725123286,
+              "shared_dependency_seconds": 0.0,
+              "budgeted_total": 38.41450725123286,
+              "text_cache_hits": 0,
+              "total_cap": 3600,
+              "budget_violation": false,
+              "by_operation": {
+                "o_filter_plan": 1.3428515642881393,
+                "o_filter": 29.064490385353565,
+                "oplus_compose": 7.553416613489389,
+                "o_answer": 0.3630671203136444,
+                "oplus_answer": 0.09068156778812408
+              },
+              "call_count": 25,
+              "resources": {
+                "cpu_seconds": 38.413789591,
+                "cpu_unmeasured_calls": 0,
+                "gpu_resident_seconds": 38.46098554134369,
+                "gpu_unmeasured_calls": 0,
+                "gpu_peak_allocated_bytes": 16837755904
+              }
+            },
+            "retained_units": 40,
+            "all_zero_sentences": 0,
+            "composition_empty_sentences": 0
+          },
+          "question_options": {
+            "frozen_candidates_equal": true,
+            "context_inputs_correct": true,
+            "shared_O_Oplus_selection": true,
+            "actor_omission_literal_diagnostic": [],
+            "empty_composition_sentence_ids": [],
+            "program_adjustments": [],
+            "cost_summary": {
+              "unit": "processing_seconds",
+              "initialization": 0.0,
+              "online": 43.82748959213495,
+              "total": 43.82748959213495,
+              "shared_dependency_seconds": 0.0,
+              "budgeted_total": 43.82748959213495,
+              "text_cache_hits": 0,
+              "total_cap": 3600,
+              "budget_violation": false,
+              "by_operation": {
+                "o_filter_plan": 7.634261060506105,
+                "o_filter": 31.653866413980722,
+                "oplus_compose": 4.372877411544323,
+                "o_answer": 0.08658408746123314,
+                "oplus_answer": 0.07990061864256859
+              },
+              "call_count": 19,
+              "resources": {
+                "cpu_seconds": 43.83564537699999,
+                "cpu_unmeasured_calls": 0,
+                "gpu_resident_seconds": 43.86431060731411,
+                "gpu_unmeasured_calls": 0,
+                "gpu_peak_allocated_bytes": 16889904128
+              }
+            },
+            "retained_units": 18,
+            "all_zero_sentences": 6,
+            "composition_empty_sentences": 0
+          }
+        },
+        "all_final_answers_receive_question_and_options": true,
+        "manual_findings": {
+          "findings": [
+            {
+              "kind": "unsupported_option_detail_in_composition",
+              "condition": "question_options",
+              "sentence": "S0",
+              "source": "#C C folds the dress",
+              "selected": {
+                "actor": "C",
+                "verb": "folds",
+                "patient": "the dress"
+              },
+              "output": "C folds the dress with precision.",
+              "unsupported_detail": "with precision",
+              "basis": "The selected group contains no manner/precision; precision occurs in the answer option.",
+              "limitation": "Both structured O and composed O+ chose A; this detail cannot alone explain the answer regression."
+            },
+            {
+              "kind": "selection_difference",
+              "condition": "question_options",
+              "dropped_sentences": [
+                "S1",
+                "S2",
+                "S4",
+                "S6",
+                "S9",
+                "S10"
+              ],
+              "retained_ironing_sentences": [
+                "S7",
+                "S8"
+              ],
+              "limitation": "Do not claim all ironing evidence was deleted. Answer cause is not isolated by this diagnostic."
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "conditions": {
+          "question_only": {
+            "frozen_candidates_equal": true,
+            "context_inputs_correct": true,
+            "shared_O_Oplus_selection": true,
+            "actor_omission_literal_diagnostic": [],
+            "empty_composition_sentence_ids": [],
+            "program_adjustments": [],
+            "cost_summary": {
+              "unit": "processing_seconds",
+              "initialization": 0.0,
+              "online": 314.36231511458755,
+              "total": 314.36231511458755,
+              "shared_dependency_seconds": 0.0,
+              "budgeted_total": 314.36231511458755,
+              "text_cache_hits": 0,
+              "total_cap": 3600,
+              "budget_violation": false,
+              "by_operation": {
+                "o_filter_plan": 1.2494334504008293,
+                "o_filter": 235.4478553161025,
+                "oplus_compose": 77.22170592471957,
+                "o_answer": 0.23356638103723526,
+                "oplus_answer": 0.20975404232740402
+              },
+              "call_count": 169,
+              "resources": {
+                "cpu_seconds": 314.36577448699967,
+                "cpu_unmeasured_calls": 0,
+                "gpu_resident_seconds": 314.7000173777342,
+                "gpu_unmeasured_calls": 0,
+                "gpu_peak_allocated_bytes": 17399754240
+              }
+            },
+            "retained_units": 230,
+            "all_zero_sentences": 26,
+            "composition_empty_sentences": 0
+          },
+          "question_options": {
+            "frozen_candidates_equal": true,
+            "context_inputs_correct": true,
+            "shared_O_Oplus_selection": true,
+            "actor_omission_literal_diagnostic": [],
+            "empty_composition_sentence_ids": [],
+            "program_adjustments": [],
+            "cost_summary": {
+              "unit": "processing_seconds",
+              "initialization": 0.0,
+              "online": 290.29363730177283,
+              "total": 290.29363730177283,
+              "shared_dependency_seconds": 0.0,
+              "budgeted_total": 290.29363730177283,
+              "text_cache_hits": 0,
+              "total_cap": 3600,
+              "budget_violation": false,
+              "by_operation": {
+                "o_filter_plan": 7.032478630542755,
+                "o_filter": 275.7602663077414,
+                "oplus_compose": 7.325373969972134,
+                "o_answer": 0.08673245459794998,
+                "oplus_answer": 0.08878593891859055
+              },
+              "call_count": 103,
+              "resources": {
+                "cpu_seconds": 290.34026137999996,
+                "cpu_unmeasured_calls": 0,
+                "gpu_resident_seconds": 290.5419570915401,
+                "gpu_unmeasured_calls": 0,
+                "gpu_peak_allocated_bytes": 17399754240
+              }
+            },
+            "retained_units": 13,
+            "all_zero_sentences": 92,
+            "composition_empty_sentences": 0
+          }
+        },
+        "all_final_answers_receive_question_and_options": true,
+        "manual_findings": {
+          "findings": [
+            {
+              "kind": "unsupported_frequency_or_purpose_in_composition",
+              "condition": "question_only",
+              "sentence": "S0",
+              "source": "#C C walks around the house",
+              "selected": [
+                {
+                  "id": "U0",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "actor",
+                  "value": "C"
+                },
+                {
+                  "id": "U1",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "verb",
+                  "value": "walks"
+                },
+                {
+                  "id": "U2",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "location",
+                  "value": "the house"
+                }
+              ],
+              "output": "Actor: C walks in the house. Recurring pattern: C walks in the house. Significance: This suggests C might be exploring or searching for something within the house. Further context would help determine the exact significance of this pattern in the video's narrative.",
+              "basis": "One sentence supplies an action only; the composition adds recurrence, habits or purposes prompted by the question. These are not supplied selected values.",
+              "limitation": "A correct final answer does not validate these added inferences."
+            },
+            {
+              "kind": "unsupported_frequency_or_purpose_in_composition",
+              "condition": "question_only",
+              "sentence": "S4",
+              "source": "#C C picks a phone on the table",
+              "selected": [
+                {
+                  "id": "U0",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "actor",
+                  "value": "C"
+                },
+                {
+                  "id": "U1",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "verb",
+                  "value": "picks"
+                },
+                {
+                  "id": "U2",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "patient",
+                  "value": "a phone"
+                },
+                {
+                  "id": "U3",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "location",
+                  "value": "the table"
+                }
+              ],
+              "output": "C picks a phone from the table. Recurring pattern: C frequently picks up a phone from the table. Significance: This suggests C might be checking messages, making calls, or using the phone for some other purpose regularly in the video context. Further analysis would be needed to determine the exact nature of these actions and their impact on the overall narrative or situation depicted in the video. If there is more information about the video content, it could provide additional insights into the significance of this pattern. Otherwise, the pattern itself indicates a consistent behavior related to the phone and the table in the video setting.",
+              "basis": "One sentence supplies an action only; the composition adds recurrence, habits or purposes prompted by the question. These are not supplied selected values.",
+              "limitation": "A correct final answer does not validate these added inferences."
+            },
+            {
+              "kind": "unsupported_frequency_or_purpose_in_composition",
+              "condition": "question_only",
+              "sentence": "S93",
+              "source": "#C C puts the power cable into the bag",
+              "selected": [
+                {
+                  "id": "U0",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "actor",
+                  "value": "C"
+                },
+                {
+                  "id": "U1",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "verb",
+                  "value": "puts"
+                },
+                {
+                  "id": "U2",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "patient",
+                  "value": "the power cable"
+                },
+                {
+                  "id": "U3",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "destination",
+                  "value": "the bag"
+                }
+              ],
+              "output": "C puts the power cable in the bag. Recurring pattern: C consistently stores the power cable in the bag, indicating a habit of organization and convenience in managing cables and personal items. This suggests C prioritizes accessibility and order in their belongings, which could be significant in the context of the video if it involves C preparing for travel or organizing equipment for a specific task, such as setting up a workspace or charging devices during a trip. The act of putting the power cable in the bag also implies that C might frequently need to transport the cable, further supporting the idea of a recurring pattern related to mobility and preparedness. Overall, this pattern reflects C's methodical approach to handling everyday items, which could be crucial for maintaining a tidy",
+              "basis": "One sentence supplies an action only; the composition adds recurrence, habits or purposes prompted by the question. These are not supplied selected values.",
+              "limitation": "A correct final answer does not validate these added inferences."
+            },
+            {
+              "kind": "answer_options_copied_as_observations",
+              "condition": "question_options",
+              "sentence": "S19",
+              "source": "#C C walks around the room",
+              "selected": [
+                {
+                  "id": "U0",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "actor",
+                  "value": "C"
+                },
+                {
+                  "id": "U1",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "verb",
+                  "value": "walks"
+                },
+                {
+                  "id": "U2",
+                  "kind": "action_field",
+                  "group": "actions_0",
+                  "field": "location",
+                  "value": "the room"
+                }
+              ],
+              "output": "Actor: C walks in the room. Repeatedly glances and looks around the room. Repeatedly moves around the room. Frequently uses the laptop. Repeatedly picks up and puts down objects like the laptop, cables, and charger. Persistently covers the pen. Repeatedly glances and looks around the room. Repeatedly moves around the room. Frequently uses the laptop. Repeatedly picks up and puts down objects like the laptop, cables, and charger. Persistently covers the pen. Repeatedly glances and looks around the room. Repeatedly moves around the room. Frequently uses the laptop. Repeatedly picks up and puts down objects like the laptop, cables, and charger. Persistently covers the pen. Repeatedly glances and looks around the room. Repeatedly moves around the room. Frequently uses the laptop. Repeatedly gl",
+              "basis": "Only C/walks/the room were selected. The output adds laptop/cables/charger/pen and repeated activities from the answer options.",
+              "limitation": "O correctly chose D from the same 13 units; O+ chose A after composition, but no individual added phrase has been separately ablated."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "cpu_checks": 13,
+  "setup": {
+    "state": "ready",
+    "seconds": 8.445009060204029,
+    "details": {
+      "ready": true,
+      "preparation": {
+        "model_load_seconds": 6.124116461724043,
+        "tokenizer_constraint_seconds": 2.2554345540702343
+      },
+      "usage": {
+        "model_tensor_pixels": {},
+        "input_tokens_by_model": {},
+        "cpu_seconds": 8.803271449,
+        "gpu_resident_seconds": 5.465878449380398,
+        "gpu_peak_allocated_bytes": 16584893952
+      }
+    }
+  },
+  "prior_failed_attempts": [
+    {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r11",
+      "gate": {
+        "passed": false,
+        "checks": [
+          {
+            "case": "actor_patient",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D gives a cup to E."
+                }
+              },
+              "text": "D gives a cup to E."
+            }
+          },
+          {
+            "case": "actor_patient",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D gives a cup to E."
+                }
+              },
+              "text": "D gives a cup to E."
+            }
+          },
+          {
+            "case": "question_cannot_supply_action",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: C."
+                }
+              },
+              "text": "Actor: C."
+            }
+          },
+          {
+            "case": "question_cannot_supply_action",
+            "arm": "question_options",
+            "passed": false,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "C places bricks on the wall."
+                }
+              },
+              "text": "C places bricks on the wall."
+            }
+          },
+          {
+            "case": "options_cannot_supply_fact",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D puts a cup."
+                }
+              },
+              "text": "D puts a cup."
+            }
+          },
+          {
+            "case": "options_cannot_supply_fact",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D puts a cup."
+                }
+              },
+              "text": "D puts a cup."
+            }
+          },
+          {
+            "case": "partial_repeated_evidence",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D tightens a screw."
+                }
+              },
+              "text": "D tightens a screw."
+            }
+          },
+          {
+            "case": "partial_repeated_evidence",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D tightens a screw."
+                }
+              },
+              "text": "D tightens a screw."
+            }
+          },
+          {
+            "case": "subject_identity_question",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: D."
+                },
+                "b": {
+                  "text": "Actor: E."
+                }
+              },
+              "text": "Actor: D. Actor: E."
+            }
+          },
+          {
+            "case": "subject_identity_question",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: D."
+                },
+                "b": {
+                  "text": "Actor: E."
+                }
+              },
+              "text": "Actor: D. Actor: E."
+            }
+          },
+          {
+            "case": "uninformative_placeholder",
+            "arm": "question_only",
+            "passed": false,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: someone."
+                }
+              },
+              "text": "Actor: someone."
+            }
+          },
+          {
+            "case": "uninformative_placeholder",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          },
+          {
+            "case": "independent_events",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D opens drawer."
+                },
+                "b": {
+                  "text": "E reads book."
+                }
+              },
+              "text": "D opens drawer. E reads book."
+            }
+          },
+          {
+            "case": "independent_events",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D opens drawer."
+                },
+                "b": {
+                  "text": "E reads book."
+                }
+              },
+              "text": "D opens drawer. E reads book."
+            }
+          },
+          {
+            "case": "partial_filter",
+            "arm": "question_only",
+            "passed": false,
+            "labels": {
+              "U0": 0,
+              "U1": 0,
+              "U2": 0
+            }
+          },
+          {
+            "case": "irrelevant_filter",
+            "arm": "question_only",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          },
+          {
+            "case": "partial_filter",
+            "arm": "question_options",
+            "passed": false,
+            "labels": {
+              "U0": 0,
+              "U1": 0,
+              "U2": 0
+            }
+          },
+          {
+            "case": "irrelevant_filter",
+            "arm": "question_options",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          }
+        ],
+        "error": {
+          "type": "ValueError",
+          "message": "Composition context gate failed"
+        },
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 21.82729936018586,
+          "total": 21.82729936018586,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 21.82729936018586,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "oplus_compose": 10.283383391797543,
+            "o_filter_plan": 3.43097335472703,
+            "o_filter": 8.11294261366129
+          },
+          "call_count": 20,
+          "resources": {
+            "cpu_seconds": 21.791583423000006,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 21.879393436014652,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16808126976
+          }
+        },
+        "updated_at": "2026-11-03T12:40:23.506761+08:00"
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.614971607923508,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.405052736401558,
+            "tokenizer_constraint_seconds": 2.1466493606567383
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 7.974769534,
+            "gpu_resident_seconds": 4.975099474191666,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      }
+    },
+    {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r12",
+      "gate": {
+        "passed": false,
+        "checks": [
+          {
+            "case": "actor_patient",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D gives a cup to E."
+                }
+              },
+              "text": "D gives a cup to E."
+            }
+          },
+          {
+            "case": "actor_patient",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D gives a cup to E."
+                }
+              },
+              "text": "D gives a cup to E."
+            }
+          },
+          {
+            "case": "question_cannot_supply_action",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: C."
+                }
+              },
+              "text": "Actor: C."
+            }
+          },
+          {
+            "case": "question_cannot_supply_action",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: C."
+                }
+              },
+              "text": "Actor: C."
+            }
+          },
+          {
+            "case": "options_cannot_supply_fact",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D puts a cup."
+                }
+              },
+              "text": "D puts a cup."
+            }
+          },
+          {
+            "case": "options_cannot_supply_fact",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D puts a cup."
+                }
+              },
+              "text": "D puts a cup."
+            }
+          },
+          {
+            "case": "partial_repeated_evidence",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D tightens a screw."
+                }
+              },
+              "text": "D tightens a screw."
+            }
+          },
+          {
+            "case": "partial_repeated_evidence",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D tightens a screw."
+                }
+              },
+              "text": "D tightens a screw."
+            }
+          },
+          {
+            "case": "subject_identity_question",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: D."
+                },
+                "b": {
+                  "text": "Actor: E."
+                }
+              },
+              "text": "Actor: D. Actor: E."
+            }
+          },
+          {
+            "case": "subject_identity_question",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: D."
+                },
+                "b": {
+                  "text": "Actor: E."
+                }
+              },
+              "text": "Actor: D. Actor: E."
+            }
+          },
+          {
+            "case": "uninformative_placeholder",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          },
+          {
+            "case": "uninformative_placeholder",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          },
+          {
+            "case": "independent_events",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D opens drawer."
+                },
+                "b": {
+                  "text": "E reads book."
+                }
+              },
+              "text": "D opens drawer. E reads book."
+            }
+          },
+          {
+            "case": "independent_events",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D opens drawer."
+                },
+                "b": {
+                  "text": "E reads book."
+                }
+              },
+              "text": "D opens drawer. E reads book."
+            }
+          },
+          {
+            "case": "partial_filter",
+            "arm": "question_only",
+            "passed": false,
+            "labels": {
+              "U0": 0,
+              "U1": 0,
+              "U2": 0
+            }
+          },
+          {
+            "case": "irrelevant_filter",
+            "arm": "question_only",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          },
+          {
+            "case": "partial_filter",
+            "arm": "question_options",
+            "passed": false,
+            "labels": {
+              "U0": 0,
+              "U1": 0,
+              "U2": 0
+            }
+          },
+          {
+            "case": "irrelevant_filter",
+            "arm": "question_options",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          }
+        ],
+        "error": {
+          "type": "ValueError",
+          "message": "Composition context gate failed"
+        },
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 22.629704743623734,
+          "total": 22.629704743623734,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 22.629704743623734,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "oplus_compose": 8.617098081856966,
+            "o_filter_plan": 3.571486532688141,
+            "o_filter": 10.441120129078627
+          },
+          "call_count": 20,
+          "resources": {
+            "cpu_seconds": 22.60808720199999,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 22.67500838637352,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16808126976
+          }
+        },
+        "updated_at": "2026-11-03T12:43:15.533573+08:00"
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.491161048412323,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.308170452713966,
+            "tokenizer_constraint_seconds": 2.1207677461206913
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 7.863911026,
+            "gpu_resident_seconds": 4.833182130008936,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      }
+    },
+    {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r13",
+      "gate": {
+        "passed": false,
+        "checks": [
+          {
+            "case": "actor_patient",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D gives a cup to E."
+                }
+              },
+              "text": "D gives a cup to E."
+            }
+          },
+          {
+            "case": "actor_patient",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D gives a cup to E."
+                }
+              },
+              "text": "D gives a cup to E."
+            }
+          },
+          {
+            "case": "question_cannot_supply_action",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: C."
+                }
+              },
+              "text": "Actor: C."
+            }
+          },
+          {
+            "case": "question_cannot_supply_action",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: C."
+                }
+              },
+              "text": "Actor: C."
+            }
+          },
+          {
+            "case": "options_cannot_supply_fact",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D puts a cup."
+                }
+              },
+              "text": "D puts a cup."
+            }
+          },
+          {
+            "case": "options_cannot_supply_fact",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D puts a cup."
+                }
+              },
+              "text": "D puts a cup."
+            }
+          },
+          {
+            "case": "partial_repeated_evidence",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D tightens a screw."
+                }
+              },
+              "text": "D tightens a screw."
+            }
+          },
+          {
+            "case": "partial_repeated_evidence",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D tightens a screw."
+                }
+              },
+              "text": "D tightens a screw."
+            }
+          },
+          {
+            "case": "subject_identity_question",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: D."
+                },
+                "b": {
+                  "text": "Actor: E."
+                }
+              },
+              "text": "Actor: D. Actor: E."
+            }
+          },
+          {
+            "case": "subject_identity_question",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "Actor: D."
+                },
+                "b": {
+                  "text": "Actor: E."
+                }
+              },
+              "text": "Actor: D. Actor: E."
+            }
+          },
+          {
+            "case": "uninformative_placeholder",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          },
+          {
+            "case": "uninformative_placeholder",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": ""
+                }
+              },
+              "text": ""
+            }
+          },
+          {
+            "case": "independent_events",
+            "arm": "question_only",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D opens drawer."
+                },
+                "b": {
+                  "text": "E reads book."
+                }
+              },
+              "text": "D opens drawer. E reads book."
+            }
+          },
+          {
+            "case": "independent_events",
+            "arm": "question_options",
+            "passed": true,
+            "output": {
+              "groups": {
+                "a": {
+                  "text": "D opens drawer."
+                },
+                "b": {
+                  "text": "E reads book."
+                }
+              },
+              "text": "D opens drawer. E reads book."
+            }
+          },
+          {
+            "case": "partial_filter",
+            "arm": "question_only",
+            "passed": false,
+            "labels": {
+              "U0": 0,
+              "U1": 0,
+              "U2": 0
+            }
+          },
+          {
+            "case": "irrelevant_filter",
+            "arm": "question_only",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          },
+          {
+            "case": "partial_filter",
+            "arm": "question_options",
+            "passed": true,
+            "labels": {
+              "U0": 1,
+              "U1": 1,
+              "U2": 1
+            }
+          },
+          {
+            "case": "irrelevant_filter",
+            "arm": "question_options",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          }
+        ],
+        "error": {
+          "type": "ValueError",
+          "message": "Composition context gate failed"
+        },
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 19.497955083847046,
+          "total": 19.497955083847046,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 19.497955083847046,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "oplus_compose": 8.634727139025927,
+            "o_filter_plan": 3.5745580792427063,
+            "o_filter": 7.288669865578413
+          },
+          "call_count": 20,
+          "resources": {
+            "cpu_seconds": 19.473712827000007,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 19.53986244648695,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16808126976
+          }
+        },
+        "updated_at": "2026-11-03T12:45:46.657343+08:00"
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.988331649452448,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.704190012067556,
+            "tokenizer_constraint_seconds": 2.2196678817272186
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 8.303201202,
+            "gpu_resident_seconds": 5.316245716065168,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      }
+    }
+  ],
+  "new_case_processing_seconds": 686.8979492597282,
+  "shared_extraction_seconds": 185.7953416928649,
+  "composition_semantic_passed": false,
+  "observed_failures": [
+    "O+ with options adds precision to folding in ironing S0.",
+    "O+ without options adds recurrence/purpose to individual packing observations such as S4/S93.",
+    "Packing with options S19 copies option activities/objects into a group containing only C/walks/the room; O=D correct, O+=A incorrect."
+  ],
+  "limits": [
+    "Two known fixed-source diagnostic cases, not a random or full benchmark.",
+    "No new scene navigation or extraction in this matrix.",
+    "Actor-only output constraint prevents inventing a predicate in that structural case; other groups still depend on model semantics.",
+    "Fixed semantic probes do not establish universal absence of hallucination.",
+    "r14 preserves r13 model prompts/schema unchanged and treats semantic probe failure as a diagnostic result, not a successful repair.",
+    "Prior r10 is an archived control, not a pure question-context ablation because filtering prompts changed."
+  ]
+}

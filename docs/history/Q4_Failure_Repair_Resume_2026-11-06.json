@@ -1,0 +1,517 @@
+{
+  "at": "2026-11-06T11:13:59.276453+08:00",
+  "authorization": "修复下继续跑",
+  "tests": {
+    "passed": 80,
+    "suites": [
+      "test_sparse_visual",
+      "test_q4_resident_training",
+      "test_q4_resident",
+      "test_q4_500_extension",
+      "test_q4_retention_training",
+      "test_gpu_shared_queue",
+      "test_q_v4",
+      "test_q_v4_generation",
+      "test_q_generation",
+      "test_q4_autoscale",
+      "test_evidence_planner_budget",
+      "test_q4_failure_recovery"
+    ]
+  },
+  "runs": {
+    "Q4-adaptive-500-20261105-r1": {
+      "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/recovery-20261106-r2",
+      "controller_pid": 1239862,
+      "queue": {
+        "state": "running",
+        "controller_pid": 1239862,
+        "workers": {
+          "16": {
+            "stage": "waiting_for_gpu",
+            "pid": 1239884,
+            "at": "2026-11-06T11:22:00.253781+08:00",
+            "kind": "q4",
+            "resident": true,
+            "watched_gpu_indices": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "gpu_observations": {
+              "0": {
+                "index": "0",
+                "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+                "free_mib": 16966,
+                "utilization": 94
+              },
+              "1": {
+                "index": "1",
+                "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+                "free_mib": 35510,
+                "utilization": 94
+              },
+              "2": {
+                "index": "2",
+                "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+                "free_mib": 12199,
+                "utilization": 100
+              },
+              "3": {
+                "index": "3",
+                "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+                "free_mib": 12049,
+                "utilization": 0
+              }
+            },
+            "effective_free_mib": {
+              "0": 2682,
+              "1": 23506,
+              "2": 12199,
+              "3": 12049
+            },
+            "stable_observations": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0
+            },
+            "minimum_free_mib": 32768,
+            "maximum_utilization": 100,
+            "scheduling": "shared_memory_reservations"
+          },
+          "17": {
+            "stage": "waiting_for_gpu",
+            "pid": 1239885,
+            "at": "2026-11-06T11:21:59.202464+08:00",
+            "kind": "q4",
+            "resident": true,
+            "watched_gpu_indices": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "gpu_observations": {
+              "0": {
+                "index": "0",
+                "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+                "free_mib": 16966,
+                "utilization": 94
+              },
+              "1": {
+                "index": "1",
+                "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+                "free_mib": 35510,
+                "utilization": 97
+              },
+              "2": {
+                "index": "2",
+                "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+                "free_mib": 12199,
+                "utilization": 99
+              },
+              "3": {
+                "index": "3",
+                "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+                "free_mib": 12049,
+                "utilization": 87
+              }
+            },
+            "effective_free_mib": {
+              "0": 2682,
+              "1": 23506,
+              "2": 12199,
+              "3": 12049
+            },
+            "stable_observations": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0
+            },
+            "minimum_free_mib": 32768,
+            "maximum_utilization": 100,
+            "scheduling": "shared_memory_reservations"
+          },
+          "18": {
+            "stage": "query",
+            "pid": 1239886,
+            "at": "2026-11-06T11:20:28.854303+08:00",
+            "index": 369,
+            "question_id": "57420efd-6d84-462f-b03d-f45133760d79",
+            "kind": "source",
+            "gpu": "0"
+          },
+          "19": {
+            "stage": "waiting_for_gpu",
+            "pid": 1239887,
+            "at": "2026-11-06T11:21:57.910846+08:00",
+            "kind": "q4",
+            "resident": true,
+            "watched_gpu_indices": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "gpu_observations": {
+              "0": {
+                "index": "0",
+                "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+                "free_mib": 16966,
+                "utilization": 95
+              },
+              "1": {
+                "index": "1",
+                "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+                "free_mib": 35510,
+                "utilization": 92
+              },
+              "2": {
+                "index": "2",
+                "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+                "free_mib": 12199,
+                "utilization": 0
+              },
+              "3": {
+                "index": "3",
+                "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+                "free_mib": 12049,
+                "utilization": 100
+              }
+            },
+            "effective_free_mib": {
+              "0": 2682,
+              "1": 23506,
+              "2": 12199,
+              "3": 12049
+            },
+            "stable_observations": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0
+            },
+            "minimum_free_mib": 32768,
+            "maximum_utilization": 100,
+            "scheduling": "shared_memory_reservations"
+          }
+        },
+        "effective_worker_count": 4,
+        "configured_maximum_worker_count": 8,
+        "allowed_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "resident_control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/recovery-20261106-r2",
+        "autoscaler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/recovery-20261106-r2",
+        "resident_models": true,
+        "updated_at": "2026-11-06T11:22:05.293676+08:00",
+        "error": null
+      },
+      "preservation": {
+        "published": {
+          "count": 365,
+          "unchanged": true
+        },
+        "frozen": {
+          "count": 1,
+          "unchanged": true
+        },
+        "training": {
+          "count": 0,
+          "unchanged": true
+        }
+      },
+      "gates": {
+        "16": {},
+        "17": {},
+        "18": {
+          "workers/18/validation/q4/functional.json": true,
+          "workers/18/validation/resident_q4/functional.json": true,
+          "workers/18/validation/source/validation/functional.json": true
+        },
+        "19": {}
+      },
+      "frozen_manifest_sha256": "a1da0772f171052db33bddfc8b0dfe75f0c08e0ff30ab78bd341f20feeca2fb4",
+      "completed_at_verification": 366,
+      "scheduler_failure": null,
+      "residency_proof": {
+        "loads": 1,
+        "switch_model_pids": [
+          1240405,
+          1240405,
+          1240405,
+          1240405,
+          1240405
+        ],
+        "current_status": {
+          "stage": "query",
+          "pid": 1239886,
+          "at": "2026-11-06T11:20:28.854303+08:00",
+          "index": 369,
+          "question_id": "57420efd-6d84-462f-b03d-f45133760d79",
+          "kind": "source",
+          "gpu": "0"
+        },
+        "batch_gate": [
+          {
+            "case": "batch2_four_sources_schema_identity",
+            "passed": true,
+            "rows": 4
+          },
+          {
+            "case": "batch4_four_sources_schema_identity",
+            "passed": true,
+            "rows": 4
+          },
+          {
+            "case": "same_inputs_and_input_tokens",
+            "passed": true
+          },
+          {
+            "case": "saved_empty_string_navigation",
+            "passed": true,
+            "result": {
+              "action": "stop",
+              "evidence_status": "sufficient",
+              "supported_option": "O2",
+              "option_comparison": "",
+              "option_assessments": {
+                "O0": {
+                  "reason": "当前场景中没有提到C负责建设工地的内容",
+                  "status": "ruled_out",
+                  "source_caption_ids": [
+                    "C44"
+                  ]
+                },
+                "O1": {
+                  "reason": "当前场景中没有提到C负责高效维护工地的内容",
+                  "status": "ruled_out",
+                  "source_caption_ids": [
+                    "C44"
+                  ]
+                },
+                "O2": {
+                  "reason": "当前场景中多次提到C仔细检查工地的安全和进度",
+                  "status": "supported",
+                  "source_caption_ids": [
+                    "C44",
+                    "C44"
+                  ]
+                },
+                "O3": {
+                  "reason": "当前场景中没有提到C负责保持工地清洁的内容",
+                  "status": "ruled_out",
+                  "source_caption_ids": [
+                    "C44"
+                  ]
+                },
+                "O4": {
+                  "reason": "当前场景中没有提到C负责精心修理和维护工地的内容",
+                  "status": "ruled_out",
+                  "source_caption_ids": [
+                    "C44"
+                  ]
+                }
+              },
+              "reason": "当前场景中多次提到C仔细检查工地的安全和进度，支持选项2",
+              "gap": "",
+              "scene_id": "stop",
+              "current_scene_assessment": "sufficient",
+              "local_unavailable_reason": "",
+              "caption_ids": [],
+              "entity_ids": [],
+              "focus": [],
+              "fields": [],
+              "sufficient": true
+            },
+            "source": "M failed call; a shared decoder regression, not an N benchmark answer"
+          }
+        ]
+      },
+      "first_results_audit": {
+        "passed": true,
+        "new_published_audited": 1,
+        "rows": [
+          {
+            "question_id": "57055009-9f69-4f1c-b4cf-7ac0a079e4ca",
+            "result_sha256": "0725c96d02cbe301507b5ba4af63e29047ddd43752df5e41b26c669fd9a47f66",
+            "calls": 12,
+            "raw_hashes_passed": true,
+            "same_evidence": true,
+            "keep_only": true,
+            "budget_passed": true,
+            "original_question_options": true
+          }
+        ]
+      }
+    },
+    "Q4-trained-200train-300eval-20261105-r1": {
+      "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/recovery-20261106-r2",
+      "controller_pid": 1239861,
+      "queue": {
+        "state": "running",
+        "stage": "evaluation300",
+        "controller_pid": 1239861,
+        "started_at": "2026-11-06T11:11:01.924160+08:00",
+        "allowed_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "updated_at": "2026-11-06T11:21:58.750638+08:00",
+        "resident_control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/recovery-20261106-r2",
+        "workers": {
+          "4": {
+            "stage": "query",
+            "pid": 1239888,
+            "at": "2026-11-06T11:21:49.840815+08:00",
+            "gpu": "1",
+            "index": 26,
+            "question_id": "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+            "phase": "audit",
+            "iteration": 0
+          },
+          "5": {
+            "stage": "query",
+            "pid": 1239889,
+            "at": "2026-11-06T11:21:57.031430+08:00",
+            "gpu": "0",
+            "index": 24,
+            "question_id": "f60b20bb-ba25-4eea-a09f-01bbe8bbda88",
+            "phase": "filter",
+            "iteration": 2,
+            "observations": 67
+          },
+          "6": {
+            "stage": "query",
+            "pid": 1239890,
+            "at": "2026-11-06T11:21:48.387709+08:00",
+            "gpu": "1",
+            "index": 23,
+            "question_id": "47b87299-5e31-4299-8bbc-51fe567ebd40",
+            "phase": "filter",
+            "iteration": 2,
+            "observations": 118
+          },
+          "7": {
+            "stage": "query",
+            "pid": 1239891,
+            "at": "2026-11-06T11:21:36.443319+08:00",
+            "gpu": "1",
+            "index": 25,
+            "question_id": "c3ef6035-08c6-458e-b2d4-d7dc8f97f658",
+            "phase": "filter",
+            "iteration": 0,
+            "observations": 129
+          }
+        }
+      },
+      "preservation": {
+        "published": {
+          "count": 0,
+          "unchanged": true
+        },
+        "frozen": {
+          "count": 1,
+          "unchanged": true
+        },
+        "training": {
+          "count": 1816,
+          "unchanged": true
+        }
+      },
+      "gates": {
+        "4": {
+          "workers/4/validation/functional.json": true
+        },
+        "5": {
+          "workers/5/validation/functional.json": true
+        },
+        "6": {
+          "workers/6/validation/functional.json": true
+        },
+        "7": {
+          "workers/7/validation/functional.json": true
+        }
+      },
+      "frozen_manifest_sha256": "b1c44b1452d3083bb600ecc6563c8b97f305a4fc5cad330bfca7766e49b76048",
+      "completed_at_verification": 22,
+      "scheduler_failure": null,
+      "first_results_audit": {
+        "passed": true,
+        "at": "2026-11-06T11:14:26.881164+08:00",
+        "completed_audited": 3,
+        "rows": [
+          {
+            "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+            "result_sha256": "c713d7bfea7732b3a68950c9eefdba634915c0a8dc181a391cc3bef4c641a49a",
+            "calls": 20,
+            "adapter_active_filter_calls": 3,
+            "keep_only": true,
+            "same_evidence": true,
+            "no_pending": true,
+            "budget_passed": true,
+            "raw_hashes_passed": true
+          },
+          {
+            "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+            "result_sha256": "56bc6d53da7d0626cd3a8cb1168ab782780e3ea17732bdedcd4baf0c8922d469",
+            "calls": 9,
+            "adapter_active_filter_calls": 4,
+            "keep_only": true,
+            "same_evidence": true,
+            "no_pending": true,
+            "budget_passed": true,
+            "raw_hashes_passed": true
+          },
+          {
+            "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+            "result_sha256": "a67a07ad7d427860e495a828f4b6b99a83aa06a1bdb22ba80451f4f3b0dc941a",
+            "calls": 12,
+            "adapter_active_filter_calls": 4,
+            "keep_only": true,
+            "same_evidence": true,
+            "no_pending": true,
+            "budget_passed": true,
+            "raw_hashes_passed": true
+          }
+        ]
+      }
+    }
+  },
+  "repairs": {
+    "trained": "Borrowed lease yields GPU dictionary; fixed generated evaluation worker. Reload saved fitted adapter for evaluation only; no teacher/epoch-selection/refit repeated. Original frozen runtime/configs remain byte-identical.",
+    "untrained": "Malformed optional sparse_visual_plan rejected with no image access or fabricated plan. Reuse completed navigation checkpoint; preserve all raw calls and original 1500/600/3600 budgets. Future optional-plan JSON failures receive same narrow rejection handling. Other model/tool errors still halt.",
+    "residency": "Model and global shared GPU lease retained across questions and N/Q4 stages. Candidate GPUs 0/1/2/3; trained24GiB/source32GiB admission unchanged; other projects retained.",
+    "old_failures": "Original failed queue/report/stop flags archived in each new control before clearing active stop flags; historical failure has not been erased."
+  },
+  "monitor": {
+    "pid": 1240673,
+    "root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-alert-monitor-20261104-r1",
+    "history_and_dedup_preserved": true,
+    "status": {
+      "pid": 1240673,
+      "at": "2026-11-06T11:21:48.229910+08:00",
+      "state": "watching",
+      "interval_seconds": 60,
+      "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+    }
+  },
+  "cost_reconciliation": {
+    "question_id": "55ea09ed-4590-4e59-8753-40a64d67abd9",
+    "original_source_committed_seconds": 629.309681493789,
+    "of_which_search_seconds": 552.7426419779658,
+    "invalid_optional_plan_seconds": 7.512794055044651,
+    "model_calls_repeated": 0,
+    "policy": "Original failed-stage accounting is a provenance subtotal already included in the resumed source cost; never add that 629.309681493789 a second time to new_source_N_processing_seconds. All old failure_costs remain unchanged."
+  },
+  "final_verification_at": "2026-11-06T11:22:06.404135+08:00",
+  "standalone_tmp_frozen_imports_passed": true,
+  "exact_worker_diff_checks_passed": true
+}

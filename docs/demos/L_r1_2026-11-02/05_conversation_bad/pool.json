@@ -1,0 +1,2875 @@
+{
+  "version": "I-evidence-planner-L-v1-open-state-adjacent",
+  "records": [
+    {
+      "id": "R0",
+      "text": "C looks at man P.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C45",
+          "original_text": "#C C looks at man P"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C45",
+          "interval": [
+            45,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R1",
+      "text": "a woman X walks towards the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C46",
+          "original_text": "#O a woman X walks towards the table"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C46",
+          "interval": [
+            46,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "text": "X walks towards the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C46",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "walks",
+            "patient": "towards the table"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C46",
+          "interval": [
+            46,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "text": "C walks towards the bedroom.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C47",
+          "original_text": "#C C walks towards the bedroom"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C47",
+          "interval": [
+            47,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "text": "A lady Y holds a phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C48",
+          "original_text": "#O A lady Y holds a phone"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C48",
+          "interval": [
+            48,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "text": "Y holds phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C48",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Y",
+            "verb": "holds",
+            "patient": "phone"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C48",
+          "interval": [
+            48,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "text": "C looks at the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C49",
+          "original_text": "#C C looks at the table"
+        },
+        {
+          "region": "description",
+          "caption_id": "C51",
+          "original_text": "#C C looks at the table"
+        },
+        {
+          "region": "description",
+          "caption_id": "C57",
+          "original_text": "#C C looks at the table"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C49",
+          "interval": [
+            49,
+            50
+          ]
+        },
+        {
+          "caption_id": "C51",
+          "interval": [
+            51,
+            52
+          ]
+        },
+        {
+          "caption_id": "C57",
+          "interval": [
+            57,
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "text": "A woman X sits on the chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C50",
+          "original_text": "#O A woman X sits on the chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C50",
+          "interval": [
+            50,
+            51
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "text": "lady X walks around.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C52",
+          "original_text": "#O lady X walks around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C52",
+          "interval": [
+            52,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R9",
+      "text": "a woman Y walks around the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C53",
+          "original_text": "#O a woman Y walks around the room "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C53",
+          "interval": [
+            53,
+            54
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "text": "person D walks around.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C54",
+          "original_text": "#O person D walks around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C54",
+          "interval": [
+            54,
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "text": "A woman X holds a phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C55",
+          "original_text": "#O A woman X holds a phone"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C55",
+          "interval": [
+            55,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "text": "X holds phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C55",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "holds",
+            "patient": "phone"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C55",
+          "interval": [
+            55,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "text": "woman K walks in the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C56",
+          "original_text": "#O woman K walks in the room "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C56",
+          "interval": [
+            56,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R14",
+      "text": "C walks in the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C58",
+          "original_text": "#C C walks in the room"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C58",
+          "interval": [
+            58,
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "text": "C walks around the house.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C59",
+          "original_text": "#C C walks around the house"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C59",
+          "interval": [
+            59,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "text": "woman X walks back to the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C60",
+          "original_text": "#O woman X walks back to the room"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C60",
+          "interval": [
+            60,
+            61
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "text": "a woman X walks towards C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C61",
+          "original_text": "#O a woman X walks towards C"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C61",
+          "interval": [
+            61,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "text": "X walks towards C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C61",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "walks",
+            "patient": "towards C"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C61",
+          "interval": [
+            61,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "text": "woman Y stands at the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original",
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C62",
+          "original_text": "#O woman Y stands at the table "
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C62",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "woman Y",
+            "verb": "stands",
+            "patient": "at the table"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C62",
+          "interval": [
+            62,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "text": "C looks at the coffee maker.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C63",
+          "original_text": "#C C looks at the coffee maker"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C63",
+          "interval": [
+            63,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "text": "A woman Y walks towards C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C64",
+          "original_text": "#O A woman Y walks towards C"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C64",
+          "interval": [
+            64,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R22",
+      "text": "Y walks towards C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C64",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Y",
+            "verb": "walks",
+            "patient": "towards C"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C64",
+          "interval": [
+            64,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R23",
+      "text": "A woman K walks in the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C65",
+          "original_text": "#O A woman K walks in the room"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C65",
+          "interval": [
+            65,
+            66
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R24",
+      "text": "A woman Z walks towards the woman X.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C66",
+          "original_text": "#O A woman Z walks towards the woman X."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C66",
+          "interval": [
+            66,
+            67
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R25",
+      "text": "Z walks towards the woman X.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C66",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Z",
+            "verb": "walks",
+            "patient": "towards the woman X"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C66",
+          "interval": [
+            66,
+            67
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R26",
+      "text": "C looks at the phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C67",
+          "original_text": "#C C looks at the phone "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C67",
+          "interval": [
+            67,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R27",
+      "text": "C looks at woman X.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C68",
+          "original_text": "#C C looks at woman X"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C68",
+          "interval": [
+            68,
+            69
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R28",
+      "text": "woman P walks away from the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C69",
+          "original_text": "#O woman P walks away from the table"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C69",
+          "interval": [
+            69,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R29",
+      "text": "a woman X walks towards C. The text memory associates this observation with C (text reference E0).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T0",
+            "entity_id": "E0",
+            "scene_id": "S1",
+            "description": "#O a woman X walks towards C",
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 61,
+            "last_observed_at": 61,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              62
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C61"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              61,
+              61
+            ],
+            "source_support_interval": [
+              61,
+              62
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C61",
+          "interval": [
+            61,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R30",
+      "text": "woman Y stands at the table. The text memory associates this observation with the table (text reference E1).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T1",
+            "entity_id": "E1",
+            "scene_id": "S1",
+            "description": "#O woman Y stands at the table ",
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 62,
+            "last_observed_at": 62,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              63
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C62"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              62,
+              62
+            ],
+            "source_support_interval": [
+              62,
+              63
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C62",
+          "interval": [
+            62,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R31",
+      "text": "An unresolved source observation states: \"A woman Y walks towards C\".",
+      "qualification": "unresolved hypothesis",
+      "kinds": [
+        "temporal unresolved observation"
+      ],
+      "sources": [
+        {
+          "region": "temporal unresolved observation",
+          "record": {
+            "entity_id": "E0",
+            "scene_id": "S1",
+            "observation": {
+              "caption_id": "C64",
+              "continuity": "uncertain",
+              "state": "#O A woman Y walks towards C",
+              "cause": {
+                "action": null,
+                "actor": null,
+                "tool": null,
+                "basis": "unknown",
+                "source_caption_ids": []
+              }
+            },
+            "pts": 64,
+            "status": "unresolved_state_observation"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C64",
+          "interval": [
+            64,
+            65
+          ]
+        }
+      ]
+    }
+  ],
+  "source_memory": {
+    "observations": [
+      {
+        "caption_id": "C45",
+        "frame_index": 45,
+        "sample_interval": [
+          45,
+          46
+        ],
+        "evidence": {
+          "original_text": "#C C looks at man P"
+        }
+      },
+      {
+        "caption_id": "C46",
+        "frame_index": 46,
+        "sample_interval": [
+          46,
+          47
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "walks",
+              "patient": "towards the table"
+            }
+          ],
+          "original_text": "#O a woman X walks towards the table"
+        }
+      },
+      {
+        "caption_id": "C47",
+        "frame_index": 47,
+        "sample_interval": [
+          47,
+          48
+        ],
+        "evidence": {
+          "original_text": "#C C walks towards the bedroom"
+        }
+      },
+      {
+        "caption_id": "C48",
+        "frame_index": 48,
+        "sample_interval": [
+          48,
+          49
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "holds",
+              "patient": "phone"
+            }
+          ],
+          "original_text": "#O A lady Y holds a phone"
+        }
+      },
+      {
+        "caption_id": "C49",
+        "frame_index": 49,
+        "sample_interval": [
+          49,
+          50
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the table"
+        }
+      },
+      {
+        "caption_id": "C50",
+        "frame_index": 50,
+        "sample_interval": [
+          50,
+          51
+        ],
+        "evidence": {
+          "original_text": "#O A woman X sits on the chair"
+        }
+      },
+      {
+        "caption_id": "C51",
+        "frame_index": 51,
+        "sample_interval": [
+          51,
+          52
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the table"
+        }
+      },
+      {
+        "caption_id": "C52",
+        "frame_index": 52,
+        "sample_interval": [
+          52,
+          53
+        ],
+        "evidence": {
+          "original_text": "#O lady X walks around"
+        }
+      },
+      {
+        "caption_id": "C53",
+        "frame_index": 53,
+        "sample_interval": [
+          53,
+          54
+        ],
+        "evidence": {
+          "original_text": "#O a woman Y walks around the room "
+        }
+      },
+      {
+        "caption_id": "C54",
+        "frame_index": 54,
+        "sample_interval": [
+          54,
+          55
+        ],
+        "evidence": {
+          "original_text": "#O person D walks around"
+        }
+      },
+      {
+        "caption_id": "C55",
+        "frame_index": 55,
+        "sample_interval": [
+          55,
+          56
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "holds",
+              "patient": "phone"
+            }
+          ],
+          "original_text": "#O A woman X holds a phone"
+        }
+      },
+      {
+        "caption_id": "C56",
+        "frame_index": 56,
+        "sample_interval": [
+          56,
+          57
+        ],
+        "evidence": {
+          "original_text": "#O woman K walks in the room "
+        }
+      },
+      {
+        "caption_id": "C57",
+        "frame_index": 57,
+        "sample_interval": [
+          57,
+          58
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the table"
+        }
+      },
+      {
+        "caption_id": "C58",
+        "frame_index": 58,
+        "sample_interval": [
+          58,
+          59
+        ],
+        "evidence": {
+          "original_text": "#C C walks in the room"
+        }
+      },
+      {
+        "caption_id": "C59",
+        "frame_index": 59,
+        "sample_interval": [
+          59,
+          60
+        ],
+        "evidence": {
+          "original_text": "#C C walks around the house"
+        }
+      },
+      {
+        "caption_id": "C60",
+        "frame_index": 60,
+        "sample_interval": [
+          60,
+          61
+        ],
+        "evidence": {
+          "original_text": "#O woman X walks back to the room"
+        }
+      },
+      {
+        "caption_id": "C61",
+        "frame_index": 61,
+        "sample_interval": [
+          61,
+          62
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "walks",
+              "patient": "towards C"
+            }
+          ],
+          "original_text": "#O a woman X walks towards C"
+        }
+      },
+      {
+        "caption_id": "C62",
+        "frame_index": 62,
+        "sample_interval": [
+          62,
+          63
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "woman Y",
+              "verb": "stands",
+              "patient": "at the table"
+            }
+          ],
+          "original_text": "#O woman Y stands at the table "
+        }
+      },
+      {
+        "caption_id": "C63",
+        "frame_index": 63,
+        "sample_interval": [
+          63,
+          64
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the coffee maker"
+        }
+      },
+      {
+        "caption_id": "C64",
+        "frame_index": 64,
+        "sample_interval": [
+          64,
+          65
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "walks",
+              "patient": "towards C"
+            }
+          ],
+          "original_text": "#O A woman Y walks towards C"
+        }
+      },
+      {
+        "caption_id": "C65",
+        "frame_index": 65,
+        "sample_interval": [
+          65,
+          66
+        ],
+        "evidence": {
+          "original_text": "#O A woman K walks in the room"
+        }
+      },
+      {
+        "caption_id": "C66",
+        "frame_index": 66,
+        "sample_interval": [
+          66,
+          67
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Z",
+              "verb": "walks",
+              "patient": "towards the woman X"
+            }
+          ],
+          "original_text": "#O A woman Z walks towards the woman X."
+        }
+      },
+      {
+        "caption_id": "C67",
+        "frame_index": 67,
+        "sample_interval": [
+          67,
+          68
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the phone "
+        }
+      },
+      {
+        "caption_id": "C68",
+        "frame_index": 68,
+        "sample_interval": [
+          68,
+          69
+        ],
+        "evidence": {
+          "original_text": "#C C looks at woman X"
+        }
+      },
+      {
+        "caption_id": "C69",
+        "frame_index": 69,
+        "sample_interval": [
+          69,
+          70
+        ],
+        "evidence": {
+          "original_text": "#O woman P walks away from the table"
+        }
+      }
+    ]
+  },
+  "temporal_archive": {
+    "entities": [
+      {
+        "id": "E0",
+        "label": "C",
+        "attributes": [],
+        "scene_ids": [
+          "S1"
+        ],
+        "state_ids": [
+          "T0"
+        ]
+      },
+      {
+        "id": "E1",
+        "label": "the table",
+        "attributes": [],
+        "scene_ids": [
+          "S1"
+        ],
+        "state_ids": [
+          "T1"
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "T0",
+        "entity_id": "E0",
+        "scene_id": "S1",
+        "description": "#O a woman X walks towards C",
+        "logical_state_id": "T0",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 61,
+        "last_observed_at": 61,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          62
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C61"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          61,
+          61
+        ],
+        "source_support_interval": [
+          61,
+          62
+        ]
+      },
+      {
+        "id": "T1",
+        "entity_id": "E1",
+        "scene_id": "S1",
+        "description": "#O woman Y stands at the table ",
+        "logical_state_id": "T1",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 62,
+        "last_observed_at": 62,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          63
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C62"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          62,
+          62
+        ],
+        "source_support_interval": [
+          62,
+          63
+        ]
+      }
+    ],
+    "transitions": [],
+    "relations": [],
+    "lineage": [],
+    "context_selection": {
+      "total_entities": 2,
+      "selected_entities": 2,
+      "total_states": 2,
+      "selected_states": 2,
+      "attributes_per_entity": 16,
+      "note": "Full source graph is retained separately; this is a bounded retrieval view.",
+      "partial_memory": true
+    },
+    "source_type": "caption",
+    "evidence_policy": "Assertions extracted from original timestamped summaries; identities are text inferences, not pixel-verified facts. Unreported changes and persistence remain unknown.",
+    "identities": [],
+    "partial": true,
+    "unresolved_observations": [
+      {
+        "entity_id": "E0",
+        "scene_id": "S1",
+        "observation": {
+          "caption_id": "C64",
+          "continuity": "uncertain",
+          "state": "#O A woman Y walks towards C",
+          "cause": {
+            "action": null,
+            "actor": null,
+            "tool": null,
+            "basis": "unknown",
+            "source_caption_ids": []
+          }
+        },
+        "pts": 64,
+        "status": "unresolved_state_observation"
+      }
+    ],
+    "temporal_organization_policy": "Original caption assertions and existing local entities only. Continuity and cross-scene identity are text inferences. Unknown gaps, causes and physical identities remain unknown. Repeated actions are not automatically a single continuous state."
+  },
+  "visual_archive": [],
+  "pool_sha256": "f6cfd548d6669ce326d2078f38a9294d5d99fa33f1bb89d391ca6c98fba56475",
+  "policy": "These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence. Compact ranges combine exactly adjacent samples of the same statement; all original sample intervals remain archived and do not prove continuous activity.",
+  "source_counts": {
+    "description": 25,
+    "H fact": 7,
+    "temporal state": 2,
+    "temporal unresolved observation": 1
+  },
+  "parent_memory_variant": "I",
+  "underlying_memory_variant": "H",
+  "merged_archive": {
+    "schema": "merged-lazy-memory-I-v2-H",
+    "parent_memory_variant": "H",
+    "records": [
+      {
+        "id": "R0",
+        "evidence": {
+          "original_text": "#C C looks at man P"
+        }
+      },
+      {
+        "id": "R1",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "walks",
+              "patient": "towards the table"
+            }
+          ],
+          "original_text": "#O a woman X walks towards the table"
+        }
+      },
+      {
+        "id": "R2",
+        "evidence": {
+          "original_text": "#C C walks towards the bedroom"
+        }
+      },
+      {
+        "id": "R3",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "holds",
+              "patient": "phone"
+            }
+          ],
+          "original_text": "#O A lady Y holds a phone"
+        }
+      },
+      {
+        "id": "R4",
+        "evidence": {
+          "original_text": "#C C looks at the table"
+        }
+      },
+      {
+        "id": "R5",
+        "evidence": {
+          "original_text": "#O A woman X sits on the chair"
+        }
+      },
+      {
+        "id": "R6",
+        "evidence": {
+          "original_text": "#O lady X walks around"
+        }
+      },
+      {
+        "id": "R7",
+        "evidence": {
+          "original_text": "#O a woman Y walks around the room "
+        }
+      },
+      {
+        "id": "R8",
+        "evidence": {
+          "original_text": "#O person D walks around"
+        }
+      },
+      {
+        "id": "R9",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "holds",
+              "patient": "phone"
+            }
+          ],
+          "original_text": "#O A woman X holds a phone"
+        }
+      },
+      {
+        "id": "R10",
+        "evidence": {
+          "original_text": "#O woman K walks in the room "
+        }
+      },
+      {
+        "id": "R11",
+        "evidence": {
+          "original_text": "#C C walks in the room"
+        }
+      },
+      {
+        "id": "R12",
+        "evidence": {
+          "original_text": "#C C walks around the house"
+        }
+      },
+      {
+        "id": "R13",
+        "evidence": {
+          "original_text": "#O woman X walks back to the room"
+        }
+      },
+      {
+        "id": "R14",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "walks",
+              "patient": "towards C"
+            }
+          ],
+          "original_text": "#O a woman X walks towards C"
+        }
+      },
+      {
+        "id": "R15",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "woman Y",
+              "verb": "stands",
+              "patient": "at the table"
+            }
+          ],
+          "original_text": "#O woman Y stands at the table "
+        }
+      },
+      {
+        "id": "R16",
+        "evidence": {
+          "original_text": "#C C looks at the coffee maker"
+        }
+      },
+      {
+        "id": "R17",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "walks",
+              "patient": "towards C"
+            }
+          ],
+          "original_text": "#O A woman Y walks towards C"
+        }
+      },
+      {
+        "id": "R18",
+        "evidence": {
+          "original_text": "#O A woman K walks in the room"
+        }
+      },
+      {
+        "id": "R19",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Z",
+              "verb": "walks",
+              "patient": "towards the woman X"
+            }
+          ],
+          "original_text": "#O A woman Z walks towards the woman X."
+        }
+      },
+      {
+        "id": "R20",
+        "evidence": {
+          "original_text": "#C C looks at the phone "
+        }
+      },
+      {
+        "id": "R21",
+        "evidence": {
+          "original_text": "#C C looks at woman X"
+        }
+      },
+      {
+        "id": "R22",
+        "evidence": {
+          "original_text": "#O woman P walks away from the table"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "caption_id": "C45",
+        "frame_index": 45,
+        "sample_interval": [
+          45,
+          46
+        ],
+        "record_id": "R0"
+      },
+      {
+        "caption_id": "C46",
+        "frame_index": 46,
+        "sample_interval": [
+          46,
+          47
+        ],
+        "record_id": "R1"
+      },
+      {
+        "caption_id": "C47",
+        "frame_index": 47,
+        "sample_interval": [
+          47,
+          48
+        ],
+        "record_id": "R2"
+      },
+      {
+        "caption_id": "C48",
+        "frame_index": 48,
+        "sample_interval": [
+          48,
+          49
+        ],
+        "record_id": "R3"
+      },
+      {
+        "caption_id": "C49",
+        "frame_index": 49,
+        "sample_interval": [
+          49,
+          50
+        ],
+        "record_id": "R4"
+      },
+      {
+        "caption_id": "C50",
+        "frame_index": 50,
+        "sample_interval": [
+          50,
+          51
+        ],
+        "record_id": "R5"
+      },
+      {
+        "caption_id": "C51",
+        "frame_index": 51,
+        "sample_interval": [
+          51,
+          52
+        ],
+        "record_id": "R4"
+      },
+      {
+        "caption_id": "C52",
+        "frame_index": 52,
+        "sample_interval": [
+          52,
+          53
+        ],
+        "record_id": "R6"
+      },
+      {
+        "caption_id": "C53",
+        "frame_index": 53,
+        "sample_interval": [
+          53,
+          54
+        ],
+        "record_id": "R7"
+      },
+      {
+        "caption_id": "C54",
+        "frame_index": 54,
+        "sample_interval": [
+          54,
+          55
+        ],
+        "record_id": "R8"
+      },
+      {
+        "caption_id": "C55",
+        "frame_index": 55,
+        "sample_interval": [
+          55,
+          56
+        ],
+        "record_id": "R9"
+      },
+      {
+        "caption_id": "C56",
+        "frame_index": 56,
+        "sample_interval": [
+          56,
+          57
+        ],
+        "record_id": "R10"
+      },
+      {
+        "caption_id": "C57",
+        "frame_index": 57,
+        "sample_interval": [
+          57,
+          58
+        ],
+        "record_id": "R4"
+      },
+      {
+        "caption_id": "C58",
+        "frame_index": 58,
+        "sample_interval": [
+          58,
+          59
+        ],
+        "record_id": "R11"
+      },
+      {
+        "caption_id": "C59",
+        "frame_index": 59,
+        "sample_interval": [
+          59,
+          60
+        ],
+        "record_id": "R12"
+      },
+      {
+        "caption_id": "C60",
+        "frame_index": 60,
+        "sample_interval": [
+          60,
+          61
+        ],
+        "record_id": "R13"
+      },
+      {
+        "caption_id": "C61",
+        "frame_index": 61,
+        "sample_interval": [
+          61,
+          62
+        ],
+        "record_id": "R14"
+      },
+      {
+        "caption_id": "C62",
+        "frame_index": 62,
+        "sample_interval": [
+          62,
+          63
+        ],
+        "record_id": "R15"
+      },
+      {
+        "caption_id": "C63",
+        "frame_index": 63,
+        "sample_interval": [
+          63,
+          64
+        ],
+        "record_id": "R16"
+      },
+      {
+        "caption_id": "C64",
+        "frame_index": 64,
+        "sample_interval": [
+          64,
+          65
+        ],
+        "record_id": "R17"
+      },
+      {
+        "caption_id": "C65",
+        "frame_index": 65,
+        "sample_interval": [
+          65,
+          66
+        ],
+        "record_id": "R18"
+      },
+      {
+        "caption_id": "C66",
+        "frame_index": 66,
+        "sample_interval": [
+          66,
+          67
+        ],
+        "record_id": "R19"
+      },
+      {
+        "caption_id": "C67",
+        "frame_index": 67,
+        "sample_interval": [
+          67,
+          68
+        ],
+        "record_id": "R20"
+      },
+      {
+        "caption_id": "C68",
+        "frame_index": 68,
+        "sample_interval": [
+          68,
+          69
+        ],
+        "record_id": "R21"
+      },
+      {
+        "caption_id": "C69",
+        "frame_index": 69,
+        "sample_interval": [
+          69,
+          70
+        ],
+        "record_id": "R22"
+      }
+    ],
+    "groups": [
+      {
+        "id": "G0",
+        "body": "#C C looks at man P",
+        "observation_indices": [
+          0
+        ]
+      },
+      {
+        "id": "G1",
+        "body": "#O a woman X walks towards the table",
+        "observation_indices": [
+          1
+        ]
+      },
+      {
+        "id": "G2",
+        "body": "#C C walks towards the bedroom",
+        "observation_indices": [
+          2
+        ]
+      },
+      {
+        "id": "G3",
+        "body": "#O A lady Y holds a phone",
+        "observation_indices": [
+          3
+        ]
+      },
+      {
+        "id": "G4",
+        "body": "#C C looks at the table",
+        "observation_indices": [
+          4,
+          6,
+          12
+        ]
+      },
+      {
+        "id": "G5",
+        "body": "#O A woman X sits on the chair",
+        "observation_indices": [
+          5
+        ]
+      },
+      {
+        "id": "G6",
+        "body": "#O lady X walks around",
+        "observation_indices": [
+          7
+        ]
+      },
+      {
+        "id": "G7",
+        "body": "#O a woman Y walks around the room ",
+        "observation_indices": [
+          8
+        ]
+      },
+      {
+        "id": "G8",
+        "body": "#O person D walks around",
+        "observation_indices": [
+          9
+        ]
+      },
+      {
+        "id": "G9",
+        "body": "#O A woman X holds a phone",
+        "observation_indices": [
+          10
+        ]
+      },
+      {
+        "id": "G10",
+        "body": "#O woman K walks in the room ",
+        "observation_indices": [
+          11
+        ]
+      },
+      {
+        "id": "G11",
+        "body": "#C C walks in the room",
+        "observation_indices": [
+          13
+        ]
+      },
+      {
+        "id": "G12",
+        "body": "#C C walks around the house",
+        "observation_indices": [
+          14
+        ]
+      },
+      {
+        "id": "G13",
+        "body": "#O woman X walks back to the room",
+        "observation_indices": [
+          15
+        ]
+      },
+      {
+        "id": "G14",
+        "body": "#O a woman X walks towards C",
+        "observation_indices": [
+          16
+        ]
+      },
+      {
+        "id": "G15",
+        "body": "#O woman Y stands at the table ",
+        "observation_indices": [
+          17
+        ]
+      },
+      {
+        "id": "G16",
+        "body": "#C C looks at the coffee maker",
+        "observation_indices": [
+          18
+        ]
+      },
+      {
+        "id": "G17",
+        "body": "#O A woman Y walks towards C",
+        "observation_indices": [
+          19
+        ]
+      },
+      {
+        "id": "G18",
+        "body": "#O A woman K walks in the room",
+        "observation_indices": [
+          20
+        ]
+      },
+      {
+        "id": "G19",
+        "body": "#O A woman Z walks towards the woman X.",
+        "observation_indices": [
+          21
+        ]
+      },
+      {
+        "id": "G20",
+        "body": "#C C looks at the phone ",
+        "observation_indices": [
+          22
+        ]
+      },
+      {
+        "id": "G21",
+        "body": "#C C looks at woman X",
+        "observation_indices": [
+          23
+        ]
+      },
+      {
+        "id": "G22",
+        "body": "#O woman P walks away from the table",
+        "observation_indices": [
+          24
+        ]
+      }
+    ],
+    "policy": {
+      "grouping": "identical_visible_assertion_across_selected_samples",
+      "group_order": "first_observation",
+      "source_order_restorable": true,
+      "identities_merged": false,
+      "continuous_duration_inferred": false,
+      "event_counts_inferred": false
+    }
+  },
+  "merged_source_audit": {
+    "version": "merged-lazy-memory-I-v2-H-adjacent-v1",
+    "parent_memory_variant": "H",
+    "source_rows": 25,
+    "covered_source_rows": 25,
+    "rendered_rows": 23,
+    "merged_groups": 1,
+    "duplicate_assertion_rows_removed": 2,
+    "source_rows_merged": true,
+    "rows": [
+      {
+        "group_id": "G0",
+        "observation_indices": [
+          0
+        ],
+        "caption_ids": [
+          "C45"
+        ],
+        "frame_indices": [
+          45
+        ],
+        "sample_intervals": [
+          [
+            45,
+            46
+          ]
+        ],
+        "display_intervals": [
+          [
+            45,
+            46
+          ]
+        ],
+        "prompt_line": 1
+      },
+      {
+        "group_id": "G1",
+        "observation_indices": [
+          1
+        ],
+        "caption_ids": [
+          "C46"
+        ],
+        "frame_indices": [
+          46
+        ],
+        "sample_intervals": [
+          [
+            46,
+            47
+          ]
+        ],
+        "display_intervals": [
+          [
+            46,
+            47
+          ]
+        ],
+        "prompt_line": 2
+      },
+      {
+        "group_id": "G2",
+        "observation_indices": [
+          2
+        ],
+        "caption_ids": [
+          "C47"
+        ],
+        "frame_indices": [
+          47
+        ],
+        "sample_intervals": [
+          [
+            47,
+            48
+          ]
+        ],
+        "display_intervals": [
+          [
+            47,
+            48
+          ]
+        ],
+        "prompt_line": 3
+      },
+      {
+        "group_id": "G3",
+        "observation_indices": [
+          3
+        ],
+        "caption_ids": [
+          "C48"
+        ],
+        "frame_indices": [
+          48
+        ],
+        "sample_intervals": [
+          [
+            48,
+            49
+          ]
+        ],
+        "display_intervals": [
+          [
+            48,
+            49
+          ]
+        ],
+        "prompt_line": 4
+      },
+      {
+        "group_id": "G4",
+        "observation_indices": [
+          4,
+          6,
+          12
+        ],
+        "caption_ids": [
+          "C49",
+          "C51",
+          "C57"
+        ],
+        "frame_indices": [
+          49,
+          51,
+          57
+        ],
+        "sample_intervals": [
+          [
+            49,
+            50
+          ],
+          [
+            51,
+            52
+          ],
+          [
+            57,
+            58
+          ]
+        ],
+        "display_intervals": [
+          [
+            49,
+            50
+          ],
+          [
+            51,
+            52
+          ],
+          [
+            57,
+            58
+          ]
+        ],
+        "prompt_line": 5
+      },
+      {
+        "group_id": "G5",
+        "observation_indices": [
+          5
+        ],
+        "caption_ids": [
+          "C50"
+        ],
+        "frame_indices": [
+          50
+        ],
+        "sample_intervals": [
+          [
+            50,
+            51
+          ]
+        ],
+        "display_intervals": [
+          [
+            50,
+            51
+          ]
+        ],
+        "prompt_line": 6
+      },
+      {
+        "group_id": "G6",
+        "observation_indices": [
+          7
+        ],
+        "caption_ids": [
+          "C52"
+        ],
+        "frame_indices": [
+          52
+        ],
+        "sample_intervals": [
+          [
+            52,
+            53
+          ]
+        ],
+        "display_intervals": [
+          [
+            52,
+            53
+          ]
+        ],
+        "prompt_line": 7
+      },
+      {
+        "group_id": "G7",
+        "observation_indices": [
+          8
+        ],
+        "caption_ids": [
+          "C53"
+        ],
+        "frame_indices": [
+          53
+        ],
+        "sample_intervals": [
+          [
+            53,
+            54
+          ]
+        ],
+        "display_intervals": [
+          [
+            53,
+            54
+          ]
+        ],
+        "prompt_line": 8
+      },
+      {
+        "group_id": "G8",
+        "observation_indices": [
+          9
+        ],
+        "caption_ids": [
+          "C54"
+        ],
+        "frame_indices": [
+          54
+        ],
+        "sample_intervals": [
+          [
+            54,
+            55
+          ]
+        ],
+        "display_intervals": [
+          [
+            54,
+            55
+          ]
+        ],
+        "prompt_line": 9
+      },
+      {
+        "group_id": "G9",
+        "observation_indices": [
+          10
+        ],
+        "caption_ids": [
+          "C55"
+        ],
+        "frame_indices": [
+          55
+        ],
+        "sample_intervals": [
+          [
+            55,
+            56
+          ]
+        ],
+        "display_intervals": [
+          [
+            55,
+            56
+          ]
+        ],
+        "prompt_line": 10
+      },
+      {
+        "group_id": "G10",
+        "observation_indices": [
+          11
+        ],
+        "caption_ids": [
+          "C56"
+        ],
+        "frame_indices": [
+          56
+        ],
+        "sample_intervals": [
+          [
+            56,
+            57
+          ]
+        ],
+        "display_intervals": [
+          [
+            56,
+            57
+          ]
+        ],
+        "prompt_line": 11
+      },
+      {
+        "group_id": "G11",
+        "observation_indices": [
+          13
+        ],
+        "caption_ids": [
+          "C58"
+        ],
+        "frame_indices": [
+          58
+        ],
+        "sample_intervals": [
+          [
+            58,
+            59
+          ]
+        ],
+        "display_intervals": [
+          [
+            58,
+            59
+          ]
+        ],
+        "prompt_line": 12
+      },
+      {
+        "group_id": "G12",
+        "observation_indices": [
+          14
+        ],
+        "caption_ids": [
+          "C59"
+        ],
+        "frame_indices": [
+          59
+        ],
+        "sample_intervals": [
+          [
+            59,
+            60
+          ]
+        ],
+        "display_intervals": [
+          [
+            59,
+            60
+          ]
+        ],
+        "prompt_line": 13
+      },
+      {
+        "group_id": "G13",
+        "observation_indices": [
+          15
+        ],
+        "caption_ids": [
+          "C60"
+        ],
+        "frame_indices": [
+          60
+        ],
+        "sample_intervals": [
+          [
+            60,
+            61
+          ]
+        ],
+        "display_intervals": [
+          [
+            60,
+            61
+          ]
+        ],
+        "prompt_line": 14
+      },
+      {
+        "group_id": "G14",
+        "observation_indices": [
+          16
+        ],
+        "caption_ids": [
+          "C61"
+        ],
+        "frame_indices": [
+          61
+        ],
+        "sample_intervals": [
+          [
+            61,
+            62
+          ]
+        ],
+        "display_intervals": [
+          [
+            61,
+            62
+          ]
+        ],
+        "prompt_line": 15
+      },
+      {
+        "group_id": "G15",
+        "observation_indices": [
+          17
+        ],
+        "caption_ids": [
+          "C62"
+        ],
+        "frame_indices": [
+          62
+        ],
+        "sample_intervals": [
+          [
+            62,
+            63
+          ]
+        ],
+        "display_intervals": [
+          [
+            62,
+            63
+          ]
+        ],
+        "prompt_line": 16
+      },
+      {
+        "group_id": "G16",
+        "observation_indices": [
+          18
+        ],
+        "caption_ids": [
+          "C63"
+        ],
+        "frame_indices": [
+          63
+        ],
+        "sample_intervals": [
+          [
+            63,
+            64
+          ]
+        ],
+        "display_intervals": [
+          [
+            63,
+            64
+          ]
+        ],
+        "prompt_line": 17
+      },
+      {
+        "group_id": "G17",
+        "observation_indices": [
+          19
+        ],
+        "caption_ids": [
+          "C64"
+        ],
+        "frame_indices": [
+          64
+        ],
+        "sample_intervals": [
+          [
+            64,
+            65
+          ]
+        ],
+        "display_intervals": [
+          [
+            64,
+            65
+          ]
+        ],
+        "prompt_line": 18
+      },
+      {
+        "group_id": "G18",
+        "observation_indices": [
+          20
+        ],
+        "caption_ids": [
+          "C65"
+        ],
+        "frame_indices": [
+          65
+        ],
+        "sample_intervals": [
+          [
+            65,
+            66
+          ]
+        ],
+        "display_intervals": [
+          [
+            65,
+            66
+          ]
+        ],
+        "prompt_line": 19
+      },
+      {
+        "group_id": "G19",
+        "observation_indices": [
+          21
+        ],
+        "caption_ids": [
+          "C66"
+        ],
+        "frame_indices": [
+          66
+        ],
+        "sample_intervals": [
+          [
+            66,
+            67
+          ]
+        ],
+        "display_intervals": [
+          [
+            66,
+            67
+          ]
+        ],
+        "prompt_line": 20
+      },
+      {
+        "group_id": "G20",
+        "observation_indices": [
+          22
+        ],
+        "caption_ids": [
+          "C67"
+        ],
+        "frame_indices": [
+          67
+        ],
+        "sample_intervals": [
+          [
+            67,
+            68
+          ]
+        ],
+        "display_intervals": [
+          [
+            67,
+            68
+          ]
+        ],
+        "prompt_line": 21
+      },
+      {
+        "group_id": "G21",
+        "observation_indices": [
+          23
+        ],
+        "caption_ids": [
+          "C68"
+        ],
+        "frame_indices": [
+          68
+        ],
+        "sample_intervals": [
+          [
+            68,
+            69
+          ]
+        ],
+        "display_intervals": [
+          [
+            68,
+            69
+          ]
+        ],
+        "prompt_line": 22
+      },
+      {
+        "group_id": "G22",
+        "observation_indices": [
+          24
+        ],
+        "caption_ids": [
+          "C69"
+        ],
+        "frame_indices": [
+          69
+        ],
+        "sample_intervals": [
+          [
+            69,
+            70
+          ]
+        ],
+        "display_intervals": [
+          [
+            69,
+            70
+          ]
+        ],
+        "prompt_line": 23
+      }
+    ],
+    "source_rows_metadata": [
+      {
+        "caption_id": "C45",
+        "frame_index": 45,
+        "sample_interval": [
+          45,
+          46
+        ],
+        "prompt_line": 1,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C46",
+        "frame_index": 46,
+        "sample_interval": [
+          46,
+          47
+        ],
+        "prompt_line": 2,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C47",
+        "frame_index": 47,
+        "sample_interval": [
+          47,
+          48
+        ],
+        "prompt_line": 3,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C48",
+        "frame_index": 48,
+        "sample_interval": [
+          48,
+          49
+        ],
+        "prompt_line": 4,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C49",
+        "frame_index": 49,
+        "sample_interval": [
+          49,
+          50
+        ],
+        "prompt_line": 5,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C50",
+        "frame_index": 50,
+        "sample_interval": [
+          50,
+          51
+        ],
+        "prompt_line": 6,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C51",
+        "frame_index": 51,
+        "sample_interval": [
+          51,
+          52
+        ],
+        "prompt_line": 7,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C52",
+        "frame_index": 52,
+        "sample_interval": [
+          52,
+          53
+        ],
+        "prompt_line": 8,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C53",
+        "frame_index": 53,
+        "sample_interval": [
+          53,
+          54
+        ],
+        "prompt_line": 9,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C54",
+        "frame_index": 54,
+        "sample_interval": [
+          54,
+          55
+        ],
+        "prompt_line": 10,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C55",
+        "frame_index": 55,
+        "sample_interval": [
+          55,
+          56
+        ],
+        "prompt_line": 11,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C56",
+        "frame_index": 56,
+        "sample_interval": [
+          56,
+          57
+        ],
+        "prompt_line": 12,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C57",
+        "frame_index": 57,
+        "sample_interval": [
+          57,
+          58
+        ],
+        "prompt_line": 13,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C58",
+        "frame_index": 58,
+        "sample_interval": [
+          58,
+          59
+        ],
+        "prompt_line": 14,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C59",
+        "frame_index": 59,
+        "sample_interval": [
+          59,
+          60
+        ],
+        "prompt_line": 15,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C60",
+        "frame_index": 60,
+        "sample_interval": [
+          60,
+          61
+        ],
+        "prompt_line": 16,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C61",
+        "frame_index": 61,
+        "sample_interval": [
+          61,
+          62
+        ],
+        "prompt_line": 17,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C62",
+        "frame_index": 62,
+        "sample_interval": [
+          62,
+          63
+        ],
+        "prompt_line": 18,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C63",
+        "frame_index": 63,
+        "sample_interval": [
+          63,
+          64
+        ],
+        "prompt_line": 19,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C64",
+        "frame_index": 64,
+        "sample_interval": [
+          64,
+          65
+        ],
+        "prompt_line": 20,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C65",
+        "frame_index": 65,
+        "sample_interval": [
+          65,
+          66
+        ],
+        "prompt_line": 21,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C66",
+        "frame_index": 66,
+        "sample_interval": [
+          66,
+          67
+        ],
+        "prompt_line": 22,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C67",
+        "frame_index": 67,
+        "sample_interval": [
+          67,
+          68
+        ],
+        "prompt_line": 23,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C68",
+        "frame_index": 68,
+        "sample_interval": [
+          68,
+          69
+        ],
+        "prompt_line": 24,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C69",
+        "frame_index": 69,
+        "sample_interval": [
+          69,
+          70
+        ],
+        "prompt_line": 25,
+        "representation": "original",
+        "archived_fact_count": 0
+      }
+    ],
+    "source_order_restorable": true,
+    "restored_payload_equal": true,
+    "grouping": "identical_visible_assertion_across_selected_samples",
+    "relevance_filtering": false,
+    "identities_merged": false,
+    "continuous_duration_inferred": false,
+    "event_counts_inferred": false,
+    "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_body",
+    "original_description_characters": 1093,
+    "merged_description_characters": 1034,
+    "literal_original_preferred_to_duplicate_facts": true
+  }
+}

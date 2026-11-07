@@ -1,0 +1,298 @@
+{
+  "at": "2026-11-06T16:57:18.727764+08:00",
+  "authorization": "现在不是蛮空的吗，你看下跑起来",
+  "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/recovery-20261106-r3",
+  "queue": {
+    "state": "running",
+    "controller_pid": 1412447,
+    "workers": {
+      "24": {
+        "stage": "waiting_for_gpu",
+        "pid": 1412465,
+        "at": "2026-11-06T17:03:33.767639+08:00",
+        "kind": "q4",
+        "resident": true,
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 26384,
+            "utilization": 95
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 21936,
+            "utilization": 96
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 5014,
+            "utilization": 96
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12049,
+            "utilization": 32
+          }
+        },
+        "effective_free_mib": {
+          "0": 13116,
+          "1": 10570,
+          "2": -20198,
+          "3": 12049
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      },
+      "25": {
+        "stage": "waiting_for_gpu",
+        "pid": 1412466,
+        "at": "2026-11-06T17:03:33.370805+08:00",
+        "kind": "q4",
+        "resident": true,
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 26384,
+            "utilization": 95
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 21936,
+            "utilization": 95
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 5014,
+            "utilization": 96
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12049,
+            "utilization": 100
+          }
+        },
+        "effective_free_mib": {
+          "0": 13116,
+          "1": 10570,
+          "2": -20198,
+          "3": 12049
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      },
+      "26": {
+        "stage": "query",
+        "pid": 1412467,
+        "at": "2026-11-06T17:03:03.743350+08:00",
+        "index": 470,
+        "question_id": "d9808f8d-d318-4c66-bdf2-50b9dacfbee4",
+        "kind": "q4",
+        "gpu": "0",
+        "phase": "audit",
+        "iteration": 0
+      },
+      "27": {
+        "stage": "query",
+        "pid": 1412468,
+        "at": "2026-11-06T17:02:03.778546+08:00",
+        "index": 468,
+        "question_id": "d4de7210-0818-4ebc-ba65-21d3b784638a",
+        "kind": "source",
+        "gpu": "1"
+      }
+    },
+    "effective_worker_count": 4,
+    "configured_maximum_worker_count": 8,
+    "allowed_gpu_indices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "resident_control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/recovery-20261106-r3",
+    "autoscaler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/recovery-20261106-r3",
+    "resident_models": true,
+    "updated_at": "2026-11-06T17:03:41.180753+08:00",
+    "error": null
+  },
+  "completed": 468,
+  "preservation": {
+    "published_results": 466,
+    "hashes_verified": true,
+    "complete_pending_sources": 3,
+    "source_hashes_verified": 333,
+    "original_runtime_and_config_unchanged": true
+  },
+  "old_failure": {
+    "at": "2026-11-06T16:05:22.081441+08:00",
+    "logical_cuda_index": 0,
+    "physical_gpu_index": 2,
+    "worker_id": 20,
+    "old_controller_exited": true,
+    "old_workers_exited": true,
+    "source_question_id": "d4de7210-0818-4ebc-ba65-21d3b784638a",
+    "operation": "m_transition_next",
+    "cause": "Physical GPU2 filled after admission; OOM report includes other-project cldm processes plus resident training and source worker"
+  },
+  "continuation": {
+    "successful_model_calls_repeated": 0,
+    "failed_call_reissued_once_under_explicit_user_resume": true,
+    "first_new_call_requires_exact_operation_and_input_hash": true,
+    "navigation_reviews_preserved": 5,
+    "remaining_navigation_iterations": 5,
+    "historical_directory_and_search_seconds": 410.1422419771552,
+    "historical_search_seconds": 313.1972509212792,
+    "historical_failed_call_seconds": 0.14342034980654716,
+    "source_online_cap": 1500,
+    "source_directory_cap": 600,
+    "q4_total_cap": 3600,
+    "q4_dual_reader_reserve": 90,
+    "history_cost_policy": "Original failed source prefix remains included once in resumed source cost; original failure_costs are provenance subtotals and must not be added again"
+  },
+  "scheduling": {
+    "initial_workers": 4,
+    "maximum_workers": 8,
+    "worker_ids": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "candidate_gpus": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "source_admission_mib": 32768,
+    "stable_observations": 3,
+    "source_allocator_mib": 30720,
+    "q4_allocator_mib": 22528,
+    "model_and_lease_resident": true,
+    "completed_source_claims_prioritized": true,
+    "no_other_project_signals": true,
+    "observation": "GPU0/1 each had60035MiB free at resume; GPU2/3 cannot admit another source resident"
+  },
+  "checks": {
+    "cpu_tests_passed": 24,
+    "exact_first_failed_request_reconstruction_passed": true,
+    "budget_prefix_conservation_passed": true,
+    "frozen_standalone_import_passed": true,
+    "pending_queue_boundary_passed": true,
+    "new_real_gpu_gates_pending": "Waiting workers24/25 only",
+    "admitted_workers_real_gates_passed": [
+      26,
+      27
+    ],
+    "live_exact_first_failed_request_passed": true
+  },
+  "training": {
+    "root": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-fixed6-200train-300val-20261106-r1",
+    "controller_pid": 1266141,
+    "model_pid": 1377885,
+    "status": {
+      "stage": "training",
+      "phase": "fixed6",
+      "epoch": 2,
+      "epochs": 6,
+      "sample": 4521,
+      "samples": 4600,
+      "optimizer_steps": 570,
+      "input_tokens": 9311481,
+      "supervised_tokens": 76769,
+      "elapsed_seconds": 4596.5720959194,
+      "pid": 1377885,
+      "gpu": "2",
+      "at": "2026-11-06T17:03:41.348291+08:00"
+    },
+    "untouched": true
+  },
+  "monitor": {
+    "pid": 1240673,
+    "same_root_and_dedup_preserved": true,
+    "status": {
+      "pid": 1240673,
+      "at": "2026-11-06T17:02:49.082792+08:00",
+      "state": "watching",
+      "interval_seconds": 60,
+      "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+    }
+  },
+  "frozen_manifest_sha256": "ad1eeba95bbce743e783646e4eb8ece1b1b348f5f9cbbccb2cb40cdb92b022b3",
+  "final_verification_at": "2026-11-06T17:03:42.687760+08:00",
+  "first_new_results": [
+    {
+      "question_id": "d0b39eec-b72f-4b65-a94a-0f2c18296e71",
+      "result_sha256": "90e629926fe1984737087856ffb5c5ea05f70a892471c9113074bad99e2882f8",
+      "calls": 10,
+      "keep_only": true,
+      "same_evidence": true,
+      "raw_hashes": true,
+      "budget_passed": true
+    },
+    {
+      "question_id": "d0cc3ba5-14cc-4d4d-82db-fec29ad01e3e",
+      "result_sha256": "f98c264eaa398479881bd107808fd6dd65babfe355c0852ed3f0405e2a3ebd02",
+      "calls": 8,
+      "keep_only": true,
+      "same_evidence": true,
+      "raw_hashes": true,
+      "budget_passed": true
+    }
+  ],
+  "live_oom_first_request": {
+    "passed": true,
+    "operation": "m_transition_next",
+    "input_hash": "be723ee7f1f02e305f8393ca11156d2d03d828dbe293a990e49ca2f13d446a81",
+    "historical_seconds": 313.19726721569896,
+    "historical_failed_seconds": 0.14342034980654716
+  },
+  "gates": {
+    "26": {
+      "q4/functional.json": true,
+      "resident_q4/functional.json": true,
+      "source/validation/functional.json": true,
+      "batch": true
+    },
+    "27": {
+      "q4/functional.json": true,
+      "resident_q4/functional.json": true,
+      "source/validation/functional.json": true,
+      "batch": true
+    }
+  }
+}

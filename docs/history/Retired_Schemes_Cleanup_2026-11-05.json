@@ -1,0 +1,910 @@
+{
+  "at": "2026-11-05T12:57:04.548508+08:00",
+  "retired_roots": 128,
+  "fully_removed": 123,
+  "dependency_only_roots": 5,
+  "deleted_files": 945148,
+  "deleted_allocated_bytes": 23050452992,
+  "retained_dependency_files_verified": 28091,
+  "retained_dependencies_unchanged": true,
+  "free_before_bytes": 5800235008,
+  "free_after_bytes": 29479362560,
+  "rows": [
+    {
+      "name": "P-N-source-300-20261104-r4",
+      "total_files": 191873,
+      "retained_dependency_files": 0,
+      "delete_files": 191873,
+      "reclaim_bytes": 5925572608
+    },
+    {
+      "name": "O-Oplus-N-question-only-300-source-bound-20261104-r4",
+      "total_files": 167327,
+      "retained_dependency_files": 900,
+      "delete_files": 166427,
+      "reclaim_bytes": 3205521408
+    },
+    {
+      "name": "P-N-source-300-20261104-r3",
+      "total_files": 59490,
+      "retained_dependency_files": 0,
+      "delete_files": 59490,
+      "reclaim_bytes": 1848868864
+    },
+    {
+      "name": "O-Oplus-N-question-only-300-source-bound-20261104-r3",
+      "total_files": 78844,
+      "retained_dependency_files": 0,
+      "delete_files": 78844,
+      "reclaim_bytes": 1500954624
+    },
+    {
+      "name": "scene-planned-M-L-300-20261104-r18",
+      "total_files": 27654,
+      "retained_dependency_files": 0,
+      "delete_files": 27654,
+      "reclaim_bytes": 1306238976
+    },
+    {
+      "name": "O-Oplus-N-question-only-300-source-bound-20261103-r2",
+      "total_files": 49522,
+      "retained_dependency_files": 0,
+      "delete_files": 49522,
+      "reclaim_bytes": 922935296
+    },
+    {
+      "name": "scene-planned-M-L-300-20261104-r17",
+      "total_files": 18171,
+      "retained_dependency_files": 0,
+      "delete_files": 18171,
+      "reclaim_bytes": 849358848
+    },
+    {
+      "name": "P-N-source-300-20261104-r2",
+      "total_files": 22937,
+      "retained_dependency_files": 0,
+      "delete_files": 22937,
+      "reclaim_bytes": 802369536
+    },
+    {
+      "name": "P-N-source-300-20261104-r1",
+      "total_files": 18623,
+      "retained_dependency_files": 0,
+      "delete_files": 18623,
+      "reclaim_bytes": 700145664
+    },
+    {
+      "name": "scene-planned-M-L-300-20261103-r16",
+      "total_files": 12651,
+      "retained_dependency_files": 0,
+      "delete_files": 12651,
+      "reclaim_bytes": 609169408
+    },
+    {
+      "name": "joint-entities-E-300-20261029-r3",
+      "total_files": 61136,
+      "retained_dependency_files": 0,
+      "delete_files": 61136,
+      "reclaim_bytes": 426950656
+    },
+    {
+      "name": "generalized-entities-G-300-20261030-r3",
+      "total_files": 60782,
+      "retained_dependency_files": 0,
+      "delete_files": 60782,
+      "reclaim_bytes": 423817216
+    },
+    {
+      "name": "O-Oplus-N-question-only-300-20261103-r1",
+      "total_files": 17441,
+      "retained_dependency_files": 0,
+      "delete_files": 17441,
+      "reclaim_bytes": 413093888
+    },
+    {
+      "name": "scene-planned-N-L-300-20261104-r4",
+      "total_files": 26747,
+      "retained_dependency_files": 16771,
+      "delete_files": 9976,
+      "reclaim_bytes": 402059264
+    },
+    {
+      "name": "generalized-lazy-H-300-20261101-r5",
+      "total_files": 17190,
+      "retained_dependency_files": 0,
+      "delete_files": 17190,
+      "reclaim_bytes": 399679488
+    },
+    {
+      "name": "lazy-script-F-300-20261030-r3",
+      "total_files": 18468,
+      "retained_dependency_files": 0,
+      "delete_files": 18468,
+      "reclaim_bytes": 393531392
+    },
+    {
+      "name": "scene-planned-M-L-300-20261103-r15",
+      "total_files": 4512,
+      "retained_dependency_files": 0,
+      "delete_files": 4512,
+      "reclaim_bytes": 202166272
+    },
+    {
+      "name": "O-Oplus-N-ten-case-matrix-batched-20261103-r2",
+      "total_files": 11487,
+      "retained_dependency_files": 0,
+      "delete_files": 11487,
+      "reclaim_bytes": 151810048
+    },
+    {
+      "name": "evidence-planner-K-F-300-20261102-r8",
+      "total_files": 7464,
+      "retained_dependency_files": 0,
+      "delete_files": 7464,
+      "reclaim_bytes": 148824064
+    },
+    {
+      "name": "scene-planned-N-L-300-20261103-r2",
+      "total_files": 4336,
+      "retained_dependency_files": 1694,
+      "delete_files": 2642,
+      "reclaim_bytes": 146632704
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r13",
+      "total_files": 3888,
+      "retained_dependency_files": 0,
+      "delete_files": 3888,
+      "reclaim_bytes": 140648448
+    },
+    {
+      "name": "evidence-planner-K-F-300-20261102-r7",
+      "total_files": 2967,
+      "retained_dependency_files": 0,
+      "delete_files": 2967,
+      "reclaim_bytes": 91410432
+    },
+    {
+      "name": "evidence-planner-K-F-300-20261102-r6",
+      "total_files": 2764,
+      "retained_dependency_files": 0,
+      "delete_files": 2764,
+      "reclaim_bytes": 88649728
+    },
+    {
+      "name": "state-segments-D-300-20261029-r1",
+      "total_files": 3489,
+      "retained_dependency_files": 0,
+      "delete_files": 3489,
+      "reclaim_bytes": 87183360
+    },
+    {
+      "name": "evidence-planner-K-F-300-20261102-r5",
+      "total_files": 2462,
+      "retained_dependency_files": 0,
+      "delete_files": 2462,
+      "reclaim_bytes": 84611072
+    },
+    {
+      "name": "evidence-planner-K-F-300-20261102-r3",
+      "total_files": 2138,
+      "retained_dependency_files": 0,
+      "delete_files": 2138,
+      "reclaim_bytes": 80506880
+    },
+    {
+      "name": "evidence-planner-K-F-300-20261102-r4",
+      "total_files": 2123,
+      "retained_dependency_files": 0,
+      "delete_files": 2123,
+      "reclaim_bytes": 80506880
+    },
+    {
+      "name": "evidence-planner-K-F-300-20261102-r2",
+      "total_files": 2122,
+      "retained_dependency_files": 0,
+      "delete_files": 2122,
+      "reclaim_bytes": 80367616
+    },
+    {
+      "name": "evidence-planner-K-F-300-20261102-r1",
+      "total_files": 2122,
+      "retained_dependency_files": 0,
+      "delete_files": 2122,
+      "reclaim_bytes": 79847424
+    },
+    {
+      "name": "merged-lazy-I-H-adjacent-300-20261101-r3",
+      "total_files": 4118,
+      "retained_dependency_files": 0,
+      "delete_files": 4118,
+      "reclaim_bytes": 79323136
+    },
+    {
+      "name": "scene-planned-M-L-300-20261103-r14",
+      "total_files": 1633,
+      "retained_dependency_files": 0,
+      "delete_files": 1633,
+      "reclaim_bytes": 73170944
+    },
+    {
+      "name": "controlled-memory-300-20261028-r1",
+      "total_files": 3128,
+      "retained_dependency_files": 0,
+      "delete_files": 3128,
+      "reclaim_bytes": 60563456
+    },
+    {
+      "name": "scene-planned-N-L-300-20261103-r1",
+      "total_files": 1664,
+      "retained_dependency_files": 595,
+      "delete_files": 1069,
+      "reclaim_bytes": 59375616
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r13",
+      "total_files": 2243,
+      "retained_dependency_files": 0,
+      "delete_files": 2243,
+      "reclaim_bytes": 53805056
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r8",
+      "total_files": 1949,
+      "retained_dependency_files": 0,
+      "delete_files": 1949,
+      "reclaim_bytes": 48230400
+    },
+    {
+      "name": "grounded-reader-J-300-20261101-r5",
+      "total_files": 3931,
+      "retained_dependency_files": 0,
+      "delete_files": 3931,
+      "reclaim_bytes": 45305856
+    },
+    {
+      "name": "scene-planned-N-L-300-20261103-r3",
+      "total_files": 9141,
+      "retained_dependency_files": 8131,
+      "delete_files": 1010,
+      "reclaim_bytes": 45076480
+    },
+    {
+      "name": "O-Oplus-N-ten-case-matrix-20261103-r1",
+      "total_files": 3142,
+      "retained_dependency_files": 0,
+      "delete_files": 3142,
+      "reclaim_bytes": 38875136
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r10",
+      "total_files": 848,
+      "retained_dependency_files": 0,
+      "delete_files": 848,
+      "reclaim_bytes": 38109184
+    },
+    {
+      "name": "compact-evidence-300-20261029-r2",
+      "total_files": 2044,
+      "retained_dependency_files": 0,
+      "delete_files": 2044,
+      "reclaim_bytes": 37625856
+    },
+    {
+      "name": "generalized-lazy-H-300-20261101-r4",
+      "total_files": 1446,
+      "retained_dependency_files": 0,
+      "delete_files": 1446,
+      "reclaim_bytes": 37494784
+    },
+    {
+      "name": "generalized-lazy-H-300-20261101-r3",
+      "total_files": 1446,
+      "retained_dependency_files": 0,
+      "delete_files": 1446,
+      "reclaim_bytes": 37490688
+    },
+    {
+      "name": "generalized-lazy-H-300-20261031-r2",
+      "total_files": 1391,
+      "retained_dependency_files": 0,
+      "delete_files": 1391,
+      "reclaim_bytes": 36454400
+    },
+    {
+      "name": "generalized-lazy-H-300-20261031-r1",
+      "total_files": 1390,
+      "retained_dependency_files": 0,
+      "delete_files": 1390,
+      "reclaim_bytes": 36450304
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r9",
+      "total_files": 659,
+      "retained_dependency_files": 0,
+      "delete_files": 659,
+      "reclaim_bytes": 31150080
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r12",
+      "total_files": 657,
+      "retained_dependency_files": 0,
+      "delete_files": 657,
+      "reclaim_bytes": 30900224
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r11",
+      "total_files": 654,
+      "retained_dependency_files": 0,
+      "delete_files": 654,
+      "reclaim_bytes": 30818304
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r6",
+      "total_files": 639,
+      "retained_dependency_files": 0,
+      "delete_files": 639,
+      "reclaim_bytes": 30621696
+    },
+    {
+      "name": "MNOP-gpu01-migration-20261104-r1",
+      "total_files": 1253,
+      "retained_dependency_files": 0,
+      "delete_files": 1253,
+      "reclaim_bytes": 30580736
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r4",
+      "total_files": 631,
+      "retained_dependency_files": 0,
+      "delete_files": 631,
+      "reclaim_bytes": 30519296
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r5",
+      "total_files": 630,
+      "retained_dependency_files": 0,
+      "delete_files": 630,
+      "reclaim_bytes": 30515200
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r2",
+      "total_files": 630,
+      "retained_dependency_files": 0,
+      "delete_files": 630,
+      "reclaim_bytes": 30490624
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r1",
+      "total_files": 630,
+      "retained_dependency_files": 0,
+      "delete_files": 630,
+      "reclaim_bytes": 30486528
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r3",
+      "total_files": 553,
+      "retained_dependency_files": 0,
+      "delete_files": 553,
+      "reclaim_bytes": 29429760
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r7",
+      "total_files": 545,
+      "retained_dependency_files": 0,
+      "delete_files": 545,
+      "reclaim_bytes": 29327360
+    },
+    {
+      "name": "scene-planned-M-L-300-20261102-r8",
+      "total_files": 544,
+      "retained_dependency_files": 0,
+      "delete_files": 544,
+      "reclaim_bytes": 29323264
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r14",
+      "total_files": 2478,
+      "retained_dependency_files": 0,
+      "delete_files": 2478,
+      "reclaim_bytes": 19738624
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r10",
+      "total_files": 2233,
+      "retained_dependency_files": 0,
+      "delete_files": 2233,
+      "reclaim_bytes": 17936384
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r12",
+      "total_files": 611,
+      "retained_dependency_files": 0,
+      "delete_files": 611,
+      "reclaim_bytes": 17903616
+    },
+    {
+      "name": "controlled-memory-design-300-20261028-r1",
+      "total_files": 612,
+      "retained_dependency_files": 0,
+      "delete_files": 612,
+      "reclaim_bytes": 15560704
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r9",
+      "total_files": 1527,
+      "retained_dependency_files": 0,
+      "delete_files": 1527,
+      "reclaim_bytes": 14237696
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r13",
+      "total_files": 1166,
+      "retained_dependency_files": 0,
+      "delete_files": 1166,
+      "reclaim_bytes": 12468224
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r12",
+      "total_files": 1166,
+      "retained_dependency_files": 0,
+      "delete_files": 1166,
+      "reclaim_bytes": 12464128
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r11",
+      "total_files": 1166,
+      "retained_dependency_files": 0,
+      "delete_files": 1166,
+      "reclaim_bytes": 12451840
+    },
+    {
+      "name": "P-O-direct-question-coordination-20261103-r1",
+      "total_files": 813,
+      "retained_dependency_files": 0,
+      "delete_files": 813,
+      "reclaim_bytes": 12324864
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r3",
+      "total_files": 1105,
+      "retained_dependency_files": 0,
+      "delete_files": 1105,
+      "reclaim_bytes": 11931648
+    },
+    {
+      "name": "diagnosis-F-all111-20261031-r1",
+      "total_files": 234,
+      "retained_dependency_files": 0,
+      "delete_files": 234,
+      "reclaim_bytes": 9498624
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r7",
+      "total_files": 473,
+      "retained_dependency_files": 0,
+      "delete_files": 473,
+      "reclaim_bytes": 8884224
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r6",
+      "total_files": 460,
+      "retained_dependency_files": 0,
+      "delete_files": 460,
+      "reclaim_bytes": 8781824
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r4",
+      "total_files": 436,
+      "retained_dependency_files": 0,
+      "delete_files": 436,
+      "reclaim_bytes": 8605696
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r2",
+      "total_files": 414,
+      "retained_dependency_files": 0,
+      "delete_files": 414,
+      "reclaim_bytes": 8486912
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r1",
+      "total_files": 404,
+      "retained_dependency_files": 0,
+      "delete_files": 404,
+      "reclaim_bytes": 8400896
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r8",
+      "total_files": 358,
+      "retained_dependency_files": 0,
+      "delete_files": 358,
+      "reclaim_bytes": 7655424
+    },
+    {
+      "name": "O-Oplus-N-sentence-diagnostic-20261103-r5",
+      "total_files": 358,
+      "retained_dependency_files": 0,
+      "delete_files": 358,
+      "reclaim_bytes": 7622656
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r9",
+      "total_files": 323,
+      "retained_dependency_files": 0,
+      "delete_files": 323,
+      "reclaim_bytes": 7045120
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r11",
+      "total_files": 313,
+      "retained_dependency_files": 0,
+      "delete_files": 313,
+      "reclaim_bytes": 6680576
+    },
+    {
+      "name": "N-brick-wall-diagnostic-20261102-r1",
+      "total_files": 366,
+      "retained_dependency_files": 0,
+      "delete_files": 366,
+      "reclaim_bytes": 6332416
+    },
+    {
+      "name": "N-brick-wall-diagnostic-20261102-r2",
+      "total_files": 369,
+      "retained_dependency_files": 0,
+      "delete_files": 369,
+      "reclaim_bytes": 6316032
+    },
+    {
+      "name": "N-unmodified-parent-brick-control-20261102-r1",
+      "total_files": 364,
+      "retained_dependency_files": 0,
+      "delete_files": 364,
+      "reclaim_bytes": 6205440
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r10",
+      "total_files": 301,
+      "retained_dependency_files": 0,
+      "delete_files": 301,
+      "reclaim_bytes": 6205440
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r6",
+      "total_files": 297,
+      "retained_dependency_files": 0,
+      "delete_files": 297,
+      "reclaim_bytes": 5558272
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r7",
+      "total_files": 287,
+      "retained_dependency_files": 0,
+      "delete_files": 287,
+      "reclaim_bytes": 5505024
+    },
+    {
+      "name": "N-option-scene-selection-20261103-r5",
+      "total_files": 427,
+      "retained_dependency_files": 0,
+      "delete_files": 427,
+      "reclaim_bytes": 5382144
+    },
+    {
+      "name": "N-option-scene-selection-20261103-r4",
+      "total_files": 424,
+      "retained_dependency_files": 0,
+      "delete_files": 424,
+      "reclaim_bytes": 5324800
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r5",
+      "total_files": 291,
+      "retained_dependency_files": 0,
+      "delete_files": 291,
+      "reclaim_bytes": 5074944
+    },
+    {
+      "name": "G-execution-batch-20261030-r2",
+      "total_files": 640,
+      "retained_dependency_files": 0,
+      "delete_files": 640,
+      "reclaim_bytes": 4984832
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r4",
+      "total_files": 289,
+      "retained_dependency_files": 0,
+      "delete_files": 289,
+      "reclaim_bytes": 4972544
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r2",
+      "total_files": 284,
+      "retained_dependency_files": 0,
+      "delete_files": 284,
+      "reclaim_bytes": 4702208
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r3",
+      "total_files": 287,
+      "retained_dependency_files": 0,
+      "delete_files": 287,
+      "reclaim_bytes": 4698112
+    },
+    {
+      "name": "P-three-demo-validation-20261104-r1",
+      "total_files": 280,
+      "retained_dependency_files": 0,
+      "delete_files": 280,
+      "reclaim_bytes": 4485120
+    },
+    {
+      "name": "comparisons",
+      "total_files": 12,
+      "retained_dependency_files": 0,
+      "delete_files": 12,
+      "reclaim_bytes": 4431872
+    },
+    {
+      "name": "runtime-repair-audit-20261104-r1",
+      "total_files": 6,
+      "retained_dependency_files": 0,
+      "delete_files": 6,
+      "reclaim_bytes": 4349952
+    },
+    {
+      "name": "N-option-scene-selection-20261103-r3",
+      "total_files": 288,
+      "retained_dependency_files": 0,
+      "delete_files": 288,
+      "reclaim_bytes": 4177920
+    },
+    {
+      "name": "P-repaired-coordination-20261103-r2",
+      "total_files": 268,
+      "retained_dependency_files": 0,
+      "delete_files": 268,
+      "reclaim_bytes": 4149248
+    },
+    {
+      "name": "MN-joint-selection-20261103-r5",
+      "total_files": 296,
+      "retained_dependency_files": 0,
+      "delete_files": 296,
+      "reclaim_bytes": 4136960
+    },
+    {
+      "name": "MN-joint-selection-20261103-r3",
+      "total_files": 274,
+      "retained_dependency_files": 0,
+      "delete_files": 274,
+      "reclaim_bytes": 4014080
+    },
+    {
+      "name": "MN-joint-selection-20261103-r6",
+      "total_files": 269,
+      "retained_dependency_files": 0,
+      "delete_files": 269,
+      "reclaim_bytes": 3981312
+    },
+    {
+      "name": "MN-joint-selection-20261103-r4",
+      "total_files": 268,
+      "retained_dependency_files": 0,
+      "delete_files": 268,
+      "reclaim_bytes": 3923968
+    },
+    {
+      "name": "N-option-scene-selection-20261103-r2",
+      "total_files": 254,
+      "retained_dependency_files": 0,
+      "delete_files": 254,
+      "reclaim_bytes": 3858432
+    },
+    {
+      "name": "N-option-scene-selection-20261103-r1",
+      "total_files": 255,
+      "retained_dependency_files": 0,
+      "delete_files": 255,
+      "reclaim_bytes": 3850240
+    },
+    {
+      "name": "MN-joint-selection-20261103-r2",
+      "total_files": 255,
+      "retained_dependency_files": 0,
+      "delete_files": 255,
+      "reclaim_bytes": 3784704
+    },
+    {
+      "name": "MN-joint-selection-20261103-r1",
+      "total_files": 248,
+      "retained_dependency_files": 0,
+      "delete_files": 248,
+      "reclaim_bytes": 3727360
+    },
+    {
+      "name": "P-repaired-coordination-20261103-r3",
+      "total_files": 247,
+      "retained_dependency_files": 0,
+      "delete_files": 247,
+      "reclaim_bytes": 3612672
+    },
+    {
+      "name": "G-execution-batch-20261030-r1",
+      "total_files": 188,
+      "retained_dependency_files": 0,
+      "delete_files": 188,
+      "reclaim_bytes": 3002368
+    },
+    {
+      "name": "O-Oplus-runtime-audit-20261103-r1",
+      "total_files": 16,
+      "retained_dependency_files": 0,
+      "delete_files": 16,
+      "reclaim_bytes": 2441216
+    },
+    {
+      "name": "G-RL-train200-eval300-20261031-r3",
+      "total_files": 18,
+      "retained_dependency_files": 0,
+      "delete_files": 18,
+      "reclaim_bytes": 544768
+    },
+    {
+      "name": "G-RL-ready-eval-20261031-r2",
+      "total_files": 12,
+      "retained_dependency_files": 0,
+      "delete_files": 12,
+      "reclaim_bytes": 507904
+    },
+    {
+      "name": "diagnosis-EFG-vs-D-20261031-r1",
+      "total_files": 2,
+      "retained_dependency_files": 0,
+      "delete_files": 2,
+      "reclaim_bytes": 380928
+    },
+    {
+      "name": "diagnosis-F-badcases-20261031-r1",
+      "total_files": 3,
+      "retained_dependency_files": 0,
+      "delete_files": 3,
+      "reclaim_bytes": 303104
+    },
+    {
+      "name": "grounded-reader-J-300-20261101-r7-queue",
+      "total_files": 27,
+      "retained_dependency_files": 0,
+      "delete_files": 27,
+      "reclaim_bytes": 208896
+    },
+    {
+      "name": "grounded-reader-J-300-20261101-r6-queue",
+      "total_files": 17,
+      "retained_dependency_files": 0,
+      "delete_files": 17,
+      "reclaim_bytes": 139264
+    },
+    {
+      "name": "merged-lazy-I-H-adjacent-300-20261101-r4-queue",
+      "total_files": 23,
+      "retained_dependency_files": 0,
+      "delete_files": 23,
+      "reclaim_bytes": 139264
+    },
+    {
+      "name": "grounded-reader-J-300-20261101-r5-queue",
+      "total_files": 16,
+      "retained_dependency_files": 0,
+      "delete_files": 16,
+      "reclaim_bytes": 139264
+    },
+    {
+      "name": "grounded-reader-J-300-20261101-r4-queue",
+      "total_files": 15,
+      "retained_dependency_files": 0,
+      "delete_files": 15,
+      "reclaim_bytes": 135168
+    },
+    {
+      "name": "grounded-reader-J-300-20261101-r2-queue",
+      "total_files": 15,
+      "retained_dependency_files": 0,
+      "delete_files": 15,
+      "reclaim_bytes": 131072
+    },
+    {
+      "name": "grounded-reader-J-300-20261101-r3-queue",
+      "total_files": 15,
+      "retained_dependency_files": 0,
+      "delete_files": 15,
+      "reclaim_bytes": 131072
+    },
+    {
+      "name": "P-repair-audit-20261103-r1",
+      "total_files": 4,
+      "retained_dependency_files": 0,
+      "delete_files": 4,
+      "reclaim_bytes": 131072
+    },
+    {
+      "name": "merged-lazy-I-H-adjacent-300-20261101-r3-queue",
+      "total_files": 15,
+      "retained_dependency_files": 0,
+      "delete_files": 15,
+      "reclaim_bytes": 106496
+    },
+    {
+      "name": "merged-lazy-I-H-adjacent-300-20261101-r2-queue",
+      "total_files": 14,
+      "retained_dependency_files": 0,
+      "delete_files": 14,
+      "reclaim_bytes": 102400
+    },
+    {
+      "name": "grounded-reader-J-300-20261101-r1-queue",
+      "total_files": 14,
+      "retained_dependency_files": 0,
+      "delete_files": 14,
+      "reclaim_bytes": 98304
+    },
+    {
+      "name": "merged-lazy-I-H-adjacent-300-20261101-r1-queue",
+      "total_files": 12,
+      "retained_dependency_files": 0,
+      "delete_files": 12,
+      "reclaim_bytes": 94208
+    },
+    {
+      "name": "G-RL-ready-eval-20261031-r1",
+      "total_files": 10,
+      "retained_dependency_files": 0,
+      "delete_files": 10,
+      "reclaim_bytes": 90112
+    },
+    {
+      "name": "G-RL-train200-eval300-20261031-r2",
+      "total_files": 8,
+      "retained_dependency_files": 0,
+      "delete_files": 8,
+      "reclaim_bytes": 81920
+    },
+    {
+      "name": "G-RL-train200-eval300-20261031-r1",
+      "total_files": 7,
+      "retained_dependency_files": 0,
+      "delete_files": 7,
+      "reclaim_bytes": 77824
+    },
+    {
+      "name": "P-shared-scheduling-audit-20261104-r1",
+      "total_files": 12,
+      "retained_dependency_files": 0,
+      "delete_files": 12,
+      "reclaim_bytes": 49152
+    },
+    {
+      "name": "Oplus-source-bound-upgrade-20261103-r1",
+      "total_files": 8,
+      "retained_dependency_files": 0,
+      "delete_files": 8,
+      "reclaim_bytes": 32768
+    },
+    {
+      "name": "P-O-implementation-audit-20261103-r1",
+      "total_files": 2,
+      "retained_dependency_files": 0,
+      "delete_files": 2,
+      "reclaim_bytes": 8192
+    },
+    {
+      "name": "state-segments-D-design-20261029-r1",
+      "total_files": 1,
+      "retained_dependency_files": 0,
+      "delete_files": 1,
+      "reclaim_bytes": 4096
+    }
+  ]
+}

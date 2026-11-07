@@ -1,0 +1,95 @@
+{
+  "updated_at": "2026-11-03T13:16:06.968045+08:00",
+  "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-runtime-audit-20261103-r1",
+  "decoder_version": "O-complete-unicode-identity-alias-v2",
+  "request": "Check current O/O+ for runtime issues related to the latest M/N failure.",
+  "findings": [
+    {
+      "id": "unicode_operation_coverage",
+      "status": "already_protected",
+      "operations": [
+        "o_extract",
+        "o_filter_plan",
+        "o_filter",
+        "oplus_compose"
+      ],
+      "detail": "No omitted operation matching the M m_candidate_query failure; CPU reproduced old false-EOS path and confirmed O blocks it."
+    },
+    {
+      "id": "identity_literal_enum",
+      "status": "fixed_cpu_verified",
+      "detail": "Non-ASCII/escaped actor-only identity enums use ASCII wire aliases restored to exact canonical identities, with both wire and canonical validation. Model still chooses empty or retain.",
+      "real_model_validation": false,
+      "observed_r14_calls": 0
+    },
+    {
+      "id": "paired_wrong_question",
+      "status": "fixed_cpu_verified",
+      "detail": "Non-matrix worker now passes the actual question. r14 uses correct matrix path; r9/r10 frozen paired workers are unaffected."
+    },
+    {
+      "id": "partial_results_and_costs",
+      "status": "fixed_fault_injection_verified",
+      "detail": "Flush each answer and failed-condition costs; preserve first answer if second fails. Loading and gate failures count as runtime errors."
+    },
+    {
+      "id": "case_budget_and_replay_cost",
+      "status": "fixed_cpu_verified",
+      "detail": "Configured shared case budget across both conditions; inherited extraction/filter costs retained across replay chains. No old r14 budget overflow was observed."
+    }
+  ],
+  "checks": {
+    "passed": true,
+    "tests": 25,
+    "seconds": 97.155,
+    "log": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/O-Oplus-runtime-audit-20261103-r1/checks/o_runtime_audit_verified.log",
+    "command": "python -m unittest tests.test_o_runtime_audit tests.test_o_generation tests.test_o_sentence_filter tests.test_mn_decoder_resume.NavigationUnicodeTests",
+    "real_tokenizer": true,
+    "synthetic_network": true,
+    "new_real_model_generation": false,
+    "initial_failed_test_logs_preserved": true
+  },
+  "saved_calls_audit": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/O-Oplus-runtime-audit-20261103-r1/saved_calls_audit.json",
+  "saved_calls_counts": {
+    "oplus_compose": 104,
+    "o_filter_plan": 6,
+    "o_filter": 218,
+    "o_answer": 4,
+    "oplus_answer": 4,
+    "o_extract": 107
+  },
+  "saved_call_issues": [],
+  "question_bug_scope": {
+    "r9": {
+      "matrix_mode": false,
+      "paired_worker_passes_probe_question": false
+    },
+    "r10": {
+      "matrix_mode": false,
+      "paired_worker_passes_probe_question": false
+    },
+    "r14": {
+      "matrix_mode": true,
+      "paired_worker_passes_probe_question": true
+    }
+  },
+  "frozen_r14_files_verified": 2444,
+  "source_hashes": {
+    "script_core/o_generation.py": "bc1b59e2fc0cb3ffac62132b6ce15ed164be2e7e14c09bed9f6a93f0f16620d2",
+    "script/run_o_sentence_experiment.py": "c03d73078b00a6b14548166a008c969696cd1a5980f8d641b9859d28327102f2",
+    "script/o_composition_context_eval.py": "d8a82d2fc38eeda27d820fdf8a0b41a6afb12dcb2e46f49f73a2df00f74be4da",
+    "tests/test_o_generation.py": "3fe0509a94ea6ec173e8a1aff69041257898680394a495af97fce7cf1305bf66",
+    "tests/test_o_runtime_audit.py": "939000855c93dab258edd104a2a974378387094aa6f8e9e5c94d38572f392cf6"
+  },
+  "canonical_o_core_unchanged": true,
+  "changed_frozen_files": [],
+  "no_new_qa_or_model_run": true,
+  "no_training_or_adapter": true,
+  "MN_running_artifacts_untouched": true,
+  "default_LE_unchanged": true,
+  "limitations": [
+    "Rare identity alias path tested with real tokenizer and synthetic generator, not new model inference.",
+    "LMFE does not permit every greedy BPE encoding of valid JSON; escaped characters consume internal length capacity.",
+    "Overfiltering and composition hallucinations remain unresolved; previous four-group scores are unchanged and diagnostic only."
+  ]
+}

@@ -1,0 +1,596 @@
+{
+  "updated_at": "2026-11-02T15:20:57.624653+08:00",
+  "authorization": "User: 仔仔细细检查并解决K的问题",
+  "old": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r7",
+  "new": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8",
+  "old_manifest_sha256": "a21bec399ea462726dafa3bdda4423cae38c627b5704a2ca8472bea56afa2ee1",
+  "new_manifest_sha256": "3c7431686ec11e2fd97b1768c71885fea7e86e524d23cefe0b78ab25183b9381",
+  "checks_passed": 86,
+  "reader_protocol": "K-constrained-prediction-letter-v1",
+  "planner_decoder": "K-nonempty-decisions-v2-compact",
+  "dataset_questions": 300,
+  "reader_calls_planned": 900,
+  "reused_valid_plans": 54,
+  "reused_answers": 0,
+  "legacy_answers_archived": 160,
+  "legacy_reader_seconds": 565.0557367019355,
+  "legacy_reader_input_tokens": 507559,
+  "legacy_reader_output_tokens": 14185,
+  "prior_runtime_seconds": 729.091928716749,
+  "resume_preparation_seconds": 7.448048945516348,
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory"
+  },
+  "frozen_HIJ_and_defaults": {
+    "default_on_demand": "I",
+    "default_complete": "E",
+    "manifests": {
+      "generalized-lazy-H-300-20261101-r5": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+      "merged-lazy-I-H-adjacent-300-20261101-r3": "8c6284b7954a2fee0d20f83293a58d81323124b20eb5f241db7d26e0bbebbcc8",
+      "grounded-reader-J-300-20261101-r5": "ac574fb073c412549693e555e94e73fcb13a359e3ba136809dab949f4b71b72d"
+    }
+  },
+  "fixes": [
+    "Constrain every final answer in all three arms to prediction: A-E with exact independent parsing.",
+    "Add four real synthetic reader probes, including permuted choices, before benchmark answers.",
+    "Regenerate every final answer under the same protocol; archive all legacy reader calls and preserve their costs.",
+    "Revalidate all 300 question/pool/planner/all-evidence controls, source audits and exact tokenizer budgets.",
+    "Revalidate and seal 54 saved valid planner calls, never redo them for the reader repair.",
+    "Report complete cases only when all three arms succeed; reject mixed reader protocols.",
+    "Limit JSON whitespace to one consecutive character to protect the planner output budget.",
+    "Select any of GPU0-3 by free memory then utilization, retaining stability, shared locks and in-lock rechecks."
+  ],
+  "limitations": [
+    "Nonempty decoding enforces at least one retained record; it cannot guarantee relevant evidence. Last-record-only plans are reported.",
+    "Near-all-retain behavior and zero merge groups in prior plans are model-effectiveness findings, not silently tuned using benchmark labels.",
+    "No claim that CPU checks or synthetic probes guarantee every later model/runtime call succeeds. Runtime failures still stop without retries."
+  ],
+  "controller": {
+    "pid": 2570836,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/control/run_evidence_planner_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8"
+    ],
+    "started_at": "2026-11-02T15:22:13.589241+08:00",
+    "interpreter": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+  },
+  "prior_plan_behavior": {
+    "plans": 54,
+    "no_skips": 50,
+    "total_records": 6411,
+    "retained_records": 6184,
+    "merge_groups": 0,
+    "one_retained": 1
+  },
+  "confirmed_launch": {
+    "worker_pid": 2571063,
+    "gpu": "1",
+    "gpu_uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8/control/run_evidence_planner_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8"
+    ],
+    "started_at": "2026-11-02T15:22:34.033134+08:00"
+  },
+  "real_functional_gates": {
+    "functional_small.json": {
+      "passed": true,
+      "benchmark_labels_used": false,
+      "plan": {
+        "keep": [
+          "R0",
+          "R2"
+        ],
+        "skip": [
+          "R1"
+        ],
+        "uncertain": [],
+        "merge_groups": []
+      },
+      "audit": {
+        "pool_sha256": "aad9978673eeebc4fb4f1df7701e199ab7e69905ebe4d6cb8f9185999d041ad9",
+        "total_records": 3,
+        "retained_records": 2,
+        "skipped_records": 1,
+        "uncertain_records": 0,
+        "merge_groups": 0,
+        "retained_caption_ids": [],
+        "groups": [
+          {
+            "record_ids": [
+              "R0"
+            ],
+            "sources": [
+              {
+                "region": "probe"
+              }
+            ],
+            "occurrences": [
+              {
+                "interval": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "record_ids": [
+              "R2"
+            ],
+            "sources": [
+              {
+                "region": "probe"
+              }
+            ],
+            "occurrences": [
+              {
+                "interval": [
+                  2,
+                  3
+                ]
+              }
+            ]
+          }
+        ],
+        "skipped_ids": [
+          "R1"
+        ],
+        "original_sources_retained": true,
+        "inferred_continuity": false,
+        "inferred_event_counts": false,
+        "semantic_paraphrasing": false
+      },
+      "input_tokens": 561,
+      "output_tokens": 17,
+      "seconds": 0.961325716227293,
+      "updated_at": "2026-11-02T15:22:55.883554+08:00"
+    },
+    "functional.json": {
+      "passed": true,
+      "benchmark_labels_used": false,
+      "small_gate": "validation/functional_small.json",
+      "candidate_records": 130,
+      "plan": {
+        "keep": [
+          "R0",
+          "R129"
+        ],
+        "skip": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "R7",
+          "R8",
+          "R9",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32",
+          "R33",
+          "R34",
+          "R35",
+          "R36",
+          "R37",
+          "R38",
+          "R39",
+          "R40",
+          "R41",
+          "R42",
+          "R43",
+          "R44",
+          "R45",
+          "R46",
+          "R47",
+          "R48",
+          "R49",
+          "R50",
+          "R51",
+          "R52",
+          "R53",
+          "R54",
+          "R55",
+          "R56",
+          "R57",
+          "R58",
+          "R59",
+          "R60",
+          "R61",
+          "R62",
+          "R63",
+          "R64",
+          "R65",
+          "R66",
+          "R67",
+          "R68",
+          "R69",
+          "R70",
+          "R71",
+          "R72",
+          "R73",
+          "R74",
+          "R75",
+          "R76",
+          "R77",
+          "R78",
+          "R79",
+          "R80",
+          "R81",
+          "R82",
+          "R83",
+          "R84",
+          "R85",
+          "R86",
+          "R87",
+          "R88",
+          "R89",
+          "R90",
+          "R91",
+          "R92",
+          "R93",
+          "R94",
+          "R95",
+          "R96",
+          "R97",
+          "R98",
+          "R99",
+          "R100",
+          "R101",
+          "R102",
+          "R103",
+          "R104",
+          "R105",
+          "R106",
+          "R107",
+          "R108",
+          "R109",
+          "R110",
+          "R111",
+          "R112",
+          "R113",
+          "R114",
+          "R115",
+          "R116",
+          "R117",
+          "R118",
+          "R119",
+          "R120",
+          "R121",
+          "R122",
+          "R123",
+          "R124",
+          "R125",
+          "R126",
+          "R127",
+          "R128"
+        ],
+        "uncertain": [],
+        "merge_groups": []
+      },
+      "audit": {
+        "pool_sha256": "bc1fc4da3580e394a76bbeae03e75c47e9f78f72267b86e367ecc95d5e0283cf",
+        "total_records": 130,
+        "retained_records": 2,
+        "skipped_records": 128,
+        "uncertain_records": 0,
+        "merge_groups": 0,
+        "retained_caption_ids": [],
+        "groups": [
+          {
+            "record_ids": [
+              "R0"
+            ],
+            "sources": [
+              {
+                "region": "probe"
+              }
+            ],
+            "occurrences": [
+              {
+                "interval": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "record_ids": [
+              "R129"
+            ],
+            "sources": [
+              {
+                "region": "probe"
+              }
+            ],
+            "occurrences": [
+              {
+                "interval": [
+                  129,
+                  130
+                ]
+              }
+            ]
+          }
+        ],
+        "skipped_ids": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "R7",
+          "R8",
+          "R9",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32",
+          "R33",
+          "R34",
+          "R35",
+          "R36",
+          "R37",
+          "R38",
+          "R39",
+          "R40",
+          "R41",
+          "R42",
+          "R43",
+          "R44",
+          "R45",
+          "R46",
+          "R47",
+          "R48",
+          "R49",
+          "R50",
+          "R51",
+          "R52",
+          "R53",
+          "R54",
+          "R55",
+          "R56",
+          "R57",
+          "R58",
+          "R59",
+          "R60",
+          "R61",
+          "R62",
+          "R63",
+          "R64",
+          "R65",
+          "R66",
+          "R67",
+          "R68",
+          "R69",
+          "R70",
+          "R71",
+          "R72",
+          "R73",
+          "R74",
+          "R75",
+          "R76",
+          "R77",
+          "R78",
+          "R79",
+          "R80",
+          "R81",
+          "R82",
+          "R83",
+          "R84",
+          "R85",
+          "R86",
+          "R87",
+          "R88",
+          "R89",
+          "R90",
+          "R91",
+          "R92",
+          "R93",
+          "R94",
+          "R95",
+          "R96",
+          "R97",
+          "R98",
+          "R99",
+          "R100",
+          "R101",
+          "R102",
+          "R103",
+          "R104",
+          "R105",
+          "R106",
+          "R107",
+          "R108",
+          "R109",
+          "R110",
+          "R111",
+          "R112",
+          "R113",
+          "R114",
+          "R115",
+          "R116",
+          "R117",
+          "R118",
+          "R119",
+          "R120",
+          "R121",
+          "R122",
+          "R123",
+          "R124",
+          "R125",
+          "R126",
+          "R127",
+          "R128"
+        ],
+        "original_sources_retained": true,
+        "inferred_continuity": false,
+        "inferred_event_counts": false,
+        "semantic_paraphrasing": false
+      },
+      "input_tokens": 6378,
+      "output_tokens": 802,
+      "seconds": 17.929678075015545,
+      "updated_at": "2026-11-02T15:23:13.844196+08:00"
+    },
+    "reader_functional.json": {
+      "passed": true,
+      "checks": [
+        {
+          "arm": "F_sentence",
+          "passed": true,
+          "selected": 0,
+          "expected_synthetic_option": 0,
+          "seconds": 0.08666147291660309
+        },
+        {
+          "arm": "K_all_evidence",
+          "passed": true,
+          "selected": 0,
+          "expected_synthetic_option": 0,
+          "seconds": 0.10211857408285141
+        },
+        {
+          "arm": "K_evidence_planner",
+          "passed": true,
+          "selected": 0,
+          "expected_synthetic_option": 0,
+          "seconds": 0.08774342015385628
+        },
+        {
+          "arm": "permuted_options",
+          "passed": true,
+          "selected": 3,
+          "expected_synthetic_option": 3,
+          "seconds": 0.06754904985427856
+        }
+      ],
+      "reader_protocol": "K-constrained-prediction-letter-v1",
+      "benchmark_labels_used": false,
+      "updated_at": "2026-11-02T15:23:14.208454+08:00"
+    }
+  },
+  "observed_progress": {
+    "stage": "K_all_evidence",
+    "index": 36,
+    "question_id": "22d22f02-bc87-4f8a-9596-5b77146d4e41",
+    "updated_at": "2026-11-02T15:23:52.112633+08:00"
+  },
+  "observed_complete_cases": 35,
+  "frozen_HIJ_verified_unchanged": true,
+  "verified_recovery": {
+    "updated_at": "2026-11-02T15:25:37.523015+08:00",
+    "completed": 60,
+    "errors": {
+      "F_sentence": 0,
+      "K_all_evidence": 0,
+      "K_evidence_planner": 0
+    },
+    "progress": {
+      "stage": "planning",
+      "index": 61,
+      "question_id": "916476da-a699-4132-b5cb-ae992e647b1b",
+      "updated_at": "2026-11-02T15:25:31.759941+08:00"
+    },
+    "original_failure_case": {
+      "F_sentence": {
+        "question_id": "f98ccd46-72ac-4ead-96a2-9fa07e826cf3",
+        "selected_option": "2",
+        "error": null,
+        "raw_response": "prediction: C",
+        "input_tokens": 3153,
+        "output_tokens": 4,
+        "seconds": 0.417844720184803,
+        "input_sha256": "f128bdc7379cf69587dd4227fd839e61e11ddb08c46a6c4d6b049bf6142e90ec",
+        "parser": "constrained_prediction_letter",
+        "reader_protocol": "K-constrained-prediction-letter-v1"
+      },
+      "K_all_evidence": {
+        "question_id": "f98ccd46-72ac-4ead-96a2-9fa07e826cf3",
+        "selected_option": "2",
+        "error": null,
+        "raw_response": "prediction: C",
+        "input_tokens": 2442,
+        "output_tokens": 4,
+        "seconds": 0.22161593660712242,
+        "input_sha256": "c6e570c90fa687603b59765d35ec1421198d6a086779b682dcc0650dc33006a7",
+        "parser": "constrained_prediction_letter",
+        "reader_protocol": "K-constrained-prediction-letter-v1"
+      },
+      "K_evidence_planner": {
+        "question_id": "f98ccd46-72ac-4ead-96a2-9fa07e826cf3",
+        "selected_option": "2",
+        "error": null,
+        "raw_response": "prediction: C",
+        "input_tokens": 2442,
+        "output_tokens": 4,
+        "seconds": 0.2609555646777153,
+        "input_sha256": "c6e570c90fa687603b59765d35ec1421198d6a086779b682dcc0650dc33006a7",
+        "parser": "constrained_prediction_letter",
+        "reader_protocol": "K-constrained-prediction-letter-v1"
+      }
+    },
+    "original_snapshot_files_unchanged": 2967,
+    "all_saved_plans_verified": true,
+    "new_planner_calls_after_saved_prefix": 6
+  }
+}

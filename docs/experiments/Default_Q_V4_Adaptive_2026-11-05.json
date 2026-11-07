@@ -1,0 +1,73 @@
+{
+  "at": "2026-11-05T15:33:35.579191+08:00",
+  "user_decision": "以v4自适应为主线，相当于升级成默认方案",
+  "default_research_evaluation_scheme": "Q v4 adaptive",
+  "reference_run": "workdirs/Q4-adaptive-300-20261105-r1/",
+  "reference_report_sha256": "2a11ad21a647cd6ad7839431eca6fd16bb930253dbebcfe9a74d3a572f10e2c5",
+  "arms": [
+    "Qplus",
+    "Q"
+  ],
+  "completed": 300,
+  "correct": {
+    "Q": 193,
+    "Qplus": 193
+  },
+  "main_future_comparison": "Q4+ adaptive as primary on common question IDs; Q4 retained as comparison",
+  "historical_comparisons": [
+    "Q3-coverage-repair-300-20261105-r2",
+    "L_evidence_planner"
+  ],
+  "fixed_depth_control_policy": "Historical early-stop ablation only; not a parallel default, not automatically repeated",
+  "pipeline": [
+    "whole-source-observation contribution filtering",
+    "keep-only readers",
+    "pre/post-filter comparative evidence audit",
+    "targeted reconsideration",
+    "gap-directed archive retrieval",
+    "sufficiency early stop",
+    "same-evidence Q/Qplus readers"
+  ],
+  "maximum_new_caption_scenes": 4,
+  "reuse_policy": "Future versions independently navigate, filter and answer; do not copy old answers or final source selections",
+  "cli_status": {
+    "entry": "script_qa.py query",
+    "current_implementation_default": "L",
+    "Q_integrated": false,
+    "scope": "This decision updates research/evaluation defaults; CLI integration has not been implemented"
+  },
+  "execution_changed": false,
+  "new_model_calls": 0,
+  "active_cohort_extension": {
+    "run": "workdirs/Q4-adaptive-500-20261105-r1/",
+    "planned": 500,
+    "inherited_identical_results": 300,
+    "new_questions": 200,
+    "status": "complete",
+    "mode": "adaptive only",
+    "historical_videotree_correct_500": 304,
+    "completed": 500,
+    "correct": {
+      "Q": 316,
+      "Qplus": 316
+    }
+  },
+  "primary_arm": "Qplus",
+  "primary_display_name": "Q4+",
+  "comparison_arms": [
+    "Q"
+  ],
+  "primary_reader_update": {
+    "at": "2026-11-06T19:46:54.793644+08:00",
+    "user_decision": "那就把Q4+当成默认中的默认吧",
+    "scope": "Default research/evaluation primary reader and reporting priority",
+    "baseline": "workdirs/Q4-adaptive-500-20261105-r1/",
+    "baseline_completed": 500,
+    "baseline_correct": 316,
+    "baseline_accuracy": 0.632,
+    "training_variant": "Fixed6 LoRA variant remains under original300 development validation; no automatic promotion based on partial results",
+    "rationale": "Same aggregate500 accuracy, lower observed final-reader input tokens and time; shared upstream processing is not a23.2% full-pipeline speedup",
+    "paired_reader_policy": "Retain Q as same-evidence comparison; existing frozen dual-reader runs unchanged",
+    "cli_integration_changed": false
+  }
+}

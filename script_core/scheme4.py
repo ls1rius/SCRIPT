@@ -217,10 +217,15 @@ def answer(packet,features,cfg,backend,output,resume=False,total_cap=None,source
     for key in ('initialization','total','budgeted_total','total_cap'):cost[key]+=directory_cost
     cost['budget_violation']=cost['budget_violation'] or d['cost_summary']['budget_violation']
     if partial_pipeline:
+        m_enabled = cfg['query'].get('temporal_qa_evidence') in ('scene_planned_script', 'role_bound_scene_script')
         enough=bool(not result.get('error') and result.get('answer') and result['reviews'] and result['reviews'][-1]['sufficient'] and
-                    result['coverage_check']['met'] and not result['incomplete'] and not result.get('source_incomplete'))
+                    (m_enabled or result['coverage_check']['met']) and not result['incomplete'] and not result.get('source_incomplete'))
         reason=('adaptive_partial_whole_scene_selective_extraction_and_temporal_organization'
                 if pipeline=='adaptive_partial_temporal' else 'adaptive_partial_whole_scene_selective_extraction')
+        if m_enabled:
+            reason = 'M_L_gap_driven_scene_navigation_and_audited_evidence_planning'
+            if cfg['query'].get('temporal_qa_evidence') == 'role_bound_scene_script':
+                reason = 'N_M_scene_navigation_and_source_role_binding'
     else:
         enough=bool(bundle['reviews'] and bundle['reviews'][-1]['sufficient'] and
                     bundle['reviews'][-1]['coverage_check']['met'] and not result['incomplete'])

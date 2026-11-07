@@ -1,0 +1,84 @@
+{
+  "pool_sha256": "ee1961bae53b657c1154cbeb4ad6812f4ffeb4f4c57c9c922e857edbbf712360",
+  "total_records": 31,
+  "retained_records": 1,
+  "skipped_records": 30,
+  "uncertain_records": 0,
+  "merge_groups": 0,
+  "retained_caption_ids": [],
+  "groups": [
+    {
+      "record_ids": [
+        "R30"
+      ],
+      "sources": [
+        {
+          "region": "temporal unresolved observation",
+          "record": {
+            "entity_id": "E0",
+            "scene_id": "S1",
+            "observation": {
+              "caption_id": "C64",
+              "continuity": "uncertain",
+              "state": "#O A woman Y walks towards C",
+              "cause": {
+                "action": null,
+                "actor": null,
+                "tool": null,
+                "basis": "unknown",
+                "source_caption_ids": []
+              }
+            },
+            "pts": 64,
+            "status": "unresolved_state_observation"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C64",
+          "interval": [
+            64,
+            65
+          ]
+        }
+      ]
+    }
+  ],
+  "skipped_ids": [
+    "R0",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R29"
+  ],
+  "original_sources_retained": true,
+  "inferred_continuity": false,
+  "inferred_event_counts": false,
+  "semantic_paraphrasing": false
+}

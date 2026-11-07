@@ -1,0 +1,240 @@
+{
+  "at": "2026-11-04T15:48:30.242587+08:00",
+  "passed": true,
+  "old_results_checked": 210,
+  "changed_results": [],
+  "adopted_workers": [
+    {
+      "id": 0,
+      "pid": 3904394,
+      "same_identity": true
+    },
+    {
+      "id": 1,
+      "pid": 3904395,
+      "same_identity": true
+    }
+  ],
+  "worker_states": {
+    "0": {
+      "stage": "query",
+      "pid": 3904394,
+      "at": "2026-11-04T15:47:54.625176+08:00",
+      "index": 213,
+      "question_id": "319b2c1d-e7cf-4fad-9230-4610c69fdccc",
+      "gpu": "3"
+    },
+    "1": {
+      "stage": "query",
+      "pid": 3904395,
+      "at": "2026-11-04T15:49:32.779943+08:00",
+      "index": 215,
+      "question_id": "00f93e1e-cf4e-4835-88b4-4ad68216e86f",
+      "gpu": "1"
+    },
+    "2": {
+      "stage": "waiting_for_gpu",
+      "pid": 4173574,
+      "at": "2026-11-04T15:50:06.382170+08:00",
+      "watched_gpu_indices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "gpu_observations": {
+        "0": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 29834,
+          "utilization": 97
+        },
+        "1": {
+          "index": "1",
+          "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+          "free_mib": 19020,
+          "utilization": 64
+        },
+        "2": {
+          "index": "2",
+          "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+          "free_mib": 7352,
+          "utilization": 93
+        },
+        "3": {
+          "index": "3",
+          "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+          "free_mib": 17675,
+          "utilization": 94
+        }
+      },
+      "effective_free_mib": {
+        "0": 27164,
+        "1": 8102,
+        "2": 7352,
+        "3": 911
+      },
+      "stable_observations": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0
+      },
+      "minimum_free_mib": 32768,
+      "maximum_utilization": 100,
+      "scheduling": "shared_memory_reservations"
+    },
+    "3": {
+      "stage": "query",
+      "pid": 4173575,
+      "at": "2026-11-04T15:48:23.775895+08:00",
+      "index": 214,
+      "question_id": "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+      "gpu": "3"
+    }
+  },
+  "frozen_manifests_unchanged": true,
+  "new_controller": 4173554,
+  "alias_helper": {
+    "pid": 4173567,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/live-scale-20261104-r1/alias_helper.py",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+      "--control",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3",
+      "--supervisor",
+      "4173554"
+    ],
+    "helper_preflight": {
+      "passed": true,
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/live-scale-20261104-r1/alias_helper.py",
+      "sha256": "b4e294dc5d5df7c05d59e6afe539f808f77febcc23a08b9d0a86ad482e9eda9f",
+      "syntax_checked": true,
+      "help_exit_code": 0
+    },
+    "initial_alias_scan": [],
+    "initial_reference_audit": {
+      "passed": true,
+      "questions": [
+        "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+        "aafd0923-bfdb-4271-960e-02a4a5a75ed3",
+        "bbe35aed-1c92-42de-8f50-7004cdae317e",
+        "59dcde1d-f210-48fc-b888-5574d8962a2c",
+        "7981baa1-eb63-4ba6-9bde-cf35249e682c",
+        "083c5e8e-4546-40e9-857e-b9b967e5007a",
+        "a4bf0ad8-0ea8-40f5-bdf4-fc0a39a61d65",
+        "fe1a3d02-3ded-48ed-b8c5-4e579461cfaf",
+        "f7a575b2-a623-4533-9d67-b6395c564889",
+        "a4a6faba-8686-4282-808f-88e8447e4b95",
+        "b53d2693-bbaa-4e50-b703-e7d70ecf827f",
+        "a81624aa-bc70-4f13-963b-10136d2523ac",
+        "e86bb89c-baf4-4463-8941-e296d1d4d62f",
+        "a7e3cdc6-be60-4d79-be0b-3115da803926",
+        "b66bb54a-e3b3-4516-8072-32f6ae9aa7f1",
+        "796151ae-22ad-434d-9cb3-ea79096cfce7",
+        "e8b15979-31a5-4647-a61c-b1f5f079c74e",
+        "b3aaaea6-e6f6-499f-8b03-ddf85b3f62c4",
+        "cd882b7a-0766-4582-8388-3990b009b11b",
+        "223164c8-abed-4f1a-8f7c-4088c89d3ece",
+        "a6f20af7-21e8-4ee9-aa66-f23056ecab48",
+        "d430cf3f-da86-4d94-acd1-7e033d23598a",
+        "90c3f31b-3b44-4b9a-a684-cef313a45c32",
+        "d5ea4b32-7e72-4195-82c2-257ed2e455ef",
+        "643d9ff3-8780-4c7f-84e2-290c16b8c3c1",
+        "0aadf5ce-07eb-4934-9e07-317a46bc0b21",
+        "d33126fd-07dd-480e-ad89-9fdca4f813c4",
+        "eccbb1cd-a12c-4872-a656-d27882c5e462",
+        "cd5fc9e9-7a80-4bd6-a175-f07ad35ee7f6",
+        "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+        "fec37c37-f9ae-42a5-86de-508fffa3d881",
+        "2fcb501a-827c-4b31-95c2-5b0ca4895a00",
+        "77d42c88-589b-487f-84f3-b7631a8c9f2e",
+        "5599b364-197b-41eb-8aa7-02a50de5f59e",
+        "951ccf40-1a99-4138-a441-4edf16af5446",
+        "edb5c7f4-636f-47e6-97f8-b27795aaeec5",
+        "83acbfe5-4c09-440c-ab8b-62479b2915df",
+        "cd2e4351-de59-4511-ab43-36c37b388a8d",
+        "358bdb29-d3e8-4af7-99e8-4d81da2d77b1",
+        "00faf954-74f7-4aa3-8b29-4a5dff4f9518",
+        "478c970e-3ca2-492a-8af7-f442d8255971",
+        "2f192c07-9e89-40d6-bc8c-418e92563bd9",
+        "efe17e2d-668b-49b7-a474-4d7aae9a4131",
+        "22b86648-340c-4338-b46e-5eaba3a44b06",
+        "8bebd8f4-f4e4-40bc-8bee-8db39904b85e",
+        "a885299a-bc85-4d98-9905-d3e58518edea",
+        "329c45dd-202d-4787-8734-f3900a0df321",
+        "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+        "13da1294-2b42-4ef6-8dd6-ff651ef4571f",
+        "8d9d33d2-a95d-4fad-b378-f80c31a635cd",
+        "960f4df3-e414-48ae-8f29-188ab5eeca0b",
+        "93b1de09-2f89-4b4b-94ac-9d2d94df3d66",
+        "8eed2026-9f16-4004-92dd-9a31eceefa32",
+        "48274a18-9691-48e2-8ddd-45018251f81b",
+        "4ca1c82d-232c-4ffc-bad0-69f9aa992aef",
+        "2eda56d2-a9ea-4591-a822-552235568446",
+        "263666b2-3229-429a-b5a7-defc6433dc29",
+        "51bea80c-3f6f-4406-ac56-9af2a547b2bf",
+        "425f2fb4-a2a7-4925-94b5-25f6b0b85f78",
+        "c66fe71d-e9c3-4983-ad77-26c0a8b1c0b9",
+        "662d710e-54ea-4e63-bfc3-8f4e14873fd4",
+        "7cccb681-3447-410f-8747-6937d146725c",
+        "0b4529ac-5a4e-4d30-b6b6-c6504c509c0c",
+        "bd223d57-1b07-417e-8322-b5f1c8423c03"
+      ],
+      "successful_call_references": 2785,
+      "missing": [],
+      "content_mismatches": []
+    },
+    "ready": true,
+    "process_identity": "1762709315",
+    "startup_status": {
+      "pid": 4173567,
+      "process_identity": "1762709315",
+      "first_scan_complete": true,
+      "supervisor": 4173554,
+      "last_scan_unix": 1793778455.96633
+    }
+  },
+  "monitor": {
+    "pid": 3925416,
+    "at": "2026-11-04T15:48:04.220302+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "tests": {
+    "passed": 21,
+    "scope": "10 live scale lifecycle tests plus 11 existing claim/publication/alias checks"
+  },
+  "accounting": "Original calls continue; no interrupted model calls and no processing cost waived. New worker loading costs enter existing setup accounting. Original policy retains historical two-worker declaration; effective count recorded separately.",
+  "latest_checked_at": "2026-11-04T15:50:08.222604+08:00",
+  "monitor_latest": {
+    "state": "running",
+    "controller_pid": 4173554,
+    "event": null,
+    "terminal": false
+  },
+  "new_worker_calls": {
+    "3": {
+      "directory_calls/calls.jsonl": [
+        "structured_output_validation",
+        "structured_output_validation",
+        "temporal_directory",
+        "temporal_summary",
+        "structured_output_validation",
+        "temporal_directory"
+      ],
+      "partial_search/calls.jsonl": [
+        "checkpoint_write",
+        "structured_output_validation",
+        "m_candidate_query",
+        "structured_output_validation",
+        "checkpoint_write",
+        "structured_output_validation"
+      ]
+    }
+  }
+}

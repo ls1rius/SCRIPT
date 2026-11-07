@@ -1,0 +1,162 @@
+{
+  "at": "2026-11-04T12:16:35.512700+08:00",
+  "user_request": "后台MNOP报错修复继续跑；尽量减少串行预处理",
+  "runs": {
+    "M": {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18",
+      "status": {
+        "state": "running",
+        "controller_pid": 3822711,
+        "updated_at": "2026-11-04T12:16:33.791053+08:00",
+        "worker_pid": 3822881,
+        "gpu": "1",
+        "gpu_uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18/runtime/script/run_mn_empty_string_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18"
+        ],
+        "started_at": "2026-11-04T12:09:18.707037+08:00"
+      },
+      "progress": {
+        "stage": "query",
+        "index": 198,
+        "question_id": "93b1de09-2f89-4b4b-94ac-9d2d94df3d66",
+        "updated_at": "2026-11-04T12:15:52.941912+08:00"
+      },
+      "completed": 197,
+      "errors": 0
+    },
+    "N": {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+      "status": {
+        "state": "running",
+        "controller_pid": 3824411,
+        "worker_pid": 3824413,
+        "worker_pids": [
+          3824413,
+          3824414
+        ],
+        "scheduler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r2",
+        "workers": {
+          "0": {
+            "stage": "query",
+            "pid": 3824413,
+            "at": "2026-11-04T12:12:18.209304+08:00",
+            "index": 142,
+            "question_id": "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+            "gpu": "0"
+          },
+          "1": {
+            "stage": "query",
+            "pid": 3824414,
+            "at": "2026-11-04T12:14:07.719637+08:00",
+            "index": 145,
+            "question_id": "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+            "gpu": "1"
+          }
+        },
+        "updated_at": "2026-11-04T12:16:33.822693+08:00"
+      },
+      "progress": {
+        "stage": "parallel_queries",
+        "index": 142,
+        "question_id": "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+        "active_queries": [
+          {
+            "stage": "query",
+            "pid": 3824413,
+            "at": "2026-11-04T12:12:18.209304+08:00",
+            "index": 142,
+            "question_id": "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+            "gpu": "0"
+          },
+          {
+            "stage": "query",
+            "pid": 3824414,
+            "at": "2026-11-04T12:14:07.719637+08:00",
+            "index": 145,
+            "question_id": "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+            "gpu": "1"
+          }
+        ],
+        "updated_at": "2026-11-04T12:16:33.823223+08:00"
+      },
+      "completed": 143,
+      "errors": 0
+    },
+    "O": {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4",
+      "status": {
+        "state": "waiting_for_N_source",
+        "controller_pid": 3824903,
+        "updated_at": "2026-11-04T12:16:31.471580+08:00",
+        "model_loaded": false
+      },
+      "progress": null,
+      "completed": 141,
+      "errors": 0
+    },
+    "P": {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r2",
+      "status": {
+        "state": "running",
+        "controller_pid": 3822348,
+        "updated_at": "2026-11-04T12:16:33.538915+08:00",
+        "worker_pid": 3822416
+      },
+      "progress": {
+        "stage": "P",
+        "case": 6,
+        "question_id": "07d7128e-0684-4c6b-81cb-3ecb76c2e6ec",
+        "updated_at": "2026-11-04T12:16:27.421025+08:00"
+      },
+      "completed": 8,
+      "errors": 0
+    }
+  },
+  "diagnosis": {
+    "M": "LMFE treats maxLength=0 as unbounded in shortcut; canonical-empty strings now decoded as equivalent enum only",
+    "N": "1500-second question budget largely spent by 79 serial batch2 extraction calls (924.998376 s), leaving insufficient planner time",
+    "O": "Completed 141 pairs then stopped because upstream N142 failed; no new O model fault",
+    "P": "19510-token reader review exceeds legacy 16384 configured input limit"
+  },
+  "speed_changes": [
+    "N extraction batch2 to four independent tensor rows; two independent question workers, four-GPU shared-memory queue",
+    "P reuses 125 sentences / 180 successful preprocessing calls and only executes missing review/answer",
+    "Bounded four-thread artifact hash/copy and input audit; successful completed results are preserved",
+    "O inherits identical-runtime technical gates instead of making new identical validation calls"
+  ],
+  "source_isolation": "No cross-question prompt merging, independent tensor rows and per-question caches; only complete N results published atomically",
+  "budgets": "N/M total budgets unchanged; no prompt/source truncation; old failures and interrupted costs retained separately",
+  "detail_records": [
+    "M_Empty_String_Decoder_Repair_2026-11-04.json",
+    "N_Batch4_Parallel_Resume_2026-11-04.json",
+    "O_Upstream_Resume_2026-11-04.json",
+    "P_Context_Resume_2026-11-04.json"
+  ],
+  "M_real_gate": {
+    "passed": true,
+    "entered_question_198_at": "2026-11-04T12:15:52.941912+08:00",
+    "scope": "Saved failed input plus full technical gate; not QA improvement"
+  },
+  "N_real_gate": {
+    "passed": true,
+    "batch2_seconds": 13.381824,
+    "batch4_seconds": 11.135556,
+    "same_output_rows": 4,
+    "entered_question_142_at": "2026-11-04T12:12:18+08:00",
+    "original_timeout_question_completed": false,
+    "scope": "Technical batch execution; co-resident noncontrolled throughput; full failed question still running"
+  },
+  "P_failed_stage_recovered": {
+    "review_input_tokens": 19510,
+    "new_calls": 2,
+    "new_seconds": 45.887895,
+    "preprocessing_calls_reused": 180,
+    "completed_at": "2026-11-04T12:10:16+08:00"
+  }
+}

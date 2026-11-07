@@ -1,0 +1,9215 @@
+{
+  "version": "I-evidence-planner-L-v1-open-state-adjacent",
+  "records": [
+    {
+      "id": "R0",
+      "text": "C holds a kitchen towel.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C17",
+          "original_text": "#C C holds a kitchen towel"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C17",
+          "interval": [
+            17,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R1",
+      "text": "C holds kitchen towel.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C17",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "kitchen towel"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C17",
+          "interval": [
+            17,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "text": "The woman X pushes a chair aside with her left hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C18",
+          "original_text": "#O The woman X pushes a chair aside with her left hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C18",
+          "interval": [
+            18,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "text": "X pushes chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C18",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "pushes",
+            "patient": "chair"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C18",
+          "interval": [
+            18,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "text": "The dog X holds a white wooden plaque with his right hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C19",
+          "original_text": "#O The dog X holds a white wooden plaque with his right hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C19",
+          "interval": [
+            19,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "text": "X holds white wooden plaque.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C19",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "holds",
+            "patient": "white wooden plaque"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C19",
+          "interval": [
+            19,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "text": "The woman Y adjusts the chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C20",
+          "original_text": "#O The woman Y adjusts the chair."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C20",
+          "interval": [
+            20,
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "text": "Y adjusts chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C20",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Y",
+            "verb": "adjusts",
+            "patient": "chair"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C20",
+          "interval": [
+            20,
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "text": "The woman X walks to the dining area.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C21",
+          "original_text": "#O The woman X walks to the dining area."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C21",
+          "interval": [
+            21,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R9",
+      "text": "The man X lifts a chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C22",
+          "original_text": "#O The man X lifts a chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "text": "X lifts chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C22",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "lifts",
+            "patient": "chair"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C22",
+          "interval": [
+            22,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "text": "C walks away from the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C23",
+          "original_text": "#C C walks away from the table"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C23",
+          "interval": [
+            23,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "text": "C moves a flashlight in the container.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C24",
+          "original_text": "#C C moves a flashlight in the container"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "text": "C moves flashlight.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C24",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "flashlight"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C24",
+          "interval": [
+            24,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R14",
+      "text": "person X opens the closet door.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C25",
+          "original_text": "#O person X opens the closet door"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "text": "person X opens closet door.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C25",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "person X",
+            "verb": "opens",
+            "patient": "closet door"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C25",
+          "interval": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "text": "person X opens a drawer.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C26",
+          "original_text": "#O person X opens a drawer"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C26",
+          "interval": [
+            26,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "text": "person X opens drawer.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C26",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "person X",
+            "verb": "opens",
+            "patient": "drawer"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C26",
+          "interval": [
+            26,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "text": "A man X walks into a bedroom.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C27",
+          "original_text": "#O A man X walks into a bedroom."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C27",
+          "interval": [
+            27,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "text": "The woman X moves the black wooden spoon on the dining table with her right hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C28",
+          "original_text": "#O The woman X moves the black wooden spoon on the dining table with her right hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C28",
+          "interval": [
+            28,
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "text": "X moves black wooden spoon.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C28",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "moves",
+            "patient": "black wooden spoon"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C28",
+          "interval": [
+            28,
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "text": "The dog X drops a white bag on the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C29",
+          "original_text": "#O The dog X drops a white bag on the table."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C29",
+          "interval": [
+            29,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R22",
+      "text": "X drops white bag.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C29",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "drops",
+            "patient": "white bag"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C29",
+          "interval": [
+            29,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R23",
+      "text": "The color of bag is white.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H attributes"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C29",
+          "category": "attributes",
+          "fact_index": 0,
+          "record": {
+            "entity": "bag",
+            "property": "color",
+            "value": "white"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C29",
+          "interval": [
+            29,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R24",
+      "text": "The dog Y picks a leash with his right hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C30",
+          "original_text": "#O The dog Y picks a leash with his right hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C30",
+          "interval": [
+            30,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R25",
+      "text": "Y picks leash.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C30",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Y",
+            "verb": "picks",
+            "patient": "leash"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C30",
+          "interval": [
+            30,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R26",
+      "text": "woman X picks the cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C31",
+          "original_text": "#O woman X picks the cloth"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C31",
+          "interval": [
+            31,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R27",
+      "text": "woman X picks cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C31",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "woman X",
+            "verb": "picks",
+            "patient": "cloth"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C31",
+          "interval": [
+            31,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R28",
+      "text": "man X carries a chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C32",
+          "original_text": "#O man X carries a chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C32",
+          "interval": [
+            32,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R29",
+      "text": "man X carries chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C32",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "man X",
+            "verb": "carries",
+            "patient": "chair"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C32",
+          "interval": [
+            32,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R30",
+      "text": "the dog Y walks into the kitchen.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C33",
+          "original_text": "#O the dog Y walks into the kitchen."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C33",
+          "interval": [
+            33,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R31",
+      "text": "C carries the baby sitting on the chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C79",
+          "original_text": "#C C carries the baby sitting on the chair."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C79",
+          "interval": [
+            79,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R32",
+      "text": "C carries baby.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C79",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "carries",
+            "patient": "baby"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C79",
+          "interval": [
+            79,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R33",
+      "text": "man Y pulls the chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C80",
+          "original_text": "#O man Y pulls the chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C80",
+          "interval": [
+            80,
+            81
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R34",
+      "text": "man Y pulls chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C80",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "man Y",
+            "verb": "pulls",
+            "patient": "chair"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C80",
+          "interval": [
+            80,
+            81
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R35",
+      "text": "C pulls the hand towel.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C81",
+          "original_text": "#C C pulls the hand towel"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C81",
+          "interval": [
+            81,
+            82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R36",
+      "text": "C pulls hand towel.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C81",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "hand towel"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C81",
+          "interval": [
+            81,
+            82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R37",
+      "text": "man Y picks the bottle from the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C82",
+          "original_text": "#O man Y picks the bottle from the table "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C82",
+          "interval": [
+            82,
+            83
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R38",
+      "text": "man Y picks bottle.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C82",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "man Y",
+            "verb": "picks",
+            "patient": "bottle"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C82",
+          "interval": [
+            82,
+            83
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R39",
+      "text": "C places the pillow on a chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C83",
+          "original_text": "#C C places the pillow on a chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C83",
+          "interval": [
+            83,
+            84
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R40",
+      "text": "C looks around the house.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C84",
+          "original_text": "#C C looks around the house"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C84",
+          "interval": [
+            84,
+            85
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R41",
+      "text": "The baby X touches the baby.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C85",
+          "original_text": "#O The baby X touches the baby"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C85",
+          "interval": [
+            85,
+            86
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R42",
+      "text": "X touches baby.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C85",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "touches",
+            "patient": "baby"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C85",
+          "interval": [
+            85,
+            86
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R43",
+      "text": "Woman Y moves the hand from the table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C86",
+          "original_text": "#O Woman Y moves the hand from the table"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C86",
+          "interval": [
+            86,
+            87
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R44",
+      "text": "C holds a book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C87",
+          "original_text": "#C C holds a book"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C87",
+          "interval": [
+            87,
+            88
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R45",
+      "text": "C holds book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C87",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "book"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C87",
+          "interval": [
+            87,
+            88
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R46",
+      "text": "C holds the chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C88",
+          "original_text": "#C C holds the chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C88",
+          "interval": [
+            88,
+            89
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R47",
+      "text": "C holds chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C88",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "chair"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C88",
+          "interval": [
+            88,
+            89
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R48",
+      "text": "C looks around.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C89",
+          "original_text": "#C C looks around"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C89",
+          "interval": [
+            89,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R49",
+      "text": "C walks to a chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C90",
+          "original_text": "#C C walks to a chair."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C90",
+          "interval": [
+            90,
+            91
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R50",
+      "text": "C Looks at the chairs.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C91",
+          "original_text": "#C C Looks at the chairs "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C91",
+          "interval": [
+            91,
+            92
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R51",
+      "text": "C looks around the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C92",
+          "original_text": "#C C looks around the room"
+        },
+        {
+          "region": "description",
+          "caption_id": "C94",
+          "original_text": "#C C looks around the room"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C92",
+          "interval": [
+            92,
+            93
+          ]
+        },
+        {
+          "caption_id": "C94",
+          "interval": [
+            94,
+            95
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R52",
+      "text": "C looks at the chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C93",
+          "original_text": "#C C looks at the chair"
+        },
+        {
+          "region": "description",
+          "caption_id": "C95",
+          "original_text": "#C C looks at the chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C93",
+          "interval": [
+            93,
+            94
+          ]
+        },
+        {
+          "caption_id": "C95",
+          "interval": [
+            95,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R53",
+      "text": "C walks towards the kitchen.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C96",
+          "original_text": "#C C walks towards the kitchen."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C96",
+          "interval": [
+            96,
+            97
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R54",
+      "text": "woman Y touches her phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C97",
+          "original_text": "#O woman Y touches her phone "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C97",
+          "interval": [
+            97,
+            98
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R55",
+      "text": "woman Y touches phone.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C97",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "woman Y",
+            "verb": "touches",
+            "patient": "phone"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C97",
+          "interval": [
+            97,
+            98
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R56",
+      "text": "Woman X Picks a piece of cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C98",
+          "original_text": "#O Woman X Picks a piece of cloth"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C98",
+          "interval": [
+            98,
+            99
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R57",
+      "text": "Woman X Picks piece of cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C98",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Woman X",
+            "verb": "Picks",
+            "patient": "piece of cloth"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C98",
+          "interval": [
+            98,
+            99
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R58",
+      "text": "The woman X drops the red toy on the table with her left hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C99",
+          "original_text": "#O The woman X drops the red toy on the table with her left hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C99",
+          "interval": [
+            99,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R59",
+      "text": "X drops red toy.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C99",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "drops",
+            "patient": "red toy"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C99",
+          "interval": [
+            99,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R60",
+      "text": "The color of toy is red.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H attributes"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C99",
+          "category": "attributes",
+          "fact_index": 0,
+          "record": {
+            "entity": "toy",
+            "property": "color",
+            "value": "red"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C99",
+          "interval": [
+            99,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R61",
+      "text": "C moves around the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original",
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C100",
+          "original_text": "#C C moves around the room"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C100",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "around the room"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C100",
+          "interval": [
+            100,
+            101
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R62",
+      "text": "C picks the cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C101",
+          "original_text": "#C C picks the cloth"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C101",
+          "interval": [
+            101,
+            102
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R63",
+      "text": "C picks cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C101",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "cloth"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C101",
+          "interval": [
+            101,
+            102
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R64",
+      "text": "C puts the paper in the bucket.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C102",
+          "original_text": "#C C puts the paper in the bucket"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C102",
+          "interval": [
+            102,
+            103
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R65",
+      "text": "C puts paper.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C102",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "puts",
+            "patient": "paper"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C102",
+          "interval": [
+            102,
+            103
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R66",
+      "text": "C puts the handbag down.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C103",
+          "original_text": "#C C puts the handbag down"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C103",
+          "interval": [
+            103,
+            104
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R67",
+      "text": "C puts handbag.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C103",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "puts",
+            "patient": "handbag"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C103",
+          "interval": [
+            103,
+            104
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R68",
+      "text": "C moves the chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C104",
+          "original_text": "#C C moves the chair "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C104",
+          "interval": [
+            104,
+            105
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R69",
+      "text": "C moves chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C104",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "chair"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C104",
+          "interval": [
+            104,
+            105
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R70",
+      "text": "C holds the book in her hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C150",
+          "original_text": "#C C holds the book in her hands."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C150",
+          "interval": [
+            150,
+            151
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R71",
+      "text": "C holds book with hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C150",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "book",
+            "body_part": "hands"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C150",
+          "interval": [
+            150,
+            151
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R72",
+      "text": "C talks to a man X.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C151",
+          "original_text": "#C C talks to a man X "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C151",
+          "interval": [
+            151,
+            152
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R73",
+      "text": "C looks at the window.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C152",
+          "original_text": "#C C looks at the window"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C152",
+          "interval": [
+            152,
+            153
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R74",
+      "text": "C looks at the dog.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C153",
+          "original_text": "#C C looks at the dog"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C153",
+          "interval": [
+            153,
+            154
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R75",
+      "text": "C looks at the room.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C154",
+          "original_text": "#C C looks at the room"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C154",
+          "interval": [
+            154,
+            155
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R76",
+      "text": "C touches a chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C155",
+          "original_text": "#C C touches a chair"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C155",
+          "interval": [
+            155,
+            156
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R77",
+      "text": "C touches chair.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C155",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "touches",
+            "patient": "chair"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C155",
+          "interval": [
+            155,
+            156
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R78",
+      "text": "C moves the hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C156",
+          "original_text": "#C C moves the hand"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C156",
+          "interval": [
+            156,
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R79",
+      "text": "C moves hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C156",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "hand"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C156",
+          "interval": [
+            156,
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R80",
+      "text": "C looks at the baby.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C157",
+          "original_text": "#C C looks at the baby"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C157",
+          "interval": [
+            157,
+            158
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R81",
+      "text": "C folds the top of the blanket on her laps with both hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C158",
+          "original_text": "#C C folds the top of the blanket on her laps with both hands."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C158",
+          "interval": [
+            158,
+            159
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R82",
+      "text": "C folds top of the blanket with both hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C158",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "folds",
+            "patient": "top of the blanket",
+            "body_part": "both hands"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C158",
+          "interval": [
+            158,
+            159
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R83",
+      "text": "C pulls the paper.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C159",
+          "original_text": "#C C pulls the paper"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C159",
+          "interval": [
+            159,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R84",
+      "text": "C pulls paper.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C159",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "paper"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C159",
+          "interval": [
+            159,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R85",
+      "text": "C unfolds the cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C160",
+          "original_text": "#C C unfolds the cloth"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C160",
+          "interval": [
+            160,
+            161
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R86",
+      "text": "C unfolds cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C160",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "unfolds",
+            "patient": "cloth"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C160",
+          "interval": [
+            160,
+            161
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R87",
+      "text": "C holds the white wooden spoon with both hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C161",
+          "original_text": "#C C holds the white wooden spoon with both hands."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C161",
+          "interval": [
+            161,
+            162
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R88",
+      "text": "C holds white wooden spoon with both hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C161",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "white wooden spoon",
+            "body_part": "both hands"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C161",
+          "interval": [
+            161,
+            162
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R89",
+      "text": "C folds the paper.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C162",
+          "original_text": "#C C folds the paper"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C162",
+          "interval": [
+            162,
+            163
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R90",
+      "text": "C folds paper.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C162",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "folds",
+            "patient": "paper"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C162",
+          "interval": [
+            162,
+            163
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R91",
+      "text": "C lifts a bowl on the dining table.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C163",
+          "original_text": "#C C lifts a bowl on the dining table."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C163",
+          "interval": [
+            163,
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R92",
+      "text": "C lifts bowl.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C163",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "lifts",
+            "patient": "bowl"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C163",
+          "interval": [
+            163,
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R93",
+      "text": "C lifts the baby.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C164",
+          "original_text": "#C C lifts the baby "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C164",
+          "interval": [
+            164,
+            165
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R94",
+      "text": "C lifts baby.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C164",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "lifts",
+            "patient": "baby"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C164",
+          "interval": [
+            164,
+            165
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R95",
+      "text": "C removes the biscuit from the pack with both hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C165",
+          "original_text": "#C C removes the biscuit from the pack with both hands."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C165",
+          "interval": [
+            165,
+            166
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R96",
+      "text": "C removes biscuit with both hands.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C165",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "removes",
+            "patient": "biscuit",
+            "body_part": "both hands"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C165",
+          "interval": [
+            165,
+            166
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R97",
+      "text": "C takes food.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original",
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C166",
+          "original_text": "#C C takes food"
+        },
+        {
+          "region": "H fact",
+          "caption_id": "C166",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "takes",
+            "patient": "food"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C166",
+          "interval": [
+            166,
+            167
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R98",
+      "text": "C reads the instructions.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C167",
+          "original_text": "#C C reads the instructions "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C167",
+          "interval": [
+            167,
+            168
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R99",
+      "text": "C reads instructions.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C167",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "reads",
+            "patient": "instructions"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C167",
+          "interval": [
+            167,
+            168
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R100",
+      "text": "A woman X talks to C.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C168",
+          "original_text": "#O A woman X talks to C"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C168",
+          "interval": [
+            168,
+            169
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R101",
+      "text": "The color of X is woman.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H attributes"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C168",
+          "category": "attributes",
+          "fact_index": 0,
+          "record": {
+            "entity": "X",
+            "property": "color",
+            "value": "woman"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C168",
+          "interval": [
+            168,
+            169
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R102",
+      "text": "C puts the bottle in the bag.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C169",
+          "original_text": "#C C puts the bottle in the bag"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C169",
+          "interval": [
+            169,
+            170
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R103",
+      "text": "The woman X adjusts her left hand on her right leg.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C170",
+          "original_text": "#O The woman X adjusts her left hand on her right leg."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C170",
+          "interval": [
+            170,
+            171
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R104",
+      "text": "A woman X touches the book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C171",
+          "original_text": "#O A woman X touches the book"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C171",
+          "interval": [
+            171,
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R105",
+      "text": "X touches book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C171",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "touches",
+            "patient": "book"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C171",
+          "interval": [
+            171,
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R106",
+      "text": "Man X holds a spoon with his right hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C172",
+          "original_text": "#O Man X holds a spoon with his right hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C172",
+          "interval": [
+            172,
+            173
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R107",
+      "text": "Man X holds spoon with right hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C172",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "Man X",
+            "verb": "holds",
+            "patient": "spoon",
+            "body_part": "right hand"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C172",
+          "interval": [
+            172,
+            173
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R108",
+      "text": "The baby Y holds the toy with his left hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C173",
+          "original_text": "#O The baby Y holds the toy with his left hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C173",
+          "interval": [
+            173,
+            174
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R109",
+      "text": "baby Y holds toy with left hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C173",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "baby Y",
+            "verb": "holds",
+            "patient": "toy",
+            "body_part": "left hand"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C173",
+          "interval": [
+            173,
+            174
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R110",
+      "text": "A woman X reads a paper.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C174",
+          "original_text": "#O A woman X reads a paper"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C174",
+          "interval": [
+            174,
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R111",
+      "text": "X reads paper.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C174",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "X",
+            "verb": "reads",
+            "patient": "paper"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C174",
+          "interval": [
+            174,
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R112",
+      "text": "C touches the book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C175",
+          "original_text": "#C C touches the book"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C175",
+          "interval": [
+            175,
+            176
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R113",
+      "text": "C touches book.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C175",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "touches",
+            "patient": "book"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C175",
+          "interval": [
+            175,
+            176
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R114",
+      "text": "C stretches the cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C176",
+          "original_text": "#C C stretches the cloth"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C176",
+          "interval": [
+            176,
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R115",
+      "text": "C stretches cloth.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C176",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "stretches",
+            "patient": "cloth"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C176",
+          "interval": [
+            176,
+            177
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R116",
+      "text": "C puts the baby in the basket.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C177",
+          "original_text": "#C C puts the baby in the basket "
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C177",
+          "interval": [
+            177,
+            178
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R117",
+      "text": "C adjusts the a plastic with her left hand.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C178",
+          "original_text": "#C C adjusts the a plastic with her left hand."
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C178",
+          "interval": [
+            178,
+            179
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R118",
+      "text": "C moves the leg.",
+      "qualification": "source assertion",
+      "kinds": [
+        "caption original"
+      ],
+      "sources": [
+        {
+          "region": "description",
+          "caption_id": "C179",
+          "original_text": "#C C moves the leg"
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C179",
+          "interval": [
+            179,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R119",
+      "text": "C moves leg.",
+      "qualification": "source assertion",
+      "kinds": [
+        "H actions"
+      ],
+      "sources": [
+        {
+          "region": "H fact",
+          "caption_id": "C179",
+          "category": "actions",
+          "fact_index": 0,
+          "record": {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "leg"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C179",
+          "interval": [
+            179,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R120",
+      "text": "man X carries a chair. The text memory associates this observation with carries a chair (text reference E0).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T0",
+            "entity_id": "E0",
+            "scene_id": "S1",
+            "description": "#O man X carries a chair",
+            "logical_state_id": "T0",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 32,
+            "last_observed_at": 32,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              33
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C32"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              32,
+              32
+            ],
+            "source_support_interval": [
+              32,
+              33
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C32",
+          "interval": [
+            32,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R121",
+      "text": "the dog Y walks into the kitchen. The text memory associates this observation with walks into the kitchen (text reference E1).",
+      "qualification": "source assertion",
+      "kinds": [
+        "temporal state"
+      ],
+      "sources": [
+        {
+          "region": "temporal state",
+          "record": {
+            "id": "T1",
+            "entity_id": "E1",
+            "scene_id": "S1",
+            "description": "#O the dog Y walks into the kitchen.",
+            "logical_state_id": "T1",
+            "fragment_kind": "initial_observation",
+            "first_observed_at": 33,
+            "last_observed_at": 33,
+            "valid_from": null,
+            "valid_to": null,
+            "valid_from_bounds": [
+              null,
+              34
+            ],
+            "valid_to_bounds": null,
+            "status": "caption_asserted",
+            "boundary": "initial_observation",
+            "source_caption_ids": [
+              "C33"
+            ],
+            "relation_ids": [],
+            "observed_support_interval": [
+              33,
+              33
+            ],
+            "source_support_interval": [
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C33",
+          "interval": [
+            33,
+            34
+          ]
+        }
+      ]
+    }
+  ],
+  "source_memory": {
+    "observations": [
+      {
+        "caption_id": "C17",
+        "frame_index": 17,
+        "sample_interval": [
+          17,
+          18
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "kitchen towel"
+            }
+          ],
+          "original_text": "#C C holds a kitchen towel"
+        }
+      },
+      {
+        "caption_id": "C18",
+        "frame_index": 18,
+        "sample_interval": [
+          18,
+          19
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "pushes",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O The woman X pushes a chair aside with her left hand."
+        }
+      },
+      {
+        "caption_id": "C19",
+        "frame_index": 19,
+        "sample_interval": [
+          19,
+          20
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "holds",
+              "patient": "white wooden plaque"
+            }
+          ],
+          "original_text": "#O The dog X holds a white wooden plaque with his right hand."
+        }
+      },
+      {
+        "caption_id": "C20",
+        "frame_index": 20,
+        "sample_interval": [
+          20,
+          21
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "adjusts",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O The woman Y adjusts the chair."
+        }
+      },
+      {
+        "caption_id": "C21",
+        "frame_index": 21,
+        "sample_interval": [
+          21,
+          22
+        ],
+        "evidence": {
+          "original_text": "#O The woman X walks to the dining area."
+        }
+      },
+      {
+        "caption_id": "C22",
+        "frame_index": 22,
+        "sample_interval": [
+          22,
+          23
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "lifts",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O The man X lifts a chair"
+        }
+      },
+      {
+        "caption_id": "C23",
+        "frame_index": 23,
+        "sample_interval": [
+          23,
+          24
+        ],
+        "evidence": {
+          "original_text": "#C C walks away from the table"
+        }
+      },
+      {
+        "caption_id": "C24",
+        "frame_index": 24,
+        "sample_interval": [
+          24,
+          25
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "flashlight"
+            }
+          ],
+          "original_text": "#C C moves a flashlight in the container"
+        }
+      },
+      {
+        "caption_id": "C25",
+        "frame_index": 25,
+        "sample_interval": [
+          25,
+          26
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "person X",
+              "verb": "opens",
+              "patient": "closet door"
+            }
+          ],
+          "original_text": "#O person X opens the closet door"
+        }
+      },
+      {
+        "caption_id": "C26",
+        "frame_index": 26,
+        "sample_interval": [
+          26,
+          27
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "person X",
+              "verb": "opens",
+              "patient": "drawer"
+            }
+          ],
+          "original_text": "#O person X opens a drawer"
+        }
+      },
+      {
+        "caption_id": "C27",
+        "frame_index": 27,
+        "sample_interval": [
+          27,
+          28
+        ],
+        "evidence": {
+          "original_text": "#O A man X walks into a bedroom."
+        }
+      },
+      {
+        "caption_id": "C28",
+        "frame_index": 28,
+        "sample_interval": [
+          28,
+          29
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "moves",
+              "patient": "black wooden spoon"
+            }
+          ],
+          "original_text": "#O The woman X moves the black wooden spoon on the dining table with her right hand."
+        }
+      },
+      {
+        "caption_id": "C29",
+        "frame_index": 29,
+        "sample_interval": [
+          29,
+          30
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "drops",
+              "patient": "white bag"
+            }
+          ],
+          "attributes": [
+            {
+              "entity": "bag",
+              "property": "color",
+              "value": "white"
+            }
+          ],
+          "original_text": "#O The dog X drops a white bag on the table."
+        }
+      },
+      {
+        "caption_id": "C30",
+        "frame_index": 30,
+        "sample_interval": [
+          30,
+          31
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "picks",
+              "patient": "leash"
+            }
+          ],
+          "original_text": "#O The dog Y picks a leash with his right hand."
+        }
+      },
+      {
+        "caption_id": "C31",
+        "frame_index": 31,
+        "sample_interval": [
+          31,
+          32
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "woman X",
+              "verb": "picks",
+              "patient": "cloth"
+            }
+          ],
+          "original_text": "#O woman X picks the cloth"
+        }
+      },
+      {
+        "caption_id": "C32",
+        "frame_index": 32,
+        "sample_interval": [
+          32,
+          33
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "man X",
+              "verb": "carries",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O man X carries a chair"
+        }
+      },
+      {
+        "caption_id": "C33",
+        "frame_index": 33,
+        "sample_interval": [
+          33,
+          34
+        ],
+        "evidence": {
+          "original_text": "#O the dog Y walks into the kitchen."
+        }
+      },
+      {
+        "caption_id": "C79",
+        "frame_index": 79,
+        "sample_interval": [
+          79,
+          80
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "carries",
+              "patient": "baby"
+            }
+          ],
+          "original_text": "#C C carries the baby sitting on the chair."
+        }
+      },
+      {
+        "caption_id": "C80",
+        "frame_index": 80,
+        "sample_interval": [
+          80,
+          81
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "man Y",
+              "verb": "pulls",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O man Y pulls the chair"
+        }
+      },
+      {
+        "caption_id": "C81",
+        "frame_index": 81,
+        "sample_interval": [
+          81,
+          82
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "hand towel"
+            }
+          ],
+          "original_text": "#C C pulls the hand towel"
+        }
+      },
+      {
+        "caption_id": "C82",
+        "frame_index": 82,
+        "sample_interval": [
+          82,
+          83
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "man Y",
+              "verb": "picks",
+              "patient": "bottle"
+            }
+          ],
+          "original_text": "#O man Y picks the bottle from the table "
+        }
+      },
+      {
+        "caption_id": "C83",
+        "frame_index": 83,
+        "sample_interval": [
+          83,
+          84
+        ],
+        "evidence": {
+          "original_text": "#C C places the pillow on a chair"
+        }
+      },
+      {
+        "caption_id": "C84",
+        "frame_index": 84,
+        "sample_interval": [
+          84,
+          85
+        ],
+        "evidence": {
+          "original_text": "#C C looks around the house"
+        }
+      },
+      {
+        "caption_id": "C85",
+        "frame_index": 85,
+        "sample_interval": [
+          85,
+          86
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "touches",
+              "patient": "baby"
+            }
+          ],
+          "original_text": "#O The baby X touches the baby"
+        }
+      },
+      {
+        "caption_id": "C86",
+        "frame_index": 86,
+        "sample_interval": [
+          86,
+          87
+        ],
+        "evidence": {
+          "original_text": "#O Woman Y moves the hand from the table"
+        }
+      },
+      {
+        "caption_id": "C87",
+        "frame_index": 87,
+        "sample_interval": [
+          87,
+          88
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "book"
+            }
+          ],
+          "original_text": "#C C holds a book"
+        }
+      },
+      {
+        "caption_id": "C88",
+        "frame_index": 88,
+        "sample_interval": [
+          88,
+          89
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#C C holds the chair"
+        }
+      },
+      {
+        "caption_id": "C89",
+        "frame_index": 89,
+        "sample_interval": [
+          89,
+          90
+        ],
+        "evidence": {
+          "original_text": "#C C looks around"
+        }
+      },
+      {
+        "caption_id": "C90",
+        "frame_index": 90,
+        "sample_interval": [
+          90,
+          91
+        ],
+        "evidence": {
+          "original_text": "#C C walks to a chair."
+        }
+      },
+      {
+        "caption_id": "C91",
+        "frame_index": 91,
+        "sample_interval": [
+          91,
+          92
+        ],
+        "evidence": {
+          "original_text": "#C C Looks at the chairs "
+        }
+      },
+      {
+        "caption_id": "C92",
+        "frame_index": 92,
+        "sample_interval": [
+          92,
+          93
+        ],
+        "evidence": {
+          "original_text": "#C C looks around the room"
+        }
+      },
+      {
+        "caption_id": "C93",
+        "frame_index": 93,
+        "sample_interval": [
+          93,
+          94
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the chair"
+        }
+      },
+      {
+        "caption_id": "C94",
+        "frame_index": 94,
+        "sample_interval": [
+          94,
+          95
+        ],
+        "evidence": {
+          "original_text": "#C C looks around the room"
+        }
+      },
+      {
+        "caption_id": "C95",
+        "frame_index": 95,
+        "sample_interval": [
+          95,
+          96
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the chair"
+        }
+      },
+      {
+        "caption_id": "C96",
+        "frame_index": 96,
+        "sample_interval": [
+          96,
+          97
+        ],
+        "evidence": {
+          "original_text": "#C C walks towards the kitchen."
+        }
+      },
+      {
+        "caption_id": "C97",
+        "frame_index": 97,
+        "sample_interval": [
+          97,
+          98
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "woman Y",
+              "verb": "touches",
+              "patient": "phone"
+            }
+          ],
+          "original_text": "#O woman Y touches her phone "
+        }
+      },
+      {
+        "caption_id": "C98",
+        "frame_index": 98,
+        "sample_interval": [
+          98,
+          99
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Woman X",
+              "verb": "Picks",
+              "patient": "piece of cloth"
+            }
+          ],
+          "original_text": "#O Woman X Picks a piece of cloth"
+        }
+      },
+      {
+        "caption_id": "C99",
+        "frame_index": 99,
+        "sample_interval": [
+          99,
+          100
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "drops",
+              "patient": "red toy"
+            }
+          ],
+          "attributes": [
+            {
+              "entity": "toy",
+              "property": "color",
+              "value": "red"
+            }
+          ],
+          "original_text": "#O The woman X drops the red toy on the table with her left hand."
+        }
+      },
+      {
+        "caption_id": "C100",
+        "frame_index": 100,
+        "sample_interval": [
+          100,
+          101
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "around the room"
+            }
+          ],
+          "original_text": "#C C moves around the room"
+        }
+      },
+      {
+        "caption_id": "C101",
+        "frame_index": 101,
+        "sample_interval": [
+          101,
+          102
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "cloth"
+            }
+          ],
+          "original_text": "#C C picks the cloth"
+        }
+      },
+      {
+        "caption_id": "C102",
+        "frame_index": 102,
+        "sample_interval": [
+          102,
+          103
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "puts",
+              "patient": "paper"
+            }
+          ],
+          "original_text": "#C C puts the paper in the bucket"
+        }
+      },
+      {
+        "caption_id": "C103",
+        "frame_index": 103,
+        "sample_interval": [
+          103,
+          104
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "puts",
+              "patient": "handbag"
+            }
+          ],
+          "original_text": "#C C puts the handbag down"
+        }
+      },
+      {
+        "caption_id": "C104",
+        "frame_index": 104,
+        "sample_interval": [
+          104,
+          105
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#C C moves the chair "
+        }
+      },
+      {
+        "caption_id": "C150",
+        "frame_index": 150,
+        "sample_interval": [
+          150,
+          151
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "book",
+              "body_part": "hands"
+            }
+          ],
+          "original_text": "#C C holds the book in her hands."
+        }
+      },
+      {
+        "caption_id": "C151",
+        "frame_index": 151,
+        "sample_interval": [
+          151,
+          152
+        ],
+        "evidence": {
+          "original_text": "#C C talks to a man X "
+        }
+      },
+      {
+        "caption_id": "C152",
+        "frame_index": 152,
+        "sample_interval": [
+          152,
+          153
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the window"
+        }
+      },
+      {
+        "caption_id": "C153",
+        "frame_index": 153,
+        "sample_interval": [
+          153,
+          154
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the dog"
+        }
+      },
+      {
+        "caption_id": "C154",
+        "frame_index": 154,
+        "sample_interval": [
+          154,
+          155
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the room"
+        }
+      },
+      {
+        "caption_id": "C155",
+        "frame_index": 155,
+        "sample_interval": [
+          155,
+          156
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "touches",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#C C touches a chair"
+        }
+      },
+      {
+        "caption_id": "C156",
+        "frame_index": 156,
+        "sample_interval": [
+          156,
+          157
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "hand"
+            }
+          ],
+          "original_text": "#C C moves the hand"
+        }
+      },
+      {
+        "caption_id": "C157",
+        "frame_index": 157,
+        "sample_interval": [
+          157,
+          158
+        ],
+        "evidence": {
+          "original_text": "#C C looks at the baby"
+        }
+      },
+      {
+        "caption_id": "C158",
+        "frame_index": 158,
+        "sample_interval": [
+          158,
+          159
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "folds",
+              "patient": "top of the blanket",
+              "body_part": "both hands"
+            }
+          ],
+          "original_text": "#C C folds the top of the blanket on her laps with both hands."
+        }
+      },
+      {
+        "caption_id": "C159",
+        "frame_index": 159,
+        "sample_interval": [
+          159,
+          160
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "paper"
+            }
+          ],
+          "original_text": "#C C pulls the paper"
+        }
+      },
+      {
+        "caption_id": "C160",
+        "frame_index": 160,
+        "sample_interval": [
+          160,
+          161
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "unfolds",
+              "patient": "cloth"
+            }
+          ],
+          "original_text": "#C C unfolds the cloth"
+        }
+      },
+      {
+        "caption_id": "C161",
+        "frame_index": 161,
+        "sample_interval": [
+          161,
+          162
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "white wooden spoon",
+              "body_part": "both hands"
+            }
+          ],
+          "original_text": "#C C holds the white wooden spoon with both hands."
+        }
+      },
+      {
+        "caption_id": "C162",
+        "frame_index": 162,
+        "sample_interval": [
+          162,
+          163
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "folds",
+              "patient": "paper"
+            }
+          ],
+          "original_text": "#C C folds the paper"
+        }
+      },
+      {
+        "caption_id": "C163",
+        "frame_index": 163,
+        "sample_interval": [
+          163,
+          164
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "lifts",
+              "patient": "bowl"
+            }
+          ],
+          "original_text": "#C C lifts a bowl on the dining table."
+        }
+      },
+      {
+        "caption_id": "C164",
+        "frame_index": 164,
+        "sample_interval": [
+          164,
+          165
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "lifts",
+              "patient": "baby"
+            }
+          ],
+          "original_text": "#C C lifts the baby "
+        }
+      },
+      {
+        "caption_id": "C165",
+        "frame_index": 165,
+        "sample_interval": [
+          165,
+          166
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "removes",
+              "patient": "biscuit",
+              "body_part": "both hands"
+            }
+          ],
+          "original_text": "#C C removes the biscuit from the pack with both hands."
+        }
+      },
+      {
+        "caption_id": "C166",
+        "frame_index": 166,
+        "sample_interval": [
+          166,
+          167
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "takes",
+              "patient": "food"
+            }
+          ],
+          "original_text": "#C C takes food"
+        }
+      },
+      {
+        "caption_id": "C167",
+        "frame_index": 167,
+        "sample_interval": [
+          167,
+          168
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "reads",
+              "patient": "instructions"
+            }
+          ],
+          "original_text": "#C C reads the instructions "
+        }
+      },
+      {
+        "caption_id": "C168",
+        "frame_index": 168,
+        "sample_interval": [
+          168,
+          169
+        ],
+        "evidence": {
+          "attributes": [
+            {
+              "entity": "X",
+              "property": "color",
+              "value": "woman"
+            }
+          ],
+          "original_text": "#O A woman X talks to C"
+        }
+      },
+      {
+        "caption_id": "C169",
+        "frame_index": 169,
+        "sample_interval": [
+          169,
+          170
+        ],
+        "evidence": {
+          "original_text": "#C C puts the bottle in the bag"
+        }
+      },
+      {
+        "caption_id": "C170",
+        "frame_index": 170,
+        "sample_interval": [
+          170,
+          171
+        ],
+        "evidence": {
+          "original_text": "#O The woman X adjusts her left hand on her right leg."
+        }
+      },
+      {
+        "caption_id": "C171",
+        "frame_index": 171,
+        "sample_interval": [
+          171,
+          172
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "touches",
+              "patient": "book"
+            }
+          ],
+          "original_text": "#O A woman X touches the book"
+        }
+      },
+      {
+        "caption_id": "C172",
+        "frame_index": 172,
+        "sample_interval": [
+          172,
+          173
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Man X",
+              "verb": "holds",
+              "patient": "spoon",
+              "body_part": "right hand"
+            }
+          ],
+          "original_text": "#O Man X holds a spoon with his right hand."
+        }
+      },
+      {
+        "caption_id": "C173",
+        "frame_index": 173,
+        "sample_interval": [
+          173,
+          174
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "baby Y",
+              "verb": "holds",
+              "patient": "toy",
+              "body_part": "left hand"
+            }
+          ],
+          "original_text": "#O The baby Y holds the toy with his left hand."
+        }
+      },
+      {
+        "caption_id": "C174",
+        "frame_index": 174,
+        "sample_interval": [
+          174,
+          175
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "reads",
+              "patient": "paper"
+            }
+          ],
+          "original_text": "#O A woman X reads a paper"
+        }
+      },
+      {
+        "caption_id": "C175",
+        "frame_index": 175,
+        "sample_interval": [
+          175,
+          176
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "touches",
+              "patient": "book"
+            }
+          ],
+          "original_text": "#C C touches the book"
+        }
+      },
+      {
+        "caption_id": "C176",
+        "frame_index": 176,
+        "sample_interval": [
+          176,
+          177
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "stretches",
+              "patient": "cloth"
+            }
+          ],
+          "original_text": "#C C stretches the cloth"
+        }
+      },
+      {
+        "caption_id": "C177",
+        "frame_index": 177,
+        "sample_interval": [
+          177,
+          178
+        ],
+        "evidence": {
+          "original_text": "#C C puts the baby in the basket "
+        }
+      },
+      {
+        "caption_id": "C178",
+        "frame_index": 178,
+        "sample_interval": [
+          178,
+          179
+        ],
+        "evidence": {
+          "original_text": "#C C adjusts the a plastic with her left hand."
+        }
+      },
+      {
+        "caption_id": "C179",
+        "frame_index": 179,
+        "sample_interval": [
+          179,
+          180
+        ],
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "leg"
+            }
+          ],
+          "original_text": "#C C moves the leg"
+        }
+      }
+    ]
+  },
+  "temporal_archive": {
+    "entities": [
+      {
+        "id": "E0",
+        "label": "carries a chair",
+        "attributes": [],
+        "scene_ids": [
+          "S1"
+        ],
+        "state_ids": [
+          "T0"
+        ]
+      },
+      {
+        "id": "E1",
+        "label": "walks into the kitchen",
+        "attributes": [],
+        "scene_ids": [
+          "S1"
+        ],
+        "state_ids": [
+          "T1"
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "T0",
+        "entity_id": "E0",
+        "scene_id": "S1",
+        "description": "#O man X carries a chair",
+        "logical_state_id": "T0",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 32,
+        "last_observed_at": 32,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          33
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C32"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          32,
+          32
+        ],
+        "source_support_interval": [
+          32,
+          33
+        ]
+      },
+      {
+        "id": "T1",
+        "entity_id": "E1",
+        "scene_id": "S1",
+        "description": "#O the dog Y walks into the kitchen.",
+        "logical_state_id": "T1",
+        "fragment_kind": "initial_observation",
+        "first_observed_at": 33,
+        "last_observed_at": 33,
+        "valid_from": null,
+        "valid_to": null,
+        "valid_from_bounds": [
+          null,
+          34
+        ],
+        "valid_to_bounds": null,
+        "status": "caption_asserted",
+        "boundary": "initial_observation",
+        "source_caption_ids": [
+          "C33"
+        ],
+        "relation_ids": [],
+        "observed_support_interval": [
+          33,
+          33
+        ],
+        "source_support_interval": [
+          33,
+          34
+        ]
+      }
+    ],
+    "transitions": [],
+    "relations": [],
+    "lineage": [],
+    "context_selection": {
+      "total_entities": 2,
+      "selected_entities": 2,
+      "total_states": 2,
+      "selected_states": 2,
+      "attributes_per_entity": 16,
+      "note": "Full source graph is retained separately; this is a bounded retrieval view.",
+      "partial_memory": true
+    },
+    "source_type": "caption",
+    "evidence_policy": "Assertions extracted from original timestamped summaries; identities are text inferences, not pixel-verified facts. Unreported changes and persistence remain unknown.",
+    "identities": [],
+    "partial": true,
+    "unresolved_observations": [],
+    "temporal_organization_policy": "Original caption assertions and existing local entities only. Continuity and cross-scene identity are text inferences. Unknown gaps, causes and physical identities remain unknown. Repeated actions are not automatically a single continuous state."
+  },
+  "visual_archive": [],
+  "pool_sha256": "15d609a9722f3affcddeaddc14af4f57da4faba5972f667b0d0b5853899dc62a",
+  "policy": "These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence. Compact ranges combine exactly adjacent samples of the same statement; all original sample intervals remain archived and do not prove continuous activity.",
+  "source_counts": {
+    "description": 73,
+    "H fact": 51,
+    "temporal state": 2
+  },
+  "parent_memory_variant": "I",
+  "underlying_memory_variant": "H",
+  "merged_archive": {
+    "schema": "merged-lazy-memory-I-v2-H",
+    "parent_memory_variant": "H",
+    "records": [
+      {
+        "id": "R0",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "kitchen towel"
+            }
+          ],
+          "original_text": "#C C holds a kitchen towel"
+        }
+      },
+      {
+        "id": "R1",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "pushes",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O The woman X pushes a chair aside with her left hand."
+        }
+      },
+      {
+        "id": "R2",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "holds",
+              "patient": "white wooden plaque"
+            }
+          ],
+          "original_text": "#O The dog X holds a white wooden plaque with his right hand."
+        }
+      },
+      {
+        "id": "R3",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "adjusts",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O The woman Y adjusts the chair."
+        }
+      },
+      {
+        "id": "R4",
+        "evidence": {
+          "original_text": "#O The woman X walks to the dining area."
+        }
+      },
+      {
+        "id": "R5",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "lifts",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O The man X lifts a chair"
+        }
+      },
+      {
+        "id": "R6",
+        "evidence": {
+          "original_text": "#C C walks away from the table"
+        }
+      },
+      {
+        "id": "R7",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "flashlight"
+            }
+          ],
+          "original_text": "#C C moves a flashlight in the container"
+        }
+      },
+      {
+        "id": "R8",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "person X",
+              "verb": "opens",
+              "patient": "closet door"
+            }
+          ],
+          "original_text": "#O person X opens the closet door"
+        }
+      },
+      {
+        "id": "R9",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "person X",
+              "verb": "opens",
+              "patient": "drawer"
+            }
+          ],
+          "original_text": "#O person X opens a drawer"
+        }
+      },
+      {
+        "id": "R10",
+        "evidence": {
+          "original_text": "#O A man X walks into a bedroom."
+        }
+      },
+      {
+        "id": "R11",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "moves",
+              "patient": "black wooden spoon"
+            }
+          ],
+          "original_text": "#O The woman X moves the black wooden spoon on the dining table with her right hand."
+        }
+      },
+      {
+        "id": "R12",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "drops",
+              "patient": "white bag"
+            }
+          ],
+          "attributes": [
+            {
+              "entity": "bag",
+              "property": "color",
+              "value": "white"
+            }
+          ],
+          "original_text": "#O The dog X drops a white bag on the table."
+        }
+      },
+      {
+        "id": "R13",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Y",
+              "verb": "picks",
+              "patient": "leash"
+            }
+          ],
+          "original_text": "#O The dog Y picks a leash with his right hand."
+        }
+      },
+      {
+        "id": "R14",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "woman X",
+              "verb": "picks",
+              "patient": "cloth"
+            }
+          ],
+          "original_text": "#O woman X picks the cloth"
+        }
+      },
+      {
+        "id": "R15",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "man X",
+              "verb": "carries",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O man X carries a chair"
+        }
+      },
+      {
+        "id": "R16",
+        "evidence": {
+          "original_text": "#O the dog Y walks into the kitchen."
+        }
+      },
+      {
+        "id": "R17",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "carries",
+              "patient": "baby"
+            }
+          ],
+          "original_text": "#C C carries the baby sitting on the chair."
+        }
+      },
+      {
+        "id": "R18",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "man Y",
+              "verb": "pulls",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#O man Y pulls the chair"
+        }
+      },
+      {
+        "id": "R19",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "hand towel"
+            }
+          ],
+          "original_text": "#C C pulls the hand towel"
+        }
+      },
+      {
+        "id": "R20",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "man Y",
+              "verb": "picks",
+              "patient": "bottle"
+            }
+          ],
+          "original_text": "#O man Y picks the bottle from the table "
+        }
+      },
+      {
+        "id": "R21",
+        "evidence": {
+          "original_text": "#C C places the pillow on a chair"
+        }
+      },
+      {
+        "id": "R22",
+        "evidence": {
+          "original_text": "#C C looks around the house"
+        }
+      },
+      {
+        "id": "R23",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "touches",
+              "patient": "baby"
+            }
+          ],
+          "original_text": "#O The baby X touches the baby"
+        }
+      },
+      {
+        "id": "R24",
+        "evidence": {
+          "original_text": "#O Woman Y moves the hand from the table"
+        }
+      },
+      {
+        "id": "R25",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "book"
+            }
+          ],
+          "original_text": "#C C holds a book"
+        }
+      },
+      {
+        "id": "R26",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#C C holds the chair"
+        }
+      },
+      {
+        "id": "R27",
+        "evidence": {
+          "original_text": "#C C looks around"
+        }
+      },
+      {
+        "id": "R28",
+        "evidence": {
+          "original_text": "#C C walks to a chair."
+        }
+      },
+      {
+        "id": "R29",
+        "evidence": {
+          "original_text": "#C C Looks at the chairs "
+        }
+      },
+      {
+        "id": "R30",
+        "evidence": {
+          "original_text": "#C C looks around the room"
+        }
+      },
+      {
+        "id": "R31",
+        "evidence": {
+          "original_text": "#C C looks at the chair"
+        }
+      },
+      {
+        "id": "R32",
+        "evidence": {
+          "original_text": "#C C walks towards the kitchen."
+        }
+      },
+      {
+        "id": "R33",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "woman Y",
+              "verb": "touches",
+              "patient": "phone"
+            }
+          ],
+          "original_text": "#O woman Y touches her phone "
+        }
+      },
+      {
+        "id": "R34",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Woman X",
+              "verb": "Picks",
+              "patient": "piece of cloth"
+            }
+          ],
+          "original_text": "#O Woman X Picks a piece of cloth"
+        }
+      },
+      {
+        "id": "R35",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "drops",
+              "patient": "red toy"
+            }
+          ],
+          "attributes": [
+            {
+              "entity": "toy",
+              "property": "color",
+              "value": "red"
+            }
+          ],
+          "original_text": "#O The woman X drops the red toy on the table with her left hand."
+        }
+      },
+      {
+        "id": "R36",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "around the room"
+            }
+          ],
+          "original_text": "#C C moves around the room"
+        }
+      },
+      {
+        "id": "R37",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "cloth"
+            }
+          ],
+          "original_text": "#C C picks the cloth"
+        }
+      },
+      {
+        "id": "R38",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "puts",
+              "patient": "paper"
+            }
+          ],
+          "original_text": "#C C puts the paper in the bucket"
+        }
+      },
+      {
+        "id": "R39",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "puts",
+              "patient": "handbag"
+            }
+          ],
+          "original_text": "#C C puts the handbag down"
+        }
+      },
+      {
+        "id": "R40",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#C C moves the chair "
+        }
+      },
+      {
+        "id": "R41",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "book",
+              "body_part": "hands"
+            }
+          ],
+          "original_text": "#C C holds the book in her hands."
+        }
+      },
+      {
+        "id": "R42",
+        "evidence": {
+          "original_text": "#C C talks to a man X "
+        }
+      },
+      {
+        "id": "R43",
+        "evidence": {
+          "original_text": "#C C looks at the window"
+        }
+      },
+      {
+        "id": "R44",
+        "evidence": {
+          "original_text": "#C C looks at the dog"
+        }
+      },
+      {
+        "id": "R45",
+        "evidence": {
+          "original_text": "#C C looks at the room"
+        }
+      },
+      {
+        "id": "R46",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "touches",
+              "patient": "chair"
+            }
+          ],
+          "original_text": "#C C touches a chair"
+        }
+      },
+      {
+        "id": "R47",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "hand"
+            }
+          ],
+          "original_text": "#C C moves the hand"
+        }
+      },
+      {
+        "id": "R48",
+        "evidence": {
+          "original_text": "#C C looks at the baby"
+        }
+      },
+      {
+        "id": "R49",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "folds",
+              "patient": "top of the blanket",
+              "body_part": "both hands"
+            }
+          ],
+          "original_text": "#C C folds the top of the blanket on her laps with both hands."
+        }
+      },
+      {
+        "id": "R50",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "paper"
+            }
+          ],
+          "original_text": "#C C pulls the paper"
+        }
+      },
+      {
+        "id": "R51",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "unfolds",
+              "patient": "cloth"
+            }
+          ],
+          "original_text": "#C C unfolds the cloth"
+        }
+      },
+      {
+        "id": "R52",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "white wooden spoon",
+              "body_part": "both hands"
+            }
+          ],
+          "original_text": "#C C holds the white wooden spoon with both hands."
+        }
+      },
+      {
+        "id": "R53",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "folds",
+              "patient": "paper"
+            }
+          ],
+          "original_text": "#C C folds the paper"
+        }
+      },
+      {
+        "id": "R54",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "lifts",
+              "patient": "bowl"
+            }
+          ],
+          "original_text": "#C C lifts a bowl on the dining table."
+        }
+      },
+      {
+        "id": "R55",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "lifts",
+              "patient": "baby"
+            }
+          ],
+          "original_text": "#C C lifts the baby "
+        }
+      },
+      {
+        "id": "R56",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "removes",
+              "patient": "biscuit",
+              "body_part": "both hands"
+            }
+          ],
+          "original_text": "#C C removes the biscuit from the pack with both hands."
+        }
+      },
+      {
+        "id": "R57",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "takes",
+              "patient": "food"
+            }
+          ],
+          "original_text": "#C C takes food"
+        }
+      },
+      {
+        "id": "R58",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "reads",
+              "patient": "instructions"
+            }
+          ],
+          "original_text": "#C C reads the instructions "
+        }
+      },
+      {
+        "id": "R59",
+        "evidence": {
+          "attributes": [
+            {
+              "entity": "X",
+              "property": "color",
+              "value": "woman"
+            }
+          ],
+          "original_text": "#O A woman X talks to C"
+        }
+      },
+      {
+        "id": "R60",
+        "evidence": {
+          "original_text": "#C C puts the bottle in the bag"
+        }
+      },
+      {
+        "id": "R61",
+        "evidence": {
+          "original_text": "#O The woman X adjusts her left hand on her right leg."
+        }
+      },
+      {
+        "id": "R62",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "touches",
+              "patient": "book"
+            }
+          ],
+          "original_text": "#O A woman X touches the book"
+        }
+      },
+      {
+        "id": "R63",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "Man X",
+              "verb": "holds",
+              "patient": "spoon",
+              "body_part": "right hand"
+            }
+          ],
+          "original_text": "#O Man X holds a spoon with his right hand."
+        }
+      },
+      {
+        "id": "R64",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "baby Y",
+              "verb": "holds",
+              "patient": "toy",
+              "body_part": "left hand"
+            }
+          ],
+          "original_text": "#O The baby Y holds the toy with his left hand."
+        }
+      },
+      {
+        "id": "R65",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "X",
+              "verb": "reads",
+              "patient": "paper"
+            }
+          ],
+          "original_text": "#O A woman X reads a paper"
+        }
+      },
+      {
+        "id": "R66",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "touches",
+              "patient": "book"
+            }
+          ],
+          "original_text": "#C C touches the book"
+        }
+      },
+      {
+        "id": "R67",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "stretches",
+              "patient": "cloth"
+            }
+          ],
+          "original_text": "#C C stretches the cloth"
+        }
+      },
+      {
+        "id": "R68",
+        "evidence": {
+          "original_text": "#C C puts the baby in the basket "
+        }
+      },
+      {
+        "id": "R69",
+        "evidence": {
+          "original_text": "#C C adjusts the a plastic with her left hand."
+        }
+      },
+      {
+        "id": "R70",
+        "evidence": {
+          "actions": [
+            {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "leg"
+            }
+          ],
+          "original_text": "#C C moves the leg"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "caption_id": "C17",
+        "frame_index": 17,
+        "sample_interval": [
+          17,
+          18
+        ],
+        "record_id": "R0"
+      },
+      {
+        "caption_id": "C18",
+        "frame_index": 18,
+        "sample_interval": [
+          18,
+          19
+        ],
+        "record_id": "R1"
+      },
+      {
+        "caption_id": "C19",
+        "frame_index": 19,
+        "sample_interval": [
+          19,
+          20
+        ],
+        "record_id": "R2"
+      },
+      {
+        "caption_id": "C20",
+        "frame_index": 20,
+        "sample_interval": [
+          20,
+          21
+        ],
+        "record_id": "R3"
+      },
+      {
+        "caption_id": "C21",
+        "frame_index": 21,
+        "sample_interval": [
+          21,
+          22
+        ],
+        "record_id": "R4"
+      },
+      {
+        "caption_id": "C22",
+        "frame_index": 22,
+        "sample_interval": [
+          22,
+          23
+        ],
+        "record_id": "R5"
+      },
+      {
+        "caption_id": "C23",
+        "frame_index": 23,
+        "sample_interval": [
+          23,
+          24
+        ],
+        "record_id": "R6"
+      },
+      {
+        "caption_id": "C24",
+        "frame_index": 24,
+        "sample_interval": [
+          24,
+          25
+        ],
+        "record_id": "R7"
+      },
+      {
+        "caption_id": "C25",
+        "frame_index": 25,
+        "sample_interval": [
+          25,
+          26
+        ],
+        "record_id": "R8"
+      },
+      {
+        "caption_id": "C26",
+        "frame_index": 26,
+        "sample_interval": [
+          26,
+          27
+        ],
+        "record_id": "R9"
+      },
+      {
+        "caption_id": "C27",
+        "frame_index": 27,
+        "sample_interval": [
+          27,
+          28
+        ],
+        "record_id": "R10"
+      },
+      {
+        "caption_id": "C28",
+        "frame_index": 28,
+        "sample_interval": [
+          28,
+          29
+        ],
+        "record_id": "R11"
+      },
+      {
+        "caption_id": "C29",
+        "frame_index": 29,
+        "sample_interval": [
+          29,
+          30
+        ],
+        "record_id": "R12"
+      },
+      {
+        "caption_id": "C30",
+        "frame_index": 30,
+        "sample_interval": [
+          30,
+          31
+        ],
+        "record_id": "R13"
+      },
+      {
+        "caption_id": "C31",
+        "frame_index": 31,
+        "sample_interval": [
+          31,
+          32
+        ],
+        "record_id": "R14"
+      },
+      {
+        "caption_id": "C32",
+        "frame_index": 32,
+        "sample_interval": [
+          32,
+          33
+        ],
+        "record_id": "R15"
+      },
+      {
+        "caption_id": "C33",
+        "frame_index": 33,
+        "sample_interval": [
+          33,
+          34
+        ],
+        "record_id": "R16"
+      },
+      {
+        "caption_id": "C79",
+        "frame_index": 79,
+        "sample_interval": [
+          79,
+          80
+        ],
+        "record_id": "R17"
+      },
+      {
+        "caption_id": "C80",
+        "frame_index": 80,
+        "sample_interval": [
+          80,
+          81
+        ],
+        "record_id": "R18"
+      },
+      {
+        "caption_id": "C81",
+        "frame_index": 81,
+        "sample_interval": [
+          81,
+          82
+        ],
+        "record_id": "R19"
+      },
+      {
+        "caption_id": "C82",
+        "frame_index": 82,
+        "sample_interval": [
+          82,
+          83
+        ],
+        "record_id": "R20"
+      },
+      {
+        "caption_id": "C83",
+        "frame_index": 83,
+        "sample_interval": [
+          83,
+          84
+        ],
+        "record_id": "R21"
+      },
+      {
+        "caption_id": "C84",
+        "frame_index": 84,
+        "sample_interval": [
+          84,
+          85
+        ],
+        "record_id": "R22"
+      },
+      {
+        "caption_id": "C85",
+        "frame_index": 85,
+        "sample_interval": [
+          85,
+          86
+        ],
+        "record_id": "R23"
+      },
+      {
+        "caption_id": "C86",
+        "frame_index": 86,
+        "sample_interval": [
+          86,
+          87
+        ],
+        "record_id": "R24"
+      },
+      {
+        "caption_id": "C87",
+        "frame_index": 87,
+        "sample_interval": [
+          87,
+          88
+        ],
+        "record_id": "R25"
+      },
+      {
+        "caption_id": "C88",
+        "frame_index": 88,
+        "sample_interval": [
+          88,
+          89
+        ],
+        "record_id": "R26"
+      },
+      {
+        "caption_id": "C89",
+        "frame_index": 89,
+        "sample_interval": [
+          89,
+          90
+        ],
+        "record_id": "R27"
+      },
+      {
+        "caption_id": "C90",
+        "frame_index": 90,
+        "sample_interval": [
+          90,
+          91
+        ],
+        "record_id": "R28"
+      },
+      {
+        "caption_id": "C91",
+        "frame_index": 91,
+        "sample_interval": [
+          91,
+          92
+        ],
+        "record_id": "R29"
+      },
+      {
+        "caption_id": "C92",
+        "frame_index": 92,
+        "sample_interval": [
+          92,
+          93
+        ],
+        "record_id": "R30"
+      },
+      {
+        "caption_id": "C93",
+        "frame_index": 93,
+        "sample_interval": [
+          93,
+          94
+        ],
+        "record_id": "R31"
+      },
+      {
+        "caption_id": "C94",
+        "frame_index": 94,
+        "sample_interval": [
+          94,
+          95
+        ],
+        "record_id": "R30"
+      },
+      {
+        "caption_id": "C95",
+        "frame_index": 95,
+        "sample_interval": [
+          95,
+          96
+        ],
+        "record_id": "R31"
+      },
+      {
+        "caption_id": "C96",
+        "frame_index": 96,
+        "sample_interval": [
+          96,
+          97
+        ],
+        "record_id": "R32"
+      },
+      {
+        "caption_id": "C97",
+        "frame_index": 97,
+        "sample_interval": [
+          97,
+          98
+        ],
+        "record_id": "R33"
+      },
+      {
+        "caption_id": "C98",
+        "frame_index": 98,
+        "sample_interval": [
+          98,
+          99
+        ],
+        "record_id": "R34"
+      },
+      {
+        "caption_id": "C99",
+        "frame_index": 99,
+        "sample_interval": [
+          99,
+          100
+        ],
+        "record_id": "R35"
+      },
+      {
+        "caption_id": "C100",
+        "frame_index": 100,
+        "sample_interval": [
+          100,
+          101
+        ],
+        "record_id": "R36"
+      },
+      {
+        "caption_id": "C101",
+        "frame_index": 101,
+        "sample_interval": [
+          101,
+          102
+        ],
+        "record_id": "R37"
+      },
+      {
+        "caption_id": "C102",
+        "frame_index": 102,
+        "sample_interval": [
+          102,
+          103
+        ],
+        "record_id": "R38"
+      },
+      {
+        "caption_id": "C103",
+        "frame_index": 103,
+        "sample_interval": [
+          103,
+          104
+        ],
+        "record_id": "R39"
+      },
+      {
+        "caption_id": "C104",
+        "frame_index": 104,
+        "sample_interval": [
+          104,
+          105
+        ],
+        "record_id": "R40"
+      },
+      {
+        "caption_id": "C150",
+        "frame_index": 150,
+        "sample_interval": [
+          150,
+          151
+        ],
+        "record_id": "R41"
+      },
+      {
+        "caption_id": "C151",
+        "frame_index": 151,
+        "sample_interval": [
+          151,
+          152
+        ],
+        "record_id": "R42"
+      },
+      {
+        "caption_id": "C152",
+        "frame_index": 152,
+        "sample_interval": [
+          152,
+          153
+        ],
+        "record_id": "R43"
+      },
+      {
+        "caption_id": "C153",
+        "frame_index": 153,
+        "sample_interval": [
+          153,
+          154
+        ],
+        "record_id": "R44"
+      },
+      {
+        "caption_id": "C154",
+        "frame_index": 154,
+        "sample_interval": [
+          154,
+          155
+        ],
+        "record_id": "R45"
+      },
+      {
+        "caption_id": "C155",
+        "frame_index": 155,
+        "sample_interval": [
+          155,
+          156
+        ],
+        "record_id": "R46"
+      },
+      {
+        "caption_id": "C156",
+        "frame_index": 156,
+        "sample_interval": [
+          156,
+          157
+        ],
+        "record_id": "R47"
+      },
+      {
+        "caption_id": "C157",
+        "frame_index": 157,
+        "sample_interval": [
+          157,
+          158
+        ],
+        "record_id": "R48"
+      },
+      {
+        "caption_id": "C158",
+        "frame_index": 158,
+        "sample_interval": [
+          158,
+          159
+        ],
+        "record_id": "R49"
+      },
+      {
+        "caption_id": "C159",
+        "frame_index": 159,
+        "sample_interval": [
+          159,
+          160
+        ],
+        "record_id": "R50"
+      },
+      {
+        "caption_id": "C160",
+        "frame_index": 160,
+        "sample_interval": [
+          160,
+          161
+        ],
+        "record_id": "R51"
+      },
+      {
+        "caption_id": "C161",
+        "frame_index": 161,
+        "sample_interval": [
+          161,
+          162
+        ],
+        "record_id": "R52"
+      },
+      {
+        "caption_id": "C162",
+        "frame_index": 162,
+        "sample_interval": [
+          162,
+          163
+        ],
+        "record_id": "R53"
+      },
+      {
+        "caption_id": "C163",
+        "frame_index": 163,
+        "sample_interval": [
+          163,
+          164
+        ],
+        "record_id": "R54"
+      },
+      {
+        "caption_id": "C164",
+        "frame_index": 164,
+        "sample_interval": [
+          164,
+          165
+        ],
+        "record_id": "R55"
+      },
+      {
+        "caption_id": "C165",
+        "frame_index": 165,
+        "sample_interval": [
+          165,
+          166
+        ],
+        "record_id": "R56"
+      },
+      {
+        "caption_id": "C166",
+        "frame_index": 166,
+        "sample_interval": [
+          166,
+          167
+        ],
+        "record_id": "R57"
+      },
+      {
+        "caption_id": "C167",
+        "frame_index": 167,
+        "sample_interval": [
+          167,
+          168
+        ],
+        "record_id": "R58"
+      },
+      {
+        "caption_id": "C168",
+        "frame_index": 168,
+        "sample_interval": [
+          168,
+          169
+        ],
+        "record_id": "R59"
+      },
+      {
+        "caption_id": "C169",
+        "frame_index": 169,
+        "sample_interval": [
+          169,
+          170
+        ],
+        "record_id": "R60"
+      },
+      {
+        "caption_id": "C170",
+        "frame_index": 170,
+        "sample_interval": [
+          170,
+          171
+        ],
+        "record_id": "R61"
+      },
+      {
+        "caption_id": "C171",
+        "frame_index": 171,
+        "sample_interval": [
+          171,
+          172
+        ],
+        "record_id": "R62"
+      },
+      {
+        "caption_id": "C172",
+        "frame_index": 172,
+        "sample_interval": [
+          172,
+          173
+        ],
+        "record_id": "R63"
+      },
+      {
+        "caption_id": "C173",
+        "frame_index": 173,
+        "sample_interval": [
+          173,
+          174
+        ],
+        "record_id": "R64"
+      },
+      {
+        "caption_id": "C174",
+        "frame_index": 174,
+        "sample_interval": [
+          174,
+          175
+        ],
+        "record_id": "R65"
+      },
+      {
+        "caption_id": "C175",
+        "frame_index": 175,
+        "sample_interval": [
+          175,
+          176
+        ],
+        "record_id": "R66"
+      },
+      {
+        "caption_id": "C176",
+        "frame_index": 176,
+        "sample_interval": [
+          176,
+          177
+        ],
+        "record_id": "R67"
+      },
+      {
+        "caption_id": "C177",
+        "frame_index": 177,
+        "sample_interval": [
+          177,
+          178
+        ],
+        "record_id": "R68"
+      },
+      {
+        "caption_id": "C178",
+        "frame_index": 178,
+        "sample_interval": [
+          178,
+          179
+        ],
+        "record_id": "R69"
+      },
+      {
+        "caption_id": "C179",
+        "frame_index": 179,
+        "sample_interval": [
+          179,
+          180
+        ],
+        "record_id": "R70"
+      }
+    ],
+    "groups": [
+      {
+        "id": "G0",
+        "body": "#C C holds a kitchen towel",
+        "observation_indices": [
+          0
+        ]
+      },
+      {
+        "id": "G1",
+        "body": "#O The woman X pushes a chair aside with her left hand.",
+        "observation_indices": [
+          1
+        ]
+      },
+      {
+        "id": "G2",
+        "body": "#O The dog X holds a white wooden plaque with his right hand.",
+        "observation_indices": [
+          2
+        ]
+      },
+      {
+        "id": "G3",
+        "body": "#O The woman Y adjusts the chair.",
+        "observation_indices": [
+          3
+        ]
+      },
+      {
+        "id": "G4",
+        "body": "#O The woman X walks to the dining area.",
+        "observation_indices": [
+          4
+        ]
+      },
+      {
+        "id": "G5",
+        "body": "#O The man X lifts a chair",
+        "observation_indices": [
+          5
+        ]
+      },
+      {
+        "id": "G6",
+        "body": "#C C walks away from the table",
+        "observation_indices": [
+          6
+        ]
+      },
+      {
+        "id": "G7",
+        "body": "#C C moves a flashlight in the container",
+        "observation_indices": [
+          7
+        ]
+      },
+      {
+        "id": "G8",
+        "body": "#O person X opens the closet door",
+        "observation_indices": [
+          8
+        ]
+      },
+      {
+        "id": "G9",
+        "body": "#O person X opens a drawer",
+        "observation_indices": [
+          9
+        ]
+      },
+      {
+        "id": "G10",
+        "body": "#O A man X walks into a bedroom.",
+        "observation_indices": [
+          10
+        ]
+      },
+      {
+        "id": "G11",
+        "body": "#O The woman X moves the black wooden spoon on the dining table with her right hand.",
+        "observation_indices": [
+          11
+        ]
+      },
+      {
+        "id": "G12",
+        "body": "#O The dog X drops a white bag on the table.",
+        "observation_indices": [
+          12
+        ]
+      },
+      {
+        "id": "G13",
+        "body": "#O The dog Y picks a leash with his right hand.",
+        "observation_indices": [
+          13
+        ]
+      },
+      {
+        "id": "G14",
+        "body": "#O woman X picks the cloth",
+        "observation_indices": [
+          14
+        ]
+      },
+      {
+        "id": "G15",
+        "body": "#O man X carries a chair",
+        "observation_indices": [
+          15
+        ]
+      },
+      {
+        "id": "G16",
+        "body": "#O the dog Y walks into the kitchen.",
+        "observation_indices": [
+          16
+        ]
+      },
+      {
+        "id": "G17",
+        "body": "#C C carries the baby sitting on the chair.",
+        "observation_indices": [
+          17
+        ]
+      },
+      {
+        "id": "G18",
+        "body": "#O man Y pulls the chair",
+        "observation_indices": [
+          18
+        ]
+      },
+      {
+        "id": "G19",
+        "body": "#C C pulls the hand towel",
+        "observation_indices": [
+          19
+        ]
+      },
+      {
+        "id": "G20",
+        "body": "#O man Y picks the bottle from the table ",
+        "observation_indices": [
+          20
+        ]
+      },
+      {
+        "id": "G21",
+        "body": "#C C places the pillow on a chair",
+        "observation_indices": [
+          21
+        ]
+      },
+      {
+        "id": "G22",
+        "body": "#C C looks around the house",
+        "observation_indices": [
+          22
+        ]
+      },
+      {
+        "id": "G23",
+        "body": "#O The baby X touches the baby",
+        "observation_indices": [
+          23
+        ]
+      },
+      {
+        "id": "G24",
+        "body": "#O Woman Y moves the hand from the table",
+        "observation_indices": [
+          24
+        ]
+      },
+      {
+        "id": "G25",
+        "body": "#C C holds a book",
+        "observation_indices": [
+          25
+        ]
+      },
+      {
+        "id": "G26",
+        "body": "#C C holds the chair",
+        "observation_indices": [
+          26
+        ]
+      },
+      {
+        "id": "G27",
+        "body": "#C C looks around",
+        "observation_indices": [
+          27
+        ]
+      },
+      {
+        "id": "G28",
+        "body": "#C C walks to a chair.",
+        "observation_indices": [
+          28
+        ]
+      },
+      {
+        "id": "G29",
+        "body": "#C C Looks at the chairs ",
+        "observation_indices": [
+          29
+        ]
+      },
+      {
+        "id": "G30",
+        "body": "#C C looks around the room",
+        "observation_indices": [
+          30,
+          32
+        ]
+      },
+      {
+        "id": "G31",
+        "body": "#C C looks at the chair",
+        "observation_indices": [
+          31,
+          33
+        ]
+      },
+      {
+        "id": "G32",
+        "body": "#C C walks towards the kitchen.",
+        "observation_indices": [
+          34
+        ]
+      },
+      {
+        "id": "G33",
+        "body": "#O woman Y touches her phone ",
+        "observation_indices": [
+          35
+        ]
+      },
+      {
+        "id": "G34",
+        "body": "#O Woman X Picks a piece of cloth",
+        "observation_indices": [
+          36
+        ]
+      },
+      {
+        "id": "G35",
+        "body": "#O The woman X drops the red toy on the table with her left hand.",
+        "observation_indices": [
+          37
+        ]
+      },
+      {
+        "id": "G36",
+        "body": "#C C moves around the room",
+        "observation_indices": [
+          38
+        ]
+      },
+      {
+        "id": "G37",
+        "body": "#C C picks the cloth",
+        "observation_indices": [
+          39
+        ]
+      },
+      {
+        "id": "G38",
+        "body": "#C C puts the paper in the bucket",
+        "observation_indices": [
+          40
+        ]
+      },
+      {
+        "id": "G39",
+        "body": "#C C puts the handbag down",
+        "observation_indices": [
+          41
+        ]
+      },
+      {
+        "id": "G40",
+        "body": "#C C moves the chair ",
+        "observation_indices": [
+          42
+        ]
+      },
+      {
+        "id": "G41",
+        "body": "#C C holds the book in her hands.",
+        "observation_indices": [
+          43
+        ]
+      },
+      {
+        "id": "G42",
+        "body": "#C C talks to a man X ",
+        "observation_indices": [
+          44
+        ]
+      },
+      {
+        "id": "G43",
+        "body": "#C C looks at the window",
+        "observation_indices": [
+          45
+        ]
+      },
+      {
+        "id": "G44",
+        "body": "#C C looks at the dog",
+        "observation_indices": [
+          46
+        ]
+      },
+      {
+        "id": "G45",
+        "body": "#C C looks at the room",
+        "observation_indices": [
+          47
+        ]
+      },
+      {
+        "id": "G46",
+        "body": "#C C touches a chair",
+        "observation_indices": [
+          48
+        ]
+      },
+      {
+        "id": "G47",
+        "body": "#C C moves the hand",
+        "observation_indices": [
+          49
+        ]
+      },
+      {
+        "id": "G48",
+        "body": "#C C looks at the baby",
+        "observation_indices": [
+          50
+        ]
+      },
+      {
+        "id": "G49",
+        "body": "#C C folds the top of the blanket on her laps with both hands.",
+        "observation_indices": [
+          51
+        ]
+      },
+      {
+        "id": "G50",
+        "body": "#C C pulls the paper",
+        "observation_indices": [
+          52
+        ]
+      },
+      {
+        "id": "G51",
+        "body": "#C C unfolds the cloth",
+        "observation_indices": [
+          53
+        ]
+      },
+      {
+        "id": "G52",
+        "body": "#C C holds the white wooden spoon with both hands.",
+        "observation_indices": [
+          54
+        ]
+      },
+      {
+        "id": "G53",
+        "body": "#C C folds the paper",
+        "observation_indices": [
+          55
+        ]
+      },
+      {
+        "id": "G54",
+        "body": "#C C lifts a bowl on the dining table.",
+        "observation_indices": [
+          56
+        ]
+      },
+      {
+        "id": "G55",
+        "body": "#C C lifts the baby ",
+        "observation_indices": [
+          57
+        ]
+      },
+      {
+        "id": "G56",
+        "body": "#C C removes the biscuit from the pack with both hands.",
+        "observation_indices": [
+          58
+        ]
+      },
+      {
+        "id": "G57",
+        "body": "#C C takes food",
+        "observation_indices": [
+          59
+        ]
+      },
+      {
+        "id": "G58",
+        "body": "#C C reads the instructions ",
+        "observation_indices": [
+          60
+        ]
+      },
+      {
+        "id": "G59",
+        "body": "#O A woman X talks to C",
+        "observation_indices": [
+          61
+        ]
+      },
+      {
+        "id": "G60",
+        "body": "#C C puts the bottle in the bag",
+        "observation_indices": [
+          62
+        ]
+      },
+      {
+        "id": "G61",
+        "body": "#O The woman X adjusts her left hand on her right leg.",
+        "observation_indices": [
+          63
+        ]
+      },
+      {
+        "id": "G62",
+        "body": "#O A woman X touches the book",
+        "observation_indices": [
+          64
+        ]
+      },
+      {
+        "id": "G63",
+        "body": "#O Man X holds a spoon with his right hand.",
+        "observation_indices": [
+          65
+        ]
+      },
+      {
+        "id": "G64",
+        "body": "#O The baby Y holds the toy with his left hand.",
+        "observation_indices": [
+          66
+        ]
+      },
+      {
+        "id": "G65",
+        "body": "#O A woman X reads a paper",
+        "observation_indices": [
+          67
+        ]
+      },
+      {
+        "id": "G66",
+        "body": "#C C touches the book",
+        "observation_indices": [
+          68
+        ]
+      },
+      {
+        "id": "G67",
+        "body": "#C C stretches the cloth",
+        "observation_indices": [
+          69
+        ]
+      },
+      {
+        "id": "G68",
+        "body": "#C C puts the baby in the basket ",
+        "observation_indices": [
+          70
+        ]
+      },
+      {
+        "id": "G69",
+        "body": "#C C adjusts the a plastic with her left hand.",
+        "observation_indices": [
+          71
+        ]
+      },
+      {
+        "id": "G70",
+        "body": "#C C moves the leg",
+        "observation_indices": [
+          72
+        ]
+      }
+    ],
+    "policy": {
+      "grouping": "identical_visible_assertion_across_selected_samples",
+      "group_order": "first_observation",
+      "source_order_restorable": true,
+      "identities_merged": false,
+      "continuous_duration_inferred": false,
+      "event_counts_inferred": false
+    }
+  },
+  "merged_source_audit": {
+    "version": "merged-lazy-memory-I-v2-H-adjacent-v1",
+    "parent_memory_variant": "H",
+    "source_rows": 73,
+    "covered_source_rows": 73,
+    "rendered_rows": 71,
+    "merged_groups": 2,
+    "duplicate_assertion_rows_removed": 2,
+    "source_rows_merged": true,
+    "rows": [
+      {
+        "group_id": "G0",
+        "observation_indices": [
+          0
+        ],
+        "caption_ids": [
+          "C17"
+        ],
+        "frame_indices": [
+          17
+        ],
+        "sample_intervals": [
+          [
+            17,
+            18
+          ]
+        ],
+        "display_intervals": [
+          [
+            17,
+            18
+          ]
+        ],
+        "prompt_line": 1
+      },
+      {
+        "group_id": "G1",
+        "observation_indices": [
+          1
+        ],
+        "caption_ids": [
+          "C18"
+        ],
+        "frame_indices": [
+          18
+        ],
+        "sample_intervals": [
+          [
+            18,
+            19
+          ]
+        ],
+        "display_intervals": [
+          [
+            18,
+            19
+          ]
+        ],
+        "prompt_line": 2
+      },
+      {
+        "group_id": "G2",
+        "observation_indices": [
+          2
+        ],
+        "caption_ids": [
+          "C19"
+        ],
+        "frame_indices": [
+          19
+        ],
+        "sample_intervals": [
+          [
+            19,
+            20
+          ]
+        ],
+        "display_intervals": [
+          [
+            19,
+            20
+          ]
+        ],
+        "prompt_line": 3
+      },
+      {
+        "group_id": "G3",
+        "observation_indices": [
+          3
+        ],
+        "caption_ids": [
+          "C20"
+        ],
+        "frame_indices": [
+          20
+        ],
+        "sample_intervals": [
+          [
+            20,
+            21
+          ]
+        ],
+        "display_intervals": [
+          [
+            20,
+            21
+          ]
+        ],
+        "prompt_line": 4
+      },
+      {
+        "group_id": "G4",
+        "observation_indices": [
+          4
+        ],
+        "caption_ids": [
+          "C21"
+        ],
+        "frame_indices": [
+          21
+        ],
+        "sample_intervals": [
+          [
+            21,
+            22
+          ]
+        ],
+        "display_intervals": [
+          [
+            21,
+            22
+          ]
+        ],
+        "prompt_line": 5
+      },
+      {
+        "group_id": "G5",
+        "observation_indices": [
+          5
+        ],
+        "caption_ids": [
+          "C22"
+        ],
+        "frame_indices": [
+          22
+        ],
+        "sample_intervals": [
+          [
+            22,
+            23
+          ]
+        ],
+        "display_intervals": [
+          [
+            22,
+            23
+          ]
+        ],
+        "prompt_line": 6
+      },
+      {
+        "group_id": "G6",
+        "observation_indices": [
+          6
+        ],
+        "caption_ids": [
+          "C23"
+        ],
+        "frame_indices": [
+          23
+        ],
+        "sample_intervals": [
+          [
+            23,
+            24
+          ]
+        ],
+        "display_intervals": [
+          [
+            23,
+            24
+          ]
+        ],
+        "prompt_line": 7
+      },
+      {
+        "group_id": "G7",
+        "observation_indices": [
+          7
+        ],
+        "caption_ids": [
+          "C24"
+        ],
+        "frame_indices": [
+          24
+        ],
+        "sample_intervals": [
+          [
+            24,
+            25
+          ]
+        ],
+        "display_intervals": [
+          [
+            24,
+            25
+          ]
+        ],
+        "prompt_line": 8
+      },
+      {
+        "group_id": "G8",
+        "observation_indices": [
+          8
+        ],
+        "caption_ids": [
+          "C25"
+        ],
+        "frame_indices": [
+          25
+        ],
+        "sample_intervals": [
+          [
+            25,
+            26
+          ]
+        ],
+        "display_intervals": [
+          [
+            25,
+            26
+          ]
+        ],
+        "prompt_line": 9
+      },
+      {
+        "group_id": "G9",
+        "observation_indices": [
+          9
+        ],
+        "caption_ids": [
+          "C26"
+        ],
+        "frame_indices": [
+          26
+        ],
+        "sample_intervals": [
+          [
+            26,
+            27
+          ]
+        ],
+        "display_intervals": [
+          [
+            26,
+            27
+          ]
+        ],
+        "prompt_line": 10
+      },
+      {
+        "group_id": "G10",
+        "observation_indices": [
+          10
+        ],
+        "caption_ids": [
+          "C27"
+        ],
+        "frame_indices": [
+          27
+        ],
+        "sample_intervals": [
+          [
+            27,
+            28
+          ]
+        ],
+        "display_intervals": [
+          [
+            27,
+            28
+          ]
+        ],
+        "prompt_line": 11
+      },
+      {
+        "group_id": "G11",
+        "observation_indices": [
+          11
+        ],
+        "caption_ids": [
+          "C28"
+        ],
+        "frame_indices": [
+          28
+        ],
+        "sample_intervals": [
+          [
+            28,
+            29
+          ]
+        ],
+        "display_intervals": [
+          [
+            28,
+            29
+          ]
+        ],
+        "prompt_line": 12
+      },
+      {
+        "group_id": "G12",
+        "observation_indices": [
+          12
+        ],
+        "caption_ids": [
+          "C29"
+        ],
+        "frame_indices": [
+          29
+        ],
+        "sample_intervals": [
+          [
+            29,
+            30
+          ]
+        ],
+        "display_intervals": [
+          [
+            29,
+            30
+          ]
+        ],
+        "prompt_line": 13
+      },
+      {
+        "group_id": "G13",
+        "observation_indices": [
+          13
+        ],
+        "caption_ids": [
+          "C30"
+        ],
+        "frame_indices": [
+          30
+        ],
+        "sample_intervals": [
+          [
+            30,
+            31
+          ]
+        ],
+        "display_intervals": [
+          [
+            30,
+            31
+          ]
+        ],
+        "prompt_line": 14
+      },
+      {
+        "group_id": "G14",
+        "observation_indices": [
+          14
+        ],
+        "caption_ids": [
+          "C31"
+        ],
+        "frame_indices": [
+          31
+        ],
+        "sample_intervals": [
+          [
+            31,
+            32
+          ]
+        ],
+        "display_intervals": [
+          [
+            31,
+            32
+          ]
+        ],
+        "prompt_line": 15
+      },
+      {
+        "group_id": "G15",
+        "observation_indices": [
+          15
+        ],
+        "caption_ids": [
+          "C32"
+        ],
+        "frame_indices": [
+          32
+        ],
+        "sample_intervals": [
+          [
+            32,
+            33
+          ]
+        ],
+        "display_intervals": [
+          [
+            32,
+            33
+          ]
+        ],
+        "prompt_line": 16
+      },
+      {
+        "group_id": "G16",
+        "observation_indices": [
+          16
+        ],
+        "caption_ids": [
+          "C33"
+        ],
+        "frame_indices": [
+          33
+        ],
+        "sample_intervals": [
+          [
+            33,
+            34
+          ]
+        ],
+        "display_intervals": [
+          [
+            33,
+            34
+          ]
+        ],
+        "prompt_line": 17
+      },
+      {
+        "group_id": "G17",
+        "observation_indices": [
+          17
+        ],
+        "caption_ids": [
+          "C79"
+        ],
+        "frame_indices": [
+          79
+        ],
+        "sample_intervals": [
+          [
+            79,
+            80
+          ]
+        ],
+        "display_intervals": [
+          [
+            79,
+            80
+          ]
+        ],
+        "prompt_line": 18
+      },
+      {
+        "group_id": "G18",
+        "observation_indices": [
+          18
+        ],
+        "caption_ids": [
+          "C80"
+        ],
+        "frame_indices": [
+          80
+        ],
+        "sample_intervals": [
+          [
+            80,
+            81
+          ]
+        ],
+        "display_intervals": [
+          [
+            80,
+            81
+          ]
+        ],
+        "prompt_line": 19
+      },
+      {
+        "group_id": "G19",
+        "observation_indices": [
+          19
+        ],
+        "caption_ids": [
+          "C81"
+        ],
+        "frame_indices": [
+          81
+        ],
+        "sample_intervals": [
+          [
+            81,
+            82
+          ]
+        ],
+        "display_intervals": [
+          [
+            81,
+            82
+          ]
+        ],
+        "prompt_line": 20
+      },
+      {
+        "group_id": "G20",
+        "observation_indices": [
+          20
+        ],
+        "caption_ids": [
+          "C82"
+        ],
+        "frame_indices": [
+          82
+        ],
+        "sample_intervals": [
+          [
+            82,
+            83
+          ]
+        ],
+        "display_intervals": [
+          [
+            82,
+            83
+          ]
+        ],
+        "prompt_line": 21
+      },
+      {
+        "group_id": "G21",
+        "observation_indices": [
+          21
+        ],
+        "caption_ids": [
+          "C83"
+        ],
+        "frame_indices": [
+          83
+        ],
+        "sample_intervals": [
+          [
+            83,
+            84
+          ]
+        ],
+        "display_intervals": [
+          [
+            83,
+            84
+          ]
+        ],
+        "prompt_line": 22
+      },
+      {
+        "group_id": "G22",
+        "observation_indices": [
+          22
+        ],
+        "caption_ids": [
+          "C84"
+        ],
+        "frame_indices": [
+          84
+        ],
+        "sample_intervals": [
+          [
+            84,
+            85
+          ]
+        ],
+        "display_intervals": [
+          [
+            84,
+            85
+          ]
+        ],
+        "prompt_line": 23
+      },
+      {
+        "group_id": "G23",
+        "observation_indices": [
+          23
+        ],
+        "caption_ids": [
+          "C85"
+        ],
+        "frame_indices": [
+          85
+        ],
+        "sample_intervals": [
+          [
+            85,
+            86
+          ]
+        ],
+        "display_intervals": [
+          [
+            85,
+            86
+          ]
+        ],
+        "prompt_line": 24
+      },
+      {
+        "group_id": "G24",
+        "observation_indices": [
+          24
+        ],
+        "caption_ids": [
+          "C86"
+        ],
+        "frame_indices": [
+          86
+        ],
+        "sample_intervals": [
+          [
+            86,
+            87
+          ]
+        ],
+        "display_intervals": [
+          [
+            86,
+            87
+          ]
+        ],
+        "prompt_line": 25
+      },
+      {
+        "group_id": "G25",
+        "observation_indices": [
+          25
+        ],
+        "caption_ids": [
+          "C87"
+        ],
+        "frame_indices": [
+          87
+        ],
+        "sample_intervals": [
+          [
+            87,
+            88
+          ]
+        ],
+        "display_intervals": [
+          [
+            87,
+            88
+          ]
+        ],
+        "prompt_line": 26
+      },
+      {
+        "group_id": "G26",
+        "observation_indices": [
+          26
+        ],
+        "caption_ids": [
+          "C88"
+        ],
+        "frame_indices": [
+          88
+        ],
+        "sample_intervals": [
+          [
+            88,
+            89
+          ]
+        ],
+        "display_intervals": [
+          [
+            88,
+            89
+          ]
+        ],
+        "prompt_line": 27
+      },
+      {
+        "group_id": "G27",
+        "observation_indices": [
+          27
+        ],
+        "caption_ids": [
+          "C89"
+        ],
+        "frame_indices": [
+          89
+        ],
+        "sample_intervals": [
+          [
+            89,
+            90
+          ]
+        ],
+        "display_intervals": [
+          [
+            89,
+            90
+          ]
+        ],
+        "prompt_line": 28
+      },
+      {
+        "group_id": "G28",
+        "observation_indices": [
+          28
+        ],
+        "caption_ids": [
+          "C90"
+        ],
+        "frame_indices": [
+          90
+        ],
+        "sample_intervals": [
+          [
+            90,
+            91
+          ]
+        ],
+        "display_intervals": [
+          [
+            90,
+            91
+          ]
+        ],
+        "prompt_line": 29
+      },
+      {
+        "group_id": "G29",
+        "observation_indices": [
+          29
+        ],
+        "caption_ids": [
+          "C91"
+        ],
+        "frame_indices": [
+          91
+        ],
+        "sample_intervals": [
+          [
+            91,
+            92
+          ]
+        ],
+        "display_intervals": [
+          [
+            91,
+            92
+          ]
+        ],
+        "prompt_line": 30
+      },
+      {
+        "group_id": "G30",
+        "observation_indices": [
+          30,
+          32
+        ],
+        "caption_ids": [
+          "C92",
+          "C94"
+        ],
+        "frame_indices": [
+          92,
+          94
+        ],
+        "sample_intervals": [
+          [
+            92,
+            93
+          ],
+          [
+            94,
+            95
+          ]
+        ],
+        "display_intervals": [
+          [
+            92,
+            93
+          ],
+          [
+            94,
+            95
+          ]
+        ],
+        "prompt_line": 31
+      },
+      {
+        "group_id": "G31",
+        "observation_indices": [
+          31,
+          33
+        ],
+        "caption_ids": [
+          "C93",
+          "C95"
+        ],
+        "frame_indices": [
+          93,
+          95
+        ],
+        "sample_intervals": [
+          [
+            93,
+            94
+          ],
+          [
+            95,
+            96
+          ]
+        ],
+        "display_intervals": [
+          [
+            93,
+            94
+          ],
+          [
+            95,
+            96
+          ]
+        ],
+        "prompt_line": 32
+      },
+      {
+        "group_id": "G32",
+        "observation_indices": [
+          34
+        ],
+        "caption_ids": [
+          "C96"
+        ],
+        "frame_indices": [
+          96
+        ],
+        "sample_intervals": [
+          [
+            96,
+            97
+          ]
+        ],
+        "display_intervals": [
+          [
+            96,
+            97
+          ]
+        ],
+        "prompt_line": 33
+      },
+      {
+        "group_id": "G33",
+        "observation_indices": [
+          35
+        ],
+        "caption_ids": [
+          "C97"
+        ],
+        "frame_indices": [
+          97
+        ],
+        "sample_intervals": [
+          [
+            97,
+            98
+          ]
+        ],
+        "display_intervals": [
+          [
+            97,
+            98
+          ]
+        ],
+        "prompt_line": 34
+      },
+      {
+        "group_id": "G34",
+        "observation_indices": [
+          36
+        ],
+        "caption_ids": [
+          "C98"
+        ],
+        "frame_indices": [
+          98
+        ],
+        "sample_intervals": [
+          [
+            98,
+            99
+          ]
+        ],
+        "display_intervals": [
+          [
+            98,
+            99
+          ]
+        ],
+        "prompt_line": 35
+      },
+      {
+        "group_id": "G35",
+        "observation_indices": [
+          37
+        ],
+        "caption_ids": [
+          "C99"
+        ],
+        "frame_indices": [
+          99
+        ],
+        "sample_intervals": [
+          [
+            99,
+            100
+          ]
+        ],
+        "display_intervals": [
+          [
+            99,
+            100
+          ]
+        ],
+        "prompt_line": 36
+      },
+      {
+        "group_id": "G36",
+        "observation_indices": [
+          38
+        ],
+        "caption_ids": [
+          "C100"
+        ],
+        "frame_indices": [
+          100
+        ],
+        "sample_intervals": [
+          [
+            100,
+            101
+          ]
+        ],
+        "display_intervals": [
+          [
+            100,
+            101
+          ]
+        ],
+        "prompt_line": 37
+      },
+      {
+        "group_id": "G37",
+        "observation_indices": [
+          39
+        ],
+        "caption_ids": [
+          "C101"
+        ],
+        "frame_indices": [
+          101
+        ],
+        "sample_intervals": [
+          [
+            101,
+            102
+          ]
+        ],
+        "display_intervals": [
+          [
+            101,
+            102
+          ]
+        ],
+        "prompt_line": 38
+      },
+      {
+        "group_id": "G38",
+        "observation_indices": [
+          40
+        ],
+        "caption_ids": [
+          "C102"
+        ],
+        "frame_indices": [
+          102
+        ],
+        "sample_intervals": [
+          [
+            102,
+            103
+          ]
+        ],
+        "display_intervals": [
+          [
+            102,
+            103
+          ]
+        ],
+        "prompt_line": 39
+      },
+      {
+        "group_id": "G39",
+        "observation_indices": [
+          41
+        ],
+        "caption_ids": [
+          "C103"
+        ],
+        "frame_indices": [
+          103
+        ],
+        "sample_intervals": [
+          [
+            103,
+            104
+          ]
+        ],
+        "display_intervals": [
+          [
+            103,
+            104
+          ]
+        ],
+        "prompt_line": 40
+      },
+      {
+        "group_id": "G40",
+        "observation_indices": [
+          42
+        ],
+        "caption_ids": [
+          "C104"
+        ],
+        "frame_indices": [
+          104
+        ],
+        "sample_intervals": [
+          [
+            104,
+            105
+          ]
+        ],
+        "display_intervals": [
+          [
+            104,
+            105
+          ]
+        ],
+        "prompt_line": 41
+      },
+      {
+        "group_id": "G41",
+        "observation_indices": [
+          43
+        ],
+        "caption_ids": [
+          "C150"
+        ],
+        "frame_indices": [
+          150
+        ],
+        "sample_intervals": [
+          [
+            150,
+            151
+          ]
+        ],
+        "display_intervals": [
+          [
+            150,
+            151
+          ]
+        ],
+        "prompt_line": 42
+      },
+      {
+        "group_id": "G42",
+        "observation_indices": [
+          44
+        ],
+        "caption_ids": [
+          "C151"
+        ],
+        "frame_indices": [
+          151
+        ],
+        "sample_intervals": [
+          [
+            151,
+            152
+          ]
+        ],
+        "display_intervals": [
+          [
+            151,
+            152
+          ]
+        ],
+        "prompt_line": 43
+      },
+      {
+        "group_id": "G43",
+        "observation_indices": [
+          45
+        ],
+        "caption_ids": [
+          "C152"
+        ],
+        "frame_indices": [
+          152
+        ],
+        "sample_intervals": [
+          [
+            152,
+            153
+          ]
+        ],
+        "display_intervals": [
+          [
+            152,
+            153
+          ]
+        ],
+        "prompt_line": 44
+      },
+      {
+        "group_id": "G44",
+        "observation_indices": [
+          46
+        ],
+        "caption_ids": [
+          "C153"
+        ],
+        "frame_indices": [
+          153
+        ],
+        "sample_intervals": [
+          [
+            153,
+            154
+          ]
+        ],
+        "display_intervals": [
+          [
+            153,
+            154
+          ]
+        ],
+        "prompt_line": 45
+      },
+      {
+        "group_id": "G45",
+        "observation_indices": [
+          47
+        ],
+        "caption_ids": [
+          "C154"
+        ],
+        "frame_indices": [
+          154
+        ],
+        "sample_intervals": [
+          [
+            154,
+            155
+          ]
+        ],
+        "display_intervals": [
+          [
+            154,
+            155
+          ]
+        ],
+        "prompt_line": 46
+      },
+      {
+        "group_id": "G46",
+        "observation_indices": [
+          48
+        ],
+        "caption_ids": [
+          "C155"
+        ],
+        "frame_indices": [
+          155
+        ],
+        "sample_intervals": [
+          [
+            155,
+            156
+          ]
+        ],
+        "display_intervals": [
+          [
+            155,
+            156
+          ]
+        ],
+        "prompt_line": 47
+      },
+      {
+        "group_id": "G47",
+        "observation_indices": [
+          49
+        ],
+        "caption_ids": [
+          "C156"
+        ],
+        "frame_indices": [
+          156
+        ],
+        "sample_intervals": [
+          [
+            156,
+            157
+          ]
+        ],
+        "display_intervals": [
+          [
+            156,
+            157
+          ]
+        ],
+        "prompt_line": 48
+      },
+      {
+        "group_id": "G48",
+        "observation_indices": [
+          50
+        ],
+        "caption_ids": [
+          "C157"
+        ],
+        "frame_indices": [
+          157
+        ],
+        "sample_intervals": [
+          [
+            157,
+            158
+          ]
+        ],
+        "display_intervals": [
+          [
+            157,
+            158
+          ]
+        ],
+        "prompt_line": 49
+      },
+      {
+        "group_id": "G49",
+        "observation_indices": [
+          51
+        ],
+        "caption_ids": [
+          "C158"
+        ],
+        "frame_indices": [
+          158
+        ],
+        "sample_intervals": [
+          [
+            158,
+            159
+          ]
+        ],
+        "display_intervals": [
+          [
+            158,
+            159
+          ]
+        ],
+        "prompt_line": 50
+      },
+      {
+        "group_id": "G50",
+        "observation_indices": [
+          52
+        ],
+        "caption_ids": [
+          "C159"
+        ],
+        "frame_indices": [
+          159
+        ],
+        "sample_intervals": [
+          [
+            159,
+            160
+          ]
+        ],
+        "display_intervals": [
+          [
+            159,
+            160
+          ]
+        ],
+        "prompt_line": 51
+      },
+      {
+        "group_id": "G51",
+        "observation_indices": [
+          53
+        ],
+        "caption_ids": [
+          "C160"
+        ],
+        "frame_indices": [
+          160
+        ],
+        "sample_intervals": [
+          [
+            160,
+            161
+          ]
+        ],
+        "display_intervals": [
+          [
+            160,
+            161
+          ]
+        ],
+        "prompt_line": 52
+      },
+      {
+        "group_id": "G52",
+        "observation_indices": [
+          54
+        ],
+        "caption_ids": [
+          "C161"
+        ],
+        "frame_indices": [
+          161
+        ],
+        "sample_intervals": [
+          [
+            161,
+            162
+          ]
+        ],
+        "display_intervals": [
+          [
+            161,
+            162
+          ]
+        ],
+        "prompt_line": 53
+      },
+      {
+        "group_id": "G53",
+        "observation_indices": [
+          55
+        ],
+        "caption_ids": [
+          "C162"
+        ],
+        "frame_indices": [
+          162
+        ],
+        "sample_intervals": [
+          [
+            162,
+            163
+          ]
+        ],
+        "display_intervals": [
+          [
+            162,
+            163
+          ]
+        ],
+        "prompt_line": 54
+      },
+      {
+        "group_id": "G54",
+        "observation_indices": [
+          56
+        ],
+        "caption_ids": [
+          "C163"
+        ],
+        "frame_indices": [
+          163
+        ],
+        "sample_intervals": [
+          [
+            163,
+            164
+          ]
+        ],
+        "display_intervals": [
+          [
+            163,
+            164
+          ]
+        ],
+        "prompt_line": 55
+      },
+      {
+        "group_id": "G55",
+        "observation_indices": [
+          57
+        ],
+        "caption_ids": [
+          "C164"
+        ],
+        "frame_indices": [
+          164
+        ],
+        "sample_intervals": [
+          [
+            164,
+            165
+          ]
+        ],
+        "display_intervals": [
+          [
+            164,
+            165
+          ]
+        ],
+        "prompt_line": 56
+      },
+      {
+        "group_id": "G56",
+        "observation_indices": [
+          58
+        ],
+        "caption_ids": [
+          "C165"
+        ],
+        "frame_indices": [
+          165
+        ],
+        "sample_intervals": [
+          [
+            165,
+            166
+          ]
+        ],
+        "display_intervals": [
+          [
+            165,
+            166
+          ]
+        ],
+        "prompt_line": 57
+      },
+      {
+        "group_id": "G57",
+        "observation_indices": [
+          59
+        ],
+        "caption_ids": [
+          "C166"
+        ],
+        "frame_indices": [
+          166
+        ],
+        "sample_intervals": [
+          [
+            166,
+            167
+          ]
+        ],
+        "display_intervals": [
+          [
+            166,
+            167
+          ]
+        ],
+        "prompt_line": 58
+      },
+      {
+        "group_id": "G58",
+        "observation_indices": [
+          60
+        ],
+        "caption_ids": [
+          "C167"
+        ],
+        "frame_indices": [
+          167
+        ],
+        "sample_intervals": [
+          [
+            167,
+            168
+          ]
+        ],
+        "display_intervals": [
+          [
+            167,
+            168
+          ]
+        ],
+        "prompt_line": 59
+      },
+      {
+        "group_id": "G59",
+        "observation_indices": [
+          61
+        ],
+        "caption_ids": [
+          "C168"
+        ],
+        "frame_indices": [
+          168
+        ],
+        "sample_intervals": [
+          [
+            168,
+            169
+          ]
+        ],
+        "display_intervals": [
+          [
+            168,
+            169
+          ]
+        ],
+        "prompt_line": 60
+      },
+      {
+        "group_id": "G60",
+        "observation_indices": [
+          62
+        ],
+        "caption_ids": [
+          "C169"
+        ],
+        "frame_indices": [
+          169
+        ],
+        "sample_intervals": [
+          [
+            169,
+            170
+          ]
+        ],
+        "display_intervals": [
+          [
+            169,
+            170
+          ]
+        ],
+        "prompt_line": 61
+      },
+      {
+        "group_id": "G61",
+        "observation_indices": [
+          63
+        ],
+        "caption_ids": [
+          "C170"
+        ],
+        "frame_indices": [
+          170
+        ],
+        "sample_intervals": [
+          [
+            170,
+            171
+          ]
+        ],
+        "display_intervals": [
+          [
+            170,
+            171
+          ]
+        ],
+        "prompt_line": 62
+      },
+      {
+        "group_id": "G62",
+        "observation_indices": [
+          64
+        ],
+        "caption_ids": [
+          "C171"
+        ],
+        "frame_indices": [
+          171
+        ],
+        "sample_intervals": [
+          [
+            171,
+            172
+          ]
+        ],
+        "display_intervals": [
+          [
+            171,
+            172
+          ]
+        ],
+        "prompt_line": 63
+      },
+      {
+        "group_id": "G63",
+        "observation_indices": [
+          65
+        ],
+        "caption_ids": [
+          "C172"
+        ],
+        "frame_indices": [
+          172
+        ],
+        "sample_intervals": [
+          [
+            172,
+            173
+          ]
+        ],
+        "display_intervals": [
+          [
+            172,
+            173
+          ]
+        ],
+        "prompt_line": 64
+      },
+      {
+        "group_id": "G64",
+        "observation_indices": [
+          66
+        ],
+        "caption_ids": [
+          "C173"
+        ],
+        "frame_indices": [
+          173
+        ],
+        "sample_intervals": [
+          [
+            173,
+            174
+          ]
+        ],
+        "display_intervals": [
+          [
+            173,
+            174
+          ]
+        ],
+        "prompt_line": 65
+      },
+      {
+        "group_id": "G65",
+        "observation_indices": [
+          67
+        ],
+        "caption_ids": [
+          "C174"
+        ],
+        "frame_indices": [
+          174
+        ],
+        "sample_intervals": [
+          [
+            174,
+            175
+          ]
+        ],
+        "display_intervals": [
+          [
+            174,
+            175
+          ]
+        ],
+        "prompt_line": 66
+      },
+      {
+        "group_id": "G66",
+        "observation_indices": [
+          68
+        ],
+        "caption_ids": [
+          "C175"
+        ],
+        "frame_indices": [
+          175
+        ],
+        "sample_intervals": [
+          [
+            175,
+            176
+          ]
+        ],
+        "display_intervals": [
+          [
+            175,
+            176
+          ]
+        ],
+        "prompt_line": 67
+      },
+      {
+        "group_id": "G67",
+        "observation_indices": [
+          69
+        ],
+        "caption_ids": [
+          "C176"
+        ],
+        "frame_indices": [
+          176
+        ],
+        "sample_intervals": [
+          [
+            176,
+            177
+          ]
+        ],
+        "display_intervals": [
+          [
+            176,
+            177
+          ]
+        ],
+        "prompt_line": 68
+      },
+      {
+        "group_id": "G68",
+        "observation_indices": [
+          70
+        ],
+        "caption_ids": [
+          "C177"
+        ],
+        "frame_indices": [
+          177
+        ],
+        "sample_intervals": [
+          [
+            177,
+            178
+          ]
+        ],
+        "display_intervals": [
+          [
+            177,
+            178
+          ]
+        ],
+        "prompt_line": 69
+      },
+      {
+        "group_id": "G69",
+        "observation_indices": [
+          71
+        ],
+        "caption_ids": [
+          "C178"
+        ],
+        "frame_indices": [
+          178
+        ],
+        "sample_intervals": [
+          [
+            178,
+            179
+          ]
+        ],
+        "display_intervals": [
+          [
+            178,
+            179
+          ]
+        ],
+        "prompt_line": 70
+      },
+      {
+        "group_id": "G70",
+        "observation_indices": [
+          72
+        ],
+        "caption_ids": [
+          "C179"
+        ],
+        "frame_indices": [
+          179
+        ],
+        "sample_intervals": [
+          [
+            179,
+            180
+          ]
+        ],
+        "display_intervals": [
+          [
+            179,
+            180
+          ]
+        ],
+        "prompt_line": 71
+      }
+    ],
+    "source_rows_metadata": [
+      {
+        "caption_id": "C17",
+        "frame_index": 17,
+        "sample_interval": [
+          17,
+          18
+        ],
+        "prompt_line": 1,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C18",
+        "frame_index": 18,
+        "sample_interval": [
+          18,
+          19
+        ],
+        "prompt_line": 2,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C19",
+        "frame_index": 19,
+        "sample_interval": [
+          19,
+          20
+        ],
+        "prompt_line": 3,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C20",
+        "frame_index": 20,
+        "sample_interval": [
+          20,
+          21
+        ],
+        "prompt_line": 4,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C21",
+        "frame_index": 21,
+        "sample_interval": [
+          21,
+          22
+        ],
+        "prompt_line": 5,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C22",
+        "frame_index": 22,
+        "sample_interval": [
+          22,
+          23
+        ],
+        "prompt_line": 6,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C23",
+        "frame_index": 23,
+        "sample_interval": [
+          23,
+          24
+        ],
+        "prompt_line": 7,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C24",
+        "frame_index": 24,
+        "sample_interval": [
+          24,
+          25
+        ],
+        "prompt_line": 8,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C25",
+        "frame_index": 25,
+        "sample_interval": [
+          25,
+          26
+        ],
+        "prompt_line": 9,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C26",
+        "frame_index": 26,
+        "sample_interval": [
+          26,
+          27
+        ],
+        "prompt_line": 10,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C27",
+        "frame_index": 27,
+        "sample_interval": [
+          27,
+          28
+        ],
+        "prompt_line": 11,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C28",
+        "frame_index": 28,
+        "sample_interval": [
+          28,
+          29
+        ],
+        "prompt_line": 12,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C29",
+        "frame_index": 29,
+        "sample_interval": [
+          29,
+          30
+        ],
+        "prompt_line": 13,
+        "representation": "original",
+        "archived_fact_count": 2
+      },
+      {
+        "caption_id": "C30",
+        "frame_index": 30,
+        "sample_interval": [
+          30,
+          31
+        ],
+        "prompt_line": 14,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C31",
+        "frame_index": 31,
+        "sample_interval": [
+          31,
+          32
+        ],
+        "prompt_line": 15,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C32",
+        "frame_index": 32,
+        "sample_interval": [
+          32,
+          33
+        ],
+        "prompt_line": 16,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C33",
+        "frame_index": 33,
+        "sample_interval": [
+          33,
+          34
+        ],
+        "prompt_line": 17,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C79",
+        "frame_index": 79,
+        "sample_interval": [
+          79,
+          80
+        ],
+        "prompt_line": 18,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C80",
+        "frame_index": 80,
+        "sample_interval": [
+          80,
+          81
+        ],
+        "prompt_line": 19,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C81",
+        "frame_index": 81,
+        "sample_interval": [
+          81,
+          82
+        ],
+        "prompt_line": 20,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C82",
+        "frame_index": 82,
+        "sample_interval": [
+          82,
+          83
+        ],
+        "prompt_line": 21,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C83",
+        "frame_index": 83,
+        "sample_interval": [
+          83,
+          84
+        ],
+        "prompt_line": 22,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C84",
+        "frame_index": 84,
+        "sample_interval": [
+          84,
+          85
+        ],
+        "prompt_line": 23,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C85",
+        "frame_index": 85,
+        "sample_interval": [
+          85,
+          86
+        ],
+        "prompt_line": 24,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C86",
+        "frame_index": 86,
+        "sample_interval": [
+          86,
+          87
+        ],
+        "prompt_line": 25,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C87",
+        "frame_index": 87,
+        "sample_interval": [
+          87,
+          88
+        ],
+        "prompt_line": 26,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C88",
+        "frame_index": 88,
+        "sample_interval": [
+          88,
+          89
+        ],
+        "prompt_line": 27,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C89",
+        "frame_index": 89,
+        "sample_interval": [
+          89,
+          90
+        ],
+        "prompt_line": 28,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C90",
+        "frame_index": 90,
+        "sample_interval": [
+          90,
+          91
+        ],
+        "prompt_line": 29,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C91",
+        "frame_index": 91,
+        "sample_interval": [
+          91,
+          92
+        ],
+        "prompt_line": 30,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C92",
+        "frame_index": 92,
+        "sample_interval": [
+          92,
+          93
+        ],
+        "prompt_line": 31,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C93",
+        "frame_index": 93,
+        "sample_interval": [
+          93,
+          94
+        ],
+        "prompt_line": 32,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C94",
+        "frame_index": 94,
+        "sample_interval": [
+          94,
+          95
+        ],
+        "prompt_line": 33,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C95",
+        "frame_index": 95,
+        "sample_interval": [
+          95,
+          96
+        ],
+        "prompt_line": 34,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C96",
+        "frame_index": 96,
+        "sample_interval": [
+          96,
+          97
+        ],
+        "prompt_line": 35,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C97",
+        "frame_index": 97,
+        "sample_interval": [
+          97,
+          98
+        ],
+        "prompt_line": 36,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C98",
+        "frame_index": 98,
+        "sample_interval": [
+          98,
+          99
+        ],
+        "prompt_line": 37,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C99",
+        "frame_index": 99,
+        "sample_interval": [
+          99,
+          100
+        ],
+        "prompt_line": 38,
+        "representation": "original",
+        "archived_fact_count": 2
+      },
+      {
+        "caption_id": "C100",
+        "frame_index": 100,
+        "sample_interval": [
+          100,
+          101
+        ],
+        "prompt_line": 39,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C101",
+        "frame_index": 101,
+        "sample_interval": [
+          101,
+          102
+        ],
+        "prompt_line": 40,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C102",
+        "frame_index": 102,
+        "sample_interval": [
+          102,
+          103
+        ],
+        "prompt_line": 41,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C103",
+        "frame_index": 103,
+        "sample_interval": [
+          103,
+          104
+        ],
+        "prompt_line": 42,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C104",
+        "frame_index": 104,
+        "sample_interval": [
+          104,
+          105
+        ],
+        "prompt_line": 43,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C150",
+        "frame_index": 150,
+        "sample_interval": [
+          150,
+          151
+        ],
+        "prompt_line": 44,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C151",
+        "frame_index": 151,
+        "sample_interval": [
+          151,
+          152
+        ],
+        "prompt_line": 45,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C152",
+        "frame_index": 152,
+        "sample_interval": [
+          152,
+          153
+        ],
+        "prompt_line": 46,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C153",
+        "frame_index": 153,
+        "sample_interval": [
+          153,
+          154
+        ],
+        "prompt_line": 47,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C154",
+        "frame_index": 154,
+        "sample_interval": [
+          154,
+          155
+        ],
+        "prompt_line": 48,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C155",
+        "frame_index": 155,
+        "sample_interval": [
+          155,
+          156
+        ],
+        "prompt_line": 49,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C156",
+        "frame_index": 156,
+        "sample_interval": [
+          156,
+          157
+        ],
+        "prompt_line": 50,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C157",
+        "frame_index": 157,
+        "sample_interval": [
+          157,
+          158
+        ],
+        "prompt_line": 51,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C158",
+        "frame_index": 158,
+        "sample_interval": [
+          158,
+          159
+        ],
+        "prompt_line": 52,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C159",
+        "frame_index": 159,
+        "sample_interval": [
+          159,
+          160
+        ],
+        "prompt_line": 53,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C160",
+        "frame_index": 160,
+        "sample_interval": [
+          160,
+          161
+        ],
+        "prompt_line": 54,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C161",
+        "frame_index": 161,
+        "sample_interval": [
+          161,
+          162
+        ],
+        "prompt_line": 55,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C162",
+        "frame_index": 162,
+        "sample_interval": [
+          162,
+          163
+        ],
+        "prompt_line": 56,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C163",
+        "frame_index": 163,
+        "sample_interval": [
+          163,
+          164
+        ],
+        "prompt_line": 57,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C164",
+        "frame_index": 164,
+        "sample_interval": [
+          164,
+          165
+        ],
+        "prompt_line": 58,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C165",
+        "frame_index": 165,
+        "sample_interval": [
+          165,
+          166
+        ],
+        "prompt_line": 59,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C166",
+        "frame_index": 166,
+        "sample_interval": [
+          166,
+          167
+        ],
+        "prompt_line": 60,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C167",
+        "frame_index": 167,
+        "sample_interval": [
+          167,
+          168
+        ],
+        "prompt_line": 61,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C168",
+        "frame_index": 168,
+        "sample_interval": [
+          168,
+          169
+        ],
+        "prompt_line": 62,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C169",
+        "frame_index": 169,
+        "sample_interval": [
+          169,
+          170
+        ],
+        "prompt_line": 63,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C170",
+        "frame_index": 170,
+        "sample_interval": [
+          170,
+          171
+        ],
+        "prompt_line": 64,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C171",
+        "frame_index": 171,
+        "sample_interval": [
+          171,
+          172
+        ],
+        "prompt_line": 65,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C172",
+        "frame_index": 172,
+        "sample_interval": [
+          172,
+          173
+        ],
+        "prompt_line": 66,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C173",
+        "frame_index": 173,
+        "sample_interval": [
+          173,
+          174
+        ],
+        "prompt_line": 67,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C174",
+        "frame_index": 174,
+        "sample_interval": [
+          174,
+          175
+        ],
+        "prompt_line": 68,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C175",
+        "frame_index": 175,
+        "sample_interval": [
+          175,
+          176
+        ],
+        "prompt_line": 69,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C176",
+        "frame_index": 176,
+        "sample_interval": [
+          176,
+          177
+        ],
+        "prompt_line": 70,
+        "representation": "original",
+        "archived_fact_count": 1
+      },
+      {
+        "caption_id": "C177",
+        "frame_index": 177,
+        "sample_interval": [
+          177,
+          178
+        ],
+        "prompt_line": 71,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C178",
+        "frame_index": 178,
+        "sample_interval": [
+          178,
+          179
+        ],
+        "prompt_line": 72,
+        "representation": "original",
+        "archived_fact_count": 0
+      },
+      {
+        "caption_id": "C179",
+        "frame_index": 179,
+        "sample_interval": [
+          179,
+          180
+        ],
+        "prompt_line": 73,
+        "representation": "original",
+        "archived_fact_count": 1
+      }
+    ],
+    "source_order_restorable": true,
+    "restored_payload_equal": true,
+    "grouping": "identical_visible_assertion_across_selected_samples",
+    "relevance_filtering": false,
+    "identities_merged": false,
+    "continuous_duration_inferred": false,
+    "event_counts_inferred": false,
+    "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_body",
+    "original_description_characters": 3555,
+    "merged_description_characters": 3494,
+    "literal_original_preferred_to_duplicate_facts": true
+  }
+}

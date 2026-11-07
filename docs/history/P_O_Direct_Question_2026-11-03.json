@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-03T22:51:57.436645+08:00",
+  "version": "P-O-direct-original-question-v1",
+  "passed": true,
+  "cpu_checks": 37,
+  "cpu_log": "workdirs/P-O-implementation-audit-20261103-r1/tests_final.log",
+  "prepared_run": "workdirs/P-O-direct-question-coordination-20261103-r1",
+  "state": "prepared",
+  "source_sentences": 126,
+  "candidate_units": 397,
+  "inherited_extraction_seconds": 305.87176770716906,
+  "preserved_source_files": 130,
+  "new_frozen_files": 221,
+  "actual_model_calls": 0,
+  "new_QA_results": 0,
+  "ordinary_query_connected": false,
+  "O_Oplus_frozen_verified": true,
+  "changes": [
+    "P derives from O",
+    "no generated task brief",
+    "original question + one source sentence + its candidates",
+    "fixed local-evidence filtering rules"
+  ],
+  "retained": [
+    "source-only O extraction",
+    "integer 0/1 schema",
+    "action actor/patient dependencies",
+    "structured presentation",
+    "final reader with all options",
+    "independent tensor batches <=4",
+    "no automatic retries"
+  ],
+  "scope": "One known coordination case prepared for controlled O/P comparison; not launched; no accuracy claim.",
+  "subsequent_real_diagnostic": "docs/history/P_Coordination_Diagnostic_2026-11-03.json"
+}

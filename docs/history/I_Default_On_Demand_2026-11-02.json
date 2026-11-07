@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-02T14:56:47.498025+08:00",
+  "authorization": "User: 更新为I是按需版的默认",
+  "on_demand_default": "I",
+  "complete_default": "E",
+  "configuration_profiles": {
+    "None": "merged_lazy_script",
+    "configs/script.yaml": "merged_lazy_script",
+    "configs/script_local.yaml": "merged_lazy_script",
+    "configs/script_I.yaml": "merged_lazy_script",
+    "configs/script_E.yaml": "joint_entities",
+    "configs/script_F.yaml": "lazy_script"
+  },
+  "checks_passed": 33,
+  "model_loaded": false,
+  "files": {
+    "script_core/config.py": "f2aa580026579f81e81784ce2ca687194575c2ff6357f304d9ab4ed15a6fe444",
+    "script_qa.py": "5f1f196fc97b3baafba4a155c390706389f248fe9621552375dc9c26fc2c2180",
+    "configs/script.yaml": "6cf4f4871199b286903971f3625107d532286bfda268ebc6632e926eb659f923",
+    "configs/script_local.yaml": "1e6b4f00e44b7bbb5daba0162c44fc8ba8c878c55a4b7a56956c501e70c1e3b2",
+    "configs/script_I.yaml": "fa0b38feb4c50f9e95a91908a1f68782e37998e7be3eb0e71e0c9746333307bc",
+    "README.md": "9c3104d7571ff6077b98ed99e64cac7e771b2ee04c03506553a2b4014f51027f",
+    "script/README.md": "38dbe3d1057fa14cd4e93b04b070ab9fe6c22cca1653f4cf15ad0e6375f45f88",
+    "docs/README.md": "27fdb39b9684659a59ff6b8054a723b7443c07f17b63070e3d30a3748a2eea6b",
+    "docs/SCRIPT_I_Merged_On_Demand_Memory_2026-10-31.md": "dd8cc5b7d91f360d0e4cc1047c183127cd0383a6f1f12ca886c07c20cf5eea8b",
+    "docs/SCRIPT_K_F_Evidence_Planner_2026-11-02.md": "3ae6bae7787bb29bcdf9f581f8f26c4e923857642671b0951a4cd3d26b061959",
+    "tests/test_entity_evidence_qa.py": "4ed5d8555ccb7c71362aaf87b7491b2a3f5791985661e038660367a301d918f3",
+    "tests/test_merged_lazy_memory.py": "9dc5c905a32138cda163924fbef53ffa96f97091ed7a9e4cd95c9b2ba9a60850",
+    "AGENTS.md": "b3f105bb246b8c090cc9d00b2304ac21bcc37f98595d2f4e9025fd1c17dc5d32"
+  },
+  "frozen_snapshots_verified": {
+    "generalized-lazy-H-300-20261101-r5": {
+      "manifest_sha256": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+      "state": "complete"
+    },
+    "merged-lazy-I-H-adjacent-300-20261101-r3": {
+      "manifest_sha256": "8c6284b7954a2fee0d20f83293a58d81323124b20eb5f241db7d26e0bbebbcc8",
+      "state": "complete"
+    },
+    "grounded-reader-J-300-20261101-r5": {
+      "manifest_sha256": "ac574fb073c412549693e555e94e73fcb13a359e3ba136809dab949f4b71b72d",
+      "state": "complete"
+    },
+    "evidence-planner-K-F-300-20261102-r7": {
+      "manifest_sha256": "a21bec399ea462726dafa3bdda4423cae38c627b5704a2ca8472bea56afa2ee1",
+      "state": "failed"
+    }
+  },
+  "cache_policy": "New query output directory; I/h_script.sqlite3, no F/H/legacy I database migration.",
+  "K_status": {
+    "state": "failed",
+    "controller_pid": 2550169,
+    "updated_at": "2026-11-02T14:52:42.280374+08:00",
+    "error_type": "RuntimeError",
+    "error": "K worker failed or cohort incomplete; exit=1"
+  },
+  "K_scope": "One offline experiment with F_sentence, K_all_evidence, K_evidence_planner arms; default I does not change frozen F parent or K execution."
+}

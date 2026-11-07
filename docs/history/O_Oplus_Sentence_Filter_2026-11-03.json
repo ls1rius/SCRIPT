@@ -1,0 +1,531 @@
+{
+  "recorded_at": "2026-11-03T11:55:18.909135+08:00",
+  "status": "completed_diagnostic_semantically_unsatisfactory",
+  "method": {
+    "O": "O-N-sentence-binary-structured-v2",
+    "Oplus": "Oplus-N-sentence-binary-selected-only-composition-v3"
+  },
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r3",
+  "implementation": [
+    "script_core/o_sentence_filter.py",
+    "script_core/o_generation.py",
+    "script/run_o_sentence_experiment.py"
+  ],
+  "scope": "Two known fixed-source diagnostics, not full navigation evaluation or training.",
+  "new_navigation": false,
+  "training": false,
+  "adapter": null,
+  "source_validation": false,
+  "forced_source_preservation": false,
+  "forced_nonempty": false,
+  "filter_receives_question_and_all_options": true,
+  "composition_receives_only_selected": true,
+  "composition_may_return_empty": true,
+  "default_modes_unchanged": true,
+  "cpu": {
+    "passed": true,
+    "full_suite_count": 28,
+    "latest_prompt_only_recheck_count": 9,
+    "full_suite_log": "o_checks_v2.log",
+    "latest_log": "o_checks_v3.log",
+    "notes": "v3 changes composition prompt and adds a real multi-subject empty-output probe; prior full suite includes M/N generation/extraction regression checks."
+  },
+  "integrity": {
+    "passed": true,
+    "verified_at": "2026-11-03T11:55:18.908574+08:00",
+    "parent_case_files": 140,
+    "O_frozen_files": 355,
+    "parent_N_frozen_verified": true
+  },
+  "report": {
+    "updated_at": "2026-11-03T11:54:16.743349+08:00",
+    "planned": 2,
+    "completed": 2,
+    "complete": true,
+    "errors": 0,
+    "cases": [
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "complete": true,
+        "error": null,
+        "arms": {
+          "O": {
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "correct": false,
+            "input_tokens": 439,
+            "seconds": 0.08320658281445503
+          },
+          "O+": {
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            },
+            "correct": false,
+            "input_tokens": 403,
+            "seconds": 0.07890256121754646
+          }
+        },
+        "new_navigation": false,
+        "gold": "2",
+        "sentences": 11,
+        "candidates": 55,
+        "retained_units": 6,
+        "all_zero_sentences": 9,
+        "fallback_sentences": 0,
+        "composition_empty_sentences": 0,
+        "baseline_N": {
+          "selected_option": "0",
+          "raw": "prediction: A"
+        },
+        "shared_selection_hash": "65085fdf185f6fc816be4509a2e97017d2191dcecfced5d39d9a15fdece98a20",
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 51.707506999373436,
+          "total": 51.707506999373436,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 51.707506999373436,
+          "text_cache_hits": 0,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "o_extract": 44.745873626321554,
+            "o_filter": 6.2342834658920765,
+            "oplus_compose": 0.5652407631278038,
+            "o_answer": 0.08320658281445503,
+            "oplus_answer": 0.07890256121754646
+          },
+          "call_count": 26,
+          "resources": {
+            "cpu_seconds": 51.70626512300001,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 51.754474963992834,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16773093376
+          }
+        },
+        "updated_at": "2026-11-03T11:50:40.573624+08:00"
+      },
+      {
+        "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "complete": true,
+        "error": null,
+        "arms": {
+          "O": {
+            "answer": {
+              "selected_option": "2",
+              "raw": "prediction: C"
+            },
+            "correct": false,
+            "input_tokens": 669,
+            "seconds": 0.09277699142694473
+          },
+          "O+": {
+            "answer": {
+              "selected_option": "2",
+              "raw": "prediction: C"
+            },
+            "correct": false,
+            "input_tokens": 513,
+            "seconds": 0.08202691748738289
+          }
+        },
+        "new_navigation": false,
+        "gold": "3",
+        "sentences": 96,
+        "candidates": 404,
+        "retained_units": 11,
+        "all_zero_sentences": 90,
+        "fallback_sentences": 0,
+        "composition_empty_sentences": 2,
+        "baseline_N": {
+          "selected_option": "3",
+          "raw": "prediction: D"
+        },
+        "shared_selection_hash": "fffedc7d6cbe29ab2e1e3546dafdf7471ee8417d527a88800b99796617145010",
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 212.91834278404713,
+          "total": 212.91834278404713,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 212.91834278404713,
+          "text_cache_hits": 0,
+          "total_cap": 3600,
+          "budget_violation": false,
+          "by_operation": {
+            "o_extract": 165.41485010832548,
+            "o_filter": 46.177633833140135,
+            "oplus_compose": 1.151054933667183,
+            "o_answer": 0.09277699142694473,
+            "oplus_answer": 0.08202691748738289
+          },
+          "call_count": 200,
+          "resources": {
+            "cpu_seconds": 212.84452978700008,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 213.24619502946734,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16775853568
+          }
+        },
+        "updated_at": "2026-11-03T11:54:13.821543+08:00"
+      }
+    ],
+    "arms": {
+      "O": {
+        "successful": 2,
+        "correct": 0,
+        "mean_input_tokens": 554.0,
+        "mean_qa_seconds": 0.08799178712069988
+      },
+      "O+": {
+        "successful": 2,
+        "correct": 0,
+        "mean_input_tokens": 458.0,
+        "mean_qa_seconds": 0.08046473935246468
+      }
+    },
+    "functional": {
+      "passed": true,
+      "checks": [
+        {
+          "case": "fresh_extraction_and_binary_filter",
+          "passed": true
+        },
+        {
+          "case": "all_zero_sentence",
+          "passed": true,
+          "labels": {
+            "U0": 0
+          }
+        },
+        {
+          "case": "subject_only_can_return_empty",
+          "passed": true,
+          "output": {
+            "text": ""
+          }
+        },
+        {
+          "case": "multiple_subjects_without_actions_return_empty",
+          "passed": true,
+          "output": {
+            "text": ""
+          }
+        },
+        {
+          "case": "raw_fallback_can_be_kept",
+          "passed": true,
+          "labels": {
+            "U0": 1
+          }
+        },
+        {
+          "case": "O_strict_answer",
+          "passed": true
+        },
+        {
+          "case": "O+_strict_answer",
+          "passed": true
+        }
+      ],
+      "semantic_diagnostics": [
+        {
+          "case": "location_vs_hand",
+          "location_kept": true,
+          "body_part_dropped": false,
+          "text": "C places a brick with their left hand on a brick wall."
+        },
+        {
+          "case": "O_answer",
+          "correct": true,
+          "answer": {
+            "selected_option": "0",
+            "raw": "prediction: A"
+          }
+        },
+        {
+          "case": "O+_answer",
+          "correct": true,
+          "answer": {
+            "selected_option": "0",
+            "raw": "prediction: A"
+          }
+        }
+      ],
+      "error": null,
+      "cost_summary": {
+        "unit": "processing_seconds",
+        "initialization": 0.0,
+        "online": 5.491894114762545,
+        "total": 5.491894114762545,
+        "shared_dependency_seconds": 0.0,
+        "budgeted_total": 5.491894114762545,
+        "text_cache_hits": 0,
+        "total_cap": 600,
+        "budget_violation": false,
+        "by_operation": {
+          "o_extract": 3.4301058650016785,
+          "o_filter": 0.8265035189688206,
+          "oplus_compose": 0.7973078414797783,
+          "o_answer": 0.3377375416457653,
+          "oplus_answer": 0.100239347666502
+        },
+        "call_count": 9,
+        "resources": {
+          "cpu_seconds": 5.469462202999999,
+          "cpu_unmeasured_calls": 0,
+          "gpu_resident_seconds": 5.511429350823164,
+          "gpu_unmeasured_calls": 0,
+          "gpu_peak_allocated_bytes": 16731168256
+        }
+      },
+      "updated_at": "2026-11-03T11:49:48.817881+08:00"
+    }
+  },
+  "setup": {
+    "state": "ready",
+    "seconds": 7.4592328406870365,
+    "details": {
+      "ready": true,
+      "preparation": {
+        "model_load_seconds": 5.276712778955698,
+        "tokenizer_constraint_seconds": 2.115040458738804
+      },
+      "usage": {
+        "model_tensor_pixels": {},
+        "input_tokens_by_model": {},
+        "cpu_seconds": 7.826925417,
+        "gpu_resident_seconds": 4.789123486727476,
+        "gpu_peak_allocated_bytes": 16584893952
+      }
+    }
+  },
+  "prior_attempts": [
+    {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r1",
+      "functional": {
+        "passed": false,
+        "checks": [
+          {
+            "case": "fresh_extraction_and_binary_filter",
+            "passed": true
+          },
+          {
+            "case": "all_zero_sentence",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          },
+          {
+            "case": "subject_only_can_return_empty",
+            "passed": false,
+            "output": {
+              "text": "C places the brick on the brick wall."
+            }
+          },
+          {
+            "case": "raw_fallback_can_be_kept",
+            "passed": true,
+            "labels": {
+              "U0": 1
+            }
+          }
+        ],
+        "semantic_diagnostics": [
+          {
+            "case": "location_vs_hand",
+            "location_kept": false,
+            "body_part_dropped": true,
+            "text": "C places the brick on the brick wall."
+          }
+        ],
+        "error": {
+          "type": "ResourceExhausted",
+          "message": "Insufficient allowance for worker call and cancellation"
+        },
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 4.3869539722800255,
+          "total": 4.3869539722800255,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 4.3869539722800255,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "o_extract": 3.3472768664360046,
+            "o_filter": 0.39876268804073334,
+            "oplus_compose": 0.6409144178032875
+          },
+          "call_count": 6,
+          "resources": {
+            "cpu_seconds": 4.362027368999996,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 4.403062529861927,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16677830144
+          }
+        },
+        "updated_at": "2026-11-03T11:44:55.028476+08:00"
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.57401192560792,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.353543758392334,
+            "tokenizer_constraint_seconds": 2.1569010838866234
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 7.9347571409999995,
+            "gpu_resident_seconds": 4.929273307323456,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      }
+    },
+    {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-sentence-diagnostic-20261103-r2",
+      "functional": {
+        "passed": false,
+        "checks": [
+          {
+            "case": "fresh_extraction_and_binary_filter",
+            "passed": true
+          },
+          {
+            "case": "all_zero_sentence",
+            "passed": true,
+            "labels": {
+              "U0": 0
+            }
+          },
+          {
+            "case": "subject_only_can_return_empty",
+            "passed": false,
+            "output": {
+              "text": "C acts."
+            }
+          },
+          {
+            "case": "raw_fallback_can_be_kept",
+            "passed": true,
+            "labels": {
+              "U0": 1
+            }
+          },
+          {
+            "case": "O_strict_answer",
+            "passed": true
+          },
+          {
+            "case": "O+_strict_answer",
+            "passed": true
+          }
+        ],
+        "semantic_diagnostics": [
+          {
+            "case": "location_vs_hand",
+            "location_kept": true,
+            "body_part_dropped": false,
+            "text": "C places brick with left hand on brick wall."
+          },
+          {
+            "case": "O_answer",
+            "correct": true,
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            }
+          },
+          {
+            "case": "O+_answer",
+            "correct": true,
+            "answer": {
+              "selected_option": "0",
+              "raw": "prediction: A"
+            }
+          }
+        ],
+        "error": {
+          "type": "ValueError",
+          "message": "O functional gate failed: [{'case': 'fresh_extraction_and_binary_filter', 'passed': True}, {'case': 'all_zero_sentence', 'passed': True, 'labels': {'U0': 0}}, {'case': 'subject_only_can_return_empty', 'passed': False, 'output': {'text': 'C acts.'}}, {'case': 'raw_fallback_can_be_kept', 'passed': True, 'labels': {'U0': 1}}, {'case': 'O_strict_answer', 'passed': True}, {'case': 'O+_strict_answer', 'passed': True}]"
+        },
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 5.424618370831013,
+          "total": 5.424618370831013,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 5.424618370831013,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "o_extract": 3.5674945451319218,
+            "o_filter": 0.8290112875401974,
+            "oplus_compose": 0.5237089358270168,
+            "o_answer": 0.402924332767725,
+            "oplus_answer": 0.10147926956415176
+          },
+          "call_count": 8,
+          "resources": {
+            "cpu_seconds": 5.402064189000004,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 5.445883393287659,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 16705464832
+          }
+        },
+        "updated_at": "2026-11-03T11:47:37.486756+08:00"
+      },
+      "setup": {
+        "state": "ready",
+        "seconds": 7.762598607689142,
+        "details": {
+          "ready": true,
+          "preparation": {
+            "model_load_seconds": 5.586120098829269,
+            "tokenizer_constraint_seconds": 2.114168629050255
+          },
+          "usage": {
+            "model_tensor_pixels": {},
+            "input_tokens_by_model": {},
+            "cpu_seconds": 7.955213189,
+            "gpu_resident_seconds": 5.093578152358532,
+            "gpu_peak_allocated_bytes": 16584893952
+          }
+        }
+      }
+    }
+  ],
+  "costs": {
+    "paired_case_processing_seconds": 264.62584978342056,
+    "functional_processing_seconds": 5.491894114762545,
+    "setup_seconds": 7.4592328406870365,
+    "prior_failed_functional_processing_seconds": 9.811572343111038,
+    "prior_setup_seconds": 15.336610533297062
+  },
+  "conclusion": "N 1/2，O 0/2，O+ 0/2；均为已知固定来源诊断，不是全量性能估计。空重组功能已真实验证，整体筛选过激且抽取有语义错误，未替换 N 或启动全300题。",
+  "actual_input_audit": {
+    "passed": true,
+    "checked_at": "2026-11-03T11:56:33.862915+08:00",
+    "sentences": 107,
+    "composition_calls": 8,
+    "empty_model_compositions": 2,
+    "filter_question_all_options_preserved": true,
+    "composition_selected_only": true,
+    "selection_unchanged_between_arms": true,
+    "program_selection_overrides": false
+  }
+}

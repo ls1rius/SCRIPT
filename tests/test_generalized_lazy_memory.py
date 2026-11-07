@@ -250,11 +250,78 @@ class GeneralizedLazyMemoryTests(unittest.TestCase):
         callback=lambda u,f:extract_source(u,f,Meter(),core,SimpleNamespace(is_infrastructure=lambda _:False))
         first,_=self.db.ensure('passive',[u],[r],['actions.base'],callback)
         later,_=self.db.ensure('passive',[u],[r],['actions.base','actions.instrument'],callback)
-        self.assertEqual(calls,[['actions.base'],['actions.instrument']])
+        self.assertEqual(calls,[['actions.base'],['actions.base','actions.instrument']])
         facts=later['U0']['accepted']['facts'];self.assertEqual(len(facts),1)
         self.assertNotIn('actor',facts[0]);self.assertEqual(facts[0]['instrument'],'crane')
         text,_,audit=self.db.view('passive',{},[r],later,compact_description)
         self.assertIn(u['text'],text);self.assertEqual(audit['actorless_action_facts'],1)
+
+    def test_role_requests_include_alignment_core_and_reject_preposition_actions(self):
+        from tests.test_generalized_entity_memory import report
+        inputs=core.extraction_inputs(self.u,['actions.body_part'])
+        self.assertEqual(inputs['requested_fields'],['actions.base','actions.body_part'])
+        self.assertEqual(set(inputs),{'unit','requested_fields','source_type'})
+        passive=core.extraction_inputs(unit(text='The crate was lifted with a hoist.'),['actions.instrument'])
+        schema=core.output_schema(core.EXTRACT,passive)
+        valid=report(actions=[dict(actor=None,verb='lifted',roles=[
+            dict(role='patient',value='crate'),dict(role='instrument',value='hoist')])])
+        core.validate_output(valid,schema)
+        broken=deepcopy(valid)
+        broken['actions'].append(dict(actor=None,verb='with',roles=[dict(role='instrument',value='hoist')]))
+        with self.assertRaises(ValueError):core.validate_output(broken,schema)
+
+    def test_predicate_contract_rejects_phrase_bypass_for_both_actor_branches(self):
+        from tests.test_generalized_entity_memory import report
+        for text,actor in [('The box was moved with a crane.',None),
+                           ('C moves the box with a crane.','C')]:
+            u=unit(text=text)
+            schema=core.output_schema(core.EXTRACT,core.extraction_inputs(u,['actions.instrument']))
+            for verb in ['with','with a crane','a crane']:
+                data=report(actions=[dict(actor=actor,verb=verb,roles=[dict(role='instrument',value='crane')])])
+                with self.subTest(text=text,verb=verb):
+                    with self.assertRaises(ValueError):core.validate_output(data,schema)
+                    with self.assertRaises(ValueError):core.accept(u,data)
+
+    def test_null_actor_cannot_bypass_explicit_subject_on_role_increment(self):
+        from tests.test_generalized_entity_memory import report
+        for fields in [['actions.body_part'],['actions.base','actions.body_part']]:
+            schema=core.output_schema(core.EXTRACT,core.extraction_inputs(self.u,fields))
+            data=report(actions=[dict(actor='C',verb='moves',roles=[
+                dict(role='patient',value='red book'),dict(role='body_part',value='left hand')])])
+            core.validate_output(data,schema)
+            data['actions'][0]['actor']=None
+            with self.assertRaises(ValueError):core.validate_output(data,schema)
+
+    def test_passive_and_imperative_roles_keep_unknown_actor_and_merge_same_predicate(self):
+        from tests.test_generalized_entity_memory import report
+        for text,verb,obj,tool in [
+            ('The crate was lifted with a hoist.','lifted','crate','hoist'),
+            ('Lift the crate with a hoist.','Lift','crate','hoist')]:
+            u=unit(text=text)
+            data=report(actions=[dict(actor=None,verb=verb,roles=[dict(role='patient',value=obj)]),
+                dict(actor=None,verb=verb,roles=[dict(role='instrument',value=tool)])])
+            result=core.accept(u,data)
+            self.assertFalse(result['rejected'])
+            combined=core.combine(result['facts'])
+            self.assertEqual(len(combined),1)
+            self.assertNotIn('actor',combined[0])
+            self.assertEqual(combined[0]['instrument'],tool)
+
+    def test_phrasal_verbs_multiple_actions_and_negative_sources(self):
+        from tests.test_generalized_entity_memory import report
+        u=unit(text='C picks up the cup then C puts down the cup.')
+        data=report(actions=[dict(actor='C',verb=v,roles=[dict(role='patient',value='cup')])
+            for v in ['picks up','puts down']])
+        schema=core.output_schema(core.EXTRACT,core.extraction_inputs(u,['actions.base']))
+        core.validate_output(data,schema)
+        self.assertTrue(all(core.predicate_span(v) for v in ['picks up','puts down','looks at']))
+        for text in ['C never moves the box with a crane.','The box might be moved with a crane.']:
+            class Meter:
+                def json(*args):raise AssertionError('Guarded source must not call model')
+            result=extract_source(unit(text=text),['actions.instrument'],Meter(),core,
+                                  SimpleNamespace(is_infrastructure=lambda _:False))
+            self.assertTrue(result['accepted']['uncertain'])
+            self.assertFalse(result['accepted']['facts'])
 
     def test_explicit_actor_cannot_be_omitted_and_negative_conditions_remain_original(self):
         from tests.test_generalized_entity_memory import report
@@ -296,9 +363,28 @@ class GeneralizedLazyMemoryTests(unittest.TestCase):
             schema=decoder_schema(core.output_schema(core.EXTRACT,dict(unit=dict(id='U0',text=text),source_type='caption',requested_fields=fields)))
             data={k:False if k=='uncertain' else [] for k in schema['properties']};data.update(values)
             parser=JsonSchemaParser(schema)
+            parser.config.force_json_field_order=True
             for character in json.dumps(data,separators=(',',':')):
                 self.assertIn(character,parser.get_allowed_characters());parser=parser.add_character(character)
             self.assertTrue(parser.can_end())
+
+    def test_real_decoder_blocks_previous_null_actor_and_phrase_bypasses(self):
+        import json
+        from lmformatenforcer import JsonSchemaParser
+        from script_core.schemas import decoder_schema
+        for text,actor,verb,role,value in [
+            ('C moves the red book with her left hand.',None,'moves','body_part','left hand'),
+            ('The box was moved with a crane.',None,'with a crane','instrument','crane')]:
+            schema=decoder_schema(core.output_schema(core.EXTRACT,
+                core.extraction_inputs(unit(text=text),['actions.'+role])))
+            data=dict(actions=[dict(actor=actor,verb=verb,roles=[dict(role=role,value=value)])],uncertain=False)
+            parser=JsonSchemaParser(schema);parser.config.force_json_field_order=True
+            blocked=False
+            for character in json.dumps(data,separators=(',',':')):
+                if character not in parser.get_allowed_characters():
+                    blocked=True;break
+                parser=parser.add_character(character)
+            self.assertTrue(blocked,text)
 
 
 if __name__=='__main__':unittest.main()

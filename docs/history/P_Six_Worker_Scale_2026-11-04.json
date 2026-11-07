@@ -1,0 +1,197 @@
+{
+  "at": "2026-11-04T21:18:49.894735+08:00",
+  "passed": true,
+  "published_results_unchanged": 116,
+  "adopted_workers": [
+    {
+      "id": 0,
+      "pid": 93050,
+      "same_identity": true
+    },
+    {
+      "id": 1,
+      "pid": 93051,
+      "same_identity": true
+    }
+  ],
+  "worker_states": {
+    "0": {
+      "stage": "query",
+      "pid": 93050,
+      "at": "2026-11-04T21:12:34.409111+08:00",
+      "index": 117,
+      "question_id": "b5865ae0-e176-4e82-a651-2507ee2d6930",
+      "gpu": "2"
+    },
+    "4": {
+      "stage": "query",
+      "pid": 138513,
+      "at": "2026-11-04T21:18:05.573298+08:00",
+      "index": 119,
+      "question_id": "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+      "gpu": "1"
+    },
+    "3": {
+      "stage": "query",
+      "pid": 138512,
+      "at": "2026-11-04T21:18:08.450187+08:00",
+      "index": 123,
+      "question_id": "97dc6bb7-7eed-45f7-bdb0-269ab8c2f639",
+      "gpu": "1"
+    },
+    "2": {
+      "stage": "query",
+      "pid": 138511,
+      "at": "2026-11-04T21:18:09.544334+08:00",
+      "index": 122,
+      "question_id": "68cd8a82-f3ea-4816-8dca-045616a41f25",
+      "gpu": "3"
+    },
+    "1": {
+      "stage": "query",
+      "pid": 93051,
+      "at": "2026-11-04T21:18:53.501191+08:00",
+      "index": 124,
+      "question_id": "8670020b-15c9-4ea9-acb5-71613dac2e9d",
+      "gpu": "3"
+    },
+    "5": {
+      "stage": "query",
+      "pid": 138514,
+      "at": "2026-11-04T21:18:08.660303+08:00",
+      "index": 120,
+      "question_id": "08c5a715-ee90-4bba-8b8b-5f0834620f78",
+      "gpu": "0"
+    }
+  },
+  "new_reader_gates": {
+    "2": {
+      "passed": true,
+      "seconds": 12.16925460100174,
+      "error": null
+    },
+    "3": {
+      "passed": true,
+      "seconds": 12.232096914201975,
+      "error": null
+    },
+    "4": {
+      "passed": true,
+      "seconds": 10.829988412559032,
+      "error": null
+    },
+    "5": {
+      "passed": true,
+      "seconds": 12.637178231030703,
+      "error": null
+    }
+  },
+  "tests_passed": 42,
+  "frozen_runtime_and_config_unchanged": true,
+  "effective_workers": 6,
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory",
+    "admission_mode": "memory_shared",
+    "allocator_limit_mib": 30720
+  },
+  "allocator_limit_mib": 30720,
+  "controller": {
+    "pid": 138504,
+    "identity": "1764686841",
+    "phase": "running",
+    "workers": [
+      {
+        "id": 0,
+        "pid": 93050,
+        "identity": "1764041201",
+        "adopted": true
+      },
+      {
+        "id": 1,
+        "pid": 93051,
+        "identity": "1764041202",
+        "adopted": true
+      },
+      {
+        "id": 2,
+        "pid": 138511,
+        "identity": "1764686857",
+        "adopted": false,
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/runner.py",
+          "worker",
+          "--control",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1",
+          "--worker-id",
+          "2"
+        ]
+      },
+      {
+        "id": 3,
+        "pid": 138512,
+        "identity": "1764686857",
+        "adopted": false,
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/runner.py",
+          "worker",
+          "--control",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1",
+          "--worker-id",
+          "3"
+        ]
+      },
+      {
+        "id": 4,
+        "pid": 138513,
+        "identity": "1764686857",
+        "adopted": false,
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/runner.py",
+          "worker",
+          "--control",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1",
+          "--worker-id",
+          "4"
+        ]
+      },
+      {
+        "id": 5,
+        "pid": 138514,
+        "identity": "1764686857",
+        "adopted": false,
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1/runner.py",
+          "worker",
+          "--control",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r4/parallel-20261104-r1",
+          "--worker-id",
+          "5"
+        ]
+      }
+    ],
+    "alias_helper": null,
+    "at": "2026-11-04T21:17:11.359972+08:00"
+  },
+  "accounting": "Original model workers continued without interrupted calls; additional setup/gates separately retained. Original per-question cap and all failed costs unchanged.",
+  "latest_checked_at": "2026-11-04T21:20:26.724479+08:00",
+  "additional_input_scope_checks": 40,
+  "bad_input_scopes": [],
+  "current_completed": 118
+}

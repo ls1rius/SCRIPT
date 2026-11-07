@@ -1,0 +1,152 @@
+{
+  "at": "2026-11-04T11:18:54.418052+08:00",
+  "request": "Use available GPU capacity reasonably",
+  "gpu_inventory": "index, memory.free [MiB], utilization.gpu [%]\n0, 31727 MiB, 98 %\n1, 80907 MiB, 99 %\n2, 19581 MiB, 98 %\n3, 12651 MiB, 72 %\n",
+  "decision": "Keep active M/N uninterrupted. O/O+ already releases GPU while waiting on N and reacquires highest effective free memory across four GPUs with shared admission. P three demos complete, no authorized pending P expansion. No process migration, duplicate worker, or frozen configuration change needed.",
+  "runs": {
+    "M": {
+      "state": "running",
+      "completed": 195,
+      "progress": {
+        "stage": "query",
+        "index": 196,
+        "question_id": "8d9d33d2-a95d-4fad-b378-f80c31a635cd",
+        "updated_at": "2026-11-04T11:13:47.393687+08:00"
+      },
+      "latest_files": [
+        {
+          "path": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/scene-planned-M-L-300-20261104-r17/runs/8d9d33d2-a95d-4fad-b378-f80c31a635cd/partial_temporal/raw_calls/1090a8e7-7200-4d11-bd86-be4e104c3813-0.pending.json",
+          "mtime": "2026-11-04T11:18:50.031330+08:00"
+        },
+        {
+          "path": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/scene-planned-M-L-300-20261104-r17/runs/8d9d33d2-a95d-4fad-b378-f80c31a635cd/partial_temporal/raw_calls/d5654f10-e12c-42b9-9a00-ef6de2c1edc9-0.json",
+          "mtime": "2026-11-04T11:18:50.014331+08:00"
+        }
+      ]
+    },
+    "N": {
+      "state": "running",
+      "completed": 139,
+      "progress": {
+        "stage": "query",
+        "index": 140,
+        "question_id": "4c6290c6-bc98-4c95-b63b-03886849fb57",
+        "updated_at": "2026-11-04T11:18:22.171022+08:00"
+      },
+      "latest_files": [
+        {
+          "path": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/scene-planned-N-L-300-20261104-r4/runs/4c6290c6-bc98-4c95-b63b-03886849fb57/directory_calls/raw_calls/c894d8b6-c638-4110-a3a5-edc082b53365-0.pending.json",
+          "mtime": "2026-11-04T11:18:50.608317+08:00"
+        },
+        {
+          "path": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/workdirs/scene-planned-N-L-300-20261104-r4/runs/4c6290c6-bc98-4c95-b63b-03886849fb57/directory_calls/raw_calls/4f563eca-dc53-499d-8f8b-186bfee88003-0.json",
+          "mtime": "2026-11-04T11:18:50.606317+08:00"
+        }
+      ]
+    },
+    "O/O+": {
+      "state": "running",
+      "completed": 138,
+      "progress": {
+        "stage": "waiting_for_gpu_reload",
+        "updated_at": "2026-11-04T11:18:44.315237+08:00",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 31727,
+            "utilization": 98
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 80907,
+            "utilization": 100
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 19581,
+            "utilization": 98
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 12651,
+            "utilization": 100
+          }
+        },
+        "effective_free_mib": {
+          "0": 31727,
+          "1": 80907,
+          "2": 19581,
+          "3": 12651
+        },
+        "stable_observations": {
+          "0": 2,
+          "1": 2,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 24576,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      }
+    },
+    "P": {
+      "state": "complete",
+      "completed": 3,
+      "progress": {
+        "stage": "P",
+        "case": 3,
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "updated_at": "2026-11-04T11:15:50.387382+08:00"
+      }
+    }
+  },
+  "verified_automatic_resumption": {
+    "reload": {
+      "at": "2026-11-04T11:19:02.996443+08:00",
+      "seconds": 8.449624385684729,
+      "details": {
+        "ready": true,
+        "preparation": {
+          "model_load_seconds": 5.490780308842659,
+          "tokenizer_constraint_seconds": 2.096866939216852
+        },
+        "usage": {
+          "cuda_allocator_limit_mib": 22528,
+          "model_tensor_pixels": {},
+          "input_tokens_by_model": {},
+          "cpu_seconds": 8.761067571,
+          "gpu_resident_seconds": 5.784471124410629,
+          "gpu_peak_allocated_bytes": 16584893952
+        }
+      },
+      "gpu": {
+        "index": "1",
+        "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+        "free_mib": 80907,
+        "utilization": 100,
+        "effective_free_mib": 80907,
+        "reservation_id": "3626043-a3f82c5c5d454494ad09904a594f8f00"
+      }
+    },
+    "progress": {
+      "stage": "shared_extraction",
+      "case": 139,
+      "question_id": "94f6e8bd-b65d-4fd0-b2a9-75b69397fe2e",
+      "condition": "source_only",
+      "sentence": 1,
+      "total_sentences": 169,
+      "batch_size": 4,
+      "updated_at": "2026-11-04T11:19:03.011776+08:00"
+    }
+  }
+}

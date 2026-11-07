@@ -1,0 +1,225 @@
+{
+  "request": "Move the previously relocated workdirs back to the original SSD",
+  "started_at": "2026-11-05T16:21:24.063374+08:00",
+  "source": "/var/tmp/videoagent-q4-disk-recovery-20261105-r1",
+  "workdirs": "/mnt/ssd2/hli/work/workdirs/VideoAgent",
+  "recovery_archive": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-disk-recovery-20261105-r1",
+  "phase": "complete",
+  "active_processes_before": {
+    "649986": {
+      "pid": 649986,
+      "state": "S",
+      "start_ticks": "1771350181",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py supervise --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1"
+    },
+    "650043": {
+      "pid": 650043,
+      "state": "S",
+      "start_ticks": "1771350186",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py worker --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1 --worker-id 0"
+    },
+    "650044": {
+      "pid": 650044,
+      "state": "S",
+      "start_ticks": "1771350186",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py worker --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1 --worker-id 1"
+    },
+    "650045": {
+      "pid": 650045,
+      "state": "S",
+      "start_ticks": "1771350186",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py worker --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1 --worker-id 2"
+    },
+    "650046": {
+      "pid": 650046,
+      "state": "S",
+      "start_ticks": "1771350186",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py worker --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1 --worker-id 3"
+    },
+    "664560": {
+      "pid": 664560,
+      "state": "S",
+      "start_ticks": "1771514695",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/runtime/script/train_q4_retention.py supervise --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1"
+    },
+    "664572": {
+      "pid": 664572,
+      "state": "S",
+      "start_ticks": "1771514703",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/runtime/script/train_q4_retention.py preflight --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1 --worker-id 0"
+    }
+  },
+  "monitor_before": {
+    "pid": 650741,
+    "state": "S",
+    "start_ticks": "1771353772",
+    "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/script/watch_mnop_alerts.py --out /var/tmp/videoagent-q4-disk-recovery-20261105-r1/MNOP-alert-monitor-20261104-r1"
+  },
+  "free_bytes_before": {
+    "ssd2": 654240112640,
+    "var_tmp": 475224899584
+  },
+  "atomic_directory_symlink_exchange_verified": true,
+  "immutable_entries_verified": 76026,
+  "monitor_restart": {
+    "pid": 668477,
+    "previous_pid": 650741,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/script/watch_mnop_alerts.py",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-alert-monitor-20261104-r1"
+    ],
+    "at": "2026-11-05T16:21:41.383812+08:00",
+    "reason": "Return output storage to the original workdirs; preserve config and delivery/deduplication history"
+  },
+  "monitor_handoff_seconds": 0.055033113807439804,
+  "monitor_history_preserved": true,
+  "monitor_config_sha256_unchanged": "b039aebafd774f03f79aef3e350e2259e768acc61c7f12f3dc8fdc7c920b944a",
+  "monitor_status_after": {
+    "pid": 668477,
+    "at": "2026-11-05T16:21:41.405505+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "active_processes_after": {
+    "649986": {
+      "pid": 649986,
+      "state": "S",
+      "start_ticks": "1771350181",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py supervise --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1"
+    },
+    "650043": {
+      "pid": 650043,
+      "state": "S",
+      "start_ticks": "1771350186",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py worker --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1 --worker-id 0"
+    },
+    "650044": {
+      "pid": 650044,
+      "state": "S",
+      "start_ticks": "1771350186",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py worker --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1 --worker-id 1"
+    },
+    "650045": {
+      "pid": 650045,
+      "state": "S",
+      "start_ticks": "1771350186",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py worker --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1 --worker-id 2"
+    },
+    "650046": {
+      "pid": 650046,
+      "state": "S",
+      "start_ticks": "1771350186",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1/runtime/script/extend_q4_500.py worker --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-adaptive-500-20261105-r1 --worker-id 3"
+    },
+    "664560": {
+      "pid": 664560,
+      "state": "S",
+      "start_ticks": "1771514695",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/runtime/script/train_q4_retention.py supervise --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1"
+    },
+    "664572": {
+      "pid": 664572,
+      "state": "S",
+      "start_ticks": "1771514703",
+      "command": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python -u /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1/runtime/script/train_q4_retention.py preflight --out /mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-trained-200train-300eval-20261105-r1 --worker-id 0"
+    }
+  },
+  "experiment_process_identities_unchanged": true,
+  "manifest": {
+    "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-disk-recovery-20261105-r1/return_audit/original_files_sha256.json",
+    "sha256": "a7f068186407fbf84eeee7aef2a8fa3fe4cfd9012be745ded4a026299d04a89e",
+    "entries": 76047,
+    "regular_files": 63406,
+    "symlinks": 600,
+    "regular_bytes": 2371851960
+  },
+  "original_symlinks_verified": 600,
+  "broken_original_symlinks": [],
+  "result_file_counts": {
+    "Q4-adaptive-300-20261105-r1": 300,
+    "Q4-fixed-depth-300-20261105-r1": 300
+  },
+  "source_backup": "/var/tmp/.videoagent-q4-disk-recovery-20261105-r1.return-backup",
+  "completed_at": "2026-11-05T16:22:42.146957+08:00",
+  "post_switch_immutable_regular_files_verified": 63403,
+  "mutable_monitor_files_excluded_from_second_hash_check": [
+    "MNOP-alert-monitor-20261104-r1/monitor.log",
+    "MNOP-alert-monitor-20261104-r1/state.json",
+    "MNOP-alert-monitor-20261104-r1/status.json"
+  ],
+  "source_backup_open_references": [],
+  "source_backup_removed": true,
+  "source_backup_allocated_bytes_reclaimed": 2548150272,
+  "legacy_source_alias": {
+    "path": "/var/tmp/videoagent-q4-disk-recovery-20261105-r1",
+    "target": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-disk-recovery-20261105-r1",
+    "holds_data_on_ssd2": true
+  },
+  "free_bytes_after": {
+    "ssd2": 653923323904,
+    "var_tmp": 477773037568
+  },
+  "monitor_status_final": {
+    "pid": 668477,
+    "at": "2026-11-05T16:22:41.407395+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "active_processes_final": {
+    "649986": {
+      "state": "S",
+      "start_ticks": "1771350181"
+    },
+    "650043": {
+      "state": "S",
+      "start_ticks": "1771350186"
+    },
+    "650044": {
+      "state": "S",
+      "start_ticks": "1771350186"
+    },
+    "650045": {
+      "state": "S",
+      "start_ticks": "1771350186"
+    },
+    "650046": {
+      "state": "S",
+      "start_ticks": "1771350186"
+    },
+    "664560": {
+      "state": "S",
+      "start_ticks": "1771514695"
+    },
+    "664572": {
+      "state": "S",
+      "start_ticks": "1771514703"
+    }
+  },
+  "ongoing_queues": {
+    "Q4-adaptive-500-20261105-r1": {
+      "state": "running",
+      "controller_pid": 649986,
+      "error": null
+    },
+    "Q4-trained-200train-300eval-20261105-r1": {
+      "state": "running",
+      "controller_pid": 664560,
+      "error": null
+    }
+  },
+  "migration_scripts": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-disk-recovery-20261105-r1/return_audit/videoagent_return_workdirs_20261105.py",
+      "sha256": "aa047879756c959b1b591b96bdcb938c7a05361ea456ff873c319334a6b5a2f5"
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q4-disk-recovery-20261105-r1/return_audit/videoagent_finish_storage_return_20261105.py",
+      "sha256": "885676dd8a2a6ae886d7872fd434cb2c78e415a007bdd5de7a50ee9113062958"
+    }
+  ]
+}

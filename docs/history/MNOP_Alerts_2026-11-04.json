@@ -1,0 +1,124 @@
+{
+  "at": "2026-11-04T12:49:44.056578+08:00",
+  "monitor": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-alert-monitor-20261104-r1",
+  "monitor_status": {
+    "pid": 3925416,
+    "at": "2026-11-04T13:09:03.879623+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "monitor_pid": 3925416,
+  "interval_seconds": 60,
+  "channel": "codex queue to the current user thread",
+  "test_queue_message_id": "01a1a4e2-7975-7eb1-980e-c945aaac6b32",
+  "delivery_limit": "Current-thread delivery verified. OS/mobile push not verified; local host/daemon must remain available.",
+  "tests_passed": 7,
+  "already_reported_failures": [
+    {
+      "key": "89583c95c0f096f899c9ab5cd5f6f99f1946907bc8e30266fa00319f82b6072f",
+      "experiment": "N",
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+      "reason": "Query failed: {'type': 'ToolDeadlineExceeded', 'message': 'ToolDeadlineExceeded: SoftDeadlineExceeded: Processing deadline reached; worker retained'}",
+      "progress": {
+        "stage": "parallel_queries",
+        "index": 147,
+        "question_id": "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43",
+        "active_queries": [
+          {
+            "stage": "query",
+            "pid": 3824413,
+            "at": "2026-11-04T12:35:56.222215+08:00",
+            "index": 147,
+            "question_id": "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43",
+            "gpu": "0"
+          }
+        ],
+        "updated_at": "2026-11-04T12:45:39.276064+08:00"
+      },
+      "detected_at": "2026-11-04T12:49:09.343598+08:00",
+      "confirmation_required": false
+    },
+    {
+      "key": "f744079ca3d31a97b2fcb06adf01e5763ca6115cfad840de3affcdddc303b70e",
+      "experiment": "P",
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r2",
+      "reason": "P extraction failed at S15: extraction_format_failure: Duplicate P argument role; no silent overwrite",
+      "progress": {
+        "stage": "P",
+        "case": 18,
+        "question_id": "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+        "updated_at": "2026-11-04T12:44:31.855340+08:00"
+      },
+      "detected_at": "2026-11-04T12:49:09.343778+08:00",
+      "confirmation_required": false
+    }
+  ],
+  "scope": "Read-only status/PID monitoring. Does not restart or alter experiments. Configuration is reread each minute; future replacement run paths must be updated.",
+  "states": {
+    "M": {
+      "state": "running",
+      "controller_pid": 3822711,
+      "event": null,
+      "terminal": false
+    },
+    "N": {
+      "state": "failed",
+      "controller_pid": 3824411,
+      "event": {
+        "key": "89583c95c0f096f899c9ab5cd5f6f99f1946907bc8e30266fa00319f82b6072f",
+        "experiment": "N",
+        "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+        "reason": "Query failed: {'type': 'ToolDeadlineExceeded', 'message': 'ToolDeadlineExceeded: SoftDeadlineExceeded: Processing deadline reached; worker retained'}",
+        "progress": {
+          "stage": "parallel_queries",
+          "index": 147,
+          "question_id": "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43",
+          "active_queries": [
+            {
+              "stage": "query",
+              "pid": 3824413,
+              "at": "2026-11-04T12:35:56.222215+08:00",
+              "index": 147,
+              "question_id": "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43",
+              "gpu": "0"
+            }
+          ],
+          "updated_at": "2026-11-04T12:45:39.276064+08:00"
+        },
+        "detected_at": "2026-11-04T12:49:09.365005+08:00",
+        "confirmation_required": false
+      },
+      "terminal": true
+    },
+    "O/O+": {
+      "state": "running",
+      "controller_pid": 3824903,
+      "event": null,
+      "terminal": false
+    },
+    "P": {
+      "state": "failed",
+      "controller_pid": 3822348,
+      "event": {
+        "key": "f744079ca3d31a97b2fcb06adf01e5763ca6115cfad840de3affcdddc303b70e",
+        "experiment": "P",
+        "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r2",
+        "reason": "P extraction failed at S15: extraction_format_failure: Duplicate P argument role; no silent overwrite",
+        "progress": {
+          "stage": "P",
+          "case": 18,
+          "question_id": "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+          "updated_at": "2026-11-04T12:44:31.855340+08:00"
+        },
+        "detected_at": "2026-11-04T12:49:09.365184+08:00",
+        "confirmation_required": false
+      },
+      "terminal": true
+    }
+  },
+  "thread_delivery_verified": true,
+  "thread_delivery_evidence": "Self-test message appeared as the next message in this same thread and was acknowledged by the assistant before the user requested repair.",
+  "auxiliary_process_exit_detection": true,
+  "updated_at": "2026-11-04T13:10:03.029437+08:00"
+}

@@ -74,6 +74,29 @@ class SparseVisualTests(unittest.TestCase):
         self.assertEqual([op for op,_ in backend.seen],['sparse_visual_plan'])
         self.assertNotIn('frames',backend.seen[0][1])
 
+    def test_malformed_optional_plan_is_charged_and_rejected_without_retry(self):
+        backend=Backend()
+        def malformed(op,inputs,*args):
+            backend.seen.append((op,deepcopy(inputs)))
+            return dict(data='{"needed":true,"reason":"unfinished')
+        backend.call=malformed
+        self.cfg['query']['json_repair_retries']=0
+        with patch.object(sparse,'checked_frames',side_effect=AssertionError('images accessed')):
+            value,_=self.run_check(backend)
+        self.assertEqual([op for op,_ in backend.seen],['sparse_visual_plan'])
+        self.assertEqual(value['observations'],[])
+        self.assertFalse(value['triggered']);self.assertTrue(value['errors'])
+        self.assertGreater(self.ledger.actual,0)
+        self.assertIsNone(self.ledger.task_cap)
+        self.assertEqual(json.loads((self.root/'sparse_visual.json').read_text()),value)
+
+    def test_unrelated_optional_model_failure_still_stops(self):
+        from script_core.budget import ToolFailure
+        backend=Backend()
+        backend.call=lambda *args: (_ for _ in ()).throw(ToolFailure('device failure'))
+        self.cfg['query']['tool_transient_retries']=0
+        with self.assertRaises(ToolFailure):self.run_check(backend)
+
     def test_one_three_frame_check_and_question_blind_verification(self):
         value,backend=self.run_check()
         self.assertEqual(value['selected_frame_ids'],['F0','F1','F2'])

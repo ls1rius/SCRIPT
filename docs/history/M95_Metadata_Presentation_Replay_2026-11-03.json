@@ -1,0 +1,6058 @@
+{
+  "passed": true,
+  "model_calls": 0,
+  "question_id": "82486477-661d-4116-85ae-4fc095503679",
+  "records": 129,
+  "attributes": [
+    {
+      "id": "R123",
+      "text": "The text memory records attribute \"texture\" with value \"paper\" for picks the paper (text reference E0).",
+      "qualification": "text-inferred hypothesis",
+      "kinds": [
+        "temporal attribute"
+      ],
+      "sources": [
+        {
+          "region": "temporal attribute",
+          "record": {
+            "entity_id": "E0",
+            "field": "texture",
+            "value": "paper",
+            "source_caption_ids": [
+              "C50"
+            ],
+            "observed_at": [
+              50
+            ],
+            "source_status": "caption_asserted",
+            "scene_id": "S1",
+            "batch_id": "adaptive:E0"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C50",
+          "interval": [
+            50,
+            51
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R124",
+      "text": "The text memory records attribute \"texture\" with value \"scissors\" for C (text reference E1).",
+      "qualification": "text-inferred hypothesis",
+      "kinds": [
+        "temporal attribute"
+      ],
+      "sources": [
+        {
+          "region": "temporal attribute",
+          "record": {
+            "entity_id": "E1",
+            "field": "texture",
+            "value": "scissors",
+            "source_caption_ids": [
+              "C73"
+            ],
+            "observed_at": [
+              73
+            ],
+            "source_status": "caption_asserted",
+            "scene_id": "S2",
+            "batch_id": "adaptive:E1"
+          }
+        }
+      ],
+      "occurrences": [
+        {
+          "caption_id": "C73",
+          "interval": [
+            73,
+            74
+          ]
+        }
+      ]
+    }
+  ],
+  "source_path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r13/runs/82486477-661d-4116-85ae-4fc095503679",
+  "network_sha256": "ff789b6fbc514f18ca416145b1fbd8440d1e413443d1bba4a9452b6425c64306",
+  "audit": {
+    "pool_sha256": "437a542006abcacd62b91b6018f9d7e017354c31e8a833003efd7ff3790f0a11",
+    "total_records": 129,
+    "retained_records": 129,
+    "skipped_records": 0,
+    "uncertain_records": 0,
+    "merge_groups": 0,
+    "retained_caption_ids": [
+      "C0",
+      "C1",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C19",
+      "C2",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C24",
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C29",
+      "C3",
+      "C30",
+      "C31",
+      "C32",
+      "C33",
+      "C34",
+      "C35",
+      "C36",
+      "C37",
+      "C38",
+      "C39",
+      "C4",
+      "C40",
+      "C41",
+      "C42",
+      "C43",
+      "C44",
+      "C45",
+      "C46",
+      "C47",
+      "C48",
+      "C49",
+      "C5",
+      "C50",
+      "C51",
+      "C52",
+      "C53",
+      "C54",
+      "C55",
+      "C56",
+      "C57",
+      "C58",
+      "C59",
+      "C6",
+      "C60",
+      "C61",
+      "C62",
+      "C63",
+      "C64",
+      "C65",
+      "C66",
+      "C67",
+      "C68",
+      "C69",
+      "C7",
+      "C70",
+      "C71",
+      "C72",
+      "C73",
+      "C74",
+      "C75",
+      "C76",
+      "C8",
+      "C9"
+    ],
+    "groups": [
+      {
+        "record_ids": [
+          "R0"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C0",
+            "original_text": "#C C puts the glue on the paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C0",
+            "interval": [
+              0,
+              1
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R0",
+            "original_sample_intervals": [
+              [
+                0,
+                1
+              ]
+            ],
+            "display_intervals": [
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R1"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C1",
+            "original_text": "#C C holds a paint "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C1",
+            "interval": [
+              1,
+              2
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R1",
+            "original_sample_intervals": [
+              [
+                1,
+                2
+              ]
+            ],
+            "display_intervals": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R2"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C1",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "paint"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C3",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "paint"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C1",
+            "interval": [
+              1,
+              2
+            ]
+          },
+          {
+            "caption_id": "C3",
+            "interval": [
+              3,
+              4
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R2",
+            "original_sample_intervals": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "display_intervals": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R3"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C2",
+            "original_text": "#C C looks at the plastic painting"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C2",
+            "interval": [
+              2,
+              3
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R3",
+            "original_sample_intervals": [
+              [
+                2,
+                3
+              ]
+            ],
+            "display_intervals": [
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R4"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C3",
+            "original_text": "#C C holds the paint "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C3",
+            "interval": [
+              3,
+              4
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R4",
+            "original_sample_intervals": [
+              [
+                3,
+                4
+              ]
+            ],
+            "display_intervals": [
+              [
+                3,
+                4
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R5"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C4",
+            "original_text": "#C C looks at the craft paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C4",
+            "interval": [
+              4,
+              5
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R5",
+            "original_sample_intervals": [
+              [
+                4,
+                5
+              ]
+            ],
+            "display_intervals": [
+              [
+                4,
+                5
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R6"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C5",
+            "original_text": "#C C holds a decorative flag"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C5",
+            "interval": [
+              5,
+              6
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R6",
+            "original_sample_intervals": [
+              [
+                5,
+                6
+              ]
+            ],
+            "display_intervals": [
+              [
+                5,
+                6
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R7"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C5",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "decorative flag"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C5",
+            "interval": [
+              5,
+              6
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R7",
+            "original_sample_intervals": [
+              [
+                5,
+                6
+              ]
+            ],
+            "display_intervals": [
+              [
+                5,
+                6
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R8"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C5",
+            "category": "attributes",
+            "fact_index": 0,
+            "record": {
+              "entity": "flag",
+              "property": "color",
+              "value": "decorative"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C5",
+            "interval": [
+              5,
+              6
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R8",
+            "original_sample_intervals": [
+              [
+                5,
+                6
+              ]
+            ],
+            "display_intervals": [
+              [
+                5,
+                6
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R9"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C6",
+            "original_text": "#C C drops the sticker"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C6",
+            "interval": [
+              6,
+              7
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R9",
+            "original_sample_intervals": [
+              [
+                6,
+                7
+              ]
+            ],
+            "display_intervals": [
+              [
+                6,
+                7
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R10"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C6",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "drops",
+              "patient": "sticker"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C6",
+            "interval": [
+              6,
+              7
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R10",
+            "original_sample_intervals": [
+              [
+                6,
+                7
+              ]
+            ],
+            "display_intervals": [
+              [
+                6,
+                7
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R11"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C7",
+            "original_text": "#C C places the label on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C7",
+            "interval": [
+              7,
+              8
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R11",
+            "original_sample_intervals": [
+              [
+                7,
+                8
+              ]
+            ],
+            "display_intervals": [
+              [
+                7,
+                8
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R12"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C7",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "places",
+              "patient": "label"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C7",
+            "interval": [
+              7,
+              8
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R12",
+            "original_sample_intervals": [
+              [
+                7,
+                8
+              ]
+            ],
+            "display_intervals": [
+              [
+                7,
+                8
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R13"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C8",
+            "original_text": "#C C picks a paint"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C8",
+            "interval": [
+              8,
+              9
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R13",
+            "original_sample_intervals": [
+              [
+                8,
+                9
+              ]
+            ],
+            "display_intervals": [
+              [
+                8,
+                9
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R14"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C8",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "paint"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C8",
+            "interval": [
+              8,
+              9
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R14",
+            "original_sample_intervals": [
+              [
+                8,
+                9
+              ]
+            ],
+            "display_intervals": [
+              [
+                8,
+                9
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R15"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C9",
+            "original_text": "#C C picks up a paper from the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C9",
+            "interval": [
+              9,
+              10
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R15",
+            "original_sample_intervals": [
+              [
+                9,
+                10
+              ]
+            ],
+            "display_intervals": [
+              [
+                9,
+                10
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R16"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C9",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks up",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C10",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks up",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C37",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks up",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C46",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks up",
+              "patient": "paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C9",
+            "interval": [
+              9,
+              10
+            ]
+          },
+          {
+            "caption_id": "C10",
+            "interval": [
+              10,
+              11
+            ]
+          },
+          {
+            "caption_id": "C37",
+            "interval": [
+              37,
+              38
+            ]
+          },
+          {
+            "caption_id": "C46",
+            "interval": [
+              46,
+              47
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R16",
+            "original_sample_intervals": [
+              [
+                9,
+                10
+              ],
+              [
+                10,
+                11
+              ],
+              [
+                37,
+                38
+              ],
+              [
+                46,
+                47
+              ]
+            ],
+            "display_intervals": [
+              [
+                9,
+                11
+              ],
+              [
+                37,
+                38
+              ],
+              [
+                46,
+                47
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R17"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C10",
+            "original_text": "#C C picks up a paper"
+          },
+          {
+            "region": "description",
+            "caption_id": "C46",
+            "original_text": "#C C picks up a paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C10",
+            "interval": [
+              10,
+              11
+            ]
+          },
+          {
+            "caption_id": "C46",
+            "interval": [
+              46,
+              47
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R17",
+            "original_sample_intervals": [
+              [
+                10,
+                11
+              ],
+              [
+                46,
+                47
+              ]
+            ],
+            "display_intervals": [
+              [
+                10,
+                11
+              ],
+              [
+                46,
+                47
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R18"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C11",
+            "original_text": "#C C opens the top of a wardrobe"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C11",
+            "interval": [
+              11,
+              12
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R18",
+            "original_sample_intervals": [
+              [
+                11,
+                12
+              ]
+            ],
+            "display_intervals": [
+              [
+                11,
+                12
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R19"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C11",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "opens",
+              "patient": "top of a wardrobe"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C11",
+            "interval": [
+              11,
+              12
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R19",
+            "original_sample_intervals": [
+              [
+                11,
+                12
+              ]
+            ],
+            "display_intervals": [
+              [
+                11,
+                12
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R20"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C12",
+            "original_text": "#C C picks the sheet of paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C12",
+            "interval": [
+              12,
+              13
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R20",
+            "original_sample_intervals": [
+              [
+                12,
+                13
+              ]
+            ],
+            "display_intervals": [
+              [
+                12,
+                13
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R21"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C12",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "sheet of paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C12",
+            "interval": [
+              12,
+              13
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R21",
+            "original_sample_intervals": [
+              [
+                12,
+                13
+              ]
+            ],
+            "display_intervals": [
+              [
+                12,
+                13
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R22"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C13",
+            "original_text": "#C C puts the model art on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C13",
+            "interval": [
+              13,
+              14
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R22",
+            "original_sample_intervals": [
+              [
+                13,
+                14
+              ]
+            ],
+            "display_intervals": [
+              [
+                13,
+                14
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R23"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C13",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "puts",
+              "patient": "model art"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C13",
+            "interval": [
+              13,
+              14
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R23",
+            "original_sample_intervals": [
+              [
+                13,
+                14
+              ]
+            ],
+            "display_intervals": [
+              [
+                13,
+                14
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R24"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C14",
+            "original_text": "#C C holds the paper with the left hand"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C14",
+            "interval": [
+              14,
+              15
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R24",
+            "original_sample_intervals": [
+              [
+                14,
+                15
+              ]
+            ],
+            "display_intervals": [
+              [
+                14,
+                15
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R25"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C14",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "paper",
+              "body_part": "left hand"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C14",
+            "interval": [
+              14,
+              15
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R25",
+            "original_sample_intervals": [
+              [
+                14,
+                15
+              ]
+            ],
+            "display_intervals": [
+              [
+                14,
+                15
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R26"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C15",
+            "original_text": "#C C picks up the craft paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C15",
+            "interval": [
+              15,
+              16
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R26",
+            "original_sample_intervals": [
+              [
+                15,
+                16
+              ]
+            ],
+            "display_intervals": [
+              [
+                15,
+                16
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R27"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C15",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks up",
+              "patient": "craft paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C15",
+            "interval": [
+              15,
+              16
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R27",
+            "original_sample_intervals": [
+              [
+                15,
+                16
+              ]
+            ],
+            "display_intervals": [
+              [
+                15,
+                16
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R28"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C16",
+            "original_text": "#C C picks up the paper cutter"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C16",
+            "interval": [
+              16,
+              17
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R28",
+            "original_sample_intervals": [
+              [
+                16,
+                17
+              ]
+            ],
+            "display_intervals": [
+              [
+                16,
+                17
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R29"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C16",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks up",
+              "patient": "paper cutter"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C16",
+            "interval": [
+              16,
+              17
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R29",
+            "original_sample_intervals": [
+              [
+                16,
+                17
+              ]
+            ],
+            "display_intervals": [
+              [
+                16,
+                17
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R30"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C17",
+            "original_text": "#C C drops the paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C17",
+            "interval": [
+              17,
+              18
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R30",
+            "original_sample_intervals": [
+              [
+                17,
+                18
+              ]
+            ],
+            "display_intervals": [
+              [
+                17,
+                18
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R31"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C17",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "drops",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C21",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "drops",
+              "patient": "paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C17",
+            "interval": [
+              17,
+              18
+            ]
+          },
+          {
+            "caption_id": "C21",
+            "interval": [
+              21,
+              22
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R31",
+            "original_sample_intervals": [
+              [
+                17,
+                18
+              ],
+              [
+                21,
+                22
+              ]
+            ],
+            "display_intervals": [
+              [
+                17,
+                18
+              ],
+              [
+                21,
+                22
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R32"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C18",
+            "original_text": "#C C holds the piece of material with both hands "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C18",
+            "interval": [
+              18,
+              19
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R32",
+            "original_sample_intervals": [
+              [
+                18,
+                19
+              ]
+            ],
+            "display_intervals": [
+              [
+                18,
+                19
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R33"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C18",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "piece of material",
+              "body_part": "both hands"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C18",
+            "interval": [
+              18,
+              19
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R33",
+            "original_sample_intervals": [
+              [
+                18,
+                19
+              ]
+            ],
+            "display_intervals": [
+              [
+                18,
+                19
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R34"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C19",
+            "original_text": "#C C puts the part of the paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C19",
+            "interval": [
+              19,
+              20
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R34",
+            "original_sample_intervals": [
+              [
+                19,
+                20
+              ]
+            ],
+            "display_intervals": [
+              [
+                19,
+                20
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R35"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C19",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "puts",
+              "patient": "part of the paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C19",
+            "interval": [
+              19,
+              20
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R35",
+            "original_sample_intervals": [
+              [
+                19,
+                20
+              ]
+            ],
+            "display_intervals": [
+              [
+                19,
+                20
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R36"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C20",
+            "original_text": "#C C holds the paper cutout on the paper cutter"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C20",
+            "interval": [
+              20,
+              21
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R36",
+            "original_sample_intervals": [
+              [
+                20,
+                21
+              ]
+            ],
+            "display_intervals": [
+              [
+                20,
+                21
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R37"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C20",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "paper cutout"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C20",
+            "interval": [
+              20,
+              21
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R37",
+            "original_sample_intervals": [
+              [
+                20,
+                21
+              ]
+            ],
+            "display_intervals": [
+              [
+                20,
+                21
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R38"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C21",
+            "original_text": "#C C drops the paper on the craft paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C21",
+            "interval": [
+              21,
+              22
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R38",
+            "original_sample_intervals": [
+              [
+                21,
+                22
+              ]
+            ],
+            "display_intervals": [
+              [
+                21,
+                22
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R39"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C22",
+            "original_text": "#C C fixes the paper on the decoration"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C22",
+            "interval": [
+              22,
+              23
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R39",
+            "original_sample_intervals": [
+              [
+                22,
+                23
+              ]
+            ],
+            "display_intervals": [
+              [
+                22,
+                23
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R40"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C23",
+            "original_text": "#C C fixes the decoration"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C23",
+            "interval": [
+              23,
+              24
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R40",
+            "original_sample_intervals": [
+              [
+                23,
+                24
+              ]
+            ],
+            "display_intervals": [
+              [
+                23,
+                24
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R41"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C23",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "fixes",
+              "patient": "decoration"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C23",
+            "interval": [
+              23,
+              24
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R41",
+            "original_sample_intervals": [
+              [
+                23,
+                24
+              ]
+            ],
+            "display_intervals": [
+              [
+                23,
+                24
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R42"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C24",
+            "original_text": "#C C holds a glue "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C24",
+            "interval": [
+              24,
+              25
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R42",
+            "original_sample_intervals": [
+              [
+                24,
+                25
+              ]
+            ],
+            "display_intervals": [
+              [
+                24,
+                25
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R43"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C24",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "glue"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C29",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "glue"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C24",
+            "interval": [
+              24,
+              25
+            ]
+          },
+          {
+            "caption_id": "C29",
+            "interval": [
+              29,
+              30
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R43",
+            "original_sample_intervals": [
+              [
+                24,
+                25
+              ],
+              [
+                29,
+                30
+              ]
+            ],
+            "display_intervals": [
+              [
+                24,
+                25
+              ],
+              [
+                29,
+                30
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R44"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C25",
+            "original_text": "#C C holds a piece of paper "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C25",
+            "interval": [
+              25,
+              26
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R44",
+            "original_sample_intervals": [
+              [
+                25,
+                26
+              ]
+            ],
+            "display_intervals": [
+              [
+                25,
+                26
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R45"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C25",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "piece of paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C25",
+            "interval": [
+              25,
+              26
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R45",
+            "original_sample_intervals": [
+              [
+                25,
+                26
+              ]
+            ],
+            "display_intervals": [
+              [
+                25,
+                26
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R46"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C26",
+            "original_text": "#C C looks at the paint"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C26",
+            "interval": [
+              26,
+              27
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R46",
+            "original_sample_intervals": [
+              [
+                26,
+                27
+              ]
+            ],
+            "display_intervals": [
+              [
+                26,
+                27
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R47"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C27",
+            "original_text": "#C C moves the craft paper on the table "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C27",
+            "interval": [
+              27,
+              28
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R47",
+            "original_sample_intervals": [
+              [
+                27,
+                28
+              ]
+            ],
+            "display_intervals": [
+              [
+                27,
+                28
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R48"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C27",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "craft paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C27",
+            "interval": [
+              27,
+              28
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R48",
+            "original_sample_intervals": [
+              [
+                27,
+                28
+              ]
+            ],
+            "display_intervals": [
+              [
+                27,
+                28
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R49"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C28",
+            "original_text": "#C C holds the pin holder"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C28",
+            "interval": [
+              28,
+              29
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R49",
+            "original_sample_intervals": [
+              [
+                28,
+                29
+              ]
+            ],
+            "display_intervals": [
+              [
+                28,
+                29
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R50"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C28",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "pin holder"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C28",
+            "interval": [
+              28,
+              29
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R50",
+            "original_sample_intervals": [
+              [
+                28,
+                29
+              ]
+            ],
+            "display_intervals": [
+              [
+                28,
+                29
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R51"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C29",
+            "original_text": "#C C holds a glue on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C29",
+            "interval": [
+              29,
+              30
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R51",
+            "original_sample_intervals": [
+              [
+                29,
+                30
+              ]
+            ],
+            "display_intervals": [
+              [
+                29,
+                30
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R52"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C30",
+            "original_text": "#C C moves the cut piece of paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C30",
+            "interval": [
+              30,
+              31
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R52",
+            "original_sample_intervals": [
+              [
+                30,
+                31
+              ]
+            ],
+            "display_intervals": [
+              [
+                30,
+                31
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R53"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C30",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "cut piece of paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C30",
+            "interval": [
+              30,
+              31
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R53",
+            "original_sample_intervals": [
+              [
+                30,
+                31
+              ]
+            ],
+            "display_intervals": [
+              [
+                30,
+                31
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R54"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C31",
+            "original_text": "#C C cuts a piece of paper with the scissors"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C31",
+            "interval": [
+              31,
+              32
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R54",
+            "original_sample_intervals": [
+              [
+                31,
+                32
+              ]
+            ],
+            "display_intervals": [
+              [
+                31,
+                32
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R55"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C31",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "piece of paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C59",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "piece of paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C60",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "piece of paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C72",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "piece of paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C31",
+            "interval": [
+              31,
+              32
+            ]
+          },
+          {
+            "caption_id": "C59",
+            "interval": [
+              59,
+              60
+            ]
+          },
+          {
+            "caption_id": "C60",
+            "interval": [
+              60,
+              61
+            ]
+          },
+          {
+            "caption_id": "C72",
+            "interval": [
+              72,
+              73
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R55",
+            "original_sample_intervals": [
+              [
+                31,
+                32
+              ],
+              [
+                59,
+                60
+              ],
+              [
+                60,
+                61
+              ],
+              [
+                72,
+                73
+              ]
+            ],
+            "display_intervals": [
+              [
+                31,
+                32
+              ],
+              [
+                59,
+                61
+              ],
+              [
+                72,
+                73
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R56"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C32",
+            "original_text": "#C C holds a ruler "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C32",
+            "interval": [
+              32,
+              33
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R56",
+            "original_sample_intervals": [
+              [
+                32,
+                33
+              ]
+            ],
+            "display_intervals": [
+              [
+                32,
+                33
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R57"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C32",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "ruler"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C32",
+            "interval": [
+              32,
+              33
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R57",
+            "original_sample_intervals": [
+              [
+                32,
+                33
+              ]
+            ],
+            "display_intervals": [
+              [
+                32,
+                33
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R58"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C33",
+            "original_text": "#C C looks around the art paper "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C33",
+            "interval": [
+              33,
+              34
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R58",
+            "original_sample_intervals": [
+              [
+                33,
+                34
+              ]
+            ],
+            "display_intervals": [
+              [
+                33,
+                34
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R59"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C34",
+            "original_text": "#C C moves hand from the craft material"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C34",
+            "interval": [
+              34,
+              35
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R59",
+            "original_sample_intervals": [
+              [
+                34,
+                35
+              ]
+            ],
+            "display_intervals": [
+              [
+                34,
+                35
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R60"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C35",
+            "original_text": "#C C holds the cut piece of craft paper with the left hand "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C35",
+            "interval": [
+              35,
+              36
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R60",
+            "original_sample_intervals": [
+              [
+                35,
+                36
+              ]
+            ],
+            "display_intervals": [
+              [
+                35,
+                36
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R61"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C35",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "holds",
+              "patient": "cut piece of craft paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C35",
+            "interval": [
+              35,
+              36
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R61",
+            "original_sample_intervals": [
+              [
+                35,
+                36
+              ]
+            ],
+            "display_intervals": [
+              [
+                35,
+                36
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R62"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C36",
+            "original_text": "#C C moves the glue "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C36",
+            "interval": [
+              36,
+              37
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R62",
+            "original_sample_intervals": [
+              [
+                36,
+                37
+              ]
+            ],
+            "display_intervals": [
+              [
+                36,
+                37
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R63"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C36",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "moves",
+              "patient": "glue"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C36",
+            "interval": [
+              36,
+              37
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R63",
+            "original_sample_intervals": [
+              [
+                36,
+                37
+              ]
+            ],
+            "display_intervals": [
+              [
+                36,
+                37
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R64"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C37",
+            "original_text": "#C C picks up the paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C37",
+            "interval": [
+              37,
+              38
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R64",
+            "original_sample_intervals": [
+              [
+                37,
+                38
+              ]
+            ],
+            "display_intervals": [
+              [
+                37,
+                38
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R65"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C38",
+            "original_text": "#C C picks a paper from the paper holder"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C38",
+            "interval": [
+              38,
+              39
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R65",
+            "original_sample_intervals": [
+              [
+                38,
+                39
+              ]
+            ],
+            "display_intervals": [
+              [
+                38,
+                39
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R66"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C38",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C39",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C50",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C52",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C53",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C38",
+            "interval": [
+              38,
+              39
+            ]
+          },
+          {
+            "caption_id": "C39",
+            "interval": [
+              39,
+              40
+            ]
+          },
+          {
+            "caption_id": "C50",
+            "interval": [
+              50,
+              51
+            ]
+          },
+          {
+            "caption_id": "C52",
+            "interval": [
+              52,
+              53
+            ]
+          },
+          {
+            "caption_id": "C53",
+            "interval": [
+              53,
+              54
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R66",
+            "original_sample_intervals": [
+              [
+                38,
+                39
+              ],
+              [
+                39,
+                40
+              ],
+              [
+                50,
+                51
+              ],
+              [
+                52,
+                53
+              ],
+              [
+                53,
+                54
+              ]
+            ],
+            "display_intervals": [
+              [
+                38,
+                40
+              ],
+              [
+                50,
+                51
+              ],
+              [
+                52,
+                54
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R67"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C39",
+            "original_text": "#C C picks the paper on the table "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C39",
+            "interval": [
+              39,
+              40
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R67",
+            "original_sample_intervals": [
+              [
+                39,
+                40
+              ]
+            ],
+            "display_intervals": [
+              [
+                39,
+                40
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R68"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C40",
+            "original_text": "#C C picks a piece of the board "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C40",
+            "interval": [
+              40,
+              41
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R68",
+            "original_sample_intervals": [
+              [
+                40,
+                41
+              ]
+            ],
+            "display_intervals": [
+              [
+                40,
+                41
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R69"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C40",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "piece of the board"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C40",
+            "interval": [
+              40,
+              41
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R69",
+            "original_sample_intervals": [
+              [
+                40,
+                41
+              ]
+            ],
+            "display_intervals": [
+              [
+                40,
+                41
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R70"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C41",
+            "original_text": "#C C picks a ruler"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C41",
+            "interval": [
+              41,
+              42
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R70",
+            "original_sample_intervals": [
+              [
+                41,
+                42
+              ]
+            ],
+            "display_intervals": [
+              [
+                41,
+                42
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R71"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C41",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "ruler"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C41",
+            "interval": [
+              41,
+              42
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R71",
+            "original_sample_intervals": [
+              [
+                41,
+                42
+              ]
+            ],
+            "display_intervals": [
+              [
+                41,
+                42
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R72"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C42",
+            "original_text": "#C C touches the paper"
+          },
+          {
+            "region": "description",
+            "caption_id": "C43",
+            "original_text": "#C C touches the paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C42",
+            "interval": [
+              42,
+              43
+            ]
+          },
+          {
+            "caption_id": "C43",
+            "interval": [
+              43,
+              44
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R72",
+            "original_sample_intervals": [
+              [
+                42,
+                43
+              ],
+              [
+                43,
+                44
+              ]
+            ],
+            "display_intervals": [
+              [
+                42,
+                44
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R73"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C42",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "touches",
+              "patient": "paper"
+            }
+          },
+          {
+            "region": "H fact",
+            "caption_id": "C43",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "touches",
+              "patient": "paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C42",
+            "interval": [
+              42,
+              43
+            ]
+          },
+          {
+            "caption_id": "C43",
+            "interval": [
+              43,
+              44
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R73",
+            "original_sample_intervals": [
+              [
+                42,
+                43
+              ],
+              [
+                43,
+                44
+              ]
+            ],
+            "display_intervals": [
+              [
+                42,
+                44
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R74"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C44",
+            "original_text": "#C C cuts a piece of paper with the cut piece of paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C44",
+            "interval": [
+              44,
+              45
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R74",
+            "original_sample_intervals": [
+              [
+                44,
+                45
+              ]
+            ],
+            "display_intervals": [
+              [
+                44,
+                45
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R75"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C44",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "piece of paper",
+              "body_part": "cut piece of paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C44",
+            "interval": [
+              44,
+              45
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R75",
+            "original_sample_intervals": [
+              [
+                44,
+                45
+              ]
+            ],
+            "display_intervals": [
+              [
+                44,
+                45
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R76"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C45",
+            "original_text": "#C C removes the paper from the scissors"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C45",
+            "interval": [
+              45,
+              46
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R76",
+            "original_sample_intervals": [
+              [
+                45,
+                46
+              ]
+            ],
+            "display_intervals": [
+              [
+                45,
+                46
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R77"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C45",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "removes",
+              "patient": "paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C45",
+            "interval": [
+              45,
+              46
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R77",
+            "original_sample_intervals": [
+              [
+                45,
+                46
+              ]
+            ],
+            "display_intervals": [
+              [
+                45,
+                46
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R78"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C47",
+            "original_text": "#C C picks the board"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C47",
+            "interval": [
+              47,
+              48
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R78",
+            "original_sample_intervals": [
+              [
+                47,
+                48
+              ]
+            ],
+            "display_intervals": [
+              [
+                47,
+                48
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R79"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C47",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "board"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C47",
+            "interval": [
+              47,
+              48
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R79",
+            "original_sample_intervals": [
+              [
+                47,
+                48
+              ]
+            ],
+            "display_intervals": [
+              [
+                47,
+                48
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R80"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C48",
+            "original_text": "#C C cuts the paper with a machine"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C48",
+            "interval": [
+              48,
+              49
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R80",
+            "original_sample_intervals": [
+              [
+                48,
+                49
+              ]
+            ],
+            "display_intervals": [
+              [
+                48,
+                49
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R81"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C48",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C48",
+            "interval": [
+              48,
+              49
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R81",
+            "original_sample_intervals": [
+              [
+                48,
+                49
+              ]
+            ],
+            "display_intervals": [
+              [
+                48,
+                49
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R82"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C49",
+            "original_text": "#C C pulls the paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C49",
+            "interval": [
+              49,
+              50
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R82",
+            "original_sample_intervals": [
+              [
+                49,
+                50
+              ]
+            ],
+            "display_intervals": [
+              [
+                49,
+                50
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R83"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C49",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "pulls",
+              "patient": "paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C49",
+            "interval": [
+              49,
+              50
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R83",
+            "original_sample_intervals": [
+              [
+                49,
+                50
+              ]
+            ],
+            "display_intervals": [
+              [
+                49,
+                50
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R84"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C50",
+            "original_text": "#C C picks the paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C50",
+            "interval": [
+              50,
+              51
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R84",
+            "original_sample_intervals": [
+              [
+                50,
+                51
+              ]
+            ],
+            "display_intervals": [
+              [
+                50,
+                51
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R123"
+        ],
+        "sources": [
+          {
+            "region": "temporal attribute",
+            "record": {
+              "entity_id": "E0",
+              "field": "texture",
+              "value": "paper",
+              "source_caption_ids": [
+                "C50"
+              ],
+              "observed_at": [
+                50
+              ],
+              "source_status": "caption_asserted",
+              "scene_id": "S1",
+              "batch_id": "adaptive:E0"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C50",
+            "interval": [
+              50,
+              51
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R123",
+            "original_sample_intervals": [
+              [
+                50,
+                51
+              ]
+            ],
+            "display_intervals": [
+              [
+                50,
+                51
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R125"
+        ],
+        "sources": [
+          {
+            "region": "temporal state",
+            "record": {
+              "id": "T0",
+              "entity_id": "E0",
+              "scene_id": "S1",
+              "description": "#C C picks the paper",
+              "logical_state_id": "T0",
+              "fragment_kind": "initial_observation",
+              "first_observed_at": 50,
+              "last_observed_at": 50,
+              "valid_from": null,
+              "valid_to": null,
+              "valid_from_bounds": [
+                null,
+                51
+              ],
+              "valid_to_bounds": null,
+              "status": "caption_asserted",
+              "boundary": "initial_observation",
+              "source_caption_ids": [
+                "C50"
+              ],
+              "relation_ids": [],
+              "observed_support_interval": [
+                50,
+                50
+              ],
+              "source_support_interval": [
+                50,
+                51
+              ]
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C50",
+            "interval": [
+              50,
+              51
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R125",
+            "original_sample_intervals": [
+              [
+                50,
+                51
+              ]
+            ],
+            "display_intervals": [
+              [
+                50,
+                51
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R127"
+        ],
+        "sources": [
+          {
+            "region": "temporal identity",
+            "record": {
+              "relation": "part_of",
+              "reason": "C cuts paper, which is picked by C",
+              "left_entity": "E1",
+              "right_entity": "E0",
+              "caption_ids": [
+                "C63",
+                "C73",
+                "C50"
+              ],
+              "decision": "unknown",
+              "status": "text_inferred",
+              "physical_identity_confirmed": false,
+              "call_id": "cde09500-cf7c-4d31-965d-1c2de1a2d9f0",
+              "candidate_id": "I0",
+              "source_type": "caption"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C63",
+            "interval": [
+              63,
+              64
+            ]
+          },
+          {
+            "caption_id": "C73",
+            "interval": [
+              73,
+              74
+            ]
+          },
+          {
+            "caption_id": "C50",
+            "interval": [
+              50,
+              51
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R127",
+            "original_sample_intervals": [
+              [
+                50,
+                51
+              ],
+              [
+                63,
+                64
+              ],
+              [
+                73,
+                74
+              ]
+            ],
+            "display_intervals": [
+              [
+                50,
+                51
+              ],
+              [
+                63,
+                64
+              ],
+              [
+                73,
+                74
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R128"
+        ],
+        "sources": [
+          {
+            "region": "temporal lineage",
+            "record": {
+              "child": "E1",
+              "parent": "E0",
+              "relation": "part_of",
+              "source_caption_ids": [
+                "C63",
+                "C73",
+                "C50"
+              ],
+              "status": "text_inferred"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C63",
+            "interval": [
+              63,
+              64
+            ]
+          },
+          {
+            "caption_id": "C73",
+            "interval": [
+              73,
+              74
+            ]
+          },
+          {
+            "caption_id": "C50",
+            "interval": [
+              50,
+              51
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R128",
+            "original_sample_intervals": [
+              [
+                50,
+                51
+              ],
+              [
+                63,
+                64
+              ],
+              [
+                73,
+                74
+              ]
+            ],
+            "display_intervals": [
+              [
+                50,
+                51
+              ],
+              [
+                63,
+                64
+              ],
+              [
+                73,
+                74
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R85"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C51",
+            "original_text": "#C C looks at the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C51",
+            "interval": [
+              51,
+              52
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R85",
+            "original_sample_intervals": [
+              [
+                51,
+                52
+              ]
+            ],
+            "display_intervals": [
+              [
+                51,
+                52
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R86"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C52",
+            "original_text": "#C C picks a paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C52",
+            "interval": [
+              52,
+              53
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R86",
+            "original_sample_intervals": [
+              [
+                52,
+                53
+              ]
+            ],
+            "display_intervals": [
+              [
+                52,
+                53
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R87"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C53",
+            "original_text": "#C C picks a paper "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C53",
+            "interval": [
+              53,
+              54
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R87",
+            "original_sample_intervals": [
+              [
+                53,
+                54
+              ]
+            ],
+            "display_intervals": [
+              [
+                53,
+                54
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R88"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C54",
+            "original_text": "#C C picks the decorated paper."
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C54",
+            "interval": [
+              54,
+              55
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R88",
+            "original_sample_intervals": [
+              [
+                54,
+                55
+              ]
+            ],
+            "display_intervals": [
+              [
+                54,
+                55
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R89"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C54",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "decorated paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C54",
+            "interval": [
+              54,
+              55
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R89",
+            "original_sample_intervals": [
+              [
+                54,
+                55
+              ]
+            ],
+            "display_intervals": [
+              [
+                54,
+                55
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R90"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C55",
+            "original_text": "#C C picks a piece of paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C55",
+            "interval": [
+              55,
+              56
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R90",
+            "original_sample_intervals": [
+              [
+                55,
+                56
+              ]
+            ],
+            "display_intervals": [
+              [
+                55,
+                56
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R91"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C55",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "piece of paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C55",
+            "interval": [
+              55,
+              56
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R91",
+            "original_sample_intervals": [
+              [
+                55,
+                56
+              ]
+            ],
+            "display_intervals": [
+              [
+                55,
+                56
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R92"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C56",
+            "original_text": "#C C picks a painter "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C56",
+            "interval": [
+              56,
+              57
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R92",
+            "original_sample_intervals": [
+              [
+                56,
+                57
+              ]
+            ],
+            "display_intervals": [
+              [
+                56,
+                57
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R93"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C56",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "painter"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C56",
+            "interval": [
+              56,
+              57
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R93",
+            "original_sample_intervals": [
+              [
+                56,
+                57
+              ]
+            ],
+            "display_intervals": [
+              [
+                56,
+                57
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R94"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C57",
+            "original_text": "#C C looks at the wooden cardboard"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C57",
+            "interval": [
+              57,
+              58
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R94",
+            "original_sample_intervals": [
+              [
+                57,
+                58
+              ]
+            ],
+            "display_intervals": [
+              [
+                57,
+                58
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R95"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C58",
+            "original_text": "#C C fixes the piece of paper."
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C58",
+            "interval": [
+              58,
+              59
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R95",
+            "original_sample_intervals": [
+              [
+                58,
+                59
+              ]
+            ],
+            "display_intervals": [
+              [
+                58,
+                59
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R96"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C58",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "fixes",
+              "patient": "piece of paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C58",
+            "interval": [
+              58,
+              59
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R96",
+            "original_sample_intervals": [
+              [
+                58,
+                59
+              ]
+            ],
+            "display_intervals": [
+              [
+                58,
+                59
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R97"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C59",
+            "original_text": "#C C cuts a piece of paper with a knife"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C59",
+            "interval": [
+              59,
+              60
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R97",
+            "original_sample_intervals": [
+              [
+                59,
+                60
+              ]
+            ],
+            "display_intervals": [
+              [
+                59,
+                60
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R98"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C60",
+            "original_text": "#C C cuts a piece of paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C60",
+            "interval": [
+              60,
+              61
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R98",
+            "original_sample_intervals": [
+              [
+                60,
+                61
+              ]
+            ],
+            "display_intervals": [
+              [
+                60,
+                61
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R99"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C61",
+            "original_text": "#C C cuts the piece of the miniature painting"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C61",
+            "interval": [
+              61,
+              62
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R99",
+            "original_sample_intervals": [
+              [
+                61,
+                62
+              ]
+            ],
+            "display_intervals": [
+              [
+                61,
+                62
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R100"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C61",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "piece of the miniature painting"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C61",
+            "interval": [
+              61,
+              62
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R100",
+            "original_sample_intervals": [
+              [
+                61,
+                62
+              ]
+            ],
+            "display_intervals": [
+              [
+                61,
+                62
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R101"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C62",
+            "original_text": "#C C fixes the decoration on the art "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C62",
+            "interval": [
+              62,
+              63
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R101",
+            "original_sample_intervals": [
+              [
+                62,
+                63
+              ]
+            ],
+            "display_intervals": [
+              [
+                62,
+                63
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R102"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C62",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "fixes",
+              "patient": "decoration",
+              "location": "art"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C62",
+            "interval": [
+              62,
+              63
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R102",
+            "original_sample_intervals": [
+              [
+                62,
+                63
+              ]
+            ],
+            "display_intervals": [
+              [
+                62,
+                63
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R103"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C63",
+            "original_text": "#C C Looks at the craft work"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C63",
+            "interval": [
+              63,
+              64
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R103",
+            "original_sample_intervals": [
+              [
+                63,
+                64
+              ]
+            ],
+            "display_intervals": [
+              [
+                63,
+                64
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R104"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C64",
+            "original_text": "#C C Looks at the craft paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C64",
+            "interval": [
+              64,
+              65
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R104",
+            "original_sample_intervals": [
+              [
+                64,
+                65
+              ]
+            ],
+            "display_intervals": [
+              [
+                64,
+                65
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R105"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C65",
+            "original_text": "#C C looks at the decorated piece of craft."
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C65",
+            "interval": [
+              65,
+              66
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R105",
+            "original_sample_intervals": [
+              [
+                65,
+                66
+              ]
+            ],
+            "display_intervals": [
+              [
+                65,
+                66
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R106"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C66",
+            "original_text": "#C C places the  piece of paper on the table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C66",
+            "interval": [
+              66,
+              67
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R106",
+            "original_sample_intervals": [
+              [
+                66,
+                67
+              ]
+            ],
+            "display_intervals": [
+              [
+                66,
+                67
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R107"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C66",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "places",
+              "patient": "piece of paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C66",
+            "interval": [
+              66,
+              67
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R107",
+            "original_sample_intervals": [
+              [
+                66,
+                67
+              ]
+            ],
+            "display_intervals": [
+              [
+                66,
+                67
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R108"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C67",
+            "original_text": "#C C cuts the paper tape with a pair of scissors"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C67",
+            "interval": [
+              67,
+              68
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R108",
+            "original_sample_intervals": [
+              [
+                67,
+                68
+              ]
+            ],
+            "display_intervals": [
+              [
+                67,
+                68
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R109"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C67",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "paper tape",
+              "instrument": "pair of scissors"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C67",
+            "interval": [
+              67,
+              68
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R109",
+            "original_sample_intervals": [
+              [
+                67,
+                68
+              ]
+            ],
+            "display_intervals": [
+              [
+                67,
+                68
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R110"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C68",
+            "original_text": "#C C Looks at a piece of paper on a table"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C68",
+            "interval": [
+              68,
+              69
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R110",
+            "original_sample_intervals": [
+              [
+                68,
+                69
+              ]
+            ],
+            "display_intervals": [
+              [
+                68,
+                69
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R111"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C69",
+            "original_text": "#C C cuts the paper tape with the scissors"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C69",
+            "interval": [
+              69,
+              70
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R111",
+            "original_sample_intervals": [
+              [
+                69,
+                70
+              ]
+            ],
+            "display_intervals": [
+              [
+                69,
+                70
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R112"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C69",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "paper tape",
+              "body_part": "scissors",
+              "instrument": "scissors"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C69",
+            "interval": [
+              69,
+              70
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R112",
+            "original_sample_intervals": [
+              [
+                69,
+                70
+              ]
+            ],
+            "display_intervals": [
+              [
+                69,
+                70
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R113"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C70",
+            "original_text": "#C C looks at the craft piece "
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C70",
+            "interval": [
+              70,
+              71
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R113",
+            "original_sample_intervals": [
+              [
+                70,
+                71
+              ]
+            ],
+            "display_intervals": [
+              [
+                70,
+                71
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R114"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C71",
+            "original_text": "#C C holds the piece of the poster on her left hand."
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C71",
+            "interval": [
+              71,
+              72
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R114",
+            "original_sample_intervals": [
+              [
+                71,
+                72
+              ]
+            ],
+            "display_intervals": [
+              [
+                71,
+                72
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R115"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C72",
+            "original_text": "#C C cuts the piece of paper with a cutter"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C72",
+            "interval": [
+              72,
+              73
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R115",
+            "original_sample_intervals": [
+              [
+                72,
+                73
+              ]
+            ],
+            "display_intervals": [
+              [
+                72,
+                73
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R116"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C73",
+            "original_text": "#C C cuts a paper with a scissors"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C73",
+            "interval": [
+              73,
+              74
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R116",
+            "original_sample_intervals": [
+              [
+                73,
+                74
+              ]
+            ],
+            "display_intervals": [
+              [
+                73,
+                74
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R117"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C73",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "cuts",
+              "patient": "paper",
+              "body_part": "scissors"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C73",
+            "interval": [
+              73,
+              74
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R117",
+            "original_sample_intervals": [
+              [
+                73,
+                74
+              ]
+            ],
+            "display_intervals": [
+              [
+                73,
+                74
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R124"
+        ],
+        "sources": [
+          {
+            "region": "temporal attribute",
+            "record": {
+              "entity_id": "E1",
+              "field": "texture",
+              "value": "scissors",
+              "source_caption_ids": [
+                "C73"
+              ],
+              "observed_at": [
+                73
+              ],
+              "source_status": "caption_asserted",
+              "scene_id": "S2",
+              "batch_id": "adaptive:E1"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C73",
+            "interval": [
+              73,
+              74
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R124",
+            "original_sample_intervals": [
+              [
+                73,
+                74
+              ]
+            ],
+            "display_intervals": [
+              [
+                73,
+                74
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R126"
+        ],
+        "sources": [
+          {
+            "region": "temporal state",
+            "record": {
+              "id": "T1",
+              "entity_id": "E1",
+              "scene_id": "S2",
+              "description": "#C C cuts a paper with a scissors",
+              "logical_state_id": "T1",
+              "fragment_kind": "initial_observation",
+              "first_observed_at": 73,
+              "last_observed_at": 73,
+              "valid_from": null,
+              "valid_to": null,
+              "valid_from_bounds": [
+                null,
+                74
+              ],
+              "valid_to_bounds": null,
+              "status": "caption_asserted",
+              "boundary": "initial_observation",
+              "source_caption_ids": [
+                "C73"
+              ],
+              "relation_ids": [],
+              "observed_support_interval": [
+                73,
+                73
+              ],
+              "source_support_interval": [
+                73,
+                74
+              ]
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C73",
+            "interval": [
+              73,
+              74
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R126",
+            "original_sample_intervals": [
+              [
+                73,
+                74
+              ]
+            ],
+            "display_intervals": [
+              [
+                73,
+                74
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R118"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C74",
+            "original_text": "#C C looks at the tape"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C74",
+            "interval": [
+              74,
+              75
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R118",
+            "original_sample_intervals": [
+              [
+                74,
+                75
+              ]
+            ],
+            "display_intervals": [
+              [
+                74,
+                75
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R119"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C75",
+            "original_text": "#C C touches a board"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C75",
+            "interval": [
+              75,
+              76
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R119",
+            "original_sample_intervals": [
+              [
+                75,
+                76
+              ]
+            ],
+            "display_intervals": [
+              [
+                75,
+                76
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R120"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C75",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "touches",
+              "patient": "board"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C75",
+            "interval": [
+              75,
+              76
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R120",
+            "original_sample_intervals": [
+              [
+                75,
+                76
+              ]
+            ],
+            "display_intervals": [
+              [
+                75,
+                76
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R121"
+        ],
+        "sources": [
+          {
+            "region": "description",
+            "caption_id": "C76",
+            "original_text": "#C C picks the art paper"
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C76",
+            "interval": [
+              76,
+              77
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R121",
+            "original_sample_intervals": [
+              [
+                76,
+                77
+              ]
+            ],
+            "display_intervals": [
+              [
+                76,
+                77
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "record_ids": [
+          "R122"
+        ],
+        "sources": [
+          {
+            "region": "H fact",
+            "caption_id": "C76",
+            "category": "actions",
+            "fact_index": 0,
+            "record": {
+              "actor": "C",
+              "verb": "picks",
+              "patient": "art paper"
+            }
+          }
+        ],
+        "occurrences": [
+          {
+            "caption_id": "C76",
+            "interval": [
+              76,
+              77
+            ]
+          }
+        ],
+        "interval_display": [
+          {
+            "record_id": "R122",
+            "original_sample_intervals": [
+              [
+                76,
+                77
+              ]
+            ],
+            "display_intervals": [
+              [
+                76,
+                77
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "skipped_ids": [],
+    "original_sources_retained": true,
+    "inferred_continuity": false,
+    "inferred_event_counts": false,
+    "semantic_paraphrasing": false,
+    "version": "I-evidence-planner-L-v1-open-state-adjacent",
+    "parent_memory_variant": "I",
+    "underlying_memory_variant": "H",
+    "interval_presentation": "coalesce_exactly_adjacent_intervals_within_identical_statement",
+    "presentation_version": "M-frames-adjacent-v2-no-source-label",
+    "interval_label": "Frames",
+    "display_qualifications": {
+      "R0": "source assertion",
+      "R1": "source assertion",
+      "R2": "source assertion",
+      "R3": "source assertion",
+      "R4": "source assertion",
+      "R5": "source assertion",
+      "R6": "source assertion",
+      "R7": "source assertion",
+      "R8": "source assertion",
+      "R9": "source assertion",
+      "R10": "source assertion",
+      "R11": "source assertion",
+      "R12": "source assertion",
+      "R13": "source assertion",
+      "R14": "source assertion",
+      "R15": "source assertion",
+      "R16": "source assertion",
+      "R17": "source assertion",
+      "R18": "source assertion",
+      "R19": "source assertion",
+      "R20": "source assertion",
+      "R21": "source assertion",
+      "R22": "source assertion",
+      "R23": "source assertion",
+      "R24": "source assertion",
+      "R25": "source assertion",
+      "R26": "source assertion",
+      "R27": "source assertion",
+      "R28": "source assertion",
+      "R29": "source assertion",
+      "R30": "source assertion",
+      "R31": "source assertion",
+      "R32": "source assertion",
+      "R33": "source assertion",
+      "R34": "source assertion",
+      "R35": "source assertion",
+      "R36": "source assertion",
+      "R37": "source assertion",
+      "R38": "source assertion",
+      "R39": "source assertion",
+      "R40": "source assertion",
+      "R41": "source assertion",
+      "R42": "source assertion",
+      "R43": "source assertion",
+      "R44": "source assertion",
+      "R45": "source assertion",
+      "R46": "source assertion",
+      "R47": "source assertion",
+      "R48": "source assertion",
+      "R49": "source assertion",
+      "R50": "source assertion",
+      "R51": "source assertion",
+      "R52": "source assertion",
+      "R53": "source assertion",
+      "R54": "source assertion",
+      "R55": "source assertion",
+      "R56": "source assertion",
+      "R57": "source assertion",
+      "R58": "source assertion",
+      "R59": "source assertion",
+      "R60": "source assertion",
+      "R61": "source assertion",
+      "R62": "source assertion",
+      "R63": "source assertion",
+      "R64": "source assertion",
+      "R65": "source assertion",
+      "R66": "source assertion",
+      "R67": "source assertion",
+      "R68": "source assertion",
+      "R69": "source assertion",
+      "R70": "source assertion",
+      "R71": "source assertion",
+      "R72": "source assertion",
+      "R73": "source assertion",
+      "R74": "source assertion",
+      "R75": "source assertion",
+      "R76": "source assertion",
+      "R77": "source assertion",
+      "R78": "source assertion",
+      "R79": "source assertion",
+      "R80": "source assertion",
+      "R81": "source assertion",
+      "R82": "source assertion",
+      "R83": "source assertion",
+      "R84": "source assertion",
+      "R123": "text-inferred hypothesis",
+      "R125": "source assertion",
+      "R127": "text-inferred hypothesis",
+      "R128": "text-inferred hypothesis",
+      "R85": "source assertion",
+      "R86": "source assertion",
+      "R87": "source assertion",
+      "R88": "source assertion",
+      "R89": "source assertion",
+      "R90": "source assertion",
+      "R91": "source assertion",
+      "R92": "source assertion",
+      "R93": "source assertion",
+      "R94": "source assertion",
+      "R95": "source assertion",
+      "R96": "source assertion",
+      "R97": "source assertion",
+      "R98": "source assertion",
+      "R99": "source assertion",
+      "R100": "source assertion",
+      "R101": "source assertion",
+      "R102": "source assertion",
+      "R103": "source assertion",
+      "R104": "source assertion",
+      "R105": "source assertion",
+      "R106": "source assertion",
+      "R107": "source assertion",
+      "R108": "source assertion",
+      "R109": "source assertion",
+      "R110": "source assertion",
+      "R111": "source assertion",
+      "R112": "source assertion",
+      "R113": "source assertion",
+      "R114": "source assertion",
+      "R115": "source assertion",
+      "R116": "source assertion",
+      "R117": "source assertion",
+      "R124": "text-inferred hypothesis",
+      "R126": "source assertion",
+      "R118": "source assertion",
+      "R119": "source assertion",
+      "R120": "source assertion",
+      "R121": "source assertion",
+      "R122": "source assertion"
+    }
+  },
+  "limitation": "Presentation/source-audit repair only; existing texture=paper/scissors assertions are not relabeled or semantically validated."
+}

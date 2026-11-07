@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-04T13:05:54.373023+08:00",
+  "scope": "Active M/O frozen runtime, config and policy; their new result files are live and not included",
+  "checks": {
+    "scene-planned-M-L-300-20261104-r18": {
+      "verified_files": 202,
+      "mismatches": [],
+      "passed": true
+    },
+    "O-Oplus-N-question-only-300-source-bound-20261104-r4": {
+      "verified_files": 215,
+      "mismatches": [],
+      "passed": true
+    }
+  }
+}

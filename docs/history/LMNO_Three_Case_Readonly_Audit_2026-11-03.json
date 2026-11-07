@@ -1,0 +1,88 @@
+{
+  "created_at": "2026-11-03T20:05:13.421779+08:00",
+  "review_directory": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/docs/demos/LMNO_Three_Cases_2026-11-03",
+  "cases": [
+    {
+      "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+      "title": "动作协调与平衡",
+      "folder": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/docs/demos/LMNO_Three_Cases_2026-11-03/01_coordination",
+      "answers": {
+        "L": "B",
+        "M": "A",
+        "N": "A",
+        "O": "A",
+        "O+": "E"
+      },
+      "audit_rows": 281,
+      "findings": {
+        "confirmed": [
+          "M/N最终输入中保留了右手移到胸前的原句，仍答A；不是这条证据在M/N流程中被删光。",
+          "O在S57抽到C/moves/her right hand/destination=her chest，筛选四项全0；S125双手放胸前同样全0。",
+          "筛选理由要求单句提供右腿与右手协调及动作目的，因单句不能独立证明整题而删掉局部相关证据。",
+          "O+的S18已选信息只有C/walks/location=around，却补入右手右腿协调、平衡、避障等用途推测。"
+        ],
+        "limits": [
+          "L仅保留较早的0–45秒相关观测并答对，但其输入没有完整证明平衡目的，不能仅凭正确答案断言其推理可靠。",
+          "删除胸前动作是已确认的信息损失；是否单独导致最终错答尚未进行受控回放。"
+        ]
+      }
+    },
+    {
+      "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+      "title": "熨衣还是折衣",
+      "folder": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/docs/demos/LMNO_Three_Cases_2026-11-03/02_ironing",
+      "answers": {
+        "L": "C",
+        "M": "A",
+        "N": "A",
+        "O": "C",
+        "O+": "C"
+      },
+      "audit_rows": 32,
+      "findings": {
+        "confirmed": [
+          "M/N只打开S0（0–18秒）即判充分，规划保留各自18/19条候选；熨衣事实实际进入最终回答。",
+          "N导航review明确supported_option=O2并用中文解释支持选项C熨衣，但最终reader选A折衣。",
+          "O使用同一N来源，删除S0折衣整句，保留S7/S8熨衣；O/O+最终答C。",
+          "S0删除理由仍是单句无法说明整体过程/频率，不是基于事实确认折衣无关。"
+        ],
+        "limits": [
+          "O此题答对伴随删除真实折衣证据，不能据此宣称过滤规则正确或稳定。",
+          "导航早停与最终读者选择同时存在差异；不能将错答只归因于未取到熨衣事实。"
+        ]
+      }
+    },
+    {
+      "question_id": "5d15c716-f179-462c-84a6-fa94e9d14e94",
+      "title": "车库木工还是寻找物品",
+      "folder": "/mnt/ssd2/hli/work/projects/VideoAgent/SCRIPT/docs/demos/LMNO_Three_Cases_2026-11-03/03_woodwork",
+      "answers": {
+        "L": "E",
+        "M": "C",
+        "N": "E",
+        "O": "E",
+        "O+": "E"
+      },
+      "audit_rows": 336,
+      "findings": {
+        "confirmed": [
+          "M/N都读5个相同场景、170个采样秒，达到step_limit，尚有两个候选场景未读。",
+          "M候选池168条，模型原始规划仅保留R0低头、跳过其余167条；R117木板放到机器和R156在台锯上转木板均已入池却被skip。",
+          "N规划保留178/178条，最终输入包含木板/机器/台锯事实并答E；L保留139条也答E。",
+          "O在120句中保留96句，S80抽取C/puts/wood plank/destination=wood plank machine，四项全1；O答E。",
+          "O+虽答E，S80重组加入garage、加工阶段、效率等原已选信息没有的解释；还出现重复长句，输入由O的5264 token增加到6282。"
+        ],
+        "limits": [
+          "M的信息丢失可以定位到规划模型输出，未见程序解析丢名单；完整修复及因果验证需另行受控实验。",
+          "N与M抽取池不同，不能仅凭本题把收益归于某一个角色字段。"
+        ]
+      }
+    }
+  ],
+  "checked_source_files": 1396,
+  "batch_rows_checked": 649,
+  "scope": "Three user-requested shared cases only; purposively selected diagnostic examples, not performance estimates",
+  "new_model_calls": 0,
+  "code_changed": false,
+  "running_experiments_unchanged": true
+}

@@ -1,0 +1,319 @@
+{
+  "at": "2026-11-04T13:11:28.559518+08:00",
+  "user_request": "修复异常继续跑，并更完全考量、尽量解决或避免可能问题；保留减少串行预处理要求",
+  "runs": {
+    "M": {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18",
+      "status": {
+        "state": "running",
+        "controller_pid": 3822711,
+        "updated_at": "2026-11-04T13:11:24.362666+08:00",
+        "worker_pid": 3822881,
+        "gpu": "1",
+        "gpu_uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18/runtime/script/run_mn_empty_string_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261104-r18"
+        ],
+        "started_at": "2026-11-04T12:09:18.707037+08:00"
+      },
+      "progress": {
+        "stage": "query",
+        "index": 201,
+        "question_id": "4ca1c82d-232c-4ffc-bad0-69f9aa992aef",
+        "updated_at": "2026-11-04T13:01:52.487860+08:00"
+      },
+      "successful": 200,
+      "errors": 0
+    },
+    "N": {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+      "status": {
+        "state": "running",
+        "controller_pid": 3904391,
+        "worker_pid": 3904394,
+        "worker_pids": [
+          3904394,
+          3904395
+        ],
+        "scheduler": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3",
+        "workers": {
+          "0": {
+            "stage": "query",
+            "pid": 3904394,
+            "at": "2026-11-04T13:10:13.398712+08:00",
+            "index": 150,
+            "question_id": "59dcde1d-f210-48fc-b888-5574d8962a2c",
+            "gpu": "3"
+          },
+          "1": {
+            "stage": "waiting_for_gpu",
+            "pid": 3904395,
+            "at": "2026-11-04T13:11:21.305054+08:00",
+            "watched_gpu_indices": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "gpu_observations": {
+              "0": {
+                "index": "0",
+                "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+                "free_mib": 7963,
+                "utilization": 99
+              },
+              "1": {
+                "index": "1",
+                "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+                "free_mib": 18407,
+                "utilization": 98
+              },
+              "2": {
+                "index": "2",
+                "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+                "free_mib": 16643,
+                "utilization": 97
+              },
+              "3": {
+                "index": "3",
+                "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+                "free_mib": 28699,
+                "utilization": 94
+              }
+            },
+            "effective_free_mib": {
+              "0": 459,
+              "1": 6389,
+              "2": 16643,
+              "3": 15003
+            },
+            "stable_observations": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0
+            },
+            "minimum_free_mib": 32768,
+            "maximum_utilization": 100,
+            "scheduling": "shared_memory_reservations"
+          }
+        },
+        "updated_at": "2026-11-04T13:11:28.343189+08:00"
+      },
+      "progress": {
+        "stage": "parallel_queries",
+        "index": 150,
+        "question_id": "59dcde1d-f210-48fc-b888-5574d8962a2c",
+        "active_queries": [
+          {
+            "stage": "query",
+            "pid": 3904394,
+            "at": "2026-11-04T13:10:13.398712+08:00",
+            "index": 150,
+            "question_id": "59dcde1d-f210-48fc-b888-5574d8962a2c",
+            "gpu": "3"
+          }
+        ],
+        "updated_at": "2026-11-04T13:11:28.343813+08:00"
+      },
+      "successful": 149,
+      "errors": 0
+    },
+    "O": {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4",
+      "status": {
+        "state": "running",
+        "controller_pid": 3824903,
+        "updated_at": "2026-11-04T13:11:28.079371+08:00",
+        "worker_pid": 3838971,
+        "gpu": "3"
+      },
+      "progress": {
+        "stage": "shared_extraction",
+        "case": 146,
+        "question_id": "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+        "condition": "source_only",
+        "sentence": 65,
+        "total_sentences": 161,
+        "batch_size": 4,
+        "updated_at": "2026-11-04T13:11:15.773573+08:00"
+      },
+      "successful": 145,
+      "errors": 0
+    },
+    "P": {
+      "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r3",
+      "status": {
+        "state": "running",
+        "controller_pid": 3902143,
+        "updated_at": "2026-11-04T13:11:24.361369+08:00",
+        "worker_pid": 3902209
+      },
+      "progress": {
+        "stage": "P",
+        "case": 18,
+        "question_id": "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+        "updated_at": "2026-11-04T13:09:06.894538+08:00"
+      },
+      "successful": 17,
+      "errors": 0
+    }
+  },
+  "repairs": {
+    "N": {
+      "scope": "Complete evidence planning receives remaining non-answer budget, preserving total query cap, answer, warmup, cleanup and task caps. Ordinary tool caps unchanged.",
+      "continued_question": 146,
+      "original_input_hash_preserved": true,
+      "successful_preprocessing_reused_seconds": 1180.7385567389429,
+      "historical_failed_planner_seconds_charged": 140.03438103571534,
+      "new_processing_seconds": 65.98003571107984,
+      "root_success_total_seconds": 1246.7185924500227,
+      "root_budgeted_total_including_failed_seconds": 1386.752973485738,
+      "root_total_cap": 1584.0535734035075,
+      "result": "Failed question completed and published; later questions continuing",
+      "performance_caveat": "This resumed planner took 65.301505s under different co-resident load; not proof that the allowance change accelerated generation."
+    },
+    "P": {
+      "version": "v16 fixed complete role keys with nullable source phrases",
+      "inherited_v15_results": 17,
+      "original_failed_sentence_real_probe_passed": true,
+      "new_structure_boundary_checks_passed": 9,
+      "fresh_generic_checks_passed": 58,
+      "execution_output_reserve_tokens": 8192,
+      "old_output_reserve_tokens": 2048,
+      "call_cap_seconds": 150,
+      "question_budget_seconds": 3600,
+      "strict_duplicate_json_keys": true,
+      "semantic_scope": "Fixed keys prevent duplicate role overwrites; role meaning may still be wrong and fidelity review remains required. One general tool/body probe was structurally valid but not semantically complete; no QA improvement claimed.",
+      "real_validation_finished_at": "2026-11-04T13:09:06+08:00",
+      "formal_question_18_batch_started": true,
+      "new_v16_formal_answer_pending": true
+    },
+    "shared": {
+      "schema_minLength_enforced": true,
+      "native_input_plus_output_preflight": true,
+      "planner_output_bounds": "Necessary lower bound rejects provably impossible maps; worst-case estimate is diagnostic, not a proof.",
+      "interrupted_planner_diagnostics": "Raw text and token IDs retained on soft deadline or missing EOS; never accepted as a completed plan."
+    }
+  },
+  "tests": {
+    "schema_MN_O_unicode": 31,
+    "generation_capacity_related": 23,
+    "P_unique_related": 75,
+    "N_budget_scheduler": 16,
+    "monitor": 7,
+    "counting": "Groups overlap; do not add these as distinct tests.",
+    "N_helper_scheduler": 11
+  },
+  "frozen_live_MO_check": "docs/history/NP_Repair_MO_Freeze_Check_2026-11-04.json",
+  "monitor": {
+    "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-alert-monitor-20261104-r1",
+    "pid": 3925416,
+    "interval_seconds": 60,
+    "thread_delivery_verified": true,
+    "OS_push_verified": false,
+    "scope": "Failure status, controller loss, and premature original-call-path helper exit; no experiment restart"
+  },
+  "limitations": [
+    "No claim of complete QA or semantic correctness.",
+    "Extremely long generations can still exceed remaining time or output limits; failures are retained and notified.",
+    "Active M/O frozen implementations were not hot-updated.",
+    "GPU coexistence changes observed timing; no controlled speed comparison."
+  ],
+  "detail_records": [
+    "N_Planner_Budget_Continuation_2026-11-04.json",
+    "P_Complete_Role_Contract_Repair_2026-11-04.json",
+    "Generation_Capacity_Audit_2026-11-04.json",
+    "NP_Repair_MO_Freeze_Check_2026-11-04.json"
+  ],
+  "auxiliary_path_repair": {
+    "passed": true,
+    "at": "2026-11-04T13:10:27.941770+08:00",
+    "pid": 3922027,
+    "process_identity": "1761745611",
+    "helper_preflight": {
+      "passed": true,
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/preserve_parallel_call_paths.py",
+      "sha256": "e8eb66aea150ff310d1cc2c7fac8f6df57a9381eb2610c74a888b695bdbe1ca4",
+      "syntax_checked": true,
+      "help_exit_code": 0
+    },
+    "references": {
+      "parallel-20261104-r2": {
+        "passed": true,
+        "questions": [
+          "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+          "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+          "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43"
+        ],
+        "successful_call_references": 164,
+        "missing": [],
+        "content_mismatches": []
+      },
+      "parallel-20261104-r3": {
+        "passed": true,
+        "questions": [
+          "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+          "aafd0923-bfdb-4271-960e-02a4a5a75ed3",
+          "bbe35aed-1c92-42de-8f50-7004cdae317e"
+        ],
+        "successful_call_references": 127,
+        "missing": [],
+        "content_mismatches": []
+      }
+    },
+    "initial_scan_record": {
+      "at": "2026-11-04T13:06:58.898555+08:00",
+      "reason": "Initial helper path absent from inherited runtime; auxiliary exited before performing aliases. Model worker and artifacts unaffected.",
+      "old_launch": {
+        "pid": 3904392,
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/runtime/script/preserve_parallel_call_paths.py",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+          "--control",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3",
+          "--supervisor",
+          "3904391"
+        ],
+        "at": "2026-11-04T12:59:57.829014+08:00"
+      },
+      "new_pid": 3922027,
+      "helper_sha256": "e8eb66aea150ff310d1cc2c7fac8f6df57a9381eb2610c74a888b695bdbe1ca4",
+      "prior_control_aliases_restored": [
+        "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+        "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+        "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43"
+      ],
+      "current_aliases_restored": [
+        "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+        "aafd0923-bfdb-4271-960e-02a4a5a75ed3"
+      ],
+      "failed_attempts_preserved": true,
+      "policy": "Only claims marked complete by the owning control receive aliases; old failed attempts are never replaced by newer publications.",
+      "tests": {
+        "passed": true,
+        "scheduler_checks": 7,
+        "new_regression": "old failed attempt with later published success remains untouched"
+      }
+    },
+    "scope": "Existing corrected helper confirmed alive and all owned successful references resolved with identical copied bytes; model workers unchanged"
+  },
+  "all_published_N_references": {
+    "passed": true,
+    "at": "2026-11-04T13:11:18.244004+08:00",
+    "published_successful_questions": 149,
+    "successful_call_references": 9051,
+    "parallel_io_workers": 4,
+    "errors": [],
+    "result_hashes_unchanged": true,
+    "scope": "All currently published N successes, including inherited predecessor generations, not only newly published r2/r3 cases"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "I_control": {
+    "question_id": "73ecc613-5e39-4348-94ba-ee6cb197367a",
+    "selected_option": "1",
+    "error": null,
+    "raw_response": "prediction: B",
+    "input_tokens": 2168,
+    "output_tokens": 4,
+    "seconds": 0.36687974631786346,
+    "input_sha256": "3e074a6a2b8d723bee905a2715bd94b9ad8524e9c32be45f10b69ff80775a09a",
+    "parser": "constrained_prediction_letter",
+    "reader_protocol": "K-constrained-prediction-letter-v1"
+  },
+  "L_all_evidence": {
+    "question_id": "73ecc613-5e39-4348-94ba-ee6cb197367a",
+    "selected_option": "1",
+    "error": null,
+    "raw_response": "prediction: B",
+    "input_tokens": 3093,
+    "output_tokens": 4,
+    "seconds": 0.43196234107017517,
+    "input_sha256": "ce7a873695c489773b10dd61f790ab68b8d9b1ff93cc0f2f801a27d7599657fb",
+    "parser": "constrained_prediction_letter",
+    "reader_protocol": "K-constrained-prediction-letter-v1"
+  },
+  "L_evidence_planner": {
+    "question_id": "73ecc613-5e39-4348-94ba-ee6cb197367a",
+    "selected_option": "3",
+    "error": null,
+    "raw_response": "prediction: D",
+    "input_tokens": 2479,
+    "output_tokens": 4,
+    "seconds": 0.36589039862155914,
+    "input_sha256": "d88442263a3f780fb278cadae2e2cfb81b38683db2acbb4b923e7baa5a61c557",
+    "parser": "constrained_prediction_letter",
+    "reader_protocol": "K-constrained-prediction-letter-v1"
+  },
+  "ground_truth_index": 1
+}

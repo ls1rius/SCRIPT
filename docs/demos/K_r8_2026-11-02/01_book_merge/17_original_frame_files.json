@@ -1,0 +1,366 @@
+{
+  "0": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/0.jpg",
+    "sha256": "5831ce01cd287e8600404438b3705f75186e16755924ad1281ca59a2c44b5ec8"
+  },
+  "1": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/1.jpg",
+    "sha256": "a0ba6fe6880206f844cd16baaed39b875336963ad890194efde47ebde1a52c5b"
+  },
+  "2": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/2.jpg",
+    "sha256": "37307a0e5715454885df20c78d683272890cd0542f520ca978821a6a62dd0765"
+  },
+  "3": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/3.jpg",
+    "sha256": "a35aa5a108aeafa76068cccdcb31fad35f2f56410930b427840f713b6c8c53d6"
+  },
+  "4": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/4.jpg",
+    "sha256": "ea7830d51921a9ffe8fa8025d67e63d13ea0f4f85c7b66f44277d9b06385139a"
+  },
+  "5": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/5.jpg",
+    "sha256": "b34df40de91c3692a01c1d48f9acea08ad58788f2e6c318df8ae9f4ecc11b40b"
+  },
+  "6": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/6.jpg",
+    "sha256": "79975adc2d2c9f533ad5c5815737138929dc941c29e76f158b18230a81593883"
+  },
+  "7": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/7.jpg",
+    "sha256": "1e92ecbf54959dee977fbe2adfe937b040561a113a371e1e4e92df4dfc80ab3a"
+  },
+  "8": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/8.jpg",
+    "sha256": "371bb10c79c2820b2731e110a25029e5a593a2dae7d0ef5d4dbbf7253fccd73b"
+  },
+  "9": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/9.jpg",
+    "sha256": "856fc30e22b094ebd03785c20a5b7545eb639f8a97d0e28d487fb2b71b29b7b1"
+  },
+  "10": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/10.jpg",
+    "sha256": "ddff09f8f030888bf541c8d071de66f4e1e1df0599ea42eebaabb02bb1a3691a"
+  },
+  "11": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/11.jpg",
+    "sha256": "08a4329ea3088f7b2952ec5228c7d6515ce134a4c097a9d7d0bd1d9228eec26a"
+  },
+  "12": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/12.jpg",
+    "sha256": "7e56daaacb45cb6174324aa637edabb8f0f57d424a756365900071062b8e126f"
+  },
+  "13": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/13.jpg",
+    "sha256": "3ea79ac2d94dca9c895e9df85df71c7637e2557c0b049305e4722117c274f9b3"
+  },
+  "14": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/14.jpg",
+    "sha256": "4a6aad21861fe04437463377c330851ea119033b36791cc292706b25ff69819f"
+  },
+  "15": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/15.jpg",
+    "sha256": "645a5fe241ec3d58e422f742099852459b29f8b1f0b306071e6a862cf9405525"
+  },
+  "16": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/16.jpg",
+    "sha256": "9b2ebee41a0ca88b0738f62a34e60f0daee80e44b7fcb043b226d36a93d9d4d3"
+  },
+  "17": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/17.jpg",
+    "sha256": "4ce35aac5095b4bfe8c69e5856586c672273c95b58e182002100d6c65101291f"
+  },
+  "18": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/18.jpg",
+    "sha256": "0b377af1079caf84a39db89d2e41d597f97e88ee05a1a94e1fb96c9aa32159fc"
+  },
+  "19": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/19.jpg",
+    "sha256": "1002cdb06392cfbe683dd68c3073acd8efdaedeb0453a2d1127062df656f5f8a"
+  },
+  "20": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/20.jpg",
+    "sha256": "cd6a26c55b10642ef4f27aedbeecba142ecd1bc68f01259da0a02e360f33bfa3"
+  },
+  "21": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/21.jpg",
+    "sha256": "8b29a4208c4c8b17176f535cc3f0f55f122fe00075f888aee5a497222a95cc63"
+  },
+  "22": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/22.jpg",
+    "sha256": "cb52a716a0dbd7f68247ca1876dd029fb96f6ffae200b4222874152e237dee9a"
+  },
+  "23": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/23.jpg",
+    "sha256": "ac4ad6d82c5271b82226812e3923a222a6ba22211dac4b0bb0f9d1e27dd506ba"
+  },
+  "24": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/24.jpg",
+    "sha256": "0337bee572af9d7ac1fa6aeb944e3d10fde2b3f081a99e8c8eec8c85986a8535"
+  },
+  "25": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/25.jpg",
+    "sha256": "79dcc43b9096317657e306f8f1f979a5e219f094fef1e31e33f70ac8ea9c1cf8"
+  },
+  "26": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/26.jpg",
+    "sha256": "5527d034bc7bcbbda5ef593b3ced10a540a2ef3d8003c42da0ff6c1457a0768a"
+  },
+  "27": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/27.jpg",
+    "sha256": "62d0651a68d6b7fb1b4d8f60f9ba440df87fafd0bfb7acb51161749249199f78"
+  },
+  "28": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/28.jpg",
+    "sha256": "8c4d98f0620a2a567e506a2c8a62593f6be23a2c9e786dac45e7522d02ba7621"
+  },
+  "29": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/29.jpg",
+    "sha256": "dccb4d322ae55a6887da24b8fe9d60c741963c1083258a4873fe58651db22904"
+  },
+  "30": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/30.jpg",
+    "sha256": "13a0a1e0914004ba1d73f40375fc73b9e24819c77fbb29237e50ef16a4dbd38f"
+  },
+  "31": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/31.jpg",
+    "sha256": "e5521c64ac592c64dcfb3d17e05d68e4d1b2a8a27937f85775bda273bae427d6"
+  },
+  "32": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/32.jpg",
+    "sha256": "02ee9def9a1f6f1ee9696d545fac4cfbf6ea2fcaa7312881276607d89ab3cdac"
+  },
+  "33": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/33.jpg",
+    "sha256": "3a912eeff34cd33ba74cedec97d5b2ef9966504f3dab47a0433b06556acce878"
+  },
+  "34": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/34.jpg",
+    "sha256": "fef9fa01c644175f0dfa8ae62601c4ca56f88e2699539b6416518becacea202e"
+  },
+  "35": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/35.jpg",
+    "sha256": "9d30d00ea852b109323e8236cf35e5a1c065a6a19e306829952e4565cae53519"
+  },
+  "36": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/36.jpg",
+    "sha256": "f408b449898635e4736f542452a8f65f5b2c7aba42f7bd4b10b6891f6e1530a4"
+  },
+  "37": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/37.jpg",
+    "sha256": "0b83dbc8abb24049f895c2972e64ab855f9dbe235da9f0c5eb4bf4f2f7e4936d"
+  },
+  "38": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/38.jpg",
+    "sha256": "980015c73dcf966ab9bacf4783726fc09c4c30defe05aae8e9ce7cb62622faad"
+  },
+  "39": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/39.jpg",
+    "sha256": "801188ac7a744244133d66cb9137970cdc9701d399c0f5c5e1196bb68518a9d0"
+  },
+  "40": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/40.jpg",
+    "sha256": "c4098f08f3943fef08b0cb552b1ce8105ef8d6b4da91a0e9192d45f756bdca89"
+  },
+  "41": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/41.jpg",
+    "sha256": "6e7947097fa1c3e045757d8ac5e6c655404c43229b34ca687dc9a2c0372ba0f8"
+  },
+  "42": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/42.jpg",
+    "sha256": "ac3b6b126e90a49683c2bbbe88bdd7acdb0d1fedd3fa19830c094916dd4bf007"
+  },
+  "88": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/88.jpg",
+    "sha256": "2cdc8a2f6025dd0eb646b9995f8efc9ec0c0022379f9cbcf7fe7f8907527a678"
+  },
+  "89": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/89.jpg",
+    "sha256": "4208768587affa86afbfbc798a4f82587cce09e638d83d28a5ae4e9e80e23310"
+  },
+  "90": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/90.jpg",
+    "sha256": "8e09dd5d913d9aacc56d59c6407f18bffdf134eaab984fa14e3fea0f9d2c78d5"
+  },
+  "107": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/107.jpg",
+    "sha256": "8b515a0631d9f6b0f3c22b365496c0fd3472523891d6667529dbf48dcda6d054"
+  },
+  "108": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/108.jpg",
+    "sha256": "0cf1f6474a332b0ed8e088ba9da256bba64036a8cefd312f773a0e7d3569de7e"
+  },
+  "109": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/109.jpg",
+    "sha256": "221bce604ede090e799885be925ae7f52ed52105e8f8931646b121a3a2183a4e"
+  },
+  "110": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/110.jpg",
+    "sha256": "12231c215fb3b0877b69aa7b88f5cfbe2720f808c7bed60679b6e732580891f9"
+  },
+  "111": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/111.jpg",
+    "sha256": "a3f461e216768bfe56718892e3bac6ba21398c020508afb176bd529c9c74fadd"
+  },
+  "112": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/112.jpg",
+    "sha256": "efbef04bb58d582ac68a247b472cd423cff894fb20d6a49e1f0e7d71c910c6ee"
+  },
+  "113": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/113.jpg",
+    "sha256": "f196764e441ba76aa016f7db82abc76237dff03bc03fc4cbf72d06e839bc023e"
+  },
+  "114": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/114.jpg",
+    "sha256": "089234979e2fca4f0bfe0dd6024ea34a9e9cc62b2ba8caf0e0fc0024682f534c"
+  },
+  "115": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/115.jpg",
+    "sha256": "e2e8565dfcd1c5f598c02e715e979c8c03e301431e1535a3d86486f5fe20bcca"
+  },
+  "116": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/116.jpg",
+    "sha256": "7a964d06e0abbc226a0390009457de0af30f8f1da147097d09542cb7cdced7b8"
+  },
+  "117": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/117.jpg",
+    "sha256": "3f65fef9d8c1bb46e6b5b71aed334cd661d766c3a840c96feb3fdf82860d9e2a"
+  },
+  "118": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/118.jpg",
+    "sha256": "b67a32201d72790ff264671ec070cf8f788cd74627f942f4c90b760e579550eb"
+  },
+  "119": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/119.jpg",
+    "sha256": "10d87f34711cf8aa6c9eb9c8b88ee00ffe91d195da424de532836bd22e9695dc"
+  },
+  "120": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/120.jpg",
+    "sha256": "ce11e50ff5a2dcc8b39a8217e30c7ace5990eb29875753d61150930000adbb02"
+  },
+  "121": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/121.jpg",
+    "sha256": "b29848f88c1f67112c50aac1189eac9e8f94727e62abc0ac59fb541071de7567"
+  },
+  "122": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/122.jpg",
+    "sha256": "78fc0d4a1cfb1d73b7d2b71a7492c0d55491f2e939aea21933f3afc64efcfe7e"
+  },
+  "123": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/123.jpg",
+    "sha256": "fa4e332a866d369a62088cf05c24c0fdc7929152ce00cb383560c1741b508400"
+  },
+  "124": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/124.jpg",
+    "sha256": "9ba989017ef05f5f18d0f81d422d2086465687eccbbbcb41c550b90e58cf5149"
+  },
+  "125": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/125.jpg",
+    "sha256": "9dff6a073cbbc82c372f6da1d0c43f3b7916be0ee922d2327d360c0b9625e3b4"
+  },
+  "126": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/126.jpg",
+    "sha256": "13e6a017114d97cbb5ec8c9ff1532e4f8e36fb6454d8a228b709cf5f599c9a51"
+  },
+  "127": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/127.jpg",
+    "sha256": "1cc31379e6372ca915c12be765f1b0d9f16d2c0fea8269f028af085a200035a1"
+  },
+  "128": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/128.jpg",
+    "sha256": "cef08a0dfacfd3335aa0216b8179a25842370719b90540668d2db279eef8ae4e"
+  },
+  "129": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/129.jpg",
+    "sha256": "2e176357dff88181a3bd222ecd9480df276a38a889fbc1deac802a01ede8ed6d"
+  },
+  "130": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/130.jpg",
+    "sha256": "0c6dc1b976e63a9d0ed39bd740359311b72a1e6c2a810353261dbeb99506b0a3"
+  },
+  "131": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/131.jpg",
+    "sha256": "ecee9993390a6cffc3f4755ed94bef9ee9050e5153a3c548ec6e5c71acc6bdea"
+  },
+  "132": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/132.jpg",
+    "sha256": "7b4477631c943455fa2eef22bc34b74f256ff247b25676d8315657ad3685d41b"
+  },
+  "133": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/133.jpg",
+    "sha256": "9eca4a6685c12980a77cb201797246b11e2bdc12631c49628f5ad1998e9dcfa5"
+  },
+  "134": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/134.jpg",
+    "sha256": "c64ba28bd7cf690dc397824a0193deb8af361ec47c2db563341120e3a5e594f0"
+  },
+  "135": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/135.jpg",
+    "sha256": "6c89214a547d87f8745d93e392abe5d0d30f6fa22b3dcaef6cf7d7bab04e7fe5"
+  },
+  "136": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/136.jpg",
+    "sha256": "bca659cab39845728e9655ba42e9e8b6be96f4af2bea25cb17d9a197bca9d9da"
+  },
+  "137": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/137.jpg",
+    "sha256": "864807dd0a02614de86680c728708af2fc053a9dc25f3cec744bad31d268f761"
+  },
+  "138": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/138.jpg",
+    "sha256": "894c0e146c597f255877bb06120ca6620c036ff06333329b84e4ffee8cdf450d"
+  },
+  "139": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/139.jpg",
+    "sha256": "dfdc3cccc0b5b14340624a091a7df473c3c43f97e9fbafac812d5e71c5d64191"
+  },
+  "140": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/140.jpg",
+    "sha256": "b7012fce3ce11efae64fb03695d790a82a0f44e87406fc247f96de814f2b6883"
+  },
+  "141": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/141.jpg",
+    "sha256": "a7a0b2034f64d40ea8ce307a973f9398f713e03bda98d380e8641ac67e5ca531"
+  },
+  "142": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/142.jpg",
+    "sha256": "5d37c299da693491ece5a4c87394b9b9fddb9e1715d3f8c39a8b793893b12ea5"
+  },
+  "143": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/143.jpg",
+    "sha256": "af80db1001b9127af9c4bfa85cc495fa51d1f8a4e5f6f779f58875271ca6c447"
+  },
+  "144": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/144.jpg",
+    "sha256": "944de016c9ac42d1abc64d9625e19b77b2144aec235633012c9e1b090bdcd0df"
+  },
+  "145": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/145.jpg",
+    "sha256": "27e230007689c4b184e3599b35376d62a6119c0089b489393250540a27264b4f"
+  },
+  "146": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/146.jpg",
+    "sha256": "30b294f9a10cab44bac0704702adea41a133841acafc8aedf1fbf62c14f47bb0"
+  },
+  "147": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/147.jpg",
+    "sha256": "6647b585d1d729c33da502516cebad8103c1cd046d32e13bc0ab8cb0b8458aed"
+  },
+  "148": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/148.jpg",
+    "sha256": "40a500f64b99ee1e63a91a08fb8e03307bedd9786c4aa06fb1dbfffd0fd381be"
+  },
+  "149": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/149.jpg",
+    "sha256": "7ff82a4c501f59fc28d29276521bc5f66b127fdf4dc3334b24cf31b852af1f31"
+  },
+  "150": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/150.jpg",
+    "sha256": "06933069ecc73b56e49a96ec174c07c8d30950c4a2ec16608684b4e8357335a6"
+  },
+  "151": {
+    "source": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/916476da-a699-4132-b5cb-ae992e647b1b/151.jpg",
+    "sha256": "6b09d5db84e81ad9228bf579771ff28a2dd06b176a9c667011c9877fc48a61e7"
+  }
+}

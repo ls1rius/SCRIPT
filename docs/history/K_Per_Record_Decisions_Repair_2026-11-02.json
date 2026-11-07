@@ -1,0 +1,69 @@
+{
+  "updated_at": "2026-11-02T10:31:34.166447+08:00",
+  "old": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r3",
+  "new": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r4",
+  "new_version": "F-evidence-planner-K-v2-per-record-decisions",
+  "old_status": {
+    "state": "failed",
+    "controller_pid": 2278635,
+    "updated_at": "2026-11-02T05:41:11.614655+08:00",
+    "error_type": "RuntimeError",
+    "error": "K worker failed or cohort incomplete; exit=1"
+  },
+  "old_manifest_sha256": "83034c240b5eb059bd45e1df676aa887706382e763b9d1d103fa62edfd6ec8aa",
+  "new_manifest_sha256": "4ed1382315e73f8761ebcb90bcfe47f552f399b784a27775f0850d4df937ecc7",
+  "controller": {
+    "pid": 2453640,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r4/control/run_evidence_planner_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r4"
+    ],
+    "started_at": "2026-11-02T10:31:34.165955+08:00",
+    "interpreter": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+  },
+  "reason": "Old four-list schema allowed omitted and duplicate IDs. Required per-ID decision keys enforce complete unique assignment during generation.",
+  "authorization": "User requested K repair and execution when a GPU is available.",
+  "tests_passed": 95,
+  "unchanged_candidate_pools": 300,
+  "identical_control_and_question_files": 1502,
+  "planner_max_new_tokens": 8192,
+  "maximum_planner_input_tokens": 14837,
+  "maximum_planner_output_token_bound": 5373,
+  "prior_preparation_seconds": 32.185500517487526,
+  "prior_runtime_seconds": 29.68406656756997,
+  "prior_revision": {
+    "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r3",
+    "state": "failed",
+    "manifest_sha256": "83034c240b5eb059bd45e1df676aa887706382e763b9d1d103fa62edfd6ec8aa",
+    "measured_cost_files": {
+      "functional/planner_output.json": {
+        "sha256": "aa464fc23d93e71de0b67da46bbce7b3b5fc29912b4f4f1133b045dd48e0aaea",
+        "seconds": 1.2557714059948921
+      },
+      "runs/dfb6c468-e124-40f6-9c4e-c13ee45a2ad9/planner_output.json": {
+        "sha256": "6e874d61b687fbfaf317749cd78b52892cd39699c28497c063ffda5c399c52ae",
+        "seconds": 23.349464282393456
+      },
+      "setup.json": {
+        "sha256": "01285b8d10fbca14e8fc82f1a8a9d488e5e0bdf676ec7c74a75cd777bb3e4b74",
+        "seconds": 5.0788308791816235
+      }
+    }
+  },
+  "after_queue": null,
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 10,
+    "stable_observations": 3
+  }
+}

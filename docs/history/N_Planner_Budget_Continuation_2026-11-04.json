@@ -1,0 +1,530 @@
+{
+  "at": "2026-11-04T13:00:36.508389+08:00",
+  "source_entry": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+  "control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3",
+  "previous_control": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r2",
+  "user_request": "修复异常继续跑；更好更完全考量、尽量解决可能问题或避免",
+  "cause": "Final complete evidence planner hit the generic 150-second tool cap while 263.280636 seconds remained in the original temporal budget; soft cancellation took 140.034381 seconds.",
+  "recovered_question": "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+  "published_successes_preserved": 146,
+  "runtime_changes": [
+    "script/n_planner_continuation.py",
+    "script/parallel_artifacts.py",
+    "script/run_n_planner_resume.py",
+    "script/run_parallel_scene_scheduler.py",
+    "script_core/batch_extraction.py",
+    "script_core/budget.py",
+    "script_core/generation_capacity.py",
+    "script_core/m_generation.py",
+    "script_core/schemas.py"
+  ],
+  "configuration_unchanged": true,
+  "batch_size": 4,
+  "question_workers": 2,
+  "total_query_budget_unchanged": true,
+  "answer_reserve": 45,
+  "reservation_policy": "Only l/m/n_evidence_plan, nonfinal/nonbuild: remaining nonanswer query budget, preserving answer/warmup/cleanup/task reserves",
+  "old_successful_preprocessing": "All navigation/extraction and source outputs inherited exactly; only failed planner and not-yet-attempted reader execute",
+  "failed_cost_accounting": {
+    "new_historical_failed_dependency_seconds": 140.03438103571534,
+    "cumulative_historical_failed_seconds": 1642.9851607643068,
+    "prior_scheduling_interruption_seconds": 423.63394916057587,
+    "prior_scheduling_pending_calls": 1,
+    "success_and_failure_mean_scope": "Successful total excludes failed dependency; budgeted_total includes it once; successful preprocessing reused once"
+  },
+  "capacity_preflight": {
+    "passed": true,
+    "capacity": {
+      "input_tokens": 11585,
+      "output_reserve_tokens": 8192,
+      "configured_input_cap": 32768,
+      "native_context_tokens": 128000
+    },
+    "output": {
+      "supported": true,
+      "records": 236,
+      "output_limit_tokens": 8192,
+      "necessary_minimum_characters": 3195,
+      "maximum_token_piece_characters": 129,
+      "necessary_output_token_lower_bound": 26,
+      "worst_case_token_estimate": 4030,
+      "worst_case_estimate_fits": true,
+      "worst_case_estimate_is_proof": false
+    },
+    "planner_records": 236,
+    "remaining_planner_reservation": 218.28063562884927,
+    "answer_reserve": 45.0,
+    "failed_processing_seconds": 140.03438103571534,
+    "successful_temporal_dependency": 1096.6849833354354,
+    "original_budget": 1500.0,
+    "prompt_unchanged": true,
+    "schema_unchanged": true,
+    "generation_not_started": true,
+    "time_scope": "Remaining allowance is a bound, not a guarantee of completion"
+  },
+  "cpu_tests": {
+    "passed": true,
+    "count": 16,
+    "scope": "Planner reservations/continued costs/temporal budget completion/question scheduling"
+  },
+  "actual_failed_artifact_cpu_replay": {
+    "passed": true,
+    "model_calls": false,
+    "operations": [
+      "n_evidence_plan",
+      "temporal_qa_check",
+      "n_answer"
+    ],
+    "charged_runtime_copy_and_render_cpu": true,
+    "old_sources_unchanged": true
+  },
+  "launch": {
+    "pid": 3904391,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/runtime/script/run_parallel_scene_scheduler.py",
+      "supervise",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+      "--control",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3"
+    ],
+    "at": "2026-11-04T12:59:57.828000+08:00"
+  },
+  "origin_aliases": {
+    "pid": 3922027,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/preserve_parallel_call_paths.py",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+      "--control",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3",
+      "--supervisor",
+      "3904391"
+    ],
+    "at": "2026-11-04T13:06:58.898428+08:00",
+    "helper_sha256": "e8eb66aea150ff310d1cc2c7fac8f6df57a9381eb2610c74a888b695bdbe1ca4",
+    "ready": true,
+    "process_identity": "1761745611",
+    "readiness_audit": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/origin_aliases_readiness_audit.json"
+  },
+  "new_real_gate": "The original failed planner request is generated once as the actual resumed case, followed by its reader; only successful complete publication opens the second worker. No duplicate test planner call.",
+  "inherited_gate_scope": "Earlier full N and batch4 gates stay historical, not claimed newly run",
+  "current_status": "recovery complete; continuing original cohort",
+  "limitations": "Preflight establishes token capacity and bounded remaining time, not guaranteed completion or semantic answer quality. If planning times out again, partial tokens are saved and failure stops new claims; no truncation or automatic retries.",
+  "worker_launch": {
+    "controller_pid": 3904391,
+    "worker_pids": [
+      3904394,
+      3904395
+    ],
+    "at": "2026-11-04T12:59:58.168825+08:00"
+  },
+  "worker_status": {
+    "0": {
+      "stage": "query",
+      "pid": 3904394,
+      "at": "2026-11-04T13:10:13.398712+08:00",
+      "index": 150,
+      "question_id": "59dcde1d-f210-48fc-b888-5574d8962a2c",
+      "gpu": "3"
+    },
+    "1": {
+      "stage": "waiting_for_gpu",
+      "pid": 3904395,
+      "at": "2026-11-04T13:10:19.621409+08:00",
+      "watched_gpu_indices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "gpu_observations": {
+        "0": {
+          "index": "0",
+          "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+          "free_mib": 7963,
+          "utilization": 97
+        },
+        "1": {
+          "index": "1",
+          "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+          "free_mib": 18407,
+          "utilization": 99
+        },
+        "2": {
+          "index": "2",
+          "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+          "free_mib": 16643,
+          "utilization": 97
+        },
+        "3": {
+          "index": "3",
+          "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+          "free_mib": 28699,
+          "utilization": 93
+        }
+      },
+      "effective_free_mib": {
+        "0": 459,
+        "1": 6389,
+        "2": 16643,
+        "3": 15003
+      },
+      "stable_observations": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0
+      },
+      "minimum_free_mib": 32768,
+      "maximum_utilization": 100,
+      "scheduling": "shared_memory_reservations"
+    }
+  },
+  "new_real_gate_passed": true,
+  "new_real_gate_state": "passed and completed original case146 once, atomically published",
+  "recovery_gate": {
+    "passed": true,
+    "question_id": "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+    "at": "2026-11-04T13:04:47.770452+08:00",
+    "scope": "Original failed planner and reader completed once as the actual continued benchmark case",
+    "result_path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/runs/715ae2dd-58ed-4abf-b4e2-0348fb12f611/result.json",
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 1180.7385567389429,
+      "online": 65.98003571107984,
+      "total": 1246.7185924500227,
+      "shared_dependency_seconds": 0,
+      "budgeted_total": 1386.752973485738,
+      "text_cache_hits": 0,
+      "total_cap": 1584.0535734035075,
+      "budget_violation": false,
+      "by_operation": {
+        "continuation_source_validation_copy": 0.12459680810570717,
+        "adaptive_memory_projection": 0.0068410299718379974,
+        "n_planner_continuation_materialization": 0.02925974503159523,
+        "n_evidence_plan": 65.30150479823351,
+        "temporal_qa_check": 0.007727999240159988,
+        "n_answer": 0.5101053304970264
+      },
+      "call_count": 9,
+      "resources": {
+        "cpu_seconds": 65.88844539000002,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 66.72901688888669,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 18952817152
+      },
+      "successful_preprocessing_dependency_seconds": 1096.6849833354354,
+      "historical_failed_dependency_seconds": 140.03438103571534,
+      "new_processing_seconds": 65.98003571107984,
+      "accounting_scope": "Successful total excludes historical failure; budgeted_total includes it once"
+    }
+  },
+  "formal_audit": {
+    "passed": true,
+    "at": "2026-11-04T13:10:27.968150+08:00",
+    "prior_published_file_count": 13105,
+    "prior_successes_preserved": 146,
+    "old_failed_attempt_unchanged": true,
+    "successful_preprocessing_files_unchanged": 37,
+    "new_leaf_operations": [
+      {
+        "operation": "n_evidence_plan",
+        "seconds": 65.30150479823351,
+        "reservation": 218.14580683410168,
+        "input_hash": "baf0b136774088067d24ca3db522de54199d3fc252233b484f112bfbea085db9"
+      },
+      {
+        "operation": "temporal_qa_check",
+        "seconds": 0.007727999240159988,
+        "reservation": 45.0,
+        "input_hash": "55141d3046bf9dae4992dcb1d68685039b4dd709948c102e0c0787f74b2c327a"
+      },
+      {
+        "operation": "n_answer",
+        "seconds": 0.5101053304970264,
+        "reservation": 44.9843246974051,
+        "input_hash": "2f2b36e1e330dfdc2a6038f00d8e78ae87a24e0fe2caf8015252479c7d141af2"
+      }
+    ],
+    "new_cpu_operations": [
+      {
+        "operation": "continuation_source_validation_copy",
+        "seconds": 0.12459680810570717
+      },
+      {
+        "operation": "adaptive_memory_projection",
+        "seconds": 0.0068410299718379974
+      },
+      {
+        "operation": "n_planner_continuation_materialization",
+        "seconds": 0.0033909566700458527
+      },
+      {
+        "operation": "n_planner_continuation_materialization",
+        "seconds": 0.017894163727760315
+      },
+      {
+        "operation": "n_planner_continuation_materialization",
+        "seconds": 0.007947303354740143
+      },
+      {
+        "operation": "n_planner_continuation_materialization",
+        "seconds": 2.7321279048919678e-05
+      }
+    ],
+    "exact_failed_planner_input": true,
+    "raw_call_absolute_paths_resolve": true,
+    "pending_calls": 0,
+    "cost_summary": {
+      "unit": "processing_seconds",
+      "initialization": 1180.7385567389429,
+      "online": 65.98003571107984,
+      "total": 1246.7185924500227,
+      "shared_dependency_seconds": 0,
+      "budgeted_total": 1386.752973485738,
+      "text_cache_hits": 0,
+      "total_cap": 1584.0535734035075,
+      "budget_violation": false,
+      "by_operation": {
+        "continuation_source_validation_copy": 0.12459680810570717,
+        "adaptive_memory_projection": 0.0068410299718379974,
+        "n_planner_continuation_materialization": 0.02925974503159523,
+        "n_evidence_plan": 65.30150479823351,
+        "temporal_qa_check": 0.007727999240159988,
+        "n_answer": 0.5101053304970264
+      },
+      "call_count": 9,
+      "resources": {
+        "cpu_seconds": 65.88844539000002,
+        "cpu_unmeasured_calls": 0,
+        "gpu_resident_seconds": 66.72901688888669,
+        "gpu_unmeasured_calls": 0,
+        "gpu_peak_allocated_bytes": 18952817152
+      },
+      "successful_preprocessing_dependency_seconds": 1096.6849833354354,
+      "historical_failed_dependency_seconds": 140.03438103571534,
+      "new_processing_seconds": 65.98003571107984,
+      "accounting_scope": "Successful total excludes historical failure; budgeted_total includes it once"
+    },
+    "worker_status": {
+      "0": {
+        "stage": "query",
+        "pid": 3904394,
+        "at": "2026-11-04T13:10:13.398712+08:00",
+        "index": 150,
+        "question_id": "59dcde1d-f210-48fc-b888-5574d8962a2c",
+        "gpu": "3"
+      },
+      "1": {
+        "stage": "waiting_for_gpu",
+        "pid": 3904395,
+        "at": "2026-11-04T13:10:19.621409+08:00",
+        "watched_gpu_indices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gpu_observations": {
+          "0": {
+            "index": "0",
+            "uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+            "free_mib": 7963,
+            "utilization": 97
+          },
+          "1": {
+            "index": "1",
+            "uuid": "GPU-52a170b9-a957-21dc-6cf2-ea5e0d930627",
+            "free_mib": 18407,
+            "utilization": 99
+          },
+          "2": {
+            "index": "2",
+            "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+            "free_mib": 16643,
+            "utilization": 97
+          },
+          "3": {
+            "index": "3",
+            "uuid": "GPU-2a601616-4052-e179-6f86-dc80dbf3e57e",
+            "free_mib": 28699,
+            "utilization": 93
+          }
+        },
+        "effective_free_mib": {
+          "0": 459,
+          "1": 6389,
+          "2": 16643,
+          "3": 15003
+        },
+        "stable_observations": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "minimum_free_mib": 32768,
+        "maximum_utilization": 100,
+        "scheduling": "shared_memory_reservations"
+      }
+    },
+    "all_owned_successful_references": {
+      "parallel-20261104-r2": {
+        "passed": true,
+        "questions": [
+          "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+          "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+          "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43"
+        ],
+        "successful_call_references": 164,
+        "missing": [],
+        "content_mismatches": []
+      },
+      "parallel-20261104-r3": {
+        "passed": true,
+        "questions": [
+          "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+          "aafd0923-bfdb-4271-960e-02a4a5a75ed3",
+          "bbe35aed-1c92-42de-8f50-7004cdae317e"
+        ],
+        "successful_call_references": 127,
+        "missing": [],
+        "content_mismatches": []
+      }
+    },
+    "auxiliary_readiness": {
+      "passed": true,
+      "at": "2026-11-04T13:10:27.941770+08:00",
+      "pid": 3922027,
+      "process_identity": "1761745611",
+      "helper_preflight": {
+        "passed": true,
+        "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/preserve_parallel_call_paths.py",
+        "sha256": "e8eb66aea150ff310d1cc2c7fac8f6df57a9381eb2610c74a888b695bdbe1ca4",
+        "syntax_checked": true,
+        "help_exit_code": 0
+      },
+      "references": {
+        "parallel-20261104-r2": {
+          "passed": true,
+          "questions": [
+            "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+            "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+            "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43"
+          ],
+          "successful_call_references": 164,
+          "missing": [],
+          "content_mismatches": []
+        },
+        "parallel-20261104-r3": {
+          "passed": true,
+          "questions": [
+            "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+            "aafd0923-bfdb-4271-960e-02a4a5a75ed3",
+            "bbe35aed-1c92-42de-8f50-7004cdae317e"
+          ],
+          "successful_call_references": 127,
+          "missing": [],
+          "content_mismatches": []
+        }
+      },
+      "initial_scan_record": {
+        "at": "2026-11-04T13:06:58.898555+08:00",
+        "reason": "Initial helper path absent from inherited runtime; auxiliary exited before performing aliases. Model worker and artifacts unaffected.",
+        "old_launch": {
+          "pid": 3904392,
+          "command": [
+            "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+            "-u",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/runtime/script/preserve_parallel_call_paths.py",
+            "--out",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+            "--control",
+            "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3",
+            "--supervisor",
+            "3904391"
+          ],
+          "at": "2026-11-04T12:59:57.829014+08:00"
+        },
+        "new_pid": 3922027,
+        "helper_sha256": "e8eb66aea150ff310d1cc2c7fac8f6df57a9381eb2610c74a888b695bdbe1ca4",
+        "prior_control_aliases_restored": [
+          "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+          "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+          "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43"
+        ],
+        "current_aliases_restored": [
+          "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+          "aafd0923-bfdb-4271-960e-02a4a5a75ed3"
+        ],
+        "failed_attempts_preserved": true,
+        "policy": "Only claims marked complete by the owning control receive aliases; old failed attempts are never replaced by newer publications.",
+        "tests": {
+          "passed": true,
+          "scheduler_checks": 7,
+          "new_regression": "old failed attempt with later published success remains untouched"
+        }
+      },
+      "scope": "Existing corrected helper confirmed alive and all owned successful references resolved with identical copied bytes; model workers unchanged"
+    }
+  },
+  "auxiliary_path_correction": {
+    "at": "2026-11-04T13:06:58.898555+08:00",
+    "reason": "Initial helper path absent from inherited runtime; auxiliary exited before performing aliases. Model worker and artifacts unaffected.",
+    "old_launch": {
+      "pid": 3904392,
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3/runtime/script/preserve_parallel_call_paths.py",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+        "--control",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4/parallel-20261104-r3",
+        "--supervisor",
+        "3904391"
+      ],
+      "at": "2026-11-04T12:59:57.829014+08:00"
+    },
+    "new_pid": 3922027,
+    "helper_sha256": "e8eb66aea150ff310d1cc2c7fac8f6df57a9381eb2610c74a888b695bdbe1ca4",
+    "prior_control_aliases_restored": [
+      "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+      "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+      "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43"
+    ],
+    "current_aliases_restored": [
+      "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+      "aafd0923-bfdb-4271-960e-02a4a5a75ed3"
+    ],
+    "failed_attempts_preserved": true,
+    "policy": "Only claims marked complete by the owning control receive aliases; old failed attempts are never replaced by newer publications.",
+    "tests": {
+      "passed": true,
+      "scheduler_checks": 7,
+      "new_regression": "old failed attempt with later published success remains untouched"
+    }
+  },
+  "auxiliary_prevention_tests": {
+    "passed": true,
+    "count": 11,
+    "scope": "4 new helper readiness/reference tests plus 7 scheduler/failed-attempt preservation tests"
+  },
+  "future_auxiliary_launch": "Use python <control>/preserve_parallel_call_paths.py --launch --out <source> --control <control> --supervisor <pid>; preparation copies and checks the helper. The launcher requires live child identity and first-scan readiness.",
+  "all_published_reference_audit": {
+    "passed": true,
+    "at": "2026-11-04T13:11:18.244004+08:00",
+    "published_successful_questions": 149,
+    "successful_call_references": 9051,
+    "parallel_io_workers": 4,
+    "errors": [],
+    "result_hashes_unchanged": true,
+    "scope": "All currently published N successes, including inherited predecessor generations, not only newly published r2/r3 cases"
+  }
+}

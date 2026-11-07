@@ -1,0 +1,164 @@
+{
+  "updated_at": "2026-11-03T01:24:57.436057+08:00",
+  "authorization": "Run N too when sufficient capacity is available; keep M running.",
+  "run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r1",
+  "M_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14",
+  "queue_status": {
+    "state": "running",
+    "controller_pid": 2857151,
+    "updated_at": "2026-11-03T01:24:55.327530+08:00",
+    "worker_pid": 2857327,
+    "gpu": "0",
+    "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r1/runtime/script/run_n_scene_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r1"
+    ],
+    "started_at": "2026-11-03T01:19:45.261013+08:00"
+  },
+  "M_queue_status": {
+    "state": "running",
+    "controller_pid": 2851299,
+    "updated_at": "2026-11-03T01:24:53.027310+08:00",
+    "worker_pid": 2851580,
+    "gpu": "2",
+    "gpu_uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14/runtime/script/run_m_scene_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r14"
+    ],
+    "started_at": "2026-11-03T01:10:52.871930+08:00"
+  },
+  "launch": {
+    "worker_pid": 2857327,
+    "gpu": "0",
+    "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r1/runtime/script/run_n_scene_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r1"
+    ],
+    "started_at": "2026-11-03T01:19:45.261013+08:00"
+  },
+  "cpu_tests": 27,
+  "cpu_tests_passed": true,
+  "original_source_packets_equal": 300,
+  "answers_reused": 0,
+  "source_extractions_reused": 0,
+  "M_frozen_files_verified": 507,
+  "N_frozen_files_verified": 508,
+  "policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3,
+    "selection": "most_free_memory"
+  },
+  "disk_free_bytes": 193925230592,
+  "failure_policy": "No hidden retry; stop on failed contract or runtime error.",
+  "N_source_behavior": "Unchanged required-role v2 extraction and original-source closure; brick-case regression remains historical evidence, not a proven QA fix.",
+  "scope": "Full original cohort; all navigation, extraction, evidence planning and answers generated anew.",
+  "functional_gate_status": "passed",
+  "defaults_unchanged": [
+    "L",
+    "E"
+  ],
+  "training": false,
+  "progress": {
+    "stage": "query",
+    "index": 1,
+    "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+    "updated_at": "2026-11-03T01:23:50.755225+08:00"
+  },
+  "functional_gate": {
+    "passed": true,
+    "semantic_navigation_probe_passed": true,
+    "N_variant_checks": [
+      {
+        "case": "single",
+        "passed": true,
+        "method": "N-M-neutral-query-joint-candidates-v8",
+        "operations": [
+          "adaptive_memory_projection",
+          "adaptive_scheme4_state_assembly",
+          "checkpoint_write",
+          "entity_evidence_materialization",
+          "f_batch_preparation",
+          "h_plan_fields",
+          "m_candidate_query",
+          "m_candidate_rank",
+          "m_sufficiency_check",
+          "m_transition_next",
+          "n_answer",
+          "n_evidence_materialization",
+          "n_evidence_plan",
+          "n_extract_fields",
+          "partial_temporal_source_projection",
+          "structured_output_validation",
+          "temporal_qa_check"
+        ],
+        "empty": false
+      },
+      {
+        "case": "comparison",
+        "passed": true,
+        "method": "N-M-neutral-query-joint-candidates-v8",
+        "operations": [
+          "adaptive_memory_projection",
+          "adaptive_scheme4_state_assembly",
+          "checkpoint_write",
+          "entity_evidence_materialization",
+          "f_batch_preparation",
+          "h_plan_fields",
+          "m_candidate_query",
+          "m_candidate_rank",
+          "m_sufficiency_check",
+          "m_transition_next",
+          "n_answer",
+          "n_evidence_materialization",
+          "n_evidence_plan",
+          "n_extract_batch",
+          "partial_temporal_source_projection",
+          "structured_output_validation",
+          "temporal_qa_check"
+        ],
+        "empty": false
+      },
+      {
+        "case": "empty",
+        "passed": true,
+        "method": "N-M-neutral-query-joint-candidates-v8",
+        "operations": [
+          "adaptive_memory_projection",
+          "checkpoint_write",
+          "m_candidate_query",
+          "m_candidate_rank",
+          "n_answer",
+          "structured_output_validation",
+          "temporal_qa_check"
+        ],
+        "empty": true
+      }
+    ],
+    "updated_at": "2026-11-03T01:23:50.751407+08:00",
+    "sha256": "80d8b25c2718eff390dd28dbbb08ea164951202c0d8c821ce0f838fa934f5348"
+  },
+  "setup_seconds": 10.170862950384617,
+  "functional_seconds": 217.76268994808197
+}

@@ -79,7 +79,7 @@ class BudgetLedger:
         return min(cap, max(0., available))
 
     def record(self, operation, inputs, reservation, started, output=None, error=None,
-               task_id=None, call_id=None, model_hash=None, attempt=0):
+               task_id=None, call_id=None, model_hash=None, attempt=0, reservation_policy=None):
         elapsed = time.monotonic()-started
         if elapsed > reservation + .05:
             self.budget_violation = True
@@ -111,6 +111,8 @@ class BudgetLedger:
             'input_pixels': sum(f.get('width', 0)*f.get('height', 0) for f in inputs.get('frames', [])),
             'output_ref': str(self.calls_path.parent / 'raw_calls' / f'{call_id}-{attempt}.json') if self.calls_path else None,
         }
+        if reservation_policy is not None:
+            record['reservation_policy'] = reservation_policy
         if inputs.get('in_process'):
             record['output_ref'] = None
         if isinstance(output, dict) and output.get('usage', {}).get('tool_cache'):
@@ -154,6 +156,7 @@ def _worker(connection, cfg):
     from .backend import LocalModels
     backend = LocalModels(cfg)
     gpu_reported_until = None
+    allocator_limit_applied = False
     while True:
         message = connection.recv()
         if message is None:
@@ -163,8 +166,19 @@ def _worker(connection, cfg):
         backend.model_pixels, backend.model_tokens = {}, {}
         began, cpu_began = time.monotonic(), time.process_time()
         try:
+            from .physical_cuda_pool import ensure, status as pool_status
+            ensure(cfg['models'])
+            if not allocator_limit_applied and cfg['models'].get('cuda_allocator_limit_mib'):
+                import torch
+                cap_bytes = int(cfg['models']['cuda_allocator_limit_mib']) * 1024**2
+                total_bytes = torch.cuda.get_device_properties(0).total_memory
+                if not 0 < cap_bytes < total_bytes:
+                    raise ValueError('Invalid experiment CUDA allocator limit')
+                torch.cuda.set_per_process_memory_fraction(cap_bytes / total_bytes, 0)
+                allocator_limit_applied = True
             result = backend.call(operation, inputs)
             usage = dict(result.get('usage', {}))
+            usage['cuda_allocator_limit_mib'] = cfg['models'].get('cuda_allocator_limit_mib')
             usage.update(model_tensor_pixels=backend.model_pixels, input_tokens_by_model=backend.model_tokens)
             usage['cpu_seconds'] = time.process_time()-cpu_began
             import torch
@@ -176,6 +190,9 @@ def _worker(connection, cfg):
             if gpu:
                 gpu_reported_until = gpu_end
             usage['gpu_peak_allocated_bytes'] = torch.cuda.max_memory_allocated() if gpu else 0
+            physical_pool = pool_status()
+            if physical_pool is not None:
+                usage['cuda_physical_pool'] = physical_pool
             result['usage'] = usage
             connection.send((True, result))
         except Exception as exc:
@@ -278,6 +295,13 @@ class Meter:
 
     def _call(self, operation, inputs, task_id=None, final=False, build=False):
         cap = self.cfg['budget']['build_call_cap' if build else 'tool_call_cap']
+        reservation_policy = 'configured_per_call_cap'
+        if operation in ('l_evidence_plan', 'm_evidence_plan', 'n_evidence_plan') and not final and not build:
+            # One complete evidence decision map is the final non-answer stage.
+            # It may use the remaining query allowance, while allowance() still
+            # protects answer, warmup, cleanup and any active task-local cap.
+            cap = self.ledger.total_cap
+            reservation_policy = 'remaining_nonanswer_budget_preserving_all_reserves'
         if final and operation != 'prepare_vlm':
             cap = self.cfg['budget']['final_answer_reserve']
         call_id = str(uuid.uuid4())
@@ -351,7 +375,8 @@ class Meter:
             from .state import write_json
             pending = self.raw_directory / f'{call_id}-{attempt}.pending.json'
             write_json(pending, {'call_id': call_id, 'attempt': attempt, 'reservation': allowance,
-                                 'operation': operation, 'input_hash': digest(inputs), 'parent_task_id': task_id})
+                                 'operation': operation, 'input_hash': digest(inputs), 'parent_task_id': task_id,
+                                 'reservation_policy': reservation_policy})
             try:
                 # Worker cancellation and durable call logs are also paid time.
                 # Leave room for them rather than starting shutdown at the deadline.
@@ -371,7 +396,8 @@ class Meter:
             path = self.raw_directory / f'{call_id}-{attempt}.json'
             write_json(path, {'inputs': inputs, 'output': output, 'error': error})
             call = self.ledger.record(operation, inputs, allowance, started, output, error,
-                                      task_id, call_id, digest(self.cfg['models']), attempt)
+                                      task_id, call_id, digest(self.cfg['models']), attempt,
+                                      reservation_policy=reservation_policy)
             call['output_ref'] = str(path)
             pending.unlink()
             if error is None:

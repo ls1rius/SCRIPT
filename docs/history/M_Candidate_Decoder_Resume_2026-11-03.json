@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-11-03T12:52:16.121718+08:00",
+  "repair": "MN-navigation-candidate-complete-unicode-v2",
+  "cause": {
+    "question_index": 45,
+    "question_id": "943374f4-4514-4e22-827b-7452b91e5559",
+    "operation": "m_candidate_query",
+    "output_tokens": 353,
+    "max_new_tokens": 1536,
+    "not_token_limit": true,
+    "last_field": "retrieval_question",
+    "last_field_length": 240,
+    "last_character": "繫",
+    "detail": "Existing safe Unicode tokenizer path covered three navigation operations but omitted free-text candidate query. CPU replay of the saved 240-character suffix reproduces invalid early EOS with legacy LMFE; complete Unicode token filtering blocks that path.",
+    "fixture": "tests/fixtures/mn_candidate_unclosed_call.json",
+    "caveat": "Original candidate call did not archive token IDs. Compatible character-token segmentation with the same length-boundary schema reproduces the failure mechanism; it is not a recovered exact historical token sequence."
+  },
+  "scope": {
+    "new_safe_unicode_operation": "m_candidate_query",
+    "existing_navigation_operations_unchanged": true,
+    "candidate_rank_decoder_unchanged": true,
+    "prompts_schemas_selection_extraction_planning_answers_unchanged": true,
+    "no_posthoc_json_completion": true,
+    "no_hidden_retry": true,
+    "no_option_permutation": true,
+    "new_raw_token_audit": true,
+    "default_on_demand": "L",
+    "default_full": "E",
+    "environment": "vts",
+    "training": false,
+    "running_N_unchanged": true
+  },
+  "tests": {
+    "passed": true,
+    "unique_tests": 52,
+    "seconds": 31.218,
+    "command": "python -m unittest tests.test_mn_decoder_resume tests.test_m_generation tests.test_m_scene_experiment tests.test_n_scene_experiment tests.test_m_scene_memory tests.test_n_scene_memory tests.test_m_candidate_selection tests.test_gpu_queue",
+    "final_report_resume_checks": {
+      "passed": true,
+      "tests": 7,
+      "seconds": 0.229
+    },
+    "log": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16/validation/cpu_regression.log",
+    "development_findings": [
+      "Two earlier CPU suites failed while testing a broader candidate-rank decoder change; no model generation was run in those attempts.",
+      "LMFE literal enums cannot follow the synthetic split-byte source C 修理繫绳。 with the existing tokenizer. This pre-existing limitation is retained and tested against the legacy decoder, not claimed fixed. Candidate rank retains original behavior; ordinary Chinese literal anchor test passes."
+    ]
+  },
+  "run": {
+    "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16",
+    "prior": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15",
+    "controller": {
+      "pid": 3125972,
+      "created_at": "2026-11-03T12:51:45.831808+08:00",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16/runtime/script/run_mn_decoder_resume.py",
+        "queue",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16"
+      ]
+    },
+    "inherited_successful": 44,
+    "inherited_correct": 25,
+    "resume_index": 45,
+    "prior_unchanged": true,
+    "prior_file_count": 4452,
+    "runtime_changes": [
+      "script/run_m_scene_experiment.py",
+      "script/run_mn_decoder_resume.py",
+      "script_core/backend.py"
+    ],
+    "old_report": {
+      "successful": 44,
+      "correct": 25,
+      "errors": 1,
+      "complete": false
+    },
+    "cost_policy": "44 successful queries inherited byte-for-byte and counted once. Failed query and old setup/gates separately archived and charged. Re-run failed query in full, not from partial failed state.",
+    "status": {
+      "state": "running",
+      "controller_pid": 3125972,
+      "updated_at": "2026-11-03T13:05:19.961030+08:00",
+      "worker_pid": 3131077,
+      "gpu": "2",
+      "gpu_uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16/runtime/script/run_mn_decoder_resume.py",
+        "worker",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16"
+      ],
+      "started_at": "2026-11-03T13:00:19.899740+08:00"
+    },
+    "real_model_gate_passed": true,
+    "new_frozen_files_checked": 4309,
+    "new_frozen_hashes_unchanged": true,
+    "saved_decoder_gate_passed": true,
+    "formal_resumed_at": "2026-11-03T13:04:37.023507+08:00"
+  },
+  "N": {
+    "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2",
+    "frozen_files_checked": 1601,
+    "frozen_hashes_unchanged": true,
+    "controller_pid": 3010375,
+    "worker_pid": 3015989,
+    "status": {
+      "state": "running",
+      "controller_pid": 3010375,
+      "updated_at": "2026-11-03T12:56:01.378678+08:00",
+      "worker_pid": 3015989,
+      "gpu": "0",
+      "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+      "command": [
+        "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+        "-u",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2/runtime/script/run_mn_decoder_resume.py",
+        "worker",
+        "--out",
+        "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2"
+      ],
+      "started_at": "2026-11-03T09:07:54.147211+08:00"
+    },
+    "progress": {
+      "stage": "query",
+      "index": 40,
+      "question_id": "0f181d98-5036-4990-b397-62e934e168ef",
+      "updated_at": "2026-11-03T12:54:51.454172+08:00"
+    }
+  },
+  "checked_at": "2026-11-03T12:56:04.565701+08:00",
+  "later_user_requested_N_restart": "docs/history/MN_Repaired_Restart_2026-11-03.json"
+}

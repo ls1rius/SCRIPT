@@ -1,0 +1,108 @@
+{
+  "updated_at": "2026-11-02T12:35:49.130304+08:00",
+  "authorization": "User: 修复一下bug继续跑",
+  "prior": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r5",
+  "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r6",
+  "old_snapshot_unchanged": true,
+  "old_snapshot_files": 2462,
+  "identical_frozen_files": 2112,
+  "changed_frozen_files": [
+    "experiment.json",
+    "control/run_evidence_planner_experiment.py"
+  ],
+  "source_manifest_sha256": "87bec32d5e2b1c2f7ee428ad4056390f78527e9d8fd66d31ed2dd3471124d774",
+  "new_manifest_sha256": "bd4ad795de653f57ff3ca94f0f5eff630611268fdab5a71834612dd63a55f9b0",
+  "repaired_answers": [
+    {
+      "question_id": "22627b14-0f17-4a45-9661-5ac979e0a4c2",
+      "arm": "F_sentence",
+      "old_result_sha256": "59209ca0f56c892792eeadcb84a650b129cd87d867d7b20a6683b2e38dd5aeff",
+      "method": "unique_verbatim_first_sentence",
+      "model_regenerated": false
+    }
+  ],
+  "inherited_cases": 22,
+  "inherited_planner_calls": 22,
+  "parser": "K-only unique verbatim first option sentence (at least five words); no fuzzy match, no gold labels",
+  "reused_gates": [
+    "functional_small.json",
+    "functional.json"
+  ],
+  "reused_gates_basis": "Planner/core/runtime unchanged; passed original real-model synthetic gates preserved and frozen.",
+  "prior_runtime_seconds": 72.5293720625341,
+  "resume_preparation_seconds": 0.2012682668864727,
+  "tests_passed": 48,
+  "resource_policy": {
+    "preference": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "minimum_free_mib": 32768,
+    "maximum_utilization": 100,
+    "stable_observations": 3
+  },
+  "after_queue": null,
+  "HIJ_manifest_sha256": {
+    "generalized-lazy-H-300-20261101-r5": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+    "merged-lazy-I-H-adjacent-300-20261101-r4-queue": "af70fc38f80ed2de0ec840971dab92648cb9e0da00bd85fb601da876668249fb",
+    "grounded-reader-J-300-20261101-r7-queue": "f1b48ee4918eb843dcb6133a65e9c7260eeb3015e68beb13d0058892fd9b2289"
+  },
+  "controller": {
+    "pid": 2500293,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r6/control/run_evidence_planner_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r6"
+    ],
+    "started_at": "2026-11-02T12:36:01.751796+08:00",
+    "interpreter": "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python"
+  },
+  "confirmed_launch": {
+    "worker_pid": 2500769,
+    "gpu": "0",
+    "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r6/control/run_evidence_planner_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r6"
+    ],
+    "started_at": "2026-11-02T12:36:22.126873+08:00"
+  },
+  "observed_status": {
+    "state": "running",
+    "controller_pid": 2500293,
+    "updated_at": "2026-11-02T12:36:52.130491+08:00",
+    "worker_pid": 2500769,
+    "gpu": "0",
+    "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r6/control/run_evidence_planner_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r6"
+    ],
+    "started_at": "2026-11-02T12:36:22.126873+08:00"
+  },
+  "verified_recovery": {
+    "updated_at": "2026-11-02T12:37:03.632485+08:00",
+    "completed": 22,
+    "progress": {
+      "stage": "K_all_evidence",
+      "index": 23,
+      "question_id": "47b87299-5e31-4299-8bbc-51fe567ebd40",
+      "updated_at": "2026-11-02T12:37:00.744330+08:00"
+    },
+    "saved_frozen_calls_verified": true,
+    "HIJ_manifests_unchanged": true
+  }
+}

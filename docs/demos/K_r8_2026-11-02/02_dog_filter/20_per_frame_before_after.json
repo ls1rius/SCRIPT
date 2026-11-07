@@ -1,0 +1,3186 @@
+{
+  "question_id": "15bae307-992b-4359-9fe0-3f622f957d42",
+  "rows": [
+    {
+      "sampled_frame_index": 0,
+      "sample_interval": [
+        0,
+        1
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 1,
+      "sample_interval": [
+        1,
+        2
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 2,
+      "sample_interval": [
+        2,
+        3
+      ],
+      "original_caption": "#C C moves a hand",
+      "F_archived_evidence": {
+        "original_text": "#C C moves a hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R1",
+          "text": "C moves a hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 3,
+      "sample_interval": [
+        3,
+        4
+      ],
+      "original_caption": "#C C walks dog along the road",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog along the road"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R2",
+          "text": "C walks dog along the road.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 4,
+      "sample_interval": [
+        4,
+        5
+      ],
+      "original_caption": "#C C walks dog on the road",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog on the road"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R4",
+          "text": "C walks dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R53",
+          "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R54",
+          "text": "C walks dog on the road. The text memory associates this observation with dog (text reference E1).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        }
+      ],
+      "processing_status": "直接证据及上游时序关联均保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R53",
+          "grouped_record_ids": [
+            "R53"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [5,6), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with C (text reference E0)."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R54",
+          "grouped_record_ids": [
+            "R54"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with dog (text reference E1)."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 5,
+      "sample_interval": [
+        5,
+        6
+      ],
+      "original_caption": "#C C walks on a pathway",
+      "F_archived_evidence": {
+        "original_text": "#C C walks on a pathway"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R5",
+          "text": "C walks on a pathway.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R53",
+          "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        }
+      ],
+      "processing_status": "直接候选跳过，仅保留上游时序关联",
+      "final_input_paragraphs": [
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R53",
+          "grouped_record_ids": [
+            "R53"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [5,6), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with C (text reference E0)."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 6,
+      "sample_interval": [
+        6,
+        7
+      ],
+      "original_caption": "#C C pulls a dog leash ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls a dog leash "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C pulls a dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R7",
+          "grouped_record_ids": [
+            "R7"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 7,
+      "sample_interval": [
+        7,
+        8
+      ],
+      "original_caption": "#C C moves hand",
+      "F_archived_evidence": {
+        "original_text": "#C C moves hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R8",
+          "text": "C moves hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 8,
+      "sample_interval": [
+        8,
+        9
+      ],
+      "original_caption": "#C C scratches face",
+      "F_archived_evidence": {
+        "original_text": "#C C scratches face"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R9",
+          "text": "C scratches face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 9,
+      "sample_interval": [
+        9,
+        10
+      ],
+      "original_caption": "#C C scratches face",
+      "F_archived_evidence": {
+        "original_text": "#C C scratches face"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R9",
+          "text": "C scratches face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 10,
+      "sample_interval": [
+        10,
+        11
+      ],
+      "original_caption": "#C C moves the dog leash to the right hand ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C moves the dog leash to the right hand "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R10",
+          "text": "C moves the dog leash to the right hand.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R11",
+          "text": "C moves dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 11,
+      "sample_interval": [
+        11,
+        12
+      ],
+      "original_caption": "#C C holds the bag",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "bag"
+          }
+        ],
+        "original_text": "#C C holds the bag"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "bag"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R12",
+          "text": "C holds the bag.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R13",
+          "text": "C holds bag.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 12,
+      "sample_interval": [
+        12,
+        13
+      ],
+      "original_caption": "#C C holds the dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds the dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R14",
+          "text": "C holds the dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R15",
+          "grouped_record_ids": [
+            "R15"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [39,40), [42,43), [136,137), [169,170), [177,178) (source assertion), C holds dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 13,
+      "sample_interval": [
+        13,
+        14
+      ],
+      "original_caption": "#C C puts the carrier bag in the bag",
+      "F_archived_evidence": {
+        "original_text": "#C C puts the carrier bag in the bag"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R16",
+          "text": "C puts the carrier bag in the bag.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 14,
+      "sample_interval": [
+        14,
+        15
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R55",
+          "text": "An unresolved source observation states: \"C walks with the dog\".",
+          "decision": "skip",
+          "retained": false,
+          "qualification": "unresolved hypothesis"
+        }
+      ],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 15,
+      "sample_interval": [
+        15,
+        16
+      ],
+      "original_caption": "#C C walks with dog on the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with dog on the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "C walks with dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R53",
+          "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R54",
+          "text": "C walks dog on the road. The text memory associates this observation with dog (text reference E1).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        }
+      ],
+      "processing_status": "直接候选跳过，仅保留上游时序关联",
+      "final_input_paragraphs": [
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R53",
+          "grouped_record_ids": [
+            "R53"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [5,6), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with C (text reference E0)."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R54",
+          "grouped_record_ids": [
+            "R54"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with dog (text reference E1)."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 16,
+      "sample_interval": [
+        16,
+        17
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [
+        {
+          "id": "R53",
+          "text": "C walks dog on the road. The text memory associates this observation with C (text reference E0).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R54",
+          "text": "C walks dog on the road. The text memory associates this observation with dog (text reference E1).",
+          "decision": "keep",
+          "retained": true,
+          "qualification": "source assertion"
+        }
+      ],
+      "processing_status": "直接证据及上游时序关联均保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R53",
+          "grouped_record_ids": [
+            "R53"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [5,6), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with C (text reference E0)."
+        },
+        {
+          "source_route": "upstream_temporal_reference",
+          "trigger_candidate": "R54",
+          "grouped_record_ids": [
+            "R54"
+          ],
+          "exact_final_paragraph": "At sampled intervals [4,5), [15,16), [16,17) (source assertion), C walks dog on the road. The text memory associates this observation with dog (text reference E1)."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 17,
+      "sample_interval": [
+        17,
+        18
+      ],
+      "original_caption": "#C C walks dog",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 18,
+      "sample_interval": [
+        18,
+        19
+      ],
+      "original_caption": "#C C walks dog with a leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog with a leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R18",
+          "text": "C walks dog with a leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 19,
+      "sample_interval": [
+        19,
+        20
+      ],
+      "original_caption": "#C C walks around",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 20,
+      "sample_interval": [
+        20,
+        21
+      ],
+      "original_caption": "#C C walks around",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 21,
+      "sample_interval": [
+        21,
+        22
+      ],
+      "original_caption": "#C C moves the dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C moves the dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R11",
+          "text": "C moves dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R20",
+          "text": "C moves the dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 22,
+      "sample_interval": [
+        22,
+        23
+      ],
+      "original_caption": "#C C moves the dog leash in her left hand to her right hand.",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C moves the dog leash in her left hand to her right hand."
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R11",
+          "text": "C moves dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R21",
+          "text": "C moves the dog leash in her left hand to her right hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 23,
+      "sample_interval": [
+        23,
+        24
+      ],
+      "original_caption": "#C C walks with a dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with a dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R22",
+          "text": "C walks with a dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 24,
+      "sample_interval": [
+        24,
+        25
+      ],
+      "original_caption": "#C C walks with dog ",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with dog "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R23",
+          "text": "C walks with dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 25,
+      "sample_interval": [
+        25,
+        26
+      ],
+      "original_caption": "#C C walks around the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "C walks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 26,
+      "sample_interval": [
+        26,
+        27
+      ],
+      "original_caption": "#C C lifts up his hand",
+      "F_archived_evidence": {
+        "original_text": "#C C lifts up his hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R25",
+          "text": "C lifts up his hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 27,
+      "sample_interval": [
+        27,
+        28
+      ],
+      "original_caption": "#C C moves hand",
+      "F_archived_evidence": {
+        "original_text": "#C C moves hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R8",
+          "text": "C moves hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 28,
+      "sample_interval": [
+        28,
+        29
+      ],
+      "original_caption": "#C C pulls the leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        ],
+        "original_text": "#C C pulls the leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R26",
+          "text": "C pulls the leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R27",
+          "text": "C pulls leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 29,
+      "sample_interval": [
+        29,
+        30
+      ],
+      "original_caption": "#C C lifts the hand",
+      "F_archived_evidence": {
+        "original_text": "#C C lifts the hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R28",
+          "text": "C lifts the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 30,
+      "sample_interval": [
+        30,
+        31
+      ],
+      "original_caption": "#C C moves the hand",
+      "F_archived_evidence": {
+        "original_text": "#C C moves the hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R29",
+          "text": "C moves the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 31,
+      "sample_interval": [
+        31,
+        32
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 32,
+      "sample_interval": [
+        32,
+        33
+      ],
+      "original_caption": "#C C walks around the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "C walks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 33,
+      "sample_interval": [
+        33,
+        34
+      ],
+      "original_caption": "#C C lifts the hand",
+      "F_archived_evidence": {
+        "original_text": "#C C lifts the hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R28",
+          "text": "C lifts the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 34,
+      "sample_interval": [
+        34,
+        35
+      ],
+      "original_caption": "#C C lifts the hand",
+      "F_archived_evidence": {
+        "original_text": "#C C lifts the hand"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R28",
+          "text": "C lifts the hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 35,
+      "sample_interval": [
+        35,
+        36
+      ],
+      "original_caption": "#C C walks around the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "C walks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 36,
+      "sample_interval": [
+        36,
+        37
+      ],
+      "original_caption": "#C C pulls the dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls the dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R30",
+          "text": "C pulls the dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R7",
+          "grouped_record_ids": [
+            "R7"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 37,
+      "sample_interval": [
+        37,
+        38
+      ],
+      "original_caption": "#C C touches the face",
+      "F_archived_evidence": {
+        "original_text": "#C C touches the face"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R31",
+          "text": "C touches the face.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 38,
+      "sample_interval": [
+        38,
+        39
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 39,
+      "sample_interval": [
+        39,
+        40
+      ],
+      "original_caption": "#C C holds a dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds a dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R32",
+          "text": "C holds a dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R15",
+          "grouped_record_ids": [
+            "R15"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [39,40), [42,43), [136,137), [169,170), [177,178) (source assertion), C holds dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 40,
+      "sample_interval": [
+        40,
+        41
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 41,
+      "sample_interval": [
+        41,
+        42
+      ],
+      "original_caption": "#C C moves the dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C moves the dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R11",
+          "text": "C moves dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R20",
+          "text": "C moves the dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 42,
+      "sample_interval": [
+        42,
+        43
+      ],
+      "original_caption": "#C C holds the dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds the dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R14",
+          "text": "C holds the dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R15",
+          "grouped_record_ids": [
+            "R15"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [39,40), [42,43), [136,137), [169,170), [177,178) (source assertion), C holds dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 43,
+      "sample_interval": [
+        43,
+        44
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 44,
+      "sample_interval": [
+        44,
+        45
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 135,
+      "sample_interval": [
+        135,
+        136
+      ],
+      "original_caption": "#C C walks on the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks on the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R33",
+          "text": "C walks on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 136,
+      "sample_interval": [
+        136,
+        137
+      ],
+      "original_caption": "#C C holds dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R15",
+          "grouped_record_ids": [
+            "R15"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [39,40), [42,43), [136,137), [169,170), [177,178) (source assertion), C holds dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 137,
+      "sample_interval": [
+        137,
+        138
+      ],
+      "original_caption": "#C C stands on the road",
+      "F_archived_evidence": {
+        "original_text": "#C C stands on the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R34",
+          "text": "C stands on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 138,
+      "sample_interval": [
+        138,
+        139
+      ],
+      "original_caption": "#C C looks around the road ",
+      "F_archived_evidence": {
+        "original_text": "#C C looks around the road "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R35",
+          "text": "C looks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 139,
+      "sample_interval": [
+        139,
+        140
+      ],
+      "original_caption": "#C C walks dog on the road ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog on the road "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R4",
+          "text": "C walks dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 140,
+      "sample_interval": [
+        140,
+        141
+      ],
+      "original_caption": "#C C pulls dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R7",
+          "grouped_record_ids": [
+            "R7"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 141,
+      "sample_interval": [
+        141,
+        142
+      ],
+      "original_caption": "#C C looks at dog ",
+      "F_archived_evidence": {
+        "original_text": "#C C looks at dog "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R36",
+          "text": "C looks at dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 142,
+      "sample_interval": [
+        142,
+        143
+      ],
+      "original_caption": "#C C pulls a dog leash ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls a dog leash "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R6",
+          "text": "C pulls a dog leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R7",
+          "grouped_record_ids": [
+            "R7"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 143,
+      "sample_interval": [
+        143,
+        144
+      ],
+      "original_caption": "#C C stands on the road",
+      "F_archived_evidence": {
+        "original_text": "#C C stands on the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R34",
+          "text": "C stands on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 144,
+      "sample_interval": [
+        144,
+        145
+      ],
+      "original_caption": "#C C walks on the road with a dog ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "body_part": "dog"
+          }
+        ],
+        "original_text": "#C C walks on the road with a dog "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "body_part": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R23",
+          "text": "C walks with dog.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R37",
+          "text": "C walks on the road with a dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 145,
+      "sample_interval": [
+        145,
+        146
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 146,
+      "sample_interval": [
+        146,
+        147
+      ],
+      "original_caption": "#C C holds a leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        ],
+        "original_text": "#C C holds a leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R38",
+          "text": "C holds a leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R39",
+          "text": "C holds leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 147,
+      "sample_interval": [
+        147,
+        148
+      ],
+      "original_caption": "#C C stops walking",
+      "F_archived_evidence": {
+        "original_text": "#C C stops walking"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R40",
+          "text": "C stops walking.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 148,
+      "sample_interval": [
+        148,
+        149
+      ],
+      "original_caption": "#C C walks the dog along the road",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks the dog along the road"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R41",
+          "text": "C walks the dog along the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 149,
+      "sample_interval": [
+        149,
+        150
+      ],
+      "original_caption": "#C C stops walking",
+      "F_archived_evidence": {
+        "original_text": "#C C stops walking"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R40",
+          "text": "C stops walking.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 150,
+      "sample_interval": [
+        150,
+        151
+      ],
+      "original_caption": "#C C stops ",
+      "F_archived_evidence": {
+        "original_text": "#C C stops "
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R42",
+          "text": "C stops.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 151,
+      "sample_interval": [
+        151,
+        152
+      ],
+      "original_caption": "#C C pulls dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R7",
+          "grouped_record_ids": [
+            "R7"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 152,
+      "sample_interval": [
+        152,
+        153
+      ],
+      "original_caption": "#C C walks with a dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with a dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R22",
+          "text": "C walks with a dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 153,
+      "sample_interval": [
+        153,
+        154
+      ],
+      "original_caption": "#C C walks on the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks on the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R33",
+          "text": "C walks on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 154,
+      "sample_interval": [
+        154,
+        155
+      ],
+      "original_caption": "#C C pulls dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R7",
+          "grouped_record_ids": [
+            "R7"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 155,
+      "sample_interval": [
+        155,
+        156
+      ],
+      "original_caption": "#C C stops walking",
+      "F_archived_evidence": {
+        "original_text": "#C C stops walking"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R40",
+          "text": "C stops walking.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 156,
+      "sample_interval": [
+        156,
+        157
+      ],
+      "original_caption": "#C C walks the dogs",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dogs"
+          }
+        ],
+        "original_text": "#C C walks the dogs"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dogs"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R43",
+          "text": "C walks the dogs.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R44",
+          "text": "C walks dogs.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 157,
+      "sample_interval": [
+        157,
+        158
+      ],
+      "original_caption": "#C C walks dog on a road",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog on a road"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R45",
+          "text": "C walks dog on a road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 158,
+      "sample_interval": [
+        158,
+        159
+      ],
+      "original_caption": "#C C walks around",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 159,
+      "sample_interval": [
+        159,
+        160
+      ],
+      "original_caption": "#C C holds the leash with both hands",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        ],
+        "original_text": "#C C holds the leash with both hands"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R39",
+          "text": "C holds leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R46",
+          "text": "C holds the leash with both hands.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 160,
+      "sample_interval": [
+        160,
+        161
+      ],
+      "original_caption": "#C C walks with dog on road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with dog on road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R47",
+          "text": "C walks with dog on road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 161,
+      "sample_interval": [
+        161,
+        162
+      ],
+      "original_caption": "#C C stops walking",
+      "F_archived_evidence": {
+        "original_text": "#C C stops walking"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R40",
+          "text": "C stops walking.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 162,
+      "sample_interval": [
+        162,
+        163
+      ],
+      "original_caption": "#C C walks around",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 163,
+      "sample_interval": [
+        163,
+        164
+      ],
+      "original_caption": "#C C walks around the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R24",
+          "text": "C walks around the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 164,
+      "sample_interval": [
+        164,
+        165
+      ],
+      "original_caption": "#C C walks around the road with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around the road with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R48",
+          "text": "C walks around the road with the dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 165,
+      "sample_interval": [
+        165,
+        166
+      ],
+      "original_caption": "#C C walks with dog on the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with dog on the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "C walks with dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 166,
+      "sample_interval": [
+        166,
+        167
+      ],
+      "original_caption": "#C C walks with dog on the road",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with dog on the road"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R17",
+          "text": "C walks with dog on the road.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 167,
+      "sample_interval": [
+        167,
+        168
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 168,
+      "sample_interval": [
+        168,
+        169
+      ],
+      "original_caption": "#C C walks around",
+      "F_archived_evidence": {
+        "original_text": "#C C walks around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R19",
+          "text": "C walks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 169,
+      "sample_interval": [
+        169,
+        170
+      ],
+      "original_caption": "#C C holds dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R15",
+          "grouped_record_ids": [
+            "R15"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [39,40), [42,43), [136,137), [169,170), [177,178) (source assertion), C holds dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 170,
+      "sample_interval": [
+        170,
+        171
+      ],
+      "original_caption": "#C C walks with dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R23",
+          "text": "C walks with dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 171,
+      "sample_interval": [
+        171,
+        172
+      ],
+      "original_caption": "#C C pulls the leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        ],
+        "original_text": "#C C pulls the leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R26",
+          "text": "C pulls the leash.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R27",
+          "text": "C pulls leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 172,
+      "sample_interval": [
+        172,
+        173
+      ],
+      "original_caption": "#C C walks with the dog",
+      "F_archived_evidence": {
+        "original_text": "#C C walks with the dog"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R0",
+          "text": "C walks with the dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R0",
+          "grouped_record_ids": [
+            "R0"
+          ],
+          "exact_final_paragraph": "At sampled intervals [0,1), [1,2), [14,15), [16,17), [31,32), [38,39), [40,41), [43,44), [44,45), [145,146), [167,168), [172,173) (source assertion), C walks with the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 173,
+      "sample_interval": [
+        173,
+        174
+      ],
+      "original_caption": "#C C walks the dog",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks the dog"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R49",
+          "text": "C walks the dog.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 174,
+      "sample_interval": [
+        174,
+        175
+      ],
+      "original_caption": "#C C walks dog along the road",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ],
+        "original_text": "#C C walks dog along the road"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "walks",
+            "patient": "dog"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R2",
+          "text": "C walks dog along the road.",
+          "decision": "skip",
+          "retained": false
+        },
+        {
+          "id": "R3",
+          "text": "C walks dog.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R3",
+          "grouped_record_ids": [
+            "R3"
+          ],
+          "exact_final_paragraph": "At sampled intervals [3,4), [4,5), [17,18), [18,19), [139,140), [148,149), [157,158), [173,174), [174,175) (source assertion), C walks dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 175,
+      "sample_interval": [
+        175,
+        176
+      ],
+      "original_caption": "#C C pulls the dog leash with his left hand",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls the dog leash with his left hand"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R50",
+          "text": "C pulls the dog leash with his left hand.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R7",
+          "grouped_record_ids": [
+            "R7"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 176,
+      "sample_interval": [
+        176,
+        177
+      ],
+      "original_caption": "#C C pulls dog leash",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C pulls dog leash"
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R7",
+          "text": "C pulls dog leash.",
+          "decision": "keep",
+          "retained": true
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R7",
+          "grouped_record_ids": [
+            "R7"
+          ],
+          "exact_final_paragraph": "At sampled intervals [6,7), [36,37), [140,141), [142,143), [151,152), [154,155), [175,176), [176,177) (source assertion), C pulls dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 177,
+      "sample_interval": [
+        177,
+        178
+      ],
+      "original_caption": "#C C holds a dog leash ",
+      "F_archived_evidence": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ],
+        "original_text": "#C C holds a dog leash "
+      },
+      "F_accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "dog leash"
+          }
+        ]
+      },
+      "direct_candidates": [
+        {
+          "id": "R15",
+          "text": "C holds dog leash.",
+          "decision": "keep",
+          "retained": true
+        },
+        {
+          "id": "R32",
+          "text": "C holds a dog leash.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "直接证据保留",
+      "final_input_paragraphs": [
+        {
+          "source_route": "direct_caption_or_fact",
+          "trigger_candidate": "R15",
+          "grouped_record_ids": [
+            "R15"
+          ],
+          "exact_final_paragraph": "At sampled intervals [12,13), [39,40), [42,43), [136,137), [169,170), [177,178) (source assertion), C holds dog leash."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 178,
+      "sample_interval": [
+        178,
+        179
+      ],
+      "original_caption": "#C C looks around",
+      "F_archived_evidence": {
+        "original_text": "#C C looks around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R51",
+          "text": "C looks around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 179,
+      "sample_interval": [
+        179,
+        180
+      ],
+      "original_caption": "#C C stares around",
+      "F_archived_evidence": {
+        "original_text": "#C C stares around"
+      },
+      "F_accepted_structured_fields": {},
+      "direct_candidates": [
+        {
+          "id": "R52",
+          "text": "C stares around.",
+          "decision": "skip",
+          "retained": false
+        }
+      ],
+      "upstream_temporal_candidates": [],
+      "processing_status": "未进入最终输入",
+      "final_input_paragraphs": []
+    }
+  ],
+  "note": "Final paragraphs are copied literally. Multiple frames can map to the same shared paragraph; repeated display in this trace does not mean repeated sending to the model.",
+  "system_and_question_options_remain_in_original_final_input": true,
+  "full_final_input_file": "12_actual_chat_template.txt",
+  "final_description_policy_prefix": "These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence.",
+  "unique_final_paragraphs": 6
+}

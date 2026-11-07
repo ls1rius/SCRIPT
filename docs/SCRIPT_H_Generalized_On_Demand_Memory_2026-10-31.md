@@ -1,6 +1,16 @@
 # H：基于 F 的通用按需记忆
 
-2026-10-31，新加坡时间。用户确认两条路线分别为 E → G（完全版）和 F → H（按需版），并要求先实现 H。默认方案仍为 E/F；G/H 是各自的后续实验版本。
+> 2026-11-01 依赖清理更新：H-r5 与 I-r4-queue 保持运行；J 改为 J-r7-queue（输出仍为 J-r5），只解除已删除七题诊断目录的前置依赖。J 方法和 H→I→J 顺序不变，下文旧 J 队列编号为历史。
+
+> 2026-11-01 用户明确恢复监听与运行，覆盖下文暂停记录。新封存 H-r5 使用 `generalized-lazy-memory-H-v3-predicate-binding`，保留 H-r3/r4 失败输出与成本；H-r5 → I-r4-queue（输出 I-r3）→ J-r6-queue（输出 J-r5）。I/J 方法保持，使用原始 Qwen，I 队列不再要求独立 G＋GRPO 前置任务。四卡按原阈值监听并择一卡串行执行；真实功能门通过后才开始 H 的 300 题评测，失败停止，不自动重试。运行状态见 `workdirs/generalized-lazy-H-300-20261101-r5/queue_status.json`，排队不等于真实模型验证通过。
+
+> 用户最新决定：修复代码，暂不运行并释放显卡。H-r4 于 2026-11-01 14:39 再次未通过功能门：左手和执行者已通过，工具仍被挂到 `with a crane` 伪动词。原失败输出、报告和成本保留。工作区新版本 `generalized-lazy-memory-H-v3-predicate-binding` 用有限谓词格式限制解码；显式 actor 分支与 null actor 分支分别约束，null 分支的谓词需通过既有来源语法检查；串行和批量接受路径均使用 H 合约。该语法检查不是完整英文语义解析，仍保留无法完整表达时的原句回退。73 项 CPU 检查通过，包含 LMFE 对旧错误输出的拒绝以及合法主动／被动／祈使、短语动词、否定句等检查；未运行模型，不声称真实功能门已通过。当前 H/I/J 模型和控制器均已退出，不恢复监听、不启动新快照，待用户明确恢复。
+
+> 2026-11-01 修复并重新排队：H-r3 的真实功能门失败（角色增量输出丢失明确 actor、工具被挂到 `with` 伪动作），未进行正式评测。新 H-r4 使用 `generalized-lazy-memory-H-v2-action-binding`，动作角色请求同时包含动作骨架，强化角色绑定提示并排除独立功能词作动词；来源校验保持。51 项 CPU 检查通过，真实功能门等空闲卡后执行。当前链：H `generalized-lazy-H-300-20261101-r4` → I 控制器 `merged-lazy-I-H-adjacent-300-20261101-r3-queue`（输出 I-r2）→ J 控制器 `grounded-reader-J-300-20261101-r5-queue`（输出 J-r4）。各阶段均监听 GPU 0/1/2/3，每 10 秒采样，同卡连续 3 次空闲显存 ≥32 GiB、利用率 ≤10%，获取锁并复查后择一卡运行。H/I/J 无 GRPO；I 合并方法、J-v3 方法保持，旧失败记录与成本保留。下文旧调度路径均为历史。
+
+调度更新（2026-11-01 01:41，新加坡时间）：用户明确 H/I/J 不使用 GRPO，且不依赖 G＋GRPO 完成。H 活跃目录为 `workdirs/generalized-lazy-H-300-20261101-r3/`，从尚未启动的旧 H-r2 复制，1385 个冻结方法文件保持一致，只将独立调度改为 GPU 2。旧 H-r2 标记为未启动的调度快照，源代码与数据库不改写。H 真实功能门和逐题评测由 I-r2-queue 控制器启动；后续 I/J 都读取原始 Qwen2.5-VL-7B-Instruct，不加载训练 adapter。本文此前仅 CPU 准备的记录是历史状态，当前进度以新目录的状态和报告为准。
+
+2026-10-31，新加坡时间。用户确认两条路线分别为 E → G（完全版）和 F → H（按需版），并要求先实现 H。默认方案仍为 E/F；G/H 是各自的后续实验版本。用户随后将 I 调整为 H 的接续，当前按需路线为 F → H → I；I 继承 H 的抽取与状态规则，再合并完全相同的可见陈述。旧 F→I 结果仅作为历史 I-v1 保留。
 
 ## 实现范围
 
@@ -41,13 +51,13 @@ H 数据库为 `database/h_script.sqlite3`，包含独立 H 元数据。打开�
 
 ```bash
 # 仅做 CPU 准备；使用新目录，不启动模型。
-workdirs/query-runtime-env/bin/python script/run_generalized_lazy_experiment.py prepare \
+/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python script/run_generalized_lazy_experiment.py prepare \
   --reference workdirs/lazy-script-F-300-20261030-r3 \
   --G workdirs/generalized-entities-G-300-20261030-r3 \
   --out workdirs/generalized-lazy-H-NEW --batch-size 2
 
 # 需要启动评测时，使用该目录已冻结的入口；先执行真实模型功能门。
-workdirs/query-runtime-env/bin/python \
+/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python \
   workdirs/generalized-lazy-H-NEW/control/run_generalized_lazy_experiment.py queue \
   --out workdirs/generalized-lazy-H-NEW
 ```

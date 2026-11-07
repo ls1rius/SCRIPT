@@ -1,0 +1,94 @@
+These are sampled source observations, not a complete video record. Text identity and change hypotheses are not verified physical identities or causes. Listed intervals are separate observations, not proof of continuous duration or event counts. Question and options are hypotheses, not evidence. Missing evidence is not evidence of absence. Compact ranges combine exactly adjacent samples of the same statement; all original sample intervals remain archived and do not prove continuous activity.
+Frames [17,18): C holds a kitchen towel.
+Frames [17,18): C holds kitchen towel.
+Frames [32,33): man X carries a chair. The text memory associates this observation with carries a chair (text reference E0).
+Frames [33,34): the dog Y walks into the kitchen. The text memory associates this observation with walks into the kitchen (text reference E1).
+Frames [79,80): C carries the baby sitting on the chair.
+Frames [79,80): C carries baby.
+Frames [80,81): man Y pulls the chair.
+Frames [80,81): man Y pulls chair.
+Frames [81,82): C pulls the hand towel.
+Frames [81,82): C pulls hand towel.
+Frames [82,83): man Y picks the bottle from the table.
+Frames [82,83): man Y picks bottle.
+Frames [83,84): C places the pillow on a chair.
+Frames [84,85): C looks around the house.
+Frames [85,86): The baby X touches the baby.
+Frames [85,86): X touches baby.
+Frames [86,87): Woman Y moves the hand from the table.
+Frames [87,88): C holds a book.
+Frames [87,88): C holds book.
+Frames [88,89): C holds the chair.
+Frames [88,89): C holds chair.
+Frames [89,90): C looks around.
+Frames [90,91): C walks to a chair.
+Frames [91,92): C Looks at the chairs.
+Frames [92,93), [94,95): C looks around the room.
+Frames [93,94), [95,96): C looks at the chair.
+Frames [96,97): C walks towards the kitchen.
+Frames [97,98): woman Y touches her phone.
+Frames [97,98): woman Y touches phone.
+Frames [98,99): Woman X Picks a piece of cloth.
+Frames [98,99): Woman X Picks piece of cloth.
+Frames [99,100): The woman X drops the red toy on the table with her left hand.
+Frames [99,100): X drops red toy.
+Frames [99,100): The color of toy is red.
+Frames [100,101): C moves around the room.
+Frames [101,102): C picks the cloth.
+Frames [101,102): C picks cloth.
+Frames [102,103): C puts the paper in the bucket.
+Frames [102,103): C puts paper.
+Frames [103,104): C puts the handbag down.
+Frames [103,104): C puts handbag.
+Frames [104,105): C moves the chair.
+Frames [104,105): C moves chair.
+Frames [150,151): C holds the book in her hands.
+Frames [150,151): C holds book with hands.
+Frames [151,152): C talks to a man X.
+Frames [152,153): C looks at the window.
+Frames [153,154): C looks at the dog.
+Frames [154,155): C looks at the room.
+Frames [155,156): C touches a chair.
+Frames [155,156): C touches chair.
+Frames [156,157): C moves the hand.
+Frames [156,157): C moves hand.
+Frames [157,158): C looks at the baby.
+Frames [158,159): C folds the top of the blanket on her laps with both hands.
+Frames [158,159): C folds top of the blanket with both hands.
+Frames [159,160): C pulls the paper.
+Frames [159,160): C pulls paper.
+Frames [160,161): C unfolds the cloth.
+Frames [160,161): C unfolds cloth.
+Frames [161,162): C holds the white wooden spoon with both hands.
+Frames [161,162): C holds white wooden spoon with both hands.
+Frames [162,163): C folds the paper.
+Frames [162,163): C folds paper.
+Frames [163,164): C lifts a bowl on the dining table.
+Frames [163,164): C lifts bowl.
+Frames [164,165): C lifts the baby.
+Frames [164,165): C lifts baby.
+Frames [165,166): C removes the biscuit from the pack with both hands.
+Frames [165,166): C removes biscuit with both hands.
+Frames [166,167): C takes food.
+Frames [167,168): C reads the instructions.
+Frames [167,168): C reads instructions.
+Frames [168,169): A woman X talks to C.
+Frames [168,169): The color of X is woman.
+Frames [169,170): C puts the bottle in the bag.
+Frames [170,171): The woman X adjusts her left hand on her right leg.
+Frames [171,172): A woman X touches the book.
+Frames [171,172): X touches book.
+Frames [172,173): Man X holds a spoon with his right hand.
+Frames [172,173): Man X holds spoon with right hand.
+Frames [173,174): The baby Y holds the toy with his left hand.
+Frames [173,174): baby Y holds toy with left hand.
+Frames [174,175): A woman X reads a paper.
+Frames [174,175): X reads paper.
+Frames [175,176): C touches the book.
+Frames [175,176): C touches book.
+Frames [176,177): C stretches the cloth.
+Frames [176,177): C stretches cloth.
+Frames [177,178): C puts the baby in the basket.
+Frames [178,179): C adjusts the a plastic with her left hand.
+Frames [179,180): C moves the leg.
+Frames [179,180): C moves leg.

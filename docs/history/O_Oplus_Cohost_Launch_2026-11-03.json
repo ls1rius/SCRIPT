@@ -1,0 +1,81 @@
+{
+  "updated_at": "2026-11-03T13:29:59.756479+08:00",
+  "directory": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1",
+  "authorization": {
+    "updated_at": "2026-11-03T13:29:05.737898+08:00",
+    "user_request": "O和O+2组实验在等卡吗，有空间挤一挤就直接上呗",
+    "allow_gpu_2_co_residency": true,
+    "old_controller_pid": 3146715,
+    "old_controller_had_no_worker": true,
+    "minimum_free_mib": 32768,
+    "stable_observations": 3,
+    "poll_seconds": 10,
+    "exclusive_card_lock_override": "Only this O/O+ diagnostic; keep per-run and cohost locks",
+    "frozen_files_verified": 1641,
+    "MN_untouched": true
+  },
+  "admission": {
+    "admitted_at": "2026-11-03T13:29:26.252191+08:00",
+    "gpu": {
+      "index": "2",
+      "uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+      "free_mib": 46924,
+      "utilization": 95
+    },
+    "stable_observations": 3,
+    "lease": "/tmp/videoagent-cohost-1005-GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0.lock",
+    "minimum_free_mib": 32768,
+    "authorization": "cohost_authorization.json",
+    "exclusive_card_lock_overridden": true,
+    "frozen_worker_unchanged": true
+  },
+  "controller": {
+    "pid": 3152099,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1/cohost_queue.py"
+    ],
+    "started_at": "2026-11-03T13:29:05.789135+08:00",
+    "supersedes_waiting_controller": 3146715
+  },
+  "launch": {
+    "worker_pid": 3152235,
+    "gpu": "2",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1/runtime/script/run_o_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1"
+    ],
+    "started_at": "2026-11-03T13:29:26.254762+08:00"
+  },
+  "status": {
+    "state": "running",
+    "controller_pid": 3152099,
+    "updated_at": "2026-11-03T13:29:56.260473+08:00",
+    "worker_pid": 3152235,
+    "gpu": "2",
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1/runtime/script/run_o_sentence_experiment.py",
+      "worker",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-ten-case-matrix-20261103-r1"
+    ],
+    "started_at": "2026-11-03T13:29:26.254762+08:00"
+  },
+  "frozen_files_verified": 1641,
+  "scheduler_check": "Passed: low memory resets stability; 3 consecutive samples and final in-lock memory check before admission",
+  "MN_processes_alive": [
+    3125972,
+    3131077,
+    3132371,
+    3132622
+  ],
+  "semantic_changes": false,
+  "model_results_pending": true
+}

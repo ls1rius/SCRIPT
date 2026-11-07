@@ -1,0 +1,2797 @@
+{
+  "at": "2026-11-05T00:40:06.310564+08:00",
+  "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q-Qplus-O-source-300-20261105-r2",
+  "controller_pid": 238915,
+  "request": "User explicitly excludes uncertain observations from Q and Q+ final answers",
+  "policy": {
+    "version": "Q-whole-observation-context-keep-only-v2",
+    "plus_version": "Qplus-lossless-keep-only-compact-v2",
+    "source_O": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4",
+    "case_ids": [
+      "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+      "6472e377-b65c-461a-a750-9b28a673dc86",
+      "c5004075-e154-4bb8-baea-e41915190319",
+      "e9322513-15b2-4b89-8ddb-7d1432beb8a1",
+      "6dd07731-937c-4b63-b296-0a947ffe6996",
+      "07d7128e-0684-4c6b-81cb-3ecb76c2e6ec",
+      "429e2791-b050-4184-9837-de7c201f94c8",
+      "86d91c31-1bfe-4f99-a803-7466c8d801d1",
+      "811f0bb6-5bde-4e87-a182-bcf09def0c06",
+      "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+      "f0025a32-112a-4c06-a265-18e1dd3cdb1b",
+      "cd384dae-4229-4fa5-9fed-e4b5a1432f29",
+      "d85518f1-eee2-4d34-b955-6052f3d7dd2d",
+      "4e0b4961-1c21-4025-9ba6-0b526e3aaf3c",
+      "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+      "5d15c716-f179-462c-84a6-fa94e9d14e94",
+      "98427b0b-20ed-45bb-b772-91573ce90b5a",
+      "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+      "edd710a7-0f50-45dc-8619-de4bcaedee9b",
+      "35ba0822-a2fd-46e5-890a-2aab45f3ce6a",
+      "855f0685-fc29-463f-a796-8b68a722174f",
+      "22627b14-0f17-4a45-9661-5ac979e0a4c2",
+      "47b87299-5e31-4299-8bbc-51fe567ebd40",
+      "f60b20bb-ba25-4eea-a09f-01bbe8bbda88",
+      "c3ef6035-08c6-458e-b2d4-d7dc8f97f658",
+      "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+      "a317149f-1286-4160-9070-e575c42b8cc2",
+      "d0bbd7fa-2a15-4c25-ab06-adc7d04bce7b",
+      "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+      "ee227b56-c12b-4725-89e9-aa29e0b4dbe8",
+      "8db459bf-bf84-45b2-9fc0-f5c370a6da1a",
+      "b664157e-612e-477c-8ef7-04c15be9c66c",
+      "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+      "9e50476f-2e77-46f3-8b06-f1005ee55974",
+      "ed94296c-3f66-48ac-8bf4-ef29fa29819c",
+      "22d22f02-bc87-4f8a-9596-5b77146d4e41",
+      "4edbb602-0b90-4fac-998f-d352e71f1246",
+      "17d3ed08-b062-4197-9497-d06c6fd4f562",
+      "bbf66dab-376a-4c11-8528-22ca0c5b01c8",
+      "0f181d98-5036-4990-b397-62e934e168ef",
+      "e04cd624-17e1-4986-b344-55aa92d7c0c3",
+      "b45379aa-d6f3-4033-83df-5577fc49cfc0",
+      "545b2fb0-402b-4400-9ad3-cb017a47ad48",
+      "7ba34dd0-aa19-49ae-9bb9-81247f21e39e",
+      "943374f4-4514-4e22-827b-7452b91e5559",
+      "1a22bcef-adcd-4bf7-ab3a-5a1a0a8b1edf",
+      "5a992458-f01e-49db-bb84-502c3ccedc7c",
+      "71d00225-7ea5-46a0-8015-9b5a667f619a",
+      "509e6545-5fff-4f73-ae0f-524dfa8b3c2c",
+      "a07ac4b3-d2b8-48cb-bdad-5ab8da3f77a6",
+      "a7b381f3-7f73-46fa-a99c-80a717a34556",
+      "3223ece4-dc21-4ca9-8e78-2af8036ec4e8",
+      "9377c192-d46d-4016-9db4-df8007dbe82b",
+      "f98ccd46-72ac-4ead-96a2-9fa07e826cf3",
+      "73ecc613-5e39-4348-94ba-ee6cb197367a",
+      "e45f14cd-a567-4c56-89f7-fbd5dba80986",
+      "8955952a-946c-4841-895f-1fe0e2f000fb",
+      "444d82d2-987c-4a6a-8f81-5f1edd9447f7",
+      "0c481667-9303-4f4a-b331-0b412aaafa2d",
+      "d204f3d8-47a1-4e84-a3d3-ca20ebccd932",
+      "916476da-a699-4132-b5cb-ae992e647b1b",
+      "03657401-d4a4-40d0-9b03-d7e093ef93d1",
+      "15bae307-992b-4359-9fe0-3f622f957d42",
+      "b8bdd88f-996d-47bc-beb8-3b54c60754ec",
+      "de326bda-444a-4ad4-81d6-5ebb456a3300",
+      "689396c1-fc87-48f1-bdaf-00bc5efb3d4f",
+      "b6859c2c-d9f4-4c45-8f23-b7c033242c86",
+      "d68218d2-5071-458d-8e4d-87f5707b7fbc",
+      "f9d20acc-8d52-4136-8d4e-48573b184e15",
+      "af7e4a5e-b7b5-4ea1-a4c7-c1d07fe15c56",
+      "a46b0bc8-65d6-4831-91cb-d2495859b8a2",
+      "00b9a0de-c59e-49cb-a127-6081e2fb8c8e",
+      "a0a00d56-0f2d-4f3d-ae12-ee5bc4c7ba19",
+      "8345d177-0ed4-4965-8455-bd17d2b42399",
+      "d6b675f3-0a26-48ff-b865-0417c115267e",
+      "548cbaae-8311-4709-9822-185e18ff895b",
+      "3e700f0b-b4a9-4000-92b7-f0fa3be55161",
+      "ece69b04-2e67-434a-b923-1329feed590d",
+      "530a5959-0ba6-4fde-9b19-494ef51fed33",
+      "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+      "0c51c89d-d86b-45de-a1cf-c65153a7fbc1",
+      "2faa1516-ed55-4a96-a4be-09c402cf2c76",
+      "9557e88b-8880-4f64-88ec-815452f8ee4c",
+      "38ebfa83-3667-43af-989e-6354440f9265",
+      "3af2be23-926f-4b17-9b49-4ad090bc9e31",
+      "d135be4f-96a4-4a14-82a1-7d8d34546752",
+      "2297b62e-33bc-4910-8d80-e304526b537d",
+      "d299858f-cde8-49a9-a713-fb546db0a268",
+      "901ae1fe-5be2-495b-9506-9ec2a28d8ae0",
+      "742dd0fc-018f-4e1f-b2fb-e04d38c97894",
+      "1541b81e-cc80-4201-a636-9a39c2d20faa",
+      "101628a9-37be-4555-99c0-589ced677ee6",
+      "51688142-10e7-48ab-adef-2caa5448b456",
+      "86cb525a-d61c-46f1-9c5f-cc7284184900",
+      "82486477-661d-4116-85ae-4fc095503679",
+      "1bd933df-3575-4fa7-839f-765c7108259e",
+      "4ded71d2-1117-4ed6-a821-b8d76bb251ad",
+      "e5b84f2d-452f-448d-a3d4-8ad7bd4cd08b",
+      "4b7495f1-e2c2-4d69-bbf4-c2dabeb5e634",
+      "efcb614d-9825-4039-8f09-9f98d03205fd",
+      "5f584429-b12b-4b15-9975-bf0cbfeaf2bc",
+      "f671a773-cb56-49ed-ae8c-a529c977b33d",
+      "02925d7a-a5db-4127-8c31-b232e78b684d",
+      "01a144a5-24d2-4a5a-af01-1f318d674bed",
+      "24f4b88e-2294-4017-a669-9e27c07d44e7",
+      "23c1f3cd-c790-47c0-ae6a-7e4af28b8819",
+      "111b7189-cc45-438c-8144-ded1eed0f6c2",
+      "ba760ab8-ae2d-4aee-9334-b91dd194ad8b",
+      "73ecef43-37f0-4f09-ad82-1bcc5031577e",
+      "b224b904-1f61-455a-835b-9dd66b4309a3",
+      "0c17076e-7677-4ecf-b56b-53fa147ac81c",
+      "7741f012-a2a4-4ca8-a6fc-a4ab51c98262",
+      "27829009-0f7e-4217-ac44-468c564e1275",
+      "c7670500-3a0f-4f31-a85a-a1cf708b2f49",
+      "0d173aa3-9a94-4ba4-84bc-949d3254a63d",
+      "39aade26-1db8-4d3f-965e-841d5dc9981a",
+      "b5865ae0-e176-4e82-a651-2507ee2d6930",
+      "6f116779-b97d-4d3d-bbea-cdb2ab43447e",
+      "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+      "08c5a715-ee90-4bba-8b8b-5f0834620f78",
+      "bd01de0d-994a-4c4e-9009-9577111af977",
+      "68cd8a82-f3ea-4816-8dca-045616a41f25",
+      "97dc6bb7-7eed-45f7-bdb0-269ab8c2f639",
+      "8670020b-15c9-4ea9-acb5-71613dac2e9d",
+      "9d83c60a-5d84-4bea-8325-56beed585df2",
+      "46853bef-9052-428d-8e61-df684147f4af",
+      "4e1e182e-0592-4397-8654-a628d783990b",
+      "287d71bd-8911-40fa-b6f9-515c5b0eaf60",
+      "84d775ff-e0ee-4072-b0ce-7d7cb04af615",
+      "8ed3e07e-233a-4b07-9dd3-2bb972776d54",
+      "f6aa3c15-ffa5-4e9f-9c92-bb2d21847281",
+      "df060e0b-bd32-4e38-939f-f15919b836ae",
+      "e1b7dd94-23cd-4a26-89cd-e5d4f88f596d",
+      "e00836f3-1506-4479-a028-e17f19cff0bf",
+      "20520eff-abdf-4d4f-94ad-cc751a8960d0",
+      "f1d2978d-4802-498a-aac7-e240e379d175",
+      "bd58f24f-340f-448d-977b-bf49a0575b21",
+      "5fe9843b-0b74-4505-b864-86eb53c25cc6",
+      "94f6e8bd-b65d-4fd0-b2a9-75b69397fe2e",
+      "4c6290c6-bc98-4c95-b63b-03886849fb57",
+      "e4bfdb91-65d9-4a35-917e-d986a285f911",
+      "b4cc9985-97e8-423a-9737-22e5d9b4dbce",
+      "fcff46e4-9e6f-4934-a59f-72a6e6538b0e",
+      "3a94a8d4-9b0f-49d9-9479-80ccf3a9ac3a",
+      "b5d7c421-2b86-4ed0-b314-ce810c778c47",
+      "715ae2dd-58ed-4abf-b4e2-0348fb12f611",
+      "46e1aee1-adea-4c9c-ac5b-9d933a3d3a43",
+      "aafd0923-bfdb-4271-960e-02a4a5a75ed3",
+      "bbe35aed-1c92-42de-8f50-7004cdae317e",
+      "59dcde1d-f210-48fc-b888-5574d8962a2c",
+      "7981baa1-eb63-4ba6-9bde-cf35249e682c",
+      "083c5e8e-4546-40e9-857e-b9b967e5007a",
+      "a4bf0ad8-0ea8-40f5-bdf4-fc0a39a61d65",
+      "fe1a3d02-3ded-48ed-b8c5-4e579461cfaf",
+      "f7a575b2-a623-4533-9d67-b6395c564889",
+      "a4a6faba-8686-4282-808f-88e8447e4b95",
+      "b53d2693-bbaa-4e50-b703-e7d70ecf827f",
+      "a81624aa-bc70-4f13-963b-10136d2523ac",
+      "e86bb89c-baf4-4463-8941-e296d1d4d62f",
+      "a7e3cdc6-be60-4d79-be0b-3115da803926",
+      "b66bb54a-e3b3-4516-8072-32f6ae9aa7f1",
+      "796151ae-22ad-434d-9cb3-ea79096cfce7",
+      "e8b15979-31a5-4647-a61c-b1f5f079c74e",
+      "b3aaaea6-e6f6-499f-8b03-ddf85b3f62c4",
+      "cd882b7a-0766-4582-8388-3990b009b11b",
+      "223164c8-abed-4f1a-8f7c-4088c89d3ece",
+      "a6f20af7-21e8-4ee9-aa66-f23056ecab48",
+      "d430cf3f-da86-4d94-acd1-7e033d23598a",
+      "90c3f31b-3b44-4b9a-a684-cef313a45c32",
+      "d5ea4b32-7e72-4195-82c2-257ed2e455ef",
+      "643d9ff3-8780-4c7f-84e2-290c16b8c3c1",
+      "0aadf5ce-07eb-4934-9e07-317a46bc0b21",
+      "d33126fd-07dd-480e-ad89-9fdca4f813c4",
+      "eccbb1cd-a12c-4872-a656-d27882c5e462",
+      "cd5fc9e9-7a80-4bd6-a175-f07ad35ee7f6",
+      "3127e6b0-83c8-4211-b695-3ee349d2f89b",
+      "fec37c37-f9ae-42a5-86de-508fffa3d881",
+      "2fcb501a-827c-4b31-95c2-5b0ca4895a00",
+      "77d42c88-589b-487f-84f3-b7631a8c9f2e",
+      "5599b364-197b-41eb-8aa7-02a50de5f59e",
+      "951ccf40-1a99-4138-a441-4edf16af5446",
+      "edb5c7f4-636f-47e6-97f8-b27795aaeec5",
+      "83acbfe5-4c09-440c-ab8b-62479b2915df",
+      "cd2e4351-de59-4511-ab43-36c37b388a8d",
+      "358bdb29-d3e8-4af7-99e8-4d81da2d77b1",
+      "00faf954-74f7-4aa3-8b29-4a5dff4f9518",
+      "478c970e-3ca2-492a-8af7-f442d8255971",
+      "2f192c07-9e89-40d6-bc8c-418e92563bd9",
+      "efe17e2d-668b-49b7-a474-4d7aae9a4131",
+      "22b86648-340c-4338-b46e-5eaba3a44b06",
+      "8bebd8f4-f4e4-40bc-8bee-8db39904b85e",
+      "a885299a-bc85-4d98-9905-d3e58518edea",
+      "329c45dd-202d-4787-8734-f3900a0df321",
+      "bcf9aba0-a4b6-4210-8823-025f43f2631f",
+      "13da1294-2b42-4ef6-8dd6-ff651ef4571f",
+      "8d9d33d2-a95d-4fad-b378-f80c31a635cd",
+      "960f4df3-e414-48ae-8f29-188ab5eeca0b",
+      "93b1de09-2f89-4b4b-94ac-9d2d94df3d66",
+      "8eed2026-9f16-4004-92dd-9a31eceefa32",
+      "48274a18-9691-48e2-8ddd-45018251f81b",
+      "4ca1c82d-232c-4ffc-bad0-69f9aa992aef",
+      "2eda56d2-a9ea-4591-a822-552235568446",
+      "263666b2-3229-429a-b5a7-defc6433dc29",
+      "51bea80c-3f6f-4406-ac56-9af2a547b2bf",
+      "425f2fb4-a2a7-4925-94b5-25f6b0b85f78",
+      "c66fe71d-e9c3-4983-ad77-26c0a8b1c0b9",
+      "662d710e-54ea-4e63-bfc3-8f4e14873fd4",
+      "7cccb681-3447-410f-8747-6937d146725c",
+      "0b4529ac-5a4e-4d30-b6b6-c6504c509c0c",
+      "bd223d57-1b07-417e-8322-b5f1c8423c03",
+      "53bd3263-96b7-426a-b869-b14457ef3f84",
+      "a01f7c76-f257-4e86-aa86-9ce823fc5a74",
+      "319b2c1d-e7cf-4fad-9230-4610c69fdccc",
+      "8b7c0c9a-49f0-4908-a5ea-4ef273aa0591",
+      "00f93e1e-cf4e-4835-88b4-4ad68216e86f",
+      "b7657449-42cf-47bc-9092-c9ab2d240bea",
+      "34125d63-5dc5-44dd-af35-1d6528b37f74",
+      "5782e464-db9e-4bee-88f7-6c2f6727854b",
+      "8dea8a9c-df89-4a86-946e-12378ec817c0",
+      "2f814211-32de-4e8f-b26e-096ab47d20e8",
+      "293f6799-01e3-485c-8e89-bfd0e0c7b545",
+      "0a8109fe-15b9-4f5c-b5f2-993013cb216b",
+      "9d29050a-be36-4574-8bc6-6830031a5f32",
+      "505834f9-c164-4ca7-9f4c-a37bd55e359d",
+      "e48b8359-d35e-45f1-aa3b-eb1417e10dc8",
+      "402503fc-6f1b-4865-aea2-98f82349f1a4",
+      "3c63a6f6-842c-4d66-aa7f-2e36e1c73110",
+      "05defeef-40bd-4b08-b341-72879a6cf63e",
+      "e8999794-34b7-40c0-a9d7-2346a82dbc48",
+      "640ad606-0376-48cb-bc6a-14bc34ec4eaa",
+      "30e895e3-c176-43aa-9471-e9027f0b9518",
+      "4c778f65-eeca-4280-a608-d17b0c9493c2",
+      "04c51dba-1dcb-4b8f-a62c-efc363561d7b",
+      "a31720b8-01aa-40c7-b469-9aa5992a4f06",
+      "d38b4b2b-3422-4618-ab2a-6f0d08f13e00",
+      "84bd1e04-370a-4e4a-9255-776f8d8e38ad",
+      "cf9298e5-6da3-42ba-bae9-fa3d75ad4d02",
+      "feb27a1a-2b3f-4535-a6a8-0bef5bd43fd0",
+      "c4bdfb22-e10a-49a0-a8fe-60ec2b966b56",
+      "bf9f6769-4d6e-41b2-a91a-97449485b0ce",
+      "b4c9ae36-dc6b-488f-83c8-6bf423a56ac6",
+      "81ba0fd6-cc69-410d-9e2d-8317fd22cce8",
+      "410a6007-f759-4f9a-8196-0dad61934929",
+      "3adf2393-e574-4462-aff3-824873b6a9ed",
+      "afbc1ef9-bc2b-49f9-9009-3d7486563764",
+      "628e252f-e743-4054-92fd-b0ed6983571d",
+      "74de03a0-1911-4663-a4e7-071423c1c518",
+      "fdfe8e9a-b21b-4156-9f56-52d223e4e3dd",
+      "45fd8bca-c836-4601-b2c8-cc2a08cf8f86",
+      "217fe8d0-dfc8-407b-86be-269378c5259a",
+      "eda4f39b-6c3f-4a0a-8128-d57e7b3d97d9",
+      "811deb7d-78a8-4aed-8a7e-cb340ce8670d",
+      "aca23304-6743-4aeb-a50d-e8bd2a32eeb8",
+      "ec5eddb0-8c4b-4d06-8e45-00f221b1dd25",
+      "8412d579-54b7-47ee-92e5-68b9c845dc59",
+      "dfcbcf89-e268-4106-85ba-7875d19bd5e4",
+      "6d2092d3-8e9c-4097-841c-beec3c816410",
+      "4070a4e2-14d5-4618-9889-dd18a416e2b5",
+      "ce09bc68-1e3b-49c2-bbaf-115c7ca3c54f",
+      "e5becfe2-05aa-4ef2-bca8-a859dfe9d4f4",
+      "0f75f8eb-e104-4221-b4fc-8426367d2b63",
+      "9796f529-40ca-4e74-89ed-6a25efb24c8c",
+      "e7a2678d-7df8-4c44-bd2b-dbc5652ef7f2",
+      "5f8fa774-ebfd-4721-b060-b33e166f1f93",
+      "7375e9bb-cffa-4495-8720-635d2d8c256e",
+      "2b8d1e50-3ba7-492a-8a0b-104eb659c27b",
+      "61e8261b-3c01-4c25-b293-80fad4083edb",
+      "3311f1b2-495a-4712-9989-ef8519be3cc7",
+      "bfd0435f-5b15-44d8-90f6-dfb063a43a6d",
+      "cee8ee9e-723a-45f8-9a09-889790f60f7e",
+      "0f9d1d44-8a15-4135-a77e-d64064afc1e4",
+      "f77fbf67-2b57-46ec-b850-d1ed65cf9d07",
+      "97f80e1c-164d-4072-8ee9-980e366eec6c",
+      "05ad5736-88f5-42bb-ac9f-689e199c50de",
+      "3181b730-2539-46d5-b818-86db8965515a",
+      "fe375c7f-6cf0-41aa-8eac-df89817c38e2",
+      "470dad8b-6c95-440c-b990-5b123ec64497",
+      "776d7dcf-6a44-4db3-9d37-8a75635388c0",
+      "6e72ace9-3ea8-4928-b1b9-07cd2787bdbc",
+      "57ae157f-e1ea-4dc1-ad67-8a34f6de0356",
+      "1417b854-3022-401a-b01c-6f87e12f847b",
+      "7bdd6287-196e-44f6-a099-13a267016f9f",
+      "68e0bb20-414d-42ef-a0a0-e821efbe8e06",
+      "39b6ed4d-c5cb-4ad9-922b-6fda4e4a1531",
+      "b5867202-c87b-4ffa-8617-e8b2e9eba1a2",
+      "b44d457c-bb64-4d49-8989-42623e487782",
+      "2ef57a94-853e-4f98-a8e0-d0d5d95526ce",
+      "4feae43e-cef6-46a0-a256-28b6e210b6a2",
+      "86de4235-953e-458f-a951-40314e92a33b",
+      "c83b4b7d-56e8-433b-b743-13a8a0b3211b",
+      "6c901d03-3413-41a8-9aa0-8f9f6ed6b6f1",
+      "87555387-5ded-400b-b273-fe5b16c853e2",
+      "011b8b73-0ce4-4843-95ef-33b79610d212",
+      "1bf1fdea-6f44-4d3a-b5c0-6852aaada71b",
+      "ab4bd39c-a184-421d-9f38-bf18dd238b2d",
+      "d56e2a13-81ff-4431-9446-7b257b5646b6",
+      "8dc8d368-2123-494b-8a6c-d4c41824277e",
+      "0d977872-1093-4c7b-b372-f9734293ebe8",
+      "249a0fc4-ccf4-4e6f-9ca5-29f11cf5e1ad",
+      "532bcfc7-d64a-4bdd-ba30-76e95136674e"
+    ],
+    "workers": 4,
+    "planned": 300,
+    "case_budget_seconds": 3600,
+    "batch_size": 4,
+    "original_question_only": true,
+    "options_in_filter": false,
+    "task_plan": false,
+    "extraction": false,
+    "model_composition": false,
+    "atomic_unit": "literal whole-source observation; no generated roles",
+    "context": "immediate previous/next source observations of this same question, at most two",
+    "uncertain_policy": "archive_only; exclude from Q and Qplus final inputs",
+    "Qplus": "fixed lossless compact rendering of identical keep-only Q evidence",
+    "known_analysis_case_ids": [
+      "97dc6bb7-7eed-45f7-bdb0-269ab8c2f639",
+      "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+      "b5da8ac2-01ae-4390-8e0b-ce777bb0c86b",
+      "00b9a0de-c59e-49cb-a127-6081e2fb8c8e",
+      "97f80e1c-164d-4072-8ee9-980e366eec6c",
+      "a7b381f3-7f73-46fa-a99c-80a717a34556",
+      "a4663dd4-73e2-4e2a-b66b-731527a10c2c",
+      "0f9d1d44-8a15-4135-a77e-d64064afc1e4"
+    ],
+    "evaluation_scope": "Same 300 previously examined questions; post-analysis architecture evaluation, not an untouched holdout. No benchmark facts/examples or case-specific logic in model prompt.",
+    "source_limitation": "Original N-selected O sources; upstream missing evidence not repaired in this fixed-source comparison.",
+    "resource_policy": {
+      "preference": [
+        "0",
+        "1"
+      ],
+      "minimum_free_mib": 24576,
+      "maximum_utilization": 100,
+      "stable_observations": 3,
+      "admission_mode": "memory_shared",
+      "allocator_limit_mib": 22528
+    },
+    "at": "2026-11-05T00:36:29.783241+08:00",
+    "training": false,
+    "adapter": null,
+    "no_automatic_retries": true
+  },
+  "predecessor": {
+    "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q-Qplus-O-source-300-20261105-r1",
+    "state": "superseded",
+    "policy_handoff": {
+      "at": "2026-11-05T00:35:27.087285+08:00",
+      "previous_queue": {
+        "state": "failed",
+        "controller_pid": 227324,
+        "workers": {
+          "0": {
+            "stage": "complete",
+            "pid": 227333,
+            "at": "2026-11-05T00:33:55.047713+08:00",
+            "gpu": "0"
+          },
+          "1": {
+            "stage": "complete",
+            "pid": 227334,
+            "at": "2026-11-05T00:33:41.451340+08:00",
+            "gpu": "1"
+          },
+          "2": {
+            "stage": "complete",
+            "pid": 227335,
+            "at": "2026-11-05T00:34:00.610867+08:00",
+            "gpu": "0"
+          },
+          "3": {
+            "stage": "complete",
+            "pid": 227336,
+            "at": "2026-11-05T00:33:57.979772+08:00",
+            "gpu": "1"
+          }
+        },
+        "effective_worker_count": 4,
+        "allowed_gpu_indices": [
+          "0",
+          "1"
+        ],
+        "updated_at": "2026-11-05T00:34:04.252902+08:00",
+        "error": null
+      },
+      "state": "superseded",
+      "published": 169,
+      "original_success_hashes_preserved": 165,
+      "inflight_finished": [
+        "b3aaaea6-e6f6-499f-8b03-ddf85b3f62c4",
+        "a6f20af7-21e8-4ee9-aa66-f23056ecab48",
+        "d430cf3f-da86-4d94-acd1-7e033d23598a",
+        "90c3f31b-3b44-4b9a-a684-cef313a45c32"
+      ],
+      "no_model_calls_interrupted": true,
+      "superseded_by": "/mnt/ssd2/hli/work/workdirs/VideoAgent/Q-Qplus-O-source-300-20261105-r2"
+    },
+    "published_result_hashes": "all 169 hashes stored in run predecessor.json",
+    "scope": "Explicit new method version; all filtering and both answers new, no old answers or unknown evidence carried into the readers; old processing costs and outputs preserved separately"
+  },
+  "cpu_checks": {
+    "passed": true,
+    "checks": 18,
+    "at": "2026-11-05T00:37:50.862929+08:00",
+    "command": "python -m unittest tests.test_q_evidence tests.test_q_generation",
+    "key_assertion": "uncertain is archived in selection.json but appears in neither Q nor Qplus final input",
+    "prior_shared_runtime_regressions": "Unchanged shared generator/strict reader/scheduler retain r1 checks; not claimed as newly repeated"
+  },
+  "capacity": {
+    "passed": true,
+    "at": "2026-11-05T00:37:21.621567+08:00",
+    "native_context": 128000,
+    "configured_input_limit": 32768,
+    "formal_questions": 300,
+    "no_truncation": true,
+    "no_model_calls": true,
+    "max_reader": {
+      "Q": 6072,
+      "Qplus": 4500
+    },
+    "max_filter": 1148,
+    "rows": "per-question records in run validation/capacity_preflight.json"
+  },
+  "real_model_gate": "pending; every worker validates before formal claims",
+  "monitor_pid": 238914,
+  "monitor_handoff_correction": "/mnt/ssd2/hli/work/workdirs/VideoAgent/MNOP-alert-monitor-20261104-r1/Q_keep_only_resume.json",
+  "updated_at": "2026-11-05T00:43:10.336665+08:00",
+  "postlaunch": {
+    "passed": true,
+    "at": "2026-11-05T00:43:10.336312+08:00",
+    "formal_pairs_checked": 30,
+    "checks": [
+      {
+        "question_id": "dfb6c468-e124-40f6-9c4e-c13ee45a2ad9",
+        "passed": true,
+        "keep": 70,
+        "uncertain_archived_and_excluded": 35,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 28.24953057616949
+      },
+      {
+        "question_id": "6472e377-b65c-461a-a750-9b28a673dc86",
+        "passed": true,
+        "keep": 4,
+        "uncertain_archived_and_excluded": 3,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 2.885637190192938
+      },
+      {
+        "question_id": "c5004075-e154-4bb8-baea-e41915190319",
+        "passed": true,
+        "keep": 98,
+        "uncertain_archived_and_excluded": 2,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 22.697320345789194
+      },
+      {
+        "question_id": "e9322513-15b2-4b89-8ddb-7d1432beb8a1",
+        "passed": true,
+        "keep": 125,
+        "uncertain_archived_and_excluded": 0,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 26.70448425039649
+      },
+      {
+        "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+        "passed": true,
+        "keep": 49,
+        "uncertain_archived_and_excluded": 47,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 22.78592201694846
+      },
+      {
+        "question_id": "07d7128e-0684-4c6b-81cb-3ecb76c2e6ec",
+        "passed": true,
+        "keep": 34,
+        "uncertain_archived_and_excluded": 3,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 9.402170073240995
+      },
+      {
+        "question_id": "429e2791-b050-4184-9837-de7c201f94c8",
+        "passed": true,
+        "keep": 5,
+        "uncertain_archived_and_excluded": 3,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 3.0720360837876797
+      },
+      {
+        "question_id": "86d91c31-1bfe-4f99-a803-7466c8d801d1",
+        "passed": true,
+        "keep": 11,
+        "uncertain_archived_and_excluded": 0,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 3.058223396539688
+      },
+      {
+        "question_id": "811f0bb6-5bde-4e87-a182-bcf09def0c06",
+        "passed": true,
+        "keep": 24,
+        "uncertain_archived_and_excluded": 5,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 7.629872512072325
+      },
+      {
+        "question_id": "68f6ddfd-bf42-4bee-b1c9-a48db428e586",
+        "passed": true,
+        "keep": 14,
+        "uncertain_archived_and_excluded": 7,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 5.683150440454483
+      },
+      {
+        "question_id": "f0025a32-112a-4c06-a265-18e1dd3cdb1b",
+        "passed": true,
+        "keep": 12,
+        "uncertain_archived_and_excluded": 4,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 4.283365812152624
+      },
+      {
+        "question_id": "cd384dae-4229-4fa5-9fed-e4b5a1432f29",
+        "passed": true,
+        "keep": 52,
+        "uncertain_archived_and_excluded": 6,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 14.016196861863136
+      },
+      {
+        "question_id": "d85518f1-eee2-4d34-b955-6052f3d7dd2d",
+        "passed": true,
+        "keep": 138,
+        "uncertain_archived_and_excluded": 3,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 32.44130006060004
+      },
+      {
+        "question_id": "4e0b4961-1c21-4025-9ba6-0b526e3aaf3c",
+        "passed": true,
+        "keep": 28,
+        "uncertain_archived_and_excluded": 14,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 11.046458512544632
+      },
+      {
+        "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+        "passed": true,
+        "keep": 34,
+        "uncertain_archived_and_excluded": 72,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 30.78036867827177
+      },
+      {
+        "question_id": "5d15c716-f179-462c-84a6-fa94e9d14e94",
+        "passed": true,
+        "keep": 79,
+        "uncertain_archived_and_excluded": 39,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 28.90582025051117
+      },
+      {
+        "question_id": "98427b0b-20ed-45bb-b772-91573ce90b5a",
+        "passed": true,
+        "keep": 11,
+        "uncertain_archived_and_excluded": 0,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 2.9879810512065887
+      },
+      {
+        "question_id": "e97c3e1c-27ee-4b3d-8783-2e325b0eada8",
+        "passed": true,
+        "keep": 56,
+        "uncertain_archived_and_excluded": 37,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 22.97782640531659
+      },
+      {
+        "question_id": "edd710a7-0f50-45dc-8619-de4bcaedee9b",
+        "passed": true,
+        "keep": 42,
+        "uncertain_archived_and_excluded": 8,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 13.02858917415142
+      },
+      {
+        "question_id": "35ba0822-a2fd-46e5-890a-2aab45f3ce6a",
+        "passed": true,
+        "keep": 12,
+        "uncertain_archived_and_excluded": 1,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 3.5381510108709335
+      },
+      {
+        "question_id": "855f0685-fc29-463f-a796-8b68a722174f",
+        "passed": true,
+        "keep": 43,
+        "uncertain_archived_and_excluded": 94,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 37.29355091229081
+      },
+      {
+        "question_id": "22627b14-0f17-4a45-9661-5ac979e0a4c2",
+        "passed": true,
+        "keep": 15,
+        "uncertain_archived_and_excluded": 1,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 4.007091645151377
+      },
+      {
+        "question_id": "47b87299-5e31-4299-8bbc-51fe567ebd40",
+        "passed": true,
+        "keep": 19,
+        "uncertain_archived_and_excluded": 4,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 7.168293237686157
+      },
+      {
+        "question_id": "f60b20bb-ba25-4eea-a09f-01bbe8bbda88",
+        "passed": true,
+        "keep": 26,
+        "uncertain_archived_and_excluded": 6,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 7.7496769689023495
+      },
+      {
+        "question_id": "c3ef6035-08c6-458e-b2d4-d7dc8f97f658",
+        "passed": true,
+        "keep": 97,
+        "uncertain_archived_and_excluded": 29,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 30.594832945615053
+      },
+      {
+        "question_id": "16eb6914-00e7-4692-a7d7-d6ba36f61a5d",
+        "passed": true,
+        "keep": 3,
+        "uncertain_archived_and_excluded": 1,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 5.737660463899374
+      },
+      {
+        "question_id": "a317149f-1286-4160-9070-e575c42b8cc2",
+        "passed": true,
+        "keep": 28,
+        "uncertain_archived_and_excluded": 2,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 7.70616802200675
+      },
+      {
+        "question_id": "d0bbd7fa-2a15-4c25-ab06-adc7d04bce7b",
+        "passed": true,
+        "keep": 72,
+        "uncertain_archived_and_excluded": 8,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 18.97910613939166
+      },
+      {
+        "question_id": "40c8c634-c4a1-4a00-a480-0aa652e7246e",
+        "passed": true,
+        "keep": 108,
+        "uncertain_archived_and_excluded": 9,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 27.79647969827056
+      },
+      {
+        "question_id": "ee227b56-c12b-4725-89e9-aa29e0b4dbe8",
+        "passed": true,
+        "keep": 0,
+        "uncertain_archived_and_excluded": 0,
+        "final_evidence_exactly_keep_only": true,
+        "identical_Q_Qplus_evidence": true,
+        "raw_hashes_valid": true,
+        "budgeted_total": 0.4922046735882759
+      }
+    ],
+    "old_169_success_result_hashes_unchanged": true,
+    "frozen_manifests_verified": true
+  },
+  "queue": {
+    "state": "running",
+    "controller_pid": 238915,
+    "workers": {
+      "0": {
+        "stage": "query",
+        "pid": 238930,
+        "at": "2026-11-05T00:43:06.168416+08:00",
+        "gpu": "1",
+        "index": 33,
+        "question_id": "d30c1b6c-bbcb-490b-b104-c30b8cb985d3",
+        "phase": "filter",
+        "observation": 61,
+        "total_observations": 94
+      },
+      "1": {
+        "stage": "query",
+        "pid": 238931,
+        "at": "2026-11-05T00:43:05.905289+08:00",
+        "gpu": "0",
+        "index": 31,
+        "question_id": "8db459bf-bf84-45b2-9fc0-f5c370a6da1a",
+        "phase": "filter",
+        "observation": 73,
+        "total_observations": 106
+      },
+      "2": {
+        "stage": "query",
+        "pid": 238932,
+        "at": "2026-11-05T00:43:06.443086+08:00",
+        "gpu": "1",
+        "index": 34,
+        "question_id": "9e50476f-2e77-46f3-8b06-f1005ee55974",
+        "phase": "filter",
+        "observation": 21,
+        "total_observations": 23
+      },
+      "3": {
+        "stage": "query",
+        "pid": 238933,
+        "at": "2026-11-05T00:43:06.823835+08:00",
+        "gpu": "0",
+        "index": 32,
+        "question_id": "b664157e-612e-477c-8ef7-04c15be9c66c",
+        "phase": "filter",
+        "observation": 73,
+        "total_observations": 108
+      }
+    },
+    "effective_worker_count": 4,
+    "allowed_gpu_indices": [
+      "0",
+      "1"
+    ],
+    "updated_at": "2026-11-05T00:43:06.845475+08:00",
+    "error": null
+  },
+  "progress": {
+    "version": "Q-whole-observation-context-keep-only-v2",
+    "plus_version": "Qplus-lossless-keep-only-compact-v2",
+    "completed": 30,
+    "planned": 300,
+    "complete": false,
+    "errors": 0,
+    "arms": {
+      "Q": {
+        "completed": 30,
+        "correct": 19,
+        "mean_input_tokens": 1792.7666666666667,
+        "mean_qa_seconds": 0.42575132759908835
+      },
+      "Qplus": {
+        "completed": 30,
+        "correct": 19,
+        "mean_input_tokens": 1391.9,
+        "mean_qa_seconds": 0.37122286707162855
+      }
+    },
+    "subgroups": {
+      "all": {
+        "Q": {
+          "completed": 30,
+          "correct": 19,
+          "mean_input_tokens": 1792.7666666666667,
+          "mean_qa_seconds": 0.42575132759908835
+        },
+        "Qplus": {
+          "completed": 30,
+          "correct": 19,
+          "mean_input_tokens": 1391.9,
+          "mean_qa_seconds": 0.37122286707162855
+        }
+      },
+      "analysis_known": {
+        "Q": {
+          "completed": 1,
+          "correct": 0,
+          "mean_input_tokens": 668.0,
+          "mean_qa_seconds": 0.2977704480290413
+        },
+        "Qplus": {
+          "completed": 1,
+          "correct": 0,
+          "mean_input_tokens": 641.0,
+          "mean_qa_seconds": 0.2094576321542263
+        }
+      },
+      "other": {
+        "Q": {
+          "completed": 29,
+          "correct": 19,
+          "mean_input_tokens": 1831.551724137931,
+          "mean_qa_seconds": 0.43016446137736586
+        },
+        "Qplus": {
+          "completed": 29,
+          "correct": 19,
+          "mean_input_tokens": 1417.7931034482758,
+          "mean_qa_seconds": 0.3768009786205045
+        }
+      }
+    },
+    "processing_seconds": 443.699469409883,
+    "retained_observations": 1309,
+    "source_observations": 1838,
+    "decisions": {
+      "keep": 1309,
+      "uncertain": 443,
+      "drop": 86
+    },
+    "scheduler_failure": null,
+    "failed_attempts": [],
+    "runtime": "Q/Q+ pair shares keep-only filtering once; uncertain decisions archived but excluded from both readers; two new strict answers; no model extraction/plan/compose",
+    "source_limitation": "Original N-selected O sources; upstream missing evidence not repaired in this fixed-source comparison.",
+    "evaluation_scope": "Same 300 previously examined questions; post-analysis architecture evaluation, not an untouched holdout. No benchmark facts/examples or case-specific logic in model prompt.",
+    "updated_at": "2026-11-05T00:43:06.841847+08:00"
+  },
+  "real_model_gates": {
+    "0": {
+      "functional": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "recurring",
+            "request": {
+              "question": "Which actions recur during cleaning?",
+              "current": {
+                "source_id": "S0",
+                "text": "J wipes a shelf.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "phases",
+            "request": {
+              "question": "Describe the stages of the work.",
+              "current": {
+                "source_id": "S0",
+                "text": "J opens a crate.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J removes a tool.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "adjustment",
+            "request": {
+              "question": "What adjustments are made to the device?",
+              "current": {
+                "source_id": "S0",
+                "text": "R tightens a valve.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "purpose",
+            "request": {
+              "question": "What is the overall goal of these actions?",
+              "current": {
+                "source_id": "S0",
+                "text": "M sets a bowl on a desk.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "M pours seeds into the bowl.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "counterevidence",
+            "request": {
+              "question": "Does J open the container?",
+              "current": {
+                "source_id": "S0",
+                "text": "J does not open the container.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "modality",
+            "request": {
+              "question": "What happens to the lever?",
+              "current": {
+                "source_id": "S0",
+                "text": "J may rotate the lever.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "participants",
+            "request": {
+              "question": "How do the people cooperate?",
+              "current": {
+                "source_id": "S0",
+                "text": "D hands a cup to E.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "multiple",
+            "request": {
+              "question": "Describe the work process.",
+              "current": {
+                "source_id": "S0",
+                "text": "T opens a crate and removes a wrench.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "unicode",
+            "request": {
+              "question": "What is being moved?",
+              "current": {
+                "source_id": "S0",
+                "text": "繫 moves the \"blue\" box.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "color",
+            "request": {
+              "question": "How is the room cleaned?",
+              "current": {
+                "source_id": "S0",
+                "text": "An unused clock is purple.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J wipes the table.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "drop"
+            },
+            "passed": true,
+            "retained_for_reader": false,
+            "allowed_decisions": [
+              "drop"
+            ]
+          },
+          {
+            "name": "unrelated",
+            "request": {
+              "question": "How is the table cleaned?",
+              "current": {
+                "source_id": "S0",
+                "text": "A distant bird flies over the roof.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J wipes the table.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "drop"
+            },
+            "passed": true,
+            "retained_for_reader": false,
+            "allowed_decisions": [
+              "drop"
+            ]
+          },
+          {
+            "name": "local",
+            "request": {
+              "question": "Compare preparation with later work.",
+              "current": {
+                "source_id": "S0",
+                "text": "V places tools on a bench.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "V repairs a hinge.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "batch4_isolated_rows",
+            "passed": true,
+            "verdicts": [
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              }
+            ]
+          }
+        ],
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 8.566659595817327,
+          "total": 8.566659595817327,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 8.566659595817327,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "q_independent_batch": 8.566659595817327
+          },
+          "call_count": 13,
+          "resources": {
+            "cpu_seconds": 8.52918763200001,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 9.335103247314692,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 17126488576
+          }
+        },
+        "at": "2026-11-05T00:41:00.040449+08:00",
+        "scope": "New synthetic real-model relevance and independent batch gates; not benchmark accuracy evidence"
+      },
+      "reader": {
+        "passed": true,
+        "result": {
+          "question_id": "q-gate-reader",
+          "version": "Q-whole-observation-context-keep-only-v2",
+          "plus_version": "Qplus-lossless-keep-only-compact-v2",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "Q": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "input_tokens": 115,
+              "answer_seconds": 0.5117434561252594,
+              "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc"
+            },
+            "Qplus": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "input_tokens": 105,
+              "answer_seconds": 0.2544459290802479,
+              "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc"
+            }
+          },
+          "new_navigation": false,
+          "extraction_called": false,
+          "task_plan_called": false,
+          "composition_called": false,
+          "selection_policy": "keep_only; uncertain archived, excluded from both readers",
+          "source_observations": 1,
+          "retained_observations": 1,
+          "decisions": {
+            "keep": 1,
+            "uncertain": 0,
+            "drop": 0
+          },
+          "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 1.1372418105602264,
+            "total": 1.1372418105602264,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 1.1372418105602264,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "q_independent_batch": 0.37105242535471916,
+              "q_answer": 0.5117434561252594,
+              "qplus_answer": 0.2544459290802479
+            },
+            "call_count": 3,
+            "resources": {
+              "cpu_seconds": 1.1354092450000053,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 1.1480526216328144,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 17126488576
+            }
+          },
+          "updated_at": "2026-11-05T00:41:01.186183+08:00"
+        },
+        "at": "2026-11-05T00:41:01.186495+08:00"
+      }
+    },
+    "3": {
+      "functional": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "recurring",
+            "request": {
+              "question": "Which actions recur during cleaning?",
+              "current": {
+                "source_id": "S0",
+                "text": "J wipes a shelf.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "phases",
+            "request": {
+              "question": "Describe the stages of the work.",
+              "current": {
+                "source_id": "S0",
+                "text": "J opens a crate.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J removes a tool.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "adjustment",
+            "request": {
+              "question": "What adjustments are made to the device?",
+              "current": {
+                "source_id": "S0",
+                "text": "R tightens a valve.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "purpose",
+            "request": {
+              "question": "What is the overall goal of these actions?",
+              "current": {
+                "source_id": "S0",
+                "text": "M sets a bowl on a desk.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "M pours seeds into the bowl.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "counterevidence",
+            "request": {
+              "question": "Does J open the container?",
+              "current": {
+                "source_id": "S0",
+                "text": "J does not open the container.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "modality",
+            "request": {
+              "question": "What happens to the lever?",
+              "current": {
+                "source_id": "S0",
+                "text": "J may rotate the lever.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "participants",
+            "request": {
+              "question": "How do the people cooperate?",
+              "current": {
+                "source_id": "S0",
+                "text": "D hands a cup to E.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "multiple",
+            "request": {
+              "question": "Describe the work process.",
+              "current": {
+                "source_id": "S0",
+                "text": "T opens a crate and removes a wrench.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "unicode",
+            "request": {
+              "question": "What is being moved?",
+              "current": {
+                "source_id": "S0",
+                "text": "繫 moves the \"blue\" box.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "color",
+            "request": {
+              "question": "How is the room cleaned?",
+              "current": {
+                "source_id": "S0",
+                "text": "An unused clock is purple.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J wipes the table.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "drop"
+            },
+            "passed": true,
+            "retained_for_reader": false,
+            "allowed_decisions": [
+              "drop"
+            ]
+          },
+          {
+            "name": "unrelated",
+            "request": {
+              "question": "How is the table cleaned?",
+              "current": {
+                "source_id": "S0",
+                "text": "A distant bird flies over the roof.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J wipes the table.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "drop"
+            },
+            "passed": true,
+            "retained_for_reader": false,
+            "allowed_decisions": [
+              "drop"
+            ]
+          },
+          {
+            "name": "local",
+            "request": {
+              "question": "Compare preparation with later work.",
+              "current": {
+                "source_id": "S0",
+                "text": "V places tools on a bench.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "V repairs a hinge.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "batch4_isolated_rows",
+            "passed": true,
+            "verdicts": [
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              }
+            ]
+          }
+        ],
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 8.119296457618475,
+          "total": 8.119296457618475,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 8.119296457618475,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "q_independent_batch": 8.119296457618475
+          },
+          "call_count": 13,
+          "resources": {
+            "cpu_seconds": 8.087031158999988,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 8.840169187635183,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 17126488576
+          }
+        },
+        "at": "2026-11-05T00:41:00.094522+08:00",
+        "scope": "New synthetic real-model relevance and independent batch gates; not benchmark accuracy evidence"
+      },
+      "reader": {
+        "passed": true,
+        "result": {
+          "question_id": "q-gate-reader",
+          "version": "Q-whole-observation-context-keep-only-v2",
+          "plus_version": "Qplus-lossless-keep-only-compact-v2",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "Q": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "input_tokens": 115,
+              "answer_seconds": 0.4687401168048382,
+              "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc"
+            },
+            "Qplus": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "input_tokens": 105,
+              "answer_seconds": 0.2735622525215149,
+              "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc"
+            }
+          },
+          "new_navigation": false,
+          "extraction_called": false,
+          "task_plan_called": false,
+          "composition_called": false,
+          "selection_policy": "keep_only; uncertain archived, excluded from both readers",
+          "source_observations": 1,
+          "retained_observations": 1,
+          "decisions": {
+            "keep": 1,
+            "uncertain": 0,
+            "drop": 0
+          },
+          "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 1.1340675577521324,
+            "total": 1.1340675577521324,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 1.1340675577521324,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "q_independent_batch": 0.39176518842577934,
+              "q_answer": 0.4687401168048382,
+              "qplus_answer": 0.2735622525215149
+            },
+            "call_count": 3,
+            "resources": {
+              "cpu_seconds": 1.129773508000003,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 1.144341666251421,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 17126488576
+            }
+          },
+          "updated_at": "2026-11-05T00:41:01.236427+08:00"
+        },
+        "at": "2026-11-05T00:41:01.236774+08:00"
+      }
+    },
+    "2": {
+      "functional": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "recurring",
+            "request": {
+              "question": "Which actions recur during cleaning?",
+              "current": {
+                "source_id": "S0",
+                "text": "J wipes a shelf.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "phases",
+            "request": {
+              "question": "Describe the stages of the work.",
+              "current": {
+                "source_id": "S0",
+                "text": "J opens a crate.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J removes a tool.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "adjustment",
+            "request": {
+              "question": "What adjustments are made to the device?",
+              "current": {
+                "source_id": "S0",
+                "text": "R tightens a valve.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "purpose",
+            "request": {
+              "question": "What is the overall goal of these actions?",
+              "current": {
+                "source_id": "S0",
+                "text": "M sets a bowl on a desk.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "M pours seeds into the bowl.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "counterevidence",
+            "request": {
+              "question": "Does J open the container?",
+              "current": {
+                "source_id": "S0",
+                "text": "J does not open the container.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "modality",
+            "request": {
+              "question": "What happens to the lever?",
+              "current": {
+                "source_id": "S0",
+                "text": "J may rotate the lever.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "participants",
+            "request": {
+              "question": "How do the people cooperate?",
+              "current": {
+                "source_id": "S0",
+                "text": "D hands a cup to E.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "multiple",
+            "request": {
+              "question": "Describe the work process.",
+              "current": {
+                "source_id": "S0",
+                "text": "T opens a crate and removes a wrench.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "unicode",
+            "request": {
+              "question": "What is being moved?",
+              "current": {
+                "source_id": "S0",
+                "text": "繫 moves the \"blue\" box.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "color",
+            "request": {
+              "question": "How is the room cleaned?",
+              "current": {
+                "source_id": "S0",
+                "text": "An unused clock is purple.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J wipes the table.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "drop"
+            },
+            "passed": true,
+            "retained_for_reader": false,
+            "allowed_decisions": [
+              "drop"
+            ]
+          },
+          {
+            "name": "unrelated",
+            "request": {
+              "question": "How is the table cleaned?",
+              "current": {
+                "source_id": "S0",
+                "text": "A distant bird flies over the roof.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J wipes the table.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "drop"
+            },
+            "passed": true,
+            "retained_for_reader": false,
+            "allowed_decisions": [
+              "drop"
+            ]
+          },
+          {
+            "name": "local",
+            "request": {
+              "question": "Compare preparation with later work.",
+              "current": {
+                "source_id": "S0",
+                "text": "V places tools on a bench.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "V repairs a hinge.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "batch4_isolated_rows",
+            "passed": true,
+            "verdicts": [
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              }
+            ]
+          }
+        ],
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 8.565981566905975,
+          "total": 8.565981566905975,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 8.565981566905975,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "q_independent_batch": 8.565981566905975
+          },
+          "call_count": 13,
+          "resources": {
+            "cpu_seconds": 8.538393931000005,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 9.2907206825912,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 17126488576
+          }
+        },
+        "at": "2026-11-05T00:41:01.116286+08:00",
+        "scope": "New synthetic real-model relevance and independent batch gates; not benchmark accuracy evidence"
+      },
+      "reader": {
+        "passed": true,
+        "result": {
+          "question_id": "q-gate-reader",
+          "version": "Q-whole-observation-context-keep-only-v2",
+          "plus_version": "Qplus-lossless-keep-only-compact-v2",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "Q": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "input_tokens": 115,
+              "answer_seconds": 0.5155080556869507,
+              "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc"
+            },
+            "Qplus": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "input_tokens": 105,
+              "answer_seconds": 0.32022837549448013,
+              "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc"
+            }
+          },
+          "new_navigation": false,
+          "extraction_called": false,
+          "task_plan_called": false,
+          "composition_called": false,
+          "selection_policy": "keep_only; uncertain archived, excluded from both readers",
+          "source_observations": 1,
+          "retained_observations": 1,
+          "decisions": {
+            "keep": 1,
+            "uncertain": 0,
+            "drop": 0
+          },
+          "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 1.3272131532430649,
+            "total": 1.3272131532430649,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 1.3272131532430649,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "q_independent_batch": 0.49147672206163406,
+              "q_answer": 0.5155080556869507,
+              "qplus_answer": 0.32022837549448013
+            },
+            "call_count": 3,
+            "resources": {
+              "cpu_seconds": 1.318764489000003,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 1.3372998386621475,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 17126488576
+            }
+          },
+          "updated_at": "2026-11-05T00:41:02.450969+08:00"
+        },
+        "at": "2026-11-05T00:41:02.451292+08:00"
+      }
+    },
+    "1": {
+      "functional": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "recurring",
+            "request": {
+              "question": "Which actions recur during cleaning?",
+              "current": {
+                "source_id": "S0",
+                "text": "J wipes a shelf.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "phases",
+            "request": {
+              "question": "Describe the stages of the work.",
+              "current": {
+                "source_id": "S0",
+                "text": "J opens a crate.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J removes a tool.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "adjustment",
+            "request": {
+              "question": "What adjustments are made to the device?",
+              "current": {
+                "source_id": "S0",
+                "text": "R tightens a valve.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "purpose",
+            "request": {
+              "question": "What is the overall goal of these actions?",
+              "current": {
+                "source_id": "S0",
+                "text": "M sets a bowl on a desk.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "M pours seeds into the bowl.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "counterevidence",
+            "request": {
+              "question": "Does J open the container?",
+              "current": {
+                "source_id": "S0",
+                "text": "J does not open the container.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "modality",
+            "request": {
+              "question": "What happens to the lever?",
+              "current": {
+                "source_id": "S0",
+                "text": "J may rotate the lever.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "participants",
+            "request": {
+              "question": "How do the people cooperate?",
+              "current": {
+                "source_id": "S0",
+                "text": "D hands a cup to E.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "multiple",
+            "request": {
+              "question": "Describe the work process.",
+              "current": {
+                "source_id": "S0",
+                "text": "T opens a crate and removes a wrench.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "unicode",
+            "request": {
+              "question": "What is being moved?",
+              "current": {
+                "source_id": "S0",
+                "text": "繫 moves the \"blue\" box.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": []
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep"
+            ]
+          },
+          {
+            "name": "color",
+            "request": {
+              "question": "How is the room cleaned?",
+              "current": {
+                "source_id": "S0",
+                "text": "An unused clock is purple.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J wipes the table.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "drop"
+            },
+            "passed": true,
+            "retained_for_reader": false,
+            "allowed_decisions": [
+              "drop"
+            ]
+          },
+          {
+            "name": "unrelated",
+            "request": {
+              "question": "How is the table cleaned?",
+              "current": {
+                "source_id": "S0",
+                "text": "A distant bird flies over the roof.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "J wipes the table.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "drop"
+            },
+            "passed": true,
+            "retained_for_reader": false,
+            "allowed_decisions": [
+              "drop"
+            ]
+          },
+          {
+            "name": "local",
+            "request": {
+              "question": "Compare preparation with later work.",
+              "current": {
+                "source_id": "S0",
+                "text": "V places tools on a bench.",
+                "intervals": [
+                  [
+                    0,
+                    1
+                  ]
+                ]
+              },
+              "context": [
+                {
+                  "source_id": "S1",
+                  "text": "V repairs a hinge.",
+                  "intervals": [
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              ]
+            },
+            "verdict": {
+              "decision": "keep"
+            },
+            "passed": true,
+            "retained_for_reader": true,
+            "allowed_decisions": [
+              "keep",
+              "uncertain"
+            ]
+          },
+          {
+            "name": "batch4_isolated_rows",
+            "passed": true,
+            "verdicts": [
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              },
+              {
+                "decision": "keep"
+              }
+            ]
+          }
+        ],
+        "cost_summary": {
+          "unit": "processing_seconds",
+          "initialization": 0.0,
+          "online": 8.261723920702934,
+          "total": 8.261723920702934,
+          "shared_dependency_seconds": 0.0,
+          "budgeted_total": 8.261723920702934,
+          "text_cache_hits": 0,
+          "total_cap": 600,
+          "budget_violation": false,
+          "by_operation": {
+            "q_independent_batch": 8.261723920702934
+          },
+          "call_count": 13,
+          "resources": {
+            "cpu_seconds": 8.213110052000008,
+            "cpu_unmeasured_calls": 0,
+            "gpu_resident_seconds": 8.979134518653154,
+            "gpu_unmeasured_calls": 0,
+            "gpu_peak_allocated_bytes": 17126488576
+          }
+        },
+        "at": "2026-11-05T00:41:01.573252+08:00",
+        "scope": "New synthetic real-model relevance and independent batch gates; not benchmark accuracy evidence"
+      },
+      "reader": {
+        "passed": true,
+        "result": {
+          "question_id": "q-gate-reader",
+          "version": "Q-whole-observation-context-keep-only-v2",
+          "plus_version": "Qplus-lossless-keep-only-compact-v2",
+          "complete": true,
+          "error": null,
+          "arms": {
+            "Q": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "input_tokens": 115,
+              "answer_seconds": 0.4874344654381275,
+              "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc"
+            },
+            "Qplus": {
+              "answer": {
+                "selected_option": "0",
+                "raw": "prediction: A"
+              },
+              "input_tokens": 105,
+              "answer_seconds": 0.22242025285959244,
+              "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc"
+            }
+          },
+          "new_navigation": false,
+          "extraction_called": false,
+          "task_plan_called": false,
+          "composition_called": false,
+          "selection_policy": "keep_only; uncertain archived, excluded from both readers",
+          "source_observations": 1,
+          "retained_observations": 1,
+          "decisions": {
+            "keep": 1,
+            "uncertain": 0,
+            "drop": 0
+          },
+          "retained_evidence_hash": "79f446e6e018f57fee3a7c683a0aa31a6a7f2aa27a6400de9bc5eb8a85e2d5bc",
+          "cost_summary": {
+            "unit": "processing_seconds",
+            "initialization": 0.0,
+            "online": 0.9917654544115067,
+            "total": 0.9917654544115067,
+            "shared_dependency_seconds": 0.0,
+            "budgeted_total": 0.9917654544115067,
+            "text_cache_hits": 0,
+            "total_cap": 3600,
+            "budget_violation": false,
+            "by_operation": {
+              "q_independent_batch": 0.2819107361137867,
+              "q_answer": 0.4874344654381275,
+              "qplus_answer": 0.22242025285959244
+            },
+            "call_count": 3,
+            "resources": {
+              "cpu_seconds": 0.9879378080000016,
+              "cpu_unmeasured_calls": 0,
+              "gpu_resident_seconds": 1.0019733868539333,
+              "gpu_unmeasured_calls": 0,
+              "gpu_peak_allocated_bytes": 17126488576
+            }
+          },
+          "updated_at": "2026-11-05T00:41:02.572363+08:00"
+        },
+        "at": "2026-11-05T00:41:02.572707+08:00"
+      }
+    }
+  },
+  "monitor_state": {
+    "pid": 238914,
+    "at": "2026-11-05T00:43:06.341156+08:00",
+    "state": "watching",
+    "interval_seconds": 60,
+    "channel": "Codex thread queue; enqueue receipt does not prove desktop push delivery"
+  },
+  "monitor_regression_checks": 8
+}

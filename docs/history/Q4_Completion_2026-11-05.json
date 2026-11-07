@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-05T15:21:31.497631+08:00",
+  "groups": {
+    "Q4-adaptive-300-20261105-r1": {
+      "completed": 300,
+      "arms": {
+        "Q": {
+          "completed": 300,
+          "correct": 193,
+          "mean_input_tokens": 4162.65
+        },
+        "Qplus": {
+          "completed": 300,
+          "correct": 193,
+          "mean_input_tokens": 3064.3966666666665
+        }
+      },
+      "finished_at": "2026-11-05T14:49:57.308377+08:00",
+      "report_sha256": "2a11ad21a647cd6ad7839431eca6fd16bb930253dbebcfe9a74d3a572f10e2c5",
+      "result_identity_completion_budget_pending_checks_passed": 300
+    },
+    "Q4-fixed-depth-300-20261105-r1": {
+      "completed": 300,
+      "arms": {
+        "Q": {
+          "completed": 300,
+          "correct": 193,
+          "mean_input_tokens": 4634.283333333334
+        },
+        "Qplus": {
+          "completed": 300,
+          "correct": 193,
+          "mean_input_tokens": 3398.2166666666667
+        }
+      },
+      "finished_at": "2026-11-05T15:02:57.487492+08:00",
+      "report_sha256": "7e0f400b2c2db4ec24a9e2420ddad95e5e2c2ebb41ebfc4e34e8bc41e8a49632",
+      "result_identity_completion_budget_pending_checks_passed": 300
+    }
+  },
+  "scope": "Read-only completion and per-result identity/status/budget/no-pending verification; not a full raw-call or semantic audit",
+  "historical_interruption": "ENOSPC retained; 85 successful calls reused once and 600 seconds conservative missing-output reservation debt retained"
+}

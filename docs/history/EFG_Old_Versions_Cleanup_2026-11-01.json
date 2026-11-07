@@ -1,0 +1,104 @@
+{
+  "created_at": "2026-11-01T23:09:08.422277+08:00",
+  "authorization": "User requested direct deletion of failed/superseded E/F/G versions, explicitly including old caches.",
+  "state": "deleted",
+  "deleted_directories": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/joint-entities-E-300-20261029-r1",
+      "state": "failed",
+      "allocated_bytes": 36790272,
+      "entries": 1445,
+      "removed_old_databases_and_execution_checkpoints": false
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/joint-entities-E-300-20261029-r2",
+      "state": "superseded",
+      "allocated_bytes": 38109184,
+      "entries": 1649,
+      "removed_old_databases_and_execution_checkpoints": false
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261029-r1",
+      "state": "retired_development",
+      "allocated_bytes": 38612992,
+      "entries": 1488,
+      "removed_old_databases_and_execution_checkpoints": true
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261029-r2",
+      "state": "superseded",
+      "allocated_bytes": 202006528,
+      "entries": 16397,
+      "removed_old_databases_and_execution_checkpoints": true
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-entities-G-300-20261030-r1",
+      "state": "failed",
+      "allocated_bytes": 36900864,
+      "entries": 1453,
+      "removed_old_databases_and_execution_checkpoints": false
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-entities-G-300-20261030-r2",
+      "state": "failed",
+      "allocated_bytes": 36864000,
+      "entries": 1453,
+      "removed_old_databases_and_execution_checkpoints": false
+    }
+  ],
+  "protected_manifest_sha256": {
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/joint-entities-E-300-20261029-r3/frozen_hashes.json": "83b20f928cea8baf875b7af14c8a1532f3216c884214f91296a983c6e22e9eea",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261030-r3/frozen_hashes.json": "923a448a662ec558df9990ebfce4bf125a9d6e1718e0d66b9110c6b05ec83fc4",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-entities-G-300-20261030-r3/frozen_hashes.json": "39874c16d5230ffa5e35abb7a9ce9e814014dd6d4ec30e4cb8dbea44c369354a",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/frozen_hashes.json": "78aff247f8b913dd37846a0338730ca40696fb511fa0095d68fd95324c0134bc",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r4-queue/frozen_hashes.json": "af70fc38f80ed2de0ec840971dab92648cb9e0da00bd85fb601da876668249fb",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/grounded-reader-J-300-20261101-r7-queue/frozen_hashes.json": "f1b48ee4918eb843dcb6133a65e9c7260eeb3015e68beb13d0058892fd9b2289"
+  },
+  "formal_report_sha256": {
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/joint-entities-E-300-20261029-r3/report.json": "de504872a235bd60bbeee6e7b56ccf12069a43b2083537ffd364e50e2fa6055c",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261030-r3/report.json": "738fd3c44e28935fbe00166fa97af016c0eeecb7e6d97acbdd998cd186a560ba",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-entities-G-300-20261030-r3/report.json": "415aad82136dbb6ef997ffb6f2d521e82d3c300889ed536b6097ecf4644a16cb",
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5/report.json": "aaa57de8c032cafe49eacc3c8f27d9681eb85f69a27253c6bd2b41018bfcc4ca"
+  },
+  "current_F_cache_sha256": {
+    "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261030-r3/database/script.sqlite3": "821dd939a56720ede0539fca9d07879785315d3c36aa9ee220faa5e57f7bfdc2"
+  },
+  "retained_symlink_dependencies": [],
+  "cost_policy": "Existing formal r3 reports retain original prior_development_seconds; deletion does not reset historical cost. No old cache or failed-run output is copied into the cleanup record.",
+  "deleted_old_snapshot_files": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261030-r3/control/execution_optimization/checkpoint.json",
+      "allocated_bytes": 8192,
+      "sha256": "5df792c146fe8a43673bf19de2a585636aa6016f9d2193aa3045d8c88ecc937b",
+      "reason": "Obsolete execution-optimization snapshot captured after 34 completed questions; current 300-question F-r3 database is retained."
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/lazy-script-F-300-20261030-r3/control/execution_optimization/checkpoint.sqlite3",
+      "allocated_bytes": 23805952,
+      "sha256": "093359a3e1a55a771e6f62635a7db4562eef197b0195b63d1f178060ca9e3e5a",
+      "reason": "Obsolete execution-optimization snapshot captured after 34 completed questions; current 300-question F-r3 database is retained."
+    }
+  ],
+  "completed_at": "2026-11-01T23:10:41.410008+08:00",
+  "freed_allocated_bytes": 413097984,
+  "validation": {
+    "protected_frozen_files_verified": 5546,
+    "formal_reports_unchanged": true,
+    "current_F_cache_unchanged": true,
+    "old_versions_and_cache_snapshots_absent": true,
+    "active_controllers": {
+      "generalized-lazy-H-300-20261101-r5": {
+        "state": "waiting_for_gpu",
+        "pid": 2109681
+      },
+      "merged-lazy-I-H-adjacent-300-20261101-r4-queue": {
+        "state": "running",
+        "pid": 2109675
+      },
+      "grounded-reader-J-300-20261101-r7-queue": {
+        "state": "waiting_for_I",
+        "pid": 2218109
+      }
+    }
+  }
+}

@@ -27,6 +27,7 @@ DEFAULTS = {
                'batching': {'visual_encoder': 4, 'text_embedding': 1,
                             'text_embedding_max_tokens': 8192},
                'max_input_tokens': 16384, 'precision': 'bfloat16', 'device': 'cuda',
+               'cuda_allocator_limit_mib': 0, 'cuda_physical_pool_mib': 0,
                'revisions': {}, 'local_files_only': True},
     'segmentation': {'sample_fps': 1., 'penalty': 5., 'min_samples': 2,
                      'solver': 'exact_dp', 'tie_epsilon': 1e-8, 'max_scene_duration': None,
@@ -58,7 +59,7 @@ DEFAULTS = {
               'global_recovery_rounds': 2, 'tool_transient_retries': 1, 'json_repair_retries': 1,
               'temporal_compact_keys': False, 'temporal_delta_observations': False,
               'temporal_entity_source': 'summary','temporal_sparse_visual': True,'pipeline':'adaptive_partial_temporal',
-              'temporal_qa_evidence': 'lazy_script', 'temporal_qa_max_quotes': 12,
+              'temporal_qa_evidence': 'planned_lazy_script', 'temporal_qa_max_quotes': 12,
               'state_segment_max_gap_seconds': 2.,
               'entity_max_identity_gap_seconds': 8.,
               'field_extraction_batch_size': 2, 'memory_cache_directory': '',
@@ -118,6 +119,8 @@ def load_config(path=None):
 
 
 def validate_config(cfg):
+    from .physical_cuda_pool import validate_settings
+    validate_settings(cfg['models'])
     if cfg['query']['pipeline'] not in ('adaptive_partial_temporal','adaptive_partial','scheme3','scheme4','legacy'):
         raise ValueError('query.pipeline must be adaptive_partial_temporal, adaptive_partial, scheme3, scheme4 or legacy')
     if type(cfg['query']['temporal_sparse_visual']) is not bool:
@@ -125,7 +128,7 @@ def validate_config(cfg):
     if cfg['query']['temporal_entity_source'] not in ('summary','images'):
         raise ValueError('temporal_entity_source must be summary or images (legacy baseline)')
     if cfg['query']['temporal_qa_evidence'] not in ('full', 'memory_quotes', 'typed_memory_quotes',
-            'complete_with_quotes','complete_structured','state_segments','joint_entities','lazy_script'):
+            'complete_with_quotes','complete_structured','state_segments','joint_entities','lazy_script','merged_lazy_script','planned_lazy_script','scene_planned_script','role_bound_scene_script'):
         raise ValueError('Unknown temporal_qa_evidence mode')
     gap = cfg['query']['state_segment_max_gap_seconds']
     if type(gap) not in (int, float) or not math.isfinite(gap) or gap < 0:

@@ -1,0 +1,3429 @@
+{
+  "question_id": "73ecc613-5e39-4348-94ba-ee6cb197367a",
+  "selected_indices": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179
+  ],
+  "rows": [
+    {
+      "sampled_frame_index": 17,
+      "sample_interval": [
+        17,
+        18
+      ],
+      "scene_id": "S1",
+      "original_caption": "#C C holds a kitchen towel",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/17.jpg",
+      "frame_sha256": "e7ed07438c31b0fd413126cc8d1f4bf985927e77f09c54d344cf4910610deeeb",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "kitchen towel"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R0",
+          "text": "C holds a kitchen towel.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R1",
+          "text": "C holds kitchen towel.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R0"
+          ],
+          "actual_original_paragraph": "At sampled intervals [17,18) (source assertion), C holds a kitchen towel.",
+          "reformatted_paragraph": "Frames [17,18): C holds a kitchen towel."
+        },
+        {
+          "record_ids": [
+            "R1"
+          ],
+          "actual_original_paragraph": "At sampled intervals [17,18) (source assertion), C holds kitchen towel.",
+          "reformatted_paragraph": "Frames [17,18): C holds kitchen towel."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 18,
+      "sample_interval": [
+        18,
+        19
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O The woman X pushes a chair aside with her left hand.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/18.jpg",
+      "frame_sha256": "8f72586fb76c559585e3e7e4596326de58923c1907ffa9ba621e0f978f7e9f8b",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "pushes",
+            "patient": "chair"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R2",
+          "text": "The woman X pushes a chair aside with her left hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R3",
+          "text": "X pushes chair.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 19,
+      "sample_interval": [
+        19,
+        20
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O The dog X holds a white wooden plaque with his right hand.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/19.jpg",
+      "frame_sha256": "d25801d3d79e70a0e3702a76000f64783b7eb22942a0b0abcb9cd7c0e6d3ab24",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "holds",
+            "patient": "white wooden plaque"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R4",
+          "text": "The dog X holds a white wooden plaque with his right hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R5",
+          "text": "X holds white wooden plaque.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 20,
+      "sample_interval": [
+        20,
+        21
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O The woman Y adjusts the chair.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/20.jpg",
+      "frame_sha256": "987a62e32c7ab835798e5f6114c54f470eaed904a21bbb908f682ca2ae7532e1",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "Y",
+            "verb": "adjusts",
+            "patient": "chair"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R6",
+          "text": "The woman Y adjusts the chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R7",
+          "text": "Y adjusts chair.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 21,
+      "sample_interval": [
+        21,
+        22
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O The woman X walks to the dining area.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/21.jpg",
+      "frame_sha256": "f3347c52d65e8276a89a507b8070f9c4152b60571d2c9e899f47f6dd75563fb5",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R8",
+          "text": "The woman X walks to the dining area.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 22,
+      "sample_interval": [
+        22,
+        23
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O The man X lifts a chair",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/22.jpg",
+      "frame_sha256": "923061d53dfb2154236ec6f8f089ebd6ad561e1926ace6af17b7ee77cabf0a58",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "lifts",
+            "patient": "chair"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R9",
+          "text": "The man X lifts a chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R10",
+          "text": "X lifts chair.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 23,
+      "sample_interval": [
+        23,
+        24
+      ],
+      "scene_id": "S1",
+      "original_caption": "#C C walks away from the table",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/23.jpg",
+      "frame_sha256": "db31abf00ed4fd76de513ff6e0092c855743693f31a6b5e93bf51717b5c30a5c",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R11",
+          "text": "C walks away from the table.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 24,
+      "sample_interval": [
+        24,
+        25
+      ],
+      "scene_id": "S1",
+      "original_caption": "#C C moves a flashlight in the container",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/24.jpg",
+      "frame_sha256": "0dbeff330a44670753311b9a857395392d0faa425fb44e2c13d9d7d70688eb42",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "flashlight"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R12",
+          "text": "C moves a flashlight in the container.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R13",
+          "text": "C moves flashlight.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 25,
+      "sample_interval": [
+        25,
+        26
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O person X opens the closet door",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/25.jpg",
+      "frame_sha256": "4541e470fc5f1feaa0d33059ad69b75a22e60e9c0e9173bef487b75081bf1cf3",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "person X",
+            "verb": "opens",
+            "patient": "closet door"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R14",
+          "text": "person X opens the closet door.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R15",
+          "text": "person X opens closet door.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 26,
+      "sample_interval": [
+        26,
+        27
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O person X opens a drawer",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/26.jpg",
+      "frame_sha256": "1f6edeeae184cc652a37a0698a84aa3bfebfa6be7ea98f17e3ebda6d963565ff",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "person X",
+            "verb": "opens",
+            "patient": "drawer"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R16",
+          "text": "person X opens a drawer.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R17",
+          "text": "person X opens drawer.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 27,
+      "sample_interval": [
+        27,
+        28
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O A man X walks into a bedroom.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/27.jpg",
+      "frame_sha256": "62a4f55941916d98b2d1217a06a1d85766f94747001c1567887071e21b0443cc",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R18",
+          "text": "A man X walks into a bedroom.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 28,
+      "sample_interval": [
+        28,
+        29
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O The woman X moves the black wooden spoon on the dining table with her right hand.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/28.jpg",
+      "frame_sha256": "470aa8534e2ac8963686dd5b9918d35a6c5bbab08415a02cda1c296d95c96d7d",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "moves",
+            "patient": "black wooden spoon"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R19",
+          "text": "The woman X moves the black wooden spoon on the dining table with her right hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R20",
+          "text": "X moves black wooden spoon.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 29,
+      "sample_interval": [
+        29,
+        30
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O The dog X drops a white bag on the table.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/29.jpg",
+      "frame_sha256": "6a0a1fe1cae765b7e39450231e91e3d29f1d3e7ba5d0c2653f3df691cfd4a07c",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "drops",
+            "patient": "white bag"
+          }
+        ],
+        "attributes": [
+          {
+            "entity": "bag",
+            "property": "color",
+            "value": "white"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R21",
+          "text": "The dog X drops a white bag on the table.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R22",
+          "text": "X drops white bag.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R23",
+          "text": "The color of bag is white.",
+          "origins": [
+            "H fact / attributes"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 30,
+      "sample_interval": [
+        30,
+        31
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O The dog Y picks a leash with his right hand.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/30.jpg",
+      "frame_sha256": "c66194fe37c691a8f5f096ed0795e2b934abb81c0edfe8f3fb9690a87e802f63",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "Y",
+            "verb": "picks",
+            "patient": "leash"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R24",
+          "text": "The dog Y picks a leash with his right hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R25",
+          "text": "Y picks leash.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 31,
+      "sample_interval": [
+        31,
+        32
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O woman X picks the cloth",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/31.jpg",
+      "frame_sha256": "c66cabb7b61d6fc5ad98f6c8910a07f8ca3dc57c642ac7e80b9cfaaab5e18381",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "woman X",
+            "verb": "picks",
+            "patient": "cloth"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R26",
+          "text": "woman X picks the cloth.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R27",
+          "text": "woman X picks cloth.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": []
+    },
+    {
+      "sampled_frame_index": 32,
+      "sample_interval": [
+        32,
+        33
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O man X carries a chair",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/32.jpg",
+      "frame_sha256": "e91cd018941319c0a6f569b7cc979b7925367b7becdc85387053c6e0587ae6f6",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "man X",
+            "verb": "carries",
+            "patient": "chair"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R28",
+          "text": "man X carries a chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R29",
+          "text": "man X carries chair.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R120",
+          "text": "man X carries a chair. The text memory associates this observation with carries a chair (text reference E0).",
+          "origins": [
+            "upstream temporal association"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R120"
+          ],
+          "actual_original_paragraph": "At sampled intervals [32,33) (source assertion), man X carries a chair. The text memory associates this observation with carries a chair (text reference E0).",
+          "reformatted_paragraph": "Frames [32,33): man X carries a chair. The text memory associates this observation with carries a chair (text reference E0)."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 33,
+      "sample_interval": [
+        33,
+        34
+      ],
+      "scene_id": "S1",
+      "original_caption": "#O the dog Y walks into the kitchen.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/33.jpg",
+      "frame_sha256": "96c1cd5f7bd84d26d22131d0d7a8dc16cff259ee4c70604b1182d9830fe1d204",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R30",
+          "text": "the dog Y walks into the kitchen.",
+          "origins": [
+            "description"
+          ],
+          "decision": "skip",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R121",
+          "text": "the dog Y walks into the kitchen. The text memory associates this observation with walks into the kitchen (text reference E1).",
+          "origins": [
+            "upstream temporal association"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R121"
+          ],
+          "actual_original_paragraph": "At sampled intervals [33,34) (source assertion), the dog Y walks into the kitchen. The text memory associates this observation with walks into the kitchen (text reference E1).",
+          "reformatted_paragraph": "Frames [33,34): the dog Y walks into the kitchen. The text memory associates this observation with walks into the kitchen (text reference E1)."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 79,
+      "sample_interval": [
+        79,
+        80
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C carries the baby sitting on the chair.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/79.jpg",
+      "frame_sha256": "fc4f3c2fe09a9ab1c0cf1e0df2698815d62ab6ef4242a54ee00eb70042b52fda",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "carries",
+            "patient": "baby"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R31",
+          "text": "C carries the baby sitting on the chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R32",
+          "text": "C carries baby.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R31"
+          ],
+          "actual_original_paragraph": "At sampled intervals [79,80) (source assertion), C carries the baby sitting on the chair.",
+          "reformatted_paragraph": "Frames [79,80): C carries the baby sitting on the chair."
+        },
+        {
+          "record_ids": [
+            "R32"
+          ],
+          "actual_original_paragraph": "At sampled intervals [79,80) (source assertion), C carries baby.",
+          "reformatted_paragraph": "Frames [79,80): C carries baby."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 80,
+      "sample_interval": [
+        80,
+        81
+      ],
+      "scene_id": "S3",
+      "original_caption": "#O man Y pulls the chair",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/80.jpg",
+      "frame_sha256": "34d0fec29541268f453ec3036d08cd53f9f222e91ec0ea25b199951ad6b6b174",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "man Y",
+            "verb": "pulls",
+            "patient": "chair"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R33",
+          "text": "man Y pulls the chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R34",
+          "text": "man Y pulls chair.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R33"
+          ],
+          "actual_original_paragraph": "At sampled intervals [80,81) (source assertion), man Y pulls the chair.",
+          "reformatted_paragraph": "Frames [80,81): man Y pulls the chair."
+        },
+        {
+          "record_ids": [
+            "R34"
+          ],
+          "actual_original_paragraph": "At sampled intervals [80,81) (source assertion), man Y pulls chair.",
+          "reformatted_paragraph": "Frames [80,81): man Y pulls chair."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 81,
+      "sample_interval": [
+        81,
+        82
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C pulls the hand towel",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/81.jpg",
+      "frame_sha256": "a10cde72fb5ed0a8dfc38fe911efc6408b7302ac8957a31e6dc5c600ad8463d5",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "hand towel"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R35",
+          "text": "C pulls the hand towel.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R36",
+          "text": "C pulls hand towel.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R35"
+          ],
+          "actual_original_paragraph": "At sampled intervals [81,82) (source assertion), C pulls the hand towel.",
+          "reformatted_paragraph": "Frames [81,82): C pulls the hand towel."
+        },
+        {
+          "record_ids": [
+            "R36"
+          ],
+          "actual_original_paragraph": "At sampled intervals [81,82) (source assertion), C pulls hand towel.",
+          "reformatted_paragraph": "Frames [81,82): C pulls hand towel."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 82,
+      "sample_interval": [
+        82,
+        83
+      ],
+      "scene_id": "S3",
+      "original_caption": "#O man Y picks the bottle from the table ",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/82.jpg",
+      "frame_sha256": "ed544ef0727e869a15b1ef126730e8583cfcd0fda306c3a621ec9cdb727a0bf6",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "man Y",
+            "verb": "picks",
+            "patient": "bottle"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R37",
+          "text": "man Y picks the bottle from the table.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R38",
+          "text": "man Y picks bottle.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R37"
+          ],
+          "actual_original_paragraph": "At sampled intervals [82,83) (source assertion), man Y picks the bottle from the table.",
+          "reformatted_paragraph": "Frames [82,83): man Y picks the bottle from the table."
+        },
+        {
+          "record_ids": [
+            "R38"
+          ],
+          "actual_original_paragraph": "At sampled intervals [82,83) (source assertion), man Y picks bottle.",
+          "reformatted_paragraph": "Frames [82,83): man Y picks bottle."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 83,
+      "sample_interval": [
+        83,
+        84
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C places the pillow on a chair",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/83.jpg",
+      "frame_sha256": "3071dca99f5f3409bd724d5120e7e8d9a7c83c223379fc8965e5b2b4c3d20469",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R39",
+          "text": "C places the pillow on a chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R39"
+          ],
+          "actual_original_paragraph": "At sampled intervals [83,84) (source assertion), C places the pillow on a chair.",
+          "reformatted_paragraph": "Frames [83,84): C places the pillow on a chair."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 84,
+      "sample_interval": [
+        84,
+        85
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C looks around the house",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/84.jpg",
+      "frame_sha256": "b8bcf995d1e4b2aafc26c3f6aaa4372956ef2b83237b2a0438850f9d04c1b50f",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R40",
+          "text": "C looks around the house.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R40"
+          ],
+          "actual_original_paragraph": "At sampled intervals [84,85) (source assertion), C looks around the house.",
+          "reformatted_paragraph": "Frames [84,85): C looks around the house."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 85,
+      "sample_interval": [
+        85,
+        86
+      ],
+      "scene_id": "S3",
+      "original_caption": "#O The baby X touches the baby",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/85.jpg",
+      "frame_sha256": "a72ec813138e8101319cf5e7bd63e0ae195dd5b98d4eb8be2cbc5c03edcfadbe",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "touches",
+            "patient": "baby"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R41",
+          "text": "The baby X touches the baby.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R42",
+          "text": "X touches baby.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R41"
+          ],
+          "actual_original_paragraph": "At sampled intervals [85,86) (source assertion), The baby X touches the baby.",
+          "reformatted_paragraph": "Frames [85,86): The baby X touches the baby."
+        },
+        {
+          "record_ids": [
+            "R42"
+          ],
+          "actual_original_paragraph": "At sampled intervals [85,86) (source assertion), X touches baby.",
+          "reformatted_paragraph": "Frames [85,86): X touches baby."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 86,
+      "sample_interval": [
+        86,
+        87
+      ],
+      "scene_id": "S3",
+      "original_caption": "#O Woman Y moves the hand from the table",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/86.jpg",
+      "frame_sha256": "a4f3f0539bb7d9a2f0bef47b1b236b50e898f7bbb9aac8539190a1ef838c10e1",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R43",
+          "text": "Woman Y moves the hand from the table.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R43"
+          ],
+          "actual_original_paragraph": "At sampled intervals [86,87) (source assertion), Woman Y moves the hand from the table.",
+          "reformatted_paragraph": "Frames [86,87): Woman Y moves the hand from the table."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 87,
+      "sample_interval": [
+        87,
+        88
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C holds a book",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/87.jpg",
+      "frame_sha256": "b2ba9cb7e3ceb86590fe4484ebd01de371cb757a708abe0ad94c9bc76b9ed615",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "book"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R44",
+          "text": "C holds a book.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R45",
+          "text": "C holds book.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R44"
+          ],
+          "actual_original_paragraph": "At sampled intervals [87,88) (source assertion), C holds a book.",
+          "reformatted_paragraph": "Frames [87,88): C holds a book."
+        },
+        {
+          "record_ids": [
+            "R45"
+          ],
+          "actual_original_paragraph": "At sampled intervals [87,88) (source assertion), C holds book.",
+          "reformatted_paragraph": "Frames [87,88): C holds book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 88,
+      "sample_interval": [
+        88,
+        89
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C holds the chair",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/88.jpg",
+      "frame_sha256": "64f20e5e46b18533eaafadd6ec219d65f5ca47199ff4a8cd4307b7f17d0c6bdf",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "chair"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R46",
+          "text": "C holds the chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R47",
+          "text": "C holds chair.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R46"
+          ],
+          "actual_original_paragraph": "At sampled intervals [88,89) (source assertion), C holds the chair.",
+          "reformatted_paragraph": "Frames [88,89): C holds the chair."
+        },
+        {
+          "record_ids": [
+            "R47"
+          ],
+          "actual_original_paragraph": "At sampled intervals [88,89) (source assertion), C holds chair.",
+          "reformatted_paragraph": "Frames [88,89): C holds chair."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 89,
+      "sample_interval": [
+        89,
+        90
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C looks around",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/89.jpg",
+      "frame_sha256": "5f206a4882e952b93e299ceee12e874ed4a602a9cfc890ef01a093d2cbe84435",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R48",
+          "text": "C looks around.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R48"
+          ],
+          "actual_original_paragraph": "At sampled intervals [89,90) (source assertion), C looks around.",
+          "reformatted_paragraph": "Frames [89,90): C looks around."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 90,
+      "sample_interval": [
+        90,
+        91
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C walks to a chair.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/90.jpg",
+      "frame_sha256": "0b2c8ffa155f9ead7387fefd4c763d7b78046d08c2221924fcc5ba96d9d36104",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R49",
+          "text": "C walks to a chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R49"
+          ],
+          "actual_original_paragraph": "At sampled intervals [90,91) (source assertion), C walks to a chair.",
+          "reformatted_paragraph": "Frames [90,91): C walks to a chair."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 91,
+      "sample_interval": [
+        91,
+        92
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C Looks at the chairs ",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/91.jpg",
+      "frame_sha256": "071d669c201bc963cd1df7f8d2f3cebb7937ec92d23a9b7c654c00c1e2e5eafa",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R50",
+          "text": "C Looks at the chairs.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R50"
+          ],
+          "actual_original_paragraph": "At sampled intervals [91,92) (source assertion), C Looks at the chairs.",
+          "reformatted_paragraph": "Frames [91,92): C Looks at the chairs."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 92,
+      "sample_interval": [
+        92,
+        93
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C looks around the room",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/92.jpg",
+      "frame_sha256": "c66ac553e3c04d7820def1fa245da42f1d40d4f62949e97a9702fb5eab3c3494",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R51",
+          "text": "C looks around the room.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R51"
+          ],
+          "actual_original_paragraph": "At sampled intervals [92,93), [94,95) (source assertion), C looks around the room.",
+          "reformatted_paragraph": "Frames [92,93), [94,95): C looks around the room."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 93,
+      "sample_interval": [
+        93,
+        94
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C looks at the chair",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/93.jpg",
+      "frame_sha256": "b259de8b23f838fd9cd5a16beb8e85126f9e46d7032bebd9222e47784c0af2fa",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R52",
+          "text": "C looks at the chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R52"
+          ],
+          "actual_original_paragraph": "At sampled intervals [93,94), [95,96) (source assertion), C looks at the chair.",
+          "reformatted_paragraph": "Frames [93,94), [95,96): C looks at the chair."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 94,
+      "sample_interval": [
+        94,
+        95
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C looks around the room",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/94.jpg",
+      "frame_sha256": "636eb8d10c20c8cf16e4767903620acdec7473a2a6220b23ab8fd4e5fec86696",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R51",
+          "text": "C looks around the room.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R51"
+          ],
+          "actual_original_paragraph": "At sampled intervals [92,93), [94,95) (source assertion), C looks around the room.",
+          "reformatted_paragraph": "Frames [92,93), [94,95): C looks around the room."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 95,
+      "sample_interval": [
+        95,
+        96
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C looks at the chair",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/95.jpg",
+      "frame_sha256": "02a38baf24393e1d79a09df442c5118f7be3954a04667d69c4f084701730efe2",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R52",
+          "text": "C looks at the chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R52"
+          ],
+          "actual_original_paragraph": "At sampled intervals [93,94), [95,96) (source assertion), C looks at the chair.",
+          "reformatted_paragraph": "Frames [93,94), [95,96): C looks at the chair."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 96,
+      "sample_interval": [
+        96,
+        97
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C walks towards the kitchen.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/96.jpg",
+      "frame_sha256": "1b24fd9bc02510a9c07776736a2ddcf6d6b650554937703d8e2ac6009866f944",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R53",
+          "text": "C walks towards the kitchen.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R53"
+          ],
+          "actual_original_paragraph": "At sampled intervals [96,97) (source assertion), C walks towards the kitchen.",
+          "reformatted_paragraph": "Frames [96,97): C walks towards the kitchen."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 97,
+      "sample_interval": [
+        97,
+        98
+      ],
+      "scene_id": "S3",
+      "original_caption": "#O woman Y touches her phone ",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/97.jpg",
+      "frame_sha256": "407f176fd3d78a49f54d92e645f71761e939f197ba0b459d7c850adfd02b8150",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "woman Y",
+            "verb": "touches",
+            "patient": "phone"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R54",
+          "text": "woman Y touches her phone.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R55",
+          "text": "woman Y touches phone.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R54"
+          ],
+          "actual_original_paragraph": "At sampled intervals [97,98) (source assertion), woman Y touches her phone.",
+          "reformatted_paragraph": "Frames [97,98): woman Y touches her phone."
+        },
+        {
+          "record_ids": [
+            "R55"
+          ],
+          "actual_original_paragraph": "At sampled intervals [97,98) (source assertion), woman Y touches phone.",
+          "reformatted_paragraph": "Frames [97,98): woman Y touches phone."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 98,
+      "sample_interval": [
+        98,
+        99
+      ],
+      "scene_id": "S3",
+      "original_caption": "#O Woman X Picks a piece of cloth",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/98.jpg",
+      "frame_sha256": "f6de8523f95302182e96b1e03d39f7ac3d688e13c72fece3d3806f237ea33bc3",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "Woman X",
+            "verb": "Picks",
+            "patient": "piece of cloth"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R56",
+          "text": "Woman X Picks a piece of cloth.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R57",
+          "text": "Woman X Picks piece of cloth.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R56"
+          ],
+          "actual_original_paragraph": "At sampled intervals [98,99) (source assertion), Woman X Picks a piece of cloth.",
+          "reformatted_paragraph": "Frames [98,99): Woman X Picks a piece of cloth."
+        },
+        {
+          "record_ids": [
+            "R57"
+          ],
+          "actual_original_paragraph": "At sampled intervals [98,99) (source assertion), Woman X Picks piece of cloth.",
+          "reformatted_paragraph": "Frames [98,99): Woman X Picks piece of cloth."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 99,
+      "sample_interval": [
+        99,
+        100
+      ],
+      "scene_id": "S3",
+      "original_caption": "#O The woman X drops the red toy on the table with her left hand.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/99.jpg",
+      "frame_sha256": "c4e320206af6077cb716d6975424f1f1470947314af7c59f0c3bdb1fc141bb3d",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "drops",
+            "patient": "red toy"
+          }
+        ],
+        "attributes": [
+          {
+            "entity": "toy",
+            "property": "color",
+            "value": "red"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R58",
+          "text": "The woman X drops the red toy on the table with her left hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R59",
+          "text": "X drops red toy.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R60",
+          "text": "The color of toy is red.",
+          "origins": [
+            "H fact / attributes"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R58"
+          ],
+          "actual_original_paragraph": "At sampled intervals [99,100) (source assertion), The woman X drops the red toy on the table with her left hand.",
+          "reformatted_paragraph": "Frames [99,100): The woman X drops the red toy on the table with her left hand."
+        },
+        {
+          "record_ids": [
+            "R59"
+          ],
+          "actual_original_paragraph": "At sampled intervals [99,100) (source assertion), X drops red toy.",
+          "reformatted_paragraph": "Frames [99,100): X drops red toy."
+        },
+        {
+          "record_ids": [
+            "R60"
+          ],
+          "actual_original_paragraph": "At sampled intervals [99,100) (source assertion), The color of toy is red.",
+          "reformatted_paragraph": "Frames [99,100): The color of toy is red."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 100,
+      "sample_interval": [
+        100,
+        101
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C moves around the room",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/100.jpg",
+      "frame_sha256": "b2feb0e08fc02565f11bf250e7d926421e5e5f59c3828d0a55e4b8e789e9df14",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "around the room"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R61",
+          "text": "C moves around the room.",
+          "origins": [
+            "description",
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R61"
+          ],
+          "actual_original_paragraph": "At sampled intervals [100,101) (source assertion), C moves around the room.",
+          "reformatted_paragraph": "Frames [100,101): C moves around the room."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 101,
+      "sample_interval": [
+        101,
+        102
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C picks the cloth",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/101.jpg",
+      "frame_sha256": "4427fb969f7b3dc7ff5e8b9dce17cda30f9807a90438ea7171cf135c1aa029e6",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "picks",
+            "patient": "cloth"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R62",
+          "text": "C picks the cloth.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R63",
+          "text": "C picks cloth.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R62"
+          ],
+          "actual_original_paragraph": "At sampled intervals [101,102) (source assertion), C picks the cloth.",
+          "reformatted_paragraph": "Frames [101,102): C picks the cloth."
+        },
+        {
+          "record_ids": [
+            "R63"
+          ],
+          "actual_original_paragraph": "At sampled intervals [101,102) (source assertion), C picks cloth.",
+          "reformatted_paragraph": "Frames [101,102): C picks cloth."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 102,
+      "sample_interval": [
+        102,
+        103
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C puts the paper in the bucket",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/102.jpg",
+      "frame_sha256": "1949d870f19af565b317f52bb6de5929fb5949d0dc8819cf945f79cb7453050d",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "puts",
+            "patient": "paper"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R64",
+          "text": "C puts the paper in the bucket.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R65",
+          "text": "C puts paper.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R64"
+          ],
+          "actual_original_paragraph": "At sampled intervals [102,103) (source assertion), C puts the paper in the bucket.",
+          "reformatted_paragraph": "Frames [102,103): C puts the paper in the bucket."
+        },
+        {
+          "record_ids": [
+            "R65"
+          ],
+          "actual_original_paragraph": "At sampled intervals [102,103) (source assertion), C puts paper.",
+          "reformatted_paragraph": "Frames [102,103): C puts paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 103,
+      "sample_interval": [
+        103,
+        104
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C puts the handbag down",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/103.jpg",
+      "frame_sha256": "50a52d71379ce7bae637128824aef61b82011980a33ba3707c780dc8753c5f09",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "puts",
+            "patient": "handbag"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R66",
+          "text": "C puts the handbag down.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R67",
+          "text": "C puts handbag.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R66"
+          ],
+          "actual_original_paragraph": "At sampled intervals [103,104) (source assertion), C puts the handbag down.",
+          "reformatted_paragraph": "Frames [103,104): C puts the handbag down."
+        },
+        {
+          "record_ids": [
+            "R67"
+          ],
+          "actual_original_paragraph": "At sampled intervals [103,104) (source assertion), C puts handbag.",
+          "reformatted_paragraph": "Frames [103,104): C puts handbag."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 104,
+      "sample_interval": [
+        104,
+        105
+      ],
+      "scene_id": "S3",
+      "original_caption": "#C C moves the chair ",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/104.jpg",
+      "frame_sha256": "07eb93a7d2b1284a0988e0801efd639f93f0a0c5d7068740a5aabc8082fab5d1",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "chair"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R68",
+          "text": "C moves the chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R69",
+          "text": "C moves chair.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R68"
+          ],
+          "actual_original_paragraph": "At sampled intervals [104,105) (source assertion), C moves the chair.",
+          "reformatted_paragraph": "Frames [104,105): C moves the chair."
+        },
+        {
+          "record_ids": [
+            "R69"
+          ],
+          "actual_original_paragraph": "At sampled intervals [104,105) (source assertion), C moves chair.",
+          "reformatted_paragraph": "Frames [104,105): C moves chair."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 150,
+      "sample_interval": [
+        150,
+        151
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C holds the book in her hands.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/150.jpg",
+      "frame_sha256": "c20fd3ee39296e377ac032b4131b23309c5e92381e7919bd3b70da245ec65b0d",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "book",
+            "body_part": "hands"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R70",
+          "text": "C holds the book in her hands.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R71",
+          "text": "C holds book with hands.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R70"
+          ],
+          "actual_original_paragraph": "At sampled intervals [150,151) (source assertion), C holds the book in her hands.",
+          "reformatted_paragraph": "Frames [150,151): C holds the book in her hands."
+        },
+        {
+          "record_ids": [
+            "R71"
+          ],
+          "actual_original_paragraph": "At sampled intervals [150,151) (source assertion), C holds book with hands.",
+          "reformatted_paragraph": "Frames [150,151): C holds book with hands."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 151,
+      "sample_interval": [
+        151,
+        152
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C talks to a man X ",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/151.jpg",
+      "frame_sha256": "a3a6b95cfe0dd91d0293dabd167121d7d5e44e64f3757f7513a94bd952eec748",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R72",
+          "text": "C talks to a man X.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R72"
+          ],
+          "actual_original_paragraph": "At sampled intervals [151,152) (source assertion), C talks to a man X.",
+          "reformatted_paragraph": "Frames [151,152): C talks to a man X."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 152,
+      "sample_interval": [
+        152,
+        153
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C looks at the window",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/152.jpg",
+      "frame_sha256": "4dafe9cb0482676bce2b8aae3fb91eb0e55cc4b2eb6aee615898a258df2521d8",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R73",
+          "text": "C looks at the window.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R73"
+          ],
+          "actual_original_paragraph": "At sampled intervals [152,153) (source assertion), C looks at the window.",
+          "reformatted_paragraph": "Frames [152,153): C looks at the window."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 153,
+      "sample_interval": [
+        153,
+        154
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C looks at the dog",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/153.jpg",
+      "frame_sha256": "e5151a1259b0cd82df097ab22a3cda6274c10ecdd8abbad8746c6e27df661595",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R74",
+          "text": "C looks at the dog.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R74"
+          ],
+          "actual_original_paragraph": "At sampled intervals [153,154) (source assertion), C looks at the dog.",
+          "reformatted_paragraph": "Frames [153,154): C looks at the dog."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 154,
+      "sample_interval": [
+        154,
+        155
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C looks at the room",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/154.jpg",
+      "frame_sha256": "965837a825533b32edfb42965043d313b46f6fb7247bab16fa72104d3acf4d9e",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R75",
+          "text": "C looks at the room.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R75"
+          ],
+          "actual_original_paragraph": "At sampled intervals [154,155) (source assertion), C looks at the room.",
+          "reformatted_paragraph": "Frames [154,155): C looks at the room."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 155,
+      "sample_interval": [
+        155,
+        156
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C touches a chair",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/155.jpg",
+      "frame_sha256": "66d23efb58c2817ee1e2cfe316948916db11adef900711ae8351592b6c1eb791",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "touches",
+            "patient": "chair"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R76",
+          "text": "C touches a chair.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R77",
+          "text": "C touches chair.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R76"
+          ],
+          "actual_original_paragraph": "At sampled intervals [155,156) (source assertion), C touches a chair.",
+          "reformatted_paragraph": "Frames [155,156): C touches a chair."
+        },
+        {
+          "record_ids": [
+            "R77"
+          ],
+          "actual_original_paragraph": "At sampled intervals [155,156) (source assertion), C touches chair.",
+          "reformatted_paragraph": "Frames [155,156): C touches chair."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 156,
+      "sample_interval": [
+        156,
+        157
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C moves the hand",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/156.jpg",
+      "frame_sha256": "c857885cd043113047d0d53757fb03895ff2b6eacaedbdbf29c527d1a369e6cd",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "hand"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R78",
+          "text": "C moves the hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R79",
+          "text": "C moves hand.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R78"
+          ],
+          "actual_original_paragraph": "At sampled intervals [156,157) (source assertion), C moves the hand.",
+          "reformatted_paragraph": "Frames [156,157): C moves the hand."
+        },
+        {
+          "record_ids": [
+            "R79"
+          ],
+          "actual_original_paragraph": "At sampled intervals [156,157) (source assertion), C moves hand.",
+          "reformatted_paragraph": "Frames [156,157): C moves hand."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 157,
+      "sample_interval": [
+        157,
+        158
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C looks at the baby",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/157.jpg",
+      "frame_sha256": "b58d32abccdcc481917bb0c2865671e7c43d9ad90f3e6acb309a733d73895491",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R80",
+          "text": "C looks at the baby.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R80"
+          ],
+          "actual_original_paragraph": "At sampled intervals [157,158) (source assertion), C looks at the baby.",
+          "reformatted_paragraph": "Frames [157,158): C looks at the baby."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 158,
+      "sample_interval": [
+        158,
+        159
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C folds the top of the blanket on her laps with both hands.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/158.jpg",
+      "frame_sha256": "04b9d3d310b7d72fca6bdd24645eacf7d2a19e73bdd52eee8e45a41d09f7c5a2",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "folds",
+            "patient": "top of the blanket",
+            "body_part": "both hands"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R81",
+          "text": "C folds the top of the blanket on her laps with both hands.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R82",
+          "text": "C folds top of the blanket with both hands.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R81"
+          ],
+          "actual_original_paragraph": "At sampled intervals [158,159) (source assertion), C folds the top of the blanket on her laps with both hands.",
+          "reformatted_paragraph": "Frames [158,159): C folds the top of the blanket on her laps with both hands."
+        },
+        {
+          "record_ids": [
+            "R82"
+          ],
+          "actual_original_paragraph": "At sampled intervals [158,159) (source assertion), C folds top of the blanket with both hands.",
+          "reformatted_paragraph": "Frames [158,159): C folds top of the blanket with both hands."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 159,
+      "sample_interval": [
+        159,
+        160
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C pulls the paper",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/159.jpg",
+      "frame_sha256": "d0544fa9e0350d4e2ce7e600bb49d4937bfafc6617d1f887c1fa4324a54e71f8",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "pulls",
+            "patient": "paper"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R83",
+          "text": "C pulls the paper.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R84",
+          "text": "C pulls paper.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R83"
+          ],
+          "actual_original_paragraph": "At sampled intervals [159,160) (source assertion), C pulls the paper.",
+          "reformatted_paragraph": "Frames [159,160): C pulls the paper."
+        },
+        {
+          "record_ids": [
+            "R84"
+          ],
+          "actual_original_paragraph": "At sampled intervals [159,160) (source assertion), C pulls paper.",
+          "reformatted_paragraph": "Frames [159,160): C pulls paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 160,
+      "sample_interval": [
+        160,
+        161
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C unfolds the cloth",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/160.jpg",
+      "frame_sha256": "fb0dfc3aa3da5d651d61e29c3213258e091dc271ce08d38b5e30f67d15544087",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "unfolds",
+            "patient": "cloth"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R85",
+          "text": "C unfolds the cloth.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R86",
+          "text": "C unfolds cloth.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R85"
+          ],
+          "actual_original_paragraph": "At sampled intervals [160,161) (source assertion), C unfolds the cloth.",
+          "reformatted_paragraph": "Frames [160,161): C unfolds the cloth."
+        },
+        {
+          "record_ids": [
+            "R86"
+          ],
+          "actual_original_paragraph": "At sampled intervals [160,161) (source assertion), C unfolds cloth.",
+          "reformatted_paragraph": "Frames [160,161): C unfolds cloth."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 161,
+      "sample_interval": [
+        161,
+        162
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C holds the white wooden spoon with both hands.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/161.jpg",
+      "frame_sha256": "076ad7cbbde023108bc0b2f2ef1e6127692ced0338b4549c40b6f98eaaa21ace",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "holds",
+            "patient": "white wooden spoon",
+            "body_part": "both hands"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R87",
+          "text": "C holds the white wooden spoon with both hands.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R88",
+          "text": "C holds white wooden spoon with both hands.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R87"
+          ],
+          "actual_original_paragraph": "At sampled intervals [161,162) (source assertion), C holds the white wooden spoon with both hands.",
+          "reformatted_paragraph": "Frames [161,162): C holds the white wooden spoon with both hands."
+        },
+        {
+          "record_ids": [
+            "R88"
+          ],
+          "actual_original_paragraph": "At sampled intervals [161,162) (source assertion), C holds white wooden spoon with both hands.",
+          "reformatted_paragraph": "Frames [161,162): C holds white wooden spoon with both hands."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 162,
+      "sample_interval": [
+        162,
+        163
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C folds the paper",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/162.jpg",
+      "frame_sha256": "4e6195c4a42cf8a3935e692af4a050a523fbb9c37d4dcb7a7760cc0fda078ee4",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "folds",
+            "patient": "paper"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R89",
+          "text": "C folds the paper.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R90",
+          "text": "C folds paper.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R89"
+          ],
+          "actual_original_paragraph": "At sampled intervals [162,163) (source assertion), C folds the paper.",
+          "reformatted_paragraph": "Frames [162,163): C folds the paper."
+        },
+        {
+          "record_ids": [
+            "R90"
+          ],
+          "actual_original_paragraph": "At sampled intervals [162,163) (source assertion), C folds paper.",
+          "reformatted_paragraph": "Frames [162,163): C folds paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 163,
+      "sample_interval": [
+        163,
+        164
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C lifts a bowl on the dining table.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/163.jpg",
+      "frame_sha256": "16ca30739d32a47cfaf8813df277ad2bbe7035fc4c9ee7d58f76bd1b50034cf8",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "lifts",
+            "patient": "bowl"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R91",
+          "text": "C lifts a bowl on the dining table.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R92",
+          "text": "C lifts bowl.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R91"
+          ],
+          "actual_original_paragraph": "At sampled intervals [163,164) (source assertion), C lifts a bowl on the dining table.",
+          "reformatted_paragraph": "Frames [163,164): C lifts a bowl on the dining table."
+        },
+        {
+          "record_ids": [
+            "R92"
+          ],
+          "actual_original_paragraph": "At sampled intervals [163,164) (source assertion), C lifts bowl.",
+          "reformatted_paragraph": "Frames [163,164): C lifts bowl."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 164,
+      "sample_interval": [
+        164,
+        165
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C lifts the baby ",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/164.jpg",
+      "frame_sha256": "8a8488f237a9ae70553e795f0779da529456a694214b813e15b5fb5006e4c2bf",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "lifts",
+            "patient": "baby"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R93",
+          "text": "C lifts the baby.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R94",
+          "text": "C lifts baby.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R93"
+          ],
+          "actual_original_paragraph": "At sampled intervals [164,165) (source assertion), C lifts the baby.",
+          "reformatted_paragraph": "Frames [164,165): C lifts the baby."
+        },
+        {
+          "record_ids": [
+            "R94"
+          ],
+          "actual_original_paragraph": "At sampled intervals [164,165) (source assertion), C lifts baby.",
+          "reformatted_paragraph": "Frames [164,165): C lifts baby."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 165,
+      "sample_interval": [
+        165,
+        166
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C removes the biscuit from the pack with both hands.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/165.jpg",
+      "frame_sha256": "8b1ffae6052510e6fe3bfc92c211c22c097a2e5dcef3c03370ad15d89fd60130",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "removes",
+            "patient": "biscuit",
+            "body_part": "both hands"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R95",
+          "text": "C removes the biscuit from the pack with both hands.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R96",
+          "text": "C removes biscuit with both hands.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R95"
+          ],
+          "actual_original_paragraph": "At sampled intervals [165,166) (source assertion), C removes the biscuit from the pack with both hands.",
+          "reformatted_paragraph": "Frames [165,166): C removes the biscuit from the pack with both hands."
+        },
+        {
+          "record_ids": [
+            "R96"
+          ],
+          "actual_original_paragraph": "At sampled intervals [165,166) (source assertion), C removes biscuit with both hands.",
+          "reformatted_paragraph": "Frames [165,166): C removes biscuit with both hands."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 166,
+      "sample_interval": [
+        166,
+        167
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C takes food",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/166.jpg",
+      "frame_sha256": "8c33234b4a0e7864fa97c0770091cb65f89da96e52b5de1bd2d58214562a2703",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "takes",
+            "patient": "food"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R97",
+          "text": "C takes food.",
+          "origins": [
+            "description",
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R97"
+          ],
+          "actual_original_paragraph": "At sampled intervals [166,167) (source assertion), C takes food.",
+          "reformatted_paragraph": "Frames [166,167): C takes food."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 167,
+      "sample_interval": [
+        167,
+        168
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C reads the instructions ",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/167.jpg",
+      "frame_sha256": "d3daf2c52cf8aabbd9782093357e205c6930ab3863cf792919f9e9ebe225ac9e",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "reads",
+            "patient": "instructions"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R98",
+          "text": "C reads the instructions.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R99",
+          "text": "C reads instructions.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R98"
+          ],
+          "actual_original_paragraph": "At sampled intervals [167,168) (source assertion), C reads the instructions.",
+          "reformatted_paragraph": "Frames [167,168): C reads the instructions."
+        },
+        {
+          "record_ids": [
+            "R99"
+          ],
+          "actual_original_paragraph": "At sampled intervals [167,168) (source assertion), C reads instructions.",
+          "reformatted_paragraph": "Frames [167,168): C reads instructions."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 168,
+      "sample_interval": [
+        168,
+        169
+      ],
+      "scene_id": "S5",
+      "original_caption": "#O A woman X talks to C",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/168.jpg",
+      "frame_sha256": "7f1f24ef6af035fc91e0d817a2701260e03a7fc7324bd1fa138b07c5e1b21922",
+      "accepted_structured_fields": {
+        "attributes": [
+          {
+            "entity": "X",
+            "property": "color",
+            "value": "woman"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R100",
+          "text": "A woman X talks to C.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R101",
+          "text": "The color of X is woman.",
+          "origins": [
+            "H fact / attributes"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R100"
+          ],
+          "actual_original_paragraph": "At sampled intervals [168,169) (source assertion), A woman X talks to C.",
+          "reformatted_paragraph": "Frames [168,169): A woman X talks to C."
+        },
+        {
+          "record_ids": [
+            "R101"
+          ],
+          "actual_original_paragraph": "At sampled intervals [168,169) (source assertion), The color of X is woman.",
+          "reformatted_paragraph": "Frames [168,169): The color of X is woman."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 169,
+      "sample_interval": [
+        169,
+        170
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C puts the bottle in the bag",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/169.jpg",
+      "frame_sha256": "785a7fb0d2927465e940bf03c64bb7c241f36e5e081c4f7b9e731fa8cb20a028",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R102",
+          "text": "C puts the bottle in the bag.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R102"
+          ],
+          "actual_original_paragraph": "At sampled intervals [169,170) (source assertion), C puts the bottle in the bag.",
+          "reformatted_paragraph": "Frames [169,170): C puts the bottle in the bag."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 170,
+      "sample_interval": [
+        170,
+        171
+      ],
+      "scene_id": "S5",
+      "original_caption": "#O The woman X adjusts her left hand on her right leg.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/170.jpg",
+      "frame_sha256": "3b347a24607f59487ab25c720fc41459201e397e98d3cec7d4addcbc9a8c8733",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R103",
+          "text": "The woman X adjusts her left hand on her right leg.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R103"
+          ],
+          "actual_original_paragraph": "At sampled intervals [170,171) (source assertion), The woman X adjusts her left hand on her right leg.",
+          "reformatted_paragraph": "Frames [170,171): The woman X adjusts her left hand on her right leg."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 171,
+      "sample_interval": [
+        171,
+        172
+      ],
+      "scene_id": "S5",
+      "original_caption": "#O A woman X touches the book",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/171.jpg",
+      "frame_sha256": "bd13b177d0473333585af7b80a7d295e35589944550bf1cbfe8cab6b982162a6",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "touches",
+            "patient": "book"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R104",
+          "text": "A woman X touches the book.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R105",
+          "text": "X touches book.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R104"
+          ],
+          "actual_original_paragraph": "At sampled intervals [171,172) (source assertion), A woman X touches the book.",
+          "reformatted_paragraph": "Frames [171,172): A woman X touches the book."
+        },
+        {
+          "record_ids": [
+            "R105"
+          ],
+          "actual_original_paragraph": "At sampled intervals [171,172) (source assertion), X touches book.",
+          "reformatted_paragraph": "Frames [171,172): X touches book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 172,
+      "sample_interval": [
+        172,
+        173
+      ],
+      "scene_id": "S5",
+      "original_caption": "#O Man X holds a spoon with his right hand.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/172.jpg",
+      "frame_sha256": "fe775634afc42530ddb0013c1013fbee9b2428d74b15fce25461f3ad07c59f0a",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "Man X",
+            "verb": "holds",
+            "patient": "spoon",
+            "body_part": "right hand"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R106",
+          "text": "Man X holds a spoon with his right hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R107",
+          "text": "Man X holds spoon with right hand.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R106"
+          ],
+          "actual_original_paragraph": "At sampled intervals [172,173) (source assertion), Man X holds a spoon with his right hand.",
+          "reformatted_paragraph": "Frames [172,173): Man X holds a spoon with his right hand."
+        },
+        {
+          "record_ids": [
+            "R107"
+          ],
+          "actual_original_paragraph": "At sampled intervals [172,173) (source assertion), Man X holds spoon with right hand.",
+          "reformatted_paragraph": "Frames [172,173): Man X holds spoon with right hand."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 173,
+      "sample_interval": [
+        173,
+        174
+      ],
+      "scene_id": "S5",
+      "original_caption": "#O The baby Y holds the toy with his left hand.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/173.jpg",
+      "frame_sha256": "34042416d26ee5d791d5c8e747e729d32c5e70bb20719790f59b9ee25aa1a09a",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "baby Y",
+            "verb": "holds",
+            "patient": "toy",
+            "body_part": "left hand"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R108",
+          "text": "The baby Y holds the toy with his left hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R109",
+          "text": "baby Y holds toy with left hand.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R108"
+          ],
+          "actual_original_paragraph": "At sampled intervals [173,174) (source assertion), The baby Y holds the toy with his left hand.",
+          "reformatted_paragraph": "Frames [173,174): The baby Y holds the toy with his left hand."
+        },
+        {
+          "record_ids": [
+            "R109"
+          ],
+          "actual_original_paragraph": "At sampled intervals [173,174) (source assertion), baby Y holds toy with left hand.",
+          "reformatted_paragraph": "Frames [173,174): baby Y holds toy with left hand."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 174,
+      "sample_interval": [
+        174,
+        175
+      ],
+      "scene_id": "S5",
+      "original_caption": "#O A woman X reads a paper",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/174.jpg",
+      "frame_sha256": "0e6d237eef1996fcfd976cf4422b6f6a1325964aeb9ccb7f0061aa188e999da9",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "X",
+            "verb": "reads",
+            "patient": "paper"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R110",
+          "text": "A woman X reads a paper.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R111",
+          "text": "X reads paper.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R110"
+          ],
+          "actual_original_paragraph": "At sampled intervals [174,175) (source assertion), A woman X reads a paper.",
+          "reformatted_paragraph": "Frames [174,175): A woman X reads a paper."
+        },
+        {
+          "record_ids": [
+            "R111"
+          ],
+          "actual_original_paragraph": "At sampled intervals [174,175) (source assertion), X reads paper.",
+          "reformatted_paragraph": "Frames [174,175): X reads paper."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 175,
+      "sample_interval": [
+        175,
+        176
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C touches the book",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/175.jpg",
+      "frame_sha256": "022ace1baba97d8f07d3b3a5d4a6afa20aafb57ae42bc668e27a3bac851dc2bc",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "touches",
+            "patient": "book"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R112",
+          "text": "C touches the book.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R113",
+          "text": "C touches book.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R112"
+          ],
+          "actual_original_paragraph": "At sampled intervals [175,176) (source assertion), C touches the book.",
+          "reformatted_paragraph": "Frames [175,176): C touches the book."
+        },
+        {
+          "record_ids": [
+            "R113"
+          ],
+          "actual_original_paragraph": "At sampled intervals [175,176) (source assertion), C touches book.",
+          "reformatted_paragraph": "Frames [175,176): C touches book."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 176,
+      "sample_interval": [
+        176,
+        177
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C stretches the cloth",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/176.jpg",
+      "frame_sha256": "884fbe7e2c04e0bcf4a96c1e6f9ba6821bb0b182ba4e154c93aa6675ff82e682",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "stretches",
+            "patient": "cloth"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R114",
+          "text": "C stretches the cloth.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R115",
+          "text": "C stretches cloth.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R114"
+          ],
+          "actual_original_paragraph": "At sampled intervals [176,177) (source assertion), C stretches the cloth.",
+          "reformatted_paragraph": "Frames [176,177): C stretches the cloth."
+        },
+        {
+          "record_ids": [
+            "R115"
+          ],
+          "actual_original_paragraph": "At sampled intervals [176,177) (source assertion), C stretches cloth.",
+          "reformatted_paragraph": "Frames [176,177): C stretches cloth."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 177,
+      "sample_interval": [
+        177,
+        178
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C puts the baby in the basket ",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/177.jpg",
+      "frame_sha256": "572033b097b64c59a499ffd4c3d89c6d8863cd16b3505e233efd581dc806d44f",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R116",
+          "text": "C puts the baby in the basket.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R116"
+          ],
+          "actual_original_paragraph": "At sampled intervals [177,178) (source assertion), C puts the baby in the basket.",
+          "reformatted_paragraph": "Frames [177,178): C puts the baby in the basket."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 178,
+      "sample_interval": [
+        178,
+        179
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C adjusts the a plastic with her left hand.",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/178.jpg",
+      "frame_sha256": "5913382f861a10b675bcad73316aeda2631e9425ca41489ff9d8a1ad69e58531",
+      "accepted_structured_fields": {},
+      "candidates": [
+        {
+          "id": "R117",
+          "text": "C adjusts the a plastic with her left hand.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R117"
+          ],
+          "actual_original_paragraph": "At sampled intervals [178,179) (source assertion), C adjusts the a plastic with her left hand.",
+          "reformatted_paragraph": "Frames [178,179): C adjusts the a plastic with her left hand."
+        }
+      ]
+    },
+    {
+      "sampled_frame_index": 179,
+      "sample_interval": [
+        179,
+        180
+      ],
+      "scene_id": "S5",
+      "original_caption": "#C C moves the leg",
+      "frame_file": "/mnt/ssd1/public/VideoAgent/EgoSchema/egoschema_frames/73ecc613-5e39-4348-94ba-ee6cb197367a/179.jpg",
+      "frame_sha256": "b0a7ecf25c416ba5233abcbb46c1dfe73430d15cbbfe5c04b0bf1b0268aff01f",
+      "accepted_structured_fields": {
+        "actions": [
+          {
+            "actor": "C",
+            "verb": "moves",
+            "patient": "leg"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "R118",
+          "text": "C moves the leg.",
+          "origins": [
+            "description"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        },
+        {
+          "id": "R119",
+          "text": "C moves leg.",
+          "origins": [
+            "H fact / actions"
+          ],
+          "decision": "keep",
+          "qualification": "source assertion"
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "record_ids": [
+            "R118"
+          ],
+          "actual_original_paragraph": "At sampled intervals [179,180) (source assertion), C moves the leg.",
+          "reformatted_paragraph": "Frames [179,180): C moves the leg."
+        },
+        {
+          "record_ids": [
+            "R119"
+          ],
+          "actual_original_paragraph": "At sampled intervals [179,180) (source assertion), C moves leg.",
+          "reformatted_paragraph": "Frames [179,180): C moves leg."
+        }
+      ]
+    }
+  ]
+}

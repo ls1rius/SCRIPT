@@ -1,0 +1,240 @@
+{
+  "created_at": "2026-11-03T13:01:57.693251+08:00",
+  "user_request": "MN在bug修复后重新跑起来",
+  "decoder": "MN-navigation-candidate-complete-unicode-v2",
+  "scope": "Continue repaired M-r16 without duplicate launch. User-authorized controlled upgrade of running N-r2 into N-r3. Successful prefixes inherited byte-for-byte; incomplete N query rerun in full. No model/prompt/schema/evidence/answer changes.",
+  "controlled_upgrade_tests": {
+    "passed": true,
+    "tests": 12,
+    "seconds": 0.221,
+    "log": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r3/validation/controlled_upgrade_cpu_tests.log"
+  },
+  "N_interruption_audit": "docs/history/N_Decoder_Upgrade_Interruption_2026-11-03.json",
+  "N_probe_provenance": "Original M candidate-query failure; shared decoder regression only, no M navigation/evidence/answer used by N benchmark. N full pipeline gate runs with independent N paths.",
+  "no_hidden_retry": true,
+  "defaults_unchanged": [
+    "L",
+    "E"
+  ],
+  "training": false,
+  "runs": [
+    {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16",
+      "prior": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r15",
+      "controller": {
+        "pid": 3125972,
+        "created_at": "2026-11-03T12:51:45.831808+08:00",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16/runtime/script/run_mn_decoder_resume.py",
+          "queue",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16"
+        ]
+      },
+      "status": {
+        "state": "running",
+        "controller_pid": 3125972,
+        "updated_at": "2026-11-03T13:07:29.989099+08:00",
+        "worker_pid": 3131077,
+        "gpu": "2",
+        "gpu_uuid": "GPU-f4ea2211-b92c-e3b6-1eea-3cb80e28f0a0",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16/runtime/script/run_mn_decoder_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261103-r16"
+        ],
+        "started_at": "2026-11-03T13:00:19.899740+08:00"
+      },
+      "inherited_successful": 44,
+      "restart_question": "943374f4-4514-4e22-827b-7452b91e5559",
+      "prior_files_checked": 4452,
+      "prior_unchanged": true,
+      "new_frozen_files_checked": 4309,
+      "new_frozen_unchanged": true,
+      "runtime_changes": [
+        "script/run_m_scene_experiment.py",
+        "script/run_mn_decoder_resume.py",
+        "script_core/backend.py"
+      ],
+      "decoder": "MN-navigation-candidate-complete-unicode-v2",
+      "prior_runtime_seconds": 424.01877073943615,
+      "prior_failed_query_seconds": 111.43917808309197,
+      "prior_interrupted_query_seconds": 0,
+      "decoder_gate": {
+        "passed": true,
+        "operation": "m_candidate_query",
+        "input_unchanged": true,
+        "output_tokens": 352,
+        "max_new_tokens": 1536,
+        "valid_json": true
+      },
+      "progress": {
+        "stage": "query",
+        "index": 45,
+        "question_id": "943374f4-4514-4e22-827b-7452b91e5559",
+        "updated_at": "2026-11-03T13:04:37.023507+08:00"
+      },
+      "functional_gate": {
+        "passed": true,
+        "failures": [],
+        "updated_at": "2026-11-03T13:04:37.018032+08:00",
+        "semantic_navigation_probe_passed": true,
+        "saved_navigation_decoder_passed": true,
+        "saved_decoder_operation": "m_candidate_query"
+      },
+      "model_setup_seconds": 10.037316050380468,
+      "functional_seconds": 230.2108762189746,
+      "real_model_gate_passed": true,
+      "formal_resumed": true
+    },
+    {
+      "out": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r3",
+      "prior": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r2",
+      "controller": {
+        "pid": 3132371,
+        "created_at": "2026-11-03T13:01:33.499732+08:00",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r3/runtime/script/run_mn_decoder_resume.py",
+          "queue",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r3"
+        ]
+      },
+      "status": {
+        "state": "running",
+        "controller_pid": 3132371,
+        "updated_at": "2026-11-03T13:07:29.014684+08:00",
+        "worker_pid": 3132622,
+        "gpu": "0",
+        "gpu_uuid": "GPU-8b9b4cd2-156b-d7fc-9e0a-3b1e6f666832",
+        "command": [
+          "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+          "-u",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r3/runtime/script/run_mn_decoder_resume.py",
+          "worker",
+          "--out",
+          "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261103-r3"
+        ],
+        "started_at": "2026-11-03T13:01:53.936806+08:00"
+      },
+      "inherited_successful": 40,
+      "restart_question": "e04cd624-17e1-4986-b344-55aa92d7c0c3",
+      "prior_files_checked": 4274,
+      "prior_unchanged": true,
+      "new_frozen_files_checked": 4128,
+      "new_frozen_unchanged": true,
+      "runtime_changes": [
+        "script/run_m_scene_experiment.py",
+        "script/run_mn_decoder_resume.py",
+        "script_core/backend.py"
+      ],
+      "decoder": "MN-navigation-candidate-complete-unicode-v2",
+      "prior_runtime_seconds": 698.5845297574997,
+      "prior_failed_query_seconds": 88.35878572240472,
+      "prior_interrupted_query_seconds": 135.02423724904656,
+      "progress": {
+        "stage": "query",
+        "index": 41,
+        "question_id": "e04cd624-17e1-4986-b344-55aa92d7c0c3",
+        "updated_at": "2026-11-03T13:06:12.777830+08:00"
+      },
+      "functional_gate": {
+        "passed": true,
+        "failures": [],
+        "updated_at": "2026-11-03T13:06:12.766301+08:00",
+        "semantic_navigation_probe_passed": true,
+        "N_variant_checks": [
+          {
+            "case": "single",
+            "passed": true,
+            "method": "N-M-neutral-query-joint-candidates-v8",
+            "operations": [
+              "adaptive_memory_projection",
+              "adaptive_scheme4_state_assembly",
+              "checkpoint_write",
+              "entity_evidence_materialization",
+              "f_batch_preparation",
+              "h_plan_fields",
+              "m_candidate_query",
+              "m_candidate_rank",
+              "m_sufficiency_check",
+              "m_transition_next",
+              "n_answer",
+              "n_evidence_materialization",
+              "n_evidence_plan",
+              "n_extract_fields",
+              "partial_temporal_source_projection",
+              "structured_output_validation",
+              "temporal_qa_check"
+            ],
+            "empty": false
+          },
+          {
+            "case": "comparison",
+            "passed": true,
+            "method": "N-M-neutral-query-joint-candidates-v8",
+            "operations": [
+              "adaptive_memory_projection",
+              "adaptive_scheme4_state_assembly",
+              "checkpoint_write",
+              "entity_evidence_materialization",
+              "f_batch_preparation",
+              "h_plan_fields",
+              "m_candidate_query",
+              "m_candidate_rank",
+              "m_sufficiency_check",
+              "m_transition_next",
+              "n_answer",
+              "n_evidence_materialization",
+              "n_evidence_plan",
+              "n_extract_batch",
+              "partial_temporal_source_projection",
+              "structured_output_validation",
+              "temporal_qa_check"
+            ],
+            "empty": false
+          },
+          {
+            "case": "empty",
+            "passed": true,
+            "method": "N-M-neutral-query-joint-candidates-v8",
+            "operations": [
+              "adaptive_memory_projection",
+              "checkpoint_write",
+              "m_candidate_query",
+              "m_candidate_rank",
+              "n_answer",
+              "structured_output_validation",
+              "temporal_qa_check"
+            ],
+            "empty": true
+          }
+        ],
+        "saved_navigation_decoder_passed": true,
+        "saved_decoder_operation": "m_candidate_query"
+      },
+      "decoder_gate": {
+        "passed": true,
+        "operation": "m_candidate_query",
+        "input_unchanged": true,
+        "output_tokens": 352,
+        "max_new_tokens": 1536,
+        "valid_json": true
+      },
+      "model_setup_seconds": 9.10038335993886,
+      "functional_seconds": 234.0287796743214,
+      "real_model_gate_passed": true,
+      "formal_resumed": true
+    }
+  ],
+  "checked_at": "2026-11-03T13:07:32.320510+08:00",
+  "both_real_model_gates_passed": true,
+  "both_formal_runs_resumed": true
+}

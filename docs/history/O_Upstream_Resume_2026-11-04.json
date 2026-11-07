@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-04T12:11:42.878252+08:00",
+  "reason": "O finished pair 141 then stopped because N source 142 was unavailable and N failed; no O model failure",
+  "previous_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r3",
+  "current_run": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4",
+  "completed_pairs_inherited": 141,
+  "prior_file_hashes_preserved": 78800,
+  "hash_manifest": "/mnt/ssd2/hli/work/workdirs/VideoAgent/O-Oplus-N-question-only-300-source-bound-20261104-r4/continuation.json",
+  "preparation_workers": 4,
+  "preparation_seconds": 49.34514965116978,
+  "new_model_calls": 0,
+  "technical_gates": "Both source-bound and independent batch gates inherited from identical runtime; no new real gate claim",
+  "qa_methods_and_config_unchanged": true,
+  "current_state": {
+    "state": "waiting_for_N_source",
+    "controller_pid": 3824903,
+    "updated_at": "2026-11-04T12:11:34.933455+08:00",
+    "model_loaded": false
+  },
+  "tests": {
+    "passed": 9,
+    "modules": [
+      "tests.test_o_upstream_resume",
+      "tests.test_parallel_artifacts"
+    ]
+  },
+  "accounting": "Successful pairs copied byte-for-byte and counted once. Historical setup/reloads and gates retained separately. No failed O model call was retried.",
+  "upstream_source_entry": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-N-L-300-20261104-r4",
+  "waiting_policy": "Wait for repaired N r2 and next original-order source without occupying model memory; fail on repaired upstream failure; no automatic retries"
+}

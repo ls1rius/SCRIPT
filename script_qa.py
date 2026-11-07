@@ -20,12 +20,12 @@ def parser():
     commands = p.add_subparsers(dest='command', required=True)
     build = commands.add_parser('build', help='Question-independent M0 and optional M_eager')
     build.add_argument('--manifest', required=True, help='JSON list of video_id, uri, optional cutoff/subtitle_uri')
-    query = commands.add_parser('query', help='Run F on-demand memory by default; --memory E selects complete memory')
+    query = commands.add_parser('query', help='Run L on-demand memory with evidence planning by default; --memory E selects complete memory')
     query.add_argument('--base', required=True)
     query.add_argument('--questions', required=True, help='JSONL without answers or evaluation fields')
     query.add_argument('--resume', action='store_true')
-    query.add_argument('--memory', type=str.upper, choices=('E','F'),
-                       help='Final evidence: E complete entity memory, F on-demand memory (default profile: F)')
+    query.add_argument('--memory', type=str.upper, choices=('E','F','I','L','M','N'),
+                       help='L default; E complete, F/I controls, M gap-driven scenes, N adds source role binding')
     query.add_argument('--scheme4', action='store_true',
                        help='Enable cross-stage entity memory after summary search (scheme 4)')
     query.add_argument('--summary-graphs', help='Directory containing <video_id>.json caption assertion graphs')
@@ -62,10 +62,15 @@ def main(argv=None):
         if args.scheme4:
             raise ValueError('--memory cannot be combined with --scheme4')
         if cfg['query']['pipeline']!='adaptive_partial_temporal' or cfg['query']['temporal_entity_source']!='summary':
-            raise ValueError('--memory E/F requires the caption-derived adaptive_partial_temporal pipeline')
-        cfg['query']['temporal_qa_evidence']={'E':'joint_entities','F':'lazy_script'}[args.memory]
+            raise ValueError('--memory E/F/I/L/M/N requires the caption-derived adaptive_partial_temporal pipeline')
+        cfg['query']['temporal_qa_evidence']={'E':'joint_entities','F':'lazy_script','I':'merged_lazy_script',
+            'L':'planned_lazy_script','M':'scene_planned_script','N':'role_bound_scene_script'}[args.memory]
+        if args.memory in ('L','M','N'):
+            cfg['query'].update(tool_transient_retries=0, json_repair_retries=0)
+    if args.command == 'query' and cfg['query']['temporal_qa_evidence'] == 'planned_lazy_script':
+        cfg['query'].update(tool_transient_retries=0, json_repair_retries=0)
     if args.command == 'query' and args.scheme4:
-        if cfg['query']['temporal_qa_evidence'] not in ('full','state_segments','joint_entities','lazy_script'):
+        if cfg['query']['temporal_qa_evidence'] not in ('full','state_segments','joint_entities','lazy_script','merged_lazy_script','planned_lazy_script'):
             raise ValueError('--scheme4 cannot be combined with this final-input mode')
         if cfg['query']['pipeline'] == 'legacy':
             raise ValueError('--scheme4 requires a scheme3/scheme4 summary configuration')

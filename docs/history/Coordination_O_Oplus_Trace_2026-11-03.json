@@ -1,0 +1,83 @@
+{
+  "at": "2026-11-03T20:54:22.133957",
+  "question_id": "7dcf85fb-1217-4eb7-b9c8-cc2ab06507fe",
+  "scope": "Read-only full O/O+ case trace; live queue completed new O+ in original order; no extra inference requested",
+  "stats": {
+    "input_sentences": 126,
+    "candidate_units": 397,
+    "retained_units": 84,
+    "retained_sentences": 29,
+    "deleted_sentences": 97,
+    "fallback_sentences": 1,
+    "program_overrides": 0
+  },
+  "new_complete": true,
+  "old_answers": {
+    "O_question_only": {
+      "answer": {
+        "selected_option": "0",
+        "raw": "prediction: A"
+      },
+      "correct": false,
+      "input_tokens": 1954,
+      "retained_sentences": 29,
+      "answer_seconds": 0.47497495263814926,
+      "shared_selection_hash": "9dbe4f5b5d98da8af7d5ec5d12f37d5a8669ce66108649fb2a2a5ef8d1a0f529"
+    },
+    "Oplus_question_only": {
+      "answer": {
+        "selected_option": "4",
+        "raw": "prediction: E"
+      },
+      "correct": false,
+      "input_tokens": 1724,
+      "retained_sentences": 29,
+      "answer_seconds": 0.4561472460627556,
+      "shared_selection_hash": "9dbe4f5b5d98da8af7d5ec5d12f37d5a8669ce66108649fb2a2a5ef8d1a0f529"
+    }
+  },
+  "new_answers": {
+    "O_question_only": {
+      "answer": {
+        "selected_option": "0",
+        "raw": "prediction: A"
+      },
+      "correct": false,
+      "input_tokens": 1954,
+      "retained_sentences": 29,
+      "answer_seconds": 0.47497495263814926,
+      "shared_selection_hash": "9dbe4f5b5d98da8af7d5ec5d12f37d5a8669ce66108649fb2a2a5ef8d1a0f529"
+    },
+    "Oplus_question_only": {
+      "answer": {
+        "selected_option": "0",
+        "raw": "prediction: A"
+      },
+      "correct": false,
+      "input_tokens": 1411,
+      "retained_sentences": 29,
+      "answer_seconds": 0.20017581060528755,
+      "shared_selection_hash": "9dbe4f5b5d98da8af7d5ec5d12f37d5a8669ce66108649fb2a2a5ef8d1a0f529"
+    }
+  },
+  "filter_question": {
+    "question": "How does c use her right leg and her right hand in a coordinated manner, and what conclusions can you draw about the purpose of these movements?",
+    "evidence_task": {
+      "option_tests": {
+        "Q": {
+          "single_observation": "c uses her right leg to step forward",
+          "aggregate_requirement": "in a coordinated manner with her right hand",
+          "interpretation": "purpose of these movements"
+        }
+      }
+    }
+  },
+  "snapshot_source_count": 640,
+  "snapshot_sources_unchanged": true,
+  "artifacts": [
+    "docs/demos/LMNO_Three_Cases_2026-11-03/01_coordination/case_review.md",
+    "docs/demos/LMNO_Three_Cases_2026-11-03/01_coordination/O_Oplus_126_sentences.csv",
+    "docs/demos/LMNO_Three_Cases_2026-11-03/01_coordination/O_Oplus_step_trace.json"
+  ],
+  "limitations": "No causal replay of filter brief, punctuation, or final reader. Source-bound O+ does not repair upstream deletion or extraction errors."
+}

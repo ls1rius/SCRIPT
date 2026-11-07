@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-02T21:16:55.704515+08:00",
+  "user_decision": "Set L (I memory plus independent evidence planning) as the default on-demand scheme",
+  "default_on_demand": "L",
+  "complete_default": "E",
+  "default_mode": "planned_lazy_script",
+  "online_version": "L-online-I-evidence-planner-v1",
+  "presentation_version": "L-frames-adjacent-v1-no-source-label",
+  "explicit_variants": [
+    "E",
+    "F",
+    "I",
+    "L",
+    "M"
+  ],
+  "source_cache": "memory_cache/L/I/h_script.sqlite3",
+  "core_hash_matches_frozen_L": {
+    "i_evidence_planner": true,
+    "evidence_planner": true
+  },
+  "decoder_ast_matches_frozen_L": {
+    "strict_answer_parser": true,
+    "parse_strict_answer": true,
+    "nonempty_plan_parser": true
+  },
+  "validation": {
+    "cpu_checks_passed": 119,
+    "real_tokenizer_constraints_checked": true,
+    "end_to_end": "simulated H/I -> L planning/audit -> constrained single answer; no model weights loaded",
+    "new_gpu_evaluation_started": false
+  },
+  "frozen_runs": [
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-K-F-300-20261102-r8",
+      "files_checked": 3258,
+      "mismatches": []
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/evidence-planner-L-I-300-20261102-r1",
+      "files_checked": 2117,
+      "mismatches": []
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/merged-lazy-I-H-adjacent-300-20261101-r3",
+      "files_checked": 2885,
+      "mismatches": []
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/generalized-lazy-H-300-20261101-r5",
+      "files_checked": 1387,
+      "mismatches": []
+    },
+    {
+      "path": "/mnt/ssd2/hli/work/workdirs/VideoAgent/scene-planned-M-L-300-20261102-r10",
+      "files_checked": 492,
+      "mismatches": []
+    }
+  ],
+  "limitations": [
+    "Online L retains existing upstream navigation and does not enable M navigation.",
+    "Compact presentation is a new online input; frozen L accuracy is not a fresh evaluation of this formatting.",
+    "No post-filter retrieval feedback loop is introduced."
+  ],
+  "files_sha256": {
+    "script_core/l_evidence_qa.py": "6caeeb62831a5f8099aaf6377235a7fe08b488c85fae67566d2ce514531e23c3",
+    "script_core/m_generation.py": "d248830f6413f2527948642645fd968e054924198188f12acbd30ad8deca9226",
+    "script_core/partial_temporal.py": "e998a9d58f5238da7629dc6dd5ec0502881b6f084dfaca16cbe5dd59b47bd368",
+    "script_core/config.py": "3b28e6c6d98fe6fb33efe871169c519ce94bc015f88dd7fda4ddc56d82f8d0b9",
+    "script_core/backend.py": "bb4e180422c9f782793b70cbe3a0137aaea170d80be29a816065bdf3ecc26c09",
+    "script_qa.py": "7eb1b5dcdd064dad654cf8af4fc6e2eee49f8f7faff96f2c1b582ce53375a14e",
+    "configs/script.yaml": "bf0be183022cb2b046d14532ec2f0a4b98184a135d6b4a0f418c45da3dff2a43",
+    "configs/script_local.yaml": "3ecc4f8ddc6703c8a2968c181d3f597f7771f1541af0b217d39f7b47e07aa759",
+    "configs/script_L.yaml": "7911513d0ad54a4d192ba6947ad992282c9ce7744f93782f82b2080424ab9b73",
+    "configs/script_I.yaml": "ddf9502648d2f208c802c6a80a306ef241a28f192b3eee473c5dfb276231c3b8",
+    "tests/test_l_evidence_qa.py": "8ac4dcaf1f0c7fa5c0c1b1c989f90b4c574c03819d637bf5eb02dcf90eb57cb8",
+    "tests/test_m_generation.py": "c760ceea086e96c653673355ecde4f59f7092334c3c87d621e8c57c41110649a"
+  }
+}

@@ -1,6 +1,7 @@
-# Python 3.12; install torch/torchvision with the CUDA 12.6 index first.
-torch==2.7.1
-torchvision==0.22.1
+# Python 3.12; unified vts runtime, validated 2026-11-01.
+# Keep the installed CUDA 13.0 PyTorch wheels; full versions: requirements-vts.lock.txt.
+torch==2.13.0+cu130
+torchvision==0.28.0+cu130
 transformers==4.57.6
 huggingface_hub>=0.34,<1
 accelerate==1.12.0
@@ -14,6 +15,9 @@ openai
 tqdm
 safetensors
 debugpy
+einops==0.8.2
+sentencepiece==0.2.2
+timm==1.0.30
 av>=14,<20
 jieba==0.42.1
 PyYAML>=6,<7

@@ -1,0 +1,124 @@
+{
+  "at": "2026-11-04T12:09:38.386457+08:00",
+  "request": "Repair failed M/N/O/P and continue; reduce serial preprocessing",
+  "parent": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r1",
+  "current": "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r2",
+  "failure": {
+    "case_ordinal": 4,
+    "question_id": "e9322513-15b2-4b89-8ddb-7d1432beb8a1",
+    "stage": "p_reader_review",
+    "cause": "Full retained evidence plus repeated source-enum schema needs 19510 tokens, above legacy P 16384 input limit",
+    "failed_call_seconds": 0.02489268034696579
+  },
+  "repair": {
+    "max_input_tokens_before": 16384,
+    "max_input_tokens_after": 32768,
+    "native_context": 128000,
+    "reserved_output_tokens": 2048,
+    "prompt_schema_and_semantics_unchanged": true,
+    "no_truncation": true,
+    "independent_tensor_batch_size": 4,
+    "semantic_version": "P-blind-witness-explicit-semantic-rejection-v15"
+  },
+  "resume": {
+    "successful_cases": 6,
+    "known_demos": 3,
+    "successful_preprocessing_calls": 180,
+    "source_rows": 125,
+    "successful_dependency_seconds": 478.65369825437665,
+    "failed_call_seconds": 0.02489268034696579,
+    "continue_from": "reader_review then final answer then next original-cohort question",
+    "automatic_retries": false
+  },
+  "validation": {
+    "cpu_checks": 56,
+    "inherited_generic_real_checks": 58,
+    "new_generic_gate": false,
+    "source_and_stage_identity_verified": true,
+    "old_files_unchanged": 18582,
+    "prelaunch_corrections": [
+      "Fixed test helper import before successful 3-check run",
+      "Read failed packet operation from raw call inputs rather than ledger columns before output directory creation"
+    ]
+  },
+  "parallel_preprocessing": {
+    "hash_threads": 4,
+    "copy_threads": 4,
+    "stage_validation_threads": 4,
+    "model_inputs": "Question isolation unchanged; independent tensor rows"
+  },
+  "launch": {
+    "controller_pid": 3822348,
+    "command": [
+      "/mnt/ssd2/hli/work/miniconda3/envs/vts/bin/python",
+      "-u",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r2/runtime/script/run_p_full_experiment.py",
+      "queue",
+      "--out",
+      "/mnt/ssd2/hli/work/workdirs/VideoAgent/P-N-source-300-20261104-r2"
+    ],
+    "at": "2026-11-04T12:08:42.144898+08:00"
+  },
+  "status": {
+    "state": "running",
+    "controller_pid": 3822348,
+    "updated_at": "2026-11-04T12:10:48.472668+08:00",
+    "worker_pid": 3822416
+  },
+  "progress": {
+    "stage": "P",
+    "case": 5,
+    "question_id": "6dd07731-937c-4b63-b296-0a947ffe6996",
+    "updated_at": "2026-11-04T12:10:16.977811+08:00"
+  },
+  "limitations": "Context repair and inherited generic checks do not establish improved QA accuracy or broad generalization.",
+  "real_failed_step_recovery": {
+    "passed": true,
+    "at": "2026-11-04T12:10:16.959682+08:00",
+    "review_input_tokens": 19510,
+    "review_output_tokens": 795,
+    "review_seconds": 44.722829669713974,
+    "answer_seconds": 1.1650654003024101,
+    "new_calls": 2,
+    "complete": true,
+    "error": null,
+    "source_rows": 125,
+    "new_processing_seconds": 45.887895070016384,
+    "inherited_dependency_seconds": 478.65369825437665
+  },
+  "postlaunch_freeze_audit": {
+    "old_files_unchanged": 18582,
+    "new_frozen_files_unchanged": 18534
+  },
+  "report_summary": {
+    "version": "P-blind-witness-explicit-semantic-rejection-v15",
+    "planned": 300,
+    "completed": 7,
+    "correct": 4,
+    "complete": false,
+    "errors": 0,
+    "updated_at": "2026-11-04T12:10:16.964406+08:00",
+    "scope": "Fixed N-selected sources, same original 300 questions; three known P demos inherited and separately reported, remaining 297 newly extracted/filtered/answered. No independent navigation claim.",
+    "subgroups": {
+      "known_demos": {
+        "completed": 3,
+        "correct": 2
+      },
+      "additional": {
+        "completed": 4,
+        "correct": 2
+      }
+    },
+    "new_processing_seconds": 45.887895070016384,
+    "inherited_successful_processing_seconds": 1884.0436693318188,
+    "inherited_selection_dependency_seconds": 478.65369825437665,
+    "historical_failed_call_seconds": 0.02489268034696579,
+    "reader_review_seconds": 254.30198783800006,
+    "reader_total_seconds": 259.4774370826781,
+    "mean_input_tokens": 4257.0,
+    "mean_qa_seconds": 0.7393498920968601,
+    "task_brief_generated": false,
+    "composition_called": false,
+    "training": false
+  }
+}
